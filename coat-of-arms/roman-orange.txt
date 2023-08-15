@@ -1,0 +1,34 @@
+coa_rd_dynasty_783567655={
+	custom=yes
+	pattern="pattern__solid_designer.dds"
+	color1=orange
+	color2=white
+	color3=green_light
+	colored_emblem={
+		color1=orange
+		texture="ce_mongol_flame.dds"
+		instance={
+			position={ 0.720000 0.500000 }
+			scale={ -0.330000 0.330000 }
+			depth=1.010000
+		}
+
+		instance={
+			position={ 0.280000 0.500000 }
+			scale={ 0.330000 0.330000 }
+			depth=2.010000
+		}
+
+		instance={
+			scale={ 0.330000 0.330000 }
+			depth=3.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_laurels.dds"
+	}
+
+}
