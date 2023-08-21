@@ -13,6 +13,7 @@ import (
 var config = configuration.Config()
 
 func buildMods() error {
+	fmt.Println("-----------------------------------")
 	err := tools.Cleanup(config.ModBuildPath)
 	if err != nil {
 		return err
@@ -29,11 +30,12 @@ func buildMods() error {
 
 	for _, modName := range keys {
 		modDetails := modConfig.Mods[modName]
-		fmt.Printf("📦 Building %s\n", modName)
 
 		if !modDetails.Enabled {
-			fmt.Printf("📦 %s is disabled, skipping \n", modName)
+			fmt.Printf("❗️%s is disabled, skipping \n", modName)
 			continue
+		} else {
+			fmt.Printf("📦 Building %s\n", modName)
 		}
 
 		err := tools.Build(modName, modDetails.Replacements)
@@ -42,7 +44,9 @@ func buildMods() error {
 		}
 	}
 
-	fmt.Printf("📦 Build successful in %s \n", config.ModBuildPath)
+	fmt.Println("-----------------------------------")
+	fmt.Printf("✅ Build successful in %s folder \n", config.ModBuildPath)
+	fmt.Println("-----------------------------------")
 
 	return nil
 }

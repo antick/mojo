@@ -17,7 +17,7 @@ func Cleanup(modPath string) error {
 		return err
 	}
 
-	fmt.Printf("🧹 Cleaned %s \n", modPath)
+	fmt.Printf("🧹 Cleaned %s folder\n", modPath)
 	return nil
 }
 
