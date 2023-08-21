@@ -95,11 +95,11 @@ func processDirectory(srcDirectory, destDirectory string, replacements map[strin
 
 func Build(modName string, replacements map[string]string) error {
 	var filesAndFolderMapping = make(map[string]string)
+	filesAndFolderMapping[config.ModDescriptorPath] = filepath.Join(config.ModBuildPath, "descriptor.mod")
+
 	for _, value := range config.ModInternalFolders {
 		filesAndFolderMapping[filepath.Join(config.ModPath, modName, value)] = filepath.Join(config.ModBuildPath, value)
 	}
-
-	filesAndFolderMapping[config.ModDescriptorPath] = filepath.Join(config.ModBuildPath, "descriptor.mod")
 
 	textReplacement := replacements
 	textReplacement["modVersion"] = config.ModVersion
