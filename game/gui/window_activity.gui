@@ -455,7 +455,7 @@
 							}
 
 							hbox = {
-								name = "succeded_single_intent"
+								name = "succeeded_single_intent"
 								visible = "[And( Activity.IsComplete, EqualTo_int32( GetDataModelSize( Character.GetCompletedIntents ), '(int32)1' ) )]"
 								spacing = 4
 
@@ -464,14 +464,14 @@
 								}
 
 								hbox = {
-									datacontext = "[ActivityIntentData.GetType]"
-									spacing = 4
-									
 									datacontext_from_model = {
 										datamodel = "[Character.GetCompletedIntents]"
 										index = 0
 									}
-									
+									datacontext = "[ActivityIntentData.GetType]"
+
+									spacing = 4
+
 									icon_flat_standard = {
 										name = "intent_icon"
 										size = { 30 30 }

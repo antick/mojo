@@ -306,6 +306,15 @@ max_template_average_skill = {
 	add = skill_variance
 }
 
+min_template_medium_skill = {
+	add = medium_skill_rating
+	subtract = skill_variance
+}
+max_template_medium_skill = {
+	add = medium_skill_rating
+	add = skill_variance
+}
+
 min_template_decent_skill = {
 	add = decent_skill_rating
 	subtract = skill_variance

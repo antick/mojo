@@ -1,11 +1,22 @@
 {
+	"formatVersion": 0,
+	"gameId": "ck3",
+	"displayName": "Crusader Kings III",
+	"version": "1.9.2.1 (Lance)",
+	"rawVersion": "1.9.2.1",
+	"distPlatform": "steam",
+	"gameDataPath": "/Users/pankaj/Paradox Interactive/Crusader Kings III",
+	"dlcPath": "../game",
+	"ingameSettingsLayoutPath": "settings-layout.json",
+	"themeFile": "./assets/theme-settings.json",
+	"browserDlcUrl": "https://store.steampowered.com/dlc/1158310/",
+	"browserModUrl": "https://steamcommunity.com/app/1158310/workshop/",
+	"exePath": "../binaries/ck3.app/Contents/MacOS/ck3",
+	"exeArgs": [
+		"-gdpr-compliant"
+	],
 	"alternativeExecutables": [
 		{
-			"exeArgs": [
-				"-gdpr-compliant",
-				"-debug_mode"
-			],
-			"exePath": "../binaries/ck3.app/Contents/MacOS/ck3",
 			"label": {
 				"de": "Spiel im Debug-Modus öffnen",
 				"en": "Open game in Debug Mode",
@@ -16,26 +27,15 @@
 				"pl": "Uruchom grę w trybie debugowania",
 				"pt": "Abrir jogo em modo debug",
 				"ru": "Запустить игру в режиме разработчика",
-				"tr": "Oyunu hata ayıklama modunda başlatın",
 				"zh-hans": "以调试模式打开游戏",
-				"zh-hant": "以調試模式打開遊戲"
-			}
+				"zh-hant": "以調試模式打開遊戲",
+				"tr": "Oyunu hata ayıklama modunda başlatın"
+			},
+			"exePath": "../binaries/ck3.app/Contents/MacOS/ck3",
+			"exeArgs": [
+				"-gdpr-compliant",
+				"-debug_mode"
+			]
 		}
-	],
-	"browserDlcUrl": "https://store.steampowered.com/dlc/1158310/",
-	"browserModUrl": "https://steamcommunity.com/app/1158310/workshop/",
-	"displayName": "Crusader Kings III",
-	"distPlatform": "steam",
-	"dlcPath": "../game",
-	"exeArgs": [
-		"-gdpr-compliant"
-	],
-	"exePath": "../binaries/ck3.app/Contents/MacOS/ck3",
-	"formatVersion": 0,
-	"gameDataPath": "/Users/pankaj/Paradox Interactive/Crusader Kings III",
-	"gameId": "ck3",
-	"ingameSettingsLayoutPath": "settings-layout.json",
-	"rawVersion": "1.9.2.1",
-	"themeFile": "./assets/theme-settings.json",
-	"version": "1.9.2.1 (Lance)"
+	]
 }

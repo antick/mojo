@@ -112,6 +112,7 @@ change_tournament_score = {
 			involved_activity = {
 				has_activity_type = activity_tournament
 			}
+			activity_is_competing_trigger = yes
 		}
 	}
 	

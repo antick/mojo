@@ -211,7 +211,7 @@ bp1_yearly_8100_sycophant_trigger = {
 house_feud_ai_scheme_trigger = {
 	is_adult = yes
 	is_ai = yes
-	ai_honor < very_high_positive_ai_value
+	ai_honor < medium_positive_ai_value
 	any_scheme = { count < 1 }
 	OR = {
 		house_feud_ai_murder_join_trigger = yes

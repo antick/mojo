@@ -252,6 +252,7 @@ hunt_mystical_animal.1004 = {
 			NOT = { exists = var:had_event_hunt_mystical_animal_1004 }
 			NOT = { exists = var:had_event_hunt_mystical_animal_1007 }
 			var:encounters >= 2
+			exists = var:animal_type
 			var:legendary_county = {
 				NOT = { this = root.location.county }
 				any_neighboring_county = { this = root.location.county }
@@ -305,31 +306,21 @@ hunt_mystical_animal.1004 = {
 				save_scope_as = m_hunt
 			}
 		}
-		scope:story = {
-			var:legendary_county = {
-				remove_county_modifier = hunt_sighting_legendary_modifier
-				remove_variable = animal_type
+		location.county = {
+			# Create new sighting
+			hunt_create_sighting_effect = {
+				TYPE = legendary
+				ANIMAL = scope:story.var:animal_type
+				OWNER = root
 			}
+		}
+		scope:story = {
+			# Remove old sighting
+			var:legendary_county = { hunt_remove_sighting_effect = yes }
+			# Update legendary location
 			set_variable = {
 				name = legendary_county
 				value = root.location.county
-			}
-		}
-		location.county = {
-			set_variable = {
-				name = animal_type
-				years = 3
-				value = scope:story.var:animal_type
-			}
-			add_county_modifier = {
-				modifier = hunt_sighting_legendary_modifier
-				years = 3
-				desc = hunt_sighting_legendary_modifier_custom_desc
-			}
-			set_variable = {
-				name = sighting_owner
-				years = 3
-				value = root
 			}
 		}
 		save_scope_value_as = {

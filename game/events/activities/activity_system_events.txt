@@ -291,6 +291,7 @@ activity_system.0092 = {
 
 	trigger = {
 		exists = involved_activity
+		exists = scope:activity
 	}
 
 	immediate = {

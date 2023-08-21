@@ -646,7 +646,10 @@ tradition_sorcerous_metallurgy = {
 	can_pick = {
 		scope:character = {
 			faith = {
-				has_doctrine_parameter = witchcraft_accepted
+				NOR = {
+					has_doctrine_parameter = witchcraft_illegal
+					has_doctrine_parameter = witchcraft_shunned
+				}
 			}
 		}
 	}

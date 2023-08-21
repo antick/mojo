@@ -3,8 +3,8 @@ window = {
 	datacontext = "[GetVariableSystem]"
 	layer = middle
 	allow_outside = yes
-	size = { 1050 710 }
-	position = { 500 120 }
+	size = { 1050 780 }
+	position = { 26% 120 }
 
 	using = Window_Movable
 	using = Window_Background
@@ -280,7 +280,6 @@ window = {
 					}
 
 					expand = {}
-
 				}
 			}
 
@@ -293,6 +292,7 @@ window = {
 				layoutpolicy_horizontal = expanding
 
 				margin_right = 8
+				margin_top = 4
 
 				background = {
 					using = Background_Area_Dark
@@ -338,40 +338,41 @@ window = {
 					}
 				}
 
-				scrollbox = {
-					name = "invited_characters_scrollbox"
-
+				vbox_character_list = {
+					name = "intent_targets"
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
 
-					blockoverride "scrollbox_content"
-					{
-						fixedgridbox = {
-							addcolumn = 475
-							addrow = 92
-							name = "characters_grid"
-							layoutpolicy_horizontal = expanding
+					datacontext = "[ActivityIntentSelectionWindow.AccessTargetList]"
 
-							datamodel = "[ActivityIntentSelectionWindow.GetPotentialTargets]"
+					blockoverride "scrollbox_properties"
+					{
+						size = { 475 0 }
+					}
+
+					blockoverride "skill_sort_buttons" {}
+
+					blockoverride "container_implementation" {
+						fixedgridbox = {
+							name = "characters_grid"
+							datamodel = "[CharacterSelectionList.GetList]"
+							visible = "[Not(CharacterSelectionList.IsBuildingList)]"
+							addcolumn = 475
+							addrow = 96
 
 							item = {
 								potential_selectable_target_portrait_widget = {
-									size = { 475 100 }
-									datacontext = "[ActivityGuestCustomData.GetCharacter]"
+									size = { 475 94 }
+									datacontext = "[CharacterListItem.GetCharacter]"
 
-									blockoverride "onclick"
-									{
-										onclick = "[ActivityIntentSelectionWindow.SelectTarget( Character.Self )]"
-										onclick = "[VariableSystem.Clear( 'activity_intent_selection_target_list' )]"
+									blockoverride "onclick" {
+										onclick = "[CharacterListItem.OnClick( 'select_intent_target' )]"
+    	                            	onclick = "[VariableSystem.Clear( 'activity_intent_selection_target_list' )]"
 									}
 								}
 							}
 						}
 					}
-
-					blockoverride "scrollbox_background" {}
-
-					blockoverride "scrollbox_background_fade" {}
 				}
 			}
 		}
@@ -408,5 +409,45 @@ window = {
 
 			expand = {}
 		}
+	}
+
+	window_character_filter = {
+		datacontext = "[ActivityIntentSelectionWindow.AccessTargetList]"
+		size = { 510 650 }
+
+		parentanchor = top|left
+		widgetanchor = left
+		position = { -20 20 }
+
+		blockoverride "addition_filter" {
+			filter_item = {
+				layoutpolicy_horizontal = expanding
+				datacontext = "[CharacterSelectionList.GetFilter('gender_filter')]"
+			}
+			filter_item = {
+				layoutpolicy_horizontal = expanding
+				datacontext = "[CharacterSelectionList.GetFilter('adult_filter')]"
+			}
+			filter_item = {
+				layoutpolicy_horizontal = expanding
+				datacontext = "[CharacterSelectionList.GetFilter('age_filter')]"
+			}
+			filter_item = {
+				layoutpolicy_horizontal = expanding
+				datacontext = "[CharacterSelectionList.GetFilter('dynasty_filter')]"
+			}
+			filter_item = {
+				layoutpolicy_horizontal = expanding
+				datacontext = "[CharacterSelectionList.GetFilter('ruler_filter')]"
+			}
+			filter_item = {
+				layoutpolicy_horizontal = expanding
+				datacontext = "[CharacterSelectionList.GetFilter('religion_filter')]"
+			}
+			filter_item = {
+				layoutpolicy_horizontal = expanding
+				datacontext = "[CharacterSelectionList.GetFilter('culture_filter')]"
+			}
+    	}
 	}
 }

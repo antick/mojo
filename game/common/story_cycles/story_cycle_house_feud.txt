@@ -180,12 +180,22 @@
 			var:house_feud_house.house_head = { is_alive = yes }
 			story_owner.house = {
 				any_house_member = { house_feud_ai_scheme_trigger = yes }
+				# Try to stop crazy numbers of concurrent ai murder schemes
+				any_house_member = {
+					count <= 3
+					any_scheme = { scheme_target.house ?= var:house_feud_house }
+				}
 			}
+			NOT = { exists = var:recent_ai_feud_scheme }
 		}
 
 		triggered_effect = {
 			trigger = { always = yes }
 			effect = {
+				set_variable = {
+					name = recent_ai_feud_scheme
+					years = 5
+				}
 				story_owner.house = {
 					random_house_member = {
 						limit = { house_feud_ai_scheme_trigger = yes }
@@ -218,18 +228,6 @@
 							modifier = {
 								factor = 2
 								ai_honor <= medium_negative_ai_value
-							}
-							modifier = {
-								factor = 0.5
-								ai_honor >= medium_positive_ai_value
-							}
-							modifier = {
-								factor = 0.5
-								ai_honor >= high_positive_ai_value
-							}
-							modifier = {
-								factor = 0.5
-								ai_honor >= very_high_positive_ai_value
 							}
 						}
 						trigger_event = { on_action = house_feud_ai_scheme_pulse }
@@ -571,6 +569,33 @@
 						}
 					}
 				}
+			}
+		}
+	}
+
+	# Stop AI feuds from going too hard against players
+	effect_group = {
+		months = 1
+		trigger = { always = yes }
+
+		triggered_effect = {
+			trigger = {
+				story_owner = { is_ai = yes }
+				var:house_feud_house.house.house_head ?= { is_ai = no }
+				# House must be sufficiently large to support a Feud
+				var:house_feud_house.house = {
+					any_house_member = {
+						count < 5
+						is_alive = yes
+						is_adult = yes
+					}
+				}
+			}
+			effect = {
+				story_owner = { save_scope_as = story_owner }
+				debug_log = "House Feud cancelled against player"
+				debug_log_scopes = yes
+				end_story = yes
 			}
 		}
 	}

@@ -2182,7 +2182,7 @@ accolade_leader_of_the_culture_unit = {
 			triggered_desc = {
 				trigger = {
 					exists = liege
-					liege = {
+					liege ?= {
 						opinion = {
 							target = root
 							value >= 50
@@ -2338,7 +2338,7 @@ accolade_leader_of_the_culture_unit = {
 			triggered_desc = {
 				trigger = {
 					exists = liege
-					liege = {
+					liege ?= {
 						government_has_flag = government_is_feudal
 					}
 				}
@@ -2405,7 +2405,7 @@ accolade_leader_of_the_culture_unit = {
 					scope:accolade_type = {
 						type_has_accolade_category = aggressive
 					}
-					liege = {
+					liege ?= {
 						government_has_flag = government_is_tribal
 					}
 				}
@@ -2509,7 +2509,7 @@ accolade_leader_of_the_lieges_unit = {
 			}
 			triggered_desc = {
 				trigger = {
-					liege = {
+					liege ?= {
 						opinion = {
 							target = root
 							value >= 50
@@ -2703,7 +2703,7 @@ accolade_leader_of_the_lieges_unit = {
 					scope:accolade_type = {
 						type_has_accolade_category = aggressive
 					}
-					liege = {
+					liege ?= {
 						government_has_flag = government_is_tribal
 					}
 				}
@@ -3082,7 +3082,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = champion
 					}
-					liege = {
+					liege ?= {
 						NOT = { government_has_flag = government_is_tribal }
 					}
 				}
@@ -3093,7 +3093,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = champion
 					}
-					liege = {
+					liege ?= {
 						government_has_flag = government_is_tribal
 					}
 				}
@@ -3104,7 +3104,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = leader
 					}
-					liege = {
+					liege ?= {
 						NOT = { government_has_flag = government_is_tribal }
 					}
 				}
@@ -3115,7 +3115,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = leader
 					}
-					liege = {
+					liege ?= {
 						government_has_flag = government_is_tribal
 					}
 					age >= 35
@@ -3127,7 +3127,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = leader
 					}
-					liege = {
+					liege ?= {
 						government_has_flag = government_is_tribal
 					}
 					age < 35
@@ -3139,7 +3139,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = militant
 					}
-					liege = {
+					liege ?= {
 						NOT = { government_has_flag = government_is_tribal }
 					}
 				}
@@ -3150,7 +3150,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = militant
 					}
-					liege = {
+					liege ?= {
 						government_has_flag = government_is_tribal
 					}
 				}
@@ -3161,7 +3161,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = courtly
 					}
-					liege = {
+					liege ?= {
 						NOT = { government_has_flag = government_is_tribal }
 					}
 				}
@@ -3172,7 +3172,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = courtly
 					}
-					liege = {
+					liege ?= {
 						government_has_flag = government_is_tribal
 					}
 				}
@@ -3199,7 +3199,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = aggressive
 					}
-					liege = {
+					liege ?= {
 						NOT = { government_has_flag = government_is_tribal }
 					}
 				}
@@ -3210,7 +3210,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = aggressive
 					}
-					liege = {
+					liege ?= {
 						government_has_flag = government_is_tribal
 					}
 				}
@@ -3221,7 +3221,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = defensive
 					}
-					liege = {
+					liege ?= {
 						NOT = { government_has_flag = government_is_tribal }
 					}
 				}
@@ -3232,7 +3232,7 @@ accolade_first_of_the_field = {
 					scope:accolade_type = {
 						type_has_accolade_category = defensive
 					}
-					liege = {
+					liege ?= {
 						government_has_flag = government_is_tribal
 					}
 				}
@@ -3581,7 +3581,7 @@ accolade_the_defender_of_lieges_title = {
 		random_valid = {
 			triggered_desc = {
 				trigger = {
-					liege = {
+					liege ?= {
 						opinion = {
 							target = root
 							value >= 80
@@ -3803,7 +3803,7 @@ accolade_the_defender_of_lieges_title = {
 					scope:accolade_type = {
 						NOT = { type_has_accolade_category = amoral }
 					}
-					liege = {
+					liege ?= {
 						opinion = {
 							target = root
 							value >= 80
@@ -4065,7 +4065,7 @@ accolade_the_knight_of_aspect = {
 		random_valid = {
 			triggered_desc = {
 				trigger = {
-					liege = {
+					liege ?= {
 						opinion = {
 							target = root
 							value <= -50
@@ -4483,7 +4483,7 @@ accolade_goodest_of_knights = {
 			}
 			triggered_desc = {
 				trigger = {
-					liege = {
+					liege ?= {
 						opinion = {
 							target = root
 							value >= 80
@@ -4773,7 +4773,7 @@ accolade_goodest_of_knights = {
 			triggered_desc = {
 				trigger = {
 					exists = liege
-					liege = {
+					liege ?= {
 						government_has_flag = government_is_feudal
 					}
 				}

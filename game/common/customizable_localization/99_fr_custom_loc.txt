@@ -2549,40 +2549,40 @@ FR_ActivityShort_template = {
 	type = activity
 	log_loc_errors = no
 	text = {
-		trigger = { has_activity_type = activity_feast } # Festin
-		localization_key = FR_activity_feast
+		trigger = { has_activity_type = activity_feast }
+		localization_key = FR_activity_feast # Festin
 	}
 	text = {
-		trigger = { has_activity_type = activity_gruesome_festival } # Fête sacrificielle
-		localization_key = FR_activity_gruesome_festival
+		trigger = { has_activity_type = activity_gruesome_festival }
+		localization_key = FR_activity_gruesome_festival # Fête sacrificielle
 	}
 	text = {
-		trigger = { has_activity_type = activity_hunt } # Chasse
-		localization_key = FR_activity_hunt
+		trigger = { has_activity_type = activity_hunt }
+		localization_key = FR_activity_hunt # Chasse
 	}
 	text = {
-		trigger = { has_activity_type = activity_pilgrimage } # Pèlerinage
-		localization_key = FR_activity_pilgrimage
+		trigger = { has_activity_type = activity_pilgrimage }
+		localization_key = FR_activity_pilgrimage # Pèlerinage
 	}
 	text = {
-		trigger = { has_activity_type = activity_playdate } # Rencontre des pairs
-		localization_key = FR_activity_playdate
+		trigger = { has_activity_type = activity_playdate }
+		localization_key = FR_activity_playdate # Rencontre des pairs
 	}
 	text = {
-		trigger = { has_activity_type = activity_tour } # Grande tournée
-		localization_key = FR_activity_tour
+		trigger = { has_activity_type = activity_tour }
+		localization_key = FR_activity_tour # Grande tournée
 	}
 	text = {
-		trigger = { has_activity_type = activity_tournament } # Grand tournoi
-		localization_key = FR_activity_tournament
+		trigger = { has_activity_type = activity_tournament }
+		localization_key = FR_activity_tournament # Grand tournoi
 	}
 	text = {
-		trigger = { has_activity_type = activity_wedding } # Grand mariage
-		localization_key = FR_activity_wedding
+		trigger = { has_activity_type = activity_wedding }
+		localization_key = FR_activity_wedding # Grand mariage
 	}
 	text = {
-		trigger = { has_activity_type = activity_witch_ritual } # Grand rite
-		localization_key = FR_activity_witch_ritual
+		trigger = { has_activity_type = activity_witch_ritual }
+		localization_key = FR_activity_witch_ritual # Grand rite
 	}
 	text = {
 		localization_key = FR_activity_fallback
@@ -3105,256 +3105,164 @@ FR_ActivityPhase_template = {
 	log_loc_errors = no
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_witch_ritual
-				}
-				has_current_phase = witch_ritual_phase # Rituel des ténèbres
-			}
+			has_activity_type = activity_witch_ritual
+			has_current_phase = witch_ritual_phase
 		}
-		localization_key = FR_witch_ritual_phase
+		localization_key = FR_witch_ritual_phase # Rituel des ténèbres
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_feast
-				}
-				has_current_phase = feast_phase_meal # Banquet
-			}
+			has_activity_type = activity_feast
+			has_current_phase = feast_phase_meal
 		}
-		localization_key = FR_feast_phase_meal
+		localization_key = FR_feast_phase_meal # Banquet
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_feast
-				}
-				has_current_phase = feast_phase_toast # Trinquée
-			}
+			has_activity_type = activity_feast
+			has_current_phase = feast_phase_toast
 		}
-		localization_key = FR_feast_phase_toast
+		localization_key = FR_feast_phase_toast # Trinquée
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_pilgrimage
-				}
-				has_current_phase = pilgrimage_phase_solo # Pèlerinage
-			}
+			has_activity_type = activity_pilgrimage
+			has_current_phase = pilgrimage_phase_solo
 		}
-		localization_key = FR_pilgrimage_phase_solo
+		localization_key = FR_pilgrimage_phase_solo # Pèlerinage
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_playdate
-				}
-				has_current_phase = playdate_phase # Rencontre
-			}
+			has_activity_type = activity_playdate
+			has_current_phase = playdate_phase
 		}
-		localization_key = FR_playdate_phase
+		localization_key = FR_playdate_phase # Rencontre
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_wedding
-				}
-				has_current_phase = wedding_phase_ceremony # Cérémonie de mariage
-			}
+			has_activity_type = activity_wedding
+			has_current_phase = wedding_phase_ceremony
 		}
-		localization_key = FR_wedding_phase_ceremony
+		localization_key = FR_wedding_phase_ceremony # Cérémonie de mariage
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_wedding
-				}
-				has_current_phase = wedding_phase_banquet # Repas de noces
-			}
+			has_activity_type = activity_wedding
+			has_current_phase = wedding_phase_banquet
 		}
-		localization_key = FR_wedding_phase_banquet
+		localization_key = FR_wedding_phase_banquet # Repas de noces
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_wedding
-				}
-				has_current_phase = wedding_phase_wnight # Nuit de noces
-			}
+			has_activity_type = activity_wedding
+			has_current_phase = wedding_phase_wnight
 		}
-		localization_key = FR_wedding_phase_wnight
+		localization_key = FR_wedding_phase_wnight # Nuit de noces
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tournament
-				}
-				has_current_phase = tournament_phase_melee # Mêlée
-			}
+			has_activity_type = activity_tournament
+			has_current_phase = tournament_phase_melee
 		}
-		localization_key = FR_tournament_phase_melee
+		localization_key = FR_tournament_phase_melee # Mêlée
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tournament
-				}
-				has_current_phase = tournament_phase_archery # Tir à l’arc
-			}
+			has_activity_type = activity_tournament
+			has_current_phase = tournament_phase_archery
 		}
-		localization_key = FR_tournament_phase_archery
+		localization_key = FR_tournament_phase_archery # Tir à l’arc
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tournament
-				}
-				has_current_phase = tournament_phase_recital # Récital
-			}
+			has_activity_type = activity_tournament
+			has_current_phase = tournament_phase_recital
 		}
-		localization_key = FR_tournament_phase_recital
+		localization_key = FR_tournament_phase_recital # Récital
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tournament
-				}
-				has_current_phase = tournament_phase_joust # Joute
-			}
+			has_activity_type = activity_tournament
+			has_current_phase = tournament_phase_joust
 		}
-		localization_key = FR_tournament_phase_joust
+		localization_key = FR_tournament_phase_joust # Joute
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tournament
-				}
-				has_current_phase = tournament_phase_duel # Duel
-			}
+			has_activity_type = activity_tournament
+			has_current_phase = tournament_phase_duel
 		}
-		localization_key = FR_tournament_phase_duel
+		localization_key = FR_tournament_phase_duel # Duel
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tournament
-				}
-				has_current_phase = tournament_phase_wrestling # Lutte
-			}
+			has_activity_type = activity_tournament
+			has_current_phase = tournament_phase_wrestling
 		}
-		localization_key = FR_tournament_phase_wrestling
+		localization_key = FR_tournament_phase_wrestling # Lutte
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tournament
-				}
-				has_current_phase = tournament_phase_board_game # Jeu de plateau
-			}
+			has_activity_type = activity_tournament
+			has_current_phase = tournament_phase_board_game
 		}
-		localization_key = FR_tournament_phase_board_game
+		localization_key = FR_tournament_phase_board_game # Jeu de plateau
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tournament
-				}
-				has_current_phase = tournament_phase_horse_race # Course de chevaux
-			}
+			has_activity_type = activity_tournament
+			has_current_phase = tournament_phase_horse_race
 		}
-		localization_key = FR_tournament_phase_horse_race
+		localization_key = FR_tournament_phase_horse_race # Course de chevaux
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tournament
-				}
-				has_current_phase = tournament_phase_ceremony # Cérémonie
-			}
+			has_activity_type = activity_tournament
+			has_current_phase = tournament_phase_ceremony
 		}
-		localization_key = FR_tournament_phase_ceremony
+		localization_key = FR_tournament_phase_ceremony # Cérémonie
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tour
-				}
-				has_current_phase = tour_phase_tour_grounds # Visite des terres
-			}
+			has_activity_type = activity_tour
+			has_current_phase = tour_phase_tour_grounds
 		}
-		localization_key = FR_tour_phase_tour_grounds
+		localization_key = FR_tour_phase_tour_grounds # Visite des terres
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tour
-				}
-				has_current_phase = tour_phase_dinner # Dîner organisé
-			}
+			has_activity_type = activity_tour
+			has_current_phase = tour_phase_dinner
 		}
-		localization_key = FR_tour_phase_dinner
+		localization_key = FR_tour_phase_dinner # Dîner organisé
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tour
-				}
-				has_current_phase = tour_phase_cultural_festival # Festival culturel
-			}
+			has_activity_type = activity_tour
+			has_current_phase = tour_phase_cultural_festival
 		}
-		localization_key = FR_tour_phase_cultural_festival
+		localization_key = FR_tour_phase_cultural_festival # Festival culturel
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_tour
-				}
-				has_current_phase = tour_phase_journey_home # Retour
-			}
+			has_activity_type = activity_tour
+			has_current_phase = tour_phase_journey_home
 		}
-		localization_key = FR_tour_phase_journey_home
+		localization_key = FR_tour_phase_journey_home # Retour
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_gruesome_festival
-				}
-				has_current_phase = gruesome_festival_phase # Fête sacrificielle
-			}
+			has_activity_type = activity_gruesome_festival
+			has_current_phase = gruesome_festival_phase
 		}
-		localization_key = FR_gruesome_festival_phase
+		localization_key = FR_gruesome_festival_phase # Fête sacrificielle
 	}
 	text = {
 		trigger = {
-			trigger_if = {
-				limit = { 
-					has_activity_type = activity_hunt
-				}
-				has_current_phase = hunt_phase # Chasse
-			}
+			has_activity_type = activity_hunt
+			has_current_phase = hunt_phase
 		}
-		localization_key = FR_hunt_phase
+		localization_key = FR_hunt_phase # Chasse
 	}
 	text = {
 		localization_key = FR_activity_phase_fallback

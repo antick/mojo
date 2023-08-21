@@ -93,72 +93,6 @@ ObjectifiedFeature_DE_END_PRO_S_A = {
 	suffix = "_DE_END_PRO_S_A"
 }
 
-GetAnimalType_DE_1 = {
-	log_loc_errors = no
-	parent = GetAnimalType
-	suffix = "_DE_1"
-}
-
-GetAnimalType_DE_2 = {
-	log_loc_errors = no
-	parent = GetAnimalType
-	suffix = "_DE_2"
-}
-
-GetAnimalType_DE_3 = {
-	log_loc_errors = no
-	parent = GetAnimalType
-	suffix = "_DE_3"
-}
-
-GetAnimalType_DE_4 = {
-	log_loc_errors = no
-	parent = GetAnimalType
-	suffix = "_DE_4"
-}
-
-GetAnimalType_DE_Plural = {
-	log_loc_errors = no
-	parent = GetAnimalType
-	suffix = "_DE_Plural"
-}
-
-LocalAnimal_DE_ART_DEF_S_N = {
-	log_loc_errors = no
-	parent = GetAnimalType
-	suffix = "_DE_ART_DEF_S_N"
-}
-
-LocalAnimal_DE_1 = {
-	log_loc_errors = no
-	parent = GetAnimalType
-	suffix = "_DE_1"
-}
-
-LocalAnimal_DE_2 = {
-	log_loc_errors = no
-	parent = GetAnimalType
-	suffix = "_DE_2"
-}
-
-LocalAnimal_DE_3 = {
-	log_loc_errors = no
-	parent = GetAnimalType
-	suffix = "_DE_3"
-}
-
-LocalAnimal_DE_4 = {
-	log_loc_errors = no
-	parent = GetAnimalType
-	suffix = "_DE_4"
-}
-
-LocalAnimal_DE_Plural = {
-	log_loc_errors = no
-	parent = GetAnimalType
-	suffix = "_DE_Plural"
-}
-
 CatStory_DE_PRO_PER_S_3P_A = {
 	log_loc_errors = no
 	parent = CatStoryFemaleMale
@@ -718,24 +652,6 @@ GetRegionalDeerType_DE_1 = {
 	suffix = "_DE_1"
 }
 
-#GetProwlingAnimal_DE_1 = {
-#	log_loc_errors = no
-#	parent = GetProwlingAnimal
-#	suffix = "_DE_1"
-#}
-#
-#GetProwlingAnimal_DE_2 = {
-#	log_loc_errors = no
-#	parent = GetProwlingAnimal
-#	suffix = "_DE_2"
-#}
-#
-#GetProwlingAnimalPlural_DE_1 = {
-#	log_loc_errors = no
-#	parent = GetProwlingAnimalPlural
-#	suffix = "_DE_1"
-#}
-
 RegionalEdibleMeat_DE_1 = {
 	log_loc_errors = no
 	parent = RegionalEdibleMeat
@@ -784,35 +700,11 @@ GetLocalStreetFood_DE_ART_IND_A = {
 	suffix = "_DE_ART_IND_A"
 }
 
-RegionalFerociousAnimal_DE_ART_IND_N = {
-	log_loc_errors = no
-	parent = RegionalFerociousAnimal
-	suffix = "_DE_ART_IND_N"
-}
-
 RegionalFerociousAnimal_DE_PRO_PER_S_3P_N = {
 	log_loc_errors = no
 	parent = RegionalFerociousAnimal
 	suffix = "_DE_PRO_PER_S_3P_N"
 }
-
-#DangerousLocalAnimal_DE_1 = {
-#	log_loc_errors = no
-#	parent = DangerousLocalAnimal
-#	suffix = "_DE_1"
-#}
-#
-#DangerousLocalAnimal_DE_ART_IND_A = {
-#	log_loc_errors = no
-#	parent = DangerousLocalAnimal
-#	suffix = "_DE_ART_IND_A"
-#}
-#
-#DangerousLocalAnimal_DE_ART_DEF_S_N = {
-#	log_loc_errors = no
-#	parent = DangerousLocalAnimal
-#	suffix = "_DE_ART_DEF_S_N"
-#}
 
 GetFaithTemple_DE_ART_DEF_S_A = {
 	log_loc_errors = no

@@ -10137,19 +10137,11 @@ hunt.2500 = {
 			}
 			save_scope_as = sighting_county
 			hunt_activity_standard_game_effect = { PROVINCE = scope:sighting_province HUNTER = root }
-			set_variable = {
-				name = recent_sighting
-				years = 10
-			}
-			add_county_modifier = {
-				modifier = hunt_sighting_standard_modifier
-				years = 3
-				desc = hunt_sighting_standard_modifier_custom_desc
-			}
-			set_variable = {
-				name = sighting_owner
-				years = 3
-				value = root
+			# Create new sighting
+			hunt_create_sighting_effect = {
+				TYPE = standard
+				ANIMAL = var:animal_type
+				OWNER = root
 			}
 		}
 	}
@@ -10336,19 +10328,11 @@ hunt.2510 = {
 					}
 				}
 			}
-			set_variable = {
-				name = recent_sighting
-				years = 10
-			}
-			add_county_modifier = {
-				modifier = hunt_sighting_legendary_modifier
-				years = 3
-				desc = hunt_sighting_legendary_modifier_custom_desc
-			}
-			set_variable = {
-				name = sighting_owner
-				years = 3
-				value = root
+			# Create new sighting
+			hunt_create_sighting_effect = {
+				TYPE = legendary
+				ANIMAL = var:animal_type
+				OWNER = root
 			}
 		}
 	}
@@ -10459,19 +10443,11 @@ hunt.2520 = {
 			}
 			save_scope_as = sighting_county
 			hunt_activity_dangerous_game_effect = { PROVINCE = scope:sighting_province }
-			set_variable = {
-				name = recent_sighting
-				years = 10
-			}
-			add_county_modifier = {
-				modifier = hunt_sighting_dangerous_modifier
-				years = 3
-				desc = hunt_sighting_dangerous_modifier_custom_desc
-			}
-			set_variable = {
-				name = sighting_owner
-				years = 3
-				value = root
+			# Create new sighting
+			hunt_create_sighting_effect = {
+				TYPE = dangerous
+				ANIMAL = var:animal_type
+				OWNER = root
 			}
 		}
 	}
@@ -10578,19 +10554,11 @@ hunt.2530 = {
 			}
 			save_scope_as = sighting_county
 			hunt_activity_falconry_game_effect = { PROVINCE = scope:sighting_province }
-			set_variable = {
-				name = recent_sighting
-				years = 10
-			}
-			add_county_modifier = {
-				modifier = hunt_sighting_falconry_modifier
-				years = 3
-				desc = hunt_sighting_falconry_modifier_custom_desc
-			}
-			set_variable = {
-				name = sighting_owner
-				years = 3
-				value = root
+			# Create new sighting
+			hunt_create_sighting_effect = {
+				TYPE = falconry
+				ANIMAL = var:animal_type
+				OWNER = root
 			}
 		}
 	}
@@ -10682,6 +10650,7 @@ hunt.2540 = {
 				has_county_modifier = hunt_sighting_dangerous_modifier
 				has_county_modifier = hunt_sighting_legendary_modifier	
 			}
+			exists = var:animal_type
 			var:sighting_owner ?= root
 			any_neighboring_county = {
 				holder.top_liege = root.top_liege
@@ -10726,6 +10695,7 @@ hunt.2540 = {
 				}
 			}
 			save_scope_as = old_sighting_county
+			# Save new sighting county
 			random_neighboring_county = {
 				limit = {
 					holder.top_liege = root.top_liege
@@ -10733,9 +10703,10 @@ hunt.2540 = {
 				}
 				save_scope_as = sighting_county
 			}
+			# Save and update story if relevant
 			if = {
 				limit = {
-					scope:old_sighting_county = { has_county_modifier = hunt_sighting_legendary_modifier }
+					has_county_modifier = hunt_sighting_legendary_modifier
 					root = {
 						any_owned_story = { story_type = story_cycle_hunt_mystical_animal }
 					}
@@ -10744,72 +10715,52 @@ hunt.2540 = {
 					random_owned_story = {
 						limit = { story_type = story_cycle_hunt_mystical_animal }
 						save_scope_as = story
-					}
-				}
-				set_variable = {
-					name = animal_type
-					value = scope:story.var:animal_type
-				}
-			}
-			else = {
-				set_variable = {
-					name = animal_type
-					value = scope:old_sighting_county.var:animal_type
+			            # Remove old sighting
+			            var:legendary_county = { hunt_remove_sighting_effect = yes }
+			            # Update legendary location
+			            set_variable = {
+			                name = legendary_county
+			                value = scope:sighting_county
+			            }
+			        }
 				}
 			}
-			set_variable = {
-				name = recent_sighting
-				years = 10
-			}
-			scope:sighting_county = {
-				set_variable = {
-					name = animal_type
-					value = scope:old_sighting_county.var:animal_type
-				}
-				set_variable = {
-					name = sighting_owner
-					years = 3
-					value = scope:old_sighting_county.var:sighting_owner
-				}
-			}
-			scope:old_sighting_county = {
-				remove_variable = animal_type
-				switch = {
-					trigger = has_county_modifier
-					hunt_sighting_standard_modifier = {
-						remove_county_modifier = hunt_sighting_standard_modifier
-						scope:sighting_county = {
-							add_county_modifier = {
-								modifier = hunt_sighting_standard_modifier
-								years = 3
-								desc = hunt_sighting_standard_modifier_custom_desc
-							}
-						}
-						
-					}
-					hunt_sighting_dangerous_modifier = {
-						remove_county_modifier = hunt_sighting_dangerous_modifier
-						scope:sighting_county = {
-							add_county_modifier = {
-								modifier = hunt_sighting_dangerous_modifier
-								years = 3
-								desc = hunt_sighting_dangerous_modifier_custom_desc
-							}
-						}
-					}
-					hunt_sighting_legendary_modifier = {
-						remove_county_modifier = hunt_sighting_legendary_modifier
-						scope:sighting_county = {
-							add_county_modifier = {
-								modifier = hunt_sighting_legendary_modifier
-								years = 3
-								desc = hunt_sighting_legendary_modifier_custom_desc
-							}
+			# Add relevant sighting modifiers and trackers
+			switch = {
+				trigger = has_county_modifier
+				hunt_sighting_standard_modifier = {
+					# Create new sighting
+					scope:sighting_county = {
+						hunt_create_sighting_effect = {
+							TYPE = standard
+							ANIMAL = scope:old_sighting_county.var:animal_type
+							OWNER = root
 						}
 					}
 				}
-				remove_variable = sighting_owner
-			}			
+				hunt_sighting_dangerous_modifier = {
+					# Create new sighting
+					scope:sighting_county = {
+						hunt_create_sighting_effect = {
+							TYPE = dangerous
+							ANIMAL = scope:old_sighting_county.var:animal_type
+							OWNER = root
+						}
+					}
+				}
+				hunt_sighting_legendary_modifier = {
+					# Create new sighting
+					scope:sighting_county = {
+						hunt_create_sighting_effect = {
+							TYPE = legendary
+							ANIMAL = scope:old_sighting_county.var:animal_type
+							OWNER = root
+						}
+					}
+				}
+			}
+			# Clean up old location variables
+			hunt_remove_sighting_effect = yes
 		}
 	}
 
@@ -11649,7 +11600,10 @@ hunt.4001 = {
 		# Upset/please attendees based on faith tenets
 		scope:activity = {
 			every_attending_character = {
-				limit = { hunt_dharmic_pacificist_trigger = yes }
+				limit = {
+					hunt_dharmic_pacificist_trigger = yes
+					NOT = { this = root }
+				}
 				custom = every_non_cynical_dharmic_attendee_tt
 				add_opinion = {
 					target = root
@@ -11659,7 +11613,7 @@ hunt.4001 = {
 			}
 			every_attending_character = {
 				limit = {
-					NOT = { this = scope:host }
+					NOT = { this = root }
 					hunt_dharmic_pacificist_trigger = no
 				}
 				custom = every_non_cynical_dharmic_attendee_reverse_tt
@@ -11694,7 +11648,10 @@ hunt.4001 = {
 		scope:activity = {
 			set_variable = animal_spared
 			every_attending_character = {
-				limit = { is_ai = no }
+				limit = {
+					
+					is_ai = no
+				}
 				trigger_event = hunt.1201
 			}
 		}
@@ -12359,7 +12316,7 @@ hunt.4004 = {
 				SCOPE = hunt_participant
 			}
 			hunt_all_attendee_xp_effect = { CHANGE = 3 RANDOM = 2 }
-			scope:activity.activity_location.county = { remove_county_modifier = hunt_sighting_legendary_modifier }
+			scope:activity.activity_location.county = { hunt_remove_sighting_effect = yes }
 		}
 		# Show personal rewards if guest
 		else = { hunt_individual_guest_awards_effect = yes }
@@ -16693,16 +16650,11 @@ hunt.4013 = {
 					}
 					activity_location.county = {
 						save_scope_as = sighting_county
-						set_variable = { name = animal_type value = root.var:animal_type }
-						add_county_modifier = {
-							modifier = hunt_sighting_legendary_modifier
-							years = 3
-							desc = hunt_sighting_legendary_modifier_custom_desc
-						}
-						set_variable = {
-							name = sighting_owner
-							years = 3
-							value = root
+						# Create new sighting
+						hunt_create_sighting_effect = {
+							TYPE = legendary
+							ANIMAL = root.var:animal_type
+							OWNER = root
 						}
 					}
 				}
@@ -16877,10 +16829,7 @@ hunt.4013 = {
 				character = root
 
 				# Effect
-				activity_location.county = {
-					remove_county_modifier = hunt_sighting_legendary_modifier
-					remove_variable = animal_type
-				}
+				activity_location.county = { hunt_remove_sighting_effect = yes }
 				every_attending_character = {
 					limit = {
 						NOT = { this = root }
@@ -20624,8 +20573,20 @@ hunt.5003 = {
 			if = {
 				limit = {
 					scope:hunt_participant = { hunt_5003_animal_over_flower = yes }
+					has_royal_court = yes
 				}
 				create_artifact_animal_hide_effect = {
+					OWNER = root
+					HUNTER = scope:hunt_participant
+					LEGENDARY = no
+					ANIMAL = flag:hare
+				}
+			}
+			else_if = {
+				limit = {
+					scope:hunt_participant = { hunt_5003_animal_over_flower = yes }
+				}
+				create_artifact_animal_trinket_effect = {
 					OWNER = root
 					HUNTER = scope:hunt_participant
 					LEGENDARY = no
@@ -23882,10 +23843,7 @@ hunt.7210 = {
 			hunt_story_trigger = { STORY = ambush }
 			hunt_story_trigger = { STORY = stealth }
 		}
-		OR = {
-			hunt_murder_intent_target_trigger = yes
-			hunt_murder_target_trigger = yes
-		}
+		hunt_murder_intent_target_trigger = yes
 		OR = {
 			can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:host }
 			AND = {
@@ -24848,7 +24806,7 @@ hunt.7303 = {
 
 				#Effect
 				root = {
-					progress_towards_lover_effect = {
+					progress_towards_friend_effect = {
 						CHARACTER = scope:befriend_target
 						OPINION = 15
 						REASON = friend_hunt_conversation_impressed

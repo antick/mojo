@@ -51,6 +51,7 @@ my_interaction = {
 	
 	cooldown = { years = x } 							# How long until the interaction can be used again?
 	cooldown_against_recipient = { years = x } 			# How long until the interaction can be used again against recipient?
+	ignore_recipient_recieve_cooldown = trigger			# Under what circumstances can an interaction against a recipient be used despite there being a cooldown for targeting that recipient?
 	category_cooldown = { years = x } 					# Will apply a cooldown to all interactions in the same category as this interaction
 														# If an interaction already has a cooldown, the longer cooldown one will be applied
 	category_cooldown_against_recipient = { years = x } # Will apply a cooldown to all interactions in the same category as this interaction against this recipient

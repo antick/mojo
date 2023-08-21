@@ -41,6 +41,9 @@ ransom_interaction_effect = {
 			}
 			save_scope_value_as = { name = current_gold value = yes }
 		}
+		else = {
+			save_scope_value_as = { name = favor value = yes }
+		}
 	}
 	scope:prisoner = {
 		add_character_flag = { #To make sure you don't get spammed about the release

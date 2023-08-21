@@ -186,23 +186,23 @@ has_cultural_tradition = {
 	none_not = NOT_HAS_CULTURAL_TRADITION_NONE
 }
 
-lacks_overlapping_cultrad_tradition_fp1_coastal_warriors {
+lacks_overlapping_cultrad_tradition_fp1_coastal_warriors = {
 	third_not = LACKS_OVERLAPPING_CULTRAD_TRADITION_FP1_COASTAL_WARRIORS_NOT
 }
 
-lacks_overlapping_cultrad_tradition_fp1_northern_stories {
+lacks_overlapping_cultrad_tradition_fp1_northern_stories = {
 	third_not = LACKS_OVERLAPPING_CULTRAD_TRADITION_FP1_NORTHERN_STORIES_NOT
 }
 
-lacks_overlapping_cultrad_tradition_fp1_trials_by_combat {
+lacks_overlapping_cultrad_tradition_fp1_trials_by_combat = {
 	third_not = LACKS_OVERLAPPING_CULTRAD_TRADITION_FP1_TRIALS_BY_COMBAT_NOT
 }
 
-lacks_overlapping_cultrad_tradition_fp1_the_right_to_prove {
+lacks_overlapping_cultrad_tradition_fp1_the_right_to_prove = {
 	third_not = LACKS_OVERLAPPING_CULTRAD_TRADITION_FP1_THE_RIGHT_TO_PROVE_NOT
 }
 
-lacks_overlapping_cultrad_tradition_runestones {
+lacks_overlapping_cultrad_tradition_runestones = {
 	third_not = LACKS_OVERLAPPING_CULTRAD_TRADITION_RUNESTONES_NOT
 }
 
@@ -210,23 +210,23 @@ lacks_overlapping_cultrad_tradition_fp1_performative_honour {
 	third_not = LACKS_OVERLAPPING_CULTRAD_TRADITION_FP1_PERFORMATIVE_HONOUR_NOT
 }
 
-lacks_overlapping_cultrad_tradition_warrior_culture {
+lacks_overlapping_cultrad_tradition_warrior_culture = {
 	third_not = LACKS_OVERLAPPING_CULTRAD_TRADITION_WARRIOR_CULTURE_NOT
 }
 
-lacks_overlapping_cultrad_tradition_seafaring {
+lacks_overlapping_cultrad_tradition_seafaring = {
 	third_not = LACKS_OVERLAPPING_CULTRAD_TRADITION_SEAFARING_NOT
 }
 
-lacks_overlapping_cultrad_tradition_poetry {
+lacks_overlapping_cultrad_tradition_poetry = {
 	third_not = LACKS_OVERLAPPING_CULTRAD_TRADITION_POETRY_NOT
 }
 
-lacks_overlapping_cultrad_tradition_storytellers {
+lacks_overlapping_cultrad_tradition_storytellers = {
 	third_not = LACKS_OVERLAPPING_CULTRAD_TRADITION_STORYTELLERS_NOT
 }
 
-lacks_overlapping_cultrad_tradition_city_keepers {
+lacks_overlapping_cultrad_tradition_city_keepers = {
 	third_not = LACKS_OVERLAPPING_CULTRAD_TRADITION_CITY_KEEPERS_NOT
 }
 

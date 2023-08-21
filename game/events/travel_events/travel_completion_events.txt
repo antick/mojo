@@ -148,6 +148,15 @@ travel_completion_event.1000 = {
 				value = tournament_hastiludes_xp_gain_miniscule_value
 			}
 		}
+		# Send all the hired companions back to the pool
+		root.current_travel_plan = {
+			every_entourage_character = {
+				limit = {
+					has_character_flag = travel_option_added_character
+				}
+				select_and_move_to_pool_effect = yes
+			}
+		}
 	}
 
 	#Yay, we're home

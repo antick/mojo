@@ -267,7 +267,7 @@ types ActivityPlannerTypes
 
 	type potential_selectable_target_portrait_widget = widget
 	{
-		size = { 400 94 }
+		size = { 475 94 }
 
 		portrait_head_small = {
 			parentanchor = left|vcenter
@@ -324,7 +324,7 @@ types ActivityPlannerTypes
 				expand = {}
 
 				warning_icon = {
-					visible = "[ActivityIntentSelectionWindow.MayNotArriveInTime( ActivityGuestCustomData.Self )]"
+					visible = "[ActivityIntentSelectionWindow.MayNotArriveInTime( CharacterListItem.Self )]"
 					size = { 30 30 }
 
 					texture = "gfx/interface/icons/symbols/icon_cross.dds"
@@ -334,6 +334,7 @@ types ActivityPlannerTypes
 			}
 		}
 	}
+
 
 	type caravan_master_portrait_widget = widget
 	{

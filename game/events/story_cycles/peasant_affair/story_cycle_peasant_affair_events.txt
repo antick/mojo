@@ -1747,7 +1747,7 @@ peasant_affair.3001 = {
 		custom_tooltip = peasant_affair.3001.d.tt
 		reverse_add_opinion = {
 			modifier = peasant_affair_rejected_acknowledgement_opinion
-			target = root
+			target = scope:peasant_child
 		}
 		scope:story = {
 			set_variable = {

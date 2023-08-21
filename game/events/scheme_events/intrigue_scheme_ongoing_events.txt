@@ -4431,12 +4431,10 @@ intrigue_scheme_ongoing.5022 = {
 					scope:family_member = {
 						send_interface_toast = {
 							title = intrigue_scheme_ongoing.5021.a.failure
-							scope:owner = {
-								add_opinion = {
-									target = root
-									modifier = insult_opinion
-									opinion = -20
-								}
+							add_opinion = {
+								target = root
+								modifier = insult_opinion
+								opinion = -20
 							}
 						}
 					}

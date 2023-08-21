@@ -1127,7 +1127,7 @@ types Notifications {
     ######################################################
     type notifications_suggestions = widget {
         name = "action_items"
-        visible = "[And( Not( IsPauseMenuShown ), And( Not(SinglePlayerShowingPausedSuccession), ActionItemHandler.ShouldBeVisible))]"
+        visible = "[And( And( ActionItemHandler.ShouldBeVisible, Not( IsGameViewOpen( 'barbershop' ) ) ), Not( IsPauseMenuShown ) )]"
         visible_at_creation = no
         alwaystransparent = no
         allow_outside = yes

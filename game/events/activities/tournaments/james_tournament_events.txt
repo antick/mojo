@@ -93,11 +93,8 @@ tournament_events.8000 = { # Start
 	cooldown = { years = 1 }
 
 	trigger = {
+		activity_is_competing_trigger = yes
 		scope:activity = {
-			any_guest_subset_current_phase = { # you're participating
-				name = contestant
-				this = root
-			}
 			any_guest_subset_current_phase = { # There is a spectator who fancies you
 				name = spectator
 				8000_valid_to_offer_favor = yes

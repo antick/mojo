@@ -3461,11 +3461,23 @@ playdate.3013 = {
 			}
 		}
 		ai_chance = {
-			base = 50
+			base = 25
 			ai_value_modifier = {
 				ai_rationality = 0.25
 				ai_zeal = -2
 				ai_boldness = 0.25
+			}
+			modifier = {
+				factor = 0.33
+				faith = { has_doctrine = doctrine_witchcraft_crime }
+			}
+			modifier = {
+				factor = 0.66
+				faith = { has_doctrine = doctrine_witchcraft_shunned }
+			}
+			modifier = {
+				factor = 2
+				faith = { has_doctrine = doctrine_witchcraft_virtuous }
 			}
 		}
 	}

@@ -1242,7 +1242,10 @@
 
 		is_shown = {
 			NOR = {
-				religion_tag = christianity_religion
+				AND = {
+					religion_tag = christianity_religion
+					NOT = { this = faith:cathar }
+				}
 				religion_tag = judaism_religion
 				religion_tag = zoroastrianism_religion
 			}

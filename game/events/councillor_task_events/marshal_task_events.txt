@@ -939,14 +939,13 @@ marshal_task.1102 = {
 marshal_task.1103 = {
 	hidden = yes
 
+	cooldown = { months = 12 }
+
 	trigger = {
 		exists = cp:councillor_marshal
 		scope:councillor = cp:councillor_marshal
 		any_active_accolade = {
 			has_accolade_parameter = accolade_organize_army_bonus
-		}
-		cp:councillor_marshal = {
-			councillor_positive_event_opinion_trigger = yes
 		}
 		NOT = {
 			has_character_modifier = levy_captaincy_modifier
@@ -1630,12 +1629,11 @@ scripted_trigger marshal_task_2103_accolade_trigger = {
 marshal_task.2103 = {
 	hidden = yes
 
+	cooldown = { months = 12 }
+
 	trigger = {
 		exists = cp:councillor_marshal
 		scope:councillor = cp:councillor_marshal
-		cp:councillor_marshal = {
-			councillor_positive_event_opinion_trigger = yes
-		}
 		# check acclaimed knight is good to go
 		any_knight = {
 			marshal_task_2103_accolade_trigger = yes
@@ -2304,6 +2302,8 @@ marshal_task.3102 = {
 # by Jason Cantalini
 marshal_task.3103 = {
 	hidden = yes
+
+	cooldown = { months = 12 }
 
 	trigger = {
 		exists = cp:councillor_marshal

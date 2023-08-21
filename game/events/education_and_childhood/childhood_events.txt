@@ -7623,7 +7623,7 @@ childhood.2400 = {
 					}
 					add_opinion = {
 						modifier = disappointed_opinion
-						target = scope:realm_priest
+						target = root
 						opinion = -10
 					}
 					root = {

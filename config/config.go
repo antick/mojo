@@ -46,10 +46,10 @@ func Config() *Type {
 		ModVersion:  "0.1.0",
 
 		// Current ck3 version that we have synced in "game" folder
-		CurrentCk3Version: "1.9.1",
+		CurrentCk3Version: "1.9.2.1",
 
 		// Supported ck3 version by the mods
-		SupportedGameVersion: "1.9.1",
+		SupportedGameVersion: "1.9.2.1",
 
 		ModInternalFolders: []string{
 			"common",

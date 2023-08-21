@@ -657,6 +657,11 @@ diarch_revoke_title_interaction = {
 				any_held_county = { count <= 3 }
 			}
 		}
+		### x0 Don't go into prestige debt!
+		modifier = {
+			factor = 0
+			prestige <= 0
+		}
 	}
 }
 
@@ -2481,7 +2486,7 @@ diarch_legal_meddling_interaction = {
 				value >= @ai_skill_diff_upper_threshold
 			}
 		}
-		### Else we'll try to pay full prestige, if we've got lots to spare.
+		### Else  we'll try to pay full prestige, if we've got lots to spare.
 		modifier = {
 			add = 50
 			scope:diarch_legal_meddling_interaction_pay_prestige_full = yes
@@ -2490,7 +2495,7 @@ diarch_legal_meddling_interaction = {
 				multiply = @ai_prestige_bank_threshold
 			}
 		}
-		### Or else we'll chance it, if we can afford that + some slack.
+		### Or else we'll to chance it, if we can afford that + some slack.
 		modifier = {
 			add = 25
 			scope:diarch_legal_meddling_interaction_pay_prestige_partial = yes
@@ -2646,6 +2651,11 @@ diarch_legal_meddling_interaction = {
 			scope:recipient = {
 				any_held_county = { count <= 1 }
 			}
+		}
+		### x0 Don't go into prestige debt!
+		modifier = {
+			factor = 0
+			prestige < 0
 		}
 	}
 }
@@ -3567,6 +3577,11 @@ diarch_shift_privileges_interaction = {
 				any_held_county = { count <= 3 }
 			}
 		}
+		### x0 Don't go into prestige debt!
+		modifier = {
+			factor = 0
+			prestige < 0
+		}
 	}
 }
 
@@ -4325,6 +4340,12 @@ swing_scales_currency_interaction = {
 			scope:swing_hof = yes
 		}
 		# Factors.
+		### x0 Don't go into prestige debt!
+		modifier = {
+			factor = 0
+			scope:swing_prestige = yes
+			prestige < 0
+		}
 		## We take care of these in the ai_potential block, because otherwise the AI interacts very, very weirdly with them.
 	}
 }
@@ -4569,6 +4590,12 @@ diarch_swing_scales_currency_interaction = {
 		modifier = {
 			add = 4
 			scope:swing_hof = yes
+		}
+		### x0 Don't go into prestige debt!
+		modifier = {
+			factor = 0
+			scope:swing_prestige = yes
+			prestige < 0
 		}
 	}
 }

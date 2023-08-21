@@ -16645,3 +16645,4 @@ travel_events.2111 = {
 			remove_variable = travelling_ruler_status
 		}
 	}
+}

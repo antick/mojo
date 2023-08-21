@@ -8,19 +8,19 @@ on_army_monthly = {
 	events = {
 	}
 	effect = {
-		scope:army ?= {
+		scope:army = {
 			if = {
 				limit = {
 					exists = army_commander
 					NOT = { has_variable = commander_death_events_pulse_cooldown }
 				}
-				army_commander = {
-					trigger_event = { on_action = commander_death_events_pulse }
-				}
 				set_variable = {
 					name = commander_death_events_pulse_cooldown
 					value = yes
 					days = 365
+				}
+				army_commander = {
+					trigger_event = { on_action = commander_death_events_pulse }
 				}
 			}
 		}

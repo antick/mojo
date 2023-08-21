@@ -1449,6 +1449,7 @@ host_dinner_events.1007 = {
 					exists = memory_participant:loser # Someone for the jester to play
 				}
 				save_scope_as = war_memory_scope
+				memory_participant:loser = { save_scope_as = loser }
 			}
 			random_memory = {
 				limit = {
@@ -1456,6 +1457,7 @@ host_dinner_events.1007 = {
 					exists = memory_participant:dead_relation
 				}
 				save_scope_as = dead_rival_memory_scope
+				memory_participant:dead_relation = { save_scope_as = dead_relation }
 			}
 			random_memory = {
 				limit = {
@@ -1463,12 +1465,14 @@ host_dinner_events.1007 = {
 					exists = memory_participant:dead_relation
 				}
 				save_scope_as = dead_positive_relation_memory_scope
+				memory_participant:dead_relation = { save_scope_as = dead_relation }
 			}
 			random_memory = {
 				limit = {
 					has_memory_type = married
 				}
 				save_scope_as = marriage_memory_scope
+				memory_participant:spouse = { save_scope_as = spouse }
 			}
 		}
 	}

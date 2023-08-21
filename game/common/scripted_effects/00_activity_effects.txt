@@ -3790,6 +3790,7 @@ disburse_feast_reveler_rewards = {
 # Called in the war_on_actions.txt file 
 # Used to send out the correct events if a character becomes involved in a war while attending an activity 
 activity_on_war_declared_events_effect = {
+	trigger_event = religious_decision.0200 # Stop mediation in its tracks
 	if = {
 		limit = {
 			this.involved_activity ?= {
