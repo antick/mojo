@@ -28,8 +28,8 @@ func Config() *Type {
 		LauncherSettingsPath: "/Users/pankaj/Library/Application Support/Steam/steamapps/common/Crusader Kings III/launcher/launcher-settings.json",
 
 		// Put your CK3 steam mod path here
-		//ModBuildPath: "/Users/pankaj/Paradox Interactive/Crusader Kings III/mod/mojo-flavor",
-		ModBuildPath: "build",
+		ModBuildPath: "/Users/pankaj/Paradox Interactive/Crusader Kings III/mod/mojo-flavor",
+		//ModBuildPath: "build",
 
 		ModPath:           modPath,
 		ModDescriptorPath: filepath.Join(modPath, "descriptor.mod"),

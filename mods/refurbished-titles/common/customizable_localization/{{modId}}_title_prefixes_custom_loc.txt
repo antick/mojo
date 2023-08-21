@@ -6,10 +6,6 @@ TitleTurkishKing = {
             is_independent_ruler = yes
             any_parent = {
                 even_if_dead = yes
-                any_parent = {
-                    even_if_dead = yes
-                    dynasty = root.dynasty
-                }
             }
         }
         localization_key = king_turkish_title_independent_male
@@ -20,10 +16,6 @@ TitleTurkishKing = {
             is_independent_ruler = yes
             any_parent = {
                 even_if_dead = yes
-                any_parent = {
-                    even_if_dead = yes
-                    dynasty = root.dynasty
-                }
             }
         }
         localization_key = king_turkish_title_independent_female
@@ -34,10 +26,6 @@ TitleTurkishKing = {
             is_independent_ruler = no
             any_parent = {
                 even_if_dead = yes
-                any_parent = {
-                    even_if_dead = yes
-                    dynasty = root.dynasty
-                }
             }
         }
         localization_key = king_turkish_title_vassal_male
@@ -48,10 +36,6 @@ TitleTurkishKing = {
             is_independent_ruler = no
             any_parent = {
                 even_if_dead = yes
-                any_parent = {
-                    even_if_dead = yes
-                    dynasty = root.dynasty
-                }
             }
         }
         localization_key = king_turkish_title_vassal_female
