@@ -64,10 +64,11 @@ func pullCk3GameFiles() error {
 func updateLauncherSettings() error {
 	err := tools.UpdateGameDataPath(config.LauncherSettingsPath, config.GameDataPath)
 	if err != nil {
+		fmt.Println("Error updating launcher settings")
 		return err
 	}
 
-	fmt.Println("📦 Updated launcher settings")
+	fmt.Println("✏️ Updated launcher settings")
 	return nil
 }
 
