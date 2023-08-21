@@ -7,6 +7,7 @@ import (
 	"mojo/mods"
 	"mojo/tools"
 	"os"
+	"sort"
 )
 
 var config = configuration.Config()
@@ -19,7 +20,15 @@ func buildMods() error {
 
 	modConfig := mods.ModConfig()
 
-	for modName, modDetails := range modConfig.Mods {
+	// Extract and sort the mod names
+	keys := make([]string, 0, len(modConfig.Mods))
+	for k := range modConfig.Mods {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+
+	for _, modName := range keys {
+		modDetails := modConfig.Mods[modName]
 		fmt.Printf("📦 Building %s\n", modName)
 
 		if !modDetails.Enabled {

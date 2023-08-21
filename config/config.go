@@ -32,7 +32,7 @@ func Config() *Type {
 		ModBuildPath: "build",
 
 		ModPath:           modPath,
-		ModDescriptorPath: modPath + "/descriptor.mod",
+		ModDescriptorPath: filepath.Join(modPath, "descriptor.mod"),
 		OriginalCk3Path:   originalCk3Path,
 		ModCk3Path:        modCk3Path,
 		Ck3PullMapping: map[string]string{

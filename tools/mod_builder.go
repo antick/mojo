@@ -108,13 +108,17 @@ func Build(modName string, replacements map[string]string) error {
 	for srcPath, destPath := range filesAndFolderMapping {
 		info, err := os.Stat(srcPath)
 		if err != nil {
-			fmt.Printf("Build failed: %v \n", err)
-			return nil
+			if os.IsNotExist(err) {
+				//fmt.Printf("Skipping %s...\n", srcPath)
+				continue
+			} else {
+				fmt.Printf("Build failed while accessing the given path: %v \n", err)
+			}
 		}
 
 		if info.IsDir() {
 			if err = processDirectory(srcPath, destPath, textReplacement); err != nil {
-				fmt.Printf("Build failed: %v \n", err)
+				fmt.Printf("Build failed for the given directory: %v \n", err)
 				return nil
 			}
 		} else {
