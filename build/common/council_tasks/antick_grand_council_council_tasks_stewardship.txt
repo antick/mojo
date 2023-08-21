@@ -1,0 +1,1501 @@
+﻿task_advisor_assist_stewardship_1 = {
+    position = councillor_advisor_1
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_stewardship_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_assist_stewardship_2 = {
+    position = councillor_advisor_2
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_stewardship_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_assist_stewardship_3 = {
+    position = councillor_advisor_3
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_stewardship_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_assist_stewardship_4 = {
+    position = councillor_advisor_4
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_stewardship_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_assist_stewardship_5 = {
+    position = councillor_advisor_5
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_stewardship_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_assist_stewardship_6 = {
+    position = councillor_advisor_6
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_stewardship_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_stewardship_1 = {
+    position = councillor_advisor_king_1
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_stewardship_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_stewardship_2 = {
+    position = councillor_advisor_king_2
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_stewardship_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_stewardship_3 = {
+    position = councillor_advisor_king_3
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_stewardship_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_stewardship_4 = {
+    position = councillor_advisor_king_4
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_stewardship_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_stewardship_5 = {
+    position = councillor_advisor_king_5
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_stewardship_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_stewardship_6 = {
+    position = councillor_advisor_king_6
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_stewardship_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_stewardship_1 = {
+    position = councillor_advisor_emperor_1
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_stewardship_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_stewardship_2 = {
+    position = councillor_advisor_emperor_2
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_stewardship_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_stewardship_3 = {
+    position = councillor_advisor_emperor_3
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_stewardship_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_stewardship_4 = {
+    position = councillor_advisor_emperor_4
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_stewardship_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_stewardship_5 = {
+    position = councillor_advisor_emperor_5
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_stewardship_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_stewardship_6 = {
+    position = councillor_advisor_emperor_6
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_stewardship_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 0.1
+        monthly_stewardship_lifestyle_xp_gain_mult = 0.005
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        stewardship = 1
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+################################################################################
+################################################################################
+################################################################################
+
+task_advisor_develop_capital_stewardship_1 = {
+    position = councillor_advisor_1
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_develop_capital_stewardship_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_develop_capital_stewardship_2 = {
+    position = councillor_advisor_2
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_develop_capital_stewardship_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_develop_capital_stewardship_3 = {
+    position = councillor_advisor_3
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_develop_capital_stewardship_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_develop_capital_stewardship_4 = {
+    position = councillor_advisor_4
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_develop_capital_stewardship_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_develop_capital_stewardship_5 = {
+    position = councillor_advisor_5
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_develop_capital_stewardship_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_develop_capital_stewardship_6 = {
+    position = councillor_advisor_6
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_develop_capital_stewardship_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_king_develop_capital_stewardship_1 = {
+    position = councillor_advisor_king_1
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_develop_capital_stewardship_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_king_develop_capital_stewardship_2 = {
+    position = councillor_advisor_king_2
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_develop_capital_stewardship_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_king_develop_capital_stewardship_3 = {
+    position = councillor_advisor_king_3
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_develop_capital_stewardship_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_king_develop_capital_stewardship_4 = {
+    position = councillor_advisor_king_4
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_develop_capital_stewardship_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_king_develop_capital_stewardship_5 = {
+    position = councillor_advisor_king_5
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_develop_capital_stewardship_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_king_develop_capital_stewardship_6 = {
+    position = councillor_advisor_king_6
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_develop_capital_stewardship_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_emperor_develop_capital_stewardship_1 = {
+    position = councillor_advisor_emperor_1
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_develop_capital_stewardship_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_emperor_develop_capital_stewardship_2 = {
+    position = councillor_advisor_emperor_2
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_develop_capital_stewardship_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_emperor_develop_capital_stewardship_3 = {
+    position = councillor_advisor_emperor_3
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_develop_capital_stewardship_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_emperor_develop_capital_stewardship_4 = {
+    position = councillor_advisor_emperor_4
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_develop_capital_stewardship_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_emperor_develop_capital_stewardship_5 = {
+    position = councillor_advisor_emperor_5
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_develop_capital_stewardship_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+task_advisor_emperor_develop_capital_stewardship_6 = {
+    position = councillor_advisor_emperor_6
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_develop_capital_stewardship_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        character_capital_county_monthly_development_growth_add = 0.0125
+        domain_limit = 0.025
+        scale = antick_grand_council_scale_advisor_assist_stewardship_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_limit = 1
+        scale = antick_grand_council_scale_steward_domain_limit
+    }
+}
+
+################################################################################
+################################################################################
+################################################################################
+
+task_advisor_manage_domain_stewardship_1 = {
+    position = councillor_advisor_1
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_manage_domain_stewardship_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_manage_domain_stewardship_2 = {
+    position = councillor_advisor_2
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_manage_domain_stewardship_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_manage_domain_stewardship_3 = {
+    position = councillor_advisor_3
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_manage_domain_stewardship_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_manage_domain_stewardship_4 = {
+    position = councillor_advisor_4
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_manage_domain_stewardship_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_manage_domain_stewardship_5 = {
+    position = councillor_advisor_5
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_manage_domain_stewardship_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_manage_domain_stewardship_6 = {
+    position = councillor_advisor_6
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_manage_domain_stewardship_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_manage_domain_stewardship_1 = {
+    position = councillor_advisor_king_1
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_manage_domain_stewardship_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_manage_domain_stewardship_2 = {
+    position = councillor_advisor_king_2
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_manage_domain_stewardship_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_manage_domain_stewardship_3 = {
+    position = councillor_advisor_king_3
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_manage_domain_stewardship_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_manage_domain_stewardship_4 = {
+    position = councillor_advisor_king_4
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_manage_domain_stewardship_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_manage_domain_stewardship_5 = {
+    position = councillor_advisor_king_5
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_manage_domain_stewardship_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_king_manage_domain_stewardship_6 = {
+    position = councillor_advisor_king_6
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_manage_domain_stewardship_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_manage_domain_stewardship_1 = {
+    position = councillor_advisor_emperor_1
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_manage_domain_stewardship_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_manage_domain_stewardship_2 = {
+    position = councillor_advisor_emperor_2
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_manage_domain_stewardship_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_manage_domain_stewardship_3 = {
+    position = councillor_advisor_emperor_3
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_manage_domain_stewardship_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_manage_domain_stewardship_4 = {
+    position = councillor_advisor_emperor_4
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_manage_domain_stewardship_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_manage_domain_stewardship_5 = {
+    position = councillor_advisor_emperor_5
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_manage_domain_stewardship_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_manage_domain_stewardship_6 = {
+    position = councillor_advisor_emperor_6
+
+    skill = stewardship
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_stewardship_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_manage_domain_stewardship_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 1
+        scale = antick_grand_council_scale_steward_tax
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        domain_tax_mult = 0.01
+        # scale = antick_grand_council_scale_advisor_simple
+    }
+}

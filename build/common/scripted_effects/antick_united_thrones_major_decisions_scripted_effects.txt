@@ -1,0 +1,158 @@
+merge_empires_effect = {
+	#effect description (wip: a detailed list of all affected kingdoms would be nice)
+	show_as_tooltip = {
+		custom_tooltip = merge_empires_result_de_jure
+		custom_tooltip = merge_empires_result_destroy
+	}
+
+	hidden_effect = {
+		save_scope_as = founder
+
+		primary_title = {
+			save_scope_as = unified_title
+		}
+
+		#change de-jure-lieges for all non primary empire titles
+		every_held_title = {
+			limit = {
+				tier = tier_empire
+				NOT = { this = scope:unified_title }
+			}
+			#change de-jure-lieges of all kingdoms
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_kingdom
+				}
+				set_de_jure_liege_title = scope:unified_title
+
+				#check if a player needs to be notified
+				if = {
+					limit = {
+						exists = kingdom
+						kingdom = {
+							exists = holder
+							holder = {
+								NOT = { this = root }
+								NOT = { top_liege = root }
+								is_ai = no
+							}
+						}
+					}
+
+					add_to_temporary_list = kingdoms_for_notification
+					root = {
+						save_temporary_scope_value_as = {
+							name = send_notifications
+							value = yes
+						}
+					}
+				}
+			}
+			#mark empire title for deletion
+			add_to_temporary_list = excess_empire_titles
+		}
+
+		#search for completely controlled additional empires
+		every_sub_realm_county = {
+			limit = {
+				exists = empire
+				NOT = { exists = empire.holder }
+				holder.top_liege = root
+				empire = {
+					save_temporary_scope_as = test_empire
+				}
+				holder.top_liege = {
+					completely_controls = scope:test_empire
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						empire = {
+							is_in_list = additional_de_jure_empires
+						}
+					}
+				}
+				empire = {
+					add_to_temporary_list = additional_de_jure_empires
+				}
+			}
+		}
+
+		#change de-jure-lieges of all kingdoms in additional empires
+		every_in_list = {
+			list = additional_de_jure_empires
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_kingdom
+				}
+				set_de_jure_liege_title = scope:unified_title
+			}
+		}
+
+		#destroy non-primary empires
+		every_in_list = {
+			list = excess_empire_titles
+			limit = {
+				NOT = { this = scope:unified_title }
+			}
+			root = {
+				destroy_title = prev
+			}
+		}
+
+		#message to founder (see major_decisions.1103)
+		trigger_event = major_decisions_merge_empires.1001
+
+		#messages to other players
+		every_player = {
+			#message to vassal players (see major_decisions.1104)
+			if = {
+				limit = {
+					top_liege = scope:founder
+					NOT = { this = root }
+				}
+				trigger_event = major_decisions_merge_empires.1002
+			}
+
+			#message to non-vassal players who lose de jure territory (see major_decisions.1105)
+			else_if = {
+				limit = {
+					exists = scope:send_notifications
+					NOT = { this = root }
+					NOT = { top_liege = scope:founder }
+					any_held_title = {
+						any_in_de_jure_hierarchy = {
+							continue = {
+								tier > tier_kingdom
+							}
+							tier = tier_kingdom
+							is_in_list = kingdoms_for_notification
+						}
+					}
+				}
+				every_held_title = {
+					every_in_de_jure_hierarchy = {
+						continue = {
+							tier > tier_kingdom
+						}
+						limit = {
+							tier = tier_kingdom
+							is_in_list = kingdoms_for_notification
+						}
+						add_to_list = notification_titles
+					}
+				}
+				if = {
+					limit = {
+						any_in_list = {
+							list = notification_titles
+							count > 0
+						}
+					}
+					trigger_event = major_decisions_merge_empires.1003
+				}
+			}
+		}
+	}
+}

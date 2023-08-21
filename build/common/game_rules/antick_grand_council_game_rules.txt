@@ -1,0 +1,13 @@
+antick_grand_council_player = {
+    default = antick_grand_council_player_enabled
+
+    categories = {
+        mojo
+    }
+
+    antick_grand_council_player_enabled = {
+    }
+
+    antick_grand_council_player_disabled = {
+    }
+}

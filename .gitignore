@@ -23,6 +23,3 @@ go.work
 # Code editors
 .idea/
 .vscode/
-
-# Temp directories
-old/

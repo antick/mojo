@@ -1,0 +1,5 @@
+merge_empires_decision_two_empires_held = {
+	global = HOLDS_TWO_OR_MORE_EMPIRE_TITLES_TRIGGER
+	first = I_HOLD_TWO_OR_MORE_EMPIRE_TITLES_TRIGGER
+	third = THEY_HOLD_TWO_OR_MORE_EMPIRE_TITLES_TRIGGER	
+}

@@ -1,0 +1,1969 @@
+template {{modId}}_BG_Liege_Council
+{
+    background = {
+        using = Background_Frame
+        margin_top = 7
+        margin_right = 8
+        margin_bottom = 3
+        margin_left = 8
+        using = Color_Grey
+
+        spriteType = Corneredtiled
+        # spriteborder = { 7 7 }
+        alpha = 0.7
+    }
+}
+
+template {{modId}}_BG_My_Council
+{
+    background = {
+        using = Background_Frame
+        margin_top = 7
+        margin_right = 8
+        margin_bottom = 3
+        margin_left = 8
+        using = Color_Red
+
+        spriteType = Corneredtiled
+        # spriteborder = { 7 7 }
+        alpha = 0.7
+    }
+}
+
+######################################################
+################## COUNCIL WINDOW ####################
+######################################################
+window = {
+    name = {{modId}}_window
+
+    datacontext = "[GetScriptedGui('{{modId}}_toggle')]"
+    visible = "[And( ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).End), And(IsGameViewOpen('council_window'), Not(GetVariableSystem.Exists( '{{modId}}_window_display_hidden' ))) )]"
+
+    movable = yes
+
+    parentanchor = top|right
+    position = { -620 6% }
+    size = { 30% 90% }
+    minimumsize = { 600 100 }
+
+    layer = windows_layer
+    using = Window_Background_Popup
+
+    state = {
+        name = _show
+        using = Animation_FadeIn_Standard
+        # using = Window_Position_MainTab
+        on_start = "[GetVariableSystem.Set( 'council_tabs_inner', 'council_advisors_1' )]"
+    }
+    state = {
+        name = _hide
+        using = Animation_FadeOut_Standard
+    }
+
+    vbox = {
+        # using = Window_Margins
+        margin_top = 15
+        margin_bottom = 5
+        margin_left = 10
+        margin_right = 10
+
+        #	hbox = {
+        #		layoutpolicy_horizontal = expanding
+        #		text_single = {
+        #			text = "COUNCILWINDOW_TITLE"
+        #			align = nobaseline
+        #			default_format = "#low"
+        #		}
+        #	}
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            ignoreinvisible = yes
+            margin = { 0 10 }
+
+            text_single = {
+                visible = "[AccessCouncilWindow.IsPlayerCouncilShown]"
+                text = "{{modId}}_COUNCIL_WINDOW_PLAYER_COUNCIL"
+                align = center|nobaseline
+                default_format = "#high"
+                fontsize = 22
+            }
+
+            text_single = {
+                visible = "[AccessCouncilWindow.IsLiegeCouncilShown]"
+                text = "{{modId}}_COUNCIL_WINDOW_LIEGE_COUNCIL"
+                align = center|nobaseline
+                default_format = "#high"
+                fontsize = 22
+            }
+        }
+
+        hbox = {
+            name = "tabs"
+            layoutpolicy_horizontal = expanding
+            # minimumsize = { 5 50 }
+
+            button_tab = {
+                name = "open_council_advisors_1_tab"
+                size = { 120 50 }
+                min_width = 120
+                layoutpolicy_horizontal = expanding
+
+                datacontext = "[GetScriptedGui('{{modId}}_setting_set_initial')]"
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                onclick = "[GetVariableSystem.Set( 'council_tabs_inner', 'council_advisors_1' )]"
+                down = "[GetVariableSystem.HasValue( 'council_tabs_inner', 'council_advisors_1' )]"
+
+                hbox = {
+
+                    expand = {}
+
+                    icon = {
+                        name = "crown"
+                        texture = "gfx/interface/coat_of_arms/crown_strip_62.dds"
+                        frame = 3
+                        framesize = { 42 31 }
+                        block "crown" {
+                            visible = yes
+                        }
+                    }
+
+                    text_single = {
+                        margin_left = 5
+                        text = "{{modId}}_COUNCIL_WINDOW_PLAYER_COUNCIL_ADVISORS_1"
+                        default_format = "#high"
+                    }
+
+                    expand = {}
+                }
+            }
+
+            button_tab = {
+                name = "open_council_advisors_2_tab"
+                size = { 180 50 }
+                min_width = 180
+                layoutpolicy_horizontal = expanding
+
+                datacontext = "[GetScriptedGui('{{modId}}_setting_set_initial')]"
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                onclick = "[GetVariableSystem.Set( 'council_tabs_inner', 'council_advisors_2' )]"
+                down = "[GetVariableSystem.HasValue( 'council_tabs_inner', 'council_advisors_2' )]"
+
+                hbox = {
+
+                    expand = {}
+
+                    icon = {
+                        name = "crown"
+                        texture = "gfx/interface/coat_of_arms/crown_strip_62.dds"
+                        frame = 5
+                        framesize = { 42 31 }
+
+                        block "crown" {
+                            visible = yes
+                        }
+                    }
+
+                    text_single = {
+                        margin_left = 5
+                        text = "{{modId}}_COUNCIL_WINDOW_PLAYER_COUNCIL_ADVISORS_2"
+                        default_format = "#high"
+                    }
+
+                    expand = {}
+                }
+            }
+
+            button_tab = {
+                name = "open_council_advisors_3_tab"
+                size = { 165 50 }
+                min_width = 165
+                layoutpolicy_horizontal = expanding
+
+                datacontext = "[GetScriptedGui('{{modId}}_setting_set_initial')]"
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                onclick = "[GetVariableSystem.Set( 'council_tabs_inner', 'council_advisors_3' )]"
+                down = "[GetVariableSystem.HasValue( 'council_tabs_inner', 'council_advisors_3' )]"
+
+                hbox = {
+                    expand = {}
+
+                    icon = {
+                        name = "crown"
+                        texture = "gfx/interface/coat_of_arms/crown_strip_62.dds"
+                        frame = 6
+                        framesize = { 42 31 }
+                        block "crown" {
+                            visible = yes
+                        }
+                    }
+
+                    text_single = {
+                        margin_left = 5
+                        text = "{{modId}}_COUNCIL_WINDOW_PLAYER_COUNCIL_ADVISORS_3"
+                        default_format = "#high"
+                    }
+
+                    expand = {}
+                }
+            }
+
+            button_tab = {
+                # visible = "[AccessCouncilWindow.IsPlayerCouncilShown]"
+                name = "open_council_advisors_settings_tab"
+                layoutpolicy_horizontal = expanding
+                size = { 105 50 }
+                min_width = 105
+
+                align = left
+                margin_left = 50
+
+                # text = "{{modId}}_COUNCIL_WINDOW_PLAYER_COUNCIL_ADVISORS_SETTINGS"
+
+                datacontext = "[GetScriptedGui('{{modId}}_setting_set_initial')]"
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                onclick = "[GetVariableSystem.Set( 'council_tabs_inner', 'council_advisors_settings' )]"
+                down = "[GetVariableSystem.HasValue( 'council_tabs_inner', 'council_advisors_settings' )]"
+
+                hbox = {
+                    expand = {}
+
+                    # button_settings = {
+                    icon = {
+                        # position = { 0 20 }
+                        size = { 35 35 }
+                        texture = "gfx/interface/icons/flat_icons/settings.dds"
+                        using = Master_Button_Modify_Texture
+                    }
+
+                    text_single = {
+                        margin_left = 5
+                        text = "{{modId}}_COUNCIL_WINDOW_PLAYER_COUNCIL_ADVISORS_SETTINGS"
+                        default_format = "#high"
+                    }
+
+                    expand = {}
+
+                }
+            }
+        }
+
+        vbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            margin = { 0 0 }
+
+            ### council_advisors_1
+            scrollbox = {
+                name = "scrollarea_council_advisors_1"
+                visible = "[GetVariableSystem.HasValue( 'council_tabs_inner', 'council_advisors_1' )]"
+
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                # layoutpolicy_vertical = growing
+
+                state = {
+                    name = _show
+                    using = Animation_FadeIn_Quick
+                }
+
+                state = {
+                    name = _hide
+                    # using = Animation_FadeOut_Quick
+                    alpha = 0
+                }
+
+                blockoverride "scrollbox_content"
+                {
+                    hbox_advisors_1_layout = {
+
+                        name = "{{modId}}_my_council_advisors_1"
+                        visible = "[AccessCouncilWindow.IsPlayerCouncilShown]"
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+
+                        using = Animation_Tab_Switch
+
+                        using = {{modId}}_BG_My_Council
+                    }
+
+                    hbox_advisors_1_layout = {
+                        name = "{{modId}}_liege_council_advisors_1"
+                        visible = "[AccessCouncilWindow.IsLiegeCouncilShown]"
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+
+                        using = Animation_Tab_Switch
+
+                        using = {{modId}}_BG_Liege_Council
+                    }
+                }
+            }
+
+            ### council_advisors_2
+            scrollbox = {
+                name = "scrollarea_council_advisors_2"
+                visible = "[GetVariableSystem.HasValue( 'council_tabs_inner', 'council_advisors_2' )]"
+                # visible = "[And(GetVariableSystem.HasValue( 'council_tabs_inner', 'council_advisors_2' ), Or( GreaterThanOrEqualTo_int32(GetPlayer.GetPrimaryTitle.GetTierFrame, '(int32)4'), GetVariableSystem.HasValue('{{modId}}_gr_mode', '(int32)3') ) ]"
+
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                # layoutpolicy_vertical = growing
+
+                state = {
+                    name = _show
+                    using = Animation_FadeIn_Quick
+                }
+
+                state = {
+                    name = _hide
+                    # using = Animation_FadeOut_Quick
+                    alpha = 0
+                }
+
+                blockoverride "scrollbox_content"
+                {
+                    hbox_advisors_2_layout = {
+
+                        name = "{{modId}}_my_council_advisors_2"
+                        # visible = "[AccessCouncilWindow.IsPlayerCouncilShown]"
+                        visible = "[And(AccessCouncilWindow.IsPlayerCouncilShown, GreaterThanOrEqualTo_int32(GetPlayer.GetPrimaryTitle.GetTierFrame, '(int32)5'))]"
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+
+                        using = Animation_Tab_Switch
+                        using = {{modId}}_BG_My_Council
+                    }
+
+                    hbox_advisors_2_layout = {
+
+                        name = "{{modId}}_liege_council_advisors_2"
+                        visible = "[AccessCouncilWindow.IsLiegeCouncilShown]"
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+
+                        using = Animation_Tab_Switch
+                        using = {{modId}}_BG_Liege_Council
+                    }
+
+                    hbox_advisors_2_wrong_layout = {
+                        name = "{{modId}}_my_council_advisors_2_wrong"
+                        # visible = "[AccessCouncilWindow.IsLiegeCouncilShown]"
+                        visible = "[And(AccessCouncilWindow.IsPlayerCouncilShown, LessThan_int32(GetPlayer.GetPrimaryTitle.GetTierFrame, '(int32)5'))]"
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+
+                        using = Animation_Tab_Switch
+                        using = {{modId}}_BG_Liege_Council
+                    }
+                }
+            }
+
+            ### council_advisors_3
+            scrollbox = {
+                name = "scrollarea_council_advisors_3"
+                visible = "[GetVariableSystem.HasValue( 'council_tabs_inner', 'council_advisors_3' )]"
+                # visible = "[And(GetVariableSystem.HasValue( 'council_tabs_inner', 'council_advisors_3' ), Or( GreaterThanOrEqualTo_int32(GetPlayer.GetPrimaryTitle.GetTierFrame, '(int32)5'), GetVariableSystem.HasValue('{{modId}}_gr_mode', '(int32)3') ) ]"
+
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                # layoutpolicy_vertical = growing
+
+                state = {
+                    name = _show
+                    using = Animation_FadeIn_Quick
+                }
+
+                state = {
+                    name = _hide
+                    # using = Animation_FadeOut_Quick
+                    alpha = 0
+                }
+
+                blockoverride "scrollbox_content"
+                {
+                    hbox_advisors_3_layout = {
+
+                        name = "{{modId}}_my_council_advisors_3"
+                        # visible = "[AccessCouncilWindow.IsPlayerCouncilShown]"
+                        visible = "[And(AccessCouncilWindow.IsPlayerCouncilShown, GreaterThanOrEqualTo_int32(GetPlayer.GetPrimaryTitle.GetTierFrame, '(int32)6'))]"
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+
+                        using = Animation_Tab_Switch
+                        using = {{modId}}_BG_My_Council
+                    }
+
+                    hbox_advisors_3_layout = {
+
+                        name = "{{modId}}_liege_council_advisors_3"
+                        visible = "[AccessCouncilWindow.IsLiegeCouncilShown]"
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+
+                        using = Animation_Tab_Switch
+                        using = {{modId}}_BG_Liege_Council
+                    }
+
+                    hbox_advisors_3_wrong_layout = {
+                        name = "{{modId}}_my_council_advisors_3_wrong"
+                        # visible = "[AccessCouncilWindow.IsLiegeCouncilShown]"
+                        visible = "[And(AccessCouncilWindow.IsPlayerCouncilShown, LessThan_int32(GetPlayer.GetPrimaryTitle.GetTierFrame, '(int32)6'))]"
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+
+                        using = Animation_Tab_Switch
+                        using = {{modId}}_BG_Liege_Council
+                    }
+                }
+            }
+
+            ### council_advisors_settings
+            scrollbox = {
+                name = "scrollarea_council_advisors_settings"
+                visible = "[GetVariableSystem.HasValue( 'council_tabs_inner', 'council_advisors_settings' )]"
+
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+
+                state = {
+                    name = _show
+                    using = Animation_FadeIn_Quick
+                }
+
+                state = {
+                    name = _hide
+                    alpha = 0
+                }
+
+                blockoverride "scrollbox_content"
+                {
+
+                    vbox = {
+                        # visible = "[AccessCouncilWindow.IsPlayerCouncilShown]"
+                        layoutpolicy_horizontal = growing
+                        # layoutpolicy_vertical = growing
+
+                        using = Animation_Tab_Switch
+
+                        spacing = 20
+
+                        text_single = {
+
+                            # size = { 250 35 }
+                            margin = { 0 10 }
+
+                            text = "{{modId}}_SETTINGS_HEADER"
+                            # "#T Council Advisors Mod Settings"
+                            # align = center|nobaseline
+                            # default_format = "#low"
+                            # parentanchor = center
+
+                            {{modId}}_horizontal_divider = {
+                                parentanchor = bottom
+                            }
+
+                        }
+
+
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
+                            # layoutpolicy_vertical = growing
+
+                            text_single = {
+                                text = "{{modId}}_MODE_TEXT"
+                                align = left|nobaseline
+                                default_format = "#high"
+                                parentanchor = left
+                                # fontsize = 16
+                            }
+
+                            expand = {}
+
+                            vbox = {
+
+                                spacing = 5
+
+                                hbox = {
+                                    layoutpolicy_horizontal = growing
+
+                                    spacing = 20
+
+                                    hbox = {
+
+                                        button_checkbox = {
+                                            size = { 35 35 }
+                                            datacontext = "[GetScriptedGui('{{modId}}_setting_set_realistic')]"
+                                            onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                                            checked = "[Or(EqualTo_CFixedPoint(GetGlobalVariable('{{modId}}_gr_mode').GetValue, '(CFixedPoint)1'), Not(GetGlobalVariable('{{modId}}_gr_mode').IsSet))]"
+                                        }
+
+                                        text_single = {
+                                            margin = { 10 0 }
+                                            text = "{{modId}}_MODE_OPTION_REAL"
+                                            align = left|nobaseline
+                                            default_format = "#high"
+                                            parentanchor = left
+                                            # fontsize = 22
+                                        }
+
+                                        tooltip = "{{modId}}_MODE_OPTION_REAL_TOOLTIP"
+
+                                    }
+
+                                    expand = {}
+
+                                    hbox = {
+
+                                        button_checkbox = {
+                                            size = { 35 35 }
+                                            datacontext = "[GetScriptedGui('{{modId}}_setting_set_boost')]"
+                                            onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                                            checked = "[EqualTo_CFixedPoint(GetGlobalVariable('{{modId}}_gr_mode').GetValue, '(CFixedPoint)2')]"
+                                        }
+
+                                        text_single = {
+                                            margin = { 10 0 }
+                                            text = "{{modId}}_MODE_OPTION_BOOST"
+                                            align = left|nobaseline
+                                            default_format = "#high"
+                                            parentanchor = left
+                                            # fontsize = 22
+                                        }
+
+                                        tooltip = "{{modId}}_MODE_OPTION_BOOST_TOOLTIP"
+
+                                    }
+
+                                    expand = {}
+
+                                    hbox = {
+
+                                        button_checkbox = {
+                                            size = { 35 35 }
+                                            datacontext = "[GetScriptedGui('{{modId}}_setting_set_cheat')]"
+                                            onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                                            checked = "[EqualTo_CFixedPoint(GetGlobalVariable('{{modId}}_gr_mode').GetValue, '(CFixedPoint)3')]"
+                                        }
+
+                                        text_single = {
+                                            margin = { 10 0 }
+                                            text = "{{modId}}_MODE_OPTION_CHEAT"
+                                            align = left|nobaseline
+                                            default_format = "#high"
+                                            parentanchor = left
+                                            # fontsize = 22
+                                        }
+
+                                        tooltip = "{{modId}}_MODE_OPTION_CHEAT_TOOLTIP"
+
+                                    }
+                                }
+                            }
+                        }
+
+                        # {{modId}}_horizontal_divider = {}
+
+                        hbox = {
+                            layoutpolicy_horizontal = expanding
+                            layoutpolicy_vertical = expanding
+
+                            text_single = {
+                                text = "{{modId}}_MULTIPLIER_TEXT"
+                                align = left|nobaseline
+                                default_format = "#high"
+                                parentanchor = left
+                            }
+
+                            expand = {}
+
+                            hbox = {
+                                enabled = "[Not(EqualTo_CFixedPoint(GetGlobalVariable('{{modId}}_gr_mode').GetValue, '(CFixedPoint)1'))]"
+
+                                layoutpolicy_horizontal = growing
+
+                                background = {
+                                    using = Background_Area_Dark
+                                    margin = { 0 5 }
+                                }
+
+                                spacing = 15
+
+                                hbox = {
+                                    spacing = 5
+
+                                    button_select_arrow = {
+                                        enabled = "[And(Not(EqualTo_CFixedPoint(GetGlobalVariable('{{modId}}_task_benefits_value_multiplier').GetValue, '(CFixedPoint)1')),Not(EqualTo_CFixedPoint(GetGlobalVariable('{{modId}}_gr_mode').GetValue, '(CFixedPoint)1')))]"
+                                        size = { 35 25 }
+                                        mirror = horizontal
+
+                                        datacontext = "[GetScriptedGui('{{modId}}_setting_multiplier_dec_2')]"
+                                        onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                                        clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_decrement"
+
+                                        tooltip = "{{modId}}_MULTIPLIER_DEC_ARROW_TOOLTIP"
+                                    }
+
+
+                                    button_minus = {
+                                        enabled = "[And(Not(EqualTo_CFixedPoint(GetGlobalVariable('{{modId}}_task_benefits_value_multiplier').GetValue, '(CFixedPoint)1')),Not(EqualTo_CFixedPoint(GetGlobalVariable('{{modId}}_gr_mode').GetValue, '(CFixedPoint)1')))]"
+                                        size = { 25 25 }
+                                        mirror = horizontal
+
+                                        datacontext = "[GetScriptedGui('{{modId}}_setting_multiplier_dec')]"
+                                        onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+                                        block "onclick_prev"
+                                        {
+                                            # onclick = "[GuiGameRule.Prev]"
+                                            clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_decrement"
+                                        }
+
+                                        tooltip = "{{modId}}_MULTIPLIER_DEC_TOOLTIP"
+                                    }
+
+                                }
+
+                                widget = {
+                                    size = { 30 35 }
+
+                                    text_single = {
+                                        visible = "[Not(EqualTo_CFixedPoint(GetGlobalVariable('{{modId}}_gr_mode').GetValue, '(CFixedPoint)1'))]"
+                                        text = "[GetGlobalVariable('{{modId}}_task_benefits_value_multiplier').GetValue]"
+                                        align = nobaseline
+                                        parentanchor = center
+                                        fontsize = 26
+                                        default_format = "#high"
+                                    }
+
+                                    text_single = {
+                                        visible = "[EqualTo_CFixedPoint(GetGlobalVariable('{{modId}}_gr_mode').GetValue, '(CFixedPoint)1')]"
+                                        text = "[GetGlobalVariable('{{modId}}_task_benefits_value_multiplier').GetValue]"
+                                        align = nobaseline
+                                        parentanchor = center
+                                        fontsize = 26
+                                        default_format = "#high"
+                                    }
+                                }
+
+                                hbox = {
+                                    spacing = 5
+
+                                    button_plus = {
+                                        size = { 25 25 }
+
+                                        datacontext = "[GetScriptedGui('{{modId}}_setting_multiplier_inc')]"
+                                        onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+
+                                        block "onclick_next"
+                                        {
+                                            # onclick = "[GuiGameRule.Next]"
+                                            clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_decrement"
+                                        }
+
+                                        tooltip = "{{modId}}_MULTIPLIER_INC_TOOLTIP"
+                                    }
+
+                                    button_select_arrow = {
+                                        size = { 35 25 }
+
+                                        datacontext = "[GetScriptedGui('{{modId}}_setting_multiplier_inc_2')]"
+                                        onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                                        clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_decrement"
+
+                                        tooltip = "{{modId}}_MULTIPLIER_INC_ARROW_TOOLTIP"
+                                    }
+
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    widget = {
+        parentanchor = top|right
+        position = { -15 15 }
+        visible = "[Not(GetVariableSystem.Exists( '{{modId}}_window_display_hidden' ))]"
+        size = { 50 50 }
+
+        # using = {{modId}}_BG_Liege_Council
+        # using = Window_Background_Popup
+
+        button_round = {
+            # position = { 5 -5 }
+            size = { 50 50 }
+            # visible = "[Not(GetVariableSystem.Exists( '{{modId}}_window_display_hidden' ))]"
+            onclick = "[GetVariableSystem.Toggle( '{{modId}}_window_display_hidden' )]"
+
+            icon = {
+                parentanchor = center
+                position = { -5 0 }
+                size = { 20 50 }
+                # texture = "gfx/interface/icons/flat_icons/window_close.dds"
+                texture = "gfx/interface/icons/flat_icons/minus_small.dds"
+                using = Master_Button_Modify_Texture
+            }
+            icon = {
+                parentanchor = center
+                position = { 4 0 }
+                size = { 30 20 }
+                # texture = "gfx/interface/icons/flat_icons/window_close.dds"
+                texture = "gfx/interface/icons/flat_icons/select_arrow.dds"
+                using = Master_Button_Modify_Texture
+            }
+        }
+    }
+}
+
+window = {
+    name = {{modId}}_window_toggler
+    parentanchor = top|right
+    position = { -620 6% }
+    datacontext = "[GetScriptedGui('{{modId}}_toggle')]"
+    visible = "[And( IsGameViewOpen('council_window'), And( GetVariableSystem.Exists('{{modId}}_window_display_hidden'), ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End)) )]"
+    size = { 205 80 }
+
+    layer = windows_layer
+
+    movable = no
+
+    # using = {{modId}}_BG_Liege_Council
+    using = Window_Background_Popup
+
+    state = {
+        name = _show
+        using = Animation_FadeIn_Standard
+    }
+    state = {
+        name = _hide
+        using = Animation_FadeOut_Standard
+    }
+
+    text_single = {
+        parentanchor = left|vcenter
+        text = "{{modId}}_ADVISORS_WINDOW_HIDDEN_TEXT"
+        position = { 20 -3 }
+        fontsize = 22
+        default_format = "#high"
+    }
+
+    button_round = {
+        parentanchor = right|vcenter
+        position = { -15 0 }
+        size = { 50 50 }
+
+        onclick = "[GetVariableSystem.Toggle( '{{modId}}_window_display_hidden' )]"
+
+        icon = {
+            parentanchor = center
+            position = { 5 0 }
+            size = { 20 50 }
+            mirror = horizontal
+            # texture = "gfx/interface/icons/flat_icons/window_close.dds"
+            texture = "gfx/interface/icons/flat_icons/minus_small.dds"
+            using = Master_Button_Modify_Texture
+        }
+        icon = {
+            parentanchor = center
+            position = { -4 0 }
+            size = { 30 20 }
+            # texture = "gfx/interface/icons/flat_icons/window_close.dds"
+            texture = "gfx/interface/icons/flat_icons/select_arrow.dds"
+            using = Master_Button_Modify_Texture
+            mirror = horizontal
+        }
+    }
+
+}
+
+# widget = {
+# 	name = "potential_task_location_window"
+# 	size = { 100% 100% }
+
+# 	state = {
+# 		name = _show
+# 		using = Animation_FadeIn_Standard
+# 		# position_x = 0
+# 	}
+
+# 	state = {
+# 		name = _hide
+# 		using = Animation_FadeOut_Quick
+# 		# position_x = -40
+# 	}
+
+# 	portrait_council = {
+# 		datacontext = "[PotentialTaskLocationWindow.GetActiveTask.GetCouncillor]"
+# 		datacontext = "[PotentialTaskLocationWindow.GetTaskType.GetCouncilPosition]"
+# 		parentanchor = bottom|left
+# 		scale = 2
+# 		position = {-100 0}
+
+# 		blockoverride "portrait_button"
+# 		{
+# 			intersectionmask = yes
+# 		}
+
+# 		blockoverride "mask" {
+# 			mask = "gfx/portraits/portrait_mask_blank.dds"
+# 		}
+
+
+# 		widget = {
+# 			parentanchor = bottom|left
+# 			# position = { 70 -20}
+# 			position = { 85 -5 }
+
+# 			vbox = {
+# 				set_parent_size_to_minimum = yes
+# 				scale = 0.5
+# 				minimumsize = { 190 0 }
+
+# 				background = {
+# 					texture = "gfx/interface/component_tiles/tile_title_bg_01.dds"
+# 					spriteType = Corneredtiled
+# 					spriteborder = { 40 8 }
+# 					margin = { 10 0 }
+# 					margin_right = 25
+
+# 					modify_texture = {
+# 						name = "mask"
+# 						texture = "gfx/interface/component_masks/mask_fade_horizontal_middle_thick.dds"
+# 						blend_mode = alphamultiply
+# 					}
+# 				}
+
+# 				text_label_left = {
+# 					text = "COUNCIL_WINDOW_MAP_COUNCILLOR_TYPE"
+# 					margin = { 5 5 }
+# 					layoutpolicy_horizontal = expanding
+# 					align = nobaseline
+# 				}
+
+# 				text_label_left = {
+# 					text = "[PotentialTaskLocationWindow.GetActiveTask.GetCouncillor.GetUINameNoTooltip]"
+# 					margin = { 5 5 }
+# 					layoutpolicy_horizontal = expanding
+# 					align = nobaseline
+# 				}
+# 			}
+# 		}
+# 	}
+
+# 	flowcontainer = {
+# 		parentanchor = top|hcenter
+# 		direction = vertical
+# 		scale = 1.2
+
+# 		position = {0 100 }
+
+# 		text_label_center = {
+# 			text = "COUNCIL_WINDOW_MAP_TASK_NAME"
+# 			parentanchor = hcenter
+# 			align = nobaseline
+# 			margin = { 10 4 }
+# 		}
+
+# 		text_label_center = {
+# 			text = "[PotentialTaskLocationWindow.GetTaskType.GetName]"
+# 			default_format = "#high"
+# 			using = Font_Size_Medium
+# 			parentanchor = hcenter
+# 			align = nobaseline
+# 			margin = { 10 4 }
+# 		}
+
+# 		text_label_center = {
+# 			text = "COUNCIL_WINDOW_MAP_INSTRUCTION"
+# 			parentanchor = hcenter
+# 			align = nobaseline|hcenter
+# 			margin = { 50 4 }
+# 		}
+# 	}
+
+
+# 	icon = {
+# 		# using = Text_Label_Background
+# 		# using = Background_Area_Dark
+# 		using = Background_Label_Center
+# 		parentanchor = bottom|hcenter
+# 		size = { 400 85 }
+# 		# size = { 400 100 }
+# 		position = { 0 10 }
+# 		# texture = "gfx/interface/window_event/event_bottom_char_bg.dds"
+
+# 		# modify_texture = {
+# 		# 	name = "mask"
+# 		# 	texture = "gfx/interface/component_masks/mask_fade_horizontal_middle_thick.dds"
+# 		# 	# spriteType = Corneredtiled
+# 		# 	# spriteborder_left = 140
+# 		# 	# spriteborder_right = 140
+# 		# 	blend_mode = alphamultiply
+# 		# }
+
+# 		button_primary_big = {
+# 			name = "close_assignment_window"
+# 			text = BACK_LABEL
+# 			parentanchor = center
+
+# 			onclick = "[PotentialTaskLocationWindow.Close]"
+# 			tooltip = "COUNCIL_TASK_CANCEL_ASSIGNMENT"
+# 			shortcut = "close_window"
+# 		}
+# 	}
+# }
+
+######################################################
+################ TYPES AND TEMPLATES #################
+######################################################
+
+types CouncilAdvisorsWindow
+{
+    type {{modId}}_horizontal_divider = widget
+    {
+        layoutpolicy_horizontal = expanding
+        size = { 100% 1 }
+        background = {
+            using = Background_Area
+            margin_top = 3
+            margin_right = 3
+            margin_bottom = 3
+            margin_left = 3
+            using = Color_Grey
+
+            # spriteType = Corneredtiled
+            # spriteborder = { 7 7 }
+            alpha = 0.5
+        }
+    }
+
+    type council_ca_task_info = vbox
+    {
+        name = "task"
+        datacontext = "[ActiveCouncilTask.GetTaskTypeOrDefault]"
+
+        background = {
+            using = Background_Area_Dark
+            alpha = 0.7
+        }
+
+        vbox = {
+            visible = "[CouncilTaskType.IsPercentageTask]"
+            layoutpolicy_horizontal = expanding
+            margin = { 5 3 }
+
+            text_single = {
+                name = "location"
+                layoutpolicy_horizontal = expanding
+                text = "[ActiveCouncilTask.GetTaskTarget]"
+                default_format = "#high"
+                autoresize = no
+            }
+
+            hbox = {
+                layoutpolicy_horizontal = expanding
+                margin = { 0 5 }
+
+                progressbar_standard = {
+                    name = "progress"
+                    layoutpolicy_horizontal = expanding
+                    size = { 0 12 }
+                    value = "[ActiveCouncilTask.GetProgressFloat]"
+
+                    tooltipwidget = {
+                        council_task_progress_breakdown_widget = {}
+                    }
+
+                    text_single = {
+                        name = "eta"
+                        parentanchor = center
+                        text = "[ActiveCouncilTask.GetETA]"
+                        align = nobaseline
+                    }
+                }
+            }
+        }
+
+        vbox = {
+            visible = "[And( CouncilTaskType.IsValueTask, Not( ActiveCouncilTask.IsFrozen ) )]"
+            layoutpolicy_horizontal = expanding
+            margin = { 5 3 }
+
+            text_single = {
+                name = "location"
+                layoutpolicy_horizontal = expanding
+                text = "[ActiveCouncilTask.GetTaskTarget]"
+                default_format = "#high"
+                autoresize = no
+            }
+
+            hbox = {
+                layoutpolicy_horizontal = expanding
+                margin = { 0 5 }
+
+                progressbar_standard = {
+                    name = "progress"
+                    layoutpolicy_horizontal = expanding
+                    size = { 0 12 }
+                    value = "[ActiveCouncilTask.GetProgressFloat]"
+                    min = 0
+                    max = "[ActiveCouncilTask.GetProgressMaxFloat]"
+                    tooltipwidget = {
+                        council_task_progress_breakdown_widget = {}
+                    }
+                    using = tooltip_ws
+                    text_single = {
+                        name = "eta"
+                        parentanchor = center
+                        text = "[ActiveCouncilTask.GetETA]"
+                        align = nobaseline
+                    }
+                }
+            }
+        }
+    }
+
+
+    type widget_advisor_item = widget
+    {
+        size = { 260 250 }
+        # maximumsize = { 360 350 }
+
+        background =  {
+            texture = "gfx/interface/skinned/illustrations/councilchamber_bg.dds"
+            alpha = 0.6
+            using = Mask_Rough_Edges
+        }
+
+        background = {
+            texture = "gfx/interface/component_masks/mask_vignette.dds"
+            color = { 0.15 0.15 0.15 1 }
+            alpha = 0.3
+        }
+
+        ### Required Datacontexts
+        # A council position type
+        # The councillor
+        # The active council task
+        widget = {
+            # visible = "[Not(GuiCouncilPosition.ArePotentialTasksVisible)]"
+
+            parentanchor = bottom|right
+            size = { 100% 100% }
+
+            state = {
+                name = _show
+                using = Animation_FadeIn_Quick
+            }
+
+            state = {
+                name = _hide
+                using = Animation_FadeOut_Quick
+            }
+
+            portrait_council = {
+                name = "council_advisor_portrait"
+                datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                visible = "[Character.IsValid]"
+                parentanchor = bottom|right
+                position = { -5 4 }
+
+                size = { 50% 100% }
+                scale = "[ScaleToFitElementInside('(int32)650', '(int32)1100')]"
+
+                blockoverride "portrait_button_no_character_text"
+                {
+                    text = "PORTRAIT_NO_COUNCILLOR"
+                }
+
+                blockoverride "portrait_button"
+                {
+                    using = tooltip_ws
+                }
+            }
+
+            block "missing_councillor"
+            {
+                portrait_council = {
+                    name = "council_advisor_portrait_blank"
+                    visible = "[And( Not(Character.IsValid), AccessCouncilWindow.IsPlayerCouncilShown)]"
+                    parentanchor = center
+
+                    scale = "[ScaleToFitElementInside('(int32)650', '(int32)1100')]"
+                    blockoverride "portrait_button_no_character_text"
+                    {
+                        text = "PORTRAIT_NO_COUNCILLOR"
+                    }
+
+                    blockoverride "portrait_button_template_onclick"
+                    {
+                        onclick = "[GuiCouncilPosition.SelectCouncillor]"
+                    }
+
+                    text_label_center = {
+                        parentanchor = bottom|hcenter
+                        position = { 0 -10 }
+                        text = "COUNCILLOR_CLICK_TO_HIRE"
+                        default_format = "#low;italic"
+                        max_width = 235
+                    }
+
+                    blockoverride "onclick" {
+                        onclick = "[GuiCouncilPosition.SelectCouncillor]"
+
+                        button_icon = {
+                            parentanchor = center
+                            alwaystransparent = yes
+                            size = { 40 40 }
+                            position = { 0 70 }
+                            texture = "gfx/interface/icons/flat_icons/plus.dds"
+                        }
+                    }
+                    blockoverride "portrait_button"
+                    {
+                        using = tooltip_ws
+                    }
+                }
+
+                portrait_council = {
+                    name = "council_advisor_portrait_blank_liege"
+                    visible = "[And( Not(Character.IsValid), AccessCouncilWindow.IsLiegeCouncilShown )]"
+                    parentanchor = center
+
+                    scale = "[ScaleToFitElementInside('(int32)650', '(int32)1100')]"
+                    text_label_center = {
+                        parentanchor = bottom|hcenter
+                        position = { 0 -10 }
+                        text = "COUNCILLOR_BLANK_LIEGE"
+                        default_format = "#low;italic"
+                    }
+
+                    blockoverride "portrait_button"
+                    {
+                        using = tooltip_ws
+                    }
+                }
+            }
+        }
+
+        vbox = {
+
+            hbox = {
+                layoutpolicy_horizontal = expanding
+                margin = { 0 5 }
+                margin_right = 3
+
+                background = {
+                    using = Background_Area_Dark
+                }
+
+                background = {
+                    visible = "[ObjectsEqual( Character.Self, GetPlayer )]"
+                    texture = "gfx/interface/component_masks/patterns/mask_pattern_02.dds"
+                    spriteType = Corneredtiled
+                    alpha = 0.4
+
+                    using = Color_Blue
+
+                    modify_texture = {
+                        texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+                        blend_mode = alphamultiply
+                        alpha = 0.9
+                    }
+
+                    modify_texture = {
+                        texture = "gfx/interface/component_masks/mask_texture_01.dds"
+                        spriteType = Corneredtiled
+                        spriteborder = { 15 15 }
+                        blend_mode = alphamultiply
+                    }
+                }
+
+                background = {
+                    visible = "[ObjectsEqual( Character.Self, GetPlayer )]"
+                    texture = "gfx/interface/component_masks/mask_frame.dds"
+                    spriteType = Corneredstretched
+                    spriteborder = { 15 15 }
+                    alpha = 0.25
+
+                    using = Color_Blue
+
+                    modify_texture = {
+                        texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+                        blend_mode = alphamultiply
+                        alpha = 0.9
+                    }
+                }
+
+                spacer = {
+                    visible = "[GuiCouncilPosition.CanPotentiallySelectCouncillor]"
+                    size = { 6 6 }
+                }
+
+                spacer = {
+                    visible = "[AccessCouncilWindow.IsLiegeCouncilShown]"
+                    size = { 5 5 }
+                }
+
+                block "replace_councillor"
+                {
+                    hbox = {
+
+                        button_round = {
+                            name = "replace"
+                            visible = "[GuiCouncilPosition.CanPotentiallySelectCouncillor]"
+                            onclick = "[GuiCouncilPosition.SelectCouncillor]"
+                            enabled = "[GuiCouncilPosition.CanSelectCouncillor]"
+                            tooltip = "[GuiCouncilPosition.GetSelectCouncillorTooltip]" #COUNCILWINDOW_TT_REPLACE
+                            using = tooltip_se
+
+                            button_change = {
+                                alwaystransparent = yes
+                                parentanchor = center
+                            }
+                        }
+
+                        button_round = {
+                            name = "leave"
+                            visible = "[ObjectsEqual( GetPlayer.Self, Character.Self )]"
+                            onclick = "[AccessCouncilWindow.OnLeaveCouncil]"
+                            tooltip = "DECISIONS_VIEW_LEAVE_COUNCIL_TT"
+                            using = tooltip_se
+
+                            button_leave_council = {
+                                mirror = horizontal
+                                parentanchor = center
+                            }
+                        }
+                    }
+                }
+
+                vbox = {
+                    layoutpolicy_horizontal = expanding
+                    margin_left = 10
+
+                    ignoreinvisible = yes
+
+                    text_single = {
+                        name = "title"
+                        layoutpolicy_horizontal = expanding
+                        text = "[ActiveCouncilTask.GetPositionName|E]"
+                        tooltip = "[ActiveCouncilTask.GetPositionTooltip]"
+                        autoresize = no
+                        fontsize_min = 13
+                        align = vcenter
+                    }
+
+                    text_single = {
+                        layoutpolicy_horizontal = expanding
+                        text = "[Character.GetShortUINameNoTooltip]"
+                        default_format = "#high"
+                        align = nobaseline
+                        autoresize = no
+                        fontsize_min = 13
+                    }
+                }
+
+                skill_icon_label = {
+                    datacontext = "[GuiCouncilPosition.GetMainSkillItem]"
+                    visible = "[ActiveCouncilTask.HasMainSkill]"
+
+                    blockoverride "icon_size"
+                    {
+                        size = { 35 35 }
+                    }
+
+                    blockoverride "font_size" {
+                        using = Font_Size_Medium
+                        visible = "[And( ActiveCouncilTask.HasMainSkill, ActiveCouncilTask.HasCouncillor )]"
+                        min_width = 13
+                    }
+
+                    blockoverride "tooltip"
+                    {
+                        tooltip_enabled = "[And( ActiveCouncilTask.HasMainSkill, ActiveCouncilTask.HasCouncillor )]"
+                        tooltip = "[SkillItem.GetSkillBreakdownTooltip]"
+                    }
+                }
+            }
+
+            widget = {
+                visible = "[Not(GuiCouncilPosition.ArePotentialTasksVisible)]"
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+
+                state = {
+                    name = _show
+                    using = Animation_FadeIn_Quick
+                }
+
+                text_multi = {
+                    margin_left = 10
+                    margin_bottom = 10
+                    margin_right = 5
+                    autoresize = yes
+                    max_width = 180
+                    visible = "[Character.IsLocalPlayer]"
+                    align = bottom|left
+                    parentanchor = bottom|left
+                    text = "ON_COUNCIL_EFFECTS"
+                    background = {
+                        using = Background_Area_Dark
+                    }
+                    fontsize = 14
+                }
+
+                background = {
+                    texture = "gfx/interface/component_masks/mask_fade_corner.dds"
+                    color = { 0.12 0.12 0.12 1 }
+                    alpha = 0.5
+                    margin_top = -130
+                    margin_left = -150
+                }
+
+                flowcontainer = {
+                    parentanchor = bottom|right
+                    ignoreinvisible = yes
+                    margin_bottom = 3
+
+                    icon = {
+                        name = "church_approval_icon"
+                        visible = "[Character.IsTheocraticLesseeOf( GetPlayer )]"
+
+                        texture = "gfx/interface/icons/icon_bishop_approval.dds"
+                        framesize = { 120 120 }
+                        size = { 50 50 }
+                        frame = "[Select_int32( And( Character.TheocraticLesseeHasApprovalStatus, Character.TheocraticLesseeApprovesOfLiege ), '(int32)1', '(int32)2' )]"
+                        tooltip = "[Character.GetTheocraticLesseeApprovalTooltip]"
+                    }
+
+                    portrait_opinion = {
+                        visible = "[And(Character.IsValid, Not(Character.IsLocalPlayer) )]"
+                        parentanchor = bottom
+
+                        blockoverride "opinion_text"
+                        {
+                            text = "[Character.GetOpinionOf( Character.GetLiege )|=]"
+                            fonttintcolor = "[Character.GetOpinionOfTint( Character.GetLiege )]"
+                        }
+
+                        blockoverride "ott_heading_text"
+                        {
+                            text = "[Character.GetOpinionHeadingText( Character.GetLiege )]"
+                        }
+                    }
+
+                    flowcontainer = {
+                        parentanchor = bottom
+                        margin_bottom = 4
+
+                        portrait_status_icons = {
+                            background = {
+                                using = Background_Area_Dark
+                                margin = { 1 2 }
+                            }
+                        }
+                    }
+
+                    coa_realm_small_crown = {
+                        visible = "[Character.HasLandedTitles]"
+                        parentanchor = bottom
+                        name = "councillor_realm"
+                    }
+                }
+
+                block "regular_task"
+                {
+                    scrollarea = {
+                        visible = "[Not(AccessCouncilWindow.IsLiegeCouncilShown)]"
+                        parentanchor = bottom|left
+                        position = { 0 0 }
+                        size = { 80 100% }
+                        # minimumsize = { 80 80 }
+                        layoutpolicy_vertical = expanding
+
+                        # using = {{modId}}_BG_Liege_Council
+
+                        background = {
+                            texture = "gfx/interface/hud/tab_bg.dds"
+                            mirror = horizontal
+                            using = Color_Black
+                        }
+
+                        scrollbarpolicy_horizontal = always_off
+
+                        scrollbaralign_vertical = left
+                        scrollbar_vertical = {
+                            using = Scrollbar_Vertical
+                        }
+
+                        scrollwidget = {
+
+                            flowcontainer = {
+
+                                name = "council_position_tasks"
+                                datamodel = "[GuiCouncilPosition.GetPotentialCouncilTasks]"
+                                parentanchor = bottom|left
+                                position = { 15 0 }
+                                margin_left = 5
+                                margin_bottom = 5
+
+                                spacing = 5
+                                direction = vertical
+                                alwaystransparent = no
+
+                                ignoreinvisible = yes
+                                allow_outside = no
+
+                                item = {
+
+                                    container = {
+                                        visible = "[GuiPotentialCouncilTask.IsVisible]"
+
+                                        widget = {
+                                            size = { 40 40 }
+                                            # using = {{modId}}_BG_Liege_Council
+
+                                            icon = {
+                                                visible = "[GuiPotentialCouncilTask.IsActive]"
+                                                texture = "gfx/particles/halo.dds"
+                                                parentanchor = center
+                                                size = { 64 64 }
+                                                color = { 0.5 1 0.7 1 }
+                                            }
+
+                                            button_round = {
+                                                visible = "[Or(And(GuiPotentialCouncilTask.CanSelect, Not(AccessCouncilWindow.IsLiegeCouncilShown)), GuiPotentialCouncilTask.IsActive)]"
+                                                parentanchor = center
+                                                size = { 44 44 }
+                                                gfxtype = togglepushbuttongfx
+                                                effectname = "NoHighlight"
+
+                                                alpha = 0.9
+
+                                                onclick = "[GuiPotentialCouncilTask.SelectTaskType]"
+                                                enabled = "[Not(AccessCouncilWindow.IsLiegeCouncilShown)]"
+                                                down = "[GuiPotentialCouncilTask.IsActive]"
+
+                                                using = tooltip_ws
+
+                                                tooltipwidget = {
+                                                    potential_council_advisors_task_icon_tooltip_widget = {
+                                                        using = DefaultTooltipBackground
+                                                        using = GeneralTooltipSetup
+                                                        alwaystransparent = no
+                                                    }
+                                                }
+
+                                                upframe = 1
+                                                downframe = 1
+                                                uphoverframe = 2
+                                                disableframe = 6
+                                            }
+
+                                            button_normal = {
+                                                name = "potential_task"
+                                                parentanchor = center
+                                                widgetanchor = center
+                                                datacontext = "[GuiPotentialCouncilTask.GetCouncilTaskType]"
+                                                effectname = "NoHighlight"
+                                                gfxtype = togglepushbuttongfx
+                                                shaderfile = "gfx/FX/pdxgui_pushbutton.shader"
+                                                texture = "[CouncilTaskType.GetIcon]"
+                                                alwaystransparent = yes
+                                                size = { 40 40 }
+                                            }
+                                        }
+
+                                        # widget = {
+                                        # 	size = { 40 40 }
+
+                                        # 	icon = {
+                                        # 		datacontext = "[GuiPotentialCouncilTask.GetCouncilTaskType]"
+                                        # 		visible = "[And(Not(GuiPotentialCouncilTask.CanSelect), Not(AccessCouncilWindow.IsLiegeCouncilShown))]"
+                                        # 		parentanchor = center
+                                        # 		size = { 35 35 }
+                                        # 		alwaystransparent = yes
+
+                                        # 		texture = "[CouncilTaskType.GetIcon]"
+                                        # 		alpha = 0.4
+
+                                        # 		tooltipwidget = {
+                                        # 			invalid_potential_council_advisors_task_icon_tooltip_widget = {
+                                        # 				using = DefaultTooltipBackground
+                                        # 				using = GeneralTooltipSetup
+                                        # 				alwaystransparent = no
+                                        # 			}
+                                        # 		}
+                                        # 	}
+                                        # }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            vbox = {
+                visible = "[Not(AccessCouncilWindow.IsLiegeCouncilShown)]"
+                layoutpolicy_horizontal = expanding
+                margin = { 7 0 }
+
+                background = {
+                    using = Background_Area_Dark
+                }
+
+                council_ca_task_info = {
+                    layoutpolicy_horizontal = expanding
+                }
+
+                block "spouse_task" {}
+            }
+        }
+    }
+
+}
+
+types CouncilAdvisorsTaskTypes
+{
+    # Requires a GuiPotentialCouncilTask data context to be provided
+    type invalid_potential_council_advisors_task_icon_tooltip_widget = widget
+    {
+        size = { 50 50 }
+
+        vbox = {
+            restrictparent_min = yes
+            minimumsize = { 280 0 }
+
+            margin = { 15 15 }
+            spacing = 5
+
+            datacontext = "[GuiPotentialCouncilTask.GetDummyTask]"
+
+            text_single = {
+                name = "task_info"
+                text = "[GuiPotentialCouncilTask.GetCouncilTaskType.GetName]"
+                default_format = "#T"
+                layoutpolicy_horizontal = expanding
+            }
+
+            text_multi = {
+                name = "cannot_select_text"
+                text = "[GuiPotentialCouncilTask.GetCannotSelectTooltip]"
+                layoutpolicy_horizontal = expanding
+                autoresize = yes
+                max_width = 280
+                align = left
+            }
+        }
+    }
+
+    # Requires an ActiveCouncilTask data context to be provided
+    type council_advisors_task_icon_tooltip_widget_base = widget
+    {
+        size = { 50 50 }
+
+        vbox = {
+            restrictparent_min = yes
+            minimumsize = { 280 0 }
+            maximumsize = { 400 0 }
+
+            margin = { 15 15 }
+            margin_top = 10
+            spacing = 7
+
+            text_multi = {
+                name = "task_info"
+                block "task_info_heading"
+                {
+                    raw_text = "#D GIVE ME SOME TEXT#!"
+                }
+                layoutpolicy_horizontal = expanding
+                autoresize = yes
+                max_width = 380
+                align = left
+            }
+
+            text_single = {
+                name = "progress"
+                layoutpolicy_horizontal = expanding
+
+                block "progress_visiblity"
+                {
+                    visible = "[Not( ActiveCouncilTask.GetTaskType.IsInfiniteTask )]"
+                }
+
+                text = COUNCIL_TASK_PROGRESSBAR_TOOLTIP_HEADER
+                tooltipwidget = {
+                    council_task_progress_breakdown_widget = {}
+                }
+            }
+
+            text_multi = {
+                name = "effects"
+                text = COUNCIL_TASK_EFFECTS
+                layoutpolicy_horizontal = expanding
+                autoresize = yes
+                max_width = 380
+                align = left
+            }
+        }
+    }
+
+    # Requires an ActiveCouncilTask data context to be provided
+    type potential_council_advisors_task_icon_tooltip_widget = council_advisors_task_icon_tooltip_widget_base
+    {
+        datacontext = "[GuiPotentialCouncilTask.GetDummyTaskOrActualIfActive]"
+        blockoverride "task_info_heading"
+        {
+            text = COUNCIL_TASK_TT
+        }
+        blockoverride "progress_visiblity"
+        {
+            visible = "[And( Not( ActiveCouncilTask.GetTaskType.IsInfiniteTask ), GuiPotentialCouncilTask.IsActive ) ]"
+        }
+    }
+
+    # Requires an ActiveCouncilTask data context to be provided
+    type council_advisors_task_icon_tooltip_widget = council_advisors_task_icon_tooltip_widget_base
+    {
+        blockoverride "task_info_heading"
+        {
+            text = ACTIVE_COUNCIL_TASK_TT
+        }
+    }
+
+    type council_advisors_task_map_icon_tooltip_widget = council_advisors_task_icon_tooltip_widget_base
+    {
+        blockoverride "task_info_heading"
+        {
+            text = COUNCIL_TASK_MAP_TT
+        }
+    }
+
+    type hbox_advisors_1_layout = hbox
+    {
+
+        layoutpolicy_horizontal = expanding
+        layoutpolicy_vertical = expanding
+
+        margin = { 0 0 }
+        # margin_bottom = 5
+
+        spacing = 10
+
+        vbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            margin = { 0 0 }
+            spacing = 10
+
+            widget_advisor_item = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_1')]"
+                datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                datacontext = "[ActiveCouncilTask.GetPositionType]"
+                datacontext = "[ActiveCouncilTask.GetCouncillor]"
+            }
+
+            widget_advisor_item = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_2')]"
+                datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                datacontext = "[ActiveCouncilTask.GetPositionType]"
+                datacontext = "[ActiveCouncilTask.GetCouncillor]"
+            }
+
+            widget_advisor_item = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_3')]"
+                datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                datacontext = "[ActiveCouncilTask.GetPositionType]"
+                datacontext = "[ActiveCouncilTask.GetCouncillor]"
+            }
+        }
+
+        vbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+            margin = { 0 0 }
+            spacing = 5
+
+            widget_advisor_item = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_4')]"
+                datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                datacontext = "[ActiveCouncilTask.GetPositionType]"
+                datacontext = "[ActiveCouncilTask.GetCouncillor]"
+            }
+
+            widget_advisor_item = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_5')]"
+                datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                datacontext = "[ActiveCouncilTask.GetPositionType]"
+                datacontext = "[ActiveCouncilTask.GetCouncillor]"
+            }
+
+            widget_advisor_item = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_6')]"
+                datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                datacontext = "[ActiveCouncilTask.GetPositionType]"
+                datacontext = "[ActiveCouncilTask.GetCouncillor]"
+            }
+        }
+
+        #	hbox = {
+        #	}
+        #
+        #	expand = {
+        #		layoutpolicy_vertical = growing
+        #	}
+    }
+
+    type hbox_advisors_2_layout = hbox
+    {
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            margin = { 0 0 }
+            margin_bottom = 5
+
+            spacing = 5
+
+            vbox = {
+                # visible = "[Or(And(AccessCouncilWindow.IsPlayerCouncilShown, GreaterThanOrEqualTo_int32(GetPlayer.GetPrimaryTitle.GetTierFrame, '(int32)5')), AccessCouncilWindow.IsLiegeCouncilShown)]"
+
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                margin = { 0 0 }
+                spacing = 5
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_king_1')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_king_2')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_king_3')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+            }
+
+            vbox = {
+                # visible = "[Or(And(AccessCouncilWindow.IsPlayerCouncilShown, GreaterThanOrEqualTo_int32(GetPlayer.GetPrimaryTitle.GetTierFrame, '(int32)5')), AccessCouncilWindow.IsLiegeCouncilShown)]"
+
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                margin = { 0 0 }
+                spacing = 5
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_king_4')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_king_5')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_king_6')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+            }
+        }
+
+        expand = {
+            layoutpolicy_vertical = growing
+        }
+    }
+
+    type hbox_advisors_3_layout = hbox
+    {
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            margin = { 0 0 }
+            margin_bottom = 5
+
+            spacing = 5
+
+            vbox = {
+                # visible = "[Or(And(AccessCouncilWindow.IsPlayerCouncilShown, GreaterThanOrEqualTo_int32(GetPlayer.GetPrimaryTitle.GetTierFrame, '(int32)6')), AccessCouncilWindow.IsLiegeCouncilShown)]"
+
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                margin = { 0 0 }
+                spacing = 5
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_emperor_1')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_emperor_2')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_emperor_3')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+            }
+
+            vbox = {
+                # visible = "[Or(And(AccessCouncilWindow.IsPlayerCouncilShown, GreaterThanOrEqualTo_int32(GetPlayer.GetPrimaryTitle.GetTierFrame, '(int32)6')), AccessCouncilWindow.IsLiegeCouncilShown)]"
+
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+                margin = { 0 0 }
+                spacing = 5
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_emperor_4')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_emperor_5')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+
+                widget_advisor_item = {
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    datacontext = "[AccessCouncilWindow.GetCouncillor('councillor_advisor_emperor_6')]"
+                    datacontext = "[GuiCouncilPosition.GetActiveCouncilTask]"
+                    datacontext = "[ActiveCouncilTask.GetPositionType]"
+                    datacontext = "[ActiveCouncilTask.GetCouncillor]"
+                }
+            }
+        }
+
+        expand = {
+            layoutpolicy_vertical = growing
+        }
+    }
+
+    type hbox_advisors_2_wrong_layout = hbox
+    {
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            margin = { 0 0 }
+            margin_bottom = 5
+
+            spacing = 5
+
+            text_label_center = {
+                # parentanchor = top|hcenter
+                # margin = { 0 0 }
+                # position = { 0 0 }
+                text = "{{modId}}_MY_COUNCIL_ADVISORS_2_WRONG_LABEL"
+                default_format = "#low;italic"
+                using = Font_Size_Medium
+                # max_width = 235
+            }
+        }
+
+        expand = {
+            layoutpolicy_vertical = growing
+        }
+    }
+
+    type hbox_advisors_3_wrong_layout = hbox
+    {
+        hbox = {
+            layoutpolicy_horizontal = expanding
+            layoutpolicy_vertical = expanding
+
+            margin = { 0 0 }
+            margin_bottom = 5
+
+            spacing = 5
+
+            text_label_center = {
+                # parentanchor = top|hcenter
+                # margin = { 0 0 }
+                # position = { 0 0 }
+                text = "{{modId}}_MY_COUNCIL_ADVISORS_3_WRONG_LABEL"
+                default_format = "#low;italic"
+                using = Font_Size_Medium
+                # max_width = 235
+            }
+        }
+
+        expand = {
+            layoutpolicy_vertical = growing
+        }
+    }
+
+}

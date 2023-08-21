@@ -1,0 +1,44 @@
+antick_age_of_invasion_player = {
+    default = antick_age_of_invasion_player_yes
+
+    categories = {
+        mojo
+    }
+
+    antick_age_of_invasion_player_yes = {
+    }
+
+    antick_age_of_invasion_player_no = {
+    }
+}
+
+antick_age_of_invasion_increased_chances = {
+    default = antick_age_of_invasion_increased_default
+
+    categories = {
+        mojo
+    }
+
+    antick_age_of_invasion_increased_default = {
+    }
+
+    antick_age_of_invasion_increased_little = {
+    }
+
+    antick_age_of_invasion_increased_big = {
+    }
+}
+
+antick_age_of_invasion_inheritance = {
+    default = antick_age_of_invasion_inheritance_yes
+
+    categories = {
+        mojo
+    }
+
+    antick_age_of_invasion_inheritance_yes = {
+    }
+
+    antick_age_of_invasion_inheritance_no = {
+    }
+}

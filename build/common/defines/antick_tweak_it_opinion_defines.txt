@@ -1,0 +1,18 @@
+NCharacterOpinion = {
+    DE_JURE_COUNTY = -25
+    DE_JURE_DUCHY = -25
+    DE_JURE_KINGDOM = -30
+    EMPIRE_IS_VALID_DE_JURE_LIEGE_FOR_DUCHY = yes 		# Dukes won't be upset as the vassal of their dejure emperor
+    PARTIALLY_NON_RIGHTFUL_LIEGE_TAX_MULT = 0.75 		# Tax mult when partially non-rightful liege (liege doesn't hold dejure liege title of the vassal's primary, or empire for a duke if EMPIRE_IS_VALID_DE_JURE_LIEGE_FOR_DUCHY)
+    PARTIALLY_NON_RIGHTFUL_LIEGE_LEVY_MULT = 0.75 		# Tax mult when partially non-rightful liege
+    NON_RIGHTFUL_LIEGE_TAX_MULT = 0.5 					# Tax mult when non-rightful liege (liege doesn't hold *any* dejure liege title)
+    NON_RIGHTFUL_LIEGE_LEVY_MULT = 0.5 					# Tax mult when non-rightful liege
+    PARTIALLY_NON_RIGHTFUL_LIEGE_OPINION = -5 			# Opinion penalty for being non-rightful liege
+    NON_RIGHTFUL_LIEGE_OPINION = -5						# Opinion penalty for being partially non-rightful liege
+    MAX_DUCHIES_BEFORE_PENALTY = 10						# How many duchies are vassals fine with you having? If you're a duke, they don't care; only if you're king or above
+    TOO_MANY_DUCHIES_OPINION = -15						# Penalty per duchy too many
+    COUNT_LIEGE_HOLDS_MY_DUCHY = -25					# Penalty with count vassals for whom you hold their dejure duchy (and you're above duchy tier)
+    VASSAL_SIZE_ANGER_THRESHOLD = 0.3					# Ratio of counties in vassal's realm (duke or above) compared to liege's full realm in order for the vassal to get angry at liege
+    VASSAL_SIZE_ANGER_MIN = -5							# Opinion penalty applied at exact threshold
+    VASSAL_SIZE_ANGER_MULT = -100						# Opinion penalty applied for going 100 percentage points over the threshold (impossible unless the threshold is 0, but makes for simple math)
+}

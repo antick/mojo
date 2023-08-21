@@ -1,0 +1,27 @@
+﻿antick_age_of_invasion_limited_player = {
+	default = antick_age_of_invasion_player_not_limited
+
+	categories = {
+		mojo
+	}
+
+	antick_age_of_invasion_player_not_limited = {
+	}
+
+	antick_age_of_invasion_player_is_limited = {
+	}
+}
+
+antick_age_of_invasion_limited_rivalry_war = {
+	default = antick_age_of_invasion_rivalry_is_limited
+
+	categories = {
+		mojo
+	}
+
+	antick_age_of_invasion_rivalry_is_limited = {
+	}
+
+	antick_age_of_invasion_rivalry_not_limited = {
+	}
+}

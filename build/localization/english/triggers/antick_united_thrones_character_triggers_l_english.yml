@@ -1,0 +1,5 @@
+﻿l_english:
+
+ HOLDS_TWO_OR_MORE_EMPIRE_TITLES_TRIGGER:0 "Holds 2 or more [empires|E]"
+ I_HOLD_TWO_OR_MORE_EMPIRE_TITLES_TRIGGER:1 "You hold 2 or more [empires|E]"
+ THEY_HOLD_TWO_OR_MORE_EMPIRE_TITLES_TRIGGER:0 "[CHARACTER.GetShortUIName|U] holds 2 or more [empires|E]"

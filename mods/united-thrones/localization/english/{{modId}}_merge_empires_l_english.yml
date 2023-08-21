@@ -1,0 +1,29 @@
+﻿l_english:
+
+ merge_empires_decision:1 "Unite my Empires"
+ merge_empires_decision_desc:0 "I will create an Empire of Empires to outshine all others, and to outlast history itself."
+ merge_empires_decision_confirm:0 "Gather the realm"
+ merge_empires_decision_tooltip:0 "All Empire titles become part of the primary title"
+ merge_empires_header:1 "Unite your Empire titles"
+ merge_empires_result_de_jure:0 "The Kingdoms of every Empire title you [hold|E] or [completely_control|E] become [de_jure|E] [kingdoms|E] of your primary title."
+ merge_empires_result_destroy:0 "All other Empire titles you [hold|E] are destroyed."
+
+ major_decisions_merge_empires.1001.t:0 "A Realm Reforged"
+ major_decisions_merge_empires.1001.i_have_become_more_royal:0 "You have vastly expanded the glorious realm of [unified_title.GetNameNoTier]"
+ major_decisions_merge_empires.1001.opening_empire:0 "I have done what no-one else could. I have united the lands of [unified_title.GetNameNoTierNoTooltip] with those of all the High Crowns who bow to its mighty [founder.GetLadyLord] and ruler."
+ major_decisions_merge_empires.1001.opening:0 "All my vassals and [ROOT.Char.GetFaith.PriestNeuterPlural] have finally gathered before my throne. I have earned this moment in their eyes and, more importantly, in the eyes of [ROOT.Char.GetFaith.PantheonTerm]."
+ major_decisions_merge_empires.1001.i_am_religious_head:0 "\n\nIt is only right that I place the new united crown upon my own head, as my servants, both temporal and spiritual, bow to me."
+ major_decisions_merge_empires.1001.blessed_by_religious_head:0 "\n\nAs [religious_figure.GetTitledFirstName] places the new united crown upon my head, I declare my new united empire. It is what my servant vassals are here to witness, and as the declaration leaves my lips, all the power of my realm, spiritual as well as temporal, kneels before me."
+ major_decisions_merge_empires.1001.a:0 "[unified_title.GetNameNoTierNoTooltip] reigns supreme!"
+
+ major_decisions_merge_empires.1002.has_become_more_royal:0 "[founder.GetFirstName] has vastly expanded the glorious realm of [unified_title.GetNameNoTier]"
+ major_decisions_merge_empires.1002.opening:0 "[founder.GetFirstName], our mighty [founder.GetLadyLord] and ruler, has called all vassals and [founder.GetFaith.PriestNeuterPlural] of the realm to [founder.GetHerHim]. I cannot dispute that [founder.GetSheHe] has rightfully earned this moment in the eyes of [ROOT.Char.GetFaith.PantheonTerm]."
+ major_decisions_merge_empires.1002.i_am_religious_head:0 "\n\nAs I place the new united crown upon [founder.GetHerHis] head,"
+ major_decisions_merge_empires.1002.religious_head_empire:0 "\n\nAs [founder.GetSheHe] places the new united crown upon [founder.GetHerHis] head,"
+ major_decisions_merge_empires.1002.blessed_by_religious_head:0 "\n\nAs [religious_figure.GetTitledFirstName] places the new united crown upon [founder.GetHerHis] head,"
+ major_decisions_merge_empires.1002.end:0 "[founder.GetFirstName] proclaims this as the beginning of a new age of [founder.GetHerHis] now unified realm. [founder.GetHerHis|U] servants bow in deference before [founder.GetHerHim]."
+ major_decisions_merge_empires.1002.a:0 "[unified_title.GetNameNoTierNoTooltip] will live forever!"
+
+ major_decisions_merge_empires.1003.t:0 "A Usurper Realm"
+ major_decisions_merge_empires.1003.desc:0 ""[founder.GetTitleAsNameNoTooltip]" [founder.GetFirstName] of [unified_title.GetNameNoTierNoTooltip] has declared a new united Empire, and that some of #EMP my#! rightful territory is a part of it!"
+ major_decisions_merge_empires.1003.a:0 "That pretender will never last..."

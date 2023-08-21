@@ -1,0 +1,6 @@
+childhood_personality_trait_gain_limit = 4 #Trigger in a compare modifier in child_personaluity.9999
+childhood_fourth_personality_trait_chance = 5 #Percentage in a random chance in child_personaluity.9999
+
+personality_trait_minimum = 3
+personality_trait_standard = 4
+personality_trait_limit = 5

@@ -1,0 +1,75 @@
+TitleTurkishKing = {
+    type = character
+    text = {
+        trigger = {
+            is_male = yes
+            is_independent_ruler = yes
+            any_parent = {
+                even_if_dead = yes
+                any_parent = {
+                    even_if_dead = yes
+                    dynasty = root.dynasty
+                }
+            }
+        }
+        localization_key = king_turkish_title_independent_male
+    }
+    text = {
+        trigger = {
+            is_male = no
+            is_independent_ruler = yes
+            any_parent = {
+                even_if_dead = yes
+                any_parent = {
+                    even_if_dead = yes
+                    dynasty = root.dynasty
+                }
+            }
+        }
+        localization_key = king_turkish_title_independent_female
+    }
+    text = {
+        trigger = {
+            is_male = yes
+            is_independent_ruler = no
+            any_parent = {
+                even_if_dead = yes
+                any_parent = {
+                    even_if_dead = yes
+                    dynasty = root.dynasty
+                }
+            }
+        }
+        localization_key = king_turkish_title_vassal_male
+    }
+    text = {
+        trigger = {
+            is_male = no
+            is_independent_ruler = no
+            any_parent = {
+                even_if_dead = yes
+                any_parent = {
+                    even_if_dead = yes
+                    dynasty = root.dynasty
+                }
+            }
+        }
+        localization_key = king_turkish_title_vassal_female
+    }
+}
+
+TitleKingdomTurkishKing = {
+    type = character
+    text = {
+        trigger = {
+            is_independent_ruler = yes
+        }
+        localization_key = king_turkish_title_independent_kingdom
+    }
+    text = {
+        trigger = {
+            is_independent_ruler = no
+        }
+        localization_key = king_turkish_title_vassal_kingdom
+    }
+}

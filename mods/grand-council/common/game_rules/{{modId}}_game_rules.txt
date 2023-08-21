@@ -1,0 +1,13 @@
+{{modId}}_player = {
+    default = {{modId}}_player_enabled
+
+    categories = {
+        mojo
+    }
+
+    {{modId}}_player_enabled = {
+    }
+
+    {{modId}}_player_disabled = {
+    }
+}

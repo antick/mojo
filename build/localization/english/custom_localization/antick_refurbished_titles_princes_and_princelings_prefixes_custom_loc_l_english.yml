@@ -1,0 +1,10 @@
+l_english:
+ ### PRINCELINGS ###
+ duke_children_male:0 "[ROOT.CHARACTER.Custom('FamilyDucalPrinceling')]"
+ duke_children_female:0 "[ROOT.CHARACTER.Custom('FamilyDucalPrinceling')]"
+ duke_children_royal_male:0 "Prince"
+ duke_children_royal_female:0 "Princess"
+ duke_children_non_royal_male:0 "Viscount"
+ duke_children_non_royal_female:0 "Viscountess"
+ count_children_non_royal_male:0 "Sir"
+ count_children_non_royal_female:0 "Dame"

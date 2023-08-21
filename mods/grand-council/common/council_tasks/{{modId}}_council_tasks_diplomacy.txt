@@ -1,0 +1,1411 @@
+﻿task_advisor_assist_diplomacy_1 = {
+    position = councillor_advisor_1
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_diplomacy_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_assist_diplomacy_2 = {
+    position = councillor_advisor_2
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_diplomacy_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_assist_diplomacy_3 = {
+    position = councillor_advisor_3
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_diplomacy_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_assist_diplomacy_4 = {
+    position = councillor_advisor_4
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_diplomacy_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_assist_diplomacy_5 = {
+    position = councillor_advisor_5
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_diplomacy_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_assist_diplomacy_6 = {
+    position = councillor_advisor_6
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_assist_diplomacy_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_diplomacy_1 = {
+    position = councillor_advisor_king_1
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_diplomacy_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_diplomacy_2 = {
+    position = councillor_advisor_king_2
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_diplomacy_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_diplomacy_3 = {
+    position = councillor_advisor_king_3
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_diplomacy_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_diplomacy_4 = {
+    position = councillor_advisor_king_4
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_diplomacy_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_diplomacy_5 = {
+    position = councillor_advisor_king_5
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_diplomacy_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_assist_diplomacy_6 = {
+    position = councillor_advisor_king_6
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_assist_diplomacy_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_diplomacy_1 = {
+    position = councillor_advisor_emperor_1
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_diplomacy_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_diplomacy_2 = {
+    position = councillor_advisor_emperor_2
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_diplomacy_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_diplomacy_3 = {
+    position = councillor_advisor_emperor_3
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_diplomacy_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_diplomacy_4 = {
+    position = councillor_advisor_emperor_4
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_diplomacy_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_diplomacy_5 = {
+    position = councillor_advisor_emperor_5
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_diplomacy_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_assist_diplomacy_6 = {
+    position = councillor_advisor_emperor_6
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_assist_diplomacy_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 0.1
+        monthly_diplomacy_lifestyle_xp_gain_mult = 0.005
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        diplomacy = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+################################################################################
+################################################################################
+################################################################################
+
+task_advisor_praise_liege_diplomacy_1 = {
+    position = councillor_advisor_1
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_praise_liege_diplomacy_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_praise_liege_diplomacy_2 = {
+    position = councillor_advisor_2
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_praise_liege_diplomacy_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_praise_liege_diplomacy_3 = {
+    position = councillor_advisor_3
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_praise_liege_diplomacy_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_praise_liege_diplomacy_4 = {
+    position = councillor_advisor_4
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_praise_liege_diplomacy_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_praise_liege_diplomacy_5 = {
+    position = councillor_advisor_5
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_praise_liege_diplomacy_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_praise_liege_diplomacy_6 = {
+    position = councillor_advisor_6
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_praise_liege_diplomacy_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_praise_liege_diplomacy_1 = {
+    position = councillor_advisor_king_1
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_praise_liege_diplomacy_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_praise_liege_diplomacy_2 = {
+    position = councillor_advisor_king_2
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_praise_liege_diplomacy_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_praise_liege_diplomacy_3 = {
+    position = councillor_advisor_king_3
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_praise_liege_diplomacy_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_praise_liege_diplomacy_4 = {
+    position = councillor_advisor_king_4
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_praise_liege_diplomacy_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_praise_liege_diplomacy_5 = {
+    position = councillor_advisor_king_5
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_praise_liege_diplomacy_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_king_praise_liege_diplomacy_6 = {
+    position = councillor_advisor_king_6
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_praise_liege_diplomacy_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_praise_liege_diplomacy_1 = {
+    position = councillor_advisor_emperor_1
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_praise_liege_diplomacy_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_praise_liege_diplomacy_2 = {
+    position = councillor_advisor_emperor_2
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_praise_liege_diplomacy_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_praise_liege_diplomacy_3 = {
+    position = councillor_advisor_emperor_3
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_praise_liege_diplomacy_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_praise_liege_diplomacy_4 = {
+    position = councillor_advisor_emperor_4
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_praise_liege_diplomacy_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_praise_liege_diplomacy_5 = {
+    position = councillor_advisor_emperor_5
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_praise_liege_diplomacy_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+task_advisor_emperor_praise_liege_diplomacy_6 = {
+    position = councillor_advisor_emperor_6
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_praise_liege_diplomacy_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 0.1
+        fellow_vassal_opinion = 0.1
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        liege_opinion = 1
+        fellow_vassal_opinion = 1
+        # scale = {{modId}}_scale_advisor_simple
+    }
+}
+
+################################################################################
+################################################################################
+################################################################################
+
+task_advisor_boast_liege_diplomacy_1 = {
+    position = councillor_advisor_1
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_boast_liege_diplomacy_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_boast_liege_diplomacy_2 = {
+    position = councillor_advisor_2
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_boast_liege_diplomacy_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_boast_liege_diplomacy_3 = {
+    position = councillor_advisor_3
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_boast_liege_diplomacy_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_boast_liege_diplomacy_4 = {
+    position = councillor_advisor_4
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_boast_liege_diplomacy_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_boast_liege_diplomacy_5 = {
+    position = councillor_advisor_5
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_boast_liege_diplomacy_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_boast_liege_diplomacy_6 = {
+    position = councillor_advisor_6
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_boast_liege_diplomacy_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_king_boast_liege_diplomacy_1 = {
+    position = councillor_advisor_king_1
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_boast_liege_diplomacy_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_king_boast_liege_diplomacy_2 = {
+    position = councillor_advisor_king_2
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_boast_liege_diplomacy_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_king_boast_liege_diplomacy_3 = {
+    position = councillor_advisor_king_3
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_boast_liege_diplomacy_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_king_boast_liege_diplomacy_4 = {
+    position = councillor_advisor_king_4
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_boast_liege_diplomacy_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_king_boast_liege_diplomacy_5 = {
+    position = councillor_advisor_king_5
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_boast_liege_diplomacy_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_king_boast_liege_diplomacy_6 = {
+    position = councillor_advisor_king_6
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_king_boast_liege_diplomacy_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_king_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_emperor_boast_liege_diplomacy_1 = {
+    position = councillor_advisor_emperor_1
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_boast_liege_diplomacy_1_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_emperor_boast_liege_diplomacy_2 = {
+    position = councillor_advisor_emperor_2
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_boast_liege_diplomacy_2_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_emperor_boast_liege_diplomacy_3 = {
+    position = councillor_advisor_emperor_3
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_boast_liege_diplomacy_3_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_emperor_boast_liege_diplomacy_4 = {
+    position = councillor_advisor_emperor_4
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_boast_liege_diplomacy_4_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_emperor_boast_liege_diplomacy_5 = {
+    position = councillor_advisor_emperor_5
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_boast_liege_diplomacy_5_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}
+
+task_advisor_emperor_boast_liege_diplomacy_6 = {
+    position = councillor_advisor_emperor_6
+
+    skill = diplomacy
+
+    task_type = task_type_general
+    task_progress = task_progress_infinite
+
+    is_shown = {
+        has_education_diplomacy_trigger = yes
+    }
+
+    effect_desc = task_advisor_emperor_boast_liege_diplomacy_6_effect_desc
+
+    council_owner_modifier = {
+        name = task_advisor_emperor_generic_modifier
+        monthly_prestige = 0.01
+        scale = {{modId}}_scale_advisor_assist_diplomacy_exclusive
+    }
+}

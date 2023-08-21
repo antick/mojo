@@ -1,0 +1,3 @@
+﻿{{modId}}_mode_real = 1
+{{modId}}_mode_boost = 2
+{{modId}}_mode_cheat = 3
