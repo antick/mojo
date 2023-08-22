@@ -1,21 +1,17 @@
 # Grand Council
 
-Gives you additional slots on the council for courtiers\vassals to act as your advisors.
+This mod offers you extra slots on your council where courtiers and vassals can serve as your advisors.
 
-Each can perform tasks (more diverse tasks are planned!). Amount of slots varies depending on your rank.
+Each advisor can handle tasks (more diverse tasks are in the works!).
 
-Mod has three operating modes that you can change in settings tab:
+The number of slots you have depends on your rank in the game.
 
-1. Realistic - small bonuses
-2. Boost - adds multiplier for advisors skill - you can define multiplier in the settings tab
-3. Cheat - same as Boost but some tasks might grant bonuses regardless of advisor education
+This mod comes with three modes, which you can adjust in the settings:
+
+Realistic - Provides small bonuses.
+Boost - Multiplies advisors' skills - you can set the multiplier in the settings.
+Cheat - Similar to Boost, but some tasks might grant bonuses regardless of the advisor's education.
 
 ## TODO
 
-- AI activation - allow the AI to use the realistic version of the mod so it can keep up with you!
-
-## Core file overrides
-
-Overrides the following core features:
-
-action_empty_council_position -> common/important_actions
+- Enabling the AI to use the realistic version of the mod, allowing it to keep up with your gameplay!
