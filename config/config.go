@@ -1,6 +1,9 @@
 package config
 
-import "path/filepath"
+import (
+	"os"
+	"path/filepath"
+)
 
 type Type struct {
 	GameDataPath         string            `json:"gameDataPath"`
@@ -20,15 +23,17 @@ type Type struct {
 }
 
 func Config() *Type {
-	originalCk3Path := "/Users/pankaj/Library/Application Support/Steam/steamapps/common/Crusader Kings III/game"
+	homeDir, _ := os.UserHomeDir()
+
+	originalCk3Path := filepath.Join(homeDir, "Library", "Application Support", "Steam", "steamapps", "common", "Crusader Kings III", "game")
 	modCk3Path := "game"
 	modPath := "mods"
 
 	return &Type{
 		// Put your original CK3 path here
-		GameDataPath:         "/Users/pankaj/Paradox Interactive/Crusader Kings III",
-		LauncherSettingsPath: "/Users/pankaj/Library/Application Support/Steam/steamapps/common/Crusader Kings III/launcher/launcher-settings.json",
-		ModBuildPath:         "/Users/pankaj/Paradox Interactive/Crusader Kings III/mod/mojo-flavor",
+		GameDataPath:         filepath.Join(homeDir, "Paradox Interactive", "Crusader Kings III"),
+		LauncherSettingsPath: filepath.Join(homeDir, "Library", "Application Support", "Steam", "steamapps", "common", "Crusader Kings III", "launcher", "launcher-settings.json"),
+		ModBuildPath:         filepath.Join(homeDir, "Paradox Interactive", "Crusader Kings III", "mod", "mojo-flavor"),
 
 		ModBuildPathLocal: "build",
 		ModPath:           modPath,

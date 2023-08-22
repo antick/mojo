@@ -90,8 +90,14 @@ func updateLauncherSettings() error {
 }
 
 func main() {
+	configuration.InitDB(configuration.GetDBPath())
+	defer configuration.CloseDB()
+
 	reader := bufio.NewReader(os.Stdin)
 
+	fmt.Println("----------------")
+	fmt.Println("Welcome to Mojo!")
+	fmt.Println("----------------")
 	fmt.Println("Please enter your choice:")
 	fmt.Println("1: Build Mod (Local)")
 	fmt.Println("2: Build Mod (Game)")
@@ -119,11 +125,13 @@ func main() {
 		if err != nil {
 			fmt.Printf("Error pulling CK3 game files: %v \n", err)
 		}
+
 	case "4\n":
 		err := updateLauncherSettings()
 		if err != nil {
 			fmt.Printf("Error updating launcher settings: %v \n", err)
 		}
+
 	default:
 		fmt.Println("Invalid choice")
 	}
