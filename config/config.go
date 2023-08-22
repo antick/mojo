@@ -6,6 +6,7 @@ type Type struct {
 	GameDataPath         string            `json:"gameDataPath"`
 	LauncherSettingsPath string            `json:"launcherSettingsPath"`
 	ModBuildPath         string            `json:"modBuildPath"`
+	ModBuildPathLocal    string            `json:"modBuildPathLocal"`
 	ModPath              string            `json:"modPath"`
 	ModDescriptorPath    string            `json:"modDescriptorPath"`
 	OriginalCk3Path      string            `json:"originalCk3Path"`
@@ -24,13 +25,12 @@ func Config() *Type {
 	modPath := "mods"
 
 	return &Type{
+		// Put your original CK3 path here
 		GameDataPath:         "/Users/pankaj/Paradox Interactive/Crusader Kings III",
 		LauncherSettingsPath: "/Users/pankaj/Library/Application Support/Steam/steamapps/common/Crusader Kings III/launcher/launcher-settings.json",
+		ModBuildPath:         "/Users/pankaj/Paradox Interactive/Crusader Kings III/mod/mojo-flavor",
 
-		// Put your CK3 steam mod path here
-		ModBuildPath: "/Users/pankaj/Paradox Interactive/Crusader Kings III/mod/mojo-flavor",
-		//ModBuildPath: "build",
-
+		ModBuildPathLocal: "build",
 		ModPath:           modPath,
 		ModDescriptorPath: filepath.Join(modPath, "descriptor.mod"),
 		OriginalCk3Path:   originalCk3Path,

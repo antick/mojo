@@ -7,14 +7,15 @@ import (
 	"mojo/mods"
 	"mojo/tools"
 	"os"
+	"path/filepath"
 	"sort"
 )
 
 var config = configuration.Config()
 
-func buildMods() error {
+func buildMods(modBuildPath string) error {
 	fmt.Println("-----------------------------------")
-	err := tools.Cleanup(config.ModBuildPath)
+	err := tools.Cleanup(modBuildPath)
 	if err != nil {
 		return err
 	}
@@ -28,6 +29,18 @@ func buildMods() error {
 	}
 	sort.Strings(keys)
 
+	err = tools.ProcessFile(
+		modBuildPath,
+		config.ModDescriptorPath,
+		filepath.Join(modBuildPath, "descriptor.mod"),
+		tools.BaseReplacements(),
+	)
+
+	if err != nil {
+		fmt.Println("Error while processing descriptor.mod file")
+		return err
+	}
+
 	for _, modName := range keys {
 		modDetails := modConfig.Mods[modName]
 
@@ -38,14 +51,18 @@ func buildMods() error {
 			fmt.Printf("📦 Building %s\n", modName)
 		}
 
-		err := tools.Build(modName, modDetails.Replacements)
+		err := tools.Build(
+			modBuildPath,
+			modName,
+			modDetails.Replacements,
+		)
 		if err != nil {
 			return err
 		}
 	}
 
 	fmt.Println("-----------------------------------")
-	fmt.Printf("✅ Build successful in %s folder \n", config.ModBuildPath)
+	fmt.Printf("✅ Build successful in %s folder \n", modBuildPath)
 	fmt.Println("-----------------------------------")
 
 	return nil
@@ -76,25 +93,33 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 
 	fmt.Println("Please enter your choice:")
-	fmt.Println("1: Build Mod")
-	fmt.Println("2: Pull CK3 Game Files")
-	fmt.Println("3: Update Game Path in Launcher Settings")
+	fmt.Println("1: Build Mod (Local)")
+	fmt.Println("2: Build Mod (Game)")
+	fmt.Println("3: Pull CK3 Game Files")
+	fmt.Println("4: Update Game Path in Launcher Settings")
 	fmt.Print("\nYour choice (1/2/3): ")
 
 	answer, _ := reader.ReadString('\n')
 
 	switch answer {
 	case "1\n":
-		err := buildMods()
+		err := buildMods(config.ModBuildPathLocal)
 		if err != nil {
 			fmt.Printf("Error building mods: %v \n", err)
 		}
+
 	case "2\n":
+		err := buildMods(config.ModBuildPath)
+		if err != nil {
+			fmt.Printf("Error building mods: %v \n", err)
+		}
+
+	case "3\n":
 		err := pullCk3GameFiles()
 		if err != nil {
 			fmt.Printf("Error pulling CK3 game files: %v \n", err)
 		}
-	case "3\n":
+	case "4\n":
 		err := updateLauncherSettings()
 		if err != nil {
 			fmt.Printf("Error updating launcher settings: %v \n", err)
