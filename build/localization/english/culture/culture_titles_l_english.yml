@@ -903,12 +903,12 @@
  prince_muslim_male_dravidian_group_empire:0 "$prince_male_iranian_group_empire$"
  prince_muslim_female_dravidian_group_empire:0 "$prince_female_iranian_group_empire$"
 
-## Imperial Prince ##
- prince_empire:0 "Prince"
- princess_empire:0 "Princess"
+ ## Imperial Prince ##
+ prince_empire:0 "[Character.Custom('TitleTurkishPrince')]"
+ princess_empire:0 "[Character.Custom('TitleTurkishPrince')]"
 
-####################################################
-#Special titles
+ ####################################################
+ #Special titles
  ecumenical_patriarch:0 "Ecumenical Patriarch"
  ecumenical_matriarch:0 "Ecumenical Matriarch"
  caliph:0 "Caliph"
