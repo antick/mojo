@@ -1,0 +1,12 @@
+﻿l_english:
+
+ #############################################
+### Arabic ###
+# Republic 
+ duke_republic_female_arabic_group:0 "Wâlia-Emira"
+ king_republic_female_arabic_group:0 "Wâlia-Malika"
+ 
+### Turkish ###
+# Feudal / Clan 
+ count_feudal_male_turkish:1 "Bey"
+ duke_feudal_male_turkish:1 "Emir"
