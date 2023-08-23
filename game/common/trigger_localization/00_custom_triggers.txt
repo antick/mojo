@@ -81,3 +81,8 @@ realm_has_more_than_2_siegeable_holdings_trigger_custom_desc = {
 	global = realm_has_more_than_2_siegeable_holdings_trigger_desc
 	global_not = realm_has_more_than_2_siegeable_holdings_trigger_desc_not
 }
+
+any_opposite_trait_all = {
+	global = ANY_OPPOSITE_TRAIT_ALL
+	global_not = NOT_ANY_OPPOSITE_TRAIT_ALL
+}

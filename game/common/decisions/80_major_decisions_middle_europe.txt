@@ -211,7 +211,6 @@ reform_carolingian_empire_decision = {
 		is_independent_ruler = yes
 		culture = { has_cultural_pillar = heritage_frankish }
 		capital_province = { geographical_region = world_europe_west }
-		exists = title:e_hre.holder #Must exist in the first place...
 		NOT = { has_title = title:e_hre } #HRE title holders can't Restore Carolingian Borders as the decision requires the HRE to serve as an "antagonist"
 	}
 

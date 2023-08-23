@@ -49,12 +49,12 @@ GetFaithGrandTemple = { # Get name of Grand Temple in religion
 	type = character
 
 	text = {
-		trigger = { religion = religion:christianity_religion }
+		trigger = { faith.religion = religion:christianity_religion }
 		localization_key = building_holy_site_cathedral_01
 	}
 
 	text = {
-		trigger = { religion = religion:islam_religion }
+		trigger = { faith.religion = religion:islam_religion }
 		localization_key = building_holy_site_mosque_01
 	}
 
@@ -68,12 +68,12 @@ GetFaithTemple = { # Get name of regular temple in religion
 	type = character
 
 	text = {
-		trigger = { religion = religion:christianity_religion }
+		trigger = { faith.religion = religion:christianity_religion }
 		localization_key = building_temple_church
 	}
 
 	text = {
-		trigger = { religion = religion:islam_religion }
+		trigger = { faith.religion = religion:islam_religion }
 		localization_key = building_temple_mosque
 	}
 
@@ -1729,5 +1729,24 @@ GetSpecialBuildingNameFromProvince = {
 			#this = province:1785 # Santiago
 		}
 		localization_key = building_holy_site_basilica_santiago_01
+	}
+}
+
+GetLocationFaithTemple = { # Get name of regular temple in religion
+	type = province
+
+	text = {
+		trigger = { faith.religion = religion:christianity_religion }
+		localization_key = building_temple_church
+	}
+
+	text = {
+		trigger = { faith.religion = religion:islam_religion }
+		localization_key = building_temple_mosque
+	}
+
+	text = {
+		trigger = { always = yes }
+		localization_key = building_temple_temple
 	}
 }

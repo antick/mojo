@@ -739,6 +739,10 @@ has_sent_interaction_already = {
 	first_not = HAS_SENT_INTERACTION_ALREADY
 }
 
+has_no_option_selected = {
+	first_not = HAS_NO_OPTION_SELECTED
+}
+
 character_unavailable_to_be_offered_as_concubine = {
 	first_not = CHARACTER_UNAVAILABLE_TO_BE_OFFERED_AS_CONCUBINE
 }
@@ -1081,4 +1085,20 @@ synergise_friendship_interaction_cannot_share_education = {
 
 you_must_not_have_a_claim_on_the_title = {
 	global_not = you_must_not_have_a_claim_on_the_title
+}
+
+basic_valid_hostage_to_offer = {
+	first_not = NOT_I_HAVE_VALID_HOSTAGE_TO_OFFER
+	third_not = NOT_THEY_HAVE_VALID_HOSTAGE_TO_OFFER
+	global_not = NOT_HAVE_VALID_HOSTAGE_TO_OFFER
+}
+
+basic_valid_hostage_to_demand = {
+	first_not = NOT_I_HAVE_VALID_HOSTAGE_TO_DEMAND
+	third_not = NOT_THEY_HAVE_VALID_HOSTAGE_TO_DEMAND
+	global_not = NOT_HAVE_VALID_HOSTAGE_TO_DEMAND
+}
+
+hostage_oath_of_friendship_trigger = {
+	global = HOSTAGE_OATH_OF_FRIENDSHIP
 }

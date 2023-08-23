@@ -683,42 +683,20 @@ form_austria_scripted_effect = {
 
 form_carolingian_empire_scripted_effect = {
 	save_scope_as = scoped_ruler
-	title:e_hre.holder = { save_scope_as = scoped_emperor }
+	title:e_hre.holder ?= { save_scope_as = scoped_emperor }
 	#De jure shifts.
 	hidden_effect = {
-		title:k_france = {
-			set_de_jure_liege_title = title:e_france
-		}
-		title:k_burgundy = {
-			set_de_jure_liege_title = title:e_france
-		}
-		title:k_aquitaine = {
-			set_de_jure_liege_title = title:e_france
-		}
-		title:k_brittany = {
-			set_de_jure_liege_title = title:e_france
-		}
-		title:k_frisia = {
-			set_de_jure_liege_title = title:e_france
-		}
-		title:k_lotharingia = {
-			set_de_jure_liege_title = title:e_france
-		}
-		title:k_bavaria = {
-			set_de_jure_liege_title = title:e_france
-		}
-		title:k_east_francia = {
-			set_de_jure_liege_title = title:e_france
-		}
-		title:k_italy = {
-			set_de_jure_liege_title = title:e_france
-		}
-		title:k_navarra = {
-			set_de_jure_liege_title = title:e_france
-		}
-		title:k_aragon = {
-			set_de_jure_liege_title = title:e_france
-		}
+		title:k_france = { set_de_jure_liege_title = title:e_france }
+		title:k_burgundy = { set_de_jure_liege_title = title:e_france }
+		title:k_aquitaine = { set_de_jure_liege_title = title:e_france }
+		title:k_brittany = { set_de_jure_liege_title = title:e_france }
+		title:k_frisia = { set_de_jure_liege_title = title:e_france }
+		title:k_lotharingia = { set_de_jure_liege_title = title:e_france }
+		title:k_bavaria = { set_de_jure_liege_title = title:e_france }
+		title:k_east_francia = { set_de_jure_liege_title = title:e_france }
+		title:k_italy = { set_de_jure_liege_title = title:e_france }
+		title:k_navarra = { set_de_jure_liege_title = title:e_france }
+		title:k_aragon = { set_de_jure_liege_title = title:e_france }
 		if = {
 			limit = {
 				OR = {
@@ -732,9 +710,7 @@ form_carolingian_empire_scripted_effect = {
 					}
 				}
 			}
-			title:k_austria = {
-				set_de_jure_liege_title = title:e_france
-			}
+			title:k_austria = { set_de_jure_liege_title = title:e_france }
 		}
 		if = {
 			limit = {
@@ -749,61 +725,50 @@ form_carolingian_empire_scripted_effect = {
 					}
 				}
 			}
-			title:k_switzerland = {
-				set_de_jure_liege_title = title:e_france
-			}
+			title:k_switzerland = { set_de_jure_liege_title = title:e_france }
 		}
 	}
+	# Prestige
 	add_prestige = major_prestige_gain
-	if = {
-		limit = {
-			culture:french = {
-				NOT = {
-					has_innovation = innovation_knighthood
-				}
-			}
-		}
-		culture:french = {
-			add_innovation = innovation_knighthood
-		}
-	}
-	if = {
-		limit = {
-			culture:french = {
-			NOT = {
-					has_innovation = innovation_royal_prerogative
-				}
-			}
-		}
-		culture:french = {
-			add_innovation = innovation_royal_prerogative
-		}
-	}
-	if = {
-		limit = {
-			culture:french = {
-				NOT = {
-					has_innovation = innovation_heraldry
-				}
-			}
-		}
-		culture:french = {
-			add_innovation = innovation_heraldry
-		}
-	}
+	# Law
 	if = {
 		limit = {
 			NOT = { has_realm_law = single_heir_succession_law }
 		}
 		add_realm_law_skip_effects = single_heir_succession_law
 	}
-	scope:scoped_emperor = {
-		add_prestige = major_prestige_loss
-		add_opinion = {
-			target = scope:scoped_ruler
-			modifier = pretender_opinion
-		}
+	# HRE goes bye-bye
+	if = {
+		limit = { exists = scope:scoped_emperor }
 		destroy_title = title:e_hre
+		scope:scoped_emperor ?= {
+			add_prestige = major_prestige_loss
+			add_opinion = {
+				target = scope:scoped_ruler
+				modifier = pretender_opinion
+			}
+		}
+	}
+	# Innovations
+	culture:french = {
+		if = {
+			limit = {
+				NOT = { has_innovation = innovation_knighthood }
+			}
+			add_innovation = innovation_knighthood
+		}
+		if = {
+			limit = {
+				NOT = { has_innovation = innovation_royal_prerogative }
+			}
+			add_innovation = innovation_royal_prerogative
+		}
+		if = {
+			limit = {
+				NOT = { has_innovation = innovation_heraldry }
+			}
+			add_innovation = innovation_heraldry
+		}
 	}
 }
 

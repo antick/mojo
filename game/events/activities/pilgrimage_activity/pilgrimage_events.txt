@@ -7922,8 +7922,11 @@ pilgrimage.3101 = {
 		character = root
 		animation = personality_content
 	}
+
+	trigger = { exists = scope:activity }
+	
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 		scope:activity = {
 			add_activity_log_entry = {
 				key = hajj_arrived_log
@@ -8053,7 +8056,7 @@ pilgrimage.4001 = {
 	trigger = {
 	}
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 		christian_saint_bone_creation_effect = yes
 	}
 	#Alright
@@ -8455,7 +8458,7 @@ pilgrimage.5001 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_roma }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8503,7 +8506,7 @@ pilgrimage.5011 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_jerusalem }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8537,7 +8540,7 @@ pilgrimage.5021 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_byzantion }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8571,7 +8574,7 @@ pilgrimage.5031 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_alexandria }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8606,7 +8609,7 @@ pilgrimage.5101 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_sinai }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8641,7 +8644,7 @@ pilgrimage.5201 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_medina }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8676,7 +8679,7 @@ pilgrimage.5301 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_varanasi }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8710,7 +8713,7 @@ pilgrimage.5311 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_ayodhya }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8744,7 +8747,7 @@ pilgrimage.5321 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_mathura }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8778,7 +8781,7 @@ pilgrimage.5331 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_sthanisvara }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8812,7 +8815,7 @@ pilgrimage.5341 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_kanchipuram }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8846,7 +8849,7 @@ pilgrimage.5351 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_ujjayini }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8880,7 +8883,7 @@ pilgrimage.5361 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_dvaraka }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8915,7 +8918,7 @@ pilgrimage.5401 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_gaya }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8949,7 +8952,7 @@ pilgrimage.5411 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_kusinagara }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -8986,7 +8989,7 @@ pilgrimage.5421 = {
 		scope:activity.activity_location.county = title:c_varanasi
 	}
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -9021,7 +9024,7 @@ pilgrimage.5501 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_radha }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -9056,7 +9059,7 @@ pilgrimage.5601 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_baduspan }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -9091,7 +9094,7 @@ pilgrimage.5901 = {
 	}
 	trigger = { scope:activity.activity_location.county = title:c_paderborn }
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -9126,7 +9129,7 @@ pilgrimage.5911 = {
 		animation = happiness
 	}
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -9161,7 +9164,7 @@ pilgrimage.5921 = {
 		animation = happiness
 	}
 	immediate = {
-		play_music_cue = "pilgrimage_arrival_destination_cue"
+		play_music_cue = mx_cue_pilgrimage_arrival
 	}
 	#Alright
 	option = {
@@ -10662,6 +10665,7 @@ scripted_trigger 6540_wares_vendor_trigger = {
 		has_trait = education_stewardship_2
 		has_trait = education_stewardship_3
 		has_trait = education_stewardship_4
+		has_trait = education_stewardship_5
 	}
 }
 

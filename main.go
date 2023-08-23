@@ -103,7 +103,7 @@ func main() {
 	fmt.Println("2: Build Mod (Game)")
 	fmt.Println("3: Pull CK3 Game Files")
 	fmt.Println("4: Update Game Path in Launcher Settings")
-	fmt.Print("\nYour choice (1/2/3): ")
+	fmt.Print("\nYour choice (1/2/3/4): ")
 
 	answer, _ := reader.ReadString('\n')
 

@@ -854,6 +854,16 @@ texticon = {
 }
 
 texticon = {
+	icon = hostage_icon
+	iconsize = {
+		texture = "gfx/interface/icons/character_interactions/icon_hostage.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
 	icon = fort_icon
 	iconsize = {
 		texture = "gfx/interface/icons/text_icons/icon_holding.dds"
@@ -965,9 +975,10 @@ texticon = {
 	iconsize = {
 		texture = "gfx/interface/icons/portraits/hook_secret.dds"
 		size = { 25 25 }
+		framesize = { 40 40 }
+		frame = 1
 		offset = { 0 6 }
 		fontsize = 16
-		uv ={ 0.0 0.0 0.16 1 }
 	}
 }
 
@@ -976,9 +987,10 @@ texticon = {
 	iconsize = {
 		texture = "gfx/interface/icons/portraits/hook_secret.dds"
 		size = { 25 25 }
+		framesize = { 40 40 }
+		frame = 2
 		offset = { 0 6 }
 		fontsize = 16
-		uv ={ 0.17 0 0.33 1 }
 	}
 }
 
@@ -987,9 +999,10 @@ texticon = {
 	iconsize = {
 		texture = "gfx/interface/icons/portraits/hook_secret.dds"
 		size = { 25 25 }
+		framesize = { 40 40 }
+		frame = 3
 		offset = { 0 6 }
 		fontsize = 16
-		uv ={ 0.337 0 0.5 1 }
 	}
 }
 
@@ -998,9 +1011,10 @@ texticon = {
 	iconsize = {
 		texture = "gfx/interface/icons/portraits/hook_secret.dds"
 		size = { 25 25 }
+		framesize = { 40 40 }
+		frame = 4
 		offset = { 0 6 }
 		fontsize = 16
-		uv ={ 0.51 0 0.66 1 }
 	}
 }
 
@@ -1009,9 +1023,10 @@ texticon = {
 	iconsize = {
 		texture = "gfx/interface/icons/portraits/hook_secret.dds"
 		size = { 25 25 }
+		framesize = { 40 40 }
+		frame = 5
 		offset = { 0 6 }
 		fontsize = 16
-		uv ={ 0.7 0 0.84 1 }
 	}
 }
 
@@ -1714,9 +1729,10 @@ texticon = {
 	iconsize = {
 		texture = "gfx/interface/icons/portraits/hook_secret.dds"
 		size = { 24 24 }
+		framesize = { 40 40 }
+		frame = 1
 		offset = { 0 6 }
 		fontsize = 16
-		uv ={ 0.0 -0.1 0.17 1 }
 	}
 }
 
@@ -1999,5 +2015,15 @@ texticon = {
 		offset = { 0 6 }
 		fontsize = 16
 		uv ={ 0.05 0.05 1 1 }
+	}
+}
+
+texticon = {
+	icon = hostage
+	iconsize = {
+		texture = "gfx/interface/icons/character_interactions/icon_hostage.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
 	}
 }

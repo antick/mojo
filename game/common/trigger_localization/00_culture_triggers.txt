@@ -260,3 +260,11 @@ has_cultural_parameter = {
 	third = HAS_CULTURAL_PARAMETER_THIRD
 	third_not = HAS_CULTURAL_PARAMETER_THIRD_NOT
 }
+
+num_discovered_innovations = {
+	global = NUM_DISCOVERED_INNOVATIONS_TRIGGER
+}
+
+num_discovered_innovations_in_era = {
+	global = NUM_DISCOVERED_INNOVATIONS_IN_ERA_TRIGGER
+}

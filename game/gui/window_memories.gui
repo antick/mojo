@@ -250,6 +250,7 @@ window = {
 											margin_right = 5
 											elide = right
 											default_format = "#light_background"
+											using = Text_Light_Background_Overrides
 										}
 
 										expand = {}

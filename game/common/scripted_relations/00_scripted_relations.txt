@@ -247,3 +247,16 @@ activity_recurrer = {
 	hidden = yes
 	corresponding = activity_recurrer
 }
+
+wet_nurse = {
+	hidden = yes
+	corresponding = nursed_child
+
+	special_guest = yes
+}
+
+nursed_child = {
+	hidden = yes
+	corresponding = wet_nurse
+
+}

@@ -985,6 +985,7 @@ fp2_lyonese_monk.0201 = {
 			paranoid = minor_stress_impact_loss
 			trusting = medium_stress_impact_gain
 			zealous = medium_stress_impact_gain
+			eccentric = minor_stress_impact_gain
 		}
 		ai_chance = {
 			base = 10
@@ -1008,6 +1009,7 @@ fp2_lyonese_monk.0201 = {
 			shy = miniscule_stress_impact_loss
 			gregarious = minor_stress_impact_gain
 			zealous = minor_stress_impact_gain
+			eccentric = minor_stress_impact_gain
 		}
 		ai_chance = {
 			base = 10
@@ -1396,6 +1398,7 @@ fp2_lyonese_monk.0241 = {
 		stress_impact = {
 			zealous = miniscule_stress_impact_loss
 			cynical = minor_stress_impact_gain
+			eccentric = minor_stress_impact_gain
 		}
 		ai_chance = {
 			base = 10

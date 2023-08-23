@@ -1341,6 +1341,7 @@ iberia_north_africa.0121 = {
 				exists = scope:basque_choice
 				scope:basque_choice = flag:unchanged
 			}
+			favour_the_countryside_basques_decision_default_path_scripted_effect = yes
 		}
 	}
 }

@@ -10089,6 +10089,7 @@ fp1_yearly.0601 = {
 		trait = education_diplomacy_2
 		trait = education_diplomacy_3
 		trait = education_diplomacy_4
+		trait = education_diplomacy_5
 
 		# Gain a minor modifier boosting diplomacy.
 		add_character_modifier = {
@@ -10131,6 +10132,7 @@ fp1_yearly.0601 = {
 		trait = education_martial_2
 		trait = education_martial_3
 		trait = education_martial_4
+		trait = education_martial_5
 
 		# Gain a minor modifier boosting martial.
 		add_character_modifier = {
@@ -10173,6 +10175,7 @@ fp1_yearly.0601 = {
 		trait = education_stewardship_2
 		trait = education_stewardship_3
 		trait = education_stewardship_4
+		trait = education_stewardship_5
 
 		# Gain a minor modifier boosting stewardship.
 		add_character_modifier = {
@@ -10257,6 +10260,7 @@ fp1_yearly.0601 = {
 		trait = education_learning_2
 		trait = education_learning_3
 		trait = education_learning_4
+		trait = education_learning_5
 
 		# Gain a minor modifier boosting learning.
 		add_character_modifier = {

@@ -145,6 +145,17 @@ window = {
 
 			vbox_filter_group = {
 				layoutpolicy_horizontal = expanding
+				datacontext = "[CharacterSelectionList.GetCategory('politics_filter_category')]"
+				blockoverride "filters" {
+					filter_item = {
+						layoutpolicy_horizontal = expanding
+						datacontext = "[CharacterSelectionList.GetFilter('hostage_filter')]"
+					}
+				}
+			}
+
+			vbox_filter_group = {
+				layoutpolicy_horizontal = expanding
 				datacontext = "[CharacterSelectionList.GetCategory('membership_filter_category')]"
 				blockoverride "filters" {
 					filter_item = {

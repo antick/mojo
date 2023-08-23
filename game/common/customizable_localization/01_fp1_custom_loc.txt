@@ -31,13 +31,13 @@ GruesomeFestivalName = {
 
 	text = {
 		localization_key = gruesomefestivalname_blot
-		trigger = { religion = religion:germanic_religion }
+		trigger = { faith.religion = religion:germanic_religion }
 	}
 
 	text = {
 		localization_key = gruesomefestivalname_festival
 		trigger = {
-			NOT = { religion = religion:germanic_religion }
+			NOT = { faith.religion = religion:germanic_religion }
 		}
 		fallback = yes
 	}
@@ -48,13 +48,13 @@ GruesomeFestivalNamePlural = {
 
 	text = {
 		localization_key = gruesomefestivalname_blot
-		trigger = { religion = religion:germanic_religion }
+		trigger = { faith.religion = religion:germanic_religion }
 	}
 
 	text = {
 		localization_key = gruesomefestivalname_festivals
 		trigger = {
-			NOT = { religion = religion:germanic_religion }
+			NOT = { faith.religion = religion:germanic_religion }
 		}
 		fallback = yes
 	}

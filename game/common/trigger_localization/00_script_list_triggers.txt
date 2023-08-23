@@ -22,6 +22,13 @@ any_courtier_all = {
 	third = ALL_OF_THEIR_COURTIERS
 }
 
+#HOSTAGES
+any_warden_hostage = {
+	global = ANY_WARDEN_HOSTAGE
+	first = ANY_WARDEN_HOSTAGE_FIRST
+	third = ANY_WARDEN_HOSTAGE_THIRD
+}
+
 #HOOKED CHARACTER
 any_hooked_character = {
 	global = ANY_HOOKED_CHARACTER

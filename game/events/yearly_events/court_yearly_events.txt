@@ -2323,6 +2323,7 @@ court_yearly.6030 = {
 			}
 		}
 		stress_impact = {
+			eccentric = medium_stress_impact_loss
 			shy = major_stress_impact_gain
 			compassionate = major_stress_impact_gain
 			patient = major_stress_impact_gain
@@ -2936,6 +2937,7 @@ court_yearly.7030 = {
 		}
 
 		stress_impact = {
+			eccentric = minor_stress_impact_loss
 			generous = medium_stress_impact_gain
 			compassionate = medium_stress_impact_gain
 			cynical = minor_stress_impact_gain
@@ -6171,6 +6173,7 @@ court_yearly.8120 = {
         	base = minor_stress_impact_loss
         	diplomat = minor_stress_impact_loss
         	cynical = medium_stress_impact_gain
+        	eccentric = minor_stress_impact_gain
         }
         ai_chance = {
         	base = 100

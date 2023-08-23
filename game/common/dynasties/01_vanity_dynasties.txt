@@ -540,6 +540,12 @@ vanity_wickman = {
 	motto = dynn_Wickman_motto
 }
 
+vanity_strom = {
+	name = "dynn_Strom"
+	culture = swedish
+	motto = dynn_Strom_motto
+}
+
 vanity_astrup_hallkvist = {
 	name = "dynn_Astrup_Hallkvist"
 	culture = norse
@@ -669,4 +675,10 @@ vanity_husen = {
 	name = dynn_husen
 	culture = "swedish"
 	motto = dynn_Husen_motto
+}
+
+vanity_lopez = {
+	name = dynn_lopez
+	culture = "castilian"
+	motto = dynn_Lopez_motto
 }

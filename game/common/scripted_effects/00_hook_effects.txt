@@ -24,3 +24,18 @@ add_hook_if_possible_effect = {
 		}
 	}
 }
+
+add_favour_hook_if_possible_simple_effect = {
+	if = {
+		limit = {
+			can_add_hook = {
+				target = $TARGET$
+				type = favor_hook
+			}
+		}
+		add_hook = {
+			target = $TARGET$
+			type = favor_hook
+		}
+	}
+}

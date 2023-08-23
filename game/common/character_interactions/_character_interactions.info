@@ -88,6 +88,7 @@ my_interaction = {
 	}
 	# Options should avoid preventing an interaction from sending (except by the recipient refusing), as we assume that to be the case in the AI for performance reasons, use can_invalidate_interaction if you need it to be re-checked
 	send_options_exclusive = yes/no 					# Are the options exclusive?
+	secondary_scopes_optional = yes/no					# Are the secondary scope targets optional?
 
 	on_send = effect									# Executes directly the interaction is sent
 	on_accept = effect									# Executes when accepted by recipient (only if intermediary accepts)
@@ -143,7 +144,7 @@ my_interaction = {
 	}
 
 	ai_frequency = months								# How often should the ai consider doing this interaction
-	ai_potential = trigger								# Will the ai consider trying this interaction
+	ai_potential = trigger								# Will the ai consider trying this interaction. Root scope is the actor, and other event target are not available
 	ai_intermediary_accept = mtth						# Will the intermediary ai approve for this interaction and forward it to the recipient
 	ai_accept = mtth									# Will the ai accept a request for this interaction
 	ai_will_do = mtth									# How interested is the ai in sending this interaction (tested after selecting targets) 0-100 percent chance, will be clamped.

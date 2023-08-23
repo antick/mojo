@@ -605,8 +605,16 @@ c_narim = {
 		holder = 302865	#fictional Togli Karakar
 	}
 	
+	915.1.15 = {
+		holder = additional_karakar_1	#fictional Etrek Karakar
+	}
+
+	980.9.11 = {
+		holder = additional_karakar_2	#fictional Kokotoy Karakar
+	}
+
 	#1066
-	1064.9.27 = {
+	1050.1.15 = {
 		holder = 302866	#fictional Uzluk Karakar
 	}
 	1098.4.24 = {

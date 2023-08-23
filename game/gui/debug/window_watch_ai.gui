@@ -90,6 +90,16 @@ window = {
 
 			raw_text = "Activities"
 		}
+
+		button_standard_list = {
+			name = "economy_button"
+			size = { 120 40 }
+
+			down = "[AIWatchWindow.IsTabEconomy]"
+			onclick = "[AIWatchWindow.SetTabEconomy]"
+
+			raw_text = "Economy"
+		}
 	}
 	
 	########################################
@@ -776,6 +786,12 @@ window = {
 									align = left|top
 									text = "[Character.GetUINameNoTooltip]"
 								}
+
+								text_single = {
+									visible = "[SAICBTypeInfo.HasHostages]"
+									position = { 0 50 }
+									raw_text = "Have hostages"
+								}
 							}
 						}
 					}
@@ -1206,6 +1222,255 @@ window = {
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+
+	########################################
+	### Economic values
+	########################################
+
+	widget = {
+		name = "economic_decision_values"
+		visible = "[AIWatchWindow.IsTabEconomy]"
+		parentanchor = top|left
+		position = { 0 70 }
+		size = { 1200 630 }
+
+		hbox = {
+			vbox = {
+				name = "men_at_arms_values"
+				layoutpolicy_horizontal = expanding
+				maximumsize = { 300 -1 }
+				margin = { 8 8 }
+
+				background = {
+					using = Background_Area_Border
+				}
+
+				watch_textbox = {
+					size = { 180 20 }
+					fontsize = 16
+					raw_text = "Men-at Arms Values"
+					align = left
+				}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					margin = { 0 2 }
+
+					background = { 
+						using = Background_Area_Light
+					}
+					
+					raw_tooltip = "[AIWatchWindow.GetCharacter.MakeScope().GetScriptValueDesc( 'ai_men_at_arms_expense_gold_min' )]"
+					#raw_tooltip = "[GetScriptValueBreakdown( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_gold_min' )]"
+
+					watch_textbox = {
+						size = { 180 20 }
+						fontsize = 16
+						raw_text = "expense_gold_min: "
+						align = left
+					}
+
+					expand = { }
+
+					watch_textbox = {
+						size = { 40 20 }
+						fontsize = 16
+						raw_text = "[CalculateScriptValue( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_gold_min' )|V2]"
+						align = right
+					}
+				}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					margin = { 0 2 }
+
+					background = { 
+						using = Background_Area
+					}
+					
+					raw_tooltip = "[GetScriptValueBreakdown( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_gold_ideal' )]"
+
+					watch_textbox = {
+						size = { 180 20 }
+						fontsize = 16
+						raw_text = "expense_gold_ideal: "
+						align = left
+					}
+
+					expand = { }
+
+					watch_textbox = {
+						size = { 40 20 }
+						fontsize = 16
+						raw_text = "[CalculateScriptValue( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_gold_ideal' )|V2]"
+						align = right
+					}
+				}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					margin = { 0 2 }
+
+					background = { 
+						using = Background_Area_Light
+					}
+
+					raw_tooltip = "[GetScriptValueBreakdown( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_gold_max' )]"
+
+					watch_textbox = {
+						size = { 180 20 }
+						fontsize = 16
+						raw_text = "expense_gold_max: "
+						align = left
+					}
+
+					expand = { }
+
+					watch_textbox = {
+						size = { 40 20 }
+						fontsize = 16
+						raw_text = "[CalculateScriptValue( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_gold_max' )|V2]"
+						align = right
+					}
+				}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					margin = { 0 2 }
+
+					background = { 
+						using = Background_Area
+					}
+
+					raw_tooltip = "[GetScriptValueBreakdown( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_prestige_min' )]"
+
+					watch_textbox = {
+						size = { 180 20 }
+						fontsize = 16
+						raw_text = "expense_prestige_min: "
+						align = left
+					}
+
+					expand = { }
+
+					watch_textbox = {
+						size = { 40 20 }
+						fontsize = 16
+						raw_text = "[CalculateScriptValue( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_prestige_min' )|V2]"
+						align = right
+					}
+				}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					margin = { 0 2 }
+
+					background = { 
+						using = Background_Area_Light
+					}
+
+					raw_tooltip = "[GetScriptValueBreakdown( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_prestige_ideal' )]"
+
+					watch_textbox = {
+						size = { 180 20 }
+						fontsize = 16
+						raw_text = "expense_prestige_ideal: "
+						align = left
+					}
+
+					expand = { }
+
+					watch_textbox = {
+						size = { 40 20 }
+						fontsize = 16
+						raw_text = "[CalculateScriptValue( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_prestige_ideal' )|V2]"
+						align = right
+					}
+				}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					margin = { 0 2 }
+
+					background = { 
+						using = Background_Area
+					}
+					
+					raw_tooltip = "[GetScriptValueBreakdown( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_prestige_max' )]"
+
+					watch_textbox = {
+						size = { 180 20 }
+						fontsize = 16
+						raw_text = "expense_prestige_max: "
+						align = left
+					}
+
+					expand = { }
+
+					watch_textbox = {
+						size = { 40 20 }
+						fontsize = 16
+						raw_text = "[CalculateScriptValue( AIWatchWindow.GetCharacter, 'ai_men_at_arms_expense_prestige_max' )|V2]"
+						align = right
+					}
+				}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					margin = { 0 2 }
+
+					background = { 
+						using = Background_Area_Light
+					}
+					
+					raw_tooltip = "[GetScriptValueBreakdown( AIWatchWindow.GetCharacter, 'ai_men_at_arms_chance_expense_below_min' )]"
+
+					watch_textbox = {
+						size = { 180 20 }
+						fontsize = 16
+						raw_text = "chance_expense_below_min: "
+						align = left
+					}
+
+					expand = { }
+
+					watch_textbox = {
+						size = { 40 20 }
+						fontsize = 16
+						raw_text = "[CalculateScriptValue( AIWatchWindow.GetCharacter, 'ai_men_at_arms_chance_expense_below_min' )|V2]"
+						align = right
+					}
+				}
+
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					margin = { 0 2 }
+
+					background = { 
+						using = Background_Area
+					}
+					
+					raw_tooltip = "[GetScriptValueBreakdown( AIWatchWindow.GetCharacter, 'ai_men_at_arms_chance_expense_below_ideal' )]"
+
+					watch_textbox = {
+						size = { 180 20 }
+						fontsize = 16
+						raw_text = "chance_expense_below_ideal: "
+						align = left
+					}
+
+					expand = { }
+
+					watch_textbox = {
+						size = { 40 20 }
+						fontsize = 16
+						raw_text = "[CalculateScriptValue( AIWatchWindow.GetCharacter, 'ai_men_at_arms_chance_expense_below_ideal' )|V2]"
+						align = right
 					}
 				}
 			}
