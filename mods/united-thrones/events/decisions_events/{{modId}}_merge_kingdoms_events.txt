@@ -1,0 +1,146 @@
+﻿namespace = major_decisions_merge_kingdoms
+
+#message to founder
+major_decisions_merge_kingdoms.1001 = {
+	type = character_event
+	title = major_decisions_merge_kingdoms.1001.t
+	desc = {
+		desc = major_decisions_merge_kingdoms.1001.opening_kingdom
+		desc = double_line_break
+		desc = major_decisions_merge_kingdoms.1001.opening
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = faith.religious_head
+					faith.religious_head = root
+				}
+				desc = major_decisions_merge_kingdoms.1001.i_am_religious_head
+			}
+			triggered_desc = {
+				trigger = {
+					exists = faith.religious_head
+				}
+				desc = major_decisions_merge_kingdoms.1001.blessed_by_religious_head
+			}
+			desc = major_decisions_merge_kingdoms.1001.i_am_religious_head
+		}
+	}
+
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+
+		if = {
+			limit = {
+				exists = faith.religious_head
+			}
+			faith.religious_head = {
+				save_scope_as = religious_figure
+			}
+		}
+
+		#(wip: a detailed list of all affected kingdoms would be nice)
+		show_as_tooltip = {
+			custom_tooltip = major_decisions_merge_kingdoms.1001.i_have_become_more_royal
+		}
+	}
+
+	option = {
+		name = major_decisions_merge_kingdoms.1001.a
+	}
+}
+
+#message to vassals
+major_decisions_merge_kingdoms.1002 = {
+	type = character_event
+	title = major_decisions_merge_kingdoms.1001.t
+	desc = {
+		desc = major_decisions_merge_kingdoms.1002.opening
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = faith.religious_head
+					faith.religious_head = root
+				}
+				desc = major_decisions_merge_kingdoms.1002.i_am_religious_head
+			}
+			triggered_desc = {
+				trigger = {
+					exists = faith.religious_head
+					faith.religious_head = scope:founder
+				}
+				desc = major_decisions_merge_kingdoms.1002.religious_head_kingdom
+			}
+			triggered_desc = {
+				trigger = {
+					exists = faith.religious_head
+				}
+				desc = major_decisions_merge_kingdoms.1002.blessed_by_religious_head
+			}
+			desc = major_decisions_merge_kingdoms.1002.religious_head_kingdom
+		}
+		desc = major_decisions_merge_kingdoms.1002.end
+	}
+
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_succession"
+
+		if = {
+			limit = {
+				exists = scope:founder.faith.religious_head
+			}
+			scope:founder.faith.religious_head = {
+				save_scope_as = religious_figure
+			}
+		}
+
+		#(wip: a detailed list of all affected kingdoms would be nice)
+		show_as_tooltip = {
+			custom_tooltip = major_decisions_merge_kingdoms.1002.has_become_more_royal
+		}
+	}
+
+	option = {
+		name = major_decisions_merge_kingdoms.1002.a
+		set_nickname_effect = { NICKNAME = nick_the_great }
+		give_self_nickname_effect = yes
+		add_prestige = medium_prestige_gain
+	}
+}
+
+
+#message to neighbours losing de-jure territory
+major_decisions_merge_kingdoms.1003 = {
+	type = character_event
+	title = major_decisions_merge_kingdoms.1003.t
+	desc = major_decisions_merge_kingdoms.1003.desc
+	theme = realm
+	left_portrait = {
+		character = scope:founder
+		animation = personality_greedy
+	}
+
+	immediate = {
+		show_as_tooltip = {
+			every_in_list = {
+				list = notification_titles
+				set_de_jure_liege_title = scope:unified_title
+			}
+		}
+	}
+
+	option = {
+		name = major_decisions_merge_kingdoms.1003.a
+	}
+}

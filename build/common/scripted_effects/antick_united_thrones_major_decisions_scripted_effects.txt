@@ -156,3 +156,159 @@ merge_empires_effect = {
 		}
 	}
 }
+
+merge_kingdoms_effect = {
+	# This section is meant to show tooltips when the effect is run
+	show_as_tooltip = {
+		custom_tooltip = merge_kingdoms_result_de_jure # Tooltip for de jure kingdoms merged
+		custom_tooltip = merge_kingdoms_result_destroy # Tooltip for destroyed kingdoms
+	}
+
+	hidden_effect = { # This is the main effect that will be run and is hidden from the player's view
+		save_scope_as = founder # Save the scope of the character who initialized the effect as 'founder'
+
+		primary_title = {
+			save_scope_as = unified_title # Save the scope of the primary title of the character who initialized the effect as 'unified_title'
+		}
+
+		# Changes the de jure liege for all non-primary kingdom titles held by the character who initialized the effect
+		every_held_title = {
+			limit = {
+				tier = tier_kingdom # Limited to kingdom tier titles
+				NOT = { this = scope:unified_title } # Excludes the unified title
+			}
+
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_duchy # Limited to duchy tier titles
+				}
+				set_de_jure_liege_title = scope:unified_title # Set the de jure liege to the unified title
+
+				# Check if a player needs to be notified about the changes
+				if = {
+					limit = {
+						exists = kingdom
+						kingdom = {
+							exists = holder
+							holder = {
+								NOT = { this = root } # Exclude the character who initialized the effect
+								NOT = { top_liege = root } # Exclude vassals of the character who initialized the effect
+								is_ai = no # Only include non-AI characters
+							}
+						}
+					}
+					add_to_temporary_list = kingdoms_for_notification # Add affected kingdoms to the list for notification
+					root = {
+						save_temporary_scope_value_as = {
+							name = send_notifications # Save the value for sending notifications
+							value = yes
+						}
+					}
+				}
+			}
+			add_to_temporary_list = excess_kingdom_titles # Mark non-primary kingdoms for deletion
+		}
+
+		# Look for completely controlled additional kingdoms
+		every_sub_realm_county = {
+			limit = {
+				exists = kingdom
+				NOT = { exists = kingdom.holder } # Excludes kingdoms with current holder
+				holder.top_liege = root # Limited to counties whose top liege is the character who initialized the effect
+				kingdom = {
+					save_temporary_scope_as = test_kingdom # Save the kingdom for testing
+				}
+				holder.top_liege = {
+					completely_controls = scope:test_kingdom # Check if the top liege completely controls the kingdom
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						kingdom = {
+							is_in_list = additional_de_jure_kingdoms # Excludes kingdoms already in the list
+						}
+					}
+				}
+				empire = {
+					add_to_temporary_list = additional_de_jure_kingdoms # Add completely controlled additional kingdoms to the list
+				}
+			}
+		}
+
+		# Change de jure lieges of all kingdoms in additional empires
+		every_in_list = {
+			list = additional_de_jure_kingdoms
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_kingdom
+				}
+				set_de_jure_liege_title = scope:unified_title # Set the de jure liege to the unified title
+			}
+		}
+
+		# Destroy non-primary empires
+		every_in_list = {
+			list = excess_kingdom_titles
+			limit = {
+				NOT = { this = scope:unified_title } # Excludes the unified title
+			}
+			root = {
+				destroy_title = prev # Destroy the selected kingdom
+			}
+		}
+		# Sends a message to the founder
+		trigger_event = major_decisions_merge_kingdoms.1001
+
+		# Sends messages to other players
+		every_player = {
+			# Sends message to vassal players
+			if = {
+				limit = {
+					top_liege = scope:founder # Limited to vassals of the character who initialized the effect
+					NOT = { this = root } # Exclude the character who initialized the effect
+				}
+				trigger_event = major_decisions_merge_kingdoms.1002
+			}
+
+			# Sends message to non-vassal players who lose de jure territory
+			else_if = {
+				limit = {
+					exists = scope:send_notifications # Only if notifications need to be sent
+					NOT = { this = root } # Exclude the character who initialized the effect
+					NOT = { top_liege = scope:founder } # Exclude vassals of the character who initialized the effect
+					any_held_title = {
+						any_in_de_jure_hierarchy = {
+							continue = {
+								tier > tier_duchy # Only for higher tier than duchy
+							}
+							tier = tier_duchy
+							is_in_list = duchies_for_notification # Only if the duchy is in the notification list
+						}
+					}
+				}
+				every_held_title = {
+					every_in_de_jure_hierarchy = {
+						continue = {
+							tier > tier_duchy # Only for higher tier than duchy
+						}
+						limit = {
+							tier = tier_duchy
+							is_in_list = duchies_for_notification # Only if the duchy is in the notification list
+						}
+						add_to_list = notification_titles # Add affected duchies to the notification list
+					}
+				}
+				if = {
+					limit = {
+						any_in_list = {
+							list = notification_titles
+							count > 0 # Only if there are affected duchies
+						}
+					}
+					trigger_event = major_decisions_merge_kingdoms.1003 # Send notification
+				}
+			}
+		}
+	}
+}

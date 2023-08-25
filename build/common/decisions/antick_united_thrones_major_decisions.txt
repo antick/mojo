@@ -22,20 +22,66 @@
     }
 
     is_valid_showing_failures_only = {
-        is_adult = yes
-        is_available = yes
+        is_available_adult = yes
         is_independent_ruler = yes
         is_at_war = no
     }
 
     cost = {
         gold = 2000
-        prestige = 2000
-        piety = 2000
+        prestige = 4000
+        piety = 1500
     }
 
     effect = {
         merge_empires_effect = yes
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+}
+
+merge_kingdoms_decision = {
+    picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+    major = yes
+    ai_check_interval = 60
+    desc = merge_kingdoms_decision_desc
+
+    is_shown = {
+        OR = {
+            highest_held_title_tier = tier_empire
+            highest_held_title_tier = tier_kingdom
+        }
+        NOT = { has_game_rule = off_custom_kingdoms }
+    }
+
+    is_valid = {
+        prestige_level >= 4
+        any_held_title = {
+            count >= 2
+            tier = tier_kingdom
+        }
+    }
+
+    is_valid_showing_failures_only = {
+        is_available_adult = yes
+        is_independent_ruler = yes
+        is_at_war = no
+    }
+
+    cost = {
+        gold = 1000
+        prestige = 2000
+        piety = 1000
+    }
+
+    effect = {
+        merge_kingdoms_effect = yes
     }
 
     ai_potential = {
