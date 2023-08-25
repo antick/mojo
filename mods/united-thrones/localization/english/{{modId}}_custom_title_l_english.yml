@@ -55,3 +55,19 @@
  major_decisions_merge_kingdoms.1003.t:0 "A Usurper Realm"
  major_decisions_merge_kingdoms.1003.desc:0 ""[founder.GetTitleAsNameNoTooltip]" [founder.GetFirstName] of [unified_title.GetNameNoTierNoTooltip] has declared a new united Empire, and that some of #EMP my#! rightful territory is a part of it!"
  major_decisions_merge_kingdoms.1003.a:0 "That pretender will never last..."
+
+ rule_custom_kingdoms_ai:0 "Custom Kingdoms AI"
+ setting_on_custom_kingdoms_ai:0 "On"
+ setting_on_custom_kingdoms_ai_desc:0 "The creation of custom non-historical Kingdoms and Empires by the AI is allowed."
+ setting_off_custom_kingdoms_ai:1 "#high Off#!"
+ setting_off_custom_kingdoms_ai_desc:0 "The creation of custom non-historical Kingdoms and Empires by the AI is disallowed."
+  
+ #Form custom duchy
+ found_duchy_decision:1 "Found a New Duchy"
+ found_duchy_decision_desc:0 "I will unite my realm under a new Duchy title, to belong to my dynasty for all time."
+ found_duchy_decision_confirm:0 "Gather the Lords"
+ found_duchy_decision_tooltip:0 "Found an entirely new Duchy title"
+ create_new_duchy:1 "You create a new Duchy"
+ create_title_every_held_county:1 "Every County title you hold"
+ create_custom_duchy_de_jure_changes:1 "Becomes [de_jure|E] [counties|E] of your new Duchy"
+ NEW_CREATED_TITLE_NAME:0 "[old_title.GetBaseNameNoTierNoTooltip]"

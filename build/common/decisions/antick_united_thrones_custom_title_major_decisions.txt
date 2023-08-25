@@ -1,0 +1,271 @@
+﻿merge_empires_decision = {
+    picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+    major = yes
+    desc = merge_empires_decision_desc
+
+    ai_check_interval = 60
+
+    is_shown = {
+        highest_held_title_tier = tier_empire
+        NOT = { has_game_rule = off_custom_kingdoms }
+    }
+
+    is_valid = {
+        prestige_level >= 4
+        custom_description = {
+            text = merge_empires_decision_two_empires_held
+            any_held_title = {
+                count >= 2
+                tier = tier_empire
+            }
+        }
+    }
+
+    is_valid_showing_failures_only = {
+        is_available_adult = yes
+        is_independent_ruler = yes
+        is_at_war = no
+    }
+
+    cost = {
+        gold = 2000
+        prestige = 4000
+        piety = 1500
+    }
+
+    effect = {
+        merge_empires_effect = yes
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+}
+
+merge_kingdoms_decision = {
+    picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+    major = yes
+    ai_check_interval = 60
+    desc = merge_kingdoms_decision_desc
+
+    is_shown = {
+        OR = {
+            highest_held_title_tier = tier_empire
+            highest_held_title_tier = tier_kingdom
+        }
+        NOT = { has_game_rule = off_custom_kingdoms }
+    }
+
+    is_valid = {
+        prestige_level >= 4
+        any_held_title = {
+            count >= 2
+            tier = tier_kingdom
+        }
+    }
+
+    is_valid_showing_failures_only = {
+        is_available_adult = yes
+        is_independent_ruler = yes
+        is_at_war = no
+    }
+
+    cost = {
+        gold = 1000
+        prestige = 2000
+        piety = 1000
+    }
+
+    effect = {
+        merge_kingdoms_effect = yes
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+}
+
+found_duchy_decision = {
+    picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+    major = yes
+    ai_check_interval = 60
+    desc = found_duchy_decision_desc
+
+    is_shown = {
+        highest_held_title_tier = tier_county
+        NOT = {
+            has_game_rule = off_custom_kingdoms
+            limit = {
+                is_ai = yes
+                has_game_rule = off_custom_kingdoms_ai
+            }
+        }
+    }
+
+    is_valid = {
+        prestige_level >= 2
+        OR = {
+            custom_description = {
+                text = found_duchy_decision_three_counties_held
+                any_held_title = {
+                    count > 2
+                    tier = tier_county
+                }
+            }
+            sub_realm_size >= 3
+        }
+    }
+
+    is_valid_showing_failures_only = {
+        is_available_adult = yes
+        is_at_war = no
+    }
+
+    cost = {
+        gold = 300
+        prestige = 300
+        piety = 100
+    }
+
+    effect = {
+        create_custom_duchy_effect = yes
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+}
+
+found_kingdom_decision = {
+    picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+    major = yes
+    ai_check_interval = 60
+    desc = found_kingdom_decision_desc
+
+    is_shown = {
+        highest_held_title_tier = tier_duchy
+        NOT = {
+            has_game_rule = off_custom_kingdoms
+            limit = {
+                is_ai = yes
+                has_game_rule = off_custom_kingdoms_ai
+            }
+        }
+    }
+
+    is_valid = {
+        prestige_level >= 3
+        is_independent_ruler = yes
+        OR = {
+            custom_description = {
+                text = found_kingdom_decision_three_duchies_held
+                any_held_title = {
+                    count > 2
+                    tier = tier_duchy
+                }
+            }
+            sub_realm_size >= 30
+        }
+    }
+
+    is_valid_showing_failures_only = {
+        is_available_adult = yes
+        is_at_war = no
+    }
+
+    cost = {
+        gold = 300
+        prestige = 500
+        piety = 200
+    }
+
+    effect = {
+        create_custom_kingdom_effect = yes
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+}
+
+found_empire_decision = {
+    picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+    major = yes
+    ai_check_interval = 60
+    desc = found_empire_decision_desc
+
+    is_shown = {
+        highest_held_title_tier = tier_kingdom
+        OR = {
+            is_independent_ruler = yes
+            any_held_title = {
+                count >= 3
+                tier = tier_kingdom
+            }
+        }
+        NOT = {
+            has_game_rule = off_custom_kingdoms
+            limit = {
+                is_ai = yes
+                has_game_rule = off_custom_kingdoms_ai
+            }
+        }
+    }
+
+    is_valid = {
+        prestige_level >= 4
+        OR = {
+            sub_realm_size >= 120
+            AND = {
+                custom_description = {
+                    text = found_empire_decision_three_kingdoms_held
+                    any_held_title = {
+                        count >= 3
+                        tier = tier_kingdom
+                    }
+                }
+                sub_realm_size >= 80
+            }
+        }
+    }
+
+    is_valid_showing_failures_only = {
+        is_independent_ruler = yes
+        is_available_adult = yes
+        is_at_war = no
+    }
+
+    cost = {
+        gold = 1200
+        prestige = 2000
+        piety = 600
+    }
+
+    effect = {
+        create_custom_empire_effect = yes
+    }
+
+    ai_potential = {
+        always = yes
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+}

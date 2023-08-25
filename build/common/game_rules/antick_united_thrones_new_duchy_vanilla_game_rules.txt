@@ -1,0 +1,23 @@
+custom_kingdoms = {
+	default = on_custom_kingdoms
+
+	on_custom_kingdoms = {
+	
+	}
+	
+	off_custom_kingdoms = {
+	
+	}
+}
+
+custom_kingdoms_ai = {
+	default = off_custom_kingdoms_ai
+
+	on_custom_kingdoms_ai = {
+
+	}
+
+	off_custom_kingdoms_ai = {
+
+	}
+}
