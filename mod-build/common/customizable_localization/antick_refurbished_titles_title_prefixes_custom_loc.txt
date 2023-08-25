@@ -1,0 +1,115 @@
+TitleTurkishPrince = {
+    type = character
+    text = {
+        trigger = {
+            faith.religion = faith:ashari.religion
+            is_male = yes
+            any_parent = {
+                even_if_dead = yes
+            }
+        }
+        localization_key = prince_turkish_title_male
+    }
+
+    text = {
+        trigger = {
+            NOT = {
+                faith.religion = faith:ashari.religion
+            }
+            #faith.religion = faith:orthodox.religion
+
+            is_male = yes
+            any_parent = {
+                even_if_dead = yes
+            }
+        }
+        localization_key = title_prince
+    }
+
+    text = {
+        trigger = {
+            faith.religion = faith:ashari.religion
+            is_male = no
+            any_parent = {
+                even_if_dead = yes
+            }
+        }
+        localization_key = princess_turkish_title_female
+    }
+
+    text = {
+        trigger = {
+            NOT = {
+                faith.religion = faith:ashari.religion
+            }
+            #faith.religion = faith:orthodox.religion
+
+            is_male = no
+            any_parent = {
+                even_if_dead = yes
+            }
+        }
+        localization_key = title_princess
+    }
+}
+
+TitleTurkishKing = {
+    type = character
+    text = {
+        trigger = {
+            is_male = yes
+            is_independent_ruler = yes
+        }
+        localization_key = king_turkish_title_independent_male
+    }
+    text = {
+        trigger = {
+            is_male = no
+            is_independent_ruler = yes
+        }
+        localization_key = king_turkish_title_independent_female
+    }
+    text = {
+        trigger = {
+            is_male = yes
+            is_independent_ruler = no
+        }
+        localization_key = king_turkish_title_vassal_male
+    }
+    text = {
+        trigger = {
+            is_male = no
+            is_independent_ruler = no
+            primary_spouse = {
+                is_independent_ruler = no
+            }
+        }
+        localization_key = king_turkish_title_vassal_female
+    }
+    text = {
+        trigger = {
+            is_male = no
+            is_independent_ruler = no
+            primary_spouse = {
+                is_independent_ruler = yes
+            }
+        }
+        localization_key = king_turkish_title_independent_female
+    }
+}
+
+TitleKingdomTurkishKing = {
+    type = character
+    text = {
+        trigger = {
+            is_independent_ruler = yes
+        }
+        localization_key = king_turkish_title_independent_kingdom
+    }
+    text = {
+        trigger = {
+            is_independent_ruler = no
+        }
+        localization_key = king_turkish_title_vassal_kingdom
+    }
+}

@@ -2,7 +2,11 @@ package main
 
 import (
 	"bufio"
+	"embed"
 	"fmt"
+	"github.com/wailsapp/wails/v2"
+	"github.com/wailsapp/wails/v2/pkg/options"
+	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
 	configuration "mojo/config"
 	"mojo/mods"
 	"mojo/tools"
@@ -10,6 +14,9 @@ import (
 	"path/filepath"
 	"sort"
 )
+
+//go:embed all:frontend/dist
+var assets embed.FS
 
 var config = configuration.Config()
 
@@ -29,6 +36,7 @@ func buildMods(modBuildPath string) error {
 	}
 	sort.Strings(keys)
 
+	// Processing and building descriptor.mod file
 	err = tools.ProcessFile(
 		modBuildPath,
 		config.ModDescriptorPath,
@@ -90,6 +98,26 @@ func updateLauncherSettings() error {
 }
 
 func main() {
+	app := NewApp()
+
+	err := wails.Run(&options.App{
+		Title:  "Mojo",
+		Width:  1024,
+		Height: 768,
+		AssetServer: &assetserver.Options{
+			Assets: assets,
+		},
+		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
+		OnStartup:        app.startup,
+		Bind: []interface{}{
+			app,
+		},
+	})
+
+	if err != nil {
+		println("Error:", err.Error())
+	}
+
 	configuration.InitDB(configuration.GetDBPath())
 	defer configuration.CloseDB()
 
@@ -99,6 +127,7 @@ func main() {
 	fmt.Println("Welcome to Mojo!")
 	fmt.Println("----------------")
 	fmt.Println("Please enter your choice:")
+	fmt.Println("0: Start the app")
 	fmt.Println("1: Build Mod (Local)")
 	fmt.Println("2: Build Mod (Game)")
 	fmt.Println("3: Pull CK3 Game Files")
@@ -108,6 +137,12 @@ func main() {
 	answer, _ := reader.ReadString('\n')
 
 	switch answer {
+	case "0\n":
+		err := buildMods(config.ModBuildPathLocal)
+		if err != nil {
+			fmt.Printf("Error building mods: %v \n", err)
+		}
+
 	case "1\n":
 		err := buildMods(config.ModBuildPathLocal)
 		if err != nil {

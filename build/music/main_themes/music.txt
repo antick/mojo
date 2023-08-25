@@ -1,6 +1,0 @@
-﻿#### Imperator: Rome - Main Menu ####
-
-main_theme_track = {
-	music = "file:/music/Menu.ogg"
-	can_be_interrupted = yes
-}

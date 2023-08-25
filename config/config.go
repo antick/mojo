@@ -35,7 +35,9 @@ func Config() *Type {
 		LauncherSettingsPath: filepath.Join(homeDir, "Library", "Application Support", "Steam", "steamapps", "common", "Crusader Kings III", "launcher", "launcher-settings.json"),
 		ModBuildPath:         filepath.Join(homeDir, "Paradox Interactive", "Crusader Kings III", "mod", "mojo-flavor"),
 
-		ModBuildPathLocal: "build",
+		// This is where all the mods will be built
+		ModBuildPathLocal: "mod-build",
+
 		ModPath:           modPath,
 		ModDescriptorPath: filepath.Join(modPath, "descriptor.mod"),
 		OriginalCk3Path:   originalCk3Path,

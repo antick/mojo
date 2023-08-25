@@ -1,0 +1,155 @@
+﻿councillor_advisor_king_1 = {
+    name = councillor_advisor_king_1
+    tooltip = game_concept_advisor_king_1_desc
+    valid_position = {
+        is_ai = no
+        # exists = global_var:antick_grand_council_gr_mode
+    }
+    valid_character = {
+        can_be_advisor_king_trigger = yes
+        can_be_advisor_king_1_trigger = yes
+    }
+
+    modifier = {
+        name = task_advisor_self_generic_modifier
+        monthly_prestige = 0.01
+        scale = antick_grand_council_scale_advisor_self_default
+    }
+
+    on_get_position = {
+        got_council_position_effect = yes
+    }
+    on_fired_from_position = {
+        fired_from_council_position_effect = yes
+    }
+}
+
+councillor_advisor_king_2 = {
+    name = councillor_advisor_king_2
+    tooltip = game_concept_advisor_king_2_desc
+    valid_position = {
+        is_ai = no
+        # exists = global_var:antick_grand_council_gr_mode
+    }
+    valid_character = {
+        can_be_advisor_king_trigger = yes
+        can_be_advisor_king_2_trigger = yes
+    }
+
+    modifier = {
+        name = task_advisor_self_generic_modifier
+        monthly_prestige = 0.01
+        scale = antick_grand_council_scale_advisor_self_default
+    }
+
+    on_get_position = {
+        got_council_position_effect = yes
+    }
+    on_fired_from_position = {
+        fired_from_council_position_effect = yes
+    }
+}
+
+councillor_advisor_king_3 = {
+    name = councillor_advisor_king_3
+    tooltip = game_concept_advisor_king_3_desc
+    valid_position = {
+        is_ai = no
+        # exists = global_var:antick_grand_council_gr_mode
+    }
+    valid_character = {
+        can_be_advisor_king_trigger = yes
+        can_be_advisor_king_3_trigger = yes
+    }
+
+    modifier = {
+        name = task_advisor_self_generic_modifier
+        monthly_prestige = 0.01
+        scale = antick_grand_council_scale_advisor_self_default
+    }
+
+    on_get_position = {
+        got_council_position_effect = yes
+    }
+    on_fired_from_position = {
+        fired_from_council_position_effect = yes
+    }
+}
+
+councillor_advisor_king_4 = {
+    name = councillor_advisor_king_4
+    tooltip = game_concept_advisor_king_4_desc
+    valid_position = {
+        is_ai = no
+        # exists = global_var:antick_grand_council_gr_mode
+    }
+    valid_character = {
+        can_be_advisor_king_trigger = yes
+        can_be_advisor_king_4_trigger = yes
+    }
+
+    modifier = {
+        name = task_advisor_self_generic_modifier
+        monthly_prestige = 0.01
+        scale = antick_grand_council_scale_advisor_self_default
+    }
+
+    on_get_position = {
+        got_council_position_effect = yes
+    }
+    on_fired_from_position = {
+        fired_from_council_position_effect = yes
+    }
+}
+
+councillor_advisor_king_5 = {
+    name = councillor_advisor_king_5
+    tooltip = game_concept_advisor_king_5_desc
+    valid_position = {
+        is_ai = no
+        # exists = global_var:antick_grand_council_gr_mode
+    }
+    valid_character = {
+        can_be_advisor_king_trigger = yes
+        can_be_advisor_king_5_trigger = yes
+    }
+
+    modifier = {
+        name = task_advisor_self_generic_modifier
+        monthly_prestige = 0.01
+        scale = antick_grand_council_scale_advisor_self_default
+    }
+
+    on_get_position = {
+        got_council_position_effect = yes
+    }
+    on_fired_from_position = {
+        fired_from_council_position_effect = yes
+    }
+}
+
+councillor_advisor_king_6 = {
+    name = councillor_advisor_king_6
+    tooltip = game_concept_advisor_king_6_desc
+    valid_position = {
+        is_ai = no
+        # exists = global_var:antick_grand_council_gr_mode
+    }
+    valid_character = {
+        can_be_advisor_king_trigger = yes
+        can_be_advisor_king_6_trigger = yes
+    }
+
+    modifier = {
+        name = task_advisor_self_generic_modifier
+        monthly_prestige = 0.01
+        scale = antick_grand_council_scale_advisor_self_default
+    }
+
+    on_get_position = {
+        got_council_position_effect = yes
+    }
+    on_fired_from_position = {
+        fired_from_council_position_effect = yes
+    }
+}

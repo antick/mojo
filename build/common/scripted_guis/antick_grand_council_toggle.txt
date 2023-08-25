@@ -1,7 +1,0 @@
-antick_grand_council_toggle = {
-    scope = character
-
-    is_shown = {
-        has_game_rule = antick_grand_council_player_enabled
-    }
-}

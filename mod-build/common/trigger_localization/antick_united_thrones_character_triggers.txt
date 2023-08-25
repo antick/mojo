@@ -1,0 +1,17 @@
+merge_empires_decision_two_empires_held = {
+	global = HOLDS_TWO_OR_MORE_EMPIRE_TITLES_TRIGGER
+	first = I_HOLD_TWO_OR_MORE_EMPIRE_TITLES_TRIGGER
+	third = THEY_HOLD_TWO_OR_MORE_EMPIRE_TITLES_TRIGGER	
+}
+
+merge_kingdoms_decision_two_kingdoms_held = {
+	global = HOLDS_TWO_OR_MORE_KINGDOM_TITLES_TRIGGER
+	first = I_HOLD_TWO_OR_MORE_KINGDOM_TITLES_TRIGGER
+	third = THEY_HOLD_TWO_OR_MORE_KINGDOM_TITLES_TRIGGER
+}
+
+found_duchy_decision_four_counties_held = {
+	global = HOLDS_THREE_OR_MORE_COUNTY_TITLES_TRIGGER
+	first = I_HOLD_THREE_OR_MORE_COUNTY_TITLES_TRIGGER
+	third = THEY_HOLD_THREE_OR_MORE_COUNTY_TITLES_TRIGGER
+}

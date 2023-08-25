@@ -1,1 +1,0 @@
-﻿antick_age_of_invasion_nick = {}

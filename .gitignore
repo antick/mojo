@@ -27,3 +27,6 @@ go.work
 # Ck3 game music files
 *.ogg
 *.mp3
+
+# Dependencies
+node_modules/
