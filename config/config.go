@@ -63,6 +63,7 @@ func Config() *Type {
 			"gui",
 			"history",
 			"localization",
+			"music",
 		},
 	}
 }

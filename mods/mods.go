@@ -49,6 +49,13 @@ func ModConfig() *Type {
 					"modId": config.Config().ModIdPrefix + "_united_thrones",
 				},
 			},
+
+			"let-there-be-music": {
+				Enabled: true,
+				Replacements: map[string]string{
+					"modId": config.Config().ModIdPrefix + "_let_there_be_music",
+				},
+			},
 		},
 	}
 }
