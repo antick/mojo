@@ -14,8 +14,8 @@
 <main>
   <div class="result" id="result">{resultText}</div>
   <div class="input-box" id="input">
-    <input autocomplete="off" bind:value={name} class="input" id="name" type="text"/>
-    <button class="btn" on:click={greet}>Greet</button>
+    <input autocomplete="off" bind:value={name} class="input text-gray-700" id="name" type="text"/>
+    <button class="border rounded btn bg-amber-50 text-gray-700" on:click={greet}>Greet</button>
   </div>
 </main>
 
