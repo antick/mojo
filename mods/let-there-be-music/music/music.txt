@@ -1,7 +1,4 @@
-﻿
-#### MOOD TRACKS
-
-
+﻿#### MOOD TRACKS
 mx_mood_call_01 = {
 	music = "file:/music/179 Black Sam.ogg"
 	weight = 20
@@ -421,12 +418,8 @@ mx_cue_secret = {
 	calls = 5
 }
 
-
 ##### MAINTHEME
-
 main_theme_track = {
 	music = "file:/music/38 Prophecy.ogg"
 	can_be_interrupted = yes
 }
-
-

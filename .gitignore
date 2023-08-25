@@ -26,3 +26,4 @@ go.work
 
 # Ck3 game music files
 *.ogg
+*.mp3

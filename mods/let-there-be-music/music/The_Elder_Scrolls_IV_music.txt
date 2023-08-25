@@ -1,0 +1,171 @@
+#####################
+#   Combat tracks   #
+#####################
+mx_cue_combat_4_tes_iv = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_03_Death_Knell.ogg"
+	weight = 25
+	#mood = yes
+	#can_be_interrupted = yes
+	years = 1
+}
+mx_cue_combat_5_tes_iv = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_07_ Fall_Of_The_Hammer.ogg"
+	weight = 25
+	#mood = yes
+	#can_be_interrupted = yes
+	years = 1
+}
+mx_cue_combat_6_tes_iv = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_21_Bloodlust.ogg"
+	weight = 25
+	#mood = yes
+	#can_be_interrupted = yes
+	years = 1
+}
+mx_cue_combat_7_tes_iv = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_19_Daedra_In_Flight.ogg"
+	weight = 25
+	#mood = yes
+	#can_be_interrupted = yes
+	years = 1
+}
+mx_cue_combat_8_iv = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_15_Bloody_Blades.ogg"
+	weight = 25
+	#mood = yes
+	#can_be_interrupted = yes
+	years = 1
+}
+mx_cue_combat_9_tes_iv_23_churls_revenge = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_23_Churls_Revenge.ogg"
+	weight = 25
+	#mood = yes
+	#can_be_interrupted = yes
+	years = 1
+}
+mx_cue_combat_10_tes_iv = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_14_Defending_The_Gate.ogg"
+	weight = 25
+	#mood = yes
+	#can_be_interrupted = yes
+	years = 1
+}
+mx_cue_combat_11_tes_iv = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_11_March_Of_The_Marauders.ogg"
+	weight = 25
+	#mood = yes
+	#can_be_interrupted = yes
+	years = 1
+}
+
+###########################
+#   general mood tracks   #
+###########################
+mx_mood_tes_iv_01_reign_of_the_septims = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_01_Reign_of_the_Septims.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_02_through_the_valleys = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_02_Through_the_Valleys.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_04_harvest_dawn = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_04_Harvest_Dawn.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_05_wind_from_the_depths = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_05_Wind_From_The_Depths.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_06_king_and_country = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_06_King_and_Country.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_08_wings_of_kynareth = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_08_Wings_of_Kynareth.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_09_alls_well = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_09_Alls_Well.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_10_tension = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_10_Tension.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_12_watchmans_ease = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_12_Watchmans_Ease.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_13_glory_of_cyrodiil = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_13_Glory_of_Cyrodiil.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_16_minstrels_lament = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_16_Minstrels_Lament.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_17_ancient_sorrow = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_17_Ancient_Sorrow.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_18_auriels_ascension = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_18_Auriels_Ascension.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_20_unmarked_stone = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_20_Unmarked_Stone.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_22_sunrise_of_flutes = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_22_Sunrise_of_Flutes.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_24_deep_waters = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_24_Deep_Waters.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_25_duskatthemarket = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_25_DuskAttheMarket.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+mx_mood_tes_iv_26_peace_of_akatosh = {
+	music = "file:/music/The_Elder_Scrolls_IV/TES_IV_26_Peace_of_Akatosh.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
