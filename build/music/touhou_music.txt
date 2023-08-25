@@ -1,0 +1,428 @@
+﻿##### MAINTHEME
+main_theme_track = {
+	music = "file:/music/touhou/FloatingCloudCARNIVAL.ogg"
+	can_be_interrupted = yes
+}
+
+touhou_01 = {
+	music = "file:/music/touhou/CarrotWinetheEmbodimentofScarletDevil.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_02 = {
+	music = "file:/music/touhou/FloatingCloudEastern.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = no
+}
+
+touhou_03 = {
+	music = "file:/music/touhou/FloatingCloudGENSO-MIYAKO-BUSHI.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_04 = {
+	music = "file:/music/touhou/FloatingCloudHakureishornpipes.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = no
+}
+
+touhou_05 = {
+	music = "file:/music/touhou/FloatingCloudPrayedforMtHorai.ogg"
+	weight = 14
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_06 = {
+	music = "file:/music/touhou/FloatingCloudSorrowofChen.ogg"
+	weight = 8
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_07 = {
+	music = "file:/music/touhou/Machikado-MapozeRondoforthesky.ogg"
+	weight = 10
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_chants_08 = {
+	music = "file:/music/touhou/O-LifeJapanStrayHousePerformance.ogg"
+	weight = 11
+	mood = yes
+	can_be_interrupted = no
+}
+
+touhou_10_dusk = {
+	music = "file:/music/touhou/SoundRefilWiseReflection.ogg"
+	weight = 21
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_11_dawn_part1 = {
+	music = "file:/music/touhou/FloatingCloudGardeninthesky.ogg"
+	weight = 22
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_12_dawn_part2 = {
+	music = "file:/music/touhou/FloatingCloudMountainwheredemonslive.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_13_dawn_part3 = {
+	music = "file:/music/touhou/HarimusicToyosatomimisMedley.ogg"
+	weight = 17
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_14_dawn_part4 = {
+	music = "file:/music/touhou/fromadistanceWhiteFlagofUsaShrine.ogg"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_15_dawn_part5 = {
+	music = "file:/music/touhou/PrismriverOrchestraFiresofHokkai.ogg"
+	weight = 13
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_16_duskingsky = {
+	music = "file:/music/touhou/fromadistanceMysticMaple.ogg"
+	weight = 12
+	mood = yes
+	can_be_interrupted = no
+}
+
+touhou_17_murkiness = {
+	music = "file:/music/touhou/AQUASTYLEEasternNight.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_balik_part1 = {
+	music = "file:/music/touhou/AQUASTYLEOldYuanXian.ogg"
+	weight = 14
+	mood = yes
+	can_be_interrupted = no
+}
+
+mx_mood_balik_part2 = {
+	music = "file:/music/touhou/FloatingCloudKyoukaisenwoMeguruFesta.ogg"
+	weight = 12
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_18_mysterious_part1 = {
+	#Should Replace
+	music = "file:/music/touhou/DenshiHotaruSistersPianoDuet.ogg"
+	weight = 18
+	mood = yes
+	can_be_interrupted = no
+}
+
+touhou_19_mysterious_part2 = {
+	#Should Replace
+	music = "file:/music/touhou/TAMUSICTheCentennialFestivalforMagicalGirls.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou__21_mysterious_part4 = {
+	music = "file:/music/touhou/MelodicTasteGensokyoMillennium.ogg"
+	weight = 13
+	mood = yes
+	can_be_interrupted = yes
+}
+
+
+touhou_22_veni_part2 = {
+	#Should Replace
+	music = "file:/music/touhou/SoundHolicAlicemaestra.ogg
+	weight = 7
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_23_veni_part3 = {
+	#Replace Maybe...
+	music = "file:/music/touhou/TAMUSICNostalgicBloodoftheEastOldWorld.ogg.ogg"
+	weight = 18
+	mood = yes
+	can_be_interrupted = no
+}
+
+touhou_resurrection_part1 = {
+	#Should Replace
+	music = "file:/music/touhou/TAMUSICEasternJudgementintheSixtiethYearFateofSixtyYears.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_resurrection_part2 = {
+	music = "file:/music/touhou/MarasyAliceinWonderland.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_resurrection_part3 = {
+	music = "file:/music/touhou/MarasyHartmannsSleepingGirl.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+##### MENA MOOD
+
+touhou__20_mysterious_part3 = {
+	music = "file:/music/touhou/FloatingCloudHearnandRenko.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_mena_01 = {
+	music = "file:/music/touhou/AQUASTYLETheYoukaiMountainMysteriousMountain.ogg"
+	weight = 36
+	mood = yes
+	can_be_interrupted = yes
+}
+
+touhou_mena_04 = {
+	music = "file:/music/touhou/fromadistanceBreakingaThousandRocks.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = no
+}
+
+##### MUSIC CUES
+
+mx_cue_general_crusade_event_1 = {
+	music = "file:/music/touhou/C-ClaysTheBattleofNicopolis1396.ogg"
+	weight = 25
+	# play every time
+
+}
+
+mx_cue_general_crusade_event_2 = {
+	music = "file:/music/touhou/Hachimitsu-LemonThePrimalSceneofJapantheGirlSaw.ogg"
+	weight = 25
+	# play every time
+
+}
+
+mx_cue_general_crusade_event_3 = {
+	music = "file:/music/touhou/AQUASTYLEVertex.ogg"
+	weight = 25
+	# play every time
+
+}
+  
+mx_cue_touching_moment = {
+	music = "file:/music/touhou/k-wavesLABHisoutensoku.ogg"
+	weight = 25
+	# Cooldown
+	years = 10
+
+}
+
+mx_cue_meadandwine = {
+	music = "file:/music/touhou/FloatingCloudRiddleSolvingStep.ogg"
+	weight = 25
+	# play every time
+	calls = 3
+
+}
+
+
+mx_cue_in_taberna_instrumental = {
+	music = "file:/music/touhou/CarrotWineLove-coloredMasterSpark.ogg"
+	weight = 25
+	# play every time
+
+}
+
+mx_cue_epic_sacral_moment = {
+	music = "file:/music/touhou/fromadistanceobscure.ogg"
+	weight = 25
+	# Cooldown
+	years = 5
+
+}
+
+mx_cue_prison = {
+	music = "file:/music/touhou/KajisakoPropsStoreReverseIdeology.ogg"
+	weight = 25
+	# Cooldown
+	calls = 10
+
+}
+
+mx_cue_sacredrite = {
+	music = "file:/music/touhou/FloatingCloudTheGodsGiveUsBlessedRain.ogg"
+	weight = 25
+	# play every time
+}
+
+
+mx_cue_death = {
+	music = "file:/music/touhou/fromadistanceFateofSixtyYears.ogg"
+	weight = 25
+	# Cooldown
+	years = 15
+}
+
+mx_cue_combat_3 = {
+	music = "file:/music/touhou/O-LifeJapanIdoratrizeWorld.ogg"
+	weight = 25
+	# Cooldown
+	calls = 3
+}
+
+mx_cue_combat_2 = {
+	music = "file:/music/touhou/O-LifeJapanJoutoujinofCeramics.ogg"
+	weight = 25
+	# Cooldown
+	years = 5
+}
+
+mx_cue_ck3_vocal_maintheme = {
+	music = ""
+	weight = 25
+	# play every time
+
+}
+
+mx_cue_banquet = {
+	music = "file:/music/touhou/k-wavesLABDesireDrive.ogg"
+	weight = 25
+	# play every time
+	calls = 2
+
+}
+
+mx_cue_crusade_starts = {
+	music = "file:/music/touhou/FullPowerPitchoonProjectHeianAlien.ogg"
+	weight = 25
+	# play every time
+
+}
+
+mx_cue_war_declared = {
+	music = "file:/music/touhou/higumaRetrospectiveKyoto.ogg"
+	weight = 35
+	# Cooldown
+	calls = 3
+}
+
+mx_cue_combat_stinger = {
+	music = "event:/MUSIC/Cues/Events/Combat/mx_cue_combat_stinger"
+	weight = 25
+	# Cooldown
+	#years = 1
+}
+
+mx_cue_positive_effect = {
+	music = "file:/music/touhou/FloatingCloudTheDarkBlowhole.ogg"
+	weight = 25
+	# Cooldown
+	calls = 5
+}
+
+ mx_cue_peace_ensues = {
+	music = "file:/music/touhou/TohoArrangeOrchestraHiroariShootsaStrangeBirdTillWhen.ogg"
+	weight = 25
+	# cooldown
+}
+
+ mx_cue_faith_conversion = {
+	music = "file:/music/touhou/AQUASTYLEBlameGod.ogg"
+	weight = 25
+	# Cooldown
+	calls = 2
+}
+
+ mx_cue_birth = {
+	music = "file:/music/touhou/Foxtail-GrassStudioBoysandGirlsofaScienceEra.ogg"
+	weight = 25
+	# play only once
+}
+
+ mx_cue_stress = {
+	music = "file:/music/touhou/O-LifeJapanASoulasRedasaGroundCherry.ogg"
+	weight = 25
+	# Cooldown
+	calls = 5
+}
+
+mx_cue_illness = {
+	music = "file:/music/touhou/O-LifeJapanASoulasRedasaGroundCherry.ogg"
+	weight = 25
+	# Cooldown
+	calls = 3
+}
+
+mx_cue_murder = {
+	music = "file:/music/touhou/DiaoyezongForsakenDoll.ogg"
+	weight = 25
+	# Cooldown
+	calls = 10
+}
+
+mx_cue_succession = {
+	music = "file:/music/touhou/C-CLAYSTheLegendOfGreenEyes.ogg"
+	weight = 25
+	# play every time
+}
+
+mx_cue_succession_instrumental = {
+	music = "file:/music/touhou/
+	weight = 25
+	# play every time
+}
+
+mx_cue_seduction = {
+	music = "file:/music/touhou/LiverneTheGirlsSecretRoom.ogg"
+	weight = 25
+	# Cooldown
+	calls = 4
+}
+
+mx_cue_marriage = {
+	music = "file:/music/touhou/Foxtail-GrassStudioBoysandGirlsofaScienceEra.ogg"
+	weight = 25
+	# play only once
+}
+mx_cue_negative = {
+	music = "event:/MUSIC/Cues/Events/Combat/mx_cue_combat_stinger"
+	weight = 25
+}
+mx_cue_low_key_positive = {
+	music = "file:/music/touhou/CarrotWineTownScenery.ogg"
+	weight = 25
+}
+mx_cue_secret = {
+	music = "file:/music/touhou/O-LifeJapanASoulasRedasaGroundCherry.ogg"
+	weight = 25
+	# Cooldown
+	calls = 5
+}

@@ -1,0 +1,425 @@
+﻿#### MOOD TRACKS
+mx_mood_call_01 = {
+	music = "file:/music/179 Black Sam.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_02 = {
+	music = "file:/music/188 Jotunheimr.ogg"
+	weight = 6
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_03 = {
+	music = "file:/music/174 Where I Belong.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_04 = {
+	music = "file:/music/257 Vandraren.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_05 = {
+	music = "file:/music/274 otrotinn.ogg"
+	weight = 14
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_06 = {
+	music = "file:/music/235 Morrigan.ogg"
+	weight = 13
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_07 = {
+	music = "file:/music/281 Fable.ogg"
+	weight = 10
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_chants_08 = {
+	music = "file:/music/313 Fra Nordri.ogg"
+	weight = 11
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_10_dusk = {
+	music = "file:/music/277 Slava, Moy Brat"
+	weight = 21
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_11_dawn_part1 = {
+	music = "file:/music/280 Asgardr.ogg"
+	weight = 22
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_12_dawn_part2 = {
+	music = "file:/music/287 Freedom.ogg"
+	weight = 11
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_13_dawn_part3 = {
+	music = "file:/music/306 Walking With The Ancestors.ogg"
+	weight = 17
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_14_dawn_part4 = {
+	music = "file:/music/288 Galdrar.ogg"
+	weight = 16
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_15_dawn_part5 = {
+	music = "file:/music/315 Forgotten Gods.ogg"
+	weight = 13
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_16_duskingsky = {
+	music = "file:/music/186 Einherjer.ogg"
+	weight = 12
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_17_murkiness = {
+	music = "file:/music/321 Fjolnir.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_balik_part1 = {
+	music = "file:/music/228 Ancient Storm.ogg"
+	weight = 5
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_balik_part2 = {
+	music = "file:/music/332 Forest Sanctum.ogg"
+	weight = 12
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_18_mysterious_part1 = {
+	music = "file:/music/334 Moonfolk.ogg"
+	weight = 18
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_19_mysterious_part2 = {
+	music = "file:/music/336 Into the Wild.ogg"
+	weight = 20
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call__21_mysterious_part4 = {
+	music = "file:/music/337 Hrafnagud.ogg"
+	weight = 13
+	mood = yes
+	can_be_interrupted = yes
+}
+
+
+mx_mood_call_22_veni_part2 = {
+	music = "file:/music/343 The Elder Path.ogg"
+	weight = 7
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_23_veni_part3 = {
+	music = "file:/music/346 Treeborn.ogg"
+	weight = 18
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_resurrection_part1 = {
+	music = "file:/music/348 Aetas Romana.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_resurrection_part2 = {
+	music = "file:/music/79 Ode to the Fallen.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_resurrection_part3 = {
+	music = "file:/music/282 Siochain Shuthain.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+##### MENA MOOD
+
+mx_mood_call__20_mysterious_part3 = {
+	music = "file:/music/57 Garden of Gods.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_mena_01 = {
+	music = "file:/music/329 Son of the Hawk.ogg"
+	weight = 36
+	mood = yes
+	can_be_interrupted = yes
+}
+
+mx_mood_call_mena_04 = {
+	music = "file:/music/308 Desert Magic.ogg"
+	weight = 15
+	mood = yes
+	can_be_interrupted = yes
+}
+
+##### MUSIC CUES
+
+mx_cue_general_crusade_event_1 = {
+	music = "file:/music/261 Dark Overture.ogg"
+	weight = 25
+	# play every time
+
+}
+
+mx_cue_general_crusade_event_2 = {
+	music = "file:/music/22 Reign of the Dark.ogg"
+	weight = 25
+	# play every time
+
+}
+
+mx_cue_general_crusade_event_3 = {
+	music = "file:/music/218 Threat From the North.ogg"
+	weight = 25
+	# play every time
+
+}
+  
+mx_cue_touching_moment = {
+	music = "file:/music/28 My Everything.ogg"
+	weight = 25
+	# Cooldown
+	years = 2
+
+}
+
+mx_cue_meadandwine = {
+	music = "file:/music/326 At the Summertide Feast.ogg"
+	weight = 25
+	# play every time
+	calls = 3
+
+}
+
+
+mx_cue_in_taberna_instrumental = {
+	music = "file:/music/48 Balada.ogg"
+	weight = 25
+	# play every time
+
+}
+
+mx_cue_epic_sacral_moment = {
+	music = "file:/music/323 Mists of Avalon.ogg"
+	weight = 25
+	# Cooldown
+	years = 5
+
+}
+
+mx_cue_prison = {
+	music = "file:/music/199 Blackened Roots.ogg"
+	weight = 25
+	# Cooldown
+	years = 5
+
+}
+
+mx_cue_sacredrite = {
+	music = "file:/music/53 Guardians of the Lost Tribe.ogg"
+	weight = 25
+	# cooldown
+	years = 3
+}
+
+
+mx_cue_death = {
+	music = "file:/music/207 Passing.ogg"
+	weight = 25
+	# Cooldown
+	years = 15
+}
+
+mx_cue_combat_3 = {
+	music = "file:/music/07 Victorious.ogg"
+	weight = 25
+	# Cooldown
+	years = 3
+}
+
+mx_cue_combat_2 = {
+	music = "file:/music/311 Sword of Kings.ogg"
+	weight = 25
+	# Cooldown
+	years = 5
+}
+
+mx_cue_ck3_vocal_maintheme = {
+	music = ""
+	weight = 25
+	# play every time
+
+}
+
+mx_cue_banquet = {
+	music = "file:/music/193 Masked Ball.ogg"
+	weight = 25
+	# play every time
+	calls = 2
+
+}
+
+mx_cue_crusade_starts = {
+	music = "file:/music/241 Hual Hadi.ogg"
+	weight = 25
+	# play every time
+
+}
+
+mx_cue_war_declared = {
+	music = "file:/music/25 Wolf Blood.ogg"
+	weight = 35
+	# Cooldown
+	years = 2
+}
+
+mx_cue_combat_stinger = {
+	music = "file:/music/357 Frozen Souls.ogg"
+	weight = 25
+	# Cooldown
+	#years = 1
+}
+
+mx_cue_positive_effect = {
+	music = "file:/music/339 Harbinger of Spring.ogg"
+	weight = 25
+	# Cooldown
+	calls = 3
+}
+
+ mx_cue_peace_ensues = {
+	music = "file:/music/29 Ethelo-iel.ogg"
+	weight = 25
+	# cooldown
+}
+
+ mx_cue_faith_conversion = {
+	music = "file:/music/225 Amidst the Elder Trees.ogg"
+	weight = 25
+	# Cooldown
+	calls = 2
+}
+
+ mx_cue_birth = {
+	music = "file:/music/319 A Little Place Called Home.ogg"
+	weight = 25
+	# play only once
+}
+
+ mx_cue_stress = {
+	music = "file:/music/355 Mirror of the Night.ogg"
+	weight = 25
+	# Cooldown
+	calls = 3
+}
+
+mx_cue_illness = {
+	music = "file:/music/340 The Crimson Gate.ogg"
+	weight = 25
+	# Cooldown
+	calls = 3
+}
+
+mx_cue_murder = {
+	music = "file:/music/327 Hide and Seek.ogg"
+	weight = 25
+	# Cooldown
+	calls = 3
+}
+
+mx_cue_succession = {
+	music = "file:/music/328 Legacy.ogg"
+	weight = 25
+	# play every time
+}
+
+mx_cue_succession_instrumental = {
+	music = "file:/music/"
+	weight = 25
+	# play every time
+}
+
+mx_cue_seduction = {
+	music = "file:/music/330 Queen of the Fae.ogg"
+	weight = 25
+	# Cooldown
+	calls = 4
+}
+
+mx_cue_marriage = {
+	music = "file:/music/201 Blackened Soul.ogg"
+	weight = 25
+	# play only once
+}
+mx_cue_negative = {
+	music = "file:/music/338 Where Once Was a Heart.ogg"
+	weight = 25
+}
+mx_cue_low_key_positive = {
+	music = "file:/music/262 Lost Sanctuary.ogg"
+	weight = 25
+}
+mx_cue_secret = {
+	music = "file:/music/314 Aboard the Stormcrow.ogg"
+	weight = 25
+	# Cooldown
+	calls = 5
+}
+
+##### MAINTHEME
+main_theme_track = {
+	music = "file:/music/38 Prophecy.ogg"
+	can_be_interrupted = yes
+}
