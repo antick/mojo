@@ -12,4 +12,4 @@ tags={
 	"Warfare"
 }
 name="Mojo Flavor by Antick"
-supported_version="1.10.0"
+supported_version="1.10.0.1"
