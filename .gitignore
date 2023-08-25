@@ -28,5 +28,5 @@ go.work
 *.ogg
 *.mp3
 
-# Dependencies
 node_modules/
+dist/
