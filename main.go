@@ -14,15 +14,15 @@ var assets embed.FS
 var config = configuration.Config()
 
 func main() {
-	configuration.InitDB(configuration.GetDBPath())
-	defer configuration.CloseDB()
+	//configuration.InitDB(configuration.GetDBPath())
+	//defer configuration.CloseDB()
 
 	app := NewApp()
 
 	err := wails.Run(&options.App{
 		Title:  "Mojo",
-		Width:  1024,
-		Height: 768,
+		Width:  300,
+		Height: 500,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
