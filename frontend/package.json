@@ -23,5 +23,8 @@
     "tslib": "2.6.2",
     "typescript": "4.9.5",
     "vite": "3.2.7"
+  },
+  "dependencies": {
+    "svelte-awesome-icons": "^0.5.5"
   }
 }

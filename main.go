@@ -16,13 +16,12 @@ var config = configuration.Config()
 func main() {
 	//configuration.InitDB(configuration.GetDBPath())
 	//defer configuration.CloseDB()
-
 	app := NewApp()
 
 	err := wails.Run(&options.App{
 		Title:  "Mojo",
-		Width:  300,
-		Height: 500,
+		Width:  700,
+		Height: 300,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
