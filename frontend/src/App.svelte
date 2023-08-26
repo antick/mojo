@@ -23,7 +23,7 @@
   function buildModsInLocal(): void {
     buildingInProgress = true
     resultText = "Building mods in local..."
-    BuildModsInLocal().then(result => {
+    BuildModsInLocal().then(() => {
       resultText = "Build generated in local build folder"
       buildingInProgress = false
     })
@@ -32,7 +32,7 @@
   function buildModsInGame(): void {
     buildingInProgress = true
     resultText = "Building mods in game..."
-    BuildModsInGame().then(result => {
+    BuildModsInGame().then(() => {
         resultText = "Build generated in game build folder"
         buildingInProgress = false
     })
@@ -41,7 +41,7 @@
   function pullCk3GameFiles(): void {
     buildingInProgress = true
     resultText = "Pulling CK3 files from game folder..."
-    PullCk3GameFiles().then(result => {
+    PullCk3GameFiles().then(() => {
       resultText = "Successfully pulled CK3 files"
       buildingInProgress = false
     })
@@ -50,7 +50,7 @@
   function updateLauncherSettings(): void {
     buildingInProgress = true
     resultText = "Updating launcher settings..."
-    UpdateLauncherSettings().then(result => {
+    UpdateLauncherSettings().then(() => {
       resultText = "Successfully updated launcher settings"
       buildingInProgress = false
     })
@@ -61,7 +61,7 @@
   <div class="flex flex-col justify-center items-center gap-2">
     <div class="result" id="result">{resultText}</div>
 
-    <input autocomplete="off" bind:value={name} class="input text-gray-700" id="name" type="text"/>
+    <input autocomplete="off" bind:value={name} class="input text-gray-700 rounded" id="name" type="text" />
     <button class="border rounded btn bg-amber-50 text-gray-700" on:click={greet}>Greet</button>
 
     <div class="flex flex-col items-center justify-center gap-2 pt-10">

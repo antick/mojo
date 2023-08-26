@@ -12,6 +12,21 @@ By breaking down complex mods into submods, you can maintain compatibility, mana
 avoid concerns about load order. Refer to the documentation to learn more about writing submods, building comprehensive 
 mods, and even publishing submods individually on Steam – all according to your preferences.
 
+## Installation
+
+Install Go 1.20 or higher and Node.js 18 or higher to setup the development environment.
+
+## Usage
+
+To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
+server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
+and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
+to this in your browser, and you can call your Go code from devtools.
+
+## Building
+
+To build a redistributable, production mode package, use `wails build`.
+
 ## Mojo Mod
 
 The Mojo tool not only serves as a mod builder but also empowers you to simultaneously develop multiple submods. This 
@@ -44,19 +59,6 @@ To be updated.
 ### Unsupported mods
 
 To be updated.
-
-## Installation
-
-## Usage
-
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
-
-## Building
-
-To build a redistributable, production mode package, use `wails build`.
 
 ## Features
 
