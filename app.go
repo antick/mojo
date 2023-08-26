@@ -30,7 +30,7 @@ func (a *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s, It's show time!", name)
 }
 
-func (a *App) buildMods(modBuildPath string) error {
+func BuildMods(modBuildPath string) error {
 	fmt.Println("-----------------------------------")
 	err := tools.Cleanup(modBuildPath)
 	if err != nil {
@@ -83,5 +83,47 @@ func (a *App) buildMods(modBuildPath string) error {
 	fmt.Printf("✅ Build successful in %s folder \n", modBuildPath)
 	fmt.Println("-----------------------------------")
 
+	return nil
+}
+
+func (a *App) BuildModsInLocal() error {
+	err := BuildMods(config.ModBuildPathLocal)
+	if err != nil {
+		fmt.Printf("Error building mods in local: %v \n", err)
+		return err
+	}
+
+	return err
+}
+
+func (a *App) BuildModsInGame() error {
+	err := BuildMods(config.ModBuildPath)
+	if err != nil {
+		fmt.Printf("Error building mods in game: %v \n", err)
+		return err
+	}
+
+	return err
+}
+
+func (a *App) PullCk3GameFiles() error {
+	err := tools.Pull(config.Ck3PullMapping)
+	if err != nil {
+		fmt.Printf("Error pulling CK3 game files: %v \n", err)
+		return err
+	}
+
+	fmt.Printf("📦 Pulled CK3 game files to %s \n", config.ModCk3Path)
+	return nil
+}
+
+func (a *App) UpdateLauncherSettings() error {
+	err := tools.UpdateGameDataPath(config.LauncherSettingsPath, config.GameDataPath)
+	if err != nil {
+		fmt.Println("Error updating launcher settings")
+		return err
+	}
+
+	fmt.Println("✏️ Updated launcher settings")
 	return nil
 }
