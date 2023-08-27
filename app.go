@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"mojo/mods"
 	"mojo/tools"
 	"path/filepath"
 	"sort"
@@ -37,11 +36,9 @@ func BuildMods(modBuildPath string) error {
 		return err
 	}
 
-	modConfig := mods.ModConfig()
-
 	// Extract and sort the mod names
-	keys := make([]string, 0, len(modConfig.Mods))
-	for k := range modConfig.Mods {
+	keys := make([]string, 0, len(config.Mods))
+	for k := range config.Mods {
 		keys = append(keys, k)
 	}
 	sort.Strings(keys)
@@ -60,7 +57,7 @@ func BuildMods(modBuildPath string) error {
 	}
 
 	for _, modName := range keys {
-		modDetails := modConfig.Mods[modName]
+		modDetails := config.Mods[modName]
 
 		if !modDetails.Enabled {
 			fmt.Printf("❗️%s is disabled, skipping \n", modName)

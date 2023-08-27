@@ -5,6 +5,12 @@ import (
 	"path/filepath"
 )
 
+type Mod struct {
+	Enabled      bool              `json:"enabled"`
+	Mapping      map[string]string `json:"mapping"`
+	Replacements map[string]string `json:"replacements"`
+}
+
 type Type struct {
 	GameDataPath         string            `json:"gameDataPath"`
 	LauncherSettingsPath string            `json:"launcherSettingsPath"`
@@ -20,6 +26,7 @@ type Type struct {
 	CurrentCk3Version    string            `json:"currentCk3Version"`
 	SupportedGameVersion string            `json:"supportedGameVersion"`
 	ModInternalFolders   []string          `json:"modInternalFolders"`
+	Mods                 map[string]Mod    `json:"mods"`
 }
 
 func Config() *Type {
@@ -28,6 +35,7 @@ func Config() *Type {
 	originalCk3Path := filepath.Join(homeDir, "Library", "Application Support", "Steam", "steamapps", "common", "Crusader Kings III", "game")
 	modCk3Path := "game"
 	modPath := "mods"
+	ModIdPrefix := "antick"
 
 	return &Type{
 		// Put your original CK3 path here
@@ -49,7 +57,7 @@ func Config() *Type {
 			filepath.Join(originalCk3Path, "history"):              filepath.Join(modCk3Path, "history"),
 			filepath.Join(originalCk3Path, "localization/english"): filepath.Join(modCk3Path, "localization/english"),
 		},
-		ModIdPrefix: "antick",
+		ModIdPrefix: ModIdPrefix,
 		ModVersion:  "0.1.0",
 
 		// Current ck3 version that we have synced in "game" folder
@@ -66,6 +74,111 @@ func Config() *Type {
 			"history",
 			"localization",
 			"music",
+		},
+
+		Mods: map[string]Mod{
+			"age-of-invasion": {
+				Enabled: true,
+				Replacements: map[string]string{
+					"modId":                ModIdPrefix + "_age_of_invasion",
+					"modName":              "Age of Invasion",
+					"version":              "1.0.0",
+					"supportedGameVersion": "{{supportedGameVersion}}",
+					"remoteFileId":         "remote_file_id=\"2906586207\"",
+					"tags": `{
+	"Gameplay"
+	"Utilities"
+	"Warfare"
+}`,
+				},
+			},
+
+			"grand-council": {
+				Enabled: true,
+				Replacements: map[string]string{
+					"modId":                ModIdPrefix + "_grand_council",
+					"modName":              "Grand Council",
+					"version":              "1.0.0",
+					"supportedGameVersion": "{{supportedGameVersion}}",
+					"remoteFileId":         "",
+					"tags": `{
+	"Gameplay"
+	"Utilities"
+}`,
+				},
+			},
+
+			"refurbished-titles": {
+				Enabled: true,
+				Replacements: map[string]string{
+					"modId":                ModIdPrefix + "_refurbished_titles",
+					"modName":              "Refurbished Titles",
+					"version":              "1.0.0",
+					"supportedGameVersion": "{{supportedGameVersion}}",
+					"remoteFileId":         "",
+					"tags": `{
+	"Culture"
+	"Fixes"
+}`,
+				},
+			},
+
+			"tweak-it": {
+				Enabled: true,
+				Replacements: map[string]string{
+					"modId":                ModIdPrefix + "_tweak_it",
+					"modName":              "Tweak It",
+					"version":              "1.0.0",
+					"supportedGameVersion": "{{supportedGameVersion}}",
+					"remoteFileId":         "",
+					"tags": `{
+	"Fixes"
+}`,
+				},
+			},
+
+			"united-thrones": {
+				Enabled: true,
+				Replacements: map[string]string{
+					"modId":                ModIdPrefix + "_united_thrones",
+					"modName":              "United Thrones",
+					"version":              "1.0.0",
+					"supportedGameVersion": "{{supportedGameVersion}}",
+					"remoteFileId":         "",
+					"tags": `{
+	"Fixes"
+}`,
+				},
+			},
+
+			"let-there-be-music": {
+				Enabled: true,
+				Replacements: map[string]string{
+					"modId":                ModIdPrefix + "_let_there_be_music",
+					"modName":              "Let there be music",
+					"version":              "1.0.0",
+					"supportedGameVersion": "{{supportedGameVersion}}",
+					"remoteFileId":         "",
+					"tags": `{
+	"Utilities"
+}`,
+				},
+			},
+
+			"auto-pause-game": {
+				Enabled: true,
+				Replacements: map[string]string{
+					"modId":                ModIdPrefix + "_auto_pause_game",
+					"modName":              "Auto Pause Game",
+					"version":              "1.0.0",
+					"supportedGameVersion": "{{supportedGameVersion}}",
+					"remoteFileId":         "remote_file_id=\"2906586207\"",
+					"tags": `{
+	"Fixes"
+	"Utilities"
+}`,
+				},
+			},
 		},
 	}
 }
