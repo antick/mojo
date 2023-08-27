@@ -1,0 +1,12 @@
+﻿l_english:
+ auto_pause_antick.1.t:0 "Battle Is Over"
+ auto_pause_antick.1.desc:0 "The battle of [province.GetName] is over."
+ auto_pause_antick.1.a:0 "Okay"
+
+ auto_pause_antick.3.t:0 "Task Completed"
+ auto_pause_antick.3.desc:0 "I have completed my task and now awaiting for your new instructions."
+ auto_pause_antick.3.a:0 "Excellent"
+
+ auto_pause_antick.4.t:0 "Siege won"
+ auto_pause_antick.4.desc:0 "Your armies have besieged and taken full control of [province.GetName]"
+ auto_pause_antick.4.a:0 "Excellent"

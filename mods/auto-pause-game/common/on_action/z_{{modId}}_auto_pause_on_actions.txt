@@ -1,0 +1,17 @@
+﻿on_siege_completion = {
+	events = {
+		auto_pause_antick.4 #Pause the game
+	}
+}
+
+on_combat_end_winner = {
+	events = {
+		auto_pause_antick.1 #Pause the game
+	}
+}
+
+on_combat_end_loser = {
+	events = {
+		auto_pause_antick.1 #Pause the game
+	}
+}

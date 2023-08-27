@@ -8,15 +8,8 @@
     PullCk3GameFiles,
     UpdateLauncherSettings,
   } from '../wailsjs/go/main/App.js'
-  import {
-    AppRail,
-    AppRailAnchor,
-    AppRailTile,
-    TabGroup
-  } from '@skeletonlabs/skeleton';
 
   let activeTab = 'tab1';
-  let currentTile: number = 0;
   let name: string
   let resultText: string = "Please enter your name below"
   let buildingInProgress: boolean = false
