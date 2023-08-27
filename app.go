@@ -42,7 +42,7 @@ func sortModList() []string {
 func buildDescriptorFile(modBuildPath string) error {
 	err := tools.ProcessFile(
 		modBuildPath,
-		config.ModDescriptorPath,
+		config.ModDescriptorSourcePath,
 		filepath.Join(modBuildPath, "descriptor.mod"),
 		config.MainMod.Replacements,
 	)
@@ -53,7 +53,7 @@ func buildDescriptorFile(modBuildPath string) error {
 func buildThumbnailFile(modBuildPath string) error {
 	err := tools.ProcessFile(
 		modBuildPath,
-		config.ModDescriptorPath,
+		config.ThumbnailSourcePath,
 		filepath.Join(modBuildPath, "thumbnail.png"),
 		map[string]string{},
 	)

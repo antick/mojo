@@ -15,20 +15,21 @@ type SubModType struct {
 }
 
 type Type struct {
-	GameDataPath         string                `json:"gameDataPath"`
-	LauncherSettingsPath string                `json:"launcherSettingsPath"`
-	ModBuildPath         string                `json:"modBuildPath"`
-	ModBuildPathLocal    string                `json:"modBuildPathLocal"`
-	ModPath              string                `json:"modPath"`
-	ModDescriptorPath    string                `json:"modDescriptorPath"`
-	OriginalCk3Path      string                `json:"originalCk3Path"`
-	ModCk3Path           string                `json:"modCk3Path"`
-	Ck3PullMapping       map[string]string     `json:"ck3PullMapping"`
-	ModIdPrefix          string                `json:"modIdPrefix"`
-	SyncedCk3Version     string                `json:"syncedCk3Version"`
-	ModFoldersToProcess  []string              `json:"modFoldersToProcess"`
-	MainMod              MainModType           `json:"mainMod"`
-	SubMods              map[string]SubModType `json:"subMods"`
+	GameDataPath            string                `json:"gameDataPath"`
+	LauncherSettingsPath    string                `json:"launcherSettingsPath"`
+	ModBuildPath            string                `json:"modBuildPath"`
+	ModBuildPathLocal       string                `json:"modBuildPathLocal"`
+	ModPath                 string                `json:"modPath"`
+	ModDescriptorSourcePath string                `json:"modDescriptorSourcePath"`
+	ThumbnailSourcePath     string                `json:"thumbnailSourcePath"`
+	OriginalCk3Path         string                `json:"originalCk3Path"`
+	ModCk3Path              string                `json:"modCk3Path"`
+	Ck3PullMapping          map[string]string     `json:"ck3PullMapping"`
+	ModIdPrefix             string                `json:"modIdPrefix"`
+	SyncedCk3Version        string                `json:"syncedCk3Version"`
+	ModFoldersToProcess     []string              `json:"modFoldersToProcess"`
+	MainMod                 MainModType           `json:"mainMod"`
+	SubMods                 map[string]SubModType `json:"subMods"`
 }
 
 func Config() *Type {
@@ -49,10 +50,11 @@ func Config() *Type {
 		// This is where all the mods will be built for local testing
 		ModBuildPathLocal: "mod-build",
 
-		ModPath:           modPath,
-		ModDescriptorPath: filepath.Join(modPath, "descriptor.mod"),
-		OriginalCk3Path:   originalCk3Path,
-		ModCk3Path:        modCk3Path,
+		ModPath:                 modPath,
+		ModDescriptorSourcePath: filepath.Join(modPath, "descriptor.mod"),
+		ThumbnailSourcePath:     filepath.Join(modPath, "thumbnail.png"),
+		OriginalCk3Path:         originalCk3Path,
+		ModCk3Path:              modCk3Path,
 		Ck3PullMapping: map[string]string{
 			filepath.Join(originalCk3Path, "common"):               filepath.Join(modCk3Path, "common"),
 			filepath.Join(originalCk3Path, "events"):               filepath.Join(modCk3Path, "events"),
