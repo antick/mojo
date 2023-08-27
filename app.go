@@ -107,7 +107,7 @@ func BuildMods(modBuildPath string) error {
 }
 
 func (a *App) BuildModsInLocal() error {
-	err := BuildMods(config.ModBuildPathLocal)
+	err := BuildMods(filepath.Join(config.ModBuildPathLocal, config.MainMod.Replacements["modFolderName"]))
 	if err != nil {
 		fmt.Printf("Error building mods in local: %v \n", err)
 		return err

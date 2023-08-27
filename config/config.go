@@ -48,7 +48,7 @@ func Config() *Type {
 		ModBuildPath:         filepath.Join(homeDir, "Paradox Interactive", "Crusader Kings III", "mod", "mojo-flavor"),
 
 		// This is where all the mods will be built for local testing
-		ModBuildPathLocal: "mod-build",
+		ModBuildPathLocal: "build/mods",
 
 		ModPath:                 modPath,
 		ModDescriptorSourcePath: filepath.Join(modPath, "descriptor.mod"),
@@ -80,7 +80,7 @@ func Config() *Type {
 
 		MainMod: MainModType{
 			Replacements: map[string]string{
-				"modId":                ModIdPrefix + "_mojo_flavor",
+				"modFolderName":        "mojo",
 				"modName":              "Mojo Flavor by Antick",
 				"modVersion":           "0.1.0",
 				"supportedGameVersion": "1.10.0.1",
