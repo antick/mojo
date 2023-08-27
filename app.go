@@ -29,6 +29,38 @@ func (a *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s, It's show time!", name)
 }
 
+func sortModList() []string {
+	keys := make([]string, 0, len(config.SubMods))
+	for k := range config.SubMods {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+
+	return keys
+}
+
+func buildDescriptorFile(modBuildPath string) error {
+	err := tools.ProcessFile(
+		modBuildPath,
+		config.ModDescriptorPath,
+		filepath.Join(modBuildPath, "descriptor.mod"),
+		config.MainMod.Replacements,
+	)
+
+	return err
+}
+
+func buildThumbnailFile(modBuildPath string) error {
+	err := tools.ProcessFile(
+		modBuildPath,
+		config.ModDescriptorPath,
+		filepath.Join(modBuildPath, "thumbnail.png"),
+		map[string]string{},
+	)
+
+	return err
+}
+
 func BuildMods(modBuildPath string) error {
 	fmt.Println("-----------------------------------")
 	err := tools.Cleanup(modBuildPath)
@@ -36,28 +68,19 @@ func BuildMods(modBuildPath string) error {
 		return err
 	}
 
-	// Extract and sort the mod names
-	keys := make([]string, 0, len(config.Mods))
-	for k := range config.Mods {
-		keys = append(keys, k)
-	}
-	sort.Strings(keys)
-
-	// Processing and building descriptor.mod file
-	err = tools.ProcessFile(
-		modBuildPath,
-		config.ModDescriptorPath,
-		filepath.Join(modBuildPath, "descriptor.mod"),
-		tools.BaseReplacements(),
-	)
-
-	if err != nil {
+	if err = buildDescriptorFile(modBuildPath); err != nil {
 		fmt.Println("Error while processing descriptor.mod file")
 		return err
 	}
 
-	for _, modName := range keys {
-		modDetails := config.Mods[modName]
+	if err = buildThumbnailFile(modBuildPath); err != nil {
+		fmt.Println("Error while processing thumbnail.png file")
+		return err
+	}
+
+	sortedModList := sortModList()
+	for _, modName := range sortedModList {
+		modDetails := config.SubMods[modName]
 
 		if !modDetails.Enabled {
 			fmt.Printf("❗️%s is disabled, skipping \n", modName)

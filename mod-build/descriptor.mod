@@ -13,3 +13,4 @@ tags={
 }
 name="Mojo Flavor by Antick"
 supported_version="1.10.0.1"
+

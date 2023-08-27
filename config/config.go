@@ -5,34 +5,37 @@ import (
 	"path/filepath"
 )
 
-type Mod struct {
+type MainModType struct {
+	Replacements map[string]string `json:"replacements"`
+}
+
+type SubModType struct {
 	Enabled      bool              `json:"enabled"`
-	Mapping      map[string]string `json:"mapping"`
 	Replacements map[string]string `json:"replacements"`
 }
 
 type Type struct {
-	GameDataPath         string            `json:"gameDataPath"`
-	LauncherSettingsPath string            `json:"launcherSettingsPath"`
-	ModBuildPath         string            `json:"modBuildPath"`
-	ModBuildPathLocal    string            `json:"modBuildPathLocal"`
-	ModPath              string            `json:"modPath"`
-	ModDescriptorPath    string            `json:"modDescriptorPath"`
-	OriginalCk3Path      string            `json:"originalCk3Path"`
-	ModCk3Path           string            `json:"modCk3Path"`
-	Ck3PullMapping       map[string]string `json:"ck3PullMapping"`
-	ModIdPrefix          string            `json:"modIdPrefix"`
-	ModVersion           string            `json:"modVersion"`
-	CurrentCk3Version    string            `json:"currentCk3Version"`
-	SupportedGameVersion string            `json:"supportedGameVersion"`
-	ModInternalFolders   []string          `json:"modInternalFolders"`
-	Mods                 map[string]Mod    `json:"mods"`
+	GameDataPath         string                `json:"gameDataPath"`
+	LauncherSettingsPath string                `json:"launcherSettingsPath"`
+	ModBuildPath         string                `json:"modBuildPath"`
+	ModBuildPathLocal    string                `json:"modBuildPathLocal"`
+	ModPath              string                `json:"modPath"`
+	ModDescriptorPath    string                `json:"modDescriptorPath"`
+	OriginalCk3Path      string                `json:"originalCk3Path"`
+	ModCk3Path           string                `json:"modCk3Path"`
+	Ck3PullMapping       map[string]string     `json:"ck3PullMapping"`
+	ModIdPrefix          string                `json:"modIdPrefix"`
+	SyncedCk3Version     string                `json:"syncedCk3Version"`
+	ModFoldersToProcess  []string              `json:"modFoldersToProcess"`
+	MainMod              MainModType           `json:"mainMod"`
+	SubMods              map[string]SubModType `json:"subMods"`
 }
 
 func Config() *Type {
 	homeDir, _ := os.UserHomeDir()
 
 	originalCk3Path := filepath.Join(homeDir, "Library", "Application Support", "Steam", "steamapps", "common", "Crusader Kings III", "game")
+
 	modCk3Path := "game"
 	modPath := "mods"
 	ModIdPrefix := "antick"
@@ -43,7 +46,7 @@ func Config() *Type {
 		LauncherSettingsPath: filepath.Join(homeDir, "Library", "Application Support", "Steam", "steamapps", "common", "Crusader Kings III", "launcher", "launcher-settings.json"),
 		ModBuildPath:         filepath.Join(homeDir, "Paradox Interactive", "Crusader Kings III", "mod", "mojo-flavor"),
 
-		// This is where all the mods will be built
+		// This is where all the mods will be built for local testing
 		ModBuildPathLocal: "mod-build",
 
 		ModPath:           modPath,
@@ -57,16 +60,13 @@ func Config() *Type {
 			filepath.Join(originalCk3Path, "history"):              filepath.Join(modCk3Path, "history"),
 			filepath.Join(originalCk3Path, "localization/english"): filepath.Join(modCk3Path, "localization/english"),
 		},
+
 		ModIdPrefix: ModIdPrefix,
-		ModVersion:  "0.1.0",
 
 		// Current ck3 version that we have synced in "game" folder
-		CurrentCk3Version: "1.10.0.1",
+		SyncedCk3Version: "1.10.0.1",
 
-		// Supported ck3 version by the mods
-		SupportedGameVersion: "1.10.0.1",
-
-		ModInternalFolders: []string{
+		ModFoldersToProcess: []string{
 			"common",
 			"events",
 			"gfx",
@@ -76,16 +76,38 @@ func Config() *Type {
 			"music",
 		},
 
-		Mods: map[string]Mod{
+		MainMod: MainModType{
+			Replacements: map[string]string{
+				"modId":                ModIdPrefix + "_mojo_flavor",
+				"modName":              "Mojo Flavor by Antick",
+				"modVersion":           "0.1.0",
+				"supportedGameVersion": "1.10.0.1",
+				"modRemoteFileId":      "",
+				"modTags": `{
+	"Alternative History"
+	"Character Interactions"
+	"Culture"
+	"Decisions"
+	"Events"
+	"Fixes"
+	"Gameplay"
+	"Historical"
+	"Utilities"
+	"Warfare"
+}`,
+			},
+		},
+
+		SubMods: map[string]SubModType{
 			"age-of-invasion": {
 				Enabled: true,
 				Replacements: map[string]string{
 					"modId":                ModIdPrefix + "_age_of_invasion",
 					"modName":              "Age of Invasion",
-					"version":              "1.0.0",
-					"supportedGameVersion": "{{supportedGameVersion}}",
-					"remoteFileId":         "remote_file_id=\"2906586207\"",
-					"tags": `{
+					"modVersion":           "1.0.0",
+					"supportedGameVersion": "1.10.0.1",
+					"modRemoteFileId":      "remote_file_id=\"2906586207\"",
+					"modTags": `{
 	"Gameplay"
 	"Utilities"
 	"Warfare"
@@ -98,10 +120,10 @@ func Config() *Type {
 				Replacements: map[string]string{
 					"modId":                ModIdPrefix + "_grand_council",
 					"modName":              "Grand Council",
-					"version":              "1.0.0",
-					"supportedGameVersion": "{{supportedGameVersion}}",
-					"remoteFileId":         "",
-					"tags": `{
+					"modVersion":           "1.0.0",
+					"supportedGameVersion": "1.10.0.1",
+					"modRemoteFileId":      "",
+					"modTags": `{
 	"Gameplay"
 	"Utilities"
 }`,
@@ -113,10 +135,10 @@ func Config() *Type {
 				Replacements: map[string]string{
 					"modId":                ModIdPrefix + "_refurbished_titles",
 					"modName":              "Refurbished Titles",
-					"version":              "1.0.0",
-					"supportedGameVersion": "{{supportedGameVersion}}",
-					"remoteFileId":         "",
-					"tags": `{
+					"modVersion":           "1.0.0",
+					"supportedGameVersion": "1.10.0.1",
+					"modRemoteFileId":      "",
+					"modTags": `{
 	"Culture"
 	"Fixes"
 }`,
@@ -128,10 +150,10 @@ func Config() *Type {
 				Replacements: map[string]string{
 					"modId":                ModIdPrefix + "_tweak_it",
 					"modName":              "Tweak It",
-					"version":              "1.0.0",
-					"supportedGameVersion": "{{supportedGameVersion}}",
-					"remoteFileId":         "",
-					"tags": `{
+					"modVersion":           "1.0.0",
+					"supportedGameVersion": "1.10.0.1",
+					"modRemoteFileId":      "",
+					"modTags": `{
 	"Fixes"
 }`,
 				},
@@ -142,10 +164,10 @@ func Config() *Type {
 				Replacements: map[string]string{
 					"modId":                ModIdPrefix + "_united_thrones",
 					"modName":              "United Thrones",
-					"version":              "1.0.0",
-					"supportedGameVersion": "{{supportedGameVersion}}",
-					"remoteFileId":         "",
-					"tags": `{
+					"modVersion":           "1.0.0",
+					"supportedGameVersion": "1.10.0.1",
+					"modRemoteFileId":      "",
+					"modTags": `{
 	"Fixes"
 }`,
 				},
@@ -156,10 +178,10 @@ func Config() *Type {
 				Replacements: map[string]string{
 					"modId":                ModIdPrefix + "_let_there_be_music",
 					"modName":              "Let there be music",
-					"version":              "1.0.0",
-					"supportedGameVersion": "{{supportedGameVersion}}",
-					"remoteFileId":         "",
-					"tags": `{
+					"modVersion":           "1.0.0",
+					"supportedGameVersion": "1.10.0.1",
+					"modRemoteFileId":      "",
+					"modTags": `{
 	"Utilities"
 }`,
 				},
@@ -170,10 +192,10 @@ func Config() *Type {
 				Replacements: map[string]string{
 					"modId":                ModIdPrefix + "_auto_pause_game",
 					"modName":              "Auto Pause Game",
-					"version":              "1.0.0",
-					"supportedGameVersion": "{{supportedGameVersion}}",
-					"remoteFileId":         "remote_file_id=\"2906586207\"",
-					"tags": `{
+					"modVersion":           "1.0.0",
+					"supportedGameVersion": "1.10.0.1",
+					"modRemoteFileId":      "remote_file_id=\"2906586207\"",
+					"modTags": `{
 	"Fixes"
 	"Utilities"
 }`,

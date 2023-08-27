@@ -1,5 +1,5 @@
-version="{{version}}"
-tags={{tags}}
+version="{{modVersion}}"
+tags={{modTags}}
 name="{{modName}}"
 supported_version="{{supportedGameVersion}}"
-{{remoteFileId}}
+{{modRemoteFileId}}

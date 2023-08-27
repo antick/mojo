@@ -39,8 +39,8 @@ func ProcessFile(modBuildPath, srcPath, destPath string, replacements map[string
 		}
 	}
 
-	// Skip text replacement and save the file as it is, if it's a dds file
-	if filepath.Ext(srcPath) == ".dds" {
+	// Skip text replacement for certain file types
+	if ext := filepath.Ext(srcPath); ext == ".dds" || ext == ".png" {
 		return copyFiles(srcPath, finalDestPath)
 	}
 
@@ -105,8 +105,6 @@ func processDirectory(modBuildPath, srcDirectory, destDirectory string, replacem
 
 func BaseReplacements() map[string]string {
 	textReplacement := map[string]string{}
-	textReplacement["modVersion"] = config.ModVersion
-	textReplacement["supportedGameVersion"] = config.SupportedGameVersion
 
 	return textReplacement
 }
@@ -127,7 +125,7 @@ func mergeReplacements(map1, map2 map[string]string) map[string]string {
 func Build(modBuildPath, modName string, replacements map[string]string) error {
 	var filesAndFolderMapping = make(map[string]string)
 
-	for _, value := range config.ModInternalFolders {
+	for _, value := range config.ModFoldersToProcess {
 		filesAndFolderMapping[filepath.Join(config.ModPath, modName, value)] = filepath.Join(modBuildPath, value)
 	}
 
