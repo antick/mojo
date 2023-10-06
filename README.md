@@ -1,16 +1,19 @@
-# CK3 Mojo
+# Mojo (Under Heavy Development)
 
-CK3 Mojo is a versatile tool designed for creating and managing mods for CK3 (Crusader Kings 3).
+Mojo is a versatile tool designed for creating and managing mods for CK3 (Crusader Kings 3). Please note that this is
+under heavy development and may not be ready for use.
 
-## What is CK3 Mojo?
+## What is Mojo?
 
-CK3 Mojo enables you to develop mods as separate modules. This approach facilitates easy management and modular 
-development. When building your mods, you can choose which modules to include, allowing you to create larger and 
-more intricate mods.
+Mojo lets you make mods in different parts, making it easy to manage and build. With this tool, not only can you pick 
+which parts to use for bigger and detailed mods, but you can also work on several small parts at the same time. This 
+lets you put together a big mod with all your ideas. Instead of having a lot of separate mods and worrying if they'll 
+work well together, you can group them using Mojo. Even if one part has problems, you can keep making the others in the 
+main mod space.
 
-By breaking down complex mods into submods, you can maintain compatibility, manage updates for new CK3 versions, and 
-avoid concerns about load order. Refer to the documentation to learn more about writing submods, building comprehensive 
-mods, and even publishing submods individually on Steam – all according to your preferences.
+By splitting big mods into smaller parts, you can keep them working well, update them for new CK3 versions, and not 
+worry about the order they load. Check the guide (WIP) to learn how to write these smaller parts, build full mods, and 
+even put them on Steam the way you like.
 
 ## Installation
 
@@ -27,23 +30,16 @@ to this in your browser, and you can call your Go code from devtools.
 
 To build a redistributable, production mode package, use `wails build`.
 
-## Mojo Mod
+## In-Built Mod
 
-The Mojo tool not only serves as a mod builder but also empowers you to simultaneously develop multiple submods. This 
-functionality allows you to construct your own comprehensive overhaul mod. Instead of cluttering your mod list with 
-numerous entries and worrying about compatibility, you can consolidate them as submods here. Even if one mod encounters 
-issues, you can still proceed with building other mods within the final mod folder. If utilized effectively, this tool 
-is very powerful for creating CK3 mods.
+This tool also comes up with an in-built mod called Mojo that has a few features to help you get started.
 
 ### Load order
 
-Place this mod at the bottom of your load order to avoid overriding other mods. However, you can adjust this based on 
-your preferences, especially if you intend to avoid interfering with other mods.
+Place the in-built mod generated from this tool at the bottom of your load order to avoid overriding other mods. 
+However, you can adjust this based on your preferences, especially if you intend to avoid interfering with other mods.
 
 ### Compatibility
-
-This mod is Ironman compatible and supports Achievements. Note that individual submods may exhibit varying 
-compatibility, so review the submod list for comprehensive insights.
 
 Compatibility with other mods may vary. A list of supported and unsupported mods will be updated as users provide 
 feedback through the mod's Steam page or GitHub issues.
@@ -54,17 +50,18 @@ encountered issues to help improve the mod.
 
 ### Supported mods
 
-To be updated.
+WIP
 
 ### Unsupported mods
 
-To be updated.
+WIP
 
 ## Features
 
-1. Conversion of paradox script files to JSON format
-2. Collection of pre-generated male and female DNA
-3. Collection of COA (Coat-of-Arms) templates
+1. Convert pds (paradox script) files to JSON format.
+2. Collection of pre-generated male and female DNA.
+3. Collection of COA (Coat-of-Arms) templates.
+4. In-built collection of mods.
 
 ## Planned features
 
@@ -79,8 +76,14 @@ To be updated.
 
 ## Known issues
 
+None at the moment.
+
 ## FAQ
+
+### Is it Ironman and Achievement compatible?
+
+As of now, yes.
 
 ## Support
 
-This project is a labor of love during my free time. I'll do my best to provide support whenever possible.
+This free and open-source project is a labor of love created in my free time. I'll do my best to provide support whenever possible.
