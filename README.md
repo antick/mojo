@@ -1,7 +1,7 @@
-# Mojo (Under Heavy Development)
+# Mojo
 
 Mojo is a versatile tool designed for creating and managing mods for CK3 (Crusader Kings 3). Please note that this is
-under heavy development and may not be ready for use.
+under heavy development so a lot of updates would be coming until it reaches to version 1.0.
 
 ## What is Mojo?
 
