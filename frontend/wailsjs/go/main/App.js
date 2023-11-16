@@ -10,10 +10,6 @@ export function BuildModsInLocal() {
   return window['go']['main']['App']['BuildModsInLocal']();
 }
 
-export function Greet(arg1) {
-  return window['go']['main']['App']['Greet'](arg1);
-}
-
 export function PullCk3GameFiles() {
   return window['go']['main']['App']['PullCk3GameFiles']();
 }

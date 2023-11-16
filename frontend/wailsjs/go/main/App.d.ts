@@ -5,6 +5,4 @@ export function BuildModsInGame():Promise<void>;
 
 export function BuildModsInLocal():Promise<void>;
 
-export function Greet(arg1:string):Promise<string>;
-
 export function PullCk3GameFiles():Promise<void>;

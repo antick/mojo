@@ -2,7 +2,6 @@
   import './style.css';
   import { Icon } from 'svelte-awesome-icons';
   import {
-    Greet,
     BuildModsInLocal,
     BuildModsInGame,
     PullCk3GameFiles,
@@ -10,16 +9,12 @@
 
   let activeTab = 'tab1';
   let name: string
-  let resultText: string = "Please enter your name below"
+  let resultText: string = ""
   let buildingInProgress: boolean = false
 
   $: buttonClasses = buildingInProgress
     ? "border rounded btn bg-amber-50 text-gray-700 p-2 cursor-not-allowed"
     : "border rounded btn bg-amber-50 text-gray-700 p-2"
-
-  function greet(): void {
-    Greet(name).then(result => resultText = result)
-  }
 
   function buildModsInLocal(): void {
     buildingInProgress = true
@@ -65,18 +60,17 @@
 
     <div class="w-3/4 flex flex-col items-center gap-2 mt-10">
       <div class="result" id="result">{resultText}</div>
-      <div class="flex justify-center items-center gap-2">
-        <input autocomplete="off" bind:value={name} class="input text-gray-700 rounded" id="name" type="text" />
-        <button class="border rounded btn bg-amber-50 text-gray-700" on:click={greet}>Greet</button>
-      </div>
       {#if activeTab === 'tab1'}
+        <div class="p-4">Compile and build your mods in local build folder</div>
         <button class={buttonClasses} on:click={buildModsInLocal} disabled={buildingInProgress}>
           Build Mods (Local)
         </button>
+        <div class="p-4">Compile and build your mods in game directly</div>
         <button class={buttonClasses} on:click={buildModsInGame} disabled={buildingInProgress}>
           Build Mods (Game)
         </button>
       {:else if activeTab === 'tab2'}
+        <div class="p-4">Copy Game files in provided path for tracking the new changes if CK3 released a new version</div>
         <button class={buttonClasses} on:click={pullCk3GameFiles} disabled={buildingInProgress}>
           Pull CK3 Game Files
         </button>
