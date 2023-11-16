@@ -85,6 +85,7 @@ WIP
 8. Trading events and decisions.
 9. After pulling Ck3 game files, automatically detect any changes that may be required in the mod files you have.
 10. Define a temporary path where CK3 game files can be pulled and compared with mod files, eliminating the need for manual comparison.
+11. Show logs in the app itself.
 
 ## Known issues
 

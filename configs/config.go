@@ -20,6 +20,7 @@ type Type struct {
 	ModBuildPathLocal       string                `json:"modBuildPathLocal"`
 	ModPath                 string                `json:"modPath"`
 	ModDescriptorSourcePath string                `json:"modDescriptorSourcePath"`
+	ModFileSourcePath       string                `json:"modFileSourcePath"`
 	ThumbnailSourcePath     string                `json:"thumbnailSourcePath"`
 	OriginalCk3Path         string                `json:"originalCk3Path"`
 	ModCk3Path              string                `json:"modCk3Path"`
@@ -55,19 +56,22 @@ func Config() *Type {
 
 	supportedGameVersion := "1.10.0.1"
 
+	modBuildPath := filepath.Join(gameCustomModPath, "mojo")
+
 	return &Type{
 		// Current ck3 version that we have synced in "game" folder
 		SyncedCk3Version:     "1.11.0.1",
 		SupportedGameVersion: supportedGameVersion,
 
 		GameDataPath: gameDataPath,
-		ModBuildPath: filepath.Join(gameCustomModPath, "mojo-antick"),
+		ModBuildPath: modBuildPath,
 
 		// This is where all the mods will be built for local testing
 		ModBuildPathLocal: "build/mods",
 
 		ModPath:                 modPath,
 		ModDescriptorSourcePath: filepath.Join(modPath, "descriptor.mod"),
+		ModFileSourcePath:       filepath.Join(modPath, "mojo.mod"),
 		ThumbnailSourcePath:     filepath.Join(modPath, "thumbnail.png"),
 		OriginalCk3Path:         installedCk3GamePath,
 		ModCk3Path:              modCk3Path,
@@ -98,6 +102,7 @@ func Config() *Type {
 				"modVersion":           "0.1.0",
 				"supportedGameVersion": supportedGameVersion,
 				"modRemoteFileId":      "",
+				"modBuildPath":         modBuildPath,
 				"modTags": `{
 	"Alternative History"
 	"Character Interactions"

@@ -43,6 +43,17 @@ func buildDescriptorFile(modBuildPath string) error {
 	return err
 }
 
+func buildModFile(modBuildPath string) error {
+	err := scripts.ProcessFile(
+		modBuildPath,
+		config.ModFileSourcePath,
+		filepath.Join(modBuildPath, "mojo.mod"),
+		config.MainMod.Replacements,
+	)
+
+	return err
+}
+
 func buildThumbnailFile(modBuildPath string) error {
 	err := scripts.ProcessFile(
 		modBuildPath,
@@ -58,6 +69,11 @@ func BuildMods(modBuildPath string) error {
 	fmt.Println("-----------------------------------")
 	err := scripts.Cleanup(modBuildPath)
 	if err != nil {
+		return err
+	}
+
+	if err = buildModFile(modBuildPath); err != nil {
+		fmt.Println("Error while processing mojo.mod file")
 		return err
 	}
 
