@@ -26,6 +26,7 @@ type Type struct {
 	Ck3PullMapping          map[string]string     `json:"ck3PullMapping"`
 	ModIdPrefix             string                `json:"modIdPrefix"`
 	SyncedCk3Version        string                `json:"syncedCk3Version"`
+	SupportedGameVersion    string                `json:"supportedGameVersion"`
 	ModFoldersToProcess     []string              `json:"modFoldersToProcess"`
 	MainMod                 MainModType           `json:"mainMod"`
 	SubMods                 map[string]SubModType `json:"subMods"`
@@ -43,7 +44,8 @@ func Config() *Type {
 	// Path of the folder where CK3 installs the custom user mods
 	gameCustomModPath := filepath.Join(userHomeDir, "OneDrive", "Documents", "Paradox Interactive", "Crusader Kings III", "mod")
 
-	modCk3Path := "game"
+	// Path of the folder where we are storing a copy of game files to track the changes that comes in new releases
+	modCk3Path := filepath.Join("game", "original-game-files")
 
 	// Path of the folder where source code of the mods is stored
 	modPath := filepath.Join("game", "mojo-mods")
@@ -51,7 +53,13 @@ func Config() *Type {
 	// This name will be used as prefix for all the mods in the build folder
 	ModIdPrefix := "antick"
 
+	supportedGameVersion := "1.10.0.1"
+
 	return &Type{
+		// Current ck3 version that we have synced in "game" folder
+		SyncedCk3Version:     "1.10.0.1",
+		SupportedGameVersion: supportedGameVersion,
+
 		GameDataPath: gameDataPath,
 		ModBuildPath: filepath.Join(gameCustomModPath, "mojo-antick"),
 
@@ -73,9 +81,6 @@ func Config() *Type {
 
 		ModIdPrefix: ModIdPrefix,
 
-		// Current ck3 version that we have synced in "game" folder
-		SyncedCk3Version: "1.10.0.1",
-
 		ModFoldersToProcess: []string{
 			"common",
 			"events",
@@ -89,9 +94,9 @@ func Config() *Type {
 		MainMod: MainModType{
 			Replacements: map[string]string{
 				"modFolderName":        "mojo",
-				"modName":              "Mojo Flavor by Antick",
+				"modName":              "Mojo by Antick",
 				"modVersion":           "0.1.0",
-				"supportedGameVersion": "1.10.0.1",
+				"supportedGameVersion": supportedGameVersion,
 				"modRemoteFileId":      "",
 				"modTags": `{
 	"Alternative History"
