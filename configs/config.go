@@ -56,7 +56,7 @@ func Config() *Type {
 	// This name will be used as prefix for all the mods in the build folder
 	ModIdPrefix := "antick"
 
-	supportedGameVersion := "1.10.0.1"
+	supportedGameVersion := "1.11.0.1"
 
 	modBuildPath := filepath.Join(gameCustomModPath, "mojo")
 

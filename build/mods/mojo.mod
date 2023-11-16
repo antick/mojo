@@ -13,6 +13,6 @@ tags={
 }
 name="Mojo by Antick"
 picture="thumbnail.png"
-supported_version="1.10.0.1"
+supported_version="1.11.0.1"
 path="C:/Users/panka/OneDrive/Documents/Paradox Interactive/Crusader Kings III/mod/mojo"
 
