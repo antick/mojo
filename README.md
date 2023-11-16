@@ -102,6 +102,7 @@ Not tested with other mods yet. Please report any issues that you encounter.
 4. Better App UI.
 5. Rework on the paradox script file conversion.
 6. A file viewer to check if the build was generated correctly in the Local build folder.
+7. Show a loader when the app is doing something.
 
 ## Known issues
 

@@ -3,6 +3,7 @@ package configs
 import (
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 type MainModType struct {
@@ -104,7 +105,7 @@ func Config() *Type {
 				"modVersion":           "0.1.0",
 				"supportedGameVersion": supportedGameVersion,
 				"modRemoteFileId":      "",
-				"modBuildPath":         modBuildPath,
+				"modBuildPath":         strings.ReplaceAll(modBuildPath, "\\", "/"),
 				"modTags": `{
 	"Alternative History"
 	"Character Interactions"

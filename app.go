@@ -126,7 +126,7 @@ func (a *App) BuildModsInLocal() error {
 }
 
 func (a *App) BuildModsInGame() error {
-	if err := buildModFile(config.ModBuildPath); err != nil {
+	if err := buildModFile(config.GameCustomModPath); err != nil {
 		fmt.Println("Error while processing mojo.mod file")
 		return err
 	}
