@@ -72,11 +72,6 @@ func BuildMods(modBuildPath string) error {
 		return err
 	}
 
-	if err = buildModFile(modBuildPath); err != nil {
-		fmt.Println("Error while processing mojo.mod file")
-		return err
-	}
-
 	if err = buildDescriptorFile(modBuildPath); err != nil {
 		fmt.Println("Error while processing descriptor.mod file")
 		return err
@@ -116,6 +111,11 @@ func BuildMods(modBuildPath string) error {
 }
 
 func (a *App) BuildModsInLocal() error {
+	if err := buildModFile(config.ModBuildPathLocal); err != nil {
+		fmt.Println("Error while processing mojo.mod file")
+		return err
+	}
+
 	err := BuildMods(filepath.Join(config.ModBuildPathLocal, config.MainMod.Replacements["modFolderName"]))
 	if err != nil {
 		fmt.Printf("Error building mods in local: %v \n", err)
@@ -126,6 +126,11 @@ func (a *App) BuildModsInLocal() error {
 }
 
 func (a *App) BuildModsInGame() error {
+	if err := buildModFile(config.ModBuildPath); err != nil {
+		fmt.Println("Error while processing mojo.mod file")
+		return err
+	}
+
 	err := BuildMods(config.ModBuildPath)
 	if err != nil {
 		fmt.Printf("Error building mods in game: %v \n", err)

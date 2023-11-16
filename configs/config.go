@@ -19,6 +19,7 @@ type Type struct {
 	ModBuildPath            string                `json:"modBuildPath"`
 	ModBuildPathLocal       string                `json:"modBuildPathLocal"`
 	ModPath                 string                `json:"modPath"`
+	GameCustomModPath       string                `json:"gameCustomModPath"`
 	ModDescriptorSourcePath string                `json:"modDescriptorSourcePath"`
 	ModFileSourcePath       string                `json:"modFileSourcePath"`
 	ThumbnailSourcePath     string                `json:"thumbnailSourcePath"`
@@ -70,6 +71,7 @@ func Config() *Type {
 		ModBuildPathLocal: "build/mods",
 
 		ModPath:                 modPath,
+		GameCustomModPath:       gameCustomModPath,
 		ModDescriptorSourcePath: filepath.Join(modPath, "descriptor.mod"),
 		ModFileSourcePath:       filepath.Join(modPath, "mojo.mod"),
 		ThumbnailSourcePath:     filepath.Join(modPath, "thumbnail.png"),

@@ -58,22 +58,32 @@ Given the substantial changes in this mod, compatibility with existing saved gam
 game might be necessary for optimal functionality. The impact depends on the submods included, so please report any 
 encountered issues to help improve the mod.
 
+### Required Mods
+
+None at the moment.
+
+### Recommended Mods
+
+CFP
+
+EPE
+
 ### Supported mods
 
-WIP
+Not tested with other mods yet.
 
 ### Unsupported mods
 
-WIP
+Not tested with other mods yet. Please report any issues that you encounter.
 
 ## Features
 
-1. Convert pds (paradox script) files to JSON format.
+1. Convert paradox script files to JSON format.
 2. Collection of pre-generated male and female DNA.
 3. Collection of COA (Coat-of-Arms) templates.
 4. In-built collection of mods.
 
-## Planned features
+## Planned features in mods
 
 1. New and intriguing events involving friends, family, enemies, vassals, courtiers, councilors, and your realm, enhancing gameplay diversity.
 2. Family reunion and diverse religious events on cultural, religious, and regional occasions.
@@ -83,9 +93,15 @@ WIP
 6. Rare and distinctive events offering opportunities to acquire resources like gold, prestige, piety, and renown.
 7. Raiding events.
 8. Trading events and decisions.
-9. After pulling Ck3 game files, automatically detect any changes that may be required in the mod files you have.
-10. Define a temporary path where CK3 game files can be pulled and compared with mod files, eliminating the need for manual comparison.
-11. Show logs in the app itself.
+
+## Planned features in the app
+
+1. Define a temporary path where CK3 game files can be pulled and compared with mod files, eliminating the need for manual comparison.
+2. After pulling Ck3 game files, automatically detect any changes that may be required in the mod files you have.
+3. Show logs in the app itself.
+4. Better App UI.
+5. Rework on the paradox script file conversion.
+6. A file viewer to check if the build was generated correctly in the Local build folder.
 
 ## Known issues
 
@@ -95,7 +111,7 @@ None at the moment. Please report any issues you encounter.
 
 ### Is it Ironman and Achievement compatible?
 
-As of now, yes.
+Yes.
 
 ## Support
 
