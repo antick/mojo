@@ -17,7 +17,17 @@ even put them on Steam the way you like.
 
 ## Installation
 
-Install Go 1.20 or higher and Node.js 18 or higher to setup the development environment.
+Install Go 1.20 or higher:
+
+https://go.dev/doc/install
+
+Download and install Node.js 20:
+
+https://nodejs.org/en/download
+
+Install Wails from their documentation:
+
+https://wails.io/docs/gettingstarted/installation
 
 ## Usage
 
