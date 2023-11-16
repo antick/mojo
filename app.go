@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"mojo/tools"
+	"mojo/utils"
 	"path/filepath"
 	"sort"
 )
@@ -38,7 +38,7 @@ func sortModList() []string {
 }
 
 func buildDescriptorFile(modBuildPath string) error {
-	err := tools.ProcessFile(
+	err := utils.ProcessFile(
 		modBuildPath,
 		config.ModDescriptorSourcePath,
 		filepath.Join(modBuildPath, "descriptor.mod"),
@@ -49,7 +49,7 @@ func buildDescriptorFile(modBuildPath string) error {
 }
 
 func buildThumbnailFile(modBuildPath string) error {
-	err := tools.ProcessFile(
+	err := utils.ProcessFile(
 		modBuildPath,
 		config.ThumbnailSourcePath,
 		filepath.Join(modBuildPath, "thumbnail.png"),
@@ -61,7 +61,7 @@ func buildThumbnailFile(modBuildPath string) error {
 
 func BuildMods(modBuildPath string) error {
 	fmt.Println("-----------------------------------")
-	err := tools.Cleanup(modBuildPath)
+	err := utils.Cleanup(modBuildPath)
 	if err != nil {
 		return err
 	}
@@ -87,7 +87,7 @@ func BuildMods(modBuildPath string) error {
 			fmt.Printf("📦 Building %s\n", modName)
 		}
 
-		err := tools.Build(
+		err := utils.Build(
 			modBuildPath,
 			modName,
 			modDetails.Replacements,
@@ -125,7 +125,7 @@ func (a *App) BuildModsInGame() error {
 }
 
 func (a *App) PullCk3GameFiles() error {
-	err := tools.Pull(config.Ck3PullMapping)
+	err := utils.Pull(config.Ck3PullMapping)
 	if err != nil {
 		fmt.Printf("Error pulling CK3 game files: %v \n", err)
 		return err
@@ -136,7 +136,7 @@ func (a *App) PullCk3GameFiles() error {
 }
 
 func (a *App) UpdateLauncherSettings() error {
-	err := tools.UpdateGameDataPath(config.LauncherSettingsPath, config.GameDataPath)
+	err := utils.UpdateGameDataPath(config.LauncherSettingsPath, config.GameDataPath)
 	if err != nil {
 		fmt.Println("Error updating launcher settings")
 		return err

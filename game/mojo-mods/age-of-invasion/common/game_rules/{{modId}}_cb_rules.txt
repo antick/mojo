@@ -1,0 +1,27 @@
+﻿{{modId}}_limited_player = {
+	default = {{modId}}_player_not_limited
+
+	categories = {
+		mojo
+	}
+
+	{{modId}}_player_not_limited = {
+	}
+
+	{{modId}}_player_is_limited = {
+	}
+}
+
+{{modId}}_limited_rivalry_war = {
+	default = {{modId}}_rivalry_is_limited
+
+	categories = {
+		mojo
+	}
+
+	{{modId}}_rivalry_is_limited = {
+	}
+
+	{{modId}}_rivalry_not_limited = {
+	}
+}

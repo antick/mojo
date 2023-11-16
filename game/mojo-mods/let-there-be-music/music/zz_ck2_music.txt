@@ -1,0 +1,846 @@
+﻿#### CRUSADER KINGS II MUSIC COMPLETE - ALL CK2 MUSIC FOR CRUSADER KINGS III ####
+
+### VANILLA ###
+
+ck2music1 = {
+	music = "file:/music/akingisdead.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music2 = {
+	music = "file:/music/asimplesongforcommoners.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music3 = {
+	music = "file:/music/coeurdelion.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music4 = {
+	music = "file:/music/crusaders.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music5 = {
+	music = "file:/music/guyderosesquandary.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music6 = {
+	music = "file:/music/hornsofhattinandaftermath.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music7 = {
+	music = "file:/music/intaberna.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music8 = {
+	music = "file:/music/journeytoabsolution.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music9 = {
+	music = "file:/music/kingdomofjerusalem.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music10 = {
+	music = "file:/music/krakdeschevaliers.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music11 = {
+	music = "file:/music/marchtoholyland.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music12 = {
+	music = "file:/music/orderofthetemple.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music13 = {
+	music = "file:/music/pathtoglory.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music14 = {
+	music = "file:/music/pilgrimage.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music15 = {
+	music = "file:/music/royalmarriage.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music16 = {
+	music = "file:/music/saladinbesiegejerusalem.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music17 = {
+	music = "file:/music/sanctus.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music18 = {
+	music = "file:/music/siegeofkerak.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music19 = {
+	music = "file:/music/tedonimum.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music20 = {
+	music = "file:/music/thefirstcrusade.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music21 = {
+	music = "file:/music/thefranks.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music22 = {
+	music = "file:/music/theholysepulchre.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music23 = {
+	music = "file:/music/thelastcrusade_finale.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music24 = {
+	music = "file:/music/turexgloriae.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music25 = {
+	music = "file:/music/crusaderkings2_maintitle.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+### SONGS OF ALBION ###
+
+ck2music_albion1 = {
+	music = "file:/music/englandanno1066.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = ghw_region_britannia }
+			culture = { has_cultural_pillar = heritage_goidelic }
+			AND = {
+				culture = { has_cultural_pillar = heritage_west_germanic }
+				NOT = { culture = culture:old_saxon }
+			}
+			AND = {
+				culture = { has_cultural_pillar = heritage_brythonic }
+				NOT = { culture = culture:breton }
+			}
+		}
+	}
+}
+
+ck2music_albion2 = {
+	music = "file:/music/thecoronationofaking.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = ghw_region_britannia }
+			culture = { has_cultural_pillar = heritage_goidelic }
+			AND = {
+				culture = { has_cultural_pillar = heritage_west_germanic }
+				NOT = { culture = culture:old_saxon }
+			}
+			AND = {
+				culture = { has_cultural_pillar = heritage_brythonic }
+				NOT = { culture = culture:breton }
+			}
+		}
+	}
+}
+
+ck2music_albion3 = {
+	music = "file:/music/theforest.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = ghw_region_britannia }
+			culture = { has_cultural_pillar = heritage_goidelic }
+			AND = {
+				culture = { has_cultural_pillar = heritage_west_germanic }
+				NOT = { culture = culture:old_saxon }
+			}
+			AND = {
+				culture = { has_cultural_pillar = heritage_brythonic }
+				NOT = { culture = culture:breton }
+			}
+		}
+	}
+}
+
+ck2music_albion4 = {
+	music = "file:/music/thekingscrusade.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = ghw_region_britannia }
+			culture = { has_cultural_pillar = heritage_goidelic }
+			AND = {
+				culture = { has_cultural_pillar = heritage_west_germanic }
+				NOT = { culture = culture:old_saxon }
+			}
+			AND = {
+				culture = { has_cultural_pillar = heritage_brythonic }
+				NOT = { culture = culture:breton }
+			}
+		}
+	}
+}
+
+### SONGS OF FAITH ###
+
+ck2music_faith1 = {
+	music = "file:/music/inthenameofgod.ogg"
+	mood = yes
+	can_be_interrupted = no
+	
+	is_valid = { religion = religion:christianity_religion }
+}
+
+ck2music_faith2 = {
+	music = "file:/music/thetemplechurch.ogg"
+	mood = yes
+	can_be_interrupted = no
+	
+	is_valid = { religion = religion:christianity_religion }
+}
+
+### SONGS OF THE HOLY LAND ###
+
+ck2music_holyland1 = {
+	music = "file:/music/ascalon.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = { capital_province = { geographical_region = custom_outremer } }
+}
+
+ck2music_holyland2 = {
+	music = "file:/music/theholyland.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = { capital_province = { geographical_region = custom_outremer } }
+}
+
+### SONGS OF THE CALIPH ###
+
+ck2music_caliph1 = {
+	music = "file:/music/saladinarrivesatjerusalem.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = { religion = religion:islam_religion }
+}
+
+ck2music_caliph2 = {
+	music = "file:/music/thepersianarmy.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = { religion = religion:islam_religion }
+}
+
+### SONGS OF BYZANTIUM ###
+
+ck2music_byzantium1 = {
+	music = "file:/music/komnenos.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = { culture = { has_cultural_pillar = heritage_byzantine } }
+}
+
+ck2music_byzantium2 = {
+	music = "file:/music/legacyofrome.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = { culture = { has_cultural_pillar = heritage_byzantine } }
+}
+
+ck2music_byzantium3 = {
+	music = "file:/music/thebyzantineempire.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = { culture = { has_cultural_pillar = heritage_byzantine } }
+}
+
+### SONGS OF THE RUS ###
+
+ck2music_rus1 = {
+	music = "file:/music/alexandernevskyridestobattle.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+	
+	is_valid = { culture = { has_cultural_pillar = heritage_east_slavic } }
+}
+
+ck2music_rus2 = {
+	music = "file:/music/landoftherus.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+	
+	is_valid = { culture = { has_cultural_pillar = heritage_east_slavic } }
+}
+
+ck2music_rus3 = {
+	music = "file:/music/thetraderoute.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+	
+	is_valid = { culture = { has_cultural_pillar = heritage_east_slavic } }
+}
+
+### SONGS OF PROSPERITY ###
+
+ck2music_prosperity1 = {
+	music = "file:/music/atuscannight.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_latin }
+			has_government = republic_government
+		}
+	}
+}
+
+ck2music_prosperity2 = {
+	music = "file:/music/florence.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_latin }
+			has_government = republic_government
+		}
+	}
+}
+
+ck2music_prosperity3 = {
+	music = "file:/music/theballadformaria.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_latin }
+			has_government = republic_government
+		}
+	}
+}
+
+### HYMNS TO THE OLD GODS ###
+
+ck2music_oldgods1 = {
+	music = "file:/music/thecityofbirka.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			religion = religion:germanic_religion
+		}
+	}
+}
+
+ck2music_oldgods2 = {
+	music = "file:/music/thor.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			religion = religion:germanic_religion
+		}
+	}
+}
+
+ck2music_oldgods3 = {
+	music = "file:/music/wearenorse.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			religion = religion:germanic_religion
+		}
+	}
+}
+
+ck2music_oldgods4 = {
+	music = "file:/music/wilderness.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			religion = religion:germanic_religion
+		}
+	}
+}
+
+### HYMNS OF ABRAHAM ###
+
+ck2music_abraham1 = {
+	music = "file:/music/andthelordsaid.ogg"
+	mood = yes
+	can_be_interrupted = no
+	
+	is_valid = { religion = religion:christianity_religion }
+}
+
+ck2music_abraham2 = {
+	music = "file:/music/goforthoutofthycountry.ogg"
+	mood = yes
+	can_be_interrupted = no
+	
+	is_valid = { religion = religion:christianity_religion }
+}
+
+### SONGS OF INDIA ###
+
+ck2music_india1 = {
+	music = "file:/music/aladdinbesiegechittor.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+	
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = world_india }
+			capital_province = { geographical_region = world_burma }
+			culture = { has_cultural_pillar = heritage_indo_aryan }
+			culture = { has_cultural_pillar = heritage_dravidian }
+			culture = { has_cultural_pillar = heritage_burman }
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion
+		}
+	}
+}
+
+ck2music_india2 = {
+	music = "file:/music/chargeofthewarelephants.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+	
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = world_india }
+			capital_province = { geographical_region = world_burma }
+			culture = { has_cultural_pillar = heritage_indo_aryan }
+			culture = { has_cultural_pillar = heritage_dravidian }
+			culture = { has_cultural_pillar = heritage_burman }
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion
+		}
+	}
+}
+
+ck2music_india3 = {
+	music = "file:/music/fromaasttofartheraast.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+	
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = world_india }
+			capital_province = { geographical_region = world_burma }
+			culture = { has_cultural_pillar = heritage_indo_aryan }
+			culture = { has_cultural_pillar = heritage_dravidian }
+			culture = { has_cultural_pillar = heritage_burman }
+			religion = religion:hinduism_religion
+			religion = religion:jainism_religion
+			religion = religion:buddhism_religion
+		}
+	}
+}
+
+### SONGS OF THE STEPPE ###
+
+ck2music_steppe1 = {
+	music = "file:/music/cataramanmirage.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = world_steppe }
+			culture = { has_cultural_pillar = heritage_turkic }
+			culture = { has_cultural_pillar = heritage_mongolic }
+			religion = religion:tengrism_religion
+			religion = religion:magyar_religion
+		}
+	}
+}
+
+ck2music_steppe2 = {
+	music = "file:/music/hurricanewasteland.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = world_steppe }
+			culture = { has_cultural_pillar = heritage_turkic }
+			culture = { has_cultural_pillar = heritage_mongolic }
+			religion = religion:tengrism_religion
+			religion = religion:magyar_religion
+		}
+	}
+}
+
+ck2music_steppe3 = {
+	music = "file:/music/sandlightandmoonlight.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = world_steppe }
+			culture = { has_cultural_pillar = heritage_turkic }
+			culture = { has_cultural_pillar = heritage_mongolic }
+			religion = religion:tengrism_religion
+			religion = religion:magyar_religion
+		}
+	}
+}
+
+ck2music_steppe4 = {
+	music = "file:/music/steppesofthenomads.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = world_steppe }
+			culture = { has_cultural_pillar = heritage_turkic }
+			culture = { has_cultural_pillar = heritage_mongolic }
+			religion = religion:tengrism_religion
+			religion = religion:magyar_religion
+		}
+	}
+}
+
+### HYMNS OF REVELATION ###
+
+ck2music_revelation1 = {
+	music = "file:/music/01agnusdei.ogg"
+	mood = yes
+	can_be_interrupted = no
+	
+	is_valid = {
+		AND = {
+			capital_province = { geographical_region = world_europe }
+			OR = {
+				faith = faith:catholic
+				faith = faith:insular_celtic
+				faith = faith:cathar
+				faith = faith:lollard
+				faith = faith:waldensian
+			}
+		}
+	}
+}
+
+ck2music_revelation2 = {
+	music = "file:/music/02avemarisstella.ogg"
+	mood = yes
+	can_be_interrupted = no
+	
+	is_valid = {
+		AND = {
+			capital_province = { geographical_region = world_europe }
+			OR = {
+				faith = faith:catholic
+				faith = faith:insular_celtic
+				faith = faith:cathar
+				faith = faith:lollard
+				faith = faith:waldensian
+			}
+		}
+	}
+}
+
+ck2music_revelation3 = {
+	music = "file:/music/03deusmisere.ogg"
+	mood = yes
+	can_be_interrupted = no
+	
+	is_valid = {
+		AND = {
+			capital_province = { geographical_region = world_europe }
+			OR = {
+				faith = faith:catholic
+				faith = faith:insular_celtic
+				faith = faith:cathar
+				faith = faith:lollard
+				faith = faith:waldensian
+			}
+		}
+	}
+}
+
+ck2music_revelation4 = {
+	music = "file:/music/04mystery.ogg"
+	mood = yes
+	can_be_interrupted = no
+	
+	is_valid = {
+		AND = {
+			capital_province = { geographical_region = world_europe }
+			OR = {
+				faith = faith:catholic
+				faith = faith:insular_celtic
+				faith = faith:cathar
+				faith = faith:lollard
+				faith = faith:waldensian
+			}
+		}
+	}
+}
+
+ck2music_revelation5 = {
+	music = "file:/music/05roratecaeli.ogg"
+	mood = yes
+	can_be_interrupted = no
+	
+	is_valid = {
+		AND = {
+			capital_province = { geographical_region = world_europe }
+			OR = {
+				faith = faith:catholic
+				faith = faith:insular_celtic
+				faith = faith:cathar
+				faith = faith:lollard
+				faith = faith:waldensian
+			}
+		}
+	}
+}
+
+### HOLY FURY ###
+
+ck2music_holyfury1 = {
+	music = "file:/music/gulfofriga.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+	
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = custom_eastern_baltic }
+			religion = religion:baltic_religion
+			religion = religion:finno_ugric_religion
+		}
+	}
+}
+
+ck2music_holyfury2 = {
+	music = "file:/music/thefifthcrusade.ogg"
+	mood = yes
+	can_be_interrupted = no
+	
+	is_valid = {
+		OR = {
+			faith = faith:catholic
+			capital_province = { geographical_region = custom_outremer }
+		}
+	}
+}
+
+ck2music_holyfury3 = {
+	music = "file:/music/vassaloftripoli.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+	
+	is_valid = { capital_province = { geographical_region = world_africa } }
+}
+
+### JADE DRAGON ###
+
+ck2music_jadedragon1 = {
+	music = "file:/music/avenerabledynasty.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = world_tibet }
+			capital_province = { geographical_region = world_burma }
+			culture = { has_cultural_pillar = heritage_chinese }
+			culture = { has_cultural_pillar = heritage_mongolic }
+			culture = { has_cultural_pillar = heritage_tibetan }
+			culture = { has_cultural_pillar = heritage_burman }
+			culture = { has_cultural_pillar = heritage_qiangic }
+			religion = religion:taoism_religion
+			religion = religion:bon_religion
+		}
+	}
+}
+
+ck2music_jadedragon2 = {
+	music = "file:/music/greenvalley.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = world_tibet }
+			capital_province = { geographical_region = world_burma }
+			culture = { has_cultural_pillar = heritage_chinese }
+			culture = { has_cultural_pillar = heritage_mongolic }
+			culture = { has_cultural_pillar = heritage_tibetan }
+			culture = { has_cultural_pillar = heritage_burman }
+			culture = { has_cultural_pillar = heritage_qiangic }
+			religion = religion:taoism_religion
+			religion = religion:bon_religion
+		}
+	}
+}
+
+ck2music_jadedragon3 = {
+	music = "file:/music/thewayofthedragon.ogg"
+	mood = yes
+	can_be_interrupted = no
+	is_prioritized_mood = yes
+
+	is_valid = {
+		OR = {
+			capital_province = { geographical_region = world_tibet }
+			capital_province = { geographical_region = world_burma }
+			culture = { has_cultural_pillar = heritage_chinese }
+			culture = { has_cultural_pillar = heritage_mongolic }
+			culture = { has_cultural_pillar = heritage_tibetan }
+			culture = { has_cultural_pillar = heritage_burman }
+			culture = { has_cultural_pillar = heritage_qiangic }
+			religion = religion:taoism_religion
+			religion = religion:bon_religion
+		}
+	}
+}
+
+#### METAL/MODERN ####
+
+### ORCHESTRAL HORSE LORDS ###
+
+ck2music_orchestral1 = {
+	music = "file:/music/maintheme_orchestral.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music_orchestral2 = {
+	music = "file:/music/journeytoabsolution_orchestral.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music_orchestral3 = {
+	music = "file:/music/kingdomofjerusalem_orchestral.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music_orchestral4 = {
+	music = "file:/music/hornsofhattinandtheaftermath_orchestral.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
+
+ck2music_orchestral5 = {
+	music = "file:/music/thefirstcrusade_orchestral.ogg"
+	mood = yes
+	can_be_interrupted = no
+}
