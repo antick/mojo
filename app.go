@@ -134,14 +134,3 @@ func (a *App) PullCk3GameFiles() error {
 	fmt.Printf("📦 Pulled CK3 game files to %s \n", config.ModCk3Path)
 	return nil
 }
-
-func (a *App) UpdateLauncherSettings() error {
-	err := utils.UpdateGameDataPath(config.LauncherSettingsPath, config.GameDataPath)
-	if err != nil {
-		fmt.Println("Error updating launcher settings")
-		return err
-	}
-
-	fmt.Println("✏️ Updated launcher settings")
-	return nil
-}

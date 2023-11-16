@@ -6,7 +6,6 @@
     BuildModsInLocal,
     BuildModsInGame,
     PullCk3GameFiles,
-    UpdateLauncherSettings,
   } from '../wailsjs/go/main/App.js'
 
   let activeTab = 'tab1';
@@ -48,15 +47,6 @@
       buildingInProgress = false
     })
   }
-
-  function updateLauncherSettings(): void {
-    buildingInProgress = true
-    resultText = "Updating launcher settings..."
-    UpdateLauncherSettings().then(() => {
-      resultText = "Successfully updated launcher settings"
-      buildingInProgress = false
-    })
-  }
 </script>
 
 <main>
@@ -91,9 +81,7 @@
           Pull CK3 Game Files
         </button>
       {:else if activeTab === 'tab3'}
-        <button class={buttonClasses} on:click={updateLauncherSettings} disabled={buildingInProgress}>
           Update Launcher Settings
-        </button>
       {/if}
     </div>
   </div>

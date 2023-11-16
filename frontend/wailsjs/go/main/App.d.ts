@@ -8,5 +8,3 @@ export function BuildModsInLocal():Promise<void>;
 export function Greet(arg1:string):Promise<string>;
 
 export function PullCk3GameFiles():Promise<void>;
-
-export function UpdateLauncherSettings():Promise<void>;

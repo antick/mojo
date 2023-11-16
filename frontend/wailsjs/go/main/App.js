@@ -17,7 +17,3 @@ export function Greet(arg1) {
 export function PullCk3GameFiles() {
   return window['go']['main']['App']['PullCk3GameFiles']();
 }
-
-export function UpdateLauncherSettings() {
-  return window['go']['main']['App']['UpdateLauncherSettings']();
-}

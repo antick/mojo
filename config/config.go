@@ -16,7 +16,6 @@ type SubModType struct {
 
 type Type struct {
 	GameDataPath            string                `json:"gameDataPath"`
-	LauncherSettingsPath    string                `json:"launcherSettingsPath"`
 	ModBuildPath            string                `json:"modBuildPath"`
 	ModBuildPathLocal       string                `json:"modBuildPathLocal"`
 	ModPath                 string                `json:"modPath"`
@@ -33,19 +32,25 @@ type Type struct {
 }
 
 func Config() *Type {
-	homeDir, _ := os.UserHomeDir()
+	userHomeDir, _ := os.UserHomeDir()
 
-	originalCk3Path := filepath.Join(homeDir, "Library", "Application Support", "Steam", "steamapps", "common", "Crusader Kings III", "game")
+	// Path of the folder where CK3 is installed in your system
+	installedCk3GamePath := filepath.Join(`C:\Program Files (x86)\Steam\steamapps\common\Crusader Kings III\game`)
+
+	// Path of the folder where CK3 stores all the game data including your save files and mods
+	gameDataPath := filepath.Join(userHomeDir, "OneDrive", "Documents", "Paradox Interactive", "Crusader Kings III")
 
 	modCk3Path := "game"
-	modPath := "mods"
+
+	// Path of the folder where source code of the mods is stored
+	modPath := filepath.Join("game", "mojo-mods")
+
+	// This name will be used as prefix for all the mods in the build folder
 	ModIdPrefix := "antick"
 
 	return &Type{
-		// Put your original CK3 path here
-		GameDataPath:         filepath.Join(homeDir, "Paradox Interactive", "Crusader Kings III"),
-		LauncherSettingsPath: filepath.Join(homeDir, "Library", "Application Support", "Steam", "steamapps", "common", "Crusader Kings III", "launcher", "launcher-settings.json"),
-		ModBuildPath:         filepath.Join(homeDir, "Paradox Interactive", "Crusader Kings III", "mod", "mojo-flavor"),
+		GameDataPath: gameDataPath,
+		ModBuildPath: filepath.Join(userHomeDir, "Paradox Interactive", "Crusader Kings III", "mod", "mojo-flavor"),
 
 		// This is where all the mods will be built for local testing
 		ModBuildPathLocal: "build/mods",
@@ -53,14 +58,14 @@ func Config() *Type {
 		ModPath:                 modPath,
 		ModDescriptorSourcePath: filepath.Join(modPath, "descriptor.mod"),
 		ThumbnailSourcePath:     filepath.Join(modPath, "thumbnail.png"),
-		OriginalCk3Path:         originalCk3Path,
+		OriginalCk3Path:         installedCk3GamePath,
 		ModCk3Path:              modCk3Path,
 		Ck3PullMapping: map[string]string{
-			filepath.Join(originalCk3Path, "common"):               filepath.Join(modCk3Path, "common"),
-			filepath.Join(originalCk3Path, "events"):               filepath.Join(modCk3Path, "events"),
-			filepath.Join(originalCk3Path, "gui"):                  filepath.Join(modCk3Path, "gui"),
-			filepath.Join(originalCk3Path, "history"):              filepath.Join(modCk3Path, "history"),
-			filepath.Join(originalCk3Path, "localization/english"): filepath.Join(modCk3Path, "localization/english"),
+			filepath.Join(installedCk3GamePath, "common"):               filepath.Join(modCk3Path, "common"),
+			filepath.Join(installedCk3GamePath, "events"):               filepath.Join(modCk3Path, "events"),
+			filepath.Join(installedCk3GamePath, "gui"):                  filepath.Join(modCk3Path, "gui"),
+			filepath.Join(installedCk3GamePath, "history"):              filepath.Join(modCk3Path, "history"),
+			filepath.Join(installedCk3GamePath, "localization/english"): filepath.Join(modCk3Path, "localization/english"),
 		},
 
 		ModIdPrefix: ModIdPrefix,
