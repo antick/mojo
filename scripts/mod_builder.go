@@ -1,8 +1,8 @@
-package utils
+package scripts
 
 import (
 	"fmt"
-	configuration "mojo/config"
+	configuration "mojo/configs"
 	"os"
 	"path/filepath"
 	"regexp"

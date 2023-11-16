@@ -3,7 +3,7 @@
  * for tracking the new updates in the game
  */
 
-package utils
+package scripts
 
 import (
 	"fmt"

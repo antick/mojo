@@ -1,4 +1,4 @@
-package utils
+package scripts
 
 import (
 	"github.com/dgraph-io/badger/v3"

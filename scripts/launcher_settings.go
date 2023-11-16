@@ -3,7 +3,7 @@
  * launcher-settings.json file in case you moved your game folder.
  */
 
-package utils
+package scripts
 
 import (
 	"encoding/json"
