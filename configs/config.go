@@ -57,7 +57,7 @@ func Config() *Type {
 
 	return &Type{
 		// Current ck3 version that we have synced in "game" folder
-		SyncedCk3Version:     "1.10.0.1",
+		SyncedCk3Version:     "1.11.0.1",
 		SupportedGameVersion: supportedGameVersion,
 
 		GameDataPath: gameDataPath,
