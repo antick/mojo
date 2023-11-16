@@ -126,6 +126,13 @@ major_threat_hook = {
 	strong = yes
 }
 
+# FP3 struggle hook.
+## Not to say you can't use it outside of that, but y'know, it may have context sensitive weird results.
+caliphal_submission_hook = {
+	strong = yes
+	expiration_days = 7300
+}
+
 liege_favour_strong_hook = {
 	strong = yes
 	expiration_days = 7300

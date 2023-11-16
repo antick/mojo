@@ -9291,15 +9291,15 @@ barcelona_00004 = {
 		effect = {
 			add_trait = lifestyle_reveler
 			add_trait_xp = {
-                trait = lifestyle_reveler
-                value = {
-                    integer_range = {
-                        min = small_lifestyle_random_xp_low
-                        max = small_lifestyle_random_xp_high
-                    }
-                }
-            }
-        }
+				trait = lifestyle_reveler
+				value = {
+					integer_range = {
+						min = small_lifestyle_random_xp_low
+						max = small_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
 	}
 	1075.1.1 = {
 		death = yes
@@ -9429,14 +9429,14 @@ barcelona_00004 = {
 		effect = {
 			add_trait = lifestyle_blademaster
 			add_trait_xp = {
-                trait = lifestyle_blademaster
-                value = {
-                    integer_range = {
-                        min = small_lifestyle_random_xp_low
-                        max = small_lifestyle_random_xp_high
-                    }
-                }
-            }
+				trait = lifestyle_blademaster
+				value = {
+					integer_range = {
+						min = small_lifestyle_random_xp_low
+						max = small_lifestyle_random_xp_high
+					}
+				}
+			}
 		}
 	}
 	1035.5.26 = {
@@ -10056,17 +10056,17 @@ barcelona_00004 = {
 	}
 	1060.1.1 = {
 		effect = {
-            add_trait = lifestyle_reveler
-            add_trait_xp = {
-                trait = lifestyle_reveler
-                value = {
-                    integer_range = {
-                        min = small_lifestyle_random_xp_low
-                        max = small_lifestyle_random_xp_high
-                    }
-                }
-            }
-        }
+			add_trait = lifestyle_reveler
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = {
+					integer_range = {
+						min = small_lifestyle_random_xp_low
+						max = small_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
 	}
 	1103.1.1 = {
 		death = yes

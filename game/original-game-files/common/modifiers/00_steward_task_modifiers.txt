@@ -4,7 +4,18 @@
 # Character Modifiers
 ########
 
+tax_collector_free_rein_modifier = {
+	icon = stewardship_negative
+	clan_government_tax_contribution_add = 0.05
+	clan_government_levy_contribution_add = 0.05
+	clan_government_vassal_opinion = -5
+}
 
+tax_collector_fair_arbiter_modifier = {
+	icon = stewardship_positive
+	clan_government_tax_contribution_add = 0.035
+	clan_government_levy_contribution_add = 0.035
+}
 
 #######
 # County Modifiers
@@ -54,6 +65,18 @@ steward_de_jure_denied_modifier = {
 	levy_size = -0.4
 	county_opinion_add = -40
 	tax_mult = -0.4
+}
+
+steward_redoubled_taxation_modifier = {
+	icon = county_modifier_development_negative
+	tax_mult = 0.2
+	development_growth_factor = small_development_growth_loss
+}
+
+steward_redoubled_development_modifier = {
+	icon = county_modifier_development_positive
+	tax_mult = -0.2
+	development_growth_factor = medium_development_growth_gain
 }
 
 # Accept Culture Task

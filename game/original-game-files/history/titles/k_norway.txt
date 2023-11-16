@@ -2815,6 +2815,9 @@ c_jamtfir = {
 	867.1.1 = {
 		holder = 186015
 	}
+	1020.1.1 = {
+		government = feudal_government
+	}
 	1066.1.1 = {
 		holder = 102575
 	}
@@ -2868,6 +2871,9 @@ c_morarna = {
 	#}
 	867.1.1 = {
 		holder = 186015
+	}
+	1020.1.1 = {
+		government = feudal_government
 	}
 	1066.1.1 = {
 		holder = 102575
@@ -2923,6 +2929,9 @@ c_helgum = {
 	867.1.1 = {
 		holder = 186015
 	}
+	1020.1.1 = {
+		government = feudal_government
+	}
 	1066.1.1 = {
 		holder = 20019
 	}
@@ -2976,6 +2985,9 @@ c_harjadalen = {
 	#}
 	867.1.1 = {
 		holder = 186015
+	}
+	1020.1.1 = {
+		government = feudal_government
 	}
 	1066.1.1 = {
 		holder = 102575

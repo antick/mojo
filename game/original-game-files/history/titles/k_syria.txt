@@ -1723,7 +1723,7 @@ c_beirut = {
 		liege = "d_urdunn"
 	}
 	866.1.1 = {
-		holder = 163134
+		holder = 159732
 	}
 	877.1.1 = {
 		liege = 0

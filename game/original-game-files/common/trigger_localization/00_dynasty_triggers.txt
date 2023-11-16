@@ -16,6 +16,10 @@ has_house_modifier = {
 	global = HAS_HOUSE_MODIFIER
 }
 
+has_house_unity_modifier = {
+	global = HAS_HOUSE_MODIFIER
+}
+
 dynasty_prestige_level = {
 	global = DYNASTY_PRESTIGE_LEVEL_TRIGGER
 }
@@ -47,4 +51,14 @@ dynasty_num_unlocked_perks = {
 
 has_dynasty_perk = {
 	none = HAS_DYNASTY_PERK_NONE
+	first = HAS_DYNASTY_PERK
+	third = HAS_DYNASTY_PERK
+	first_not = NOT_HAS_DYNASTY_PERK
+	third_not = NOT_HAS_DYNASTY_PERK
+}
+
+house_head_equal = {
+	global = IS_HOUSE_HEAD
+	first = I_AM_HOUSE_HEAD
+	third = THEY_ARE_HOUSE_HEAD
 }

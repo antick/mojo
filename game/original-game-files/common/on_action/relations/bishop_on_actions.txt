@@ -29,5 +29,6 @@
 		100 = bishop.2002 #Set family members against ruler
 		100 = bishop.2003 #Decrease demesne county control
 		100 = bishop.2004 #Set Zealot vassals against ruler
+		100 = fp3_h_yearly.0001 #Angry Clergy over Drunkard Ruler
 	}
 }

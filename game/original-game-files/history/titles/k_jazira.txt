@@ -172,8 +172,12 @@ c_mosul = {
 		liege = d_diyarrabia
 		holder = 188643 # Khalid Barmakid
 	}
-	861.1.1 = {
+	813.1.1 = {
 		liege = "e_arabia"
+		holder = extra_taghlibs_3
+	}
+	826.10.1 = {
+		holder = extra_taghlibs_5
 	}
 	861.1.1 = {
 		holder = levantine000009
@@ -649,10 +653,15 @@ c_khabur = {
 	#877.1.1 = {
 	#	liege = 0
 	#}
-	1066.1.1 = {
-		liege = "d_aleppo"
+	1040.1.1 = {
+		holder = extra_bedouins_0034
 	}
-	1066.1.1 = {
+	1062.4.6 = {
+		liege = "d_diyarmudar"
+		holder = extra_bedouins_0030
+	}
+	1085.1.1 = {
+		liege = "d_aleppo"
 		holder = 93477
 	}
 	1100.1.1 = {
@@ -941,9 +950,12 @@ c_harran = {
 	840.1.1 = {
 		holder = levantine000004
 	}
-	1066.1.1 = {
-		liege = "d_aleppo"
-		holder = 93477
+	1040.1.1 = {
+		holder = extra_bedouins_0034
+	}
+	1062.4.6 = {
+		liege = "e_persia"
+		holder = extra_bedouins_0035
 	}
 	1075.1.1 = {
 		holder = 144018
@@ -1038,7 +1050,8 @@ c_dausar = {
 		holder = 159738
 	}
 	1066.1.1 = {
-		holder = 20743
+		liege = e_persia
+		holder = extra_bedouins_0035
 	}
 	1075.1.1 = {
 		holder = 144018
@@ -1136,6 +1149,13 @@ d_diyarmudar = {
 	}
 	890.1.1 = {
 		holder = 0
+	}
+	1040.1.1 = {
+		holder = extra_bedouins_0034
+	}
+	1062.4.6 = {
+		liege = "e_persia"
+		holder = extra_bedouins_0035
 	}
 	
 }
@@ -1738,7 +1758,8 @@ c_hadithat-ana = {
 	#	holder = 0
 	#}
 	866.1.1 = {
-		holder = levantine0001
+		liege = "e_arabia"
+		holder = extra_kurds_0010
 	}
 	877.1.1 = {
 		liege = 0
@@ -1813,7 +1834,11 @@ c_al-haditha = {
 	860.12.1 = {
 		holder = 163132
 	}
+	866.1.1 = {
+       holder = extra_kurds_0010
+	}
 	872.12.1 = {
+		liege = "d_baghdad"
 		holder = turkish000004
 	}
 	902.1.1 = {
@@ -2139,7 +2164,7 @@ c_shahrazur = {
 	
 	866.1.1 = {
 		liege = e_arabia
-		holder = 34014
+		holder = extra_turks_0002 #Asategin
 	}
 	
 	1066.1.1 = {

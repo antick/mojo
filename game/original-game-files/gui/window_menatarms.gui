@@ -140,10 +140,28 @@ window = {
 
 						onclick = "[MenAtArmsView.BuyMaa]"
 						enabled = "[MenAtArmsView.CanBuyMaa]"
-						visible = "[NotEqualTo_int32( Regiment.GetMAAChunkCount, Regiment.CalcMaxMAAChunkCount )]"
 
-						using = tooltip_ne
-						tooltip = "MAA_INCREASE_SIZE_TOOLTIP"
+						visible = "[NotEqualTo_int32( Regiment.GetMAAChunkCount, Regiment.CalcMaxMAAChunkCount )]"
+					
+						tooltipwidget = {
+							change_maa_tooltip = {
+								blockoverride "enable_tooltip" {
+									visible = "[MenAtArmsView.CanBuyMaa]"
+								}
+
+								blockoverride "enable_tooltip_text" {
+									text = "MAA_INCREASE_SIZE_TOOLTIP"
+								}
+
+								blockoverride "disable_tooltip" {
+									visible = "[Not(MenAtArmsView.CanBuyMaa)]"
+								}
+
+								blockoverride "disable_tooltip_text" {
+									text = "[MenAtArmsView.GetIncreaseSizeBlockers]"
+								}
+							}
+						}
 
 						hbox = {
 							margin = { 10 0 }
@@ -191,8 +209,25 @@ window = {
 							enabled = "[MenAtArmsView.CanSellMaa]"
 							onclick = "[MenAtArmsView.SellMaa]"
 
-							using = tooltip_ne
-							tooltip = "MAA_DECREASE_SIZE_TOOLTIP"
+							tooltipwidget = {
+								change_maa_tooltip = {
+									blockoverride "enable_tooltip" {
+										visible = "[MenAtArmsView.CanSellMaa]"
+									}
+
+									blockoverride "enable_tooltip_text" {
+										text = "MAA_DECREASE_SIZE_TOOLTIP"
+									}
+
+									blockoverride "disable_tooltip" {
+										visible = "[Not(MenAtArmsView.CanSellMaa)]"
+									}
+
+									blockoverride "disable_tooltip_text" {
+										text = "[MenAtArmsView.GetReduceSizeBlockers]"
+									}
+								}
+							}
 
 							hbox = {
 								margin = { 10 0 }
@@ -217,7 +252,28 @@ window = {
 
 				button_round  = {
 					enabled = "[MenAtArmsView.CanDestroyMaa]"
-					onclick = "[MenAtArmsView.DestroyMAARegiment]"
+					onclick = "[MenAtArmsView.DestroyMaaRegiment]"
+
+					tooltipwidget = {
+						change_maa_tooltip = {
+							blockoverride "enable_tooltip" {
+								visible = "[MenAtArmsView.CanSellMaa]"
+							}
+
+							blockoverride "enable_tooltip_text" {
+								text = "MAA_DESTROY_TOOLTIP"
+							}
+
+							blockoverride "disable_tooltip" {
+								visible = "[Not(MenAtArmsView.CanSellMaa)]"
+							}
+
+							blockoverride "disable_tooltip_text" {
+								text = "[MenAtArmsView.GetReduceSizeBlockers]"
+							}
+						}
+					}
+
 					tooltip = "MAA_DESTROY_TOOLTIP"
 
 					button_cancel = {
@@ -370,6 +426,61 @@ window = {
 
 types MenAtArmsTypes
 {
+	type change_action_maa_text = hbox {
+		layoutpolicy_horizontal = expanding
+		text_multi = {
+			block "text_visibility" { 
+				visible = no
+			}
+			max_width = 390
+			block "text_content" {}
+			autoresize = yes
+		}
+	}
+
+	type change_maa_tooltip = widget {
+		alwaystransparent = no
+
+		widget = {
+			name = "background"
+			size = { 100% 100% }
+			using = DefaultTooltipBackground
+			alwaystransparent = no
+		}
+
+		hbox = {
+			set_parent_size_to_minimum = yes
+			layoutpolicy_horizontal = expanding
+
+			change_action_maa_text = {
+				blockoverride "text_visibility" {
+					margin = { 15 5 }
+					margin_bottom = 10
+
+					block "enable_tooltip" {}
+				}
+
+				blockoverride "text_content" {
+					block "enable_tooltip_text" { }
+				}
+			}
+
+			change_action_maa_text = {
+				blockoverride "text_visibility" {
+					block "disable_tooltip" {}
+				}
+
+				blockoverride "text_content" {
+					margin = { 15 15 }
+					margin_bottom = 20
+					margin_left = 10
+
+					block "disable_tooltip_text" {}
+				}
+			}
+		}
+	}
+
 	type change_men_at_arms_origin_button = button_round
 	{
 		onclick = "[MenAtArmsView.OpenOriginProvinceSelect]"

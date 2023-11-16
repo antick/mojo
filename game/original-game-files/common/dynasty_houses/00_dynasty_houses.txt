@@ -785,6 +785,11 @@ house_este = {
 	dynasty = 803 # Bonifazi
 }
 
+house_welf = {
+	name = "dynn_Welf"
+	dynasty = 803 # Bonifazi
+}
+
 house_finale = {
 	prefix = "dynnp_di"
 	name = "dynn_Finale"
@@ -1381,6 +1386,13 @@ house_karen_pahlav = {
 	forced_coa_religiongroup = "zoroastrian_group"
 }
 
+# Karen, Arsacid cadets via Karen-Pahlav
+house_karen = {
+	name = "dynn_Karen"
+	dynasty = 100685 # Arsacid
+	forced_coa_religiongroup = "zoroastrian_group"
+}
+
 # Kamsarakan, Arsacid cadets
 house_kamsarakan = {
 	name = "dynn_Kamsarakan"
@@ -1433,6 +1445,12 @@ house_kilabid = {
 house_samanid = {
 	name = "dynn_Samanid"
 	dynasty = 1042070 # Mihran
+}
+
+# Ghurids, house of Shanasbid dynasty
+house_ghurid = {
+	name = "dynn_Ghurid"
+	dynasty = 791 #Shansabid, previously Ghurid 
 }
 
 # Samanid, Guddala cadets
@@ -1854,4 +1872,53 @@ house_chad_uhl = {
 	name = "dynn_Uhl"
 	dynasty = vanity_uhl
 	motto = dynn_Uhl_motto
+}
+	
+house_khalafid = {
+	name = "dynn_Khalafid" #Persian Khalafids
+	dynasty = 812 #Saffarid 
+}
+
+house_harmaytan = { #The house of Avicenna, the Persian scholar 
+	name = "dynn_Harmaytan"
+	dynasty = persian_avicenna
+}
+
+house_tusi = { #The house of Ferdowsi, the Persian scholar 
+	name = "dynn_Tusi"
+	dynasty = persian_ferdowsi 
+}
+
+house_al_adawiyya = { #the Jazira/Mosul branch of the vast Banu Taghlib dynasty 
+	name = "dynn_al_adawiyya"
+	dynasty = 1042127 #Banu Taghlib
+}
+
+house_attab = {
+	name = "dynn_attab"
+	dynasty = 1042127 #Banu Taghlib
+}
+
+house_hamdan = {
+	name = dynn_Hamdanid
+	dynasty = 1042127 #Banu Taghlib
+}
+
+house_zaydid = {
+	name = dynn_Zaydid
+	dynasty = 7296 # Hashimid
+}
+
+house_alid = {
+	name = dynn_Alid
+	dynasty = 101864
+}
+
+house_hasanid = {
+	name = dynn_Hasanid
+	dynasty = 101864
+}
+house_abbasid = {
+	name = dynn_Abbasid
+	dynasty = 7296
 }

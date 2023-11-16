@@ -244,7 +244,7 @@ embrace_outremer_culture_decision = {
 }
 
 create_israel_kingdom_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 
 	desc = create_israel_kingdom_decision_desc
 	selection_tooltip = create_israel_kingdom_decision_tooltip
@@ -379,12 +379,13 @@ jewish_restore_high_priesthood_decision = {
 	}
 }
 
-zoroastrian_restore_high_priesthood_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+zoroastrian_restore_high_priesthood_decision = { #Updated for FP3 by Ola 
+	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
 
 	desc = zoroastrian_restore_high_priesthood_decision_desc
 	selection_tooltip = zoroastrian_restore_high_priesthood_decision_tooltip
 	major = yes
+	sort_order = 80
 
 	ai_check_interval = 120
 
@@ -394,6 +395,7 @@ zoroastrian_restore_high_priesthood_decision = {
 		NOR = {  #Can be redone if somehow the High Priest title is destroyed
 			exists = faith.religious_head
 			faith = { has_doctrine = doctrine_no_head } #Only if Faith is meant to have one.
+			faith = { has_doctrine = doctrine_temporal_head } #Cannot be done if you have taken the "Destroy the Magi" decision
 		}
 		OR = {
 			faith = faith:mazdayasna
@@ -446,11 +448,12 @@ zoroastrian_restore_high_priesthood_decision = {
 }
 
 become_saoshyant_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
 
 	desc = become_saoshyant_decision_desc
 	selection_tooltip = become_saoshyant_decision_tooltip
 	major = yes
+	sort_order = 100 #FP3 change; this is an extremely epic decision, we want it to appear on top. 
 
 	ai_check_interval = 120
 

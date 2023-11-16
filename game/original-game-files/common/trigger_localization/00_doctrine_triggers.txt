@@ -204,6 +204,10 @@ must_select_carnal_exaltation = {
 	global_not = REQUIRES_EXALTATION
 }
 
+fedayeen_required_doctrines_trigger = {
+	global_not = FEDAYEEN_REQUIRED_DOCTRINES_TRIGGER
+}
+
 ####################
 # Doctrine Effects #
 ####################

@@ -65,17 +65,53 @@ easteregg_alexia_belfort = {
 	1066.1.1 = {
 		employer = 210 # Burgundy
 		effect = {
-            add_trait = lifestyle_mystic
-            add_trait_xp = {
-                trait = lifestyle_mystic
-                value = {
-                    integer_range = {
-                        min = small_lifestyle_random_xp_low
-                        max = small_lifestyle_random_xp_high
-                    }
-                }
-            }
-        }
+			add_trait = lifestyle_mystic
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = {
+					integer_range = {
+						min = small_lifestyle_random_xp_low
+						max = small_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+	}
+	1066.9.16 = {
+		death = "1066.9.16"
+	}
+}
+
+# Nikola Stokic's spuse, being added for all her love and support
+easteregg_tamara_stokic = {
+	name= Tamara
+	dynasty = vanity_markovic
+	religion = orthodox
+	culture = serbian
+	dna = easteregg_tamara_stokic
+	female = yes
+
+	health=4.85
+
+	trait = education_learning_2
+	trait = gluttonous
+	trait = compassionate
+	trait = content
+	trait = journaller
+	trait = wheezing
+
+	diplomacy = 8
+	martial = 5
+	stewardship = 13
+	intrigue = 6
+	learning = 12
+	prowess = 15
+
+	1036.11.04 = {
+		birth=yes
+	}
+	1063.1.1 = {
+		# employer = 20499 # Raska
 	}
 	1066.9.16 = {
 		death = "1066.9.16"

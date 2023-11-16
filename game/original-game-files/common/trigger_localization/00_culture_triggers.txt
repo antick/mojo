@@ -268,3 +268,8 @@ num_discovered_innovations = {
 num_discovered_innovations_in_era = {
 	global = NUM_DISCOVERED_INNOVATIONS_IN_ERA_TRIGGER
 }
+
+has_same_culture_heritage = {
+	global = HAS_SAME_CULTURAL_HERITAGE
+	global_not = HAS_SAME_CULTURAL_HERITAGE_NOT
+}

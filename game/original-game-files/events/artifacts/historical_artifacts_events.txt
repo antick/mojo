@@ -572,6 +572,79 @@ historical_artifacts.0023 = {
 				create_artifact_skull_cap_charlemagne_effect = { OWNER = this }
 			}
 		}
+		### Sassanian Sword
+		if = {
+			limit = {
+				# Only generated in the earlier bookmarks.
+				current_date < 900.1.1
+				has_dlc_feature = legacy_of_persia
+				exists = title:c_mazandaran
+			}
+			title:c_mazandaran.holder = {
+				create_artifact_illustrious_sassanian_sword_effect = { OWNER = this }
+			}
+		}
+		### Incense Burner Sculpture
+		if = {
+			limit = {
+				# Only generated in the earlier bookmarks.
+				current_date < 900.1.1
+				has_dlc_feature = legacy_of_persia
+				exists = title:k_khorasan
+			}
+			title:k_khorasan.holder = {
+				create_artifact = {
+					name = fp3_incense_burner_sculpture
+					description = fp3_incense_burner_sculpture_desc
+					visuals = fp3_incense_burner_sculpture
+					type = sculpture
+					wealth = 80
+					quality = 80
+					modifier = artifact_negate_health_penalty_add_2_modifier
+					modifier = artifact_stress_gain_3_modifier
+					modifier = artifact_attraction_opinion_2_modifier
+					modifier = artifact_court_grandeur_baseline_add_3_modifier
+					history = { type = created_before_history }
+				}
+			}
+		}
+		### Oxus Bracelet
+		if = {
+			limit = {
+				# Only generated in the earlier bookmarks.
+				current_date < 900.1.1
+				has_dlc_feature = legacy_of_persia
+				exists = title:k_transoxiana
+			}
+			title:k_transoxiana.holder = {
+				create_artifact_oxus_bracelet_effect = { 
+					OWNER = this
+				}
+			}
+		}
+		### Persian Drinking Vessel
+		if = {
+			limit = {
+				# Only generated in the earlier bookmarks.
+				current_date < 900.1.1
+				has_dlc_feature = legacy_of_persia
+				exists = title:k_makran
+			}
+			title:k_makran.holder = {
+				create_artifact = {
+					name = fp3_ancient_drinking_vessel
+					description = fp3_ancient_drinking_vessel_desc
+					visuals = persian_drinking_vessel
+					type = goblet
+					wealth = 80
+					quality = 80
+					modifier = artifact_negate_health_penalty_add_2_modifier
+					modifier = artifact_stress_gain_3_modifier
+					modifier = artifact_monthly_prestige_5_modifier
+					modifier = artifact_court_grandeur_baseline_add_3_modifier
+				}
+			}
+		}
 	}
 }
 

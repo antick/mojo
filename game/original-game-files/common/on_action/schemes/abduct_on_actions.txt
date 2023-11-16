@@ -16,9 +16,7 @@ standard_abduct_method_setup = {
 
 abduct_succeeded = {
 	# Picks out the correct success event depending on setup.
-	trigger = {
-		exists = scope:scheme
-	}
+	trigger = { exists = scope:scheme }
 	first_valid = {
 		abduct_outcome.2001 #Seized Roadside
 		abduct_outcome.2002 #On the Way

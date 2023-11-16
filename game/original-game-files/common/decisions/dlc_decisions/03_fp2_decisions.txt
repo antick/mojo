@@ -42,6 +42,7 @@ struggle_iberia_ending_hostility_decision = {
 			}
 		}
 
+
 		custom_tooltip = {
 			text = struggle_ending_decision_correct_involvement_tt
 			any_character_struggle = {
@@ -1265,7 +1266,7 @@ build_holy_pilgrim_roads_decision = {
 #############################################
 found_kingdom_toledo_decision = {
 	title = found_kingdom_toledo_decision_title
-	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	desc = found_kingdom_toledo_decision_desc
 	selection_tooltip = found_kingdom_toledo_decision_tooltip
 	sort_order = 80

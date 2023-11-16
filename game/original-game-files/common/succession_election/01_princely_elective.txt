@@ -45,14 +45,12 @@ princely_elective = { #HRE Elective.
 			faith = scope:holder.faith
 			faith = { has_doctrine = doctrine_theocracy_lay_clergy }
 			NOT = { root = scope:holder.faith.religious_head }
-			#TODO_CD:Possible trigger checking for investiture succession?
 		}
 		modifier = { #Papal Influence
 			desc = tooltip_feudal_vote_strength_pope
 			add = 4 #If the Pope is an elector, his vote is the most important of all.
 			NOT = { this = scope:holder }
 			root = scope:holder.faith.religious_head
-			#TODO_CD:Possible trigger checking for investiture succession?
 		}
 		modifier = { #Regent Influence
 			desc = tooltip_feudal_vote_strength_is_diarch

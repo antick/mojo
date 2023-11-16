@@ -1174,6 +1174,9 @@ c_cairo = {
 	762.1.1 = {
 		holder = 210009
 	}
+	860.1.1 = {
+		holder = extra_karluks_3 #governor under the Abbasids 
+	}
 	866.1.1 = {
 		liege = "k_egypt"
 	}

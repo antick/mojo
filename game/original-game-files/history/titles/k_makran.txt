@@ -32,7 +32,7 @@ c_panjgur = {
 		holder = 163164 # Amr of Makran
 	}
 	
-	# Independence for most of the 900s under b Ahmad family and Kharijites
+	# Independence for most of the 900s under b Ahmad family and Azariqas
 	1010.1.1 = {
 		liege = k_kabulistan
 		holder = 188544 # Ma'dan Ma'danid
@@ -104,13 +104,12 @@ c_panjgur = {
 
 c_kiz = {
 	867.1.1 = {
-		government = tribal_government
-		holder = 302700	#Placeholder Feraz (baloch character)
+		government = clan_government
+		holder = 302700	#Placeholder Feraz
 		liege = k_makran
 	}
 	
 	977.1.1 = {
-		government = clan_government
 		holder = 144123 # Sabuktigin
 	}
 	997.1.1 = {
@@ -235,7 +234,7 @@ c_sanij = {
 		holder = 144133 # Ibrahim
 	}
 	1066.1.1 = {
-		holder = 93269
+		holder = 1000230512
 	}
 	1099.1.1 = {
 		holder = 144134 # Masud II
@@ -287,7 +286,7 @@ c_khawr = {
 		holder = baloch0001 # fictional Baloch
 	}
 	
-	# Independence for most of the 900s under b Ahmad family and Kharijites
+	# Independence for most of the 900s under b Ahmad family and Azariqas
 	1010.1.1 = {
 		liege = k_kabulistan
 		holder = 188544 # Ma'dan Ma'danid
@@ -372,7 +371,7 @@ c_turan = {
 		holder = baloch0001 # fictional Baloch
 	}
 	
-	# Independence for most of the 900s under b Ahmad family and Kharijites
+	# Independence for most of the 900s under b Ahmad family and Azariqas
 	1010.1.1 = {
 		liege = k_kabulistan
 		holder = 188544 # Ma'dan Ma'danid
@@ -445,20 +444,19 @@ c_turan = {
 d_jabal_kufs = {
 	1066.1.1 = {
 		liege = k_persia
-		holder = 93269
+		holder = 1000230512
 	}
 }
 
 
 c_bampur = {
 	867.1.1 = {
-		government = tribal_government
-		holder = 302700	#Placeholder Feraz (baloch character)
+		government = clan_government
+		holder = 302700	#Placeholder Feraz
 		liege = k_makran
 	}
 	
 	977.1.1 = {
-		government = clan_government
 		holder = 144123 # Sabuktigin
 	}
 	997.1.1 = {
@@ -492,7 +490,7 @@ c_bampur = {
 		holder = 144133 # Ibrahim
 	}
 	1066.1.1 = {
-		holder = 93269
+		holder = 1000230512
 	}
 	1099.1.1 = {
 		holder = 144134 # Masud II
@@ -537,13 +535,12 @@ c_jabal_kufs = {
 	1066.1.1 = { change_development_level = 10 }
 	
 	867.1.1 = {
-		government = tribal_government
-		holder = 302700	#Placeholder Feraz (baloch character)
+		government = clan_government
+		holder = 302700	#Placeholder Feraz
 		liege = k_makran
 	}
 	
 	977.1.1 = {
-		government = clan_government
 		holder = 144123 # Sabuktigin
 	}
 	997.1.1 = {
@@ -577,7 +574,7 @@ c_jabal_kufs = {
 		holder = 144133 # Ibrahim
 	}
 	1066.1.1 = {
-		holder = 93269
+		holder = 1000230512
 	}
 	1099.1.1 = {
 		holder = 144134 # Masud II
@@ -619,13 +616,12 @@ c_jabal_kufs = {
 
 c_riqan = {
 	867.1.1 = {
-		government = tribal_government
-		holder = 302700	#Placeholder Feraz (baloch character)
+		government = clan_government
+		holder = 302700	#Placeholder Feraz
 		liege = k_makran
 	}
 	
 	977.1.1 = {
-		government = clan_government
 		holder = 144123 # Sabuktigin
 	}
 	997.1.1 = {
@@ -659,7 +655,7 @@ c_riqan = {
 		holder = 144133 # Ibrahim
 	}
 	1066.1.1 = {
-		holder = 93269
+		holder = 1000230512
 	}
 	1099.1.1 = {
 		holder = 144134 # Masud II
@@ -913,7 +909,7 @@ c_zaranj = {
 		holder = 144132
 	}
 	1059.1.1 = {
-		liege = d_sistan
+		liege = k_persia
 		holder = 1000230512
 	}
 	1073.1.1 = {
@@ -1302,7 +1298,11 @@ c_bost = {
 	865.1.1 = {
 		holder = 188710 # Zunbil cousin
 	}
-	1066.1.1 = {
+	1020.1.1 = {
+		liege = d_ghur 
+		holder = extra_ghaznavids_2
+	}
+	1068.1.1 = {
 		liege = k_kabulistan
 		holder = 93137
 	}

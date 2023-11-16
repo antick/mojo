@@ -3172,7 +3172,6 @@ disburse_feast_activity_rewards = {
 							limit = {
 								any_character_struggle = {
 									involvement = involved
-									is_struggle_type = iberian_struggle
 									has_struggle_phase_parameter = struggle_prestige_from_feast
 								}
 							}
@@ -3236,7 +3235,6 @@ disburse_feast_activity_rewards = {
 							limit = {
 								any_character_struggle = {
 									involvement = involved
-									is_struggle_type = iberian_struggle
 									has_struggle_phase_parameter = struggle_prestige_from_feast
 								}
 							}
@@ -3291,7 +3289,6 @@ disburse_feast_activity_rewards = {
 							limit = {
 								any_character_struggle = {
 									involvement = involved
-									is_struggle_type = iberian_struggle
 									has_struggle_phase_parameter = struggle_prestige_from_feast
 								}
 							}
@@ -3949,7 +3946,10 @@ add_to_entourage_court_and_activity_effect = {
 				add_courtier = $CHAR_TO_ADD$
 			}
 			if = {
-				limit = { exists = involved_activity }
+				limit = {
+					exists = involved_activity
+					$CHAR_TO_ADD$ = { can_join_activity = $NEW_COURT_OWNER$.involved_activity }
+				}
 				$CHAR_TO_ADD$ = { add_to_activity = $NEW_COURT_OWNER$.involved_activity }
 			}
 			hidden_effect = {

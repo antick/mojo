@@ -36,17 +36,17 @@ hajj.0010 = {
 	scope = faith
 	trigger = {
 		has_doctrine = doctrine_pilgrimage_mandatory_hajj
-		any_ruler = {
-			exists = capital_province
-			capital_province.barony = title:b_makka
+		any_faith_ruler = {
+			is_landed = yes
+			capital_province.barony ?= title:b_makka
 			NOT = { has_trait = hajjaj }
 		}
 	}
 	immediate = {
-		random_ruler = {
+		random_faith_ruler = {
 			limit = {
-				exists = capital_province
-				capital_province.barony = title:b_makka
+				is_landed = yes
+				capital_province.barony ?= title:b_makka
 				NOT = { has_trait = hajjaj }
 			}
 			trigger_event = hajj.0011

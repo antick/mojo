@@ -25,9 +25,19 @@ yearly_persian.1001 = {
 	}
 
 	immediate = {
-		trigger_event = {
-			id = yearly_persian.1002
-			trigger_on_next_date = 3.20
+		random_list = {
+			50 = {
+				trigger_event = {
+					id = yearly_persian.1002
+					trigger_on_next_date = 3.20
+				}
+			}
+			50 = {
+				trigger_event = {
+					id = fp3_yearly.8032
+					trigger_on_next_date = 3.18
+				}
+			}
 		}
 	}
 }

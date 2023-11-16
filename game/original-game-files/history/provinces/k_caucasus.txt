@@ -212,7 +212,7 @@
 	}
 	1066.1.1 = {
 		culture = persian
-		religion = ashari
+		religion = maturidi
 	}
 	1066.1.1 = {
 		buildings = {
@@ -238,8 +238,8 @@
 ###c_samander
 5305 = {	#Samander
 	culture = khazar
-	religion = tengri_pagan
-	holding = tribal_holding
+	religion = orthodox
+	holding = castle_holding
 	750.1.2 = {
 		religion = kabarism
 	}

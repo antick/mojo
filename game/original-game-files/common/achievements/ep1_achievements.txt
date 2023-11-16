@@ -23,6 +23,7 @@ ep1_02_achievement = {
 			root.culture = {
 				is_hybrid_culture = yes
 				exists = var:ep1_02_achievement_unlocked
+				var:ep1_02_achievement_unlocked >= 1
 			}
 		}
 	}
@@ -38,6 +39,7 @@ ep1_03_achievement = {
 			root.culture = {
 				is_divergent_culture = yes
 				exists = var:ep1_03_achievement_unlocked
+				var:ep1_03_achievement_unlocked >= 1
 			}
 		}
 	}
@@ -102,9 +104,7 @@ ep1_08_achievement = {
 		custom_description = {
 			text = one_of_a_kind_achievement_trigger
 			has_variable = one_of_a_kind_var
-			any_character_artifact = {
-				this = root.var:one_of_a_kind_var
-			}
+			any_character_artifact = { this = root.var:one_of_a_kind_var }
 		}
 	}
 }
@@ -163,9 +163,7 @@ ep1_11_achievement = {
 	happened = {
 		custom_description = {
 			text = bod_chen_po_achievement_trigger
-			root.dynasty = {
-				this = dynasty:105800
-			}
+			root.dynasty = { this = dynasty:105800 }
 			has_title = title:e_tibet
 		}
 	}
@@ -345,5 +343,3 @@ ep1_20_achievement = {
 		}
 	}
 }
-
-

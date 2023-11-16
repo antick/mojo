@@ -4,8 +4,6 @@
 	decaying = yes
 }
 
-
-
 renewed_attention = {
 	opinion = 25
 	years = 15

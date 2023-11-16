@@ -24,13 +24,13 @@ feudal_government_tax_contribution_mult = {
 
 feudal_government_levy_contribution_add = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
 feudal_government_levy_contribution_mult = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
@@ -60,13 +60,13 @@ republic_government_tax_contribution_mult = {
 
 republic_government_levy_contribution_add = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
 republic_government_levy_contribution_mult = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
@@ -96,13 +96,13 @@ theocracy_government_tax_contribution_mult = {
 
 theocracy_government_levy_contribution_add = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
 theocracy_government_levy_contribution_mult = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
@@ -132,13 +132,13 @@ clan_government_tax_contribution_mult = {
 
 clan_government_levy_contribution_add = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
 clan_government_levy_contribution_mult = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
@@ -168,13 +168,13 @@ tribal_government_tax_contribution_mult = {
 
 tribal_government_levy_contribution_add = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
 tribal_government_levy_contribution_mult = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
@@ -204,13 +204,13 @@ mercenary_government_tax_contribution_mult = {
 
 mercenary_government_levy_contribution_add = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
 mercenary_government_levy_contribution_mult = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
@@ -240,12 +240,12 @@ holy_order_government_tax_contribution_mult = {
 
 holy_order_government_levy_contribution_add = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }
 
 holy_order_government_levy_contribution_mult = {
 	decimals = 0
-	prefix = MOD_GOLD_PREFIX
+	prefix = MOD_SOLDIER_PREFIX
 	percent = yes
 }

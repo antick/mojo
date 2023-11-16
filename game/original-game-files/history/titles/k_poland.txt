@@ -808,6 +808,7 @@ c_gnieznienska = {
 	###Archbishops of Gniezno
 	999.1.1 = {
 		holder = 302011	#Radzim Gaudenty
+		government = theocracy_government
 	}
 	1022.1.2 = {
 		holder = 96071	#Hipolit
@@ -988,6 +989,7 @@ c_krajna = {
 	###Znin included in Gniezno's sphere of influence
 	1030.1.1 = {
 		holder = 302013	#Fictional
+		government = theocracy_government
 		liege = k_poland
 	}
 	1075.1.2 = {

@@ -58,7 +58,7 @@ pledged_marriage = {
 
 imprisoned_adult_education = {
 	categories = { negative education activity }
-	icon = "rival.dds"
+	icon = "activity_adult_education.dds"
 
 	description = {
 		random_valid = {
@@ -87,7 +87,7 @@ imprisoned_adult_education = {
 
 completed_adult_education = {
 	categories = { positive education activity }
-	icon = "friend.dds"
+	icon = "activity_adult_education.dds"
 
 	description = {
 		random_valid = {
@@ -683,7 +683,7 @@ childhood_education_guardian = {
 
 ward_education_completed = {
 	categories = { formative childhood relationships } 
-	icon = "_default.dds" #TODO_CD_BP2
+	icon = "birth.dds"
 
 	description = {
 		random_valid = {

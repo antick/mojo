@@ -7699,21 +7699,21 @@ baranis0027 = {
 }
 
 khali0001 = { #Banu Khali ancestor (fictional)
-    name = "Khali"
-    dynasty_house = house_khali
-    religion = ashari
-    culture = baranis
-    trait = education_martial_1
+	name = "Khali"
+	dynasty_house = house_khali
+	religion = ashari
+	culture = baranis
+	trait = education_martial_1
 
-    father = danis0000
+	father = danis0000
  
-    731.1.1 = {
-        birth = yes
-    }
+	731.1.1 = {
+		birth = yes
+	}
 
-    783.1.1 = {
-        death = yes   
-    }
+	783.1.1 = {
+		death = yes   
+	}
 }
 
 khali0002 = { #Banu Khali ancestor (fictional)
@@ -8574,15 +8574,15 @@ baranis0061 = {
 		effect = {
 			add_trait = lifestyle_mystic
 			add_trait_xp = {
-                trait = lifestyle_mystic
-                value = {
-                    integer_range = {
-                        min = medium_lifestyle_random_xp_low
-                        max = medium_lifestyle_random_xp_high
-                    }
-                }
-            }
-        }
+				trait = lifestyle_mystic
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
 	}
 	1085.5.6 = {
 		religion = catholic

@@ -51,6 +51,9 @@ liege_equal = {
 	first = LIEGE_EQUAL_FIRST
 	third = LIEGE_EQUAL_THIRD
 }
+top_liege_equal = { # Not a relationship check, but this seemed like the best place to put it
+	first = TOP_LIEGE_EQUAL_FIRST
+}
 killer_equal = {
 	# If you are dead you don't get first-person tooltips!
 	third = KILLER_EQUAL_THIRD
@@ -170,9 +173,9 @@ faith_religion_equal = {
 	third = FAITH_RELIGION_EQUAL_THIRD
 }
 
-##################
+####################
 # Culture Triggers #
-##################
+####################
 culture_culture_group_equal = {
 	global = CULTURE_CULUTRE_GROUP_EQUAL_GLOBAL
 	third = CULTURE_CULUTRE_GROUP_EQUAL_THIRD

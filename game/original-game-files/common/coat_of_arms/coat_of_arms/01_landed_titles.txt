@@ -1,4 +1,4 @@
-@smCastleX = 0.27
+﻿@smCastleX = 0.27
 @smCastleY = 0.23
 @smLysX = 0.23
 @smLysY = 0.26
@@ -2177,6 +2177,32 @@ c_ghana = {
 	color2 = "yellow"
 	color3 = "green"
 }
+
+c_ghur = {
+	pattern="pattern_solid.dds"
+	color1=yellow
+	color2=red
+	color3=orange
+	colored_emblem={
+		color1=red
+		texture="ce_octogon_frame.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.750000 0.750000 }
+			depth=1.010000
+		}
+	}
+
+	colored_emblem={
+		color1=red
+		texture="ce_tower.dds"
+		instance={
+			scale={ 0.590000 0.520000 }
+		}
+	}
+}
+
+
 c_gondar = {
 	pattern = "pattern_solid.dds"
 	color1 = "black"
@@ -4454,6 +4480,49 @@ d_sardinia = {
 		instance = { position = { 0.2 0.8 } scale = { 0.4 0.4 }  }
 		instance = { position = { 0.8 0.2 } scale = { 0.4 0.4 }  }
 		instance = { position = { 0.8 0.8 } scale = { 0.4 0.4 }  }
+	}
+}
+
+d_samarra={
+	pattern="pattern_solid.dds"
+	color1=black
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_sabre.dds"
+		instance={
+			position={ 0.480000 0.490000 }
+			scale={ -0.610000 0.610000 }
+			rotation=41
+		}
+		instance={
+			position={ 0.510000 0.500000 }
+			scale={ 0.600000 0.600000 }
+			depth=2.010000
+			rotation=318
+		}
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_octogon_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+			depth=1.010000
+		}
+	}
+}
+
+d_corsica = {
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "black"
+	colored_emblem = {
+		texture = "ce_head.dds"
+		color1 = "black"
+		color2 = "white"
 	}
 }
 d_mallorca = {
@@ -7220,8 +7289,8 @@ k_livonia = {
 		color1 = "blue"
 		color2 = "blue"
 		instance = { position = { 0.75 0.225 } scale = { 0.5 0.45 }  }
-		instance = { position = { 0.25 0.725 } scale = { 0.5 0.55 }  }		
-	}	
+		instance = { position = { 0.25 0.725 } scale = { 0.5 0.55 }  }
+	}
 	colored_emblem = {
 		texture = "ce_lion_rampant_crown.dds"
 		color1 = "red"
@@ -8043,6 +8112,38 @@ d_poitou = {
 		color2 = "yellow"
 		color3 = "white"
 		instance = { position = { 0.5 0.5 } scale = { 1 1 } }
+	}
+}
+
+c_samarra = { # Samarra
+	pattern="pattern_solid.dds"
+	color1=black
+	color2=white
+	color3=black
+	colored_emblem={
+		color1=white
+		color2=white
+		texture="ce_sabre.dds"
+		instance={
+			position={ 0.480000 0.490000 }
+			scale={ -0.610000 0.610000 }
+			rotation=41
+		}
+		instance={
+			position={ 0.510000 0.500000 }
+			scale={ 0.600000 0.600000 }
+			depth=2.010000
+			rotation=318
+		}
+	}
+
+	colored_emblem={
+		color1=white
+		texture="ce_octogon_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+			depth=1.010000
+		}
 	}
 }
 
@@ -13124,6 +13225,40 @@ d_somogy = {
 	}
 }
 
+c_baghdad = { #Baghdad
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=black
+	color3=green
+	colored_emblem={
+		color1=black
+		texture="ce_tamgha_regular_circle_frame.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.660000 0.660000 }
+			depth=1.010000
+		}
+	}
+
+	colored_emblem={
+		color1=black
+		texture="ce_crescent.dds"
+		instance={
+			position={ 0.500000 0.540000 }
+			scale={ 0.740000 0.740000 }
+		}
+	}
+
+	colored_emblem={
+		color1=black
+		texture="ce_african_frame_bg_10.dds"
+		instance={
+			depth=2.010000
+		}
+	}
+}
+
+
 c_baranya = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
@@ -13811,6 +13946,38 @@ d_badajoz = {
 	}
 }
 
+d_baghdad = { #Baghdad
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=black
+	color3=green
+	colored_emblem={
+		color1=black
+		texture="ce_tamgha_regular_circle_frame.dds"
+		instance={
+			position={ 0.500000 0.480000 }
+			scale={ 0.660000 0.660000 }
+			depth=1.010000
+		}
+	}
+
+	colored_emblem={
+		color1=black
+		texture="ce_crescent.dds"
+		instance={
+			position={ 0.500000 0.540000 }
+			scale={ 0.740000 0.740000 }
+		}
+	}
+
+	colored_emblem={
+		color1=black
+		texture="ce_african_frame_bg_10.dds"
+		instance={
+			depth=2.010000
+		}
+	}
+}
 
 
 c_badajoz = {
@@ -25415,13 +25582,13 @@ k_mann_the_isles_alternate = {
 		texture = "ce_sword_simple.dds"
 		color1 = "yellow"
 		color2 = "white"
-		instance = { position = { 0.2 0.4 } rotation = 0 scale = { 0.62 0.62 }  }					
+		instance = { position = { 0.2 0.4 } rotation = 0 scale = { 0.62 0.62 }  }
 	}
 	colored_emblem = {
 		texture = "ce_sword_simple.dds"
 		color1 = "yellow"
 		color2 = "white"
-		instance = { position = { 0.8 0.4 } rotation = 0 scale = { 0.62 0.62 }  }					
+		instance = { position = { 0.8 0.4 } rotation = 0 scale = { 0.62 0.62 }  }
 	}
 }
 
@@ -25429,8 +25596,8 @@ k_mann_the_isles_alternate = {
 # NB includes new modified for those existing entries d_the_isles, c_isle_of_man, c_varmland, c_narke, c_upland (all removed from above to keep things clean)
 
 c_jamtfir = {
-	pattern = "pattern_solid.dds"	
-	color1 = "red"		
+	pattern = "pattern_solid.dds"
+	color1 = "red"
 	color2 = "white"
 	colored_emblem = {
 		texture = "ce_cross_scandinavian_froso.dds"
@@ -25441,8 +25608,8 @@ c_jamtfir = {
 }
 
 c_skara = {
-	pattern = "pattern_solid.dds"	
-	color1 = "blue"		
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
 	color2 = "white"
 	colored_emblem = {
 		texture = "ce_cross_scandinavian.dds"
@@ -25453,8 +25620,8 @@ c_skara = {
 }
 
 c_norwegian_more = {
-	pattern = "pattern_solid.dds"	
-	color1 = "red"		
+	pattern = "pattern_solid.dds"
+	color1 = "red"
 	color2 = "yellow"
 	colored_emblem = {
 		texture = "ce_circle_mask.dds"
@@ -25467,18 +25634,18 @@ c_norwegian_more = {
 		color1 = "red"
 		color2 = "yellow"
 		instance = { position = { 0.5 0.48 } scale = { 0.6 0.6 }  }
-	}	
+	}
 	colored_emblem = {
 		texture = "ce_block_02.dds"
 		color1 = "yellow"
 		color2 = "yellow"
 		instance = { position = { 0.5 0.48 } scale = { 0.7 0.06 }  }
-		instance = { position = { 0.5 0.48 } scale = { 0.06 0.7 }  }	
-		instance = { position = { 0.3 0.48 } scale = { 0.06 0.2 }  }	
-		instance = { position = { 0.7 0.48 } scale = { 0.06 0.2 }  }	
-		instance = { position = { 0.5 0.28 } scale = { 0.2 0.06 }  }	
-		instance = { position = { 0.5 0.68 } scale = { 0.2 0.06 }  }			
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.06 0.7 }  }
+		instance = { position = { 0.3 0.48 } scale = { 0.06 0.2 }  }
+		instance = { position = { 0.7 0.48 } scale = { 0.06 0.2 }  }
+		instance = { position = { 0.5 0.28 } scale = { 0.2 0.06 }  }
+		instance = { position = { 0.5 0.68 } scale = { 0.2 0.06 }  }
+	}
 }
 
 c_dalarna = {
@@ -25490,15 +25657,15 @@ c_dalarna = {
 		color1 = "yellow"
 		color2 = "white"
 		color3 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 1 1 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1 1 } }
+	}
 	colored_emblem = {
 		texture = "ce_crown.dds"
 		color1 = "yellow"
 		color2 = "blue"
 		color3 = "yellow"
-		instance = { position = { 0.5 0.2 } scale = { 0.28 0.28 } }	
-	}	
+		instance = { position = { 0.5 0.2 } scale = { 0.28 0.28 } }
+	}
 }
 
 c_nordmark = {
@@ -25523,17 +25690,17 @@ c_narke = {
 		color1 = "yellow"
 		color2 = "white"
 		color3 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 1 1 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1 1 } }
+	}
 	colored_emblem = {
 		texture = "ce_cinquefoil_01.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.21 } scale = { 0.33 0.33 } }	
-		instance = { position = { 0.73 0.46 } scale = { 0.33 0.33 } }	
-		instance = { position = { 0.27 0.46 } scale = { 0.33 0.33 } }	
-		instance = { position = { 0.5 0.79 } scale = { 0.33 0.33 } }			
-	}	
+		instance = { position = { 0.5 0.21 } scale = { 0.33 0.33 } }
+		instance = { position = { 0.73 0.46 } scale = { 0.33 0.33 } }
+		instance = { position = { 0.27 0.46 } scale = { 0.33 0.33 } }
+		instance = { position = { 0.5 0.79 } scale = { 0.33 0.33 } }
+	}
 }
 
 c_upland = {
@@ -25545,8 +25712,8 @@ c_upland = {
 		color1 = "yellow"
 		color2 = "white"
 		color3 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { 1 1 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1 1 } }
+	}
 }
 
 k_danelaw = {
@@ -25557,21 +25724,21 @@ k_danelaw = {
 		texture = "ce_circle_mask.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }
+	}
 	colored_emblem = {
 		texture = "ce_frame_circle_borre_single.dds"
 		color1 = "white"
 		color2 = "black"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_norse_triquetra_ivaring.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 # Just so they don't end up with a random CoA; we copy the k_danelaw one anyhoo.
@@ -25583,21 +25750,21 @@ k_daneland = {
 		texture = "ce_circle_mask.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }
+	}
 	colored_emblem = {
 		texture = "ce_frame_circle_borre_single.dds"
 		color1 = "white"
 		color2 = "black"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_norse_triquetra_ivaring.dds"
 		color1 = "red"
 		color2 = "white"
 		color3 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 d_jomsvikings = {
@@ -25605,24 +25772,24 @@ d_jomsvikings = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_frame_urnes.dds"
 		color1 = "red"
 		color2 = "white"
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
-	}	
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
 	colored_emblem = {
 		texture = "ce_norse_odroerir_lillbjars.dds"
 		color1 = "red"
 		color2 = "white"
-		instance = { position = { 0.5 0.24 } scale = { 0.55 0.55 } rotation = 66 }	
-	}		
+		instance = { position = { 0.5 0.24 } scale = { 0.55 0.55 } rotation = 66 }
+	}
 }
 
 k_mann = {
-	pattern = "pattern_solid.dds"	
-	color1 = "red"		
+	pattern = "pattern_solid.dds"
+	color1 = "red"
 	color2 = "white"
 	colored_emblem = {
 		texture = "ce_manx_triskele_armored.dds"
@@ -25634,8 +25801,8 @@ k_mann = {
 }
 
 d_the_isles = {
-	pattern = "pattern_solid.dds"	
-	color1 = "red"		
+	pattern = "pattern_solid.dds"
+	color1 = "red"
 	color2 = "white"
 	colored_emblem = {
 		texture = "ce_manx_triskele_armored.dds"
@@ -25647,8 +25814,8 @@ d_the_isles = {
 }
 
 c_isle_of_man = {
-	pattern = "pattern_solid.dds"	
-	color1 = "red"		
+	pattern = "pattern_solid.dds"
+	color1 = "red"
 	color2 = "white"
 	colored_emblem = {
 		texture = "ce_manx_triskele.dds"
@@ -25669,8 +25836,8 @@ e_scandinavia_norse = {
 		texture = "ce_norse_odroerir_lillbjars.dds"
 		color1 = "red"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 k_sweden_norse = {
@@ -25682,8 +25849,8 @@ k_sweden_norse = {
 		texture = "ce_norse_mjolnir_odeshog.dds"
 		color1 = "yellow"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.45 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.45 } scale = { 0.9 0.9 } }
+	}
 }
 
 d_svealand_norse = {
@@ -25694,17 +25861,17 @@ d_svealand_norse = {
 		texture = "ce_frame_circle_broa.dds"
 		color1 = "blue"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 -0.95 } }	
-	}	
-	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 -0.95 } }
+	}
+
 	colored_emblem = {
 		texture = "ce_norse_triquetra_funbo.dds"
 		color1 = "blue"
 		color2 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { 0.75 0.75 } rotation = 2.5 }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.75 0.75 } rotation = 2.5 }
+	}
 }
-			
+
 c_upland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
@@ -25713,8 +25880,8 @@ c_upland_norse = {
 		texture = "ce_mjolnir.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 c_gastrikland_norse = {
@@ -25725,21 +25892,21 @@ c_gastrikland_norse = {
 		texture = "ce_yggdrasil_ockelbo.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 1 1 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1 1 } }
+	}
 }
 
 c_sodermannaland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
-	color2 = "white"	
-	
+	color2 = "white"
+
 	colored_emblem = {
 		texture = "ce_norse_spiral_06_thin.dds"
 		color1 = "red"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_aland_norse = {
@@ -25751,15 +25918,15 @@ c_aland_norse = {
 		texture = "ce_circle_mask.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 0.745 0.745 } }	
+		instance = { position = { 0.5 0.48 } scale = { 0.745 0.745 } }
 	}
 	colored_emblem = {
 		texture = "ce_frame_circle_borre_single_knots.dds"
 		color1 = "blue"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } rotation = 45 }	
-	}		
-	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } rotation = 45 }
+	}
+
 	colored_emblem = {
 		texture = "ce_dragon_fylfot.dds"
 		color1 = "blue"
@@ -25773,26 +25940,26 @@ d_bergslagen_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "yellow"
-	
+
 	colored_emblem = {
 		texture = "ce_pagan_looped_knot.dds"
 		color1 = "yellow"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 c_vastmanland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "white"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_bird_alstad.dds"
 		color1 = "white"
 		color2 = "orange"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 }
 
 c_varmland = {
@@ -25825,34 +25992,34 @@ c_varmland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "white"
-	
+
 	colored_emblem = {
 		texture = "ce_rune_futhark_fe.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_dalarna_norse = {
 	pattern = "pattern_vertical_split_01.dds"
 	color1 = "red"
 	color2 = "white"
-	
+
 	colored_emblem = {
 		texture = "ce_star_08.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-		mask = { 1 }		
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+		mask = { 1 }
+	}
 	colored_emblem = {
 		texture = "ce_star_08.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-		mask = { 2 }		
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+		mask = { 2 }
+	}
 }
 
 c_dalabergslagen = {
@@ -25887,13 +26054,13 @@ c_dalabergslagen_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "green"
 	color2 = "white"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_gungnir.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 d_vastergotland_norse = {
@@ -25904,34 +26071,34 @@ d_vastergotland_norse = {
 		texture = "ce_yggdrasil_ockelbo.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 1 1 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1 1 } }
+	}
 }
-		
+
 c_vastergotland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "red"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_triskele_ravens.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_skara_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue_light"
 	color2 = "red"
-	
+
 	colored_emblem = {
 		texture = "ce_star_07.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.47 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.47 } scale = { 0.9 0.9 } }
+	}
 }
 
 ### TODO !
@@ -25944,8 +26111,8 @@ c_dal_norse = {
 		texture = "ce_norse_walknut_stora_hammars.dds"
 		color1 = "black"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
-	}			
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_nordmark_norse = {
@@ -25957,8 +26124,8 @@ c_nordmark_norse = {
 		texture = "ce_pagan_spiral_06.dds"
 		color1 = "yellow"
 		color2 = "black"
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
-	}			
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
 }
 
 d_ostergotland_norse = {
@@ -25970,14 +26137,14 @@ d_ostergotland_norse = {
 		texture = "ce_norse_mjolnir_kobelev.dds"
 		color1 = "white"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 c_ostergotland_norse = {
 	pattern = "pattern_diagonal_split_01.dds"
 	color1 = "red"
-	color2 = "white"			
+	color2 = "white"
 }
 
 c_kinda = {
@@ -26015,47 +26182,47 @@ c_kinda_norse = {
 		texture = "ce_block_02.dds"
 		color1 = "blue"
 		color2 = "blue"
-		instance = { position = { 0.5 0.5 } scale = { 0.25 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.5 } scale = { 0.25 1.0 } }
+	}
 }
 
 c_narke_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_gungnir.dds"
 		color1 = "black"
 		color2 = "black"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 d_smaland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "yellow"
-		
+
 	colored_emblem = {
 		texture = "ce_norse_bird_alstad.dds"
 		color1 = "yellow"
 		color2 = "red"
 		instance = { position = { 0.30 0.25 } scale = { -0.3 0.3 } rotation = -300 }
-		instance = { position = { 0.64 0.21 } scale = { -0.3 0.3 } rotation = -275 }			
+		instance = { position = { 0.64 0.21 } scale = { -0.3 0.3 } rotation = -275 }
 	}
 	colored_emblem = {
 		texture = "ce_sleipnir.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.505 0.49 } scale = { 0.9 0.9 } }	
-	}	
+		instance = { position = { 0.505 0.49 } scale = { 0.9 0.9 } }
+	}
 	colored_emblem = {
 		texture = "ce_sleipnir.dds"
 		color1 = "yellow"
 		color2 = "yellow"
-		instance = { position = { 0.51 0.50 } scale = { 0.9 0.9 } }	
-	}	
+		instance = { position = { 0.51 0.50 } scale = { 0.9 0.9 } }
+	}
 }
 
 c_more_norse = {
@@ -26066,8 +26233,8 @@ c_more_norse = {
 		texture = "ce_solar_cross.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 0.8 0.8 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.8 0.8 } }
+	}
 }
 
 c_sevede = {
@@ -26085,93 +26252,93 @@ c_sevede = {
 c_sevede_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
-	color2 = "black"	
-	
+	color2 = "black"
+
 	colored_emblem = {
 		texture = "ce_pagan_looped_knot.dds"
 		color1 = "black"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_varend_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
-	color2 = "yellow"	
-	
+	color2 = "yellow"
+
 	colored_emblem = {
 		texture = "ce_norse_spiral_06_thin.dds"
 		color1 = "blue"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { -1.0 1.0 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { -1.0 1.0 } }
+	}
 }
 
 c_njudung_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red"
-	
+
 	colored_emblem = {
 		texture = "ce_circle_mask.dds"
 		color1 = "white"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }	
+		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }
 	}
 	colored_emblem = {
 		texture = "ce_frame_circle_broa.dds"
 		color1 = "red"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_pagan_vehmic.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 c_finnveden_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "blue"
-	
+
 	colored_emblem = {
 		texture = "ce_rune_futhark_reid.dds"
 		color1 = "blue"
 		color2 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_oland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "white"
-			
+
 	colored_emblem = {
 		texture = "ce_norse_spirals.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 d_norrland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
-		
+
 	colored_emblem = {
 		texture = "ce_walknut.dds"
 		color1 = "black"
 		color2 = "black"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
-	
+
 c_halsingland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
@@ -26181,8 +26348,8 @@ c_halsingland_norse = {
 		texture = "ce_pagan_spiral_06.dds"
 		color1 = "white"
 		color2 = "red"
-		instance = { position = { 0.5 0.5 } scale = { -1.0 1.0 } }	
-	}			
+		instance = { position = { 0.5 0.5 } scale = { -1.0 1.0 } }
+	}
 }
 
 c_medelpad_norse = {
@@ -26194,8 +26361,8 @@ c_medelpad_norse = {
 		color1 = "white"
 		color2 = "orange"
 		color3 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { -1 1 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { -1 1 } }
+	}
 }
 
 c_angermanland = {
@@ -26217,13 +26384,13 @@ c_angermanland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "black"
 	color2 = "yellow"
-	
+
 	colored_emblem = {
 		texture = "ce_rune_futhark_oss.dds"
 		color1 = "yellow"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 d_gotland_norse = {
@@ -26234,21 +26401,21 @@ d_gotland_norse = {
 		texture = "ce_gotland_spiral.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 c_gutland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_triskele_beasts.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.22 } scale = { 0.55 0.55 } }	
-	}	
+		instance = { position = { 0.5 0.22 } scale = { 0.55 0.55 } }
+	}
 	colored_emblem = {
 		texture = "ce_snake_witch.dds"
 		color1 = "red"
@@ -26266,34 +26433,34 @@ k_norway_norse = {
 		texture = "ce_frame_circle_borre_doted.dds"
 		color1 = "yellow"
 		color2 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_norse_triquetra_hardrada.dds"
 		color1 = "yellow"
 		color2 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { 0.8 0.8 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.8 0.8 } }
+	}
 }
 
 d_viken_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "red"
-	
+
 	colored_emblem = {
 		texture = "ce_circle_mask.dds"
 		color1 = "black"
 		color2 = "black"
-		instance = { position = { 0.445 0.275 } scale = { 0.055 0.055 } }	
-		instance = { position = { 0.555 0.275 } scale = { 0.055 0.055 } }			
-	}	
+		instance = { position = { 0.445 0.275 } scale = { 0.055 0.055 } }
+		instance = { position = { 0.555 0.275 } scale = { 0.055 0.055 } }
+	}
 	colored_emblem = {
 		texture = "ce_odins_mask.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 1.1 1.1 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.1 1.1 } }
+	}
 }
 
 c_vingulmork = {
@@ -26321,17 +26488,17 @@ c_vingulmork = {
 		}
 	}
 }
-			
+
 c_vingulmork_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "white"
-		
+
 	colored_emblem = {
 		texture = "ce_norse_longship_figureheads.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.64 } scale = { 0.9 0.8 } }	
+		instance = { position = { 0.5 0.64 } scale = { 0.9 0.8 } }
 	}
 	colored_emblem = {
 		texture = "ce_norse_fenrir_tullstorp.dds"
@@ -26346,19 +26513,19 @@ c_raniriki_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "white"
-		
+
 	colored_emblem = {
 		texture = "ce_walknut.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 0.66 0.66 } }	
+		instance = { position = { 0.5 0.48 } scale = { 0.66 0.66 } }
 	}
 	colored_emblem = {
 		texture = "ce_frame_circle_borre_double_knots_02.dds"
 		color1 = "white"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 }
 
 c_vestfold = {
@@ -26388,8 +26555,8 @@ c_vestfold_norse = {
 		texture = "ce_pagan_spiral_04.dds"
 		color1 = "red"
 		color2 = "white"
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
-	}			
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_telemark = {
@@ -26435,13 +26602,13 @@ d_agder_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "white"
-	
+
 	colored_emblem = {
 		texture = "ce_pagan_vehmic.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_nedenes = {
@@ -26474,19 +26641,19 @@ c_nedenes_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red"
-		
+
 	colored_emblem = {
 		texture = "ce_pagan_cross_dhata.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.66 0.66 } }	
+		instance = { position = { 0.5 0.48 } scale = { 0.66 0.66 } }
 	}
 	colored_emblem = {
 		texture = "ce_frame_circle_borre_double_knots.dds"
 		color1 = "red"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 }
 
 c_agdeside = {
@@ -26510,8 +26677,8 @@ c_agdeside_norse = {
 		texture = "ce_spirals_03_rotated.dds"
 		color1 = "red"
 		color2 = "blue_light"
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
-	}			
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
 }
 
 d_vestlandi_norse = {
@@ -26523,20 +26690,20 @@ d_vestlandi_norse = {
 		texture = "ce_circle_mask.dds"
 		color1 = color1
 		color2 = color1
-		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }
+	}
 	colored_emblem = {
 		texture = "ce_frame_circle_broa.dds"
 		color1 = color2
 		color2 = color1
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}			
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_norse_triskele_beasts.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.51 0.48 } scale = { 0.8 0.8 } }	
-	}	
+		instance = { position = { 0.51 0.48 } scale = { 0.8 0.8 } }
+	}
 }
 
 c_rogalandi = {
@@ -26550,24 +26717,24 @@ c_rogalandi = {
 		texture="ce_bendy_10.dds"
 	}
 }
-			
+
 c_rogalandi_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "white"
-		
+
 	colored_emblem = {
 		texture = "ce_norse_longship_figureheads.dds"
 		color1 = "white"
 		color2 = "red"
-		instance = { position = { 0.5 0.58 } scale = { 0.85 0.85 } }	
+		instance = { position = { 0.5 0.58 } scale = { 0.85 0.85 } }
 	}
 	colored_emblem = {
 		texture = "ce_triskel_02.dds"
 		color1 = "white"
 		color2 = "red"
-		instance = { position = { 0.5 0.29 } scale = { 0.65 0.65 } rotation = 45 }	
-	}	
+		instance = { position = { 0.5 0.29 } scale = { 0.65 0.65 } rotation = 45 }
+	}
 }
 
 c_hordalandi = {
@@ -26600,13 +26767,13 @@ c_hordalandi_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red"
-			
+
 	colored_emblem = {
 		texture = "ce_mjolnir.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 c_sogn = {
@@ -26639,26 +26806,26 @@ c_sogn_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
-			
+
 	colored_emblem = {
 		texture = "ce_norse_triskele_boars.dds"
 		color1 = "black"
 		color2 = "black"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 d_trandalog_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "yellow"
-			
+
 	colored_emblem = {
 		texture = "ce_pagan_wotan_cross.dds"
 		color1 = "yellow"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 c_trandheim = {
@@ -26695,34 +26862,34 @@ c_trandheim_norse = {
 		texture = "ce_circle_mask.dds"
 		color1 = "white"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }	
-	}	
-	
+		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }
+	}
+
 	colored_emblem = {
 		texture = "ce_norse_triquetra.dds"
 		color1 = "red"
 		color2 = "white"
-		instance = { position = { 0.5 0.485 } scale = { 0.825 0.825 } }	
+		instance = { position = { 0.5 0.485 } scale = { 0.825 0.825 } }
 	}
 	colored_emblem = {
 		texture = "ce_frame_circle_borre_double_knots_02.dds"
 		color1 = "red"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 -0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 -0.95 } }
+	}
 }
 
 c_norwegian_more_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "yellow"
-			
+
 	colored_emblem = {
 		texture = "ce_pagan_saltire_cross_02.dds"
 		color1 = "red"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_firdafylki = {
@@ -26741,32 +26908,32 @@ c_firdafylki_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "blue"
-	
+
 	colored_emblem = {
 		texture = "ce_rune_tiwaz.dds"
 		color1 = "blue"
 		color2 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 	colored_emblem = {
 		texture = "ce_block_02.dds"
 		color1 = "blue"
 		color2 = "blue"
-		instance = { position = { 0.5 0.75 } scale = { 0.12 0.5 } }	
-	}		
+		instance = { position = { 0.5 0.75 } scale = { 0.12 0.5 } }
+	}
 }
 
 d_dalir_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "black"
 	color2 = "yellow"
-			
+
 	colored_emblem = {
 		texture = "ce_pagan_cross_tursas.dds"
 		color1 = "yellow"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 c_hedmork = {
@@ -26780,18 +26947,18 @@ c_hedmork = {
 		texture="ce_antlers_attire.dds"
 	}
 }
-	
+
 c_hedmork_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
-			
+
 	colored_emblem = {
 		texture = "ce_ginnir.dds"
 		color1 = "black"
 		color2 = "black"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_gudbrandsdalir = {
@@ -26814,8 +26981,8 @@ c_gudbrandsdalir_norse = {
 		texture = "ce_sleipnir.dds"
 		color1 = "red"
 		color2 = "white"
-		instance = { position = { 0.48 0.47 } scale = { -1.0 1.0 } }	
-	}		
+		instance = { position = { 0.48 0.47 } scale = { -1.0 1.0 } }
+	}
 }
 
 c_eystridalir = {
@@ -26838,14 +27005,14 @@ c_eystridalir_norse = {
 		texture = "ce_circle_mask.dds"
 		color1 = "blue"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }
+	}
 	colored_emblem = {
 		texture = "ce_frame_circle_urnes_pitney.dds"
 		color1 = "yellow"
 		color2 = "brown"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_dragon_urnes_bejsebakken.dds"
 		color1 = "yellow"
@@ -26890,10 +27057,10 @@ c_gauldala_norse = {
 		texture = "ce_rune_futhark_madr.dds"
 		color1 = color2
 		color2 = color2
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
-		
+
 d_halogaland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
@@ -26903,22 +27070,22 @@ d_halogaland_norse = {
 		color1 = "black"
 		color2 = "yellow"
 		color3 = "black"
-		instance = { position = { 0.5 0.48 } scale = { -1 1 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { -1 1 } }
+	}
 }
-			
+
 c_vastvag_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_bird_alstad.dds"
 		color1 = "black"
 		color2 = "yellow"
-		instance = { position = { 0.58 0.63 } scale = { 0.66 0.66 } rotation = -75 }	
-		instance = { position = { 0.42 0.33 } scale = { -0.66 0.66 } rotation = -255 }			
-	}		
+		instance = { position = { 0.58 0.63 } scale = { 0.66 0.66 } rotation = -75 }
+		instance = { position = { 0.42 0.33 } scale = { -0.66 0.66 } rotation = -255 }
+	}
 }
 
 c_bothin = {
@@ -26951,19 +27118,19 @@ c_bothin_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "yellow"
-		
+
 	colored_emblem = {
 		texture = "ce_norse_longship_figureheads.dds"
 		color1 = "yellow"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.58 } scale = { 0.85 0.85 } }	
-	}	
+		instance = { position = { 0.5 0.58 } scale = { 0.85 0.85 } }
+	}
 	colored_emblem = {
 		texture = "ce_norse_walknut_stora_hammars.dds"
 		color1 = "yellow"
 		color2 = "red"
-		instance = { position = { 0.5 0.32 } scale = { 0.60 0.60 } }	
-	}	
+		instance = { position = { 0.5 0.32 } scale = { 0.60 0.60 } }
+	}
 }
 
 c_namdalfylki = {
@@ -26997,26 +27164,26 @@ c_namdalfylki_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red"
-	
+
 	colored_emblem = {
 		texture = "ce_rune_futhark_hagall.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 d_iceland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "white"
-	
+
 	colored_emblem = {
 		texture = "ce_vegvisir.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_vestisland = {
@@ -27044,7 +27211,7 @@ c_vestisland = {
 		}
 	}
 }
-			
+
 c_vestisland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
@@ -27054,14 +27221,14 @@ c_vestisland_norse = {
 		texture = "ce_frame_circle_urnes_pitney.dds"
 		color1 = "white"
 		color2 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_sleipnir.dds"
 		color1 = "white"
 		color2 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { -0.8 0.8 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { -0.8 0.8 } }
+	}
 }
 
 c_nordrland = {
@@ -27085,8 +27252,8 @@ c_nordrland_norse = {
 		color1 = "black"
 		color2 = "blue"
 		color3 = "grey"
-		instance = { position = { 0.5 0.48 } scale = { -1 1 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { -1 1 } }
+	}
 }
 
 c_austisland = {
@@ -27110,20 +27277,20 @@ c_austisland_norse = {
 		texture = "ce_circle_mask.dds"
 		color1 = "yellow"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }	
+		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }
 	}
 	colored_emblem = {
 		texture = "ce_frame_circle_urnes_runes.dds"
 		color1 = "black"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_aegishjalmr.dds"
 		color1 = "black"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.825 0.825 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.825 0.825 } }
+	}
 }
 
 c_sudurland = {
@@ -27183,7 +27350,7 @@ c_sudurland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "white"
-	
+
 	colored_emblem = {
 		texture = "ce_dragon_urnes_trollaskogur.dds"
 		color1 = "white"
@@ -27202,52 +27369,52 @@ d_northern_isles_norse = {
 		color1 = "yellow"
 		color2 = "blue"
 		color3 = "grey"
-		instance = { position = { 0.5 0.48 } scale = { -1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { -1.0 1.0 } }
+	}
 }
-					
+
 c_orkney_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_longship_figureheads.dds"
 		color1 = "black"
 		color2 = "black"
-		instance = { position = { 0.5 0.26 } scale = { 0.85 0.85 } }			
-		instance = { position = { 0.5 0.62 } scale = { 0.85 0.85 } }	
-	}	
+		instance = { position = { 0.5 0.26 } scale = { 0.85 0.85 } }
+		instance = { position = { 0.5 0.62 } scale = { 0.85 0.85 } }
+	}
 }
 
 c_faereyar_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "yellow"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_longship_gotland_shields.dds"
 		color1 = "yellow"
 		color2 = "yellow"
 		color3 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }			
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_shetland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "white"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_longship.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.26 } scale = { 0.85 0.85 } }			
-		instance = { position = { 0.5 0.62 } scale = { -0.85 0.85 } }	
-	}	
+		instance = { position = { 0.5 0.26 } scale = { 0.85 0.85 } }
+		instance = { position = { 0.5 0.62 } scale = { -0.85 0.85 } }
+	}
 }
-		
+
 d_jamtland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
@@ -27256,14 +27423,14 @@ d_jamtland_norse = {
 		texture = "ce_circle_mask.dds"
 		color1 = color1
 		color2 = color1
-		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }
+	}
 	colored_emblem = {
 		texture = "ce_frame_circle_borre_single_knots.dds"
 		color1 = color2
 		color2 = color1
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_dragon_urnes.dds"
 		color1 = "white"
@@ -27282,8 +27449,8 @@ c_jamtfir_norse = {
 		texture = "ce_ginfaxi.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}			
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_morarna = {
@@ -27321,8 +27488,8 @@ c_morarna_norse = {
 		texture = "ce_pagan_gironny_03.dds"
 		color1 = "red"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
-	}			
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_helgum = {
@@ -27341,13 +27508,13 @@ c_helgum_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "green"
 	color2 = "white"
-	
+
 	colored_emblem = {
 		texture = "ce_rune_futhark_sol.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_harjadalen = {
@@ -27387,27 +27554,27 @@ c_harjadalen_norse = {
 		texture = "ce_spirals_03_rotated.dds"
 		color1 = color1
 		color2 = color2
-		instance = { position = { 0.5 0.5 } scale = { -1.0 1.0 } }	
-	}			
+		instance = { position = { 0.5 0.5 } scale = { -1.0 1.0 } }
+	}
 }
 
 k_denmark_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "blue"
-	
+
 	colored_emblem = {
 		texture = "ce_frame_circle_borre_double_knots.dds"
 		color1 = "red"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_norse_odins_raven.dds"
 		color1 = "blue"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.45 } scale = { 0.8 0.8 } }	
-	}			
+		instance = { position = { 0.5 0.45 } scale = { 0.8 0.8 } }
+	}
 }
 
 d_sjaelland_norse = {
@@ -27419,8 +27586,8 @@ d_sjaelland_norse = {
 		color1 = "red"
 		color2 = "yellow"
 		color3 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { -1 1 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { -1 1 } }
+	}
 }
 
 c_sjaelland = {
@@ -27440,31 +27607,31 @@ c_sjaelland = {
 		}
 	}
 }
-	
+
 c_sjaelland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "yellow"
-	
+
 	colored_emblem = {
 		texture = "ce_circle_mask.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }	
+		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }
 	}
 	colored_emblem = {
 		texture = "ce_frame_circle_borre_single_knots_02.dds"
 		color1 = "yellow"
 		color2 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_norse_odroerir_snoldelev.dds"
 		color1 = "yellow"
 		color2 = "blue"
 		color3 = "grey"
-		instance = { position = { 0.5 0.48 } scale = { 0.85 0.85 } rotation = 22.5 }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.85 0.85 } rotation = 22.5 }
+	}
 }
 
 c_fyn_norse = {
@@ -27476,8 +27643,8 @@ c_fyn_norse = {
 		texture = "ce_pagan_spiral_06.dds"
 		color1 = "red"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
-	}			
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_lolland_falster = {
@@ -27502,13 +27669,13 @@ c_lolland_falster_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_triskele_snakes.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 d_skane_norse = {
@@ -27519,14 +27686,14 @@ d_skane_norse = {
 		texture = "ce_frame_circle_borre_doted.dds"
 		color1 = "yellow"
 		color2 = "brown"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_norse_mjolnir_skane.dds"
 		color1 = "yellow"
 		color2 = "brown"
-		instance = { position = { 0.5 0.48 } scale = { 0.65 0.65 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.65 0.65 } }
+	}
 }
 
 c_skane_norse = {
@@ -27537,35 +27704,35 @@ c_skane_norse = {
 		texture = "ce_frame_circle_urnes_runes.dds"
 		color1 = "white"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_norse_fenrir_tullstorp.dds"
 		color1 = "white"
 		color2 = "yellow"
 		color3 = "grey"
-		instance = { position = { 0.5 0.48 } scale = { 0.85 0.85 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.85 0.85 } }
+	}
 }
 
 c_halland_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "blue"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_sun_cross_getinge.dds"
 		color1 = "blue"
 		color2 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_bornholm_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "yellow"
-	
+
 	colored_emblem = {
 		texture = "ce_dragon_urnes.dds"
 		color1 = "yellow"
@@ -27596,8 +27763,8 @@ c_blekinge_norse = {
 		color1 = "white"
 		color2 = "red"
 		color3 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 1 1 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1 1 } }
+	}
 }
 
 d_jylland_norse = {
@@ -27624,25 +27791,25 @@ c_aarhus = {
 		texture="ce_barry_06.dds"
 	}
 }
-			
+
 c_aarhus_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red"
-	
+
 	colored_emblem = {
 		texture = "ce_circle_mask.dds"
 		color1 = "blue"
 		color2 = "blue"
-		instance = { position = { 0.445 0.275 } scale = { 0.055 0.055 } }	
-		instance = { position = { 0.555 0.275 } scale = { 0.055 0.055 } }			
-	}	
+		instance = { position = { 0.445 0.275 } scale = { 0.055 0.055 } }
+		instance = { position = { 0.555 0.275 } scale = { 0.055 0.055 } }
+	}
 	colored_emblem = {
 		texture = "ce_odins_mask.dds"
 		color1 = "red"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 1.1 1.1 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.1 1.1 } }
+	}
 }
 
 c_viborg = {
@@ -27660,14 +27827,14 @@ c_viborg = {
 c_viborg_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
-	color2 = "blue"	
-	
+	color2 = "blue"
+
 	colored_emblem = {
 		texture = "ce_gironny_08_rotated.dds"
 		color1 = "blue"
 		color2 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_ringkobing = {
@@ -27686,13 +27853,13 @@ c_ringkobing_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "blue"
 	color2 = "white"
-		
+
 	colored_emblem = {
 		texture = "ce_pagan_cross_losen.dds"
 		color1 = "white"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.9 0.9 } }
+	}
 }
 
 c_aalborg = {
@@ -27711,26 +27878,26 @@ c_aalborg_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "yellow"
-	
+
 	colored_emblem = {
 		texture = "ce_circle_mask.dds"
 		color1 = "blue"
 		color2 = "red"
-		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.7 0.7 } }
+	}
 	colored_emblem = {
 		texture = "ce_frame_circle_borre_single.dds"
 		color1 = "yellow"
 		color2 = "brown"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 	colored_emblem = {
 		texture = "ce_norse_longship_gotland_shields.dds"
 		color1 = "yellow"
 		color2 = "orange"
 		color3 = "grey"
-		instance = { position = { 0.5 0.48 } scale = { 0.75 0.75 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.75 0.75 } }
+	}
 }
 
 d_slesvig_norse = {
@@ -27750,13 +27917,13 @@ c_slesvig_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "blue"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_mjolnir_romersdal.dds"
 		color1 = "blue"
 		color2 = "blue"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_vorbasse = {
@@ -27780,93 +27947,93 @@ c_vorbasse_norse = {
 		texture = "ce_gironny_03_rotated.dds"
 		color1 = "blue"
 		color2 = "white"
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
-	}			
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
 }
 
 c_ribe_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "white"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_longship_figureheads.dds"
 		color1 = "white"
 		color2 = "white"
-		instance = { position = { 0.5 0.26 } scale = { 0.85 0.85 } }			
-		instance = { position = { 0.5 0.62 } scale = { 0.85 0.85 } }	
-	}	
+		instance = { position = { 0.5 0.26 } scale = { 0.85 0.85 } }
+		instance = { position = { 0.5 0.62 } scale = { 0.85 0.85 } }
+	}
 }
 
 d_york_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "black"
-		
+
 	colored_emblem = {
 		texture = "ce_norse_odins_raven.dds"
 		color1 = "black"
 		color2 = "white"
-		instance = { position = { 0.475 0.45 } scale = { 0.95 0.95 } rotation = -30 }	
-	}			
+		instance = { position = { 0.475 0.45 } scale = { 0.95 0.95 } rotation = -30 }
+	}
 }
 
 c_east_riding_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_triquetra.dds"
 		color1 = "red"
 		color2 = "white"
-		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }	
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
 	}
-	
+
 }
 
 d_western_isles_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_longship_figureheads.dds"
 		color1 = "black"
 		color2 = "black"
-		instance = { position = { 0.5 0.19 } scale = { 0.85 0.75 } }			
-		instance = { position = { 0.5 0.46 } scale = { 0.85 0.75 } }	
-		instance = { position = { 0.5 0.73 } scale = { 0.85 0.75 } }			
-	}	
+		instance = { position = { 0.5 0.19 } scale = { 0.85 0.75 } }
+		instance = { position = { 0.5 0.46 } scale = { 0.85 0.75 } }
+		instance = { position = { 0.5 0.73 } scale = { 0.85 0.75 } }
+	}
 }
 
 c_inner_hebrides_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "red"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_bird_alstad.dds"
 		color1 = "red"
 		color2 = "blue_light"
-		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }	
-	}		
+		instance = { position = { 0.5 0.48 } scale = { 0.95 0.95 } }
+	}
 }
 
 c_dublin_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
 	color2 = "black"
-	
+
 	colored_emblem = {
 		texture = "ce_norse_longship_gotland_shields.dds"
 		color1 = "black"
 		color2 = "black"
 		color3 = "yellow"
-		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }			
-	}	
+		instance = { position = { 0.5 0.48 } scale = { 1.0 1.0 } }
+	}
 }
-	
+
 c_argyll_norse = {
 	pattern = "pattern_solid.dds"
 	color1 = "yellow"
@@ -27876,8 +28043,8 @@ c_argyll_norse = {
 		texture = "ce_spirals_03_rotated.dds"
 		color1 = color1
 		color2 = color2
-		instance = { position = { 0.5 0.5 } scale = { -1.0 1.0 } }	
-	}			
+		instance = { position = { 0.5 0.5 } scale = { -1.0 1.0 } }
+	}
 }
 
 d_imami = {
@@ -27885,18 +28052,37 @@ d_imami = {
 	color1 = "green"
 	color2 = "white"
 	colored_emblem = {
-		texture = "ce_arabic_allah.dds"
+		texture = "ce_arabic_mahdi.dds"
 		color1 = "yellow"
-		color2 = "white"
-		#instance = {	scale = { 0.9 0.9 }	}
+		instance = {
+			scale={ 0.700000 0.700000 }
+		}
 	}
 }
+
+#coa_title_16={
+#	custom=yes
+#	pattern="pattern__solid_designer.dds"
+#	color1=green
+#	color2=black
+#	color3=green
+#	colored_emblem={
+#		color1=yellow
+#		texture="ce_arabic_mahdi.dds"
+#		instance={
+#			scale={ 0.700000 0.700000 }
+#		}
+
+#	}
+
+#}
+
 
 c_naumberg = { # Lubkso
 	pattern = "pattern_solid.dds"
 	color1 = "red"
 	color2 = "red"
-	
+
 	colored_emblem = { # Gate
 		texture = "ce_portcullis.dds"
 		color1 = "yellow"
@@ -28053,4 +28239,294 @@ c_najera = {
 		}
 	}
 }
+
+#FP3
+d_soghd ={ #Sogdia
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=blue_light
+		texture="ce_star_06.dds"
+		instance={
+			position={ 0.300000 0.200000 }
+			scale={ 0.310000 0.310000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		color2=blue_light
+		color3=orange
+		texture="ce_simurgh.dds"
+		instance={
+			position={ 0.490000 0.550000 }
+			scale={ 0.550000 0.550000 }
+		}
+
+	}
+
+}
+
+d_soghd ={ #Sogdia
+	pattern="pattern_solid.dds"
+	color1=green
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=yellow
+		texture="ce_rubh_el_hizb_arch.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+d_soghd={
+	pattern="pattern_solid.dds"
+	color1=green
+	color2=white
+	color3=green
+	colored_emblem={
+		color1=yellow
+		color2=orange
+		texture="ce_mena_sun.dds"
+		instance={
+			position={ 0.490000 0.240000 }
+			scale={ 0.440000 0.440000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		color2=orange
+		texture="ce_simurgh.dds"
+		instance={
+			position={ 0.510000 0.650000 }
+			scale={ 0.450000 0.450000 }
+		}
+
+	}
+
+}
+
+d_fars={
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=blue
+	color3=blue_light
+	colored_emblem={
+		color1=blue_light
+		color2=blue
+		texture="ce_huma.dds"
+		instance={
+			position={ 0.490000 0.510000 }
+			scale={ 0.630000 0.630000 }
+		}
+
+	}
+
+	colored_emblem={
+		color1=blue_light
+		texture="ce_tamgha_regular_circle_frame.dds"
+		instance={
+			scale={ 0.790000 0.790000 }
+			depth=1.010000
+		}
+
+	}
+
+}
+
+d_isfahan={
+	pattern="pattern_solid.dds"
+	color1=rgb { 7 50 90 }
+	color2=white
+	color3=green
+	colored_emblem={
+		color1=yellow
+		color2=blue_light
+		color3=white
+		texture="ce_isfahan.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+
+}
+
+d_ghur={
+	pattern="pattern_solid.dds"
+	color1=green
+	color2=red
+	color3=white
+	colored_emblem={
+		color1=white
+		texture="ce_rubh_el_hizb_arch.dds"
+		instance={
+			scale={ 0.560000 0.560000 }
+		}
+	}
+
+	colored_emblem={
+		color1=red
+		color2=yellow
+		texture="ce_doted_roundel_frame.dds"
+		instance={
+			scale={ 0.750000 0.750000 }
+			depth=1.010000
+		}
+	}
+}
+
+d_nizari ={
+	pattern="pattern_solid.dds"
+	color1=green
+	color2=white
+	color3=green_light
+	colored_emblem={
+		color1=white
+		texture="ce_tiger_calligraphy.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+d_ismaili = {
+	pattern="pattern_solid.dds"
+	color1=black
+	color2=white
+	color3=red
+	colored_emblem={
+		color1=white
+		texture="ce_tiger_calligraphy.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+d_zayidi = {
+	pattern="pattern_solid.dds"
+	color1=green
+	color2=yellow
+	color3=green
+	colored_emblem={
+		color1=white
+		texture="ce_arabic_ali.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+d_balkh ={
+	pattern="pattern_diagonal_split_01.dds"
+	color1=red
+	color2=black
+	color3=green
+	colored_emblem={
+		color1=yellow
+		texture="ce_tamgha_hephthalites.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+
+	}
+
+}
+
+c_baduspan = {
+	pattern="pattern_solid.dds"
+	color1=blue
+	color2=yellow
+	color3=green
+	colored_emblem={
+		color1=yellow
+		texture="ce_tamgha_doted_circle_frame.dds"
+		instance={
+			scale={ 0.780000 0.780000 }
+			depth=1.010000
+		}
+
+	}
+
+	colored_emblem={
+		color1=yellow
+		color2=white
+		color3=blue
+		texture="ce_persian_bull.dds"
+		instance={
+			position={ 0.500000 0.510000 }
+			scale={ 0.730000 0.730000 }
+		}
+
+	}
+}
+
+c_mazandaran = {
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=purple
+	color3=yellow
+	colored_emblem={
+		color1=purple
+		color2=yellow
+		texture="ce_polylobe_plain_frame.dds"
+		instance={
+			scale={ 0.750000 0.750000 }
+			depth=1.010000
+		}
+	}
+
+	colored_emblem={
+		color1=yellow
+		texture="ce_star_sassanian.dds"
+		instance={
+			scale={ 0.600000 0.600000 }
+		}
+	}
+}
+
+c_bukhara = {
+	pattern="pattern_solid.dds"
+	color1=yellow
+	color2=green_light
+	color3=red
+	colored_emblem={
+		color1=green
+		color2=orange
+		color3=yellow
+		texture="ce_simurgh.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+b_alamut = {
+	pattern="pattern_solid.dds"
+	color1=red
+	color2=white
+	color3=blue
+	colored_emblem={
+		color1=white
+		texture="ce_tiger_calligraphy.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+		}
+	}
+}
+
+
+
+
+
 

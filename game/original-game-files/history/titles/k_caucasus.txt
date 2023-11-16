@@ -520,7 +520,8 @@ c_tmutarakan = {
 	#Annexed by Kievan Rus'
 	1016.1.1 = {
 		liege = "d_kiev"
-	holder = 618
+		government = feudal_government
+		holder = 618
 	}
 	1024.1.2 = {
 		liege = "d_chernigov"
@@ -1229,67 +1230,44 @@ c_samander = {
 	731.1.1 = {
 		holder = 74009
 	}
-	749.1.1 = {
-		holder = 74012
+	740.1.1 = {
+		holder = saririds_1
+		government = clan_government
 	}
-	763.1.1 = {
-		holder = 146203
+	788.1.1 = {
+		holder = saririds_2
 	}
-	796.1.1 = {
-		holder = 74018
+	832.1.1 = {
+		holder = saririds_3
 	}
-	802.1.1 = {
-		holder = 74019
+	836.1.1 = {
+		holder = saririds_4
 	}
-	818.1.1 = {
-		holder = 74020
+	853.1.1 = {
+		holder = saririds_5
 	}
-	829.1.1 = {
-		holder = 74021
+	905.1.1 = {
+		holder = saririds_6
 	}
-	831.1.1 = {
-		holder = 74022
+	940.1.1 = {
+		holder = saririds_7
 	}
-	847.1.1 = {
-		holder = 74023
+	950.1.1 = {
+		holder = saririds_8
 	}
-	852.1.1 = {
-		holder = 74024
+	1025.1.1 = {
+		holder = saririds_9
 	}
-	864.1.1 = {
-		holder = 74025
+	1026.1.1 = {
+		holder = saririds_10
 	}
-	888.1.1 = {
-		holder = 74026
+	1064.1.1 = {
+		liege = 0 #Sarir seem to have been independent at this time, though more research wouldn't hurt 
+		holder = saririds_11
 	}
-	899.1.1 = {
-		holder = 146187
-	}
-	916.1.1 = {
-		holder = 146188
-	}
-	920.1.1 = {
-		holder = 146189
-	}
-	928.1.1 = {
-		holder = 146190
-	}
-	945.1.1 = {
-		holder = 146191
-	}
-	969.1.1 = {
-		holder = 146193
-	}
-	993.1.1 = {
-		holder = 146194
-	}
-	
 	#Cumans
-	1030.1.1 = {
+	1080.1.1 = {
 		liege = "k_cuman"
-	holder = 90142
-	}
-	1060.1.1 = {
 		holder = 20663
 	}
 	1110.1.1 = {

@@ -33,3 +33,8 @@ change_law_male_preference_faith_requirement = {
 change_law_female_preference_faith_requirement = {
 	global_not = MUST_HAVE_FEMALE_DOMINATED_OR_EQUAL
 }
+
+has_house_unity_parameter = {
+	third = has_house_unity_parameter
+	third_not = not_has_house_unity_parameter
+}

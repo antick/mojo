@@ -3381,29 +3381,28 @@ c_ravensburg = {
 	#810.1.1 = {
 	#	holder = 0
 	#}
-	854.1.1 = {
+	825.1.1 = {
 		liege = k_east_francia
+		holder = 7990 # Welf I
 	}
-	854.1.1 = {
-		holder = 167792
+	911.1.1 = {
+		holder = 7992 # Heinrich
 	}
-	865.1.1 = {
-		liege = d_swabia
+	975.1.1 = {
+		holder = 1524 # Rudolf I
 	}
-	876.8.28 = {
-		liege = k_east_francia
+	990.1.2 = {
+		holder = 1526 # Rudolf II
 	}
-	1018.1.1 = {
-		liege = "d_swabia"
+	1010.1.1 = {
+		holder = 1528 # Welf II
+		liege = e_hre
 	}
-	1018.1.1 = {
-		holder = 30750
+	1030.3.10 = {
+		holder = 7941 # Welf III
 	}
-	1028.1.1 = {
-		holder = 7053
-	}
-	1054.1.7 = {
-		holder = 7054 #Friedrich I von Hohenstaufen
+	1055.11.13 = {
+		holder = 1530 # Welf IV
 	}
 	1105.7.21 = {
 		holder = 212495 #Friedrich II von Hohenstaufen

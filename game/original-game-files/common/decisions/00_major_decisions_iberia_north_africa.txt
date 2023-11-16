@@ -1,5 +1,5 @@
 ﻿form_portugal_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 	ai_check_interval = 60
 	desc = form_portugal_decision_desc
@@ -100,7 +100,7 @@
 }
 
 unite_the_spanish_thrones_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 	ai_check_interval = 60
 	desc = unite_the_spanish_thrones_decision_desc
@@ -154,6 +154,7 @@ unite_the_spanish_thrones_decision = {
 				has_primary_title = title:k_andalusia
 				has_primary_title = title:k_badajoz
 				has_primary_title = title:k_valencia
+				has_primary_title = title:k_toledo
 			}
 		}
 		#Must not be too early
@@ -393,7 +394,7 @@ avenge_the_battle_of_tours_decision = {
 
 #Kingdom of Canarias
 declare_canarias_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 	ai_check_interval = 600
 	desc = declare_canarias_decision_desc
@@ -502,7 +503,7 @@ declare_canarias_decision = {
 ##################################################
 
 form_the_kingdom_of_aragon_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 
 	ai_check_interval = 60
@@ -511,6 +512,7 @@ form_the_kingdom_of_aragon_decision = {
 	selection_tooltip = form_the_kingdom_of_aragon_decision_tooltip
 
 	is_shown = {
+		is_landed = yes # Redundancy check
 		# Can't form Aragon if Aragon already formed.
 		game_start_date < 1035.10.18
 		# Not relevant for characters who are already kings.

@@ -92,6 +92,9 @@ on_trigger_court_events = {
 		100 = court.9300 # Overt Overindulgence
 		100 = court.9500 # A Little Language
 		100 = court.0109 # Executioner wants to become a doctor
+
+		#Fp3
+		200 = fp3_yearly.2010 #Maunds of Wheat
 	}
 }
 

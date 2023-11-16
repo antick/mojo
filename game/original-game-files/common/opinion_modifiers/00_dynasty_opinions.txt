@@ -8,6 +8,18 @@ denounced_opinion = {
 	opinion = -50
 }
 
+accused_of_decadence_opinion = {
+	opinion = -30
+	monthly_change = 0.1
+	decaying = yes
+}
+
+extolled_virtue_opinion = {
+	opinion = 30
+	monthly_change = 0.1
+	decaying = yes
+}
+
 forgave_denounced_opinion = {
 	opinion = -25
 	decaying = yes

@@ -17,6 +17,9 @@ error_suppression.0001 = {
 		add_character_modifier = {
 			modifier = matilda_of_canossa_modifier
 		}
+		add_character_modifier = {
+			modifier = police_chief_of_baghdad_modifier
+		}
 
 		
 		# "Variable 'has_scripted_appearance' is used but is never set"

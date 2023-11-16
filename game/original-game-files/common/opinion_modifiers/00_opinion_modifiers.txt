@@ -216,6 +216,20 @@ banned_from_knight_force = {
 	decaying = no
 }
 
+ally_at_court_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+rival_at_court_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+betrayal_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
 
 #General
 
@@ -288,6 +302,11 @@ exposed_my_secret_opinion = {
 humorous_opinion = {
 	opinion = 5
 	years = 5
+	decaying = yes
+}
+
+resigned_opinion = {
+	monthly_change = 0.1
 	decaying = yes
 }
 
@@ -527,6 +546,13 @@ declined_guardianship_opinion = {
 	stacking = yes
 }
 
+declined_ward_opinion = {
+	opinion = -15
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
 tried_to_eat_me_opinion = {
 	monthly_change = 0.1
 	decaying = yes
@@ -734,7 +760,7 @@ treacherous_invader_opinion = {
 	years = 100
 }
 
-helped_me_agaisnt_tyrant_opinion = {
+helped_me_against_tyrant_opinion = {
 	opinion = 25
 	years = 15
 	decaying = yes
@@ -765,6 +791,11 @@ preferred_heir_opinion = {
 unpreferred_heir_opinion = {
 	opinion = -20
 	years = 10
+	decaying = yes
+}
+
+upset_elites_opinion = {
+	monthly_change = 0.1
 	decaying = yes
 }
 
@@ -811,6 +842,34 @@ glory_hound_disapproves_war_white_peace_opinion = {
 }
 
 glory_hound_disapproves_war_defeat_opinion = {
+	opinion = -20
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+antagonistic_house_approves_war_victory_opinion = {
+	opinion = 10
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+antagonistic_house_approves_war_victory_defensive_opinion = {
+	opinion = 15
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+antagonistic_house_disapproves_war_white_peace_opinion = {
+	opinion = -10
+	years = 10
+	decaying = yes
+	stacking = yes
+}
+
+antagonistic_house_disapproves_war_defeat_opinion = {
 	opinion = -20
 	years = 10
 	decaying = yes
@@ -1159,6 +1218,12 @@ murder_feast_family_opinion = {
 	decaying = yes
 }
 
+doubted_me = {
+	opinion = -15
+	years = 10
+	decaying = yes
+}
+
 bloody_wedding_family_opinion = {
 	opinion = -30
 	years = 20
@@ -1175,6 +1240,10 @@ passed_me_over_for_regent_opinion = {
 	monthly_change = 0.1
 	decaying = yes
 }
+appointed_vizier_over_designated_regent_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
 designated_bad_regent_opinion = {
 	monthly_change = 0.1
 	decaying = yes
@@ -1187,6 +1256,38 @@ designated_me_regent_opinion = {
 }
 
 emulating_culture_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+changed_tax_collector_mandate_opinion = {
+	opinion = -10
+	decaying = yes
+	years = 5
+}
+
+fired_from_tax_collector_position_opinion = {
+	opinion = -20
+	decaying = yes
+	years = 10
+}
+
+goldlust_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+took_my_coin_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+reluctant_duty = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+turncoat_opinion = {
 	monthly_change = 0.1
 	decaying = yes
 }

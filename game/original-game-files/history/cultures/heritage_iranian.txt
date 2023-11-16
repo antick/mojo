@@ -2,7 +2,6 @@
 # Kurdish
 # Tajik
 # Baloch
-# Tocharian
 
 # Daylamite, Afghan, Khwarezmian, Sogdian in separate files
 

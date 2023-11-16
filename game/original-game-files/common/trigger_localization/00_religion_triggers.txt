@@ -94,3 +94,57 @@ cannot_create_hof_title_at_or_above_liege_tier = {
 character_can_only_create_one_faith = {
 	first_not = CHAR_CAN_ONLY_CREATE_ONE_FAITH
 }
+
+any_faith_ruler = {
+	global = ANY_FAITH_RULER_GLOBAL
+}
+
+claim_the_imamate_decision.need_at_least_five_same_faith_counties = {
+	first = claim_the_imamate_decision.need_at_least_five_same_faith_counties
+	first_not = claim_the_imamate_decision.need_at_least_five_same_faith_counties
+}
+
+claim_the_imamate_decision.need_at_least_fifteen_same_faith_counties = {
+	first = claim_the_imamate_decision.need_at_least_fifteen_same_faith_counties
+	first_not = claim_the_imamate_decision.need_at_least_fifteen_same_faith_counties
+}
+
+claim_the_imamate_decision.foreign_ruler = {
+	first = claim_the_imamate_decision.foreign_ruler
+	first_not = claim_the_imamate_decision.foreign_ruler
+}
+
+claim_the_imamate_decision.no_more_than_x_sinful_traits = {
+	first = claim_the_imamate_decision.no_more_than_x_sinful_traits
+	first_not = claim_the_imamate_decision.no_more_than_x_sinful_traits
+}
+
+avenge_the_battle_of_nahrawan_sunni_caliphate_irrelevant = {
+	first = avenge_the_battle_of_nahrawan_sunni_caliphate_irrelevant
+	first_not = avenge_the_battle_of_nahrawan_sunni_caliphate_irrelevant
+}
+
+avenge_the_battle_of_nahrawan_shia_caliphate_irrelevant = {
+	first = avenge_the_battle_of_nahrawan_shia_caliphate_irrelevant
+	first_not = avenge_the_battle_of_nahrawan_shia_caliphate_irrelevant
+}
+
+pledged_to_not_promote_persian_desc = {
+	first = pledged_to_not_promote_persian_desc
+	first_not = pledged_to_not_promote_persian_desc
+}
+
+name_already_read_in_friday_prayer = {
+	first = name_already_read_in_friday_prayer
+	first_not = name_already_read_in_friday_prayer
+}
+
+name_read_in_friday_prayer_crown_authority = {
+	first = name_read_in_friday_prayer_crown_authority
+	first_not = name_read_in_friday_prayer_crown_authority
+}
+
+knows_about_character_being_same_crypto_religionist = {
+	first = IS_AWARE_OF_SHARED_CRYPTO_RELIGION
+	first_not = IS_NOT_AWARE_OF_SHARED_CRYPTO_RELIGION
+}

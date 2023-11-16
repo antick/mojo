@@ -654,6 +654,12 @@ has_a_witch_secret_known_by_character = {
 	global = HAS_A_WITCH_SECRET_KNOWN_BY_CHARACTER
 }
 
+has_a_crypto_religionist_secret_known_by_character = {
+	third = CHARACTER_HAS_A_CRYPTO_RELIGIONIST_SECRET_KNOWN_BY_CHARACTER
+	third_not = CHARACTER_HAS_A_CRYPTO_RELIGIONIST_SECRET_NOT_KNOWN_BY_CHARACTER
+	global = HAS_A_CRYPTO_RELIGIONIST_SECRET_KNOWN_BY_CHARACTER
+}
+
 has_51_percent_of_a_dejure_title = {
 	third_not = NOT_HAS_51_PERCENT_OF_A_DE_JURE_TITLE
 }
@@ -668,6 +674,10 @@ cannot_blackmail_over_own_bastard = {
 
 cant_blackmail_another_witch = {
 	first_not = I_CANNOT_BLACKMAIL_ANOTHER_WITCH
+}
+
+cannot_blackmail_crypto_religionist_of_same_faith = {
+	first_not = I_CANNOT_BLACKMAIL_CRYPTO_RELIGIONIST_OF_SAME_FAITH
 }
 
 already_has_a_superior_hook = {
@@ -1083,6 +1093,11 @@ synergise_friendship_interaction_cannot_share_education = {
 	global_not = synergise_friendship_interaction_cannot_share_education
 }
 
+
+target_has_your_faith = {
+	first_not =  YOU_CANNOT_ASSASSINATE_THE_FAITHFUL
+}
+
 you_must_not_have_a_claim_on_the_title = {
 	global_not = you_must_not_have_a_claim_on_the_title
 }
@@ -1101,4 +1116,20 @@ basic_valid_hostage_to_demand = {
 
 hostage_oath_of_friendship_trigger = {
 	global = HOSTAGE_OATH_OF_FRIENDSHIP
+}
+
+vassal_has_the_wrong_faith = {
+	third_not = VASSAL_HAS_THE_WRONG_FAITH
+}
+
+vassal_has_the_wrong_religion = {
+	third_not = VASSAL_HAS_THE_WRONG_RELIGION
+}
+
+vassal_is_not_far_enough = {
+	third_not = VASSAL_IS_NOT_FAR_ENOUGH
+}
+
+influence_child_personality_interaction_trait_limit = {
+	global_not = influence_child_personality_interaction_trait_limit
 }

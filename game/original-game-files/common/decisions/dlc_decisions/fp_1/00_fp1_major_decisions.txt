@@ -297,7 +297,7 @@ found_capital_of_the_rus_decision = {
 
 # This decision is intentionally fairly whimsical, and in no way intended to reflect historical reality or possibility, nor is it in any way affiliated with affiliated with the Isle of Mann Tourism Board.
 elevate_mann_and_the_isles_decision = {
-	picture = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 
 	ai_check_interval = 120

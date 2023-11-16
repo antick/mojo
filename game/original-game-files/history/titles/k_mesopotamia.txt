@@ -275,7 +275,7 @@ c_kirkuk = {
 	
 	866.1.1 = {
 		liege = e_arabia
-		holder = 34014
+		holder = levantine000009
 	}
 	
 	1066.1.1 = {
@@ -813,9 +813,8 @@ c_safata = {
 		liege = e_arabia
 		holder = 188609 # Muhammad b Sulayman b Ali
 	}
-	
 	866.1.1 = {
-		liege = d_basra
+		liege = e_arabia
 		holder = 34017
 	}
 	1012.1.1 = {

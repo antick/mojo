@@ -4,7 +4,7 @@
 	desc = murder_desc_general
 	hostile = yes
 	icon = icon_scheme_hostile
-	
+
 	allow = {
 		age >= 14
 		is_imprisoned = no
@@ -182,23 +182,6 @@
 			}
 			desc = HAS_ATTEMPTED_TO_MURDER_TARGET_BEFORE
 		}
-		# Spiritual Head of Faith
-		modifier = {
-			add = -25
-			desc = "SCHEME_VS_SPIRITUAL_HOF"
-			scope:target = {
-				faith = scope:owner.faith
-				faith = {
-					has_doctrine = doctrine_spiritual_head
-				}
-				faith = {
-					exists = religious_head
-					religious_head = {
-			 			this = scope:target
-			 		}
-				}
-			}
-		}
 		
 		# Spiritual Head of Faith
 		modifier = {
@@ -290,6 +273,16 @@
 					has_scheme_modifier = feast_learnt_habits_modifier
 				}
 			}
+		}
+
+		# Caliph protection
+		modifier = {
+			add = -200
+			scope:target = {
+				has_character_modifier = fp3_struggle_caliph_super_suspicious_modifier
+			}
+			desc = has_fp3_struggle_caliph_super_suspicious_modifier
+
 		}
 	}
 	

@@ -2195,3 +2195,153 @@ yemeni0046 = {
 		death = yes
 	}
 }
+
+
+####FP3 additions, the al-Aud dynasty, who settled in Azerbaijan around 758 at the behest of the Abbasid governor. IMPORTANT! The clan and its presence in the area is historically accurate, but its members are fictional.
+
+fictional_yemenis_0001 = { #The al-Aud dynasty of Barza, Azerbaijan
+	name = "Aarif"
+	dynasty = yemeni_al_aud
+	religion = ashari
+	culture = yemeni
+	717.2.12 = {
+		birth = yes
+	}
+	765.4.6 = {
+		death = yes
+	}
+}
+
+fictional_yemenis_0002 = {
+	name = "Shujah"
+	dynasty = yemeni_al_aud
+	religion = ashari
+	culture = yemeni
+	father = fictional_yemenis_0001
+	742.6.24 = {
+		birth = yes
+	}
+	801.4.2 = {
+		death = yes
+	}
+}
+
+fictional_yemenis_0003 = {
+	name = "Muzaffaraddin"
+	dynasty = yemeni_al_aud
+	religion = zayidi
+	culture = yemeni
+	father = fictional_yemenis_0002
+	777.6.19 = {
+		birth = yes
+	}
+	835.4.9 = {
+		death = yes
+	}
+}
+
+fictional_yemenis_0004 = {
+	name = "Burhanaddin"
+	dynasty = yemeni_al_aud
+	religion = zayidi
+	culture = yemeni
+	father = fictional_yemenis_0003
+	821.12.24 = {
+		birth = yes
+	}
+	879.1. = {
+		death = yes
+	}
+}
+
+fictional_yemenis_0006 = {
+	name = "Aarif"
+	dynasty = yemeni_al_aud
+	religion = zayidi
+	culture = yemeni
+	father = fictional_yemenis_0004
+	trait = education_diplomacy_2
+	trait = fickle
+	trait = ambitious
+	trait = chaste
+	845.2.12 = {
+		birth = yes
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+
+#the Hamdan dynasty of Miyaneh, Azerbaijan
+
+extra_yemenis_0001 = { #The Hamdan dynasty of Miyaneh, Azerbaijan
+	name = "Jafar"
+	dynasty = yemeni_hamdan
+	religion = ashari
+	culture = yemeni
+	716.2.23 = {
+		birth = yes
+	}
+	795.4.6 = {
+		death = yes
+	}
+}
+
+extra_yemenis_0002 = {
+	name = "Abdallah"
+	dynasty = yemeni_hamdan
+	religion = ashari
+	culture = yemeni
+	father = extra_yemenis_0001
+	740.5.24 = {
+		birth = yes
+	}
+	820.4.2 = {
+		death = yes
+	}
+}
+
+extra_yemenis_0003 = {
+	name = "Humayd"
+	dynasty = yemeni_hamdan
+	religion = ashari
+	culture = yemeni
+	father = extra_yemenis_0002
+	773.6.19 = {
+		birth = yes
+	}
+	845.4.9 = {
+		death = yes
+	}
+}
+
+extra_yemenis_0004 = { 
+	name = "Muhammad"
+	dynasty = yemeni_hamdan
+	religion = ashari
+	culture = yemeni
+	father = extra_yemenis_0003
+	801.5.24 = {
+		birth = yes
+	}
+	835.4.3 = {
+		death = yes
+	}
+}
+
+fictional_yemenis_0014 = {
+	name = "Mubariz_ad-Din"
+	dynasty = yemeni_hamdan
+	religion = ashari
+	culture = yemeni
+	father = extra_yemenis_0004
+	trait = brave
+	trait = cynical
+	trait = intellect_bad_1
+	828.2.12 = {
+		birth = yes
+	}
+	884.1.1 = {
+		death = yes
+	}
+}

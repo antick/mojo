@@ -1,10 +1,13 @@
-#k_transoxiana
+﻿#k_transoxiana
 ##d_soghd ###################################
 ###c_bukhara
 4394 = {	#Bukhara
 	culture = sogdian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
+	450.1.1 = {
+		special_building = ark_of_bukhara_01
+	}
 	900.1.1 = {
 		religion = maturidi
 		culture = tajik
@@ -37,7 +40,7 @@
 ###c_kishsh
 4388 = {	#Kishsh
 	culture = sogdian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
 	900.1.1 = {
 		religion = maturidi
@@ -65,7 +68,7 @@
 ###c_nakhshab
 4390 = {	#Nakhshab
 	culture = sogdian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
 	900.1.1 = {
 		religion = maturidi
@@ -87,7 +90,7 @@
 ###c_firabr	#AKA Paykend
 4393 = {	#Paykend	
 	culture = sogdian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
 	900.1.1 = {
 		religion = maturidi
@@ -110,7 +113,7 @@
 ###c_dabusiya
 4402 = {	#Dabusiya
 	culture = sogdian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
 	900.1.1 = {
 		religion = maturidi
@@ -133,13 +136,14 @@
 ###c_samarkand
 4404 = {	#Samarqand / Samarkand
 	culture = sogdian
-	religion = gayomarthianism
+	religion = maturidi
 	holding = castle_holding
 	867.1.1 = {
 		buildings = {
 			cereal_fields_01
 			plantations_01
 		}
+		special_building_slot = shah_i_zinda_01
 	}
 	900.1.1 = {
 		religion = maturidi
@@ -151,6 +155,7 @@
 			plantations_02
 			#watchtowers_01
 		}
+		special_building = shah_i_zinda_01
 	}
 	1230.1.1 = { culture = turkish }
 }
@@ -172,9 +177,18 @@
 ##d_badakhshan ###################################
 ###c_badakhshan
 4355 = {	#Badakhshan
-	culture = afghan
+	culture = sogdian #represents the Pamir and Bactrian cultures that seems to have been present here in this period
 	religion = mahayana
 	holding = castle_holding
+	1.1.1 = {
+		special_building = sar_i_sang_mines_01 #famous lapis lazuli mine, in use since prehistorical times
+	}
+	1000.1.1 = {
+		culture = tajik
+	}
+	1060.1.1 = {
+		faith = ismaili
+	}
 }
 4353 = {	#Rustaq
 	holding = none
@@ -191,9 +205,15 @@
 
 ###c_munjan
 4357 = {	#Munjan
-	culture = afghan
+	culture = sogdian #represents the Pamir and Bactrian cultures that seems to have been present here in this period
 	religion = mahayana
 	holding = castle_holding
+	1000.1.1 = {
+		culture = tajik
+	}
+	1062.1.1 = {
+		faith = ismaili
+	}
 }
 4358 = {	#Sanglich
 	holding = none
@@ -204,9 +224,12 @@
 
 ###c_wakhan
 4362 = {	#Wakhan
-	culture = afghan
+	culture = saka #represents the Pamir and Bactrian cultures that seems to have been present here in this period
 	religion = mahayana
 	holding = castle_holding
+	1000.1.1 = {
+		culture = tajik
+	}
 }
 4360 = {	#Ishkamish
 	holding = city_holding
@@ -219,9 +242,12 @@
 
 ###c_shughnan
 4363 = {	#Shughnan
-	culture = afghan
+	culture = saka #represents the Pamir and Bactrian cultures that seems to have been present here in this period
 	religion = mahayana
 	holding = castle_holding
+	1000.1.1 = {
+		culture = tajik
+	}
 }
 4364 = {	#Alichur
 	holding = none
@@ -238,9 +264,12 @@
 
 ###c_karran
 4366 = {	#Upper Karran
-	culture = afghan
+	culture = sogdian #represents the Pamir and Bactrian cultures that seems to have been present here in this period
 	religion = mahayana
 	holding = castle_holding
+	1000.1.1 = {
+		culture = tajik
+	}
 }
 4367 = {	#Lower Karran
 	holding = none
@@ -351,7 +380,7 @@
 ###c_oshrusana
 4414 = {	#Bunjiket
 	culture = sogdian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
 	900.1.1 = {
 		religion = maturidi
@@ -380,7 +409,7 @@
 ###c_zarafshan
 4409 = {	#Panjikand
 	culture = sogdian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
 	900.1.1 = {
 		religion = maturidi
@@ -406,7 +435,7 @@
 		culture = karluk
 	}
 	1050.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1230.1.1 = { culture = mongol }
 }
@@ -429,13 +458,13 @@
 ###c_khojand
 4418 = {	#Khojand
 	culture = sogdian
-	religion = khurmazta
+	religion = khurramism 
 	holding = castle_holding
 	900.1.1 = {
 		culture = karluk
 	}
 	1050.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1066.1.1 = {
 		buildings = {
@@ -471,7 +500,7 @@
 		culture = karluk
 	}
 	1050.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1230.1.1 = { culture = mongol }
 }
@@ -498,7 +527,7 @@
 		culture = karluk
 	}
 	1050.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1230.1.1 = { culture = mongol }
 }
@@ -530,7 +559,7 @@
 		culture = karluk
 	}
 	1050.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}	
 	1230.1.1 = { culture = mongol }
 }
@@ -545,11 +574,14 @@
 ###c_gurganj
 4456 = {	#Gurganj
 	culture = khwarezmian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
 	1060.1.1 = {
-		culture = turkish
 		religion = maturidi
+	}
+
+	1240.1.1 = { #FP3 change from 1060 - the turkification of the area was only completed after the Mongol conquest
+		culture = turkish
 	}
 	1066.1.1 = {
 		buildings = {
@@ -581,11 +613,15 @@
 ###c_darghan
 4441 = {	#Darghan
 	culture = khwarezmian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
+
 	1060.1.1 = {
+		religion = maturidi 
+	}
+	
+	1240.1.1 = { #FP3 change from 1060 - the turkification of the area was only completed after the Mongol conquest
 		culture = turkish
-		religion = maturidi
 	}
 }
 4440 = {	#Tahiriya
@@ -601,34 +637,41 @@
 ###c_kath
 4448 = {	#Kath
 	culture = khwarezmian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
+
 	1060.1.1 = {
-		culture = turkish
 		religion = maturidi
 	}
+	
+	1230.1.1 = { #FP3 change from 1060 - the turkification of the area was only completed after the Mongol conquest
+		culture = turkish
+	}
 }
-4444 = {	#Nukfagh
+4444 = {	#Nukfagh #a place mentioned in historical works, had a canal around it
 	holding = none
 }
-4445 = {	#Ardakhivah
-	holding = city_holding	#placeholder
+4445 = {	#Ardakhivah #town mentioned in historical sources
+	holding = none #FP3 change from placeholder city, swapped for Ghardaman below
 }
-4446 = {	#Wayikhan
+4446 = {	#Wayikhan #town mentioned in historical sources, had a moat and catapults near the gate
 	holding = none
 }
-4447 = {	#Ghardaman
-	holding = none
+4447 = {	#Ghardaman #town mentioned in historical sources, had two gates
+	holding = city_holding 
 }
 
 ###c_khiva
 4452 = {	#Khiva
 	culture = khwarezmian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
 	1060.1.1 = {
-		culture = turkish
 		religion = maturidi
+	}
+
+	1230.1.1 = { #FP3 change from 1060 - the turkification of the area was only completed after the Mongol conquest
+		culture = turkish
 	}
 }
 4449 = {	#Rakhushmitan
@@ -647,11 +690,13 @@
 ###c_kurdar
 4460 = {	#Kurdar
 	culture = khwarezmian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
 	1060.1.1 = {
-		culture = turkish
 		religion = maturidi
+	}
+	1230.1.1 = { #FP3 change from 1060 - the turkification of the area was only completed after the Mongol conquest
+		culture = turkish
 	}
 }
 4459 = {	#Baratigin
@@ -668,11 +713,11 @@
 ###c_sarykamysh
 4528 = {	#Kurtysh
 	culture = khwarezmian
-	religion = mazdayasna
-	holding = castle_holding	
+	religion = khurmazta
+	holding = tribal_holding
 	1060.1.1 = {
 		culture = turkish
-		religion = ashari
+		religion = maturidi
 	}
 }
 4524 = {	#Sarykamysh
@@ -694,11 +739,11 @@
 ###c_uzboy
 4530 = {	#Burgun
 	culture = khwarezmian
-	religion = mazdayasna
-	holding = castle_holding	
+	religion = khurmazta
+	holding = tribal_holding
 	1060.1.1 = {
 		culture = turkish
-		religion = ashari
+		religion = maturidi
 	}
 }
 4415 = {	#Cheleken

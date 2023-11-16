@@ -158,7 +158,10 @@ window = {
  {
  	type button_decision_entry = button_standard {
  		size = { 300 45 }
- 		tooltip = SHOW_DECISION_TOOLTIP
+ 		
+		tooltipwidget = {
+			decision_tooltip = {}
+		}
 
 		widget = {
  			scissor = yes
@@ -248,7 +251,10 @@ types Court
 {
 	type button_court = button_standard {
 		size = { 300 45 }
-		tooltip = SHOW_DECISION_TOOLTIP
+		
+		tooltipwidget = {
+			decision_tooltip = {}
+		}
 
 		widget = {
 			scissor = yes

@@ -93,7 +93,6 @@ story_almohad_invasion = {
 		days = { 20 80 }
 
 		trigger = {
-			debug_log_details = "Almohad effect group"
 			story_owner = var:ibn_tumart
 			story_owner = { is_alive = yes }
 			exists = global_var:almohads_were_defeated

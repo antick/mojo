@@ -135,9 +135,12 @@ d_chah = {
 	
 	#Chah within the Samanid in 867
 	849.1.2 = {
-		holder = 302686	#fictional Aksonqor Shahn
+		holder = 188639	#Yahya Samanid 
 		#liege = k_transoxiana	#Samanid
-		government = tribal_government
+		government = clan_government
+	}
+	855.3.2 = {
+		holder = extra_samanids_17 #Muhammed ibn Nuh
 	}
 	867.1.1 = {
 		liege = k_transoxiana
@@ -145,7 +148,10 @@ d_chah = {
 	882.1.9 = {
 		holder = 302688	#fictional Dogan Shahn
 	}
-	
+	999.1.1 = {
+		liege = k_transoxiana
+		holder = 3002
+	}
 	#Chah within the Karakhanid in 1066
 	1060.1.2 = {
 		holder = 302692	#fictional Mala Karachahnid
@@ -253,12 +259,17 @@ c_chah = {
 	
 	#Chah within the Samanid in 867
 	849.1.2 = {
-		holder = 302686	#fictional Aksonqor Shahn
-		liege = d_chah
-		government = tribal_government
+		holder = 188639	#Yahya Samanid 
+	}
+	855.3.2 = {
+		holder = extra_samanids_17 #Muhammed ibn Nuh
 	}
 	882.1.9 = {
 		holder = 302688	#fictional Dogan Shahn
+	}
+	999.1.1 = {
+		liege = k_transoxiana
+		holder = 3002
 	}
 	
 	#Chah within the Karakhanid in 1066
@@ -591,9 +602,13 @@ c_shavgar = {
 c_sutkend = {
 	#Chah within the Samanid in 867
 	849.1.2 = {
-		holder = 302686	#fictional Aksonqor Shahn
-		liege = d_chah
+		holder = 188639	#Yahya Samanid 
+		#liege = k_transoxiana	#Samanid
 		government = tribal_government
+	}
+	855.3.2 = {
+		holder = extra_samanids_5 #Ya'qub 
+		liege = d_chah
 	}
 	882.1.9 = {
 		holder = 302688	#fictional Dogan Shahn
@@ -997,10 +1012,11 @@ c_balashagun = {
 c_suyab = {
 	#As Karakhanid Khanate from year 840
 	840.1.1 = {
-		holder = 34872	#Bilge Khan
+		#holder = 34872	#Bilge Khan
+		holder = karluk0059 # Fictional Nestorian, representing the area's established metropolitan see
 		government = tribal_government
-		liege = k_zhetysu
 	}
+	841.1.1 = { liege = k_zhetysu }
 	893.1.1 = {
 		holder = 188851	#Bazir Arslan Khan
 	}

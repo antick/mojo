@@ -538,7 +538,7 @@
 }
 6150 = {	#MURWAB
 	holding = church_holding
-	#Occupied in Abassid period, then abandonned in the IXth century
+	#Occupied in Abbasid period, then abandonned in the IXth century
 	#We're leaving it for fun/balance
 }
 6151 = {	#MASHQAR

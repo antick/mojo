@@ -2079,6 +2079,13 @@ msg_struggle_phase_transitioned = {
 	tooltip = msg_struggle_phase_end_tt
 	soundeffect = @toast_soundeffect_neutral
 }
+
+msg_house_unity_change_stage = {
+	icon = "icon_house_unity"
+	style = neutral
+	tooltip = msg_house_unity_change_stage_tt
+	soundeffect = @toast_soundeffect_neutral
+}
 	
 msg_contract_assistance_good = {
 	icon = "money"

@@ -18,7 +18,7 @@ window = {
 		using = Animation_FadeIn_Quick
 		using = Sound_WindowShow_Standard
 		position = "[DecisionDetailView.GetDynamicPosition]"
-		on_start = "[GetVariableSystem.Clear('show_decision_step_two')]"
+		on_start = "[GetVariableSystem.Clear('show_decision_next_step')]"
 	}
 
 	state = {
@@ -37,7 +37,7 @@ window = {
 			duration = 0.2
 			next = "b"
 			using = Animation_Curve_Default
-			on_start = "[GetVariableSystem.Clear('show_decision_step_two')]"
+			on_start = "[GetVariableSystem.Clear('show_decision_next_step')]"
 		}
 
 		state = {
@@ -61,34 +61,19 @@ window = {
 			}
 		}
 
-		decision_detail_view_step_one = {}
-
-		decision_detail_view_step_two = {}
+		decision_detail_view_content = {}
+		decision_detail_buttons = {}
 	}
 }
 
 
 types DecisionDetailViewTypes
 {
-	type decision_detail_view_step_one = vbox
-	{
+	type decision_detail_description_content = vbox {
 		layoutpolicy_horizontal = expanding
 		layoutpolicy_vertical = expanding
-		visible = "[Not( GetVariableSystem.HasValue( 'show_decision_step_two', 'true' ) )]"
 
-		vbox = {
-			layoutpolicy_horizontal = expanding
-			minimumsize = { 550 220 }
-			visible = "[Not(DecisionDetailView.IsOpenedFromRoyalCourt) ]"
-			
-			background = {
-				name = "illustrations"
-				texture = "[DecisionDetailView.GetPicture]"
-				margin_top = 10
-				alpha = 0.7
-				using = Mask_Rough_Edges
-			}
-		}
+		visible = "[DecisionDetailView.IsDefaultWidgetShown]"
 
 		text_multi = {
 			name = "description"
@@ -182,98 +167,35 @@ types DecisionDetailViewTypes
 		}
 
 		vbox = {
-			name = "footer"
-			layoutpolicy_horizontal = expanding
+			margin_bottom = 4
 
-			vbox = {
-				margin_bottom = 4
-
-				dynamicgridbox = {
-					name = "custom_widgets_container"
-				}
-			}
-
-			vbox = {
-				layoutpolicy_horizontal = expanding
-				margin_top = 4
-				margin_bottom = 10
-				spacing = 5
-
-				text_single = {
-					name = "cost"
-					visible = "[DecisionDetailView.HasCost]"
-					text = "[DecisionDetailView.GetCostDescription]"
-					using = Font_Size_Medium
-					default_format = "#high"
-					align = nobaseline
-				}
-
-				spacer = {
-					size = { 10 2 }
-				}
-
-				button_primary = {
-					name = "next_step"
-					size = { 380 50 }
-
-					visible = "[DecisionDetailView.GetDecision.HasStepTwo]"
-					
-					tooltip = "[DecisionDetailView.GetConfirmTooltip]"
-					onclick = "[GetVariableSystem.Set('show_decision_step_two', 'true')]"
-
-					text = "[DecisionDetailView.GetDecision.GetNextStepButtonLabel]"
-					clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_advance"
-				}
-
-				button_primary = {
-					name = "confirm"
-					size = { 380 50 }
-					visible = "[Not( DecisionDetailView.GetDecision.HasStepTwo )]"
-
-					enabled = "[DecisionDetailView.CanConfirm]"
-					tooltip = "[DecisionDetailView.GetConfirmTooltip]"
-					onclick = "[DecisionDetailView.Confirm]"
-
-					text = "[DecisionDetailView.GetConfirmText]"
-
-					default_clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
-					clicksound = "[DecisionDetailView.GetConfirmClickSound]"
-				}
-
-				spacer = {
-					size = { 0 2 }
-				}
-
-				button_checkbox_label = {
-					name = "major_checkbox"
-					onclick = "[Decision.OnToggleImportantForPlayer]"
-
-					blockoverride "checkbox"
-					{
-						checked = "[Decision.IsImportantForPlayer]"
-					}
-
-					blockoverride "text"
-					{
-						text = "DECISIONS_VIEW_MAJOR_TOGGLE"
-					}
-				}					
-
-				expand = {}
+			dynamicgridbox = {
+				name = "additional_widgets_desc_container"
 			}
 		}
 	}
 
-	type decision_detail_view_step_two = vbox
-	{
+	type decision_custom_widget_content = vbox {
 		layoutpolicy_horizontal = expanding
 		layoutpolicy_vertical = expanding
-		visible = "[GetVariableSystem.HasValue( 'show_decision_step_two', 'true' )]"
+
+		visible = "[Not(DecisionDetailView.IsDefaultWidgetShown)]"
+			
+		dynamicgridbox = {
+			name = "custom_widgets_container"
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+		}
+	}
+
+	type decision_detail_view_content = vbox {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
 
 		vbox = {
 			layoutpolicy_horizontal = expanding
 			minimumsize = { 550 220 }
-			visible = "[Not( DecisionDetailView.IsOpenedFromRoyalCourt)]"
+			visible = "[Not(DecisionDetailView.IsOpenedFromRoyalCourt) ]"
 			
 			background = {
 				name = "illustrations"
@@ -284,19 +206,25 @@ types DecisionDetailViewTypes
 			}
 		}
 
-		vbox = {
-			layoutpolicy_horizontal = expanding
-			layoutpolicy_vertical = expanding
-			
-			dynamicgridbox = {
-				name = "custom_widgets_container_step_two"
-				layoutpolicy_horizontal = expanding
-				layoutpolicy_vertical = expanding
-			}
-		}
+		decision_detail_description_content = {}
+		decision_custom_widget_content = {}
+	}
+
+	type decision_confirm_button = button_primary {
+		enabled = "[DecisionDetailView.CanConfirm]"
+        tooltip = "[DecisionDetailView.GetConfirmTooltip]"
+        onclick = "[DecisionDetailView.Confirm]"
+
+        text = "[DecisionDetailView.GetConfirmText]"
+
+        default_clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
+        clicksound = "[DecisionDetailView.GetConfirmClickSound]"
+	}
+
+	type decision_detail_buttons = vbox {
+		layoutpolicy_horizontal = expanding
 
 		vbox = {
-			name = "footer"
 			layoutpolicy_horizontal = expanding
 			margin_top = 4
 			margin_bottom = 10
@@ -315,28 +243,49 @@ types DecisionDetailViewTypes
 				size = { 10 2 }
 			}
 
+			# default step
+			widget = {
+				visible = "[Not(GetVariableSystem.HasValue( 'show_decision_next_step', 'true' ))]"
+				size = { 380 50 }
+
+				# next step button
+				button_primary = {
+					size = { 100% 100% }	
+			
+					visible = "[DecisionDetailView.HasNextStep]"
+					
+					tooltip = "[DecisionDetailView.GetConfirmTooltip]"
+					onclick = "[GetVariableSystem.Set('show_decision_next_step', 'true')]"
+					onclick = "[DecisionDetailView.ToggleCustomWidgetState]"
+			
+					text = "[DecisionDetailView.GetNextStepButtonLabel]"
+					clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_advance"
+				}
+
+				decision_confirm_button = {
+					visible = "[Not( DecisionDetailView.HasNextStep )]"
+					size = { 100% 100% }
+				}
+			}
+
 			hbox = {
+				visible = "[GetVariableSystem.HasValue( 'show_decision_next_step', 'true' )]"
+
 				spacing = 10
 
 				button_standard_back = {
 					name = "back"
 					size = { 180 50 }
-					onclick = "[GetVariableSystem.Clear('show_decision_step_two')]"
+					visible = "[DecisionDetailView.HasNextStep]"
+					onclick = "[GetVariableSystem.Clear('show_decision_next_step')]"
+					onclick = "[DecisionDetailView.ToggleCustomWidgetState]"
 					text = "BACK_LABEL"
 					clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_close"
 				}
 
-				button_primary = {
-					name = "step_two_confirm"
-					size = { 250 50 }					
-
-					enabled = "[DecisionDetailView.CanConfirm]"
-					tooltip = "[DecisionDetailView.GetConfirmTooltip]"
-					onclick = "[DecisionDetailView.Confirm]"
-
-					text = "[DecisionDetailView.GetConfirmText]"
-					clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
-				}				
+				decision_confirm_button = {
+					size = { 250 50 }
+				}	
 			}
 
 			spacer = {
@@ -344,19 +293,18 @@ types DecisionDetailViewTypes
 			}
 
 			button_checkbox_label = {
-				name = "step_two_major_checkbox"
 				onclick = "[Decision.OnToggleImportantForPlayer]"
-
+		
 				blockoverride "checkbox"
 				{
 					checked = "[Decision.IsImportantForPlayer]"
 				}
-
+		
 				blockoverride "text"
 				{
 					text = "DECISIONS_VIEW_MAJOR_TOGGLE"
 				}
-			}				
+			}
 
 			expand = {}
 		}

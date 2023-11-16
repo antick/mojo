@@ -45,6 +45,17 @@ window = {
                     raw_text = "Down State"
                 }
             }
+
+            button_tertiary = {
+                parentanchor = vcenter
+                position = { 1050 0 }
+				size = { 200 40 }
+                layoutpolicy_horizontal = expanding
+                raw_text = "Spawn a Test Window"
+				raw_tooltip = "Window for GUI testing (test_gui.gui)"
+
+                onclick = "[ExecuteConsoleCommand('gui.CreateWidget gui/debug/test_gui.gui test_window')]"
+            }
         }
 
         hbox = {

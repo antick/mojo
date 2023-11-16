@@ -1,15 +1,51 @@
 ﻿on_dynasty_created = {
 	effect = {
 		if = {
-			limit = {
-				dynast = {
-					has_trait = bastard
-				}
-			}
+			limit = { dynast = { has_trait = bastard } }
 			dynast = {
 				remove_trait = bastard
 				add_trait = bastard_founder
 			}
+		}
+	}
+}
+
+# root = <character>
+# scope:dynasty = <dynasty>
+# new dynasty head and dynasty affected
+on_became_dynasty_head = {
+	effect = {
+		if = {
+			limit = {
+				has_trait = denounced
+			}
+			remove_trait = denounced
+		}
+		if = {
+			limit = {
+				has_trait = disinherited
+			}
+			remove_trait = disinherited
+		}
+	}
+}
+
+# root = <character>
+# scope:house = <house>
+# new house head and house affected
+on_became_house_head = {
+	effect = {
+		if = {
+			limit = {
+				has_trait = decadent
+			}
+			remove_trait = decadent
+		}
+		if = {
+			limit = {
+				has_trait = extolled
+			}
+			remove_trait = extolled
 		}
 	}
 }

@@ -596,7 +596,7 @@ revive_magyar_paganism_decision = {
 # by Ewan Cowhig Croft			#
 #################################
 found_kingdom_of_bosnia_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 
 	ai_check_interval = 120
@@ -961,7 +961,7 @@ launch_hungarian_migration_decision = {
 # by James Beaumont				#
 #################################
 found_kingdom_of_livonia_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 
 	ai_check_interval = 120

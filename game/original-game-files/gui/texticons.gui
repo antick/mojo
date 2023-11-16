@@ -349,6 +349,66 @@ texticon = {
 }
 
 texticon = {
+	icon = tawashi_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/tawashi.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = tarkhan_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/tarkhan.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = zupin_spearmen_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/zupin_spearmen.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = asawira_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/asawira.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = ayyar_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/ayyar.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = mubarizun_icon
+	iconsize = {
+		texture = "gfx/interface/icons/regimenttypes/mubarizun.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
 	icon = catholic_icon
 	iconsize = {
 		size = { 32 32 }
@@ -1289,6 +1349,7 @@ texticon = {
 	}
 }
 
+## FP2
 texticon = {
 	icon = struggle_iberia_phase_compromise
 	iconsize = {
@@ -1323,16 +1384,6 @@ texticon = {
 	icon = struggle_iberia_phase_opportunity
 	iconsize = {
 		texture = "gfx/interface/icons/struggle_types/struggle_iberia_phase_opportunity.dds"
-		size = { 25 25 }
-		offset = { 0 6 }
-		fontsize = 16
-	}
-}
-
-texticon = {
-	icon = struggle_iberia_phase_tension
-	iconsize = {
-		texture = "gfx/interface/icons/struggle_types/struggle_iberia_phase_tension.dds"
 		size = { 25 25 }
 		offset = { 0 6 }
 		fontsize = 16
@@ -1393,6 +1444,108 @@ texticon = {
 	icon = soulmate_icon
 	iconsize = {
 		texture = "gfx/interface/icons/portraits/soulmate.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+
+### FP3
+texticon = {
+	icon = struggle_persia_phase_stabilisation
+	iconsize = {
+		texture = "gfx/interface/icons/struggle_types/struggle_persia_phase_stabilisation.dds" # DBD donation of FP2 icons
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = struggle_persia_phase_unrest
+	iconsize = {
+		texture = "gfx/interface/icons/struggle_types/struggle_persia_phase_unrest.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = struggle_persia_ending_phase_concession
+	iconsize = {
+		texture = "gfx/interface/icons/struggle_types/struggle_persia_ending_phase_concession.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = struggle_persia_phase_ending_foundation
+	iconsize = {
+		texture = "gfx/interface/icons/struggle_types/struggle_persia_phase_ending_foundation.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dynasty_house_unity
+	iconsize = {
+		texture = "gfx/interface/icons/currencies/icon_house_unity.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dynasty_house_unity_antagonistic
+	iconsize = {
+		texture = "gfx/interface/icons/currencies/house_unity/antagonistic.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dynasty_house_unity_competitive
+	iconsize = {
+		texture = "gfx/interface/icons/currencies/house_unity/competitive.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dynasty_house_unity_impassive
+	iconsize = {
+		texture = "gfx/interface/icons/currencies/house_unity/impassive.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dynasty_house_unity_friendly
+	iconsize = {
+		texture = "gfx/interface/icons/currencies/house_unity/friendly.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = dynasty_house_unity_harmonious
+	iconsize = {
+		texture = "gfx/interface/icons/currencies/house_unity/harmonious.dds"
 		size = { 25 25 }
 		offset = { 0 6 }
 		fontsize = 16
@@ -1919,6 +2072,7 @@ texticon = {
 	}
 }
 
+
 texticon = {
 	icon = cultural_acceptance_icon
 	iconsize = {
@@ -2027,3 +2181,15 @@ texticon = {
 		fontsize = 16
 	}
 }
+
+texticon = {
+	icon = tax_collector_icon
+	iconsize = {
+		texture = "gfx/interface/icons/message_feed/icon_tax_collector.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+		uv ={ 0.05 0.05 1 1 }
+	}
+}
+

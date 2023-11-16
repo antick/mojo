@@ -558,6 +558,7 @@
 	1020.1.1 = {
 		culture = norwegian
 		religion = catholic
+		holding = castle_holding
 		#Runestone from 1030-1050 erected in honour of Austmaðr's christianization of Jamtland
 	}
 }

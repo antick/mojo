@@ -14,6 +14,8 @@ immune_to_factions_trigger = {
 	OR = {
 		# Genghis Khan is immune to factions
 		has_character_flag = is_temujin
+		# Seljuk leader is immune to factions too
+		has_character_flag = is_seljuk
 	}
 }
 
@@ -85,6 +87,24 @@ common_can_character_create_trigger = {
 		text = character_is_immune_to_factions
 		subject = $FACTION_TARGET$
 		NOT = { $FACTION_TARGET$ = { immune_to_factions_trigger = yes } }
+	}
+}
+
+base_faction_trigger = {
+	NOT = { has_truce = scope:target }
+	can_join_or_create_faction_against = {
+		who = scope:target
+		faction = $FACTION_TYPE$
+	}
+	scope:target = { NOT = { has_strong_hook = root } }
+	trigger_if = {
+		limit = {
+			exists = scope:recipient
+		}
+		scope:recipient = {
+			NOT = { is_at_war_with = scope:actor }
+			NOT = { has_trait = incapable }
+		}
 	}
 }
 

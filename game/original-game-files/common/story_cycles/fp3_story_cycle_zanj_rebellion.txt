@@ -1,0 +1,16 @@
+﻿### Exists so we can track Ali or any subsequent Zanj Leaders.
+story_zanj_rebellion = {
+	
+	on_setup = {
+		story_owner = { 
+			set_variable = {
+				name = zanj_rebellion_strength_score
+				value = 7
+			}
+		}
+	}
+	on_owner_death = {
+		inherit_zanj_rebellion_effect = yes
+	}
+	on_end = {}
+}

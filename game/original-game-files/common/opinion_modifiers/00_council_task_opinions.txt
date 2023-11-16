@@ -51,6 +51,18 @@ marshal_task_increase_control_baron_increase_opinion = {
 	years = 10
 }
 
+marshal_task_train_commanders_supported_my_child_opinion = {
+	opinion = 20
+	decaying = yes
+	years = 20
+}
+
+marshal_task_train_commanders_rebuffed_my_child_opinion = {
+	opinion = -15
+	decaying = yes
+	years = 10
+}
+
 court_chaplain_fabricated_claim_opinion = {
 	opinion = -30
 	decaying = yes
@@ -116,4 +128,16 @@ steward_convince_dejure_upset_modifier = {
 	opinion = -30
 	decaying = yes
 	years = 10
+}
+
+steward_taxed_me_opinion = {
+	opinion = -20
+	decaying = yes
+	years = 10
+}
+
+steward_doubted_my_accounting_opinion = {
+	opinion = -15
+	years = 10
+	decaying = yes
 }

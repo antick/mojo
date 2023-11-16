@@ -1,4 +1,4 @@
-###MAPS REFERENCES
+﻿###MAPS REFERENCES
 #AAA : https://upload.wikimedia.org/wikipedia/commons/3/38/Zakaukazie-Turkestan1903.jpg
 #BBB : https://www.wdl.org/fr/item/11753/view/1/1/
 
@@ -10,7 +10,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan
@@ -33,7 +33,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1066.1.1 = {
 		buildings = {
@@ -62,7 +62,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan
@@ -82,7 +82,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan
@@ -104,7 +104,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan
@@ -126,7 +126,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan
@@ -198,7 +198,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan
@@ -219,7 +219,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan
@@ -325,7 +325,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan
@@ -351,7 +351,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan
@@ -374,7 +374,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan

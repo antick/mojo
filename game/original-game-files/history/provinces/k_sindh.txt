@@ -1,4 +1,4 @@
-# 1137 - Mansura
+﻿# 1137 - Mansura
 1137 = {	# 1137 - Mansura
 	
 	# Misc
@@ -45,6 +45,12 @@
 	religion = smartism
 	
 	# History
+	830.1.1 = {
+		religion = mutazila
+	}
+	990.1.1 = {
+		religion = ashari
+	}
 
 }
 
@@ -57,6 +63,12 @@
 	
 	# History
 	800.1.1 = {
+		religion = ashari
+	}
+	830.1.1 = {
+		religion = mutazila
+	}
+	960.1.1 = {
 		religion = ashari
 	}
 

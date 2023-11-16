@@ -74,3 +74,12 @@ pdi_has_poor_health = {
 		health <= poor_health
 	}
 }
+
+pdi_in_regency = {
+	is_shown = {
+		OR = {
+			has_diarchy_type = temporary_regency
+			has_diarchy_type = regency
+		}
+	}
+}

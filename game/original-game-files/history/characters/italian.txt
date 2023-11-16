@@ -4097,15 +4097,15 @@
 		effect = {
 			add_trait = lifestyle_mystic
 			add_trait_xp = {
-                trait = lifestyle_mystic
-                value = {
-                    integer_range = {
-                        min = small_lifestyle_random_xp_low
-                        max = small_lifestyle_random_xp_high
-                    }
-                }
-            }
-        }
+				trait = lifestyle_mystic
+				value = {
+					integer_range = {
+						min = small_lifestyle_random_xp_low
+						max = small_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
 	}
 	1084.1.1 = {
 		death = "1084.1.1"

@@ -939,7 +939,7 @@ cultural_festival.9020 = {
 				}
 			}
 		}
-		scope:sacrificed_person_scope = {
+		scope:human_sacrifice = {
 			death = {
 				death_reason = death_sacrificed_to_gods
 			}

@@ -1045,6 +1045,7 @@ c_cherchen = {
 	}
 	#Conquered by Karakhanids
 	1006.1.1 = {
+		government = clan_government # Now Muslim
 		holder = karluk0001
 	}
 	1040.1.1 = {
@@ -1146,6 +1147,7 @@ d_kashgar = {
 	#Karakhanids
 	1006.1.1 = {
 		liege = k_zhetysu
+		government = clan_government # Now Muslim
 		holder = 3004
 	}
 	1024.1.2 = {
@@ -1235,6 +1237,7 @@ c_kashgar = {
 	}
 	#Karakhanids
 	1006.1.1 = {
+		government = clan_government # Now Muslim
 		holder = 3004
 	}
 	1024.1.2 = {
@@ -1322,6 +1325,7 @@ c_terek_pass = {
 	}
 	#Karakhanids
 	1006.1.1 = {
+		government = clan_government # Now Muslim
 		holder = 3004
 	}
 	1024.1.2 = {
@@ -1529,6 +1533,7 @@ c_yarkand = {
 	#Conquered by Karakhanids
 	1006.1.1 = {
 		liege = d_kashgar
+		government = clan_government # Now Muslim
 		holder = 217206
 	}
 	1015.5.9 = {

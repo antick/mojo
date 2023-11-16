@@ -90,6 +90,7 @@ a_legacy_to_last_the_ages_achievement = {
 				has_dynasty_perk = ep1_culture_legacy_5
 				has_dynasty_perk = fp2_urbanism_legacy_5
 				has_dynasty_perk = fp2_coterie_legacy_5
+				has_dynasty_perk = fp3_khvarenah_legacy_5
 			}
 		}
 	}
@@ -125,6 +126,11 @@ a_legacy_to_last_the_ages_achievement = {
 							has_dynasty_perk = fp2_urbanism_legacy_5
 							has_dynasty_perk = fp2_coterie_legacy_5
 						}
+					}
+					#FP3
+					AND = {
+						has_dlc_feature = legacy_of_persia
+						has_dynasty_perk = fp3_khvarenah_legacy_5
 					}
 				}
 			}

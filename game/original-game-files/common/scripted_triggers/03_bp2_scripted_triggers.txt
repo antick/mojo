@@ -36,6 +36,16 @@ has_level_3_education_trait_trigger = {
 	}
 }
 
+has_level_4_education_trait_trigger = {
+	OR = {
+		has_trait = education_diplomacy_4
+		has_trait = education_martial_4
+		has_trait = education_stewardship_4
+		has_trait = education_intrigue_4
+		has_trait = education_learning_4
+	}
+}
+
 style_changing_reformer_byzantine = {
 	exists = root.top_liege
 	root.top_liege = {
@@ -108,6 +118,19 @@ style_changing_reformer_dde_abbasid = {
 		has_character_flag = dde_abbasid_style
 	}
 }
+style_changing_reformer_iranian = {
+	exists = root.top_liege
+	root.top_liege = {
+		has_character_flag = iranian_style
+	}
+}
+style_changing_reformer_turkic = {
+	exists = root.top_liege
+	root.top_liege = {
+		has_character_flag = turkic_style
+	}
+}
+
 
 hostage_oath_of_friendship_trigger = {
 	AND = {

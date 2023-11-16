@@ -1630,7 +1630,8 @@
 }
 
 1528 = {
-	name = "Guelph"
+	name = "Welf" # II
+	# AKA: Guelph
 	dynasty = 650
 	martial = 5
 	diplomacy = 5
@@ -1676,9 +1677,9 @@
 }
 
 1530 = {
-	name = "Welf"
+	name = "Welf" # IV
 	# AKA: Guelph
-	dynasty = 650
+	dynasty_house = house_welf
 	martial = 4
 	diplomacy = 5
 	intrigue = 8
@@ -1694,9 +1695,6 @@
 	mother = 1529
 	1035.1.1 = {
 		birth = "1035.1.1"
-	}
-	1066.1.1 = {
-		employer = 112600
 	}
 	1066.1.1 = {
 		add_spouse = 112602
@@ -3074,7 +3072,8 @@
 }
 
 7941 = {
-	name = "Guelph"
+	name = "Welf" # III
+	# AKA: Guelph
 	dynasty = 650
 	martial = 5
 	diplomacy = 6
@@ -3119,7 +3118,8 @@
 }
 
 7985 = {
-	name = "Guelph"
+	name = "Welf" # founder
+	# AKA: Guelph
 	dynasty = 650
 	martial = 5
 	diplomacy = 6
@@ -3230,7 +3230,8 @@
 }
 
 7990 = {
-	name = "Guelph"
+	name = "Welf" # I
+	# AKA: Guelph
 	dynasty = 650
 	martial = 5
 	diplomacy = 6
@@ -8884,31 +8885,6 @@
 	}
 }
 
-1317 = {
-	name = "Hans"
-	dynasty = 797
-	martial = 1
-	diplomacy = 0
-	intrigue = 5
-	stewardship = 7
-	learning = 10
-	religion = "catholic"
-	culture = bavarian
-	trait = education_learning_4
-	trait = scholar
-	trait = intellect_good_1
-	trait = cynical
-	trait = honest
-	trait = shy
-	trait = paranoid
-	1040.1.1 = {
-		birth = "1040.1.1"
-	}
-	1100.1.1 = {
-		death = "1100.1.1"
-	}
-}
-
 70620 = {
 	name = "Friedrich"
 	dynasty = 8667
@@ -8931,14 +8907,14 @@
 		effect = {
 			add_trait = lifestyle_blademaster
 			add_trait_xp = {
-                trait = lifestyle_blademaster
-                value = {
-                    integer_range = {
-                        min = small_lifestyle_random_xp_low
-                        max = small_lifestyle_random_xp_high
-                    }
-                }
-            }
+				trait = lifestyle_blademaster
+				value = {
+					integer_range = {
+						min = small_lifestyle_random_xp_low
+						max = small_lifestyle_random_xp_high
+					}
+				}
+			}
 		}
 	}
 	1096.1.1 = {

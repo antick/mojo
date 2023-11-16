@@ -69,12 +69,12 @@ mandate_fines_being_ignored_modifier = {
 }
 
 mandate_squeezing_recruiting_sources_modifier = {
-	icon = marshal_positive
+	icon = martial_positive
 	levy_size = 0.3
 }
 
 mandate_extra_recruiting_sources_modifier = {
-	icon = marshal_positive
+	icon = martial_positive
 	levy_size = 0.15
 }
 
@@ -133,4 +133,109 @@ shift_privileges_scutage_exemptions_modifier = {
 shift_privileges_conflicting_deeds_modifier = {
 	icon = letter_negative
 	development_growth_factor = -0.75
+}
+
+##################################################
+# #Vizier Candidate Modifiers
+
+civil_service_upset_modifier = {
+	icon = stewardship_negative
+	stewardship = massive_skill_penalty
+}
+
+civil_service_in_chaos_modifier = {
+	icon = stewardship_negative
+	# We'd make it 0.075 so it caps out at 75%, but the third decimal point doesn't tooltip nicely.
+	monthly_income_mult = -0.08
+
+	scale = {
+		value = {
+			# Grab our scales of power swing.
+			value = scope:actor.diarchy_swing
+			# Now take it down a notch.
+			multiply = vizier_dismissal_penalty_sop_mult_value
+		}
+		desc = liege_dismiss_vizier_interaction.modifier_penalty.scale.desc.scales_of_power
+	}
+}
+
+vizier_candidate_has_studied_recently_modifier = {
+	icon = letter_negative
+	stress_gain_mult = 0.5
+}
+
+vizier_extravagance_t1_treasure_modifier = {
+	icon = stewardship_positive
+	diplomacy = 1
+	intrigue = 1
+}
+vizier_extravagance_t1_activities_modifier = {
+	icon = grandeur_positive
+	monthly_prestige = 0.2
+}
+vizier_extravagance_t1_property_modifier = {
+	icon = bed_positive
+	stewardship = 1
+	learning = 1
+}
+vizier_extravagance_t1_charity_modifier = {
+	icon = treatment_positive
+	monthly_piety = 0.1
+}
+
+vizier_extravagance_t2_treasure_modifier = {
+	icon = stewardship_positive
+	diplomacy = 1
+	intrigue = 1
+}
+vizier_extravagance_t2_activities_modifier = {
+	icon = grandeur_positive
+	monthly_prestige = 0.3
+}
+vizier_extravagance_t2_property_modifier = {
+	icon = bed_positive
+	stewardship = 1
+	learning = 1
+}
+vizier_extravagance_t2_charity_modifier = {
+	icon = treatment_positive
+	monthly_piety = 0.2
+}
+
+vizier_extravagance_t3_treasure_modifier = {
+	icon = stewardship_positive
+	diplomacy = 1
+	intrigue = 1
+}
+vizier_extravagance_t3_activities_modifier = {
+	icon = grandeur_positive
+	monthly_prestige = 0.3
+}
+vizier_extravagance_t3_property_modifier = {
+	icon = bed_positive
+	stewardship = 1
+	learning = 1
+}
+vizier_extravagance_t3_charity_modifier = {
+	icon = treatment_positive
+	monthly_piety = 0.5
+}
+
+vizier_extravagance_t4_treasure_modifier = {
+	icon = stewardship_positive
+	diplomacy = 2
+	intrigue = 2
+}
+vizier_extravagance_t4_activities_modifier = {
+	icon = grandeur_positive
+	monthly_prestige = 0.4
+}
+vizier_extravagance_t4_property_modifier = {
+	icon = bed_positive
+	stewardship = 2
+	learning = 2
+}
+vizier_extravagance_t4_charity_modifier = {
+	icon = treatment_positive
+	monthly_piety = 0.6
 }

@@ -451,14 +451,14 @@ flowcontainer = {
 			hbox = {
 				layoutpolicy_horizontal = expanding
 
-				dockable_button = {
-					layoutpolicy_horizontal = expanding
-					size = { 0 30 }
-					raw_text = "Test Window"
-					onclick = "[ExecuteConsoleCommand('gui.CreateWidget gui/debug/test_gui.gui test_window')]"
-					tintcolor = { 0.9 0.9 0 0.8 }
-					raw_tooltip = "Window for GUI testing (test_gui.gui)"
-				}
+				#dockable_button = {
+				#	layoutpolicy_horizontal = expanding
+				#	size = { 0 30 }
+				#	raw_text = "Test Window"
+				#	onclick = "[ExecuteConsoleCommand('gui.CreateWidget gui/debug/test_gui.gui test_window')]"
+				#	tintcolor = { 0.9 0.9 0 0.8 }
+				#	raw_tooltip = "Window for GUI testing (test_gui.gui)"
+				#}
 
 				dockable_button = {
 					layoutpolicy_horizontal = expanding

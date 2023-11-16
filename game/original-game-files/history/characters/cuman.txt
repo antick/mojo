@@ -301,8 +301,8 @@
 		birth = "1039.1.1"
 	}
 	1066.1.1 = {
-        contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
-    }
+		contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
+	}
 	1089.1.1 = {
 		death = "1089.1.1"
 	}

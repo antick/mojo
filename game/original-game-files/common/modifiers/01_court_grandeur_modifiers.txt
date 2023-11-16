@@ -31,28 +31,28 @@ court_grandeur_level_10 = {
 
 # Effects are multiplied by realm size * NRoyalCourt::EXPECTED_LEVEL_DIFF_REALM_SIZE_MULTIPLIER
 court_grandeur_above_expected_level_1 = {
-	monthly_prestige = 0.2
+	monthly_prestige = 0.1
 	courtier_and_guest_opinion = 4
 }
 court_grandeur_above_expected_level_2 = {
-	monthly_prestige = 0.1
+	monthly_prestige = 0.05
 	courtly_opinion = 3
 	glory_hound_opinion = 3
 }
 court_grandeur_above_expected_level_3 = {
-	monthly_prestige = 0.1
+	monthly_prestige = 0.05
 	independent_ruler_opinion = 5
 	fellow_vassal_opinion = 5
 }
 court_grandeur_above_expected_level_4 = {
-	monthly_prestige = 0.1
+	monthly_prestige = 0.05
 	monthly_dynasty_prestige = 0.15
 	courtier_and_guest_opinion = 4
 	
 	county_opinion_add = 5
 }
 court_grandeur_above_expected_level_5 = {
-	monthly_prestige = 0.1
+	monthly_prestige = 0.05
 	monthly_dynasty_prestige = 0.15
 	courtly_opinion = 4
 	glory_hound_opinion = 4
@@ -60,7 +60,7 @@ court_grandeur_above_expected_level_5 = {
 	knight_limit = 1
 }
 court_grandeur_above_expected_level_6 = {
-	monthly_prestige = 0.1
+	monthly_prestige = 0.05
 	monthly_dynasty_prestige = 0.2
 	independent_ruler_opinion = 5
 	fellow_vassal_opinion = 5
@@ -68,19 +68,19 @@ court_grandeur_above_expected_level_6 = {
 	mercenary_hire_cost_mult = -0.1
 }
 court_grandeur_above_expected_level_7 = {
-	monthly_prestige = 0.1
+	monthly_prestige = 0.05
 	monthly_dynasty_prestige = 0.2
 	courtier_and_guest_opinion = 4
 }
 court_grandeur_above_expected_level_8 = {
-	monthly_prestige = 0.2
+	monthly_prestige = 0.1
 	monthly_dynasty_prestige = 0.2
 	independent_ruler_opinion = 4
 	fellow_vassal_opinion = 4
 	monthly_lifestyle_xp_gain_mult = 0.1
 }
 court_grandeur_above_expected_level_9 = {
-	monthly_prestige = 0.2
+	monthly_prestige = 0.1
 	monthly_dynasty_prestige = 0.2
 	courtly_opinion = 5
 	glory_hound_opinion = 5
@@ -88,7 +88,7 @@ court_grandeur_above_expected_level_9 = {
 	# Marriage acceptance boost
 }
 court_grandeur_above_expected_level_10 = {
-	monthly_prestige = 0.2
+	monthly_prestige = 0.1
 	monthly_dynasty_prestige = 0.2
 	monthly_lifestyle_xp_gain_mult = 0.05
 }

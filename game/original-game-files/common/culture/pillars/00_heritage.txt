@@ -110,6 +110,10 @@ heritage_somalian = {
 	type = heritage
 }
 
+heritage_bantu = {
+	type = heritage
+}
+
 heritage_south_slavic = {
 	type = heritage
 }

@@ -14,7 +14,7 @@
 			gold = court_fashion_acceptable_cost 
 		}
 		owner_modifier = {
-			monthly_prestige_gain_mult = 0.02
+			monthly_prestige_gain_mult = 0.01
 			court_grandeur_baseline_add = 4
 		}
 		courtier_guest_modifier = {
@@ -60,7 +60,7 @@
 			}
 		}
 		owner_modifier = {
-			monthly_prestige_gain_mult = 0.04
+			monthly_prestige_gain_mult = 0.02
 			court_grandeur_baseline_add = 8
 		}
 		courtier_guest_modifier = {
@@ -107,7 +107,7 @@
 			}
 		}
 		owner_modifier = { 
-			monthly_prestige_gain_mult = 0.06
+			monthly_prestige_gain_mult = 0.03
 			court_grandeur_baseline_add = 12
 		}
 		courtier_guest_modifier = {
@@ -153,7 +153,7 @@
 			}
 		}
 		owner_modifier = {
-			monthly_prestige_gain_mult= 0.08
+			monthly_prestige_gain_mult = 0.04
 			court_grandeur_baseline_add = 16	
 		}
 		courtier_guest_modifier = {

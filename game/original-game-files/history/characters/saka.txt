@@ -1598,3 +1598,109 @@ saka0030 = {
 		death=yes
 	}
 }
+
+####this is a fictional Saka dynasty, created for FP3 to adress the lack of Samanid vassals in Bactria. They're intended to represent the minority Pamir people who seemed to have ruled this area under the Samanids. 
+
+fictional_sakas_5 = {
+	name="Manohara"
+	dynasty= saka_pamirid
+	religion="maturidi"
+	culture="saka"
+	848.1.1={
+		birth=yes
+	}
+	910.1.1={
+		death=yes
+	}
+}
+
+fictional_sakas_8 = {
+	name="Haskadatta"
+	dynasty= saka_pamirid
+	religion="maturidi"
+	culture="saka"
+	father = fictional_sakas_5
+	888.1.1={
+		birth=yes
+	}
+	920.1.1={
+		culture = tajik
+	}
+	940.1.1={
+		death=yes
+	}
+}
+
+fictional_sakas_9 = {
+	name="Huyi"
+	dynasty= saka_pamirid
+	religion="maturidi"
+	culture="tajik"
+	father = fictional_sakas_8
+	913.1.1={
+		birth=yes
+	}
+	960.1.1={
+		death=yes
+	}
+}
+
+fictional_sakas_10 = {
+	name="Samgaka"
+	dynasty= saka_pamirid
+	religion="maturidi"
+	culture="tajik"
+	father = fictional_sakas_9
+	945.1.1={
+		birth=yes
+	}
+	1019.1.1={
+		death = yes
+	}
+}
+
+fictional_sakas_11 = {
+	name="Khina"
+	dynasty= saka_pamirid
+	religion="maturidi"
+	culture="tajik"
+	father = fictional_sakas_10
+	980.1.1={
+		birth=yes
+	}
+	1023.3.9={
+		death = yes
+	}
+}
+
+fictional_sakas_12 = {
+	name="Gostana"
+	dynasty= saka_pamirid
+	religion="maturidi"
+	culture="tajik"
+	father = fictional_sakas_11
+	1010.1.1={
+		birth=yes
+	}
+	1040.1.1 = {
+		faith = ismaili
+	}
+	1056.5.22={
+		death = yes
+	}
+}
+
+fictional_sakas_13 = {
+	name="Bamdaka"
+	dynasty= saka_pamirid
+	religion="ismaili"
+	culture="tajik"
+	father = fictional_sakas_12
+	trait = spindly
+	1039.1.1={
+		birth=yes
+	}
+	1099.1.1={
+		death = yes
+	}
+}

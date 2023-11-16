@@ -265,3 +265,43 @@ fp2_holiday_in_iberia_trigger = {
 fp2_el_cid_achievement_trigger = {
 	global = ACHIEVEMENT_DESC_fp2_el_cid_achievement
 }
+
+fp3_rich_in_diversity_achievement_trigger = {
+	global = ACHIEVEMENT_DESC_fp3_rich_in_diversity_achievement
+}
+
+fp3_darius_revenge_achievement_trigger = {
+	global = ACHIEVEMENT_DESC_fp3_darius_revenge_achievement
+}
+
+fp3_mulct_them_dry_achievement_trigger = {
+	global = ACHIEVEMENT_DESC_fp3_mulct_them_dry_achievement
+}
+
+fp3_the_umma_strikes_back_achievement_trigger = {
+	global = ACHIEVEMENT_DESC_fp3_the_umma_strikes_back_achievement
+}
+
+fp3_royal_flush_achievement_trigger = {
+	global = ACHIEVEMENT_DESC_fp3_royal_flush_achievement
+}
+
+fp3_fiscal_res_achievement_trigger = {
+	global = ACHIEVEMENT_DESC_fp3_fiscal_res_achievement
+}
+
+fp3_abassid_strong_achievement_trigger = {
+	global = ACHIEVEMENT_DESC_fp3_abassid_strong_achievement
+}
+
+fp3_challenger_caliphate_achievement_trigger = {
+	global = ACHIEVEMENT_DESC_fp3_challenger_caliphate_achievement
+}
+
+fp3_vassalize_the_caliph_achievement_trigger = {
+	global = ACHIEVEMENT_DESC_fp3_vassalize_the_caliph_achievement
+}
+
+fp3_rekindle_iran_achievement_trigger = {
+	global = ACHIEVEMENT_DESC_fp3_rekindle_iran_achievement
+}

@@ -1,4 +1,4 @@
-group = {
+﻿group = {
 	name = "very_easy_achievements"
 	order = {
 		# Base Title
@@ -44,6 +44,10 @@ group = {
 		"fp2_friendship_is_magic"
 		# EP2
 		"ep2_10_hunting_accident_achievement"
+		# FP3
+		"fp3_rich_in_diversity_achievement"
+		"fp3_abassid_strong_achievement"
+		"fp3_royal_flush_achievement"
 	}
 }
 
@@ -139,6 +143,12 @@ group = {
 		"ep2_18_a_true_and_perfect_knight_achievement"
 		"ep2_19_a_e_i_o_u_and_me_achievement"
 		"ep2_20_the_iron_and_golden_king_achievement"
+		#FP3
+		"fp3_rekindle_iran_achievement"
+		"fp3_challenger_caliphate_achievement"
+		"fp3_vassalize_the_caliph_achievement"
+		"fp3_mulct_them_dry_achievement"
+		"fp3_fiscal_res_achievement"
 	}
 }
 
@@ -162,5 +172,8 @@ group= {
 		"ep2_07_like_no_one_ever_was_achievement"
 		"ep2_16_ahab_achievement"
 		"ep2_17_little_william_marshal_achievement"
+		# FP3
+		"fp3_the_umma_strikes_back_achievement"
+		"fp3_darius_revenge_achievement"
 	}
 }

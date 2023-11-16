@@ -1657,12 +1657,12 @@
 			add_trait = lifestyle_blademaster # noted duelist
 			add_trait_xp = {
 				trait = lifestyle_blademaster
-                value = {
-                    integer_range = {
-                        min = medium_lifestyle_random_xp_low
-                        max = medium_lifestyle_random_xp_high
-                    }
-                }
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
 			}
 		}
 	}

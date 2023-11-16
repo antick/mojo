@@ -1730,6 +1730,159 @@ GetSpecialBuildingNameFromProvince = {
 		}
 		localization_key = building_holy_site_basilica_santiago_01
 	}
+
+	text = { # Sancutary of Imam Reza
+		trigger = {
+			has_special_building = yes
+			has_building = imam_reza_shrine_01
+			#this = province:4012 # Tus
+		}
+		localization_key = building_imam_reza_shrine_01
+	}
+
+	text = { # Dome of Soltaniyeh
+		trigger = {
+			has_special_building = yes
+			has_building = soltaniyeh_01
+			#this = province:4325 # Zanjan
+		}
+		localization_key = building_soltaniyeh_01
+	}
+
+	text = { # Ruins of the Palace of Ctesiphon 1
+		trigger = {
+			has_special_building = yes
+			has_building = palace_of_ctesiphon_01
+			#this = province:4796 # An-Nahrawan
+		}
+		localization_key = building_palace_of_ctesiphon_01
+	}
+
+	text = { # Ruins of the Palace of Ctesiphon 2
+		trigger = {
+			has_special_building = yes
+			has_building = palace_of_ctesiphon_02
+			#this = province:4796 # An-Nahrawan
+		}
+		localization_key = building_palace_of_ctesiphon_02
+	}
+
+	text = { # Falak-ol-Aflak
+		trigger = {
+			has_special_building = yes
+			has_building = falak_ol_aflak_citadel_01
+			#this = province:4261 # Saburkhawasht #actually Khorramabad, Saburkhawasht or Shapurkhast
+		}
+		localization_key = building_falak_ol_aflak_citadel_01
+	}
+
+	text = { # Minarets of Jam
+		trigger = {
+			has_special_building = yes
+			has_building = minarets_and_remains_of_jam_01
+			#this = province:4225 # Firuzkuh	#AKA Chagcharan
+		}
+		localization_key = building_minarets_and_remains_of_jam_01
+	}
+
+	text = { # Great Wall of Gorgan
+		trigger = {
+			has_special_building = yes
+			has_building = great_wall_of_gorgan_01
+			#this = province:4030 # Bakrabad and 4031 #Abaskun
+		}
+		localization_key = building_great_wall_of_gorgan_01
+	}
+
+	text = { # Lake Maharloo
+		trigger = {
+			has_special_building = yes
+			has_building = maharloo_lake_01
+			#this = province:4177 # Shiraz-farsi
+		}
+		localization_key = building_maharloo_lake_01
+	}
+
+	text = { # Rainbow Mountains
+		trigger = {
+			has_special_building = yes
+			has_building = rainbow_mountains_01
+			#this = province:4540 # Ahar
+		}
+		localization_key = building_rainbow_mountains_01
+	}
+
+	text = { # Mount Damavand
+		trigger = {
+			has_special_building = yes
+			has_building = mount_damavand_01
+			#this = province:4316 # Firrim
+		}
+		localization_key = building_mount_damavand_01
+	}
+
+	text = { # Tomb of Batsheba
+		trigger = {
+			has_special_building = yes
+			has_building = tomb_of_cyrus_01
+			#this = province:4118 # Istakhr
+		}
+		localization_key = building_tomb_of_cyrus_01
+	}
+
+	text = { # Ark of Bukhara
+		trigger = {
+			has_special_building = yes
+			has_building = ark_of_bukhara_01
+			#this = province:4394 # Bukhara
+		}
+		localization_key = building_ark_of_bukhara_01
+	}
+
+	text = { # Shah-i-Zinda 1
+		trigger = {
+			has_special_building = yes
+			has_building = shah_i_zinda_01
+			#this = province:4404 # Samarqand / Samarkand
+		}
+		localization_key = building_shah_i_zinda_01
+	}
+
+	text = { # Shah-i-Zinda 2
+		trigger = {
+			has_special_building = yes
+			has_building = shah_i_zinda_02
+			#this = province:4404 # Samarqand / Samarkand
+		}
+		localization_key = building_shah_i_zinda_02
+	}
+
+	text = { # Alamut Castle 1
+		trigger = {
+			has_special_building = yes
+			has_building = alamut_castle_01
+			#this = province:4323 # Qazwin / Qazvin
+		}
+		localization_key = building_alamut_castle_01
+	}
+
+	text = { # Alamut Castle 2
+		trigger = {
+			has_special_building = yes
+			has_building = alamut_castle_02
+			#this = province:4323 # Qazwin / Qazvin
+		}
+		localization_key = building_alamut_castle_02
+	}
+
+	text = { # Event Tower of Silence (typically a duchy building, this is a special for FP3 events)
+		trigger = {
+			has_special_building = yes
+			has_building = event_tower_of_silence_01
+			#this = province:any_zoroastrian_faith
+		}
+		localization_key = building_event_tower_of_silence_01
+	}	
 }
 
 GetLocationFaithTemple = { # Get name of regular temple in religion

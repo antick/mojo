@@ -318,6 +318,12 @@ executed_guest_modifier = {
 	decaying = yes
 }
 
+executed_valuable_prisoner_modifier = {
+	opinion = -25
+	years = 10
+	decaying = yes
+}
+
 
 ### TORTURE ###
 tortured_family_member = {

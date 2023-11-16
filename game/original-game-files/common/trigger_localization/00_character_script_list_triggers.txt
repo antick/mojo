@@ -20,6 +20,10 @@ any_vassal_all  = {
 	global = ALL_OF_CHARACTERS_VASSALS
 }
 
+any_vassal_or_below = { # TODO_CD_POLISH: Improve this loc
+	global = ANY_OF_CHARACTERS_VASSALS_OR_BELOW
+}
+
 any_vassal_percent = {
 	global = ANY_OF_CHARACTERS_VASSALS_PERCENT
 }

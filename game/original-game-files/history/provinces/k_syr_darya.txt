@@ -1,4 +1,4 @@
-###MAPS REFERENCES
+ï»¿###MAPS REFERENCES
 #AAA : https://www.wdl.org/fr/item/15036/view/1/1/
 #BBB : https://www.wdl.org/fr/item/11753/view/1/1/
 #CCC : https://upload.wikimedia.org/wikipedia/commons/3/38/Zakaukazie-Turkestan1903.jpg
@@ -11,7 +11,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	1066.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 }
 7113 = {	#Uzun-kul
@@ -28,7 +28,7 @@
 }
 
 ###c_sighnaq
-7123 = {	#Sïghnaq/Sighnaq
+7123 = {	#SÃ¯ghnaq/Sighnaq
 	culture = turkish
 	religion = tengri_pagan
 	holding = tribal_holding
@@ -71,15 +71,15 @@
 1186 = {	#Chah	#AKA Tashkent
 	culture = sogdian
 	religion = khurmazta
-	holding = tribal_holding
+	holding = castle_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 		culture = karluk
 	}
 	1066.1.1 = {
 		buildings = {
-			longhouses_01
-			market_villages_02
+			pastures_01
+			military_camps_02
 		}
 	}
 	1134.1.1 = {
@@ -115,7 +115,7 @@
 	religion = khurmazta
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 		culture = karluk
 	}
 	1134.1.1 = {
@@ -154,19 +154,19 @@
 	#Map BBB, as "Chulak" between the Syr Darya and river Chu
 	holding = none
 }
-7128 = {	#Yasï/Yasi
+7128 = {	#YasÃ¯/Yasi
 	#Can be found on the historical atlas of central asia by Yuri Bregel
 	holding = none
 }
 
 ###c_sutkend
-1181 = {	#Sütkend
+1181 = {	#SÃ¼tkend
 	#Can be found on the historical atlas of central asia by Yuri Bregel
 	culture = sogdian
 	religion = khurmazta
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 		culture = karluk
 	}
 	1134.1.1 = {
@@ -188,7 +188,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1066.1.1 = {
 		buildings = {
@@ -200,7 +200,7 @@
 		culture = khitan
 	}
 }
-7152 = {	#Narïn/Narin
+7152 = {	#NarÃ¯n/Narin
 	#On map CCC, as "Narynsk" south of Issyk kul
 	holding = none
 }
@@ -217,8 +217,12 @@
 	culture = karluk
 	religion = tengri_pagan
 	holding = tribal_holding
+	# By definition almost certainly earlier, but we know by 792 at the latest due to a letter from Patriarch Timothy of the Church of the East.
+	792.1.1 = {
+		religion = nestorian
+	}
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan
@@ -239,7 +243,7 @@
 	religion = khurmazta
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 		culture = karluk
 	}
 	1134.1.1 = {
@@ -260,7 +264,7 @@
 	religion = tengri_pagan
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 	1134.1.1 = {
 		culture = khitan
@@ -304,7 +308,7 @@
 	religion = khurmazta
 	holding = tribal_holding
 	934.1.1 = {
-		religion = ashari
+		religion = maturidi
 		culture = karluk
 	}
 	1134.1.1 = {

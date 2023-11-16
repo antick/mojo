@@ -1,6 +1,6 @@
 ﻿#Creating Switzerland "Kingdom"
 form_switzerland_kingdom_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 
 	desc = form_switzerland_kingdom_decision_desc
 	selection_tooltip = form_switzerland_kingdom_decision_tooltip
@@ -85,7 +85,7 @@ form_switzerland_kingdom_decision = {
 
 #Creating Austrian Archduchy
 form_austria_kingdom_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 
 	desc = form_austria_kingdom_decision_desc
 	selection_tooltip = form_austria_kingdom_decision_tooltip
@@ -271,7 +271,7 @@ reform_carolingian_empire_decision = {
 
 #Uniting the Burgundies
 unify_burgundy_kingdom_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 
 	desc = unify_burgundy_kingdom_decision_desc
 	selection_tooltip = unify_burgundy_kingdom_decision_tooltip
@@ -556,7 +556,7 @@ restore_holy_roman_empire_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
 	major = yes
 
-	ai_check_interval = 120
+	ai_check_interval = 12
 
 	desc = restore_holy_roman_empire_decision_desc
 	selection_tooltip = restore_holy_roman_empire_decision_tooltip
@@ -566,7 +566,7 @@ restore_holy_roman_empire_decision = {
 		exists = dynasty # Everyone should have a dynasty, but in case they don't...
 		NOR = {	#Title existence cnditions.
 			exists = title:e_hre.holder	#Well, that'd be redundant.
-			highest_held_title_tier = tier_empire	#Existing emperors likewise should not be giving up their empire.
+			#highest_held_title_tier = tier_empire	#Existing emperors likewise should not be giving up their empire.
 		}
 		AND = {	#Faith conditions.
 			NOT = { this = faith.religious_head }	#Nice try, Mr. Pope.
@@ -589,10 +589,33 @@ restore_holy_roman_empire_decision = {
 	is_valid = {
 		#Standard requirements.
 		is_independent_ruler = yes
-		prestige_level >= high_prestige_level
+		trigger_if = {
+			limit = {
+				is_ai = no
+			}
+			prestige_level >= high_prestige_level
+		}
 		#Title ownership conditions.
-		AND = {
-			has_title = title:k_east_francia #Gotta be King of the Germans.
+		OR = { #Gotta be King of a core Carolingian Kingdom.
+			has_title = title:k_east_francia
+			has_title = title:k_bavaria
+			has_title = title:k_france
+			has_title = title:k_italy
+			has_title = title:k_lotharingia
+			any_vassal = {
+				OR = {
+					has_title = title:k_east_francia
+					has_title = title:k_bavaria
+					has_title = title:k_france
+					has_title = title:k_italy
+					has_title = title:k_lotharingia
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				is_ai = no
+			}
 			custom_description = {	#And have some additional royal dignity for good measure.
 				text = decision_refound_hre_own_three_kingdoms.tt
 				any_held_title = {
@@ -600,18 +623,23 @@ restore_holy_roman_empire_decision = {
 					count >= 3
 				}
 			}
-			sub_realm_size >= 140	#Plus your various kingdoms should be ruling something.
 		}
+		sub_realm_size >= 140	#Plus your various kingdoms should be ruling something.
 		#HoF preference conditions.
-		OR = {
-			faith.religious_head = {	#And they have to actually like you enough to want to invest you.
-				opinion = {
-					target = root
-					value >= high_positive_opinion
-				}
+		trigger_if = {
+			limit = {
+				is_ai = no
 			}
-			root = { has_strong_usable_hook = faith.religious_head }	#Or you have a strong hook on them that you can actually use.
-			root = { has_weak_hook = faith.religious_head }	#Or a regular hook, to be fair, provided you meet the other criteria.
+			OR = {
+				faith.religious_head = {	#And they have to actually like you enough to want to invest you.
+					opinion = {
+						target = root
+						value >= high_positive_opinion
+					}
+				}
+				root = { has_strong_usable_hook = faith.religious_head }	#Or you have a strong hook on them that you can actually use.
+				root = { has_weak_hook = faith.religious_head }	#Or a regular hook, to be fair, provided you meet the other criteria.
+			}
 		}
 	}
 
@@ -738,16 +766,42 @@ restore_holy_roman_empire_decision = {
 	}
 
 	cost = {
-		gold = 500
+		gold = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				add = 500
+			}
+		}
 		piety = 200
 	}
 
 	ai_potential = {
-		always = yes
+		is_independent_ruler = yes
+		highest_held_title_tier >= tier_kingdom
 	}
 
 	ai_will_do = {
 		base = 100
+
+		modifier = { # We don't want a solo-France to form the HRE
+			factor = 0
+			NOR = {
+				has_title = title:k_east_francia
+				has_title = title:k_bavaria
+				has_title = title:k_italy
+				has_title = title:k_lotharingia
+				any_vassal = {
+					OR = {
+						has_title = title:k_east_francia
+						has_title = title:k_bavaria
+						has_title = title:k_italy
+						has_title = title:k_lotharingia
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -938,7 +992,7 @@ establish_norman_culture_decision = {
 ######################################
 
 establish_the_electorate_of_saxony_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 
 	ai_check_interval = 120

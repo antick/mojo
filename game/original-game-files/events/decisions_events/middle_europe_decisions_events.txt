@@ -771,6 +771,7 @@ middle_europe_decisions.0015 = {
 	immediate = {
 		play_music_cue = "mx_cue_epic_sacral_moment"
 		restore_holy_roman_empire_decision_scripted_effect = yes
+		create_artifact_reichskrone_effect = { OWNER = this }
 	}
 
 	#Renovatio Imperii!

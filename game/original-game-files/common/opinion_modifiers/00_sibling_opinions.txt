@@ -48,8 +48,6 @@ sibling_dislikes_charity_opinion = {
 	decaying = yes
 }
 
-
-
 sibling_helped_me_with_peasants_opinion = {
 	opinion = 15
 	years = 10
@@ -68,20 +66,17 @@ refused_to_rein_in_sibling_opinion = {
 	decaying = yes
 }
 
-
 sibling_reined_me_in_opinion = {
 	opinion = -30
 	years = 10
 	decaying = yes
 }
 
-
 sibling_aiding_diplomacy_opinion = {
 	opinion = 10
 	years = 5
 	decaying = yes
 }
-
 
 sibling_aiding_martial_opinion = {
 	opinion = 10
@@ -96,13 +91,11 @@ sibling_aiding_intrigue_opinion = {
 	decaying = yes
 }
 
-
 sibling_aiding_stewardship_opinion = {
 	opinion = 10
 	years = 5
 	decaying = yes
 }
-
 
 sibling_aiding_learning_opinion = {
 	opinion = 10
@@ -117,13 +110,11 @@ told_off_by_stressed_sibling_opinion = {
 	decaying = yes
 }
 
-
 sibling_delivered_just_judgement_opinion = {
 	opinion = 10
 	years = 5
 	decaying = yes
 }
-
 
 delivered_just_judgement_opinion = {
 	opinion = 15

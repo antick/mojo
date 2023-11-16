@@ -303,45 +303,11 @@ spawn_mongol_troops_effect = {
 			stacks = 5
 		}
 		men_at_arms = {
-			type = mangonel
+			type = trebuchet
 			stacks = 5
 		}
 		men_at_arms = {
-			type = mangonel
-			stacks = 5
-		}
-		location = capital_province
-		origin = capital_province
-	}
-	spawn_army = {
-		uses_supply = no
-		inheritable = no
-		name = mongol_event_troops
-		levies = {
-			value = 5000
-		}
-		men_at_arms = {
-			type = horse_archers
-			stacks = 10
-		}
-		men_at_arms = {
-			type = horse_archers
-			stacks = 10
-		}
-		men_at_arms = {
-			type = light_horsemen
-			stacks = 10
-		}
-		men_at_arms = {
-			type = light_horsemen
-			stacks = 10
-		}
-		men_at_arms = {
-			type = armored_horsemen
-			stacks = 3
-		}
-		men_at_arms = {
-			type = mangonel
+			type = trebuchet
 			stacks = 5
 		}
 		location = capital_province
@@ -375,7 +341,7 @@ spawn_mongol_troops_effect = {
 			stacks = 3
 		}
 		men_at_arms = {
-			type = mangonel
+			type = trebuchet
 			stacks = 5
 		}
 		location = capital_province
@@ -409,7 +375,41 @@ spawn_mongol_troops_effect = {
 			stacks = 3
 		}
 		men_at_arms = {
-			type = mangonel
+			type = trebuchet
+			stacks = 5
+		}
+		location = capital_province
+		origin = capital_province
+	}
+	spawn_army = {
+		uses_supply = no
+		inheritable = no
+		name = mongol_event_troops
+		levies = {
+			value = 5000
+		}
+		men_at_arms = {
+			type = horse_archers
+			stacks = 10
+		}
+		men_at_arms = {
+			type = horse_archers
+			stacks = 10
+		}
+		men_at_arms = {
+			type = light_horsemen
+			stacks = 10
+		}
+		men_at_arms = {
+			type = light_horsemen
+			stacks = 10
+		}
+		men_at_arms = {
+			type = armored_horsemen
+			stacks = 3
+		}
+		men_at_arms = {
+			type = trebuchet
 			stacks = 5
 		}
 		location = capital_province
@@ -442,7 +442,7 @@ spawn_mongol_troops_condensed_effect = {
 			stacks = 14
 		}
 		men_at_arms = {
-			type = mangonel
+			type = trebuchet
 			stacks = 25
 		}
 		location = capital_province
@@ -466,6 +466,10 @@ spawn_mongol_successor_state_troops_effect = {
 			type = light_horsemen
 			stacks = 5
 		}
+		men_at_arms = {
+			type = trebuchet
+			stacks = 3
+		}
 		location = capital_province
 		origin = capital_province
 	}
@@ -484,6 +488,10 @@ spawn_mongol_successor_state_troops_effect = {
 			type = light_horsemen
 			stacks = 5
 		}
+		men_at_arms = {
+			type = trebuchet
+			stacks = 3
+		}
 		location = capital_province
 		origin = capital_province
 	}
@@ -501,6 +509,10 @@ spawn_mongol_successor_state_troops_effect = {
 		men_at_arms = {
 			type = light_horsemen
 			stacks = 5
+		}
+		men_at_arms = {
+			type = trebuchet
+			stacks = 3
 		}
 		location = capital_province
 		origin = capital_province

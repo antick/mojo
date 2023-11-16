@@ -30,6 +30,7 @@
 				culture = { has_cultural_pillar = language_tamil }
 				culture = { has_cultural_pillar = language_telugu }
 				culture = { has_cultural_pillar = language_kannada }
+				culture = { has_cultural_pillar = language_north_dravidian } #FP3 addition
 			}
 		}
 		localization_key = knight_shoorveer

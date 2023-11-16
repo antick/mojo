@@ -1,13 +1,12 @@
 #k_khorasan
 ##d_nishapur ###################################
 ###c_nishapur
-4014 = {	#Farhajird
+4017 = {	#Nishapur
 	culture = tajik
-	religion = mazdayasna
+	religion = maturidi #change from Gayomarthianism, as it was a big garrison town. 
 	holding = castle_holding
-	1060.1.1 = {
-		religion = maturidi
-	}
+	special_building = nishapur_mines_01
+	
 	1066.1.1 = {
 		buildings = {
 			plantations_02
@@ -23,11 +22,8 @@
 4016 = {	#Shamat
 	holding = none
 }
-4017 = {	#Nishapur
+4014 = {	#Farhajird
 	holding = castle_holding
-	867.1.1 = {
-		special_building = nishapur_mines_01
-	}
 }
 4018 = {	#Rivand
 	holding = none
@@ -38,6 +34,7 @@
 	culture = tajik
 	religion = mazdayasna
 	holding = castle_holding
+	special_building = imam_reza_shrine_01
 	1060.1.1 = {
 		religion = maturidi
 	}
@@ -49,8 +46,8 @@
 4011 = {	#Maihana
 	holding = none
 }
-4013 = {	#Nuqaq
-	holding = none
+4013 = {	#Nuqaq 
+	holding = city_holding 	
 }
 
 ###c_samaiqan
@@ -106,7 +103,7 @@
 	religion = mazdayasna	
 	holding = castle_holding
 	1060.1.1 = {
-		religion = ashari
+		religion = maturidi
 	}
 }
 4024 = {	#Biyar	#Biar-e Kord
@@ -244,7 +241,7 @@
 ###c_amol
 4240 = {	#Amol-e-Shatt	#AKA Amul
 	culture = sogdian
-	religion = gayomarthianism
+	religion = khurmazta
 	holding = castle_holding
 	900.1.1 = {
 		religion = maturidi
@@ -283,6 +280,7 @@
 	culture = afghan
 	religion = mahayana
 	holding = castle_holding
+	special_building_slot = minarets_and_remains_of_jam_01
 }
 4224 = {	#Khasht
 	holding = city_holding	#placeholder
@@ -425,7 +423,7 @@
 ###c_balkh
 4335 = {	#Balkh
 	culture = sogdian
-	religion = mahayana
+	religion = khurramism 
 	holding = castle_holding
 	867.1.1 = {
 		buildings = {
@@ -463,9 +461,15 @@
 
 ###c_west-tokharestan
 4341 = {	#Samanjan
-	culture = afghan
+	culture = sogdian
 	religion = mahayana
 	holding = castle_holding
+	960.1.1 = {
+		culture = tajik
+	}
+	1060.1.1 = {
+		faith = maturidi
+	}
 }
 4339 = {	#Saan
 	holding = none
@@ -476,9 +480,15 @@
 
 ###c_east-tokharestan
 4351 = {	#Khulm
-	culture = afghan
+	culture = sogdian
 	religion = mahayana
 	holding = castle_holding
+	960.1.1 = {
+		culture = tajik
+	}
+	1060.1.1 = {
+		faith = maturidi
+	}
 }
 4347 = {	#Andarab
 	holding = church_holding
@@ -504,7 +514,7 @@
 	holding = castle_holding
 	1060.1.1 = {
 		culture = turkish
-		religion = ashari
+		religion = maturidi
 	}
 }
 4041 = {	#Shahrastan
@@ -524,7 +534,7 @@
 	holding = castle_holding
 	1060.1.1 = {
 		culture = turkish
-		religion = ashari
+		religion = maturidi
 	}
 }
 4037 = {	#Hesare-Taq

@@ -1048,6 +1048,14 @@ hunt_moh_negative = {
 		if = {
 			limit = {
 				activity_host.court_position:master_of_hunt_court_position = {
+					aptitude = { court_position = master_of_hunt_court_position value >= 2 }
+				}
+			}
+			add = -0.33
+		}
+		if = {
+			limit = {
+				activity_host.court_position:master_of_hunt_court_position = {
 					aptitude = { court_position = master_of_hunt_court_position value >= 3 }
 				}
 			}
@@ -1057,14 +1065,6 @@ hunt_moh_negative = {
 			limit = {
 				activity_host.court_position:master_of_hunt_court_position = {
 					aptitude = { court_position = master_of_hunt_court_position value >= 4 }
-				}
-			}
-			add = -0.33
-		}
-		if = {
-			limit = {
-				activity_host.court_position:master_of_hunt_court_position = {
-					aptitude = { court_position = master_of_hunt_court_position value >= 5 }
 				}
 			}
 			add = -0.33
@@ -1107,11 +1107,11 @@ hunt_poetic_inspiration = {
 			weight = {
 				base = 1
 				modifier = {
-					aptitude = { court_position = court_poet_court_position value >= 5 }
+					aptitude = { court_position = court_poet_court_position value >= 4 }
 					add = 0.33
 				}
 				modifier = {
-					aptitude = { court_position = court_poet_court_position value >= 4 }
+					aptitude = { court_position = court_poet_court_position value >= 3 }
 					add = 0.33
 				}
 				modifier = {
@@ -1170,6 +1170,17 @@ hunt_fervor_gain = {
 			tags = { pulse_action }
 			character = scope:root_scope
 			# Effect
+			scope:root_scope = {
+				if = {
+					limit = {
+						has_trait = lifestyle_mystic
+					}
+					add_trait_xp = {
+						trait = lifestyle_mystic
+						value = lifestyle_mystic_xp_gain_minor_value
+					}
+				}
+			}
 			activity_host.faith = {
 				change_fervor = {
 					value = miniscule_fervor_value

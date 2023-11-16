@@ -37,6 +37,73 @@ scripted_trigger bp2_yearly_1000_is_appropriate_child = {
 	is_ai = yes
 	location = root.location
 	NOT = { has_variable = witnessed_trait }
+	OR = {
+		AND = {
+			root = { has_trait = drunkard }
+			NOT = { has_trait = drunkard }
+		}
+		AND = {
+			root = { has_trait = reclusive }
+			NOT = { has_trait = reclusive }
+		}
+		AND = {
+			root = { has_trait = irritable }
+			NOT = { has_trait = irritable }
+		}
+		AND = {
+			root = { has_trait = flagellant }
+			NOT = { has_trait = flagellant }
+		}
+		AND = {
+			root = { has_trait = profligate }
+			NOT = { has_trait = profligate }
+		}
+		AND = {
+			root = { has_trait = improvident }
+			NOT = { has_trait = improvident }
+		}
+		AND = {
+			root = { has_trait = comfort_eater }
+			NOT = { has_trait = comfort_eater }
+		}
+		AND = {
+			root = { has_trait = inappetetic }
+			NOT = { has_trait = inappetetic }
+		}
+		AND = {
+			root = { has_trait = journaller }
+			NOT = { has_trait = journaller }
+		}
+		AND = {
+			root = { has_trait = hashishiyah }
+			NOT = { has_trait = hashishiyah }
+			any_courtier_or_guest = { 
+				is_available_adult = yes
+				has_any_bad_relationship_with_root_trigger = no
+			}
+		}
+		AND = {
+			NOT = { has_trait = confider }
+			root = {
+				has_trait = confider
+				any_relation = {
+					type = friend
+					is_available = yes
+					location = root.location
+				}
+			}
+		}
+		AND = {
+			root = {
+				has_trait = athletic 
+				NOT = { has_trait = one_legged }
+			}
+			NOT = {
+				has_trait = athletic
+				has_trait = one_legged
+			}
+		}
+	}
 }
 
 scripted_effect bp2_yearly_1000_award_trait_effect = {
@@ -312,301 +379,19 @@ bp2_yearly.1000 = {
 		NOT = { has_character_flag = bp2_yearly_1001_removed_stress_trait }
 		#Check if we have a stress trait; and if an appropriate child does not have the stress trait (so it's transferrable)
 		OR = {
-			AND = {
-				has_trait = drunkard
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = drunkard }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = drunkard }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = drunkard }
-					}
-				}
+			any_child = {
+				bp2_yearly_1000_is_appropriate_child = yes
 			}
-			AND = {
-				has_trait = hashishiyah
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = hashishiyah }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = hashishiyah }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = hashishiyah }
-					}
-				}
+			any_relation = {
+				type = ward
+				bp2_yearly_1000_is_appropriate_child = yes
 			}
-			AND = {
-				has_trait = reclusive
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = reclusive }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = reclusive }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = reclusive }
-					}
+			any_warden_hostage = {
+				opinion = {
+					target = root
+					value >= low_negative_opinion
 				}
-			}
-			AND = {
-				has_trait = irritable
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = irritable }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = irritable }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = irritable }
-					}
-				}
-			}
-			AND = {
-				has_trait = flagellant
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = flagellant }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = flagellant }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = flagellant }
-					}
-				}
-			}
-			AND = {
-				has_trait = profligate
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = profligate }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = profligate }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = profligate }
-					}
-				}
-			}
-			AND = {
-				has_trait = improvident
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = improvident }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = improvident }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = improvident }
-					}
-				}
-			}
-			AND = {
-				has_trait = contrite
-				any_courtier_or_guest ?= { 
-					is_available_adult = yes
-					has_any_bad_relationship_with_root_trigger = no
-				}
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = contrite }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = contrite }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = contrite }
-					}
-				}
-			}
-			AND = {
-				has_trait = comfort_eater
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = comfort_eater }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = comfort_eater }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = comfort_eater }
-					}
-				}
-			}
-			AND = {
-				has_trait = inappetetic
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = inappetetic }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = inappetetic }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = inappetetic }
-					}
-				}
-			}
-			AND = {
-				has_trait = journaller
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = journaller }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = journaller }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = journaller }
-					}
-				}
-			}
-			AND = {
-				has_trait = confider
-				any_relation = {
-					type = friend
-					is_available = yes
-					location = root.location
-				}
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = confider }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = confider }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = confider }
-					}
-				}
-			}
-			AND = {
-				has_trait = athletic
-				NOT = { has_trait = one_legged }
-				OR = {
-					any_child = { 
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = athletic }
-					}
-					any_relation = {
-						type = ward
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = athletic }
-					}
-					any_warden_hostage = {
-						opinion = {
-							target = root
-							value >= low_negative_opinion
-						}
-						bp2_yearly_1000_is_appropriate_child = yes
-						NOT = { has_trait = athletic }
-					}
-				}
+				bp2_yearly_1000_is_appropriate_child = yes
 			}
 		}
 	}
@@ -669,23 +454,33 @@ bp2_yearly.1000 = {
 	immediate = {
 		play_music_cue = "mx_cue_stress"
 		#Your own children first
-		random_child = {
-			#A child you care about
-			limit = { 
-				opinion = {
-					target = root
-					value >= low_positive_opinion
-				}
-				bp2_yearly_1000_is_appropriate_child = yes 
-			}
-			#Otherwise pick whoever
-			alternative_limit = { bp2_yearly_1000_is_appropriate_child = yes }
-			save_scope_as = appropriate_child
-		}
-		#Otherwise a ward
 		if = {
 			limit = {
-				NOT = { exists = scope:appropriate_child }
+				any_child = {
+					bp2_yearly_1000_is_appropriate_child = yes
+				}
+			}
+			random_child = {
+				#A child you care about
+				limit = { 
+					opinion = {
+						target = root
+						value >= low_positive_opinion
+					}
+					bp2_yearly_1000_is_appropriate_child = yes 
+				}
+				#Otherwise pick whoever
+				alternative_limit = { bp2_yearly_1000_is_appropriate_child = yes }
+				save_scope_as = appropriate_child
+			}
+		}
+		#Otherwise a ward
+		else_if = {
+			limit = {
+				any_relation = {
+					type = ward
+					bp2_yearly_1000_is_appropriate_child = yes
+				}
 			}
 			random_relation = {
 				type = ward
@@ -704,16 +499,21 @@ bp2_yearly.1000 = {
 		}
 		else_if = {
 			limit = {
-				NOT = { exists = scope:appropriate_child }
+				any_warden_hostage = {
+					opinion = {
+						target = root
+						value >= low_negative_opinion
+					}
+					bp2_yearly_1000_is_appropriate_child = yes
+				}
 			}
 			random_warden_hostage = {
 				limit = {
 					opinion = {
 						target = root
-						value >= medium_positive_opinion
+						value >= low_negative_opinion
 					}
 					bp2_yearly_1000_is_appropriate_child = yes
-					NOT = { has_trait = drunkard }
 				}
 				save_scope_as = appropriate_child
 			}
@@ -2477,7 +2277,7 @@ bp2_yearly.1010 = {
 				trigger = {
 					scope:hugging_child = {
 						age > 10
-						age < 15
+						age <= 15
 					}
 				}
 				desc = bp2_yearly.1010.desc_teenager
@@ -3135,6 +2935,13 @@ scripted_trigger bp2_yearly_1030_is_focus_child = {
 	age < 16 
 	is_available = yes
 	is_ai = yes
+	OR = { # A focus is selected
+		has_focus = education_martial
+		has_focus = education_intrigue
+		has_focus = education_learning
+		has_focus = education_stewardship
+		has_focus = education_diplomacy
+	}
 	OR = {
 		AND = {
 			root = { has_trait = education_martial }
@@ -3511,7 +3318,7 @@ bp2_yearly.1035 = {
 							description = gemstone_trinket_rough.desc
 							type = miscellaneous
 							visuals = diamond
-							modifier = artifact_monthly_prestige_2_modifier
+							modifier = artifact_monthly_minor_prestige_1_modifier
 							modifier = artifact_learning_1_modifier
 							save_scope_as = gemstone_trinket
 							wealth = 15
@@ -3526,7 +3333,7 @@ bp2_yearly.1035 = {
 							description = gemstone_trinket_modest.desc
 							type = miscellaneous
 							visuals = diamond
-							modifier = artifact_monthly_prestige_4_modifier
+							modifier = artifact_monthly_minor_prestige_2_modifier
 							modifier = artifact_learning_1_modifier
 							save_scope_as = gemstone_trinket
 							wealth = 15
@@ -3541,7 +3348,7 @@ bp2_yearly.1035 = {
 							description = gemstone_trinket_brilliant.desc
 							type = miscellaneous
 							visuals = diamond
-							modifier = artifact_monthly_prestige_4_modifier
+							modifier = artifact_monthly_minor_prestige_3_modifier
 							modifier = artifact_learning_2_modifier
 							save_scope_as = gemstone_trinket
 							wealth = 15

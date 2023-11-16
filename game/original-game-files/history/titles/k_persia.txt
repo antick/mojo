@@ -1,7 +1,7 @@
+
 k_persia = {
 	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	
 	1037.1.1 = {
 		holder = 3038
 	}
@@ -508,6 +508,9 @@ c_kirman = {
 		liege = "d_sistan"
 		holder = 6896
 	}
+	865.1.1 = {
+		holder = extra_turks_0001 #historical, but only confirmable a couple of years later
+	}
 	
 	977.1.1 = {
 		holder = 144123
@@ -609,6 +612,9 @@ c_behabad = {
 		liege = "d_sistan"
 		holder = 6896
 	}
+	865.1.1 = {
+		holder = extra_turks_0001 #historical, but only confirmable a couple of years later
+	}
 	
 	977.1.1 = {
 		holder = 144123
@@ -704,8 +710,12 @@ c_bam = {
 	}
 	
 	861.1.1 = {
-		liege = "d_sistan"
+		holder = azariqa_0006
+		liege = 0
+	}
+	869.1.1 = {
 		holder = 6896
+		liege = d_sistan
 	}
 	
 	977.1.1 = {
@@ -1182,8 +1192,8 @@ c_shahre-babak = {
 		holder = 163162
 	}
 	1063.9.4 = {
-		liege = "d_isfahan"
-		holder = 3050
+		#liege = "d_isfahan"
+		#holder = 3050
 	}
 	1066.1.1 = {
 		holder = 1231053
@@ -1575,7 +1585,9 @@ d_hamadan = {
 		liege = 0
 		holder = 163098
 	}
-	
+	1041.1.1 = {
+		holder = 1231054 #Garshasp Kayukid 
+	}
 	1063.9.4 = {
 		holder = 3040
 	}
@@ -1688,11 +1700,15 @@ c_hamadan = {
 	768.1.1 = {
 		holder = 34003 # al-Mahdi Abbasid (fictitious assignment)
 	}
-	
-	840.1.1 = {
-		holder = 163098
+	802.1.1 = {
+		holder = extra_bedouins_0022 #Banu Salama elder (Historical tax collector in Hamadan until mid-9th century)
 	}
-	
+	815.1.1 = {
+		holder = extra_bedouins_0023 #Banu Salama elder (Historical tax collector in Hamadan until mid-9th century). Other clans in the area at the time were the Banu Ḥanẓala and Banu Johayna.
+	}
+	1041.1.1 = {
+		holder = 1231054 #Garshasp Kayukid 
+	}
 	1063.9.4 = {
 		holder = 3040
 	}
@@ -2017,6 +2033,7 @@ c_dinawar = {
 
 d_fars = {
 	661.2.28 = {
+		government = clan_government
 		liege = e_arabia
 	}
 	769.1.1 = {
@@ -2026,12 +2043,10 @@ d_fars = {
 		holder = 0
 	}
 	860.1.1 = {
-		liege = 0
 		holder = 1000230509
 	}
 	
 	1066.1.1 = {
-		government = tribal_government
 		liege = "k_persia"
 		holder = 3854
 	}
@@ -2049,7 +2064,6 @@ d_fars = {
 		liege = 0
 	}
 	1157.5.8 = {
-		government = clan_government
 		holder = 144054
 	}
 	1159.1.1 = {
@@ -2269,9 +2283,9 @@ c_darabjerd = {
 		liege = "d_fars"
 		holder = 163100
 	}
-	867.1.1 = {		#Kinda placeholder
-		holder = 302701
-		liege = d_fars	#Saffarid
+	867.1.1 = {		
+		holder = azariqa_0003 #Muhammad ibn Wasid, notorious Azariqa who took the governorship of Fars in 870. IRL he probably wasn't a formal ruler in the area at this point, but he was based in the area.  
+		liege = d_fars	#Tahirid governor under Abbasids 
 	}
 	
 	1066.1.1 = {
@@ -2870,6 +2884,11 @@ c_sif-i-umara = {
 
 
 d_khuzestan = {
+	866.1.1 = {
+		liege = e_arabia
+		holder = sogdian0008 
+	}
+
 	1066.1.1 = {
 		liege = k_persia
 		holder = 93160
@@ -2896,7 +2915,7 @@ c_sardan = {
 	}
 	862.1.1 = {
 		holder = 163160
-		liege = "d_fars"
+		liege = "d_khuzestan"
 	}
 	1066.1.1 = {
 		liege = "d_kirman"
@@ -3003,8 +3022,8 @@ c_ramhurmuz = {
 		holder = 163101
 	}
 	862.1.1 = {
-		holder = 163160
-		liege = "d_fars"
+		holder = extra_kurds_0003
+		liege = "d_khuzestan"
 	}
 	1066.1.1 = {
 		liege = "d_khuzestan"
@@ -3114,7 +3133,7 @@ c_tustar = {
 		holder = 163101
 	}
 	862.1.1 = {
-		holder = 163160
+		holder = sogdian0008 
 		liege = "d_fars"
 	}
 	1066.1.1 = {
@@ -3223,7 +3242,7 @@ c_ahvaz = {
 		liege = "d_merv"
 	}
 	862.1.1 = {
-		holder = 163160
+		holder = sogdian0008 
 		liege = "d_fars"
 	}
 	
@@ -3303,7 +3322,7 @@ c_abbadan = {
 		liege = "d_merv"
 	}
 	862.1.1 = {
-		holder = 163160
+		holder = sogdian0008 
 		liege = "d_fars"
 	}
 	
@@ -3371,7 +3390,7 @@ c_dawraq = {
 		liege = "d_merv"
 	}
 	862.1.1 = {
-		holder = 163160
+		holder = sogdian0008 
 		liege = "d_fars"
 	}
 	
@@ -3559,7 +3578,8 @@ c_kermanshah = {
 		holder = 163098
 	}
 	866.1.1 = {
-		holder = 163152
+		holder = 163132 #Musa ibn Buga
+		liege = e_arabia 
 	}
 	
 	1066.1.1 = {
@@ -3619,7 +3639,8 @@ c_masabadhan = {
 		holder = 163098
 	}
 	866.1.1 = {
-		holder = 163152
+		holder = 163132 
+		liege = e_arabia 
 	}
 	
 	1066.1.1 = {
@@ -3751,4 +3772,3 @@ c_saimara = {
 	}
 
 }
-

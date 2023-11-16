@@ -653,6 +653,12 @@ vanity_dzediti = {
 	culture = "vlach"
 }
 
+vanity_passoni = {
+	name = dynn_passoni
+	culture = "cisalpine"
+	motto = dynn_Passoni_motto
+}
+
 vanity_hedberg = {
 	name = dynn_hedberg
 	culture = "swedish"
@@ -677,8 +683,38 @@ vanity_husen = {
 	motto = dynn_Husen_motto
 }
 
+vanity_granholm = {
+	name = dynn_granholm
+	culture = "swedish"
+	motto = dynn_Granholm_motto
+}
+
+vanity_ribeiro = {
+	name = dynn_ribeiro
+	culture = "galician"
+	motto = dynn_Ribeiro_motto
+}
+
 vanity_lopez = {
 	name = dynn_lopez
 	culture = "castilian"
 	motto = dynn_Lopez_motto
+}
+
+vanity_stokic = {
+	name = dynn_Stokic
+	culture = "serbian"
+	motto = dynn_Stokic_motto
+}
+
+vanity_markovic = {
+	name = dynn_markovic
+	culture = "serbian"
+	motto = dynn_markovic_motto
+}
+
+vanity_velasquez = {
+	name = dynn_Velasquez
+	culture = "castilian"
+	motto = dynn_Velasquez_motto
 }

@@ -280,9 +280,6 @@ c_tigheci = {
 		liege = k_bulgaria
 		government = tribal_government
 	}
-	935.1.1 = {
-		government = feudal_government	#Ahistorical, just for ease of bookmarks.
-	}
 	#Pecheneg rule
 	1066.1.1 = {
 		holder = 20642
@@ -314,9 +311,6 @@ c_chilia = {
 		holder = 302117
 		liege = k_bulgaria
 		government = tribal_government
-	}
-	935.1.1 = {
-		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	#Pecheneg rule
 	1066.1.1 = {

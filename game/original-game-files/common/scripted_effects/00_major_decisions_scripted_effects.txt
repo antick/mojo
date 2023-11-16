@@ -1896,6 +1896,7 @@ restore_holy_roman_empire_decision_scripted_effect = {
 		}
 	}
 	resolve_title_and_vassal_change = scope:title_change
+	set_primary_title_to = title:e_hre
 
 	#Papal hook management.
 	if = {
@@ -1916,7 +1917,17 @@ restore_holy_roman_empire_decision_scripted_effect = {
 	}
 
 	#Sort title laws.
-	destroy_title = title:k_east_francia	#Make Germany inalienable.
+	if = {
+		limit = {
+			OR = {
+				has_title = title:k_east_francia
+				any_vassal = {
+					has_title = title:k_east_francia
+				}
+			}
+		}
+		destroy_title = title:k_east_francia	#Make Germany inalienable.
+	}
 	title:e_hre = {
 		add_title_law = princely_elective_succession_law
 		if = {	#Add Salic law.
@@ -1954,7 +1965,24 @@ restore_holy_roman_empire_decision_scripted_effect = {
 	hidden_effect = {
 		if = {	#If Germania is nae a thing, merge it into the HRE.
 			limit = {
-				NOT = { exists = title:e_germany.holder }
+				OR = {
+					has_title = title:k_east_francia
+					has_title = title:k_bavaria
+					has_title = title:k_lotharingia
+					has_title = title:k_frisia
+					any_vassal = {
+						OR = {
+							has_title = title:k_east_francia
+							has_title = title:k_bavaria
+							has_title = title:k_lotharingia
+							has_title = title:k_frisia
+						}
+					}
+				}
+				OR = {
+					NOT = { exists = title:e_germany.holder }
+					title:e_germany.holder ?= root
+				}
 			}
 			title:e_germany = {
 				every_in_de_jure_hierarchy = {
@@ -1970,9 +1998,78 @@ restore_holy_roman_empire_decision_scripted_effect = {
 					any_this_title_or_de_jure_above = { this = title:e_italy }
 				}
 				save_temporary_scope_as = this_title
-				root = { completely_controls = scope:this_title }
+				#root = { completely_controls = scope:this_title }
 			}
 			set_de_jure_liege_title = title:e_hre
+		}
+		every_vassal = {
+			every_held_title = {
+				limit = {
+					tier = tier_kingdom
+					NOT = {	#The Pope retains vague dibs on Italy.
+						any_this_title_or_de_jure_above = { this = title:e_italy }
+					}
+					save_temporary_scope_as = this_title
+					#prev = { completely_controls = scope:this_title }
+				}
+				set_de_jure_liege_title = title:e_hre
+			}
+		}
+		if = { # Merge Francia into the HRE under certain conditions
+			limit = {
+				OR = {
+					NOT = { exists = title:e_france.holder }
+					title:e_france.holder ?= root
+				}
+				OR = {
+					title:k_france = { # If core West Francia is part of the HRE
+						target_is_de_jure_liege_or_above = title:e_hre
+					}
+					calc_true_if = { # Or 2+ of the other francian Kingdoms
+						amount >= 2
+						title:k_burgundy = {
+							target_is_de_jure_liege_or_above = title:e_hre
+						}
+						title:k_aquitaine = {
+							target_is_de_jure_liege_or_above = title:e_hre
+						}
+						title:k_brittany = {
+							target_is_de_jure_liege_or_above = title:e_hre
+						}
+					}
+				}
+			}
+			title:e_france = {
+				every_in_de_jure_hierarchy = {
+					limit = { tier = tier_kingdom }
+					set_de_jure_liege_title = title:e_hre
+				}
+			}
+		}
+		every_vassal = {
+			limit = {
+				is_ai = yes
+			}
+			every_held_title = {
+				limit = {
+					tier = tier_kingdom
+				}
+				root = {
+					destroy_title = prev
+				}
+			}
+		}
+		every_held_title = {
+			limit = {
+				tier >= tier_kingdom
+				NOT = {
+					this = title:e_hre
+				}
+				save_temporary_scope_as = this_title
+			}
+			root = {
+				destroy_title = prev
+			}
 		}
 	}
 	custom_tooltip = restore_holy_roman_empire_decision_effects_de_jure.tt

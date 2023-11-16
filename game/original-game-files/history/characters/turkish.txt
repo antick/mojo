@@ -16,7 +16,7 @@
 144011 = {
 	name = "Malik_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 41701
 	mother = 34263
@@ -31,7 +31,7 @@
 144012 = {
 	name = "Mahmud"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3042
 	1072.1.1 = {
@@ -45,7 +45,7 @@
 144013 = {
 	name = "Barkiarok"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3042
 	1079.1.1 = {
@@ -59,7 +59,7 @@
 144014 = {
 	name = "Mohammed"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3042
 	1081.1.1 = {
@@ -73,7 +73,7 @@
 144015 = {
 	name = "Sanjar"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3042
 	1085.1.1 = {
@@ -87,7 +87,7 @@
 144020 = {
 	name = "Radwan"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3044
 	1079.1.1 = {
@@ -101,7 +101,7 @@
 144021 = {
 	name = "Alp_Arslan"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144020
 	1096.1.1 = {
@@ -115,7 +115,7 @@
 144022 = {
 	name = "Sultan_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144020
 	1108.1.1 = {
@@ -129,7 +129,7 @@
 144023 = {
 	name = "Duqaq"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3044
 	1080.1.1 = {
@@ -143,7 +143,7 @@
 144024 = {
 	name = "Tutush"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144023
 	1103.1.1 = {
@@ -157,7 +157,7 @@
 144025 = {
 	name = "Kerman_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3041
 	1041.1.1 = {
@@ -171,7 +171,7 @@
 144026 = {
 	name = "Sultan_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3041
 	1042.1.1 = {
@@ -185,7 +185,7 @@
 144027 = {
 	name = "Turan_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3041
 	1037.1.1 = {
@@ -199,7 +199,7 @@
 144028 = {
 	name = "Iran_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144027
 	1067.1.1 = {
@@ -213,7 +213,7 @@
 144029 = {
 	name = "Imad_ad-Din_Zengi"
 	dynasty = 101687
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3079
 	1085.1.1 = {
@@ -227,7 +227,7 @@
 144030 = {
 	name = "Saif_ad-Din_Ghazi"
 	dynasty = 101687
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144029
 	1116.1.1 = {
@@ -245,7 +245,7 @@
 	diplomacy = 6
 	intrigue = 6
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144029
 	trait = education_martial_3
@@ -263,7 +263,7 @@
 144032 = {
 	name = "Qutb_ad-Din_Mawdud"
 	dynasty = 101687
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144029
 	1120.1.1 = {
@@ -277,7 +277,7 @@
 144033 = {
 	name = "As-Salih_Ismail_al-Malik"
 	dynasty = 101687
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144031
 	1163.1.1 = {
@@ -291,7 +291,7 @@
 144034 = {
 	name = "Arslan_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144025
 	1072.1.1 = {
@@ -305,7 +305,7 @@
 144035 = {
 	name = "Mehmed"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144034
 	1092.1.1 = {
@@ -319,7 +319,7 @@
 144036 = {
 	name = "Togrul_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144035
 	1120.1.1 = {
@@ -333,7 +333,7 @@
 144037 = {
 	name = "Bahram_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144036
 	1140.1.1 = {
@@ -347,7 +347,7 @@
 144038 = {
 	name = "Arslan_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144036
 	1141.1.1 = {
@@ -361,7 +361,7 @@
 144039 = {
 	name = "Turan_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144036
 	1142.1.1 = {
@@ -375,7 +375,7 @@
 144040 = {
 	name = "Muhammad_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144037
 	1160.1.1 = {
@@ -389,7 +389,7 @@
 144041 = {
 	name = "Saif_ad-Din_Ghazi"
 	dynasty = 101687
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144032
 	1150.1.1 = {
@@ -403,7 +403,7 @@
 144042 = {
 	name = "Izz_ad-Din_Mas_ud"
 	dynasty = 101687
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144032
 	1152.1.1 = {
@@ -418,7 +418,7 @@
 144043 = {
 	name = "Mahmud"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144014
 	1104.1.1 = {
@@ -432,7 +432,7 @@
 144044 = {
 	name = "Saltuk"
 	dynasty = 100702
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	1050.1.1 = {
 		birth = "1050.1.1"
@@ -445,7 +445,7 @@
 144045 = {
 	name = "Ali"
 	dynasty = 100702
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144044
 	1080.1.1 = {
@@ -459,7 +459,7 @@
 144046 = {
 	name = "Ziyaeddin"
 	dynasty = 100702
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144044
 	1082.1.1 = {
@@ -473,7 +473,7 @@
 144047 = {
 	name = "Saltuk"
 	dynasty = 100702
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144045
 	1102.1.1 = {
@@ -487,7 +487,7 @@
 144048 = {
 	name = "Dawud"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144043
 	1120.1.1 = {
@@ -501,7 +501,7 @@
 144049 = {
 	name = "Mas_ud"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144014
 	1108.1.1 = {
@@ -515,7 +515,7 @@
 144050 = {
 	name = "Togrul"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144014
 	1109.1.1 = {
@@ -529,7 +529,7 @@
 144051 = {
 	name = "Shams_al-Din_Ildeniz"
 	dynasty = 101876
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	1110.1.1 = {
 		birth = "1110.1.1"
@@ -542,7 +542,7 @@
 144052 = {
 	name = "Mohammed_Jahan_Pahlavan"
 	dynasty = 101876
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144051
 	1126.1.1 = {
@@ -556,7 +556,7 @@
 144053 = {
 	name = "Malik_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144043
 	1122.1.1 = {
@@ -570,7 +570,7 @@
 144054 = {
 	name = "Muhammed"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144043
 	1123.1.1 = {
@@ -584,7 +584,7 @@
 144055 = {
 	name = "Arslan_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144050
 	1136.1.1 = {
@@ -598,7 +598,7 @@
 144056 = {
 	name = "Togrul"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144055
 	1159.1.1 = {
@@ -613,7 +613,7 @@
 144065 = {
 	name = "Ortok"
 	dynasty = 100701
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 1229930
 	1040.1.1 = {
@@ -627,7 +627,7 @@
 144066 = {
 	name = "Il-Ghazi"
 	dynasty = 100701
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144065
 	1070.1.1 = {
@@ -641,7 +641,7 @@
 144067 = {
 	name = "Sokman"
 	dynasty = 100701
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144065
 	1069.1.1 = {
@@ -655,7 +655,7 @@
 144068 = {
 	name = "Barkam"
 	dynasty = 100701
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144065
 	1072.1.1 = {
@@ -669,7 +669,7 @@
 144069 = {
 	name = "Balek"
 	dynasty = 100701
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144068
 	1091.1.1 = {
@@ -683,7 +683,7 @@
 144070 = {
 	name = "Davud"
 	dynasty = 100701
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144067
 	1087.1.1 = {
@@ -697,7 +697,7 @@
 144071 = {
 	name = "Kara_Arslan"
 	dynasty = 100701
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144070
 	1103.1.1 = {
@@ -711,7 +711,7 @@
 144072 = {
 	name = "Nur_ed-Din_Mohammed"
 	dynasty = 100701
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144071
 	1120.1.1 = {
@@ -725,7 +725,7 @@
 144073 = {
 	name = "Ghazi"
 	dynasty = 100704
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	1045.1.1 = {
 		birth = "1045.1.1"
@@ -738,7 +738,7 @@
 144074 = {
 	name = "Ishak"
 	dynasty = 100704
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144073
 	1065.1.1 = {
@@ -752,7 +752,7 @@
 144075 = {
 	name = "Suleyman"
 	dynasty = 100704
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144074
 	1095.1.1 = {
@@ -766,7 +766,7 @@
 144099 = {
 	name = "Qutb_al-Din_Muhammad"
 	dynasty = 101866
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 20713
 	1061.1.1 = {
@@ -780,7 +780,7 @@
 144100 = {
 	name = "Atsiz"
 	dynasty = 101866
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144099
 	1091.1.1 = {
@@ -794,7 +794,7 @@
 144101 = {
 	name = "Il-Arslan"
 	dynasty = 101866
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144100
 	1121.1.1 = {
@@ -805,267 +805,13 @@
 	}
 }
 
-144123 = {
-	name = "Sabuktigin" # Founder of the Ghaznavids
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-
-	martial = 12
-	diplomacy = 8
-	stewardship = 9
-	intrigue = 9
-	learning = 6
-	
-	trait = education_martial_4
-	trait = diligent
-	trait = ambitious
-	trait = intellect_good_1
-
-	942.1.1 = {
-		birth = yes
-	}
-	968.1.1 = {
-		add_spouse = 170305
-	}
-	997.1.1 = {
-		death = yes
-	}
-}
-
-144124 = {
-	name = "Ismail"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144123
-	mother = 170305
-	970.1.1 = {
-		birth = "970.1.1"
-	}
-	998.1.1 = {
-		death = "998.1.1"
-	}
-}
-
-144125 = {
-	name = "Mahmud"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144123
-	mother = 170305
-	971.1.1 = {
-		birth = "971.1.1"
-	}
-	1030.1.1 = {
-		death = "1030.1.1"
-	}
-}
-
-144126 = {
-	name = "Muhammad"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144125
-	990.1.1 = {
-		birth = "990.1.1"
-	}
-	1031.1.1 = {
-		death = "1031.1.1"
-	}
-}
-
-144127 = {
-	name = "Musud"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144125
-	991.1.1 = {
-		birth = "991.1.1"
-	}
-	1041.1.1 = {
-		death = "1041.1.1"
-	}
-}
-
-144128 = {
-	name = "Mawdud"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144127
-	1011.1.1 = {
-		birth = "1011.1.1"
-	}
-	1050.1.1 = {
-		death = "1050.1.1"
-	}
-}
-
-144129 = {
-	name = "Masud"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144128
-	1031.1.1 = {
-		birth = "1031.1.1"
-	}
-	1050.6.1 = {
-		death = "1050.6.1"
-	}
-}
-
-144130 = {
-	name = "Ali"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144127
-	1012.1.1 = {
-		birth = "1012.1.1"
-	}
-	1050.9.1 = {
-		death = "1050.9.1"
-	}
-}
-
-144131 = {
-	name = "Abd_al-Rashid"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144125
-	992.1.1 = {
-		birth = "992.1.1"
-	}
-	1053.1.1 = {
-		death = "1053.1.1"
-	}
-}
-
-144132 = {
-	name = "Farrukhzad"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144127
-	1012.1.1 = {
-		birth = "1012.1.1"
-	}
-	1059.1.1 = {
-		death = "1059.1.1"
-	}
-}
-
-144133 = {
-	name = "Ibrahim"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144127
-	1022.1.1 = {
-		birth = "1022.1.1"
-	}
-	1099.1.1 = {
-		death = "1099.1.1"
-	}
-}
-
-144134 = {
-	name = "Masud"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144133
-	1052.1.1 = {
-		birth = "1052.1.1"
-	}
-	1115.1.1 = {
-		death = "1115.1.1"
-	}
-}
-
-144135 = {
-	name = "Shirzad"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144134
-	1068.1.1 = {
-		birth = "1068.1.1"
-	}
-	1115.6.1 = {
-		death = "1115.6.1"
-	}
-}
-
-144136 = {
-	name = "Arlsan_Shah"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144135
-	1084.1.1 = {
-		birth = "1084.1.1"
-	}
-	1118.1.1 = {
-		death = "1118.1.1"
-	}
-}
-
-144137 = {
-	name = "Bahram_Shah"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144135
-	1085.1.1 = {
-		birth = "1085.1.1"
-	}
-	1152.1.1 = {
-		death = "1152.1.1"
-	}
-}
-
-144138 = {
-	name = "Khusraw_Shah"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144137
-	1104.1.1 = {
-		birth = "1104.1.1"
-	}
-	1160.1.1 = {
-		death = "1160.1.1"
-	}
-}
-
-144139 = {
-	name = "Khusraw_Malik"
-	dynasty = 790
-	religion = "ashari"
-	culture = "turkish"
-	father = 144138
-	1124.1.1 = {
-		birth = "1124.1.1"
-	}
-	1186.1.1 = {
-		death = "1186.1.1"
-	}
-}
-
 20670 = {
 	name = "Ali"
 	martial = 5
 	diplomacy = 5
 	intrigue = 8
 	stewardship = 6
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_intrigue_2
 	1039.1.1 = {
@@ -1084,7 +830,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 6
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = just
 	trait = education_martial_3
@@ -1103,7 +849,7 @@
 	diplomacy = 4
 	intrigue = 7
 	stewardship = 8
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_martial_2
 	1039.1.1 = {
@@ -1121,7 +867,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_stewardship_2
 	1039.1.1 = {
@@ -1140,7 +886,7 @@
 	diplomacy = 7
 	intrigue = 6
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_learning_3
 	1039.1.1 = {
@@ -1158,7 +904,7 @@
 	diplomacy = 5
 	intrigue = 8
 	stewardship = 6
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = craven
 	trait = education_intrigue_2
@@ -1177,7 +923,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_martial_3
 	1039.1.1 = {
@@ -1195,7 +941,7 @@
 	diplomacy = 6
 	intrigue = 7
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = lazy
 	trait = arbitrary
@@ -1216,7 +962,7 @@
 	diplomacy = 6
 	intrigue = 8
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_learning_2
 	1039.1.1 = {
@@ -1234,7 +980,7 @@
 	diplomacy = 4
 	intrigue = 8
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = arrogant
 	trait = gluttonous
@@ -1254,7 +1000,7 @@
 	diplomacy = 5
 	intrigue = 7
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_martial_3
 	1039.1.1 = {
@@ -1272,7 +1018,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 8
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = lazy
 	trait = calm
@@ -1294,7 +1040,7 @@
 	diplomacy = 8
 	intrigue = 6
 	stewardship = 8
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_intrigue_2
 	1039.1.1 = {
@@ -1315,7 +1061,7 @@
 	diplomacy = 6
 	intrigue = 7
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = clubfooted
 	trait = education_learning_2
@@ -1330,15 +1076,20 @@
 20713 = {
 	name = "Anushtigin"
 	dynasty = 101866
-	martial = 5
+	martial = 10
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 8
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_intrigue_2
+	trait = ambitious 
+	trait = desert_warrior
 	1041.1.1 = {
 		birth = "1041.1.1"
+	}
+	1065.1.1 = {
+		learn_language_of_culture = culture:khwarezmian
 	}
 	1096.1.1 = {
 		death = "1096.1.1"
@@ -1352,7 +1103,7 @@
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = zealous
 	trait = education_martial_3
@@ -1371,7 +1122,7 @@
 	diplomacy = 7
 	intrigue = 6
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = generous
 	trait = honest
@@ -1388,7 +1139,7 @@
 215043 = {
 	name = "Sahinsah"
 	dynasty = 100704
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144075
 	1140.1.1 = {
@@ -1406,7 +1157,7 @@
 	diplomacy = 8
 	intrigue = 6
 	stewardship = 8
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = lustful
 	trait = cynical
@@ -1428,7 +1179,7 @@
 	diplomacy = 7
 	intrigue = 6
 	stewardship = 8
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = brave
 	trait = clubfooted
@@ -1449,7 +1200,7 @@
 	diplomacy = 4
 	intrigue = 8
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = wrathful
 	trait = lisping
@@ -1470,7 +1221,7 @@
 	diplomacy = 7
 	intrigue = 5
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = brave
 	trait = education_intrigue_2
@@ -1489,7 +1240,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = calm
 	trait = cynical
@@ -1510,7 +1261,7 @@
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = clubfooted
 	trait = education_learning_2
@@ -1530,7 +1281,7 @@
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = deceitful
 	trait = education_martial_3
@@ -1549,7 +1300,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = greedy
 	trait = education_intrigue_1
@@ -1568,7 +1319,7 @@
 	diplomacy = 5
 	intrigue = 6
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = wrathful
 	trait = education_diplomacy_3
@@ -1587,7 +1338,7 @@
 	diplomacy = 6
 	intrigue = 4
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = ill
 	trait = education_martial_3
@@ -1607,7 +1358,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 6
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = gluttonous
 	trait = education_intrigue_1
@@ -1627,7 +1378,7 @@
 	diplomacy = 4
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = arrogant
 	trait = education_stewardship_2
@@ -1646,7 +1397,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 6
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = greedy
 	trait = education_martial_2
@@ -1665,7 +1416,7 @@
 	diplomacy = 4
 	intrigue = 6
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = zealous
 	trait = education_martial_2
@@ -1685,7 +1436,7 @@
 	diplomacy = 4
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_intrigue_2
 	father = 144052
@@ -1704,7 +1455,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = humble
 	trait = education_learning_3
@@ -1723,7 +1474,7 @@
 	diplomacy = 4
 	intrigue = 8
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = zealous
 	trait = gluttonous
@@ -1743,7 +1494,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = calm
 	trait = craven
@@ -1763,7 +1514,7 @@
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = honest
 	trait = education_intrigue_2
@@ -1782,7 +1533,7 @@
 	diplomacy = 6
 	intrigue = 6
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_intrigue_1
 	1150.1.1 = {
@@ -1800,7 +1551,7 @@
 	diplomacy = 6
 	intrigue = 7
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_diplomacy_2
 	1150.1.1 = {
@@ -1818,7 +1569,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 8
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = ill
 	trait = education_diplomacy_2
@@ -1837,7 +1588,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_diplomacy_2
 	1150.1.1 = {
@@ -1856,7 +1607,7 @@
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = lustful
 	trait = education_learning_2
@@ -1875,7 +1626,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = diligent
 	trait = wrathful
@@ -1897,7 +1648,7 @@
 	diplomacy = 7
 	intrigue = 8
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = inbred
 	trait = education_intrigue_2
@@ -1916,7 +1667,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 8
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = lazy
 	trait = craven
@@ -1936,7 +1687,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = greedy
 	trait = education_diplomacy_3
@@ -1955,7 +1706,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = greedy
 	trait = cynical
@@ -1976,7 +1727,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = calm
 	trait = education_martial_3
@@ -1995,7 +1746,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = zealous
 	trait = craven
@@ -2015,7 +1766,7 @@
 	diplomacy = 6
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = lustful
 	trait = education_martial_2
@@ -2034,7 +1785,7 @@
 	diplomacy = 7
 	intrigue = 6
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_martial_3
 	1150.1.1 = {
@@ -2052,7 +1803,7 @@
 	diplomacy = 5
 	intrigue = 6
 	stewardship = 6
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = wrathful
 	trait = education_learning_2
@@ -2071,7 +1822,7 @@
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = clubfooted
 	trait = education_intrigue_2
@@ -2090,7 +1841,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_martial_2
 	1150.1.1 = {
@@ -2108,7 +1859,7 @@
 	diplomacy = 5
 	intrigue = 8
 	stewardship = 8
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = greedy
 	trait = education_martial_3
@@ -2127,7 +1878,7 @@
 	diplomacy = 8
 	intrigue = 5
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_intrigue_2
 	1150.1.1 = {
@@ -2145,7 +1896,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_stewardship_2
 	1150.1.1 = {
@@ -2164,7 +1915,7 @@
 	diplomacy=5
 	intrigue=7
 	stewardship=5
-	religion="ashari"
+	religion = "maturidi"
 	culture="turkish"
 	trait="education_martial_2"
 	1150.1.1={
@@ -2183,7 +1934,7 @@
 	diplomacy = 7
 	intrigue = 4
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = diligent
 	trait = arrogant
@@ -2227,7 +1978,7 @@
 	stewardship = 5
 	intrigue = 4
 	learning = 3
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_martial_4
 	trait = wrathful
@@ -2251,7 +2002,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_learning_3
 	father = 3030
@@ -2270,7 +2021,7 @@
 	diplomacy = 5
 	intrigue = 6
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_learning_3
 	father = 3032
@@ -2289,7 +2040,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = just
 	trait = education_learning_3
@@ -2310,7 +2061,7 @@
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = chaste
 	trait = education_learning_2
@@ -2331,7 +2082,7 @@
 	diplomacy = 6
 	intrigue = 8
 	stewardship = 6
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = wrathful
 	trait = education_diplomacy_2
@@ -2351,7 +2102,7 @@
 	diplomacy = 8
 	intrigue = 5
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = just
 	trait = diligent
@@ -2363,8 +2114,16 @@
 	1029.1.1 = {
 		birth = yes
 	}
-	1054.1.1 = {
+	1048.1.1 = {
 		add_spouse = 3045
+	}
+	1050.1.1 = {
+		add_spouse = extra_karakhanids_12
+	}
+	1051.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
 	}
 	1060.1.1 = {
 		effect = {
@@ -2376,6 +2135,12 @@
 		add_pressed_claim = title:c_mayyafariqin
 		add_pressed_claim = title:c_melitene
 		add_pressed_claim = title:c_tall_basma
+	}
+	1063.1.1 = {
+		add_spouse = extra_georgians_1 
+	}
+	1064.1.1 = {
+		add_spouse = extra_seljuks_4
 	}
 	1066.9.14 = {
 		add_character_flag = {
@@ -2460,10 +2225,12 @@
 	diplomacy = 4
 	intrigue = 5
 	stewardship = 8
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = arrogant
 	trait = temperate
+	trait = disloyal 
+	trait = ambitious 
 	trait = education_martial_2
 	father = 3036
 	1022.1.2 = {
@@ -2476,19 +2243,27 @@
 
 3042 = {
 	name = "Malik_Shah"
-	# AKA: Malik Shah
 	dynasty_house = house_seljuk
 	martial = 10
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 8
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
+	trait = rowdy
 	trait = calm
+	trait = humble
 	trait = education_martial_2
+	disallow_random_traits = yes
 	father = 3040
+	mother = 3045 #according to unconfirmed sources 
 	1055.1.2 = {
 		birth = "1055.1.2"
+	}
+	1060.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
 	}
 	1092.11.1 = {
 		death = "1092.11.1"
@@ -2502,15 +2277,21 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = greedy
 	trait = diligent
 	trait = cynical
 	trait = education_martial_2
 	father = 3040
+	mother = 3045 #according to unconfirmed sources 
 	1057.1.2 = {
 		birth = "1057.1.2"
+	}
+	1066.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
 	}
 	1095.1.1 = {
 		death = "1095.1.1"
@@ -2518,22 +2299,24 @@
 }
 
 3045 = {
-	name = "Terkhen"
+	name = "Safariyya"
 	female = yes
+	dynasty_house = house_alid
 	martial = 5
 	diplomacy = 10
 	intrigue = 5
 	stewardship = 10
-	religion = "ashari"
-	culture = "turkish"
+	religion = "maturidi"
+	culture = "karluk"
+	father = 3012 #she's said to have been a karakhanid princess, but I could not determine her parentage, so I went with this for now
 	trait = beauty_good_1
 	trait = intellect_good_1
 	trait = education_diplomacy_4
 	1030.1.1 = {
 		birth = "1030.1.1"
 	}
-	1095.1.1 = {
-		death = "1095.1.1"
+	1073.1.1 = {
+		death = "1073.1.1"
 	}
 }
 
@@ -2544,7 +2327,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 11
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_martial_2
 	father = 3033
@@ -2596,7 +2379,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 5
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_martial_2
 	1040.1.1 = {
@@ -2615,7 +2398,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_martial_2
 	father = 3046
@@ -2640,7 +2423,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_martial_2
 	father = 41701
@@ -2662,7 +2445,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 6
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = brave
 	trait = education_martial_3
@@ -2681,7 +2464,7 @@
 	diplomacy = 7
 	intrigue = 4
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = temperate
 	trait = education_martial_3
@@ -2700,7 +2483,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 7
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_learning_2
 	1300.1.1 = {
@@ -2718,7 +2501,7 @@
 	diplomacy = 4
 	intrigue = 6
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = just
 	trait = education_martial_2
@@ -2737,7 +2520,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = education_martial_3
 	1300.1.1 = {
@@ -2755,7 +2538,7 @@
 	diplomacy = 7
 	intrigue = 4
 	stewardship = 4
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	trait = gluttonous
 	trait = education_learning_2
@@ -4360,7 +4143,7 @@
 34178 = {
 	name = "Melik"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225000
 	1155.1.1 = {
@@ -4374,7 +4157,7 @@
 34179 = {
 	name = "Mahmud"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225000
 	1157.1.1 = {
@@ -4388,7 +4171,7 @@
 34180 = {
 	name = "Tugrul" #Erzerum
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225000
 	1158.1.1 = {
@@ -4402,7 +4185,7 @@
 34181 = {
 	name = "Kayser"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225000
 	1158.1.1 = {
@@ -4416,7 +4199,7 @@
 34182 = {
 	name = "Masud"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225000
 	1159.1.1 = {
@@ -4430,7 +4213,7 @@
 34183 = {
 	name = "Berkyaruk"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225000
 	1167.1.1 = {
@@ -4444,7 +4227,7 @@
 34184 = {
 	name = "Argun"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225000
 	1168.1.1 = {
@@ -4458,7 +4241,7 @@
 34185 = {
 	name = "Arslan"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225000
 	1170.1.1 = {
@@ -4472,7 +4255,7 @@
 34186 = {
 	name = "Sancar"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225000
 	1172.1.1 = {
@@ -4486,7 +4269,7 @@
 34187 = {
 	name = "Kilij_Arslan"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225004
 	1186.1.1 = {
@@ -4500,7 +4283,7 @@
 34188 = {
 	name = "Kaykaus"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225002
 	1191.1.1 = {
@@ -4514,7 +4297,7 @@
 34189 = {
 	name = "Kayqubad"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 225002
 	1192.1.1 = {
@@ -4528,7 +4311,7 @@
 34190 = {
 	name = "Kaykhusraw"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 34189
 	1220.1.1 = {
@@ -4545,7 +4328,7 @@
 34191 = {
 	name = "Kaykaus"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 34190
 	1237.1.1 = {
@@ -4559,7 +4342,7 @@
 34192 = {
 	name = "Kilij_Arslan"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 34190
 	1238.1.1 = {
@@ -4573,7 +4356,7 @@
 34193 = {
 	name = "Kayqubad"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 34190
 	mother = 71856
@@ -4588,7 +4371,7 @@
 34194 = {
 	name = "Kaykhusraw"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 34192
 	1260.1.1 = {
@@ -4602,7 +4385,7 @@
 34195 = {
 	name = "Masud"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 34191
 	1260.1.1 = {
@@ -4616,7 +4399,7 @@
 34196 = {
 	name = "Kayqubad"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 34193
 	1255.1.1 = {
@@ -4630,7 +4413,7 @@
 34197 = {
 	name = "Ghazi"
 	dynasty = 101730
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 41704
 	1070.1.1 = {
@@ -4827,7 +4610,7 @@
 34211 = {
 	name = "Alp_Arslan"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 7299
 	1118.1.1 = {
@@ -4841,7 +4624,7 @@
 34212 = {
 	name = "Shahanshah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 7299
 	1133.1.1 = {
@@ -4855,7 +4638,7 @@
 34213 = {
 	name = "Sancar"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 7299
 	1135.1.1 = {
@@ -4869,7 +4652,7 @@
 34214 = {
 	name = "Argun"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 34213
 	1153.1.1 = {
@@ -5121,7 +4904,7 @@
 34233 = {
 	name = "Moghis"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 34180
 	1200.1.1 = {
@@ -5740,7 +5523,7 @@
 93087 = {
 	name = "Qochar"
 	dynasty = 7328
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	1035.1.1 = {
 		birth = "1035.1.1"
@@ -5753,7 +5536,7 @@
 93088 = {
 	name = "Ekinchi"
 	dynasty = 7328
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 93087
 	1055.1.1 = {
@@ -5879,11 +5662,17 @@
 93117 = {
 	name = "Muhammad" #Antioch
 	dynasty_house = house_seljuk #Seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3040
+	mother = extra_karakhanids_12 #not attested, just a guess 
 	1058.1.1 = {
 		birth = "1058.1.1"
+	}
+	1066.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
 	}
 	1092.1.1 = {
 		death = "1092.1.1"
@@ -5893,7 +5682,7 @@
 93118 = {
 	name = "Yaghi_Sian" #Antioch
 	dynasty_house = house_seljuk #Seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 93117
 	1074.1.1 = {
@@ -5907,7 +5696,7 @@
 93119 = {
 	name = "Shams_ed-Din" #Antioch
 	dynasty_house = house_seljuk #Seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 93118
 	1090.1.1 = {
@@ -5921,7 +5710,7 @@
 93120 = {
 	name = "Buldagis" #Antioch
 	dynasty_house = house_seljuk #Seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 93118
 	1091.1.1 = {
@@ -5935,7 +5724,7 @@
 93121 = {
 	name = "Arslan_Argun" #Khwarezm
 	dynasty_house = house_seljuk #Seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3036
 	1045.1.1 = {
@@ -5949,7 +5738,7 @@
 93122 = {
 	name = "Uthman" #Merv
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3036
 	1025.1.1 = {
@@ -5963,7 +5752,7 @@
 93123 = {
 	name = "Ilyas"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3036
 	1028.1.1 = {
@@ -5977,7 +5766,7 @@
 93124 = {
 	name = "Ismail" #Sistan
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3036
 	1050.1.1 = {
@@ -5991,7 +5780,7 @@
 93125 = {
 	name = "Ahmad" #Merv
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3042
 	1077.1.1 = {
@@ -6005,7 +5794,7 @@
 93126 = {
 	name = "Seljuk_Shah" #Merv
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144014
 	1102.1.1 = {
@@ -6019,7 +5808,7 @@
 93127 = {
 	name = "Malik_Shah" #Merv
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 93126
 	1122.1.1 = {
@@ -6033,11 +5822,17 @@
 93128 = {
 	name = "Toghan_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3040
+	mother = extra_karakhanids_12
 	1056.1.1 = {
 		birth = "1056.1.1"
+	}
+	1066.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
 	}
 	1100.1.1 = {
 		death = "1100.1.1"
@@ -6047,11 +5842,17 @@
 93129 = {
 	name = "Arslan_Shah"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3040
+	mother = extra_karakhanids_12 #not attested, just a guess 
 	1056.6.1 = {
 		birth = "1056.6.1"
+	}
+	1066.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
 	}
 	1110.1.1 = {
 		death = "1110.1.1"
@@ -6061,7 +5862,7 @@
 93130 = {
 	name = "Suleyman" #Merv
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3036
 	1027.1.1 = {
@@ -6075,7 +5876,7 @@
 93160 = {
 	name = "Yaquti" #Sistan
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3036
 	1028.1.1 = {
@@ -6089,7 +5890,7 @@
 93161 = {
 	name = "Muhammad" #Merv
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 93122
 	1047.1.1 = {
@@ -6523,7 +6324,7 @@
 93251 = {
 	name = "Seljuk"
 	dynasty = 7335
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 93249
 	1241.1.1 = {
@@ -7066,7 +6867,7 @@
 93434 = {
 	name = "Baqtash"
 	dynasty_house = house_seljuk
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 3044
 	1081.1.1 = {
@@ -7405,6 +7206,11 @@
 
 	825.1.1 = {
 		birth = "817.1.1"
+	}
+	866.1.1 = {
+		effect = {
+			add_unpressed_claim = title:c_rayy
+		}
 	}
 	877.1.1 = {
 		death = "877.1.1"
@@ -9686,7 +9492,7 @@
 302629 = {
 	name = "Korkut"
 	dynasty = 2001095	#Mangyt
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	1038.8.13 = {
 		birth = yes
@@ -9701,7 +9507,7 @@
 302630 = {
 	name = "Lale"
 	female = yes
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	1040.9.16 = {
 		birth = yes
@@ -9713,7 +9519,7 @@
 302631 = {
 	name = "Mursel"
 	dynasty = 2001095	#Mangyt
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	father = 302629
 	mother = 302630
@@ -9727,7 +9533,7 @@
 302632 = {
 	name = "Korkut"
 	dynasty = 2001095	#Mangyt
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	father = 302631
 	1093.6.11 = {
@@ -9740,7 +9546,7 @@
 302633 = {
 	name = "Ilgazi"
 	dynasty = 2001095	#Mangyt
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	father = 302632
 	1123.9.6 = {
@@ -9753,7 +9559,7 @@
 302634 = {
 	name = "Alptigin"
 	dynasty = 2001095	#Mangyt
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	father = 302633
 	1151.1.8 = {
@@ -9766,7 +9572,7 @@
 302635 = {
 	name = "Orhan"
 	dynasty = 2001095	#Mangyt
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	father = 302634
 	1172.11.7 = {
@@ -9780,7 +9586,7 @@
 302636 = {
 	name = "Afsin"
 	dynasty = 2001096	#Aiytid
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	1032.9.11 = {
 		birth = yes
@@ -9930,7 +9736,7 @@
 302678 = {
 	name = "Kaytun"
 	dynasty = 2001103	#Khori
-	religion = ashari
+	religion = maturidi
 	culture = turkish
 	845.1.1 = {
 		birth = yes
@@ -9939,11 +9745,127 @@
 		death = yes
 	}
 }
+fictional_khwarezmian_turks_1 = {
+	name = "Songul"
+	female = yes
+	dynasty = 2001103	#Khori
+	religion = maturidi
+	culture = turkish
+	father = 302678
+	864.1.1 = {
+		birth = yes
+	}
+	935.1.1 = {
+		death = yes
+	}
+}
+fictional_khwarezmian_turks_2 = {
+	name = "Yaman"
+	dynasty = 2001103	#Khori
+	religion = maturidi
+	culture = turkish
+	father = 302678
+	866.1.1 = {
+		birth = yes
+	}
+	923.1.1 = {
+		death = yes
+	}
+}
+fictional_khwarezmian_turks_3 = {
+	name = "Toktamis"
+	dynasty = 2001103	#Khori
+	religion = maturidi
+	culture = turkish
+	father = fictional_khwarezmian_turks_2
+	890.1.1 = {
+		birth = yes
+	}
+	954.1.1 = {
+		death = yes
+	}
+}
+
+fictional_khwarezmian_turks_4 = {
+	name = "Sehinsah"
+	dynasty = 2001103	#Khori
+	religion = maturidi
+	culture = turkish
+	father = fictional_khwarezmian_turks_3
+	922.1.1 = {
+		birth = yes
+	}
+	974.1.1 = {
+		death = yes
+	}
+}
+
+fictional_khwarezmian_turks_8 = {
+	name = "C_ilen"
+	female = yes
+	dynasty = 2001103	#Khori
+	religion = maturidi
+	culture = turkish
+	father = fictional_khwarezmian_turks_3
+	930.1.1 = {
+		birth = yes
+	}
+	950.1.1 = {
+		add_spouse = 188601 #the last Afrigid
+	}
+	959.1.1 = {
+		death = yes
+	}
+}
+
+fictional_khwarezmian_turks_5 = {
+	name = "Aydogdu"
+	dynasty = 2001103	#Khori
+	religion = maturidi
+	culture = turkish
+	father = fictional_khwarezmian_turks_4
+	950.1.1 = {
+		birth = yes
+	}
+	1002.1.1 = {
+		death = yes
+	}
+}
+
+fictional_khwarezmian_turks_6 = {
+	name = "Umur"
+	dynasty = 2001103	#Khori
+	religion = maturidi
+	culture = turkish
+	father = fictional_khwarezmian_turks_5
+	989.1.1 = {
+		birth = yes
+	}
+	1023.1.1 = {
+		death = yes
+	}
+}
+
+fictional_khwarezmian_turks_7 = {
+	name = "Kaiqobad"
+	dynasty = 2001103	#Khori
+	religion = maturidi
+	culture = turkish
+	father = fictional_khwarezmian_turks_6
+	1011.1.1 = {
+		birth = yes
+	}
+	1056.1.1 = {
+		death = yes
+	}
+}
+
 302679 = {
 	name = "Kemal"
 	dynasty = 2001103	#Khori
-	religion = tengri_pagan
+	religion = maturidi
 	culture = turkish
+	father = fictional_khwarezmian_turks_7
 	1046.1.1 = {
 		birth = yes
 	}
@@ -10015,6 +9937,7 @@
 	}
 	838.12.15 = {
 		add_spouse = 302687
+		faith = maturidi 
 	}
 	882.1.9 = {
 		death = yes
@@ -10090,9 +10013,12 @@
 		death = yes
 	}
 }
+
+###rulers of Badakhshan before FP3, seem fictional as far as I could determine, replaced by the Pamirid and Badakhshanid dynasties who seem to represent a more historial ethnic and religious makeup of local princes in these lands. Can probably be deleted altogether! 
+
 248023 = {
 	name="Gunduz"
-	dynasty=1059007
+	dynasty=1059007 #Muhtajid dynasty, actually a local dynasty in Chaganiyan that was more or less extinct, it seems, by 1066. 
 	religion="ashari"
 	culture="turkish"#uzbek
 	990.1.1={
@@ -10115,6 +10041,10 @@
 		death=yes
 	}
 }
+
+####fictional rulers of Badakhshan end#####
+
+
 248025 = {
 	name="Ertekin"
 	dynasty=1059007
@@ -10625,21 +10555,7 @@
 		death = yes
 	}
 }
-1000230134 = {
-	name = "Khurra-ji"
-	female = yes
-	dynasty = 790
-	religion = ashari
-	culture = turkish #turkmen
-	father = 144123
-	mother = 170305
-	979.1.1 = {
-		birth = yes
-	}
-	1017.1.1 = {
-		death = yes
-	}
-}
+
 1000230135 = {
 	name = "Harun" #son of Altuntash
 	dynasty = 1000101749 #Altuntashiyᮍ
@@ -10788,7 +10704,7 @@
 1000230146 = {
 	name = "Qochqar" #Placeholder Yabghu of Jand and Yangikent
 	dynasty_house = house_qiniq
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #oghuz
 	father = 1000230132
 	942.1.1 = {
@@ -10801,7 +10717,7 @@
 1000230147 = {
 	name = "Duqaq" #Father of Seljuk
 	dynasty_house = house_qiniq
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #oghuz
 	father = 1000230132
 	935.1.1 = {
@@ -10822,7 +10738,7 @@
 1000229900 = {
 	name = "Yunus" #Son of Seljuk
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 3030
 	989.1.2 = {
@@ -10835,7 +10751,7 @@
 1000229901 = {
 	name = "Mu_sa_Yabghu" #Son of Seljuk holds d_sistan
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	trait = "just"
 	father = 3030
@@ -10853,7 +10769,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 5
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	trait = "just"
 	#trait = "scholarly_theologian"
@@ -10868,7 +10784,7 @@
 1000229903 = {
 	name = "Er-Tash" #Son of Mikail b. Seljuk
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 3034
 	1018.1.2 = {
@@ -10881,7 +10797,7 @@
 1000229904 = {
 	name = "Mas_u_d" #Son of Er-Tash b. Mikail b. Seljuk
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 1000229903
 	1037.1.2 = {
@@ -10894,7 +10810,7 @@
 1000229905 = {
 	name = "Maudu_d" #Son of Er-Tash b. Mikail b. Seljuk
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 1000229903
 	1041.1.2 = {
@@ -10904,32 +10820,14 @@
 		death = yes
 	}
 }
-1000229906 = {
-	name = "Jal_liyya_Khatun" #AKA Turkan Khatun - Qarakhanid wife of Malik Shah
-	female = yes
-	dynasty = 101864 #Karakhanid
-	religion = ashari
-	culture = turkish #turkmen
-	father = 3016
-	1056.1.2 = {
-		birth = yes
-	}
-	1064.1.1 = {
-		effect = {
-			create_betrothal = character:3042
-		}
-	}
-	1093.1.2 = {
-		death = yes
-	}
-}
 1000229907 = {
 	name = "Zubaida_Khatun" #wife of Malik Shah mother of BerkYaruq, bt. Yaquti b. Chaghri Beg
 	female = yes
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 93160
+	mother = fictional_daylamites_2
 	1060.1.2 = {
 		birth = yes
 	}
@@ -10943,7 +10841,7 @@
 1000229908 = {
 	name = "Da_ud" #son of Malik Shah and Jalᬩyya Khatun
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 3042
 	mother = 1000229906
@@ -10957,7 +10855,7 @@
 1000229909 = {
 	name = "Inanch_Yabghu" #Son of Musa Yabghu, emir in Tabarestan
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 1000229901
 	1020.1.2 = {
@@ -10971,7 +10869,7 @@
 	name = "Arslan_Khatun" #daughter b. Chaghri Beg, wife of al-Qᩭ and then later of 'Alᠡl-Daula 'Al𒱡kúyid
 	female = yes
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 3036
 	1045.1.2 = {
@@ -10989,13 +10887,19 @@
 	name = "A_isha" #spouse of Nasr Shams al-Mulk Qarakhanid
 	female = yes
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #oghuz
 	trait = "patient"
 	father = 3040
+	mother = 3045 #according to unconfirmed sources 
 	1049.1.1 = {
 		birth = yes
 		culture = turkish #turkmen
+	}
+	1064.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
 	}
 	1065.1.1 = { #?
 		add_spouse = 3016
@@ -11054,7 +10958,7 @@
 	dynasty_house = house_seljuk
 	martial = 6
 	stewardship = 6
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #oghuz
 	father = 1000229902
 	1048.1.2 = {
@@ -11068,7 +10972,7 @@
 1229916 = {
 	name = "Boz-Aba"
 	#dynasty = 1000101773
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	1099.1.1 = {
 		birth = yes
@@ -11106,11 +11010,11 @@
 	}
 }
 1229919 = {
-	name = "Fulana" #sister of Alp Arslan
+	name = "Safiya" #sister of Alp Arslan
 	female = yes
 	dynasty_house = house_seljuk
 	culture = turkish #oghuz
-	religion = ashari
+	religion = "maturidi"
 	father = 3036
 	1041.1.1 = {
 		birth = yes
@@ -11150,10 +11054,16 @@
 	name = "Ayaz" #son of Alp Arslan governor of Balkh
 	dynasty_house = house_seljuk
 	culture = turkish #turkmen
-	religion = ashari
+	religion = "maturidi"
 	father = 3040
+	mother = extra_karakhanids_12 #not attested, just a guess 
 	1052.1.1 = {
 		birth = yes
+	}
+	1066.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
 	}
 	1073.7.7 = {
 		death = yes
@@ -11163,10 +11073,16 @@
 	name = "Tekish" #son of Alp Arslan governor of Balkh
 	dynasty_house = house_seljuk
 	culture = turkish #turkmen
-	religion = ashari
+	religion = "maturidi"
 	father = 3040
+	mother = 3045 #according to unconfirmed sources 
 	1054.1.1 = {
 		birth = yes
+	}
+	1066.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
 	}
 	1094.1.1 = {
 		death = {
@@ -11179,7 +11095,7 @@
 	name = "Ahmad" #son of Tekish b.Alp Arslan - since 1084 governor of Balkh
 	dynasty_house = house_seljuk
 	culture = turkish #turkmen
-	religion = ashari
+	religion = "maturidi"
 	father = 1229922
 	1071.1.1 = {
 		birth = yes
@@ -11198,11 +11114,17 @@
 	name = "Bo_ri_Bars" #son of Alp Arslan governor of Herat, Gharchistan and Ghor
 	dynasty_house = house_seljuk
 	culture = turkish #oghuz
-	religion = ashari
+	religion = "maturidi"
 	father = 3040
+	mother = extra_karakhanids_12 #not attested, just a guess 
 	1055.10.10 = {
 		birth = yes
 		culture = turkish #turkmen
+	}
+	1066.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
 	}
 	1096.1.1 = {
 		death = {
@@ -11215,7 +11137,7 @@
 	name = "Alp_Arghun" #son of Arslan Arghun governor of Balkh 1097
 	dynasty_house = house_seljuk
 	culture = turkish #turkmen
-	religion = ashari
+	religion = "maturidi"
 	father = 93121
 	1084.1.1 = {
 		birth = yes
@@ -11231,7 +11153,7 @@
 	dynasty_house = house_seljuk
 	martial = 6
 	diplomacy = 8
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 3033
 	1040.1.2 = {
@@ -11267,7 +11189,7 @@
 	name = "Daulab"
 	dynasty_house = house_seljuk
 	martial = 8
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #oghuz
 	father = 3033
 	1042.1.2 = {
@@ -11304,7 +11226,7 @@
 1229928 = {
 	name = "Uvak"
 	dynasty = 1000101760
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #oghuz
 	1010.1.2 = {
 		birth = yes
@@ -11318,7 +11240,7 @@
 	dynasty = 1000101760
 	diplomacy = 3
 	martial = 7
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #oghuz
 	father = 1229928
 	#trait = "skilled_tactician"
@@ -11341,7 +11263,7 @@
 1229930 = {
 	name = "Eksu_k"
 	dynasty = 100701
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #oghuz
 	1014.1.2 = {
 		birth = yes
@@ -11354,7 +11276,7 @@
 1229931 = {
 	name = "Ku_l-Sarigh_Qutb_al-Din" #atabeg of Alp Arslan
 	#dynasty = 1000101761
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	1015.1.2 = {
 		birth = yes
@@ -11379,7 +11301,7 @@
 
 1229933 = {
 	name = "Ayaz" #"AZYA" according to al-Athir
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	1140.1.1 = { #?
 		birth = yes
@@ -11437,7 +11359,7 @@
 1229937 = {
 	name = "Rasultegin" #cousin of Tughril Beg who held Istakhr ca. 1058-? (coins minted in his name in 1062)
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #oghuz
 	father = 1000229900 #?
 	1025.1.2 = { #?
@@ -11450,7 +11372,7 @@
 }
 
 1229938 = {
-	name = "Qarategin" # name fictional, father of Sabuktegin and Bughrachuq
+	name = "Qara_Bajkam" # father of Sabuktegin and Bughrachuq
 	dynasty = 790
 	religion = "tengri_pagan"
 	culture = "karluk"
@@ -11466,7 +11388,7 @@
 	name = "Kha_tu_n-e-Kerma_ni"
 	female = yes
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 144036
 	1160.1.1 = {
@@ -11484,7 +11406,7 @@
 1229940 = {
 	name = "Quma_j"
 	dynasty = 1000101763
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	1115.1.1 = {
 		birth = yes
@@ -11496,7 +11418,7 @@
 1229941 = {
 	name = "Malik_al-Sharq"
 	dynasty = 1000101763
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 1229940
 	1135.1.1 = {
@@ -11577,7 +11499,7 @@
 	name = "Terken_Khatun" #Sultan Sanjar's sister, mother of Mahmúd Khan, a Karakhanid who was chosen to be ruler of Khorasan while Sanjar was imprisoned by the Ghuzz.
 	female = yes
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 3042
 	1085.1.1 = {
@@ -11594,7 +11516,7 @@
 	name = "Mengu_-Bars" #son of Böri Bars b.AlpArslan
 	dynasty_house = house_seljuk
 	culture = turkish #turkmen
-	religion = ashari
+	religion = "maturidi"
 	father = 1229924
 	1080.10.10 = {
 		birth = yes
@@ -11606,7 +11528,7 @@
 1229948 = {
 	name = "Saljuq_Shah" #b.Arslan Shah of Kerman, ruled in Oman
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 144034
 	1100.1.1 = {
@@ -11619,9 +11541,10 @@
 1229949 = {
 	name = "Isma_i_l" #emir in Arran and Azerbaijan
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 93160
+	mother = fictional_daylamites_2
 	1058.1.2 = {
 		birth = yes
 	}
@@ -11635,7 +11558,7 @@
 1229950 = {
 	name = "Maudu_d" #emir in Arran and Azerbaijan
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 1229949
 	1078.1.2 = {
@@ -11649,7 +11572,7 @@
 1229951 = {
 	name = "Saljuq_Sha_h"
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 144014
 	1108.6.6 = {
@@ -11662,7 +11585,7 @@
 1229952 = {
 	name = "ChaghrI_"
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 144014
 	1107.6.6 = {
@@ -11675,7 +11598,7 @@
 
 1229953 = {
 	name = "Aghulbak_Hisham_ad-Din" #Turkish mamluk who was given Kol as iqta
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	1161.1.1 = { #?
 		birth = yes
@@ -11690,7 +11613,7 @@
 	name = "Fa_tima"
 	female = yes
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 144014
 	1110.6.6 = {
@@ -11706,7 +11629,7 @@
 1229955 = {
 	name = "Malik_Sha_h"
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 144049
 	1127.6.6 = {
@@ -11720,7 +11643,7 @@
 	name = "Jauhar"
 	female = yes
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 144049
 	1115.6.6 = {
@@ -11739,7 +11662,7 @@
 1229957 = {
 	name = "Suleima_n" #Son of Tughril b. Ebrâhîm înâl b. Mikâîl b. Seljuk
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 1229915
 	1066.1.2 = {
@@ -11752,7 +11675,7 @@
 1229958 = {
 	name = "Muhammad" #Son of Suleimân b.Tughril b. Ebrâhîm înâl b. Mikâîl b. Seljuk, claimant against BerkYaruq
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 1229957
 	1084.1.2 = {
@@ -11766,7 +11689,7 @@
 	name = "Jauhar_Khatun"
 	female = yes
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 3042
 	1071.1.1 = {
@@ -11783,7 +11706,7 @@
 	name = "Fulana" #Khatun al-'Isma
 	female = yes
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 3042
 	1081.6.6 = {
@@ -11852,7 +11775,7 @@
 turkish0001 = {
 	name = "Qara-Arslan_Bori" #Son of Musa Yabghu, emir of Sistan
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 1000229901
 	1023.1.2 = {
@@ -11865,7 +11788,7 @@ turkish0001 = {
 turkish0002 = {
 	name = "Toghan-Shah" #son of Chaghri Beg, in Herat
 	dynasty_house = house_seljuk
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 3036
 	1046.1.2 = {
@@ -12022,5 +11945,345 @@ turkish000011 = { # fictional wife
 	}
 	892.1.1 = {
 		death = "892.1.1"
+	}
+}
+
+#FP3 Turkic Characters
+
+#Kumiji tribe of Transoxiana 
+
+kumiji0001 = { #Fictional member of historical clan/tribe
+	name = "Altan"	
+	female = yes
+	culture = "turkish"
+	religion = "tengri_pagan"
+	dynasty = turkic_kumiji
+		
+	730.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+
+kumiji0002 = { #Fictional member of historical clan/tribe
+	name = "Runtiya"	
+	culture = "turkish"
+	religion = "tengri_pagan"
+	dynasty = turkic_kumiji
+	mother = kumiji0001
+		
+	760.5.7 = {
+		birth = yes
+	}
+	803.3.11 = {
+		death = yes
+	}
+}
+
+kumiji0003 = { #Fictional member of historical clan/tribe
+	name = "Togay"	
+	culture = "turkish"
+	religion = "ashari"
+	dynasty = turkic_kumiji
+	father = kumiji0002
+		
+	800.11.12 = {
+		birth = yes
+	}
+	840.11.3 = {
+		death = yes
+	}	
+}
+
+kumiji0004 = { #Fictional member of historical clan/tribe
+	name = "U_lgen"	
+	culture = "turkish"
+	religion = "maturidi"
+	dynasty = turkic_kumiji
+	father = kumiji0003
+	mother = kumiji0010
+	trait = education_martial_4
+	trait = strong
+	trait = paranoid 
+		
+	823.5.10 = {
+		birth = yes
+	}
+	850.1.1 = {
+		add_spouse = kumiji0005
+		give_nickname = nick_the_strong
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+kumiji0005 = { #Fictional member of historical clan/tribe
+	name = "Alara"	
+	culture = "turkish"
+	religion = "maturidi"
+	female = yes
+	trait = fecund 
+		
+	834.5.10 = {
+		birth = yes
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
+
+kumiji0006 = { #Fictional member of historical clan/tribe
+	name = "Altan"	
+	culture = "turkish"
+	religion = "maturidi"
+	dynasty = turkic_kumiji
+	female = yes
+	father = kumiji0004
+	mother = kumiji0005
+		
+	851.12.10 = {
+		birth = yes
+	}
+	925.1.1 = {
+		death = yes
+	}
+}
+
+kumiji0007 = { #Fictional member of historical clan/tribe
+	name = "Esin"	
+	culture = "turkish"
+	religion = "maturidi"
+	dynasty = turkic_kumiji
+	female = yes
+	father = kumiji0004
+	mother = kumiji0005
+		
+	852.5.10 = {
+		birth = yes
+	}
+	930.1.1 = {
+		death = yes
+	}
+}
+
+kumiji0008 = { #Fictional member of historical clan/tribe
+	name = "UluC_"	
+	culture = "turkish"
+	religion = "maturidi"
+	dynasty = turkic_kumiji
+	father = kumiji0004
+	mother = kumiji0005
+		
+	859.1.3 = {
+		birth = yes
+	}
+	910.1.1 = {
+		death = yes
+	}
+}
+
+kumiji0009 = { #Fictional member of historical clan/tribe
+	name = "Fulin"	
+	culture = "turkish"
+	religion = "maturidi"
+	dynasty = turkic_kumiji
+	female = yes
+	father = kumiji0004
+	mother = kumiji0005
+		
+	862.5.10 = {
+		birth = yes
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
+
+kumiji0010 = { #Fictional member of historical clan/tribe
+	name = "C_iC_ek"	
+	culture = "turkish"
+	religion = "maturidi"
+	female = yes		
+	802.3.10 = {
+		birth = yes
+	}
+	830.1.12 = {
+		death = yes
+	}
+}
+
+###Sebuk-eri, former slave of amir Ya'qub of Sistan
+
+extra_turks_0001 = {
+	name = "SebU_k-eri"	
+	dna = extra_turks_0001_sebuk_eri
+	dynasty = turkic_Sebukid
+	culture = "turkish"
+	religion = "ashari"	
+	trait = education_stewardship_3
+	trait = greedy
+	trait = diligent
+	trait = arrogant 
+	trait = drunkard
+	843.5.10 = {
+		birth = yes
+		effect = {
+			add_character_flag = has_scripted_appearance
+		}	
+	}
+	865.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+			reverse_add_opinion = {
+				target = character:163101
+				opinion = 20 
+				modifier = favored_vassal_opinion
+			}
+		}
+	}
+	912.1.1 = {
+		death = yes
+	}
+}
+
+####Asategin, turkic ruler of Rayy in the 880s, previously a failed governorship of Mosul in 860-61, but his whereabouts after that are very unclear in the sources, so I chose to make him the lord of Shahrazur in 867. 
+
+extra_turks_0002 = { #historical 
+	name = "Asategin"	
+	dynasty = turkic_asateginid 
+	culture = "turkish"
+	religion = "ashari"	
+	trait = education_martial_3
+	trait = brave
+	trait = deceitful
+	trait = stubborn
+	825.2.10 = {
+		birth = yes
+	}
+	865.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+			learn_language_of_culture = culture:bedouin 
+			add_unpressed_claim = title:c_rayy 
+		}
+	}
+	899.1.1 = {
+		death = yes
+	}
+}
+
+extra_turks_0003 = { #historical, former vice governor of Mosul, but dismissed due to gross incompetence and cruelty 
+	name = "EdgU_tegin"	
+	dynasty = turkic_asateginid 
+	culture = "turkish"
+	religion = "ashari"	
+	father = extra_turks_0002
+	trait = education_stewardship_1
+	trait = arrogant
+	trait = lazy
+	trait = arbitrary
+	845.2.19 = {
+		birth = yes
+	}
+	865.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+			learn_language_of_culture = culture:bedouin 
+		}
+	}
+	912.1.1 = {
+		death = yes
+	}
+}
+
+extra_seljuks_1 = {
+	name = "Sifri"	
+	dynasty_house = house_seljuk
+	culture = "turkish"
+	religion = "maturidi"	
+	father = 3040
+	mother = 3045
+	female = yes
+	1052.9.11 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
+	}
+	1110.1.1 = {
+		death = yes
+	}
+}
+
+extra_seljuks_2 = {
+	name = "Zuleikha"	
+	dynasty_house = house_seljuk
+	culture = "turkish"
+	religion = "maturidi"	
+	father = 3040
+	mother = 3045 #according to unconfirmed sources 
+	female = yes
+	1062.2.10 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
+	}
+	1111.1.1 = {
+		death = yes
+	}
+}
+
+extra_seljuks_3 = {
+	name = "Togrul"	
+	dynasty_house = house_seljuk
+	culture = "turkish"
+	religion = "maturidi"	
+	father = 3040
+	mother = extra_seljuks_4
+	1065.1.1 = {
+		birth = yes
+	}
+	1090.1.1 = {
+		death = yes
+	}
+}
+
+extra_seljuks_4 = {
+	name = "Akka_khatun"	
+	culture = "turkish"
+	religion = "maturidi"	
+	female = yes 
+	trait = brave
+	trait = humble
+	1040.1.1 = {
+		birth = yes
+	}
+	1061.1.1 = {
+		add_spouse = 3038
+	}
+	1090.1.1 = {
+		death = yes
+	}
+}
+
+extra_badakshanshah_1 = {
+	name = "Khumartegin"	
+	dynasty = turkish_badakhshanid
+	culture = "turkish"
+	religion = "maturidi"
+	trait = education_martial_2
+	831.1.1 = {
+		birth = yes
+	}
+	898.1.1 = {
+		death = yes
 	}
 }

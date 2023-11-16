@@ -1,7 +1,7 @@
 window = {
 	name = "fullscreen_event"
-	size = { 1920 1080 }
-	scale = "[ScaleToFitElementInside('(int32)1920', '(int32)1080')]"
+	size = { 100% 100% }
+	#scale = "[ScaleToFitElementInside('(int32)1920', '(int32)1080')]"
 	movable = no
 
 	layer = top
@@ -78,8 +78,8 @@ window = {
 		name = "event_image"
 		parentanchor = center
 		widgetanchor = center
-		size = { 2246 730 }
-		position = { 45 -5 }
+		size = { 1920 626 }
+		position = { 175 -5 }
 
 		alpha = 0
 
@@ -90,17 +90,27 @@ window = {
 					name = "event_picture_fade_left"
 					texture = "gfx/interface/component_masks/mask_fade_struggle_illustration.dds"
 					blend_mode = alphamultiply
+					alpha = 0.9
+				}
+
+				modify_texture = {
+					name = "event_picture_fade_short_left"
+					texture = "gfx/interface/component_masks/mask_fade_horizontal_short.dds"
+					mirror = horizontal
+					blend_mode = alphamultiply
 				}
 
 				modify_texture = {
 					name = "event_picture_fade_textured_up"
 					texture = "gfx/interface/component_masks/mask_fade_textured_vertical_up.dds"
+					translate_uv = { 0 -0.05 }
 					blend_mode = alphamultiply
 				}
 
 				modify_texture = {
 					name = "event_picture_fade_textured_down"
 					texture = "gfx/interface/component_masks/mask_fade_textured_vertical_down.dds"
+					translate_uv = { 0 0.05 }
 					blend_mode = alphamultiply
 				}
 			}
@@ -309,6 +319,16 @@ window = {
 		}
 	}
 
+	flowcontainer = {
+		name = "debug_stuff"
+		visible = "[InDebugMode]"
+		parentanchor = top|right
+		position = { -100 220 }
+		ignoreinvisible = yes
+
+		using = Event_Window_Debug_Info
+	}
+	
 	widget = {
 		name = "event_transition"
 		parentanchor = center

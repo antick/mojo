@@ -1463,7 +1463,6 @@ fp2_other_decisions.0702 = {
 					fp2_council_toledo_debate_bishop_effect = { MOZARABIC = yes }
 					every_culture_global = {		
 						limit = {
-							#TODO_CD_FP2 (JP) check if this can be more performant, every_struggle_culture would be better
 							NOT = { this = root.culture }
 							NOT = { has_same_culture_heritage = root.culture }
 							save_temporary_scope_as = this_culture

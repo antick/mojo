@@ -3,6 +3,7 @@
 	alias = { struggle_struggles }
 }
 struggle_phase = {
+	texture = "gfx/interface/icons/message_feed/struggle.dds"
 	alias = { struggle_phase_phase struggle_phase_phases }
 	parent = struggle
 }
@@ -11,11 +12,11 @@ struggle_catalyst = {
 	parent = struggle
 }
 struggle_involved = {
-	texture = "gfx/interface/icons/struggle_banners/involved_banner.dds"
+	texture = "gfx/interface/icons/message_feed/struggle_involved.dds"
 	parent = struggle
 }
 struggle_interloper = {
-	texture = "gfx/interface/icons/struggle_banners/interloper_banner.dds"
+	texture = "gfx/interface/icons/message_feed/struggle_interloper.dds"
 	alias = { struggle_interloper_interlopers }
 	parent = struggle
 }
@@ -110,7 +111,7 @@ struggle_involved_culture = {
 }
 
 dissolution_faction = {
-	alias = { dissolution_factions }
+	alias = { dissolution_factions dissolution_faction_dissolved }
 	parent = faction 
 }
 

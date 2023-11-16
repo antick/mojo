@@ -55,13 +55,25 @@ action_can_offer_hostage = {
 				}
 			}
 			if = { # Neighboring realms
-				limit = { is_independent_ruler = yes }
-				every_neighboring_top_liege_realm_owner = { add_to_list = potential_offer_target_list }
+				limit = { 
+					is_independent_ruler = yes 
+				}
+				every_neighboring_top_liege_realm_owner = { 
+					limit = {
+						highest_held_title_tier >= root.hostage_tier_check_value
+						current_military_strength >= root.offer_hostage_military_strength_value
+					}
+					add_to_list = potential_offer_target_list 
+				}
 			}
 			else = { # Fellow vassals
 				liege = {
 					every_vassal = {
-						limit = { character_is_realm_neighbor = root }
+						limit = { 
+							character_is_realm_neighbor = root 
+							highest_held_title_tier >= root.hostage_tier_check_value
+							current_military_strength >= root.offer_hostage_military_strength_value
+						}
 						add_to_list = potential_offer_target_list
 					}
 				}
@@ -70,6 +82,7 @@ action_can_offer_hostage = {
 			every_powerful_vassal = {
 				limit = {
 					save_temporary_scope_as = potential_powerful_vassal
+					highest_held_title_tier >= tier_duchy
 					OR = {
 						# Claimants
 						any_claim = { this = root.primary_title }
@@ -77,6 +90,10 @@ action_can_offer_hostage = {
 						root = {
 							any_targeting_faction = {
 								any_faction_member = { this = scope:potential_powerful_vassal }
+								OR = {
+									faction_can_press_demands = yes
+									faction_power >= 75
+								}
 							}
 						}
 					}
@@ -154,19 +171,30 @@ action_can_demand_hostage = {
 	check_create_action = {
 		if = { # Neighboring realms
 			limit = { is_independent_ruler = yes }
-			every_neighboring_top_liege_realm_owner = { add_to_list = potential_demand_target_list }
+			every_neighboring_top_liege_realm_owner = { 
+				limit = {
+					highest_held_title_tier >= root.hostage_tier_check_value
+					current_military_strength >= root.demand_hostage_military_strength_value
+				}
+				add_to_list = potential_demand_target_list 
+			}
 		}
 		else = { # Fellow vassals
 			liege = {
 				every_vassal = {
-					limit = { character_is_realm_neighbor = root }
-					add_to_list = potential_demand_target_list
+					limit = { 
+						character_is_realm_neighbor = root 
+						highest_held_title_tier >= root.hostage_tier_check_value
+						current_military_strength >= root.demand_hostage_military_strength_value
+					}
+					add_to_list = potential_offer_target_list
 				}
 			}
 		}
 		# Powerful vassals
 		every_powerful_vassal = {
 			limit = {
+				highest_held_title_tier >= tier_duchy
 				save_temporary_scope_as = potential_powerful_vassal
 				OR = {
 					# Claimants
@@ -175,6 +203,10 @@ action_can_demand_hostage = {
 					root = {
 						any_targeting_faction = {
 							any_faction_member = { this = scope:potential_powerful_vassal }
+							OR = {
+								faction_can_press_demands = yes
+								faction_power >= 75
+							}
 						}
 					}
 				}
@@ -251,13 +283,23 @@ action_can_exchange_hostage = {
 			}
 			if = { # Neighboring realms
 				limit = { is_independent_ruler = yes }
-				every_neighboring_top_liege_realm_owner = { add_to_list = potential_exchange_target_list }
+				every_neighboring_top_liege_realm_owner = { 
+					limit = {
+						highest_held_title_tier >= root.hostage_tier_check_value
+						current_military_strength >= root.demand_hostage_military_strength_value
+					}
+					add_to_list = potential_exchange_target_list 
+				}
 			}
 			else = { # Fellow vassals
 				liege = {
 					every_vassal = {
-						limit = { character_is_realm_neighbor = root }
-						add_to_list = potential_exchange_target_list
+						limit = { 
+							character_is_realm_neighbor = root 
+							highest_held_title_tier >= root.hostage_tier_check_value
+							current_military_strength >= root.demand_hostage_military_strength_value
+						}
+						add_to_list = potential_offer_target_list
 					}
 				}
 			}
@@ -272,6 +314,10 @@ action_can_exchange_hostage = {
 						root = {
 							any_targeting_faction = {
 								any_faction_member = { this = scope:potential_powerful_vassal }
+								OR = {
+									faction_can_press_demands = yes
+									faction_power >= 75
+								}
 							}
 						}
 					}

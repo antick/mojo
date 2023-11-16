@@ -232,7 +232,7 @@ take_stewardship_of_the_sacred_river_decision = {
 #Declare Bene Israel
 # by James Beaumont
 form_bene_israel_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 
 	desc = form_bene_israel_decision_desc

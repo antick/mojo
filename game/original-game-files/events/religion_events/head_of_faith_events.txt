@@ -546,7 +546,7 @@ scripted_effect decide_if_worthy_of_consideration_for_new_hof_effect = {
 		}
 	
 		if = {
-			limit = { debug_only = yes }
+			limit = { is_developer_testing_trigger = yes }
 			custom_tooltip = debug_generic_option_shortened_trigger_can_disable # Actually the opposite
 			scope:pledge_target = {
 				trigger_event = {

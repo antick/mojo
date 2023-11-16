@@ -1,4 +1,4 @@
-k_daylam = {
+﻿k_daylam = {
 	867.1.1 = {	change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
 }
@@ -16,6 +16,7 @@ c_gilan = {
 		holder = 180751 # Marzoban Justanid
 	}
 	835.1.1 = {
+		government = clan_government # Now Muslim
 		holder = 180752 # Justan II
 	}
 	865.1.1 = {
@@ -448,6 +449,7 @@ c_mazandaran = {
 	
 	867.1.1 = {
 		liege = "d_tabaristan"
+		government = clan_government # Now Muslim
 		holder = 45105 # Rostam II
 	}
 	935.1.1 = {
@@ -520,7 +522,8 @@ c_ruyan = {
 	
 	867.1.1 = {
 		liege = "d_tabaristan"
-		holder = 45105 # Rostam II
+		government = clan_government # Now Muslim
+		holder = 216909 # Shahriyar II ibn Baduspan
 	}
 	935.1.1 = {
 		government = clan_government	#Ahistorical, just for ease of bookmarks.
@@ -592,6 +595,7 @@ c_baduspan = {
 	
 	867.1.1 = {
 		liege = "d_tabaristan"
+		government = clan_government # Now Muslim
 		holder = 45105 # Rostam II
 	}
 	935.1.1 = {
@@ -668,7 +672,8 @@ c_gurgan = {
 	
 	867.1.1 = {
 		liege = k_khorasan
-		holder = 45107 # Vandad Karen
+		government = clan_government # Now Muslim
+		holder = 163161 #Sulayman Tahirid
 	}
 	935.1.1 = {
 		government = clan_government	#Ahistorical, just for ease of bookmarks.
@@ -742,7 +747,7 @@ c_dihistan = {
 	765.1.1 = {
 		liege = d_azerbaijan
 		holder = 160297 # Vandad Hormozd Karen
-		government = feudal_government
+		government = clan_government
 	}
 	
 	867.1.1 = {
@@ -750,17 +755,12 @@ c_dihistan = {
 		liege = k_khorasan
 		holder = 45107 # Vandad Karen
 	}
-	935.1.1 = {
-		government = clan_government	#Ahistorical, just for ease of bookmarks.
-	}
 	
 	1066.1.1 = {
 		liege = e_persia
-		government = tribal_government
 		holder = 1229929
 	}
 	1102.1.1 = {
-		government = clan_government
 		holder = 93129
 	}
 	1110.1.1 = {
@@ -808,8 +808,8 @@ d_azerbaijan = {
 		liege = e_arabia
 		holder = 188644 # Yahya Barmakid
 	}
-	863.1.1 = {
-		holder = sogdian0008
+	866.1.1 = {
+		holder = extra_bedouins_0019 #A Banu Tayy from a dynasty in Nairiz, somewhere in Azerbaijan. Actually held the governorship of Azerbaijian only from 873, but I pushed it forward because I needed a good placeholder here. 
 	}
 	879.1.1 = {
 		holder = sogdian0009
@@ -912,8 +912,8 @@ c_talish = {
 		liege = d_azerbaijan
 		holder = 188644 # Yahya Barmakid
 	}
-	863.1.1 = {
-		holder = sogdian0008
+	866.1.1 = {
+		holder = extra_bedouins_0019 #A Banu Tayy from a dynasty in Nairiz, somewhere in Azerbaijan. Actually held the governorship of Azerbaijian only from 873, but I pushed it forward because I needed a good placeholder here. 
 	}
 	879.1.1 = {
 		holder = sogdian0009
@@ -1012,7 +1012,7 @@ c_tabriz = {
 		holder = 188644 # Yahya Barmakid
 	}
 	863.1.1 = {
-		holder = sogdian0008
+		holder = 159169 #early Rawwanid
 	}
 	879.1.1 = {
 		holder = sogdian0009
@@ -1111,7 +1111,7 @@ c_ardabil = {
 		holder = 188644 # Yahya Barmakid
 	}
 	863.1.1 = {
-		holder = sogdian0008
+		holder = fictional_bedouins_0018 #the Kinda dynasty of Sarab
 	}
 	879.1.1 = {
 		holder = sogdian0009
@@ -1207,7 +1207,7 @@ c_maragha = {
 		holder = 188644 # Yahya Barmakid
 	}
 	863.1.1 = {
-		holder = sogdian0008
+		holder = fictional_yemenis_0014 #Hamdan dynasty (historical local rulers of Myaneh)
 	}
 	879.1.1 = {
 		holder = sogdian0009
@@ -1303,7 +1303,7 @@ c_bailaqan = {
 		holder = 188658
 	}
 	863.1.1 = {
-		holder = sogdian0008
+		holder = fictional_yemenis_0004 #The al-Aud clan, who was local rulers here 
 	}
 	879.1.1 = {
 		holder = sogdian0010
@@ -1404,7 +1404,7 @@ c_urmiya = {
 	}
 	
 	863.1.1 = {
-		holder = sogdian0008
+		holder = fictional_bedouins_0003
 	}
 	879.1.1 = {
 		holder = sogdian0010

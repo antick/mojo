@@ -485,13 +485,44 @@ types Animations
 
         state = {
             name = b
-
             using = Animation_Curve_Default
             duration = 1
             alpha = 0
             scale = 0
         }
     }
+
+    type animation_button_highlight = icon {
+        name = "button_highlight"
+        parentanchor = center
+        size = { 100% 100% }
+      
+        alwaystransparent = yes
+        alpha = 0
+        scale = 0
+
+        state = {
+            trigger_on_create = yes
+            name = a
+            next = b
+
+            using = Animation_Curve_Default
+            duration = 1.5
+            alpha = 1
+            scale = 1.2
+        }
+
+        state = {
+            name = b
+            next = a
+
+            using = Animation_Curve_Default
+            duration = 1.5
+            alpha = 0.2
+            scale = 1.8
+        }
+    }
+
 
     type animation_progessbar_center_glow = widget {
         using = Animation_ShowHide_Standard

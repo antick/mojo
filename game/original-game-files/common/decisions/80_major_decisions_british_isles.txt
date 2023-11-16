@@ -583,7 +583,7 @@ negotiate_the_danelaw_integrate_duchies_decision = {
 }
 
 formalise_the_daneland_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 
 	ai_check_interval = 120
@@ -666,7 +666,7 @@ formalise_the_daneland_decision = {
 # by Ewan Cowhig Croft						#
 #############################################
 restore_dumnonia_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 
 	ai_check_interval = 120

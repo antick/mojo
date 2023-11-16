@@ -1,26 +1,41 @@
 ﻿# Western Iranian.
 
 persian = {
-	color = persian
+	color = { 0.1 0.6 0.8 }
 	
 	ethos = ethos_courtly
 	heritage = heritage_iranian
 	language = language_iranian
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_poetry
-		tradition_philosopher_culture
 		tradition_gardening
-		tradition_dryland_dwellers
 		tradition_futuwaa
 	}
+	
+	# FP3 traditions
+	dlc_tradition = {
+		trait = tradition_fp3_irrigation_experts
+		requires_dlc_flag = legacy_of_persia
+		fallback = tradition_dryland_dwellers
+	}
+	dlc_tradition = {
+		trait = tradition_fp3_beacon_of_learning
+		requires_dlc_flag = legacy_of_persia
+		fallback = tradition_philosopher_culture
+	}
+	dlc_tradition = {
+		trait = tradition_fp3_enlightened_magnates
+		requires_dlc_flag = legacy_of_persia
+		fallback = tradition_poetry
+	}
+
 	
 	name_list = name_list_persian
 	
 	coa_gfx = { iranian_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { mena_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
 	
 	ethnicities = {
 		8 = arab
@@ -29,7 +44,7 @@ persian = {
 }
 
 kurdish = {
-	color = { 0.3 0.35 0.1 }
+	color = { 0 0.9 0.7 }
 	
 	ethos = ethos_communal
 	heritage = heritage_iranian
@@ -39,15 +54,21 @@ kurdish = {
 		tradition_swords_for_hire
 		tradition_mountain_homes
 		tradition_eye_for_an_eye
-		tradition_futuwaa
 	}
 	
+	dlc_tradition = {
+		trait = tradition_fp3_fierce_independence
+		requires_dlc_flag = legacy_of_persia
+		fallback = tradition_futuwaa
+	 }
+
+	 
 	name_list = name_list_kurdish
 	
 	coa_gfx = { iranian_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { mena_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
 	
 	ethnicities = {
 		8 = arab
@@ -56,9 +77,9 @@ kurdish = {
 }
 
 baloch = {
-	color = { 0.4 0.4 0.05 }
+	color = { 0.1 0.15 0.5 }
 	
-	ethos = ethos_communal
+	ethos = ethos_stoic #FP3 change based on research
 	heritage = heritage_iranian
 	language = language_iranian
 	martial_custom = martial_custom_male_only
@@ -68,13 +89,19 @@ baloch = {
 		tradition_esteemed_hospitality
 		tradition_isolationist
 	}
+	
+	# FP3 traditions
+	dlc_tradition = {
+		trait = tradition_fp3_jirga
+		requires_dlc_flag = legacy_of_persia
+	}
 
 	name_list = name_list_baloch
 
 	coa_gfx = { iranian_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { mena_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
 	
 	ethnicities = {
 		10 = arab
@@ -82,7 +109,7 @@ baloch = {
 }
 
 daylamite = {
-	color = { 0.75 0.85 0.35 }
+	color = { 0 0.35 0.6 }
 	
 	ethos = ethos_bellicose
 	heritage = heritage_iranian
@@ -92,15 +119,22 @@ daylamite = {
 		tradition_swords_for_hire
 		tradition_stalwart_defenders
 		tradition_mountaineers
-		tradition_futuwaa
+		tradition_isolationist 
+	}
+	
+	# FP3 traditions
+	dlc_tradition = {
+		trait = tradition_fp3_pragmatic_creed
+		requires_dlc_flag = legacy_of_persia
+		fallback = tradition_futuwaa
 	}
 	
 	name_list = name_list_daylamite
 	
 	coa_gfx = { iranian_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { mena_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
 
 	ethnicities = {
 		7 = arab
@@ -109,7 +143,11 @@ daylamite = {
 }
 
 tajik = {
-	color = { 0.7 0.75 0.35 }
+	color = { 0.7 0.6 1 }
+	created = 700.1.1
+	parents = { khwarezmian }
+
+	history_loc_override = bactrian_heritage_loc
 	
 	ethos = ethos_spiritual
 	heritage = heritage_iranian
@@ -117,17 +155,28 @@ tajik = {
 	martial_custom = martial_custom_male_only
 	traditions = {
 		tradition_caravaneers
-		tradition_dryland_dwellers
-		tradition_philosopher_culture
 		tradition_futuwaa
+		tradition_city_keepers #FP3 addition
+	}
+	
+	# FP3 traditions
+	dlc_tradition = {
+		trait = tradition_fp3_irrigation_experts
+		requires_dlc_flag = legacy_of_persia
+		fallback = tradition_dryland_dwellers
+	}
+	dlc_tradition = {
+		trait = tradition_fp3_beacon_of_learning
+		requires_dlc_flag = legacy_of_persia
+		fallback = tradition_philosopher_culture
 	}
 	
 	name_list = name_list_tajik
 	
 	coa_gfx = { iranian_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { mena_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
 	
 	ethnicities = {
 		8 = arab
@@ -138,25 +187,31 @@ tajik = {
 # Eastern Iranian.
 
 afghan = { # a.k.a. Pashtun
-	color = afghan
+	color = { 0.4 0.3 1 }
 	
 	ethos = ethos_communal
 	heritage = heritage_iranian
 	language = language_scythian
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_loyal_soldiers
+		tradition_eye_for_an_eye #FP3 change from Loyal Subjects 
 		tradition_esteemed_hospitality
 		tradition_mountain_homes
 		tradition_futuwaa
+	}
+	
+	# FP3 traditions
+	dlc_tradition = {
+		trait = tradition_fp3_jirga
+		requires_dlc_flag = legacy_of_persia
 	}
 
 	name_list = name_list_afghan
 	
 	coa_gfx = { iranian_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { mena_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
 	
 	ethnicities = {
 		8 = arab
@@ -165,7 +220,10 @@ afghan = { # a.k.a. Pashtun
 }
 
 saka = {
-	color = { 0.4 0.2 0.75  }
+	color = { 0.5 0.3 1 }
+	created = 100.1.1
+
+	history_loc_override = scythian_heritage_loc
 	
 	ethos = ethos_bellicose
 	heritage = heritage_iranian
@@ -178,12 +236,18 @@ saka = {
 		tradition_artisans
 	}
 	
+	# FP3 traditions
+	dlc_tradition = {
+		trait = tradition_fp3_frontier_warriors
+		requires_dlc_flag = legacy_of_persia
+	}
+	
 	name_list = name_list_saka
 	
 	coa_gfx = { iranian_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { mena_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
 
 	ethnicities = {
 		7 = arab
@@ -192,7 +256,7 @@ saka = {
 }
 
 sogdian = {
-	color = { 0.43 0.32 0.32 }
+	color = { 0.1 0.3 0.9 }
 	
 	ethos = ethos_egalitarian
 	heritage = heritage_iranian
@@ -201,16 +265,26 @@ sogdian = {
 	traditions = {
 		tradition_caravaneers
 		tradition_religion_blending
-		tradition_futuwaa
 		tradition_parochialism
+	}
+	
+	# FP3 traditions
+	dlc_tradition = {
+		trait = tradition_fp3_frontier_warriors
+		requires_dlc_flag = legacy_of_persia
+		fallback = tradition_futuwaa
+	}
+	dlc_tradition = {
+		trait = tradition_horse_breeder #FP3 addition
+		requires_dlc_flag = legacy_of_persia
 	}
 	
 	name_list = name_list_sogdian
 	
 	coa_gfx = { iranian_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { mena_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
 	
 	ethnicities = {
 		7 = arab
@@ -219,25 +293,32 @@ sogdian = {
 }
 
 khwarezmian = {
-	color = { 0.85 0.75 0.45 }
+	color = { 0.4 0.6 0.9 }
 	
 	ethos = ethos_stoic
 	heritage = heritage_iranian
 	language = language_scythian
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_futuwaa
 		tradition_caravaneers
 		tradition_dryland_dwellers
-		tradition_isolationist
+		tradition_city_keepers #FP3 - swapped from Isolationism
+		tradition_stalwart_defenders # Added in FP3
+	}
+	
+	# FP3 traditions
+	dlc_tradition = {
+		trait = tradition_fp3_frontier_warriors
+		requires_dlc_flag = legacy_of_persia
+		fallback = tradition_futuwaa
 	}
 	
 	name_list = name_list_khwarezmian
 	
 	coa_gfx = { iranian_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { mena_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
 	
 	ethnicities = {
 		7 = arab
@@ -261,15 +342,22 @@ tocharian = {
 		tradition_religious_patronage
 	}
 	
+	# FP3 traditions
+	dlc_tradition = {
+		trait = tradition_fp3_frontier_warriors
+		requires_dlc_flag = legacy_of_persia
+	}
+	
 	name_list = name_list_tocharian
 	
 	coa_gfx = { iranian_group_coa_gfx }
-	building_gfx = { mena_building_gfx }
-	clothing_gfx = { mena_clothing_gfx }
-	unit_gfx = { mena_unit_gfx }
+	building_gfx = { iranian_building_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	unit_gfx = { iranian_unit_gfx }
 	
 	ethnicities = {
 		7 = arab
 		5 = mediterranean
 	}
 }
+

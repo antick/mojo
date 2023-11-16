@@ -3189,3 +3189,20 @@
 	}
 }
 
+extra_georgians_1 = { #unnamed in the sources, but known to have married Alp Arslan
+	name = "Chiora"
+	dynasty_house = house_bagrationi # Georgian Bagrationi cadets
+	religion = "orthodox"
+	culture = "georgian"
+	female = yes 
+	mother = 41553
+	father = extra_armenians_1
+	1045.1.1 = {
+		birth = yes
+	}
+	1090.1.1 = {
+		death = yes
+	}
+}
+
+

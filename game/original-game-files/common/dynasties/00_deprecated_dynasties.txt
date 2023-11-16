@@ -221,4 +221,16 @@
 #}
 
 ##################################################
-# DEPRECATED DURING ###
+# DEPRECATED DURING 1.11
+
+#101727 = {
+	#name = "dynn_Abbasid"
+	#culture = "bedouin"
+#}
+#
+#7511 = {
+	#name = "dynn_Karen"
+	#culture = "persian"
+	#forced_coa_religiongroup = "zoroastrian_group"
+#}
+

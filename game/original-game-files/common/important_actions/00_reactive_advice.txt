@@ -732,3 +732,50 @@ action_reactive_advice_travel_planning = {
 		start_tutorial_lesson = reactive_advice_travel_planning
 	}
 }
+
+action_reactive_advice_house_unity = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_house_unity }	
+				
+				house = { has_house_unity = yes }
+				
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_house_unity
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_house_unity
+	}
+}
+
+action_reactive_advice_tax_collector = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_tax_collector }
+				
+				government_has_flag = government_is_clan
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_tax_collector
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_tax_collector
+	}
+}

@@ -285,7 +285,7 @@ restore_roman_empire_italian_decision = {
 
 #Restore the real Roman Empire
 form_rum_sultanate_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	picture = "gfx/interface/illustrations/decisions/fp3/fp3_decision_concession.dds"
 
 	desc = form_rum_sultanate_decision_desc
 	selection_tooltip = form_rum_sultanate_decision_tooltip

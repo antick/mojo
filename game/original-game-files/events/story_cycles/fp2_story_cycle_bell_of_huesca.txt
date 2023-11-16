@@ -230,7 +230,7 @@ bell_special_yearly.1500 = {
 		custom_tooltip = bell_special_yearly.1500.discovery.tt
 
 		if = {
-			limit = { debug_only = yes } # Removed the two month wait time when debugging event
+			limit = { is_developer_testing_trigger = yes } # Removed the two month wait time when debugging event
 			custom_tooltip = debug_generic_option_shortened_trigger_can_disable
 			trigger_event = {
 				id = bell_special_yearly.2000
@@ -340,7 +340,7 @@ bell_special_yearly.2000 = {
 		add_character_flag = can_have_bell_special_yearly_3000
 
 		if = {
-			limit = { debug_only = yes }
+			limit = { is_developer_testing_trigger = yes }
 			custom_tooltip = debug_generic_option_shortened_trigger_can_disable
 			trigger_event = {
 				id = bell_special_yearly.3000
@@ -450,7 +450,7 @@ bell_special_yearly.3000 = {
 	after = {
 		remove_character_flag = can_have_bell_special_yearly_3000
 		if = {
-			limit = { debug_only = yes }
+			limit = { is_developer_testing_trigger = yes }
 			custom_tooltip = debug_generic_option_shortened_trigger_can_disable
 			trigger_event = {
 				id = bell_special_yearly.4000
@@ -576,7 +576,7 @@ bell_special_yearly.4000 = {
 		custom_tooltip = bell_special_yearly.4000.a.tt
 		change_current_court_grandeur = medium_court_grandeur_gain
 		if = {
-			limit = { debug_only = yes }
+			limit = { is_developer_testing_trigger = yes }
 			custom_tooltip = debug_generic_option_shortened_trigger_can_disable
 			trigger_event = {
 				id = bell_special_yearly.6000

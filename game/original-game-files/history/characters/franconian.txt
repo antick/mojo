@@ -89,7 +89,7 @@
 		add_spouse = 167813# Liutswind
 	}
 	867.1.1 = {
-        contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
+		contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
 	}
 	880.9.29 = {
 		death = yes

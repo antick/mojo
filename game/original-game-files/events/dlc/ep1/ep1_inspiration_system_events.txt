@@ -12,7 +12,6 @@ inspiration_system.0005 = {
 	hidden = yes
 
 	trigger = {
-		# TODO_CD: Switch the trigger to check for the actual Inspirations feature.
 		has_ep1_dlc_trigger = yes
 
 		num_world_inspired_characters_value < ideal_total_world_inspirations
@@ -51,7 +50,6 @@ inspiration_system.1001 = {
 	hidden = yes
 
 	trigger = {
-		# TODO_CD: Switch the trigger to check for the actual Inspirations feature.
 		has_ep1_dlc_trigger = yes
 	}
 

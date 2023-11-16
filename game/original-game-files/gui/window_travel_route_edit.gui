@@ -247,6 +247,10 @@ types TravelRouteEditTypes
 					onclick = "[TravelRouteEditWindow.AddWaypointAfterDeparture]"
 					tooltip = TRAVEL_EDIT_ROUTE_ADD_DETOUR_TT
 					inherit_visual_state = no
+
+					background = {
+						using = Background_Area_Dark
+					}
 				}
 			}
 		}
@@ -302,6 +306,10 @@ types TravelRouteEditTypes
 					onclick = "[TravelRouteEditWindow.AddWaypointAfterDestination( TravelPlanDestination.GetIndex )]"
 					tooltip = TRAVEL_EDIT_ROUTE_ADD_DETOUR_TT
 					inherit_visual_state = no
+
+					background = {
+						using = Background_Area_Dark
+					}
 				}
 			}
 		}
@@ -368,6 +376,10 @@ types TravelRouteEditTypes
 							onclick = "[TravelRouteEditWindow.AddWaypointAfterWaypoint( TravelPlanDestination.GetIndex, TravelPlanWaypoint.GetIndex )]"
 							tooltip = TRAVEL_EDIT_ROUTE_ADD_DETOUR_TT
 							inherit_visual_state = no
+
+							background = {
+								using = Background_Area_Dark
+							}
 						}
 					}
 				}

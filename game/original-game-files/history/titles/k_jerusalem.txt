@@ -633,7 +633,7 @@ c_ghazza = {
 	#	liege = "d_ascalon"
 	#}
 	866.1.1 = {
-		holder = 163136
+		holder = 159732
 	}
 	877.1.1 = {
 		liege = 0
@@ -915,7 +915,7 @@ d_urdunn = {
 		holder = levantine0001
 	}
 	866.1.1 = {
-		holder = 146080
+		holder = 159732
 	}
 	877.1.1 = {
 		liege = 0
@@ -985,7 +985,7 @@ c_tiberias = {
 		holder = levantine0001
 	}
 	866.1.1 = {
-		holder = 146080
+		holder = 159732
 	}
 	877.1.1 = {
 		liege = 0
@@ -1106,7 +1106,7 @@ c_acre = {
 		holder = 146045
 	}
 	852.3.1 = {
-		holder = 163134
+		holder = 159732
 	}
 	866.1.1 = {
 		liege = "d_palestine"
@@ -1308,7 +1308,7 @@ c_irbid = {
 		holder = levantine0001
 	}
 	866.1.1 = {
-		holder = 146080
+		holder = 159732
 	}
 	1066.1.1 = {
 		holder = 20768

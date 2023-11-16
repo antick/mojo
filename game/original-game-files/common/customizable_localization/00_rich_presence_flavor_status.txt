@@ -7,7 +7,16 @@
 		}
 		localization_key = rich_presence_barbershop
 	}
-	
+
+	text = {
+		trigger = {
+			any_character_war = {
+				using_cb = fp3_seljuk_invasion_cb
+			}
+		}
+		localization_key = rich_presence_fp3_seljuk_invasion_cb
+	}
+
 	text = {
 		trigger = {
 			is_in_ongoing_great_holy_war = yes
@@ -206,6 +215,138 @@
 		}
 		localization_key = rich_presence_diarch
 	}
+
+	text = {
+		trigger = {
+			has_character_modifier = fp3_struggle_caliph_super_suspicious_modifier
+		}
+		localization_key = rich_presence_caliph_super_suspicious
+	}
+
+	text = {
+		trigger = {
+			house = { has_house_modifier = fp3_house_modifier_rebuilding_efforts }
+		}
+		localization_key = rich_presence_house_modifier_rebuilding_efforts
+	}
+	
+	text = {
+		trigger = {
+			house = { has_house_modifier = fp3_house_modifier_frontier_ambitions }
+		}
+		localization_key = rich_presence_house_modifier_frontier_ambitions
+	}
+	
+	text = {
+		trigger = {
+			house = { has_house_modifier = fp3_house_modifier_destroyed_the_caliphate }
+		}
+		localization_key = rich_presence_house_modifier_destroyed_the_caliphate
+	}
+
+	text = {
+		trigger = {
+			house = { has_house_unity_stage = harmonious }
+			this = house.house_head
+		}
+		localization_key = rich_presence_house_unity_harmonious
+	}
+
+	text = {
+		trigger = {
+			house = { has_house_unity_stage = antagonistic }
+			this = house.house_head
+		}
+		localization_key = rich_presence_house_unity_antagonistic
+	}
+	
+	text = {
+		trigger = {
+			any_realm_county = {
+				any_county_province = { geographical_region = world_persian_empire }
+			}
+			global_var:fp3_struggle_ending ?= flag:fp3_struggle_strengthen_caliphate_ending
+		}
+		localization_key = rich_presence_fp3_struggle_strengthen_caliphate_ending
+	}
+
+	text = {
+		trigger = {
+			any_realm_county = {
+				any_county_province = { geographical_region = world_persian_empire }
+			}
+			global_var:fp3_struggle_ending ?= flag:fp3_struggle_rekindle_iran_ending
+		}
+		localization_key = rich_presence_fp3_struggle_rekindle_iran_ending
+	}
+
+	text = {
+		trigger = {
+			has_trait = fp3_struggle_detractor
+		}
+		localization_key = rich_presence_fp3_struggle_detractor
+	}
+
+	text = {
+		trigger = {
+			has_trait = fp3_struggle_supporter
+		}
+		localization_key = rich_presence_fp3_struggle_supporter
+	}
+
+	text = {
+		trigger = {
+			any_character_struggle = {
+				involvement = involved
+		 		is_struggle_type = iberian_struggle
+			}
+		}
+		localization_key = rich_presence_fp2_struggle_involvement
+	}
+
+	text = {
+		trigger = {
+			any_character_struggle = {
+				involvement = involved
+	  			is_struggle_type = persian_struggle
+			}
+		}
+		localization_key = rich_presence_fp3_struggle_involvement
+	}
+	
+	text = {
+		trigger = {
+			OR = {
+				any_tax_collector = { count = 0 }
+				any_tax_collector = {
+					tax_slot = {
+						any_tax_slot_vassal = {
+							count = 0
+						}
+					}
+				}
+			}
+		}
+		localization_key = rich_presence_fp3_tax_collectors_min
+	}
+
+	text = {
+		trigger = {
+			OR = {
+				any_tax_collector = {
+					count = all
+					tax_slot = {
+						OR = {
+							is_active_obligation = jizya_special_rights_tax_collector
+							is_active_obligation = deqhan_special_rights_tax_collector
+							is_active_obligation = strict_taxation_tax_collector
+						}
+					}
+				}
+			}
+		}
+		localization_key = rich_presence_fp3_tax_collectors_max
+	}
 	
 	text = {
 		trigger = {
@@ -357,7 +498,14 @@
 		}
 		localization_key = rich_presence_hoarding_gold
 	}
-	
+
+	text = {
+		trigger = {
+			has_trait = sayyid
+		}
+		localization_key = rich_presence_sayyid
+	}
+
 	text = {
 		localization_key = rich_presence_default
 		fallback = yes

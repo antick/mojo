@@ -2,7 +2,7 @@
 ##d_makran ###################################
 ###c_panjgur
 4471 = {	#Bannajbur
-	culture = baloch
+	culture = brahui #FP3, baloch migration fix
 	religion = zun_pagan
 	holding = castle_holding
 	830.1.1 = {
@@ -10,6 +10,9 @@
 	}
 	880.1.1 = {
 		religion = ashari
+	}
+	1050.1.1 = {
+		culture = baloch #FP3 fix for baloch migration
 	}
 }
 4468 = {	#Saindak
@@ -27,11 +30,14 @@
 
 ###c_kiz
 4285 = {	#Kiz
-	culture = baloch
+	culture = brahui #FP3, baloch migration fix
 	religion = mazdayasna
 	holding = castle_holding
-	880.1.1 = {
+	760.1.1 = {
 		religion = ashari
+	}
+	1050.1.1 = {
+		culture = baloch #FP3 fix for baloch migration
 	}
 }
 4284 = {	#Rasak
@@ -49,7 +55,7 @@
 	culture = baloch
 	religion = mazdakism
 	holding = castle_holding
-	830.1.1 = {
+	760.1.1 = {
 		religion = azariqa
 	}
 	880.1.1 = {
@@ -68,7 +74,7 @@
 
 ###c_khawr
 4477 = {	#Khawr
-	culture = baloch
+	culture = brahui
 	religion = zun_pagan
 	holding = castle_holding
 	830.1.1 = {
@@ -93,7 +99,7 @@
 
 ###c_turan
 4479 = {	#Qusdar
-	culture = baloch
+	culture = brahui 
 	religion = zun_pagan
 	holding = castle_holding
 	830.1.1 = {
@@ -101,6 +107,9 @@
 	}
 	880.1.1 = {
 		religion = ashari
+	}
+	1060.1.1 = {
+		culture = baloch 
 	}
 }
 4478 = {	#Wad
@@ -122,9 +131,12 @@
 ##d_jabal_kufs ###################################
 ###c_bampur
 4268 = {	#Bint
-	culture = baloch
-	religion = mazdayasna
+	culture = brahui
+	religion = ashari
 	holding = castle_holding
+	1050.1.1 = {
+		culture = baloch 
+	}
 }
 4269 = {	#Ruhna
 	holding = none
@@ -144,11 +156,14 @@
 
 ###c_jabal_kufs
 4265 = {	#Jask
-	culture = baloch
+	culture = persian #FP3 change 
 	religion = mazdayasna
 	holding = castle_holding
-	880.1.1 = {
+	760.1.1 = {
 		religion = ashari
+	}
+	1050.1.1 = {
+		culture = baloch 
 	}
 }
 4263 = {	#Manujan
