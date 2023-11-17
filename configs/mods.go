@@ -58,7 +58,7 @@ func ModConfig() *ModType {
 					"modName":              "Age of Invasion",
 					"modVersion":           "1.0.0",
 					"supportedGameVersion": "1.10.0.1",
-					"modRemoteFileId":      "remote_file_id=\"2906586207\"",
+					"modRemoteFileId":      "",
 					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "age-of-invasion"), "\\", "/"),
 					"modTags": `{
 	"Gameplay"
