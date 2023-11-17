@@ -12,6 +12,7 @@
   let resultText: string = ""
   let buildingInProgress: boolean = false
   let checkedMods = new Set();
+  let buildCombinedMod: boolean = false
 
   $: subMods = null
 
@@ -24,7 +25,7 @@
 
     buildingInProgress = true
     resultText = "Building mods in local..."
-    BuildModsInLocal(selectedModKeys)
+    BuildModsInLocal(selectedModKeys, buildCombinedMod)
       .then(() => {
         resultText = "Build generated in local build folder"
         buildingInProgress = false
@@ -40,7 +41,7 @@
 
     buildingInProgress = true
     resultText = "Building mods in game..."
-    BuildModsInGame(selectedModKeys)
+    BuildModsInGame(selectedModKeys, buildCombinedMod)
       .then(() => {
         resultText = "Build generated in game build folder"
         buildingInProgress = false
@@ -60,7 +61,7 @@
     })
   }
 
-  function handleCheckboxChange(modKey, event) {
+  function handleModSelection(modKey, event) {
     if (event.target.checked) {
       checkedMods.add(modKey);
     } else {
@@ -68,6 +69,11 @@
     }
   }
 
+  function handleModCombinationSettings(event) {
+    buildCombinedMod = !!event.target.checked;
+  }
+
+  // Fetch the mod list from the backend on page load
   GetModList().then((modList: any) => {
     subMods = modList.SubMods
   })
@@ -102,31 +108,36 @@
         {#if activeTab === 'tab1'}
           <div class="max-w p-6 bg-gray-100 border border-gray-200 rounded-lg shadow">
             <p class="flex items-center mb-4">
-              List of Available Mods
-              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-              </svg>
+              Select the mods that you want to build:
             </p>
 
             {#if subMods}
               {#each Object.entries(subMods) as [modKey, subMod]}
                 <div class="flex items-center mt-2">
                   <input
-                    id="default-checkbox"
                     type="checkbox"
                     value=""
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
-                    on:change={event => handleCheckboxChange(modKey, event)}
+                    on:change={event => handleModSelection(modKey, event)}
                   >
                   <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900" id="{modKey}"> {subMod.Replacements.modName}</label>
                 </div>
               {/each}
             {/if}
 
-            <p class="mt-4 font-normal text-sm text-gray-700">
-              Select the mods that you want to build. You can either select all of them or choose any specific mod. If you select only one mod, it will create a
-              mod folder for that particular selection. However, if you select more than one mod, it will create a combined mod called Mojo.
+            <p class="flex items-center my-4">
+              Do you want to build a combined mod?
             </p>
+
+            <div class="flex items-center mt-2">
+              <input
+                type="checkbox"
+                value=""
+                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                on:change={event => handleModCombinationSettings(event)}
+              >
+              <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900"> Yes, create a single (combined) mod from the selected choices mentioned above.</label>
+            </div>
 
             <div class="flex gap-6 mt-6">
               <button class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-teal-500 rounded-lg hover:bg-teal-600 focus:outline-none" on:click={buildModsInLocal} disabled={buildingInProgress}>

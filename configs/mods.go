@@ -139,7 +139,7 @@ func ModConfig() *ModType {
 				Replacements: map[string]string{
 					"modId":                config.ModIdPrefix + "_auto_pause",
 					"modName":              "Auto Pause Game",
-					"modVersion":           "1.0.0",
+					"modVersion":           "1.0.1",
 					"supportedGameVersion": "1.11.0.1",
 					"modRemoteFileId":      "remote_file_id=\"2906586207\"",
 					"modTags": `{

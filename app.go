@@ -24,7 +24,7 @@ func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
 }
 
-func (a *App) BuildModsInLocal(selectedModKeys []string) error {
+func (a *App) BuildModsInLocal(selectedModKeys []string, buildCombinedMod bool) error {
 	if len(selectedModKeys) == 0 {
 		return fmt.Errorf("No mods selected for building")
 	}
@@ -44,7 +44,7 @@ func (a *App) BuildModsInLocal(selectedModKeys []string) error {
 	return err
 }
 
-func (a *App) BuildModsInGame(selectedModKeys []string) error {
+func (a *App) BuildModsInGame(selectedModKeys []string, buildCombinedMod bool) error {
 	if len(selectedModKeys) == 0 {
 		return fmt.Errorf("No mods selected for building")
 	}
