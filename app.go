@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"mojo/scripts"
 	"path/filepath"
-	"sort"
 )
 
 type App struct {
@@ -22,101 +21,13 @@ func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
 }
 
-func sortModList() []string {
-	keys := make([]string, 0, len(config.SubMods))
-	for k := range config.SubMods {
-		keys = append(keys, k)
-	}
-	sort.Strings(keys)
-
-	return keys
-}
-
-func buildDescriptorFile(modBuildPath string) error {
-	err := scripts.ProcessFile(
-		modBuildPath,
-		config.ModDescriptorSourcePath,
-		filepath.Join(modBuildPath, "descriptor.mod"),
-		config.MainMod.Replacements,
-	)
-
-	return err
-}
-
-func buildModFile(modBuildPath string) error {
-	err := scripts.ProcessFile(
-		modBuildPath,
-		config.ModFileSourcePath,
-		filepath.Join(modBuildPath, "mojo.mod"),
-		config.MainMod.Replacements,
-	)
-
-	return err
-}
-
-func buildThumbnailFile(modBuildPath string) error {
-	err := scripts.ProcessFile(
-		modBuildPath,
-		config.ThumbnailSourcePath,
-		filepath.Join(modBuildPath, "thumbnail.png"),
-		map[string]string{},
-	)
-
-	return err
-}
-
-func BuildMods(modBuildPath string) error {
-	fmt.Println("-----------------------------------")
-	err := scripts.Cleanup(modBuildPath)
-	if err != nil {
-		return err
-	}
-
-	if err = buildDescriptorFile(modBuildPath); err != nil {
-		fmt.Println("Error while processing descriptor.mod file")
-		return err
-	}
-
-	if err = buildThumbnailFile(modBuildPath); err != nil {
-		fmt.Println("Error while processing thumbnail.png file")
-		return err
-	}
-
-	sortedModList := sortModList()
-	for _, modName := range sortedModList {
-		modDetails := config.SubMods[modName]
-
-		if !modDetails.Enabled {
-			fmt.Printf("❗️%s is disabled, skipping \n", modName)
-			continue
-		} else {
-			fmt.Printf("📦 Building %s\n", modName)
-		}
-
-		err := scripts.Build(
-			modBuildPath,
-			modName,
-			modDetails.Replacements,
-		)
-		if err != nil {
-			return err
-		}
-	}
-
-	fmt.Println("-----------------------------------")
-	fmt.Printf("✅ Build successful in %s folder \n", modBuildPath)
-	fmt.Println("-----------------------------------")
-
-	return nil
-}
-
 func (a *App) BuildModsInLocal() error {
-	if err := buildModFile(config.ModBuildPathLocal); err != nil {
+	if err := scripts.BuildModFile(config.ModBuildPathLocal); err != nil {
 		fmt.Println("Error while processing mojo.mod file")
 		return err
 	}
 
-	err := BuildMods(filepath.Join(config.ModBuildPathLocal, config.MainMod.Replacements["modFolderName"]))
+	err := scripts.BuildMods(filepath.Join(config.ModBuildPathLocal, config.MainMod.Replacements["modFolderName"]))
 	if err != nil {
 		fmt.Printf("Error building mods in local: %v \n", err)
 		return err
@@ -126,12 +37,12 @@ func (a *App) BuildModsInLocal() error {
 }
 
 func (a *App) BuildModsInGame() error {
-	if err := buildModFile(config.GameCustomModPath); err != nil {
+	if err := scripts.BuildModFile(config.GameCustomModPath); err != nil {
 		fmt.Println("Error while processing mojo.mod file")
 		return err
 	}
 
-	err := BuildMods(config.ModBuildPath)
+	err := scripts.BuildMods(config.ModBuildPath)
 	if err != nil {
 		fmt.Printf("Error building mods in game: %v \n", err)
 		return err

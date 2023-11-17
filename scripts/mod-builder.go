@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"sort"
 )
 
 var config = configuration.Config()
@@ -154,6 +155,94 @@ func Build(modBuildPath, modName string, replacements map[string]string) error {
 			}
 		}
 	}
+
+	return nil
+}
+
+func SortModList() []string {
+	keys := make([]string, 0, len(config.SubMods))
+	for k := range config.SubMods {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+
+	return keys
+}
+
+func BuildDescriptorFile(modBuildPath string) error {
+	err := ProcessFile(
+		modBuildPath,
+		config.ModDescriptorSourcePath,
+		filepath.Join(modBuildPath, "descriptor.mod"),
+		config.MainMod.Replacements,
+	)
+
+	return err
+}
+
+func BuildModFile(modBuildPath string) error {
+	err := ProcessFile(
+		modBuildPath,
+		config.ModFileSourcePath,
+		filepath.Join(modBuildPath, "mojo.mod"),
+		config.MainMod.Replacements,
+	)
+
+	return err
+}
+
+func BuildThumbnailFile(modBuildPath string) error {
+	err := ProcessFile(
+		modBuildPath,
+		config.ThumbnailSourcePath,
+		filepath.Join(modBuildPath, "thumbnail.png"),
+		map[string]string{},
+	)
+
+	return err
+}
+
+func BuildMods(modBuildPath string) error {
+	fmt.Println("-----------------------------------")
+	err := Cleanup(modBuildPath)
+	if err != nil {
+		return err
+	}
+
+	if err = BuildDescriptorFile(modBuildPath); err != nil {
+		fmt.Println("Error while processing descriptor.mod file")
+		return err
+	}
+
+	if err = BuildThumbnailFile(modBuildPath); err != nil {
+		fmt.Println("Error while processing thumbnail.png file")
+		return err
+	}
+
+	sortedModList := SortModList()
+	for _, modName := range sortedModList {
+		modDetails := config.SubMods[modName]
+
+		if !modDetails.Enabled {
+			fmt.Printf("❗️%s is disabled, skipping \n", modName)
+			continue
+		} else {
+			fmt.Printf("📦 Building %s\n", modName)
+		}
+
+		err := Build(
+			modBuildPath,
+			modName,
+			modDetails.Replacements,
+		)
+		if err != nil {
+			return err
+		}
+	}
+
+	fmt.Println("-----------------------------------")
+	fmt.Printf("✅ Build successful in %s folder \n", modBuildPath)
+	fmt.Println("-----------------------------------")
 
 	return nil
 }
