@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	configuration "mojo/configs"
 	"mojo/scripts"
 	"path/filepath"
 )
@@ -16,7 +17,9 @@ func NewApp() *App {
 	return &App{}
 }
 
-// startup is called when the app starts. The context is saved so we can call the runtime methods
+var modConfig = configuration.ModConfig()
+
+// startup is called when the app starts. The context is saved, so we can call the runtime methods
 func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
 }
@@ -27,7 +30,7 @@ func (a *App) BuildModsInLocal() error {
 		return err
 	}
 
-	err := scripts.BuildMods(filepath.Join(config.ModBuildPathLocal, config.MainMod.Replacements["modFolderName"]))
+	err := scripts.BuildMods(filepath.Join(config.ModBuildPathLocal, modConfig.CombinedMod.Replacements["modFolderName"]))
 	if err != nil {
 		fmt.Printf("Error building mods in local: %v \n", err)
 		return err

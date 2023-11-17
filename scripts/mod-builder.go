@@ -10,6 +10,7 @@ import (
 )
 
 var config = configuration.Config()
+var modConfig = configuration.ModConfig()
 
 func Cleanup(modPath string) error {
 	err := os.RemoveAll(modPath)
@@ -160,8 +161,8 @@ func Build(modBuildPath, modName string, replacements map[string]string) error {
 }
 
 func SortModList() []string {
-	keys := make([]string, 0, len(config.SubMods))
-	for k := range config.SubMods {
+	keys := make([]string, 0, len(modConfig.SubMods))
+	for k := range modConfig.SubMods {
 		keys = append(keys, k)
 	}
 	sort.Strings(keys)
@@ -174,7 +175,7 @@ func BuildDescriptorFile(modBuildPath string) error {
 		modBuildPath,
 		config.ModDescriptorSourcePath,
 		filepath.Join(modBuildPath, "descriptor.mod"),
-		config.MainMod.Replacements,
+		modConfig.CombinedMod.Replacements,
 	)
 
 	return err
@@ -185,7 +186,7 @@ func BuildModFile(modBuildPath string) error {
 		modBuildPath,
 		config.ModFileSourcePath,
 		filepath.Join(modBuildPath, "mojo.mod"),
-		config.MainMod.Replacements,
+		modConfig.CombinedMod.Replacements,
 	)
 
 	return err
@@ -221,7 +222,7 @@ func BuildMods(modBuildPath string) error {
 
 	sortedModList := SortModList()
 	for _, modName := range sortedModList {
-		modDetails := config.SubMods[modName]
+		modDetails := modConfig.SubMods[modName]
 
 		if !modDetails.Enabled {
 			fmt.Printf("❗️%s is disabled, skipping \n", modName)
