@@ -3,6 +3,8 @@
 Mojo is a versatile tool designed for creating and managing mods for CK3 (Crusader Kings 3). Please note that this is
 under heavy development so a lot of updates would be coming until it reaches to version 1.0.
 
+![Mojo By Antick](snapshot.png)
+
 ## What is Mojo?
 
 Mojo lets you make mods in different parts, making it easy to manage and build. With this tool, not only can you pick 
@@ -102,12 +104,12 @@ EPE
 1. Define a temporary path where CK3 game files can be pulled and compared with mod files, eliminating the need for manual comparison.
 2. After pulling Ck3 game files, automatically detect any changes that may be required in the mod files you have.
 3. Show logs in the app itself.
-4. Better App UI.
-5. Rework on the paradox script file conversion.
-6. A file viewer to check if the build was generated correctly in the Local build folder.
-7. Show a loader when the app is doing something.
-8. Handle incompatibilities in two submods effectively.
-9. Find a way to distribute music mods. Since music mods cannot be uploaded to Github, we need to explore an alternative method for distribution. One option is to automate the process by uploading the music mod to a cloud storage service. Users can then use an application to easily download and place the files in the correct location with just a click of a button.
+4. Rework on the paradox script file conversion.
+5. A file viewer to check if the build was generated correctly in the Local build folder.
+6. Show a loader when the app is doing something.
+7. Handle incompatibilities in two submods effectively.
+8. Find a way to distribute music mods. Since music mods cannot be uploaded to Github, we need to explore an alternative method for distribution. One option is to automate the process by uploading the music mod to a cloud storage service. Users can then use an application to easily download and place the files in the correct location with just a click of a button.
+9. Allow the user to select a mode that determines whether to build a combined mod containing all selected mods or build them individually in their respective folders.
 
 ## Known issues
 

@@ -1,6 +1,6 @@
 # Auto Pause Game On Major Events
 
-**Updated for 1.10.0.1**
+**Updated for 1.11.0.1**
 
 ## Introduction
 
@@ -24,15 +24,20 @@ Yes
 ## Compatibility
 
 This mod overwrites the following:
+
 1. task_promote_culture
 2. task_conversion
 3. task_integrate_title 
 4. task_increase_control
 5. hud_notification_templates.gui
 
-## Credit
+## Todo
 
-[fodazd](https://steamcommunity.com/profiles/76561198007962794/myworkshopfiles/?appid=1158310)
+1. Better flavor text message alerts for won and lost battles while auto-pausing the game.
+2. Create compatibility patches. (On request)
+3. Auto pause on minor side notifications.
+4. Add translations. (On request)
+5. Auto pause after raid is complete.
 
 ## Bugs
 

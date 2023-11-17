@@ -1,3 +1,6 @@
+# $canConflict=no
+# $author=antick
+
 namespace = auto_pause_antick
 
 auto_pause_antick.1 = {

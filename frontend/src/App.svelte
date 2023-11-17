@@ -112,7 +112,6 @@
               {#each Object.entries(subMods) as [modKey, subMod]}
                 <div class="flex items-center mt-2">
                   <input
-                    checked
                     id="default-checkbox"
                     type="checkbox"
                     value=""
