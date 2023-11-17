@@ -14,12 +14,10 @@ var assets embed.FS
 var config = configuration.Config()
 
 func main() {
-	//configuration.InitDB(configuration.GetDBPath())
-	//defer configuration.CloseDB()
 	app := NewApp()
 
 	err := wails.Run(&options.App{
-		Title:  "Mojo",
+		Title:  "Mojo Mod Builder by Antick",
 		Width:  1000,
 		Height: 540,
 		AssetServer: &assetserver.Options{
