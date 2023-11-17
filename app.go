@@ -30,7 +30,8 @@ func (a *App) BuildModsInLocal() error {
 		return err
 	}
 
-	err := scripts.BuildMods(filepath.Join(config.ModBuildPathLocal, modConfig.CombinedMod.Replacements["modFolderName"]))
+	modBuildPath := filepath.Join(config.ModBuildPathLocal, modConfig.CombinedMod.Replacements["modFolderName"])
+	err := scripts.BuildMods(modBuildPath)
 	if err != nil {
 		fmt.Printf("Error building mods in local: %v \n", err)
 		return err
