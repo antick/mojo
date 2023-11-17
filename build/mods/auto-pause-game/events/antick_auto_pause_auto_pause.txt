@@ -1,0 +1,68 @@
+# $canConflict=no
+# $author=antick
+
+namespace = auto_pause_antick
+
+auto_pause_antick.1 = {
+	hidden = yes
+	scope = combat_side
+
+	immediate = {
+		save_scope_as = battle_side
+
+		scope:battle_side.combat.location = {
+			save_scope_as = province
+		}
+
+		scope:battle_side.enemy_side.side_primary_participant = {
+			save_scope_as = enemy_primary_participant
+		}
+
+		scope:battle_side.enemy_side.side_commander = {
+			save_scope_as = side_commander
+		}
+
+		scope:battle_side.side_primary_participant = {
+			trigger_event = auto_pause_antick.2
+		}
+	}
+}
+
+auto_pause_antick.2 = {
+	type = letter_event
+	opening = auto_pause_antick.1.t
+	desc = auto_pause_antick.1.desc
+	sender = scope:side_commander
+
+	option = {
+		name = auto_pause_antick.1.a
+	}
+}
+
+auto_pause_antick.3 = {
+	type = letter_event
+	opening = auto_pause_antick.3.t
+	desc = auto_pause_antick.3.desc
+	sender = scope:councillor
+
+	option = {
+		name = auto_pause_antick.3.a
+	}
+}
+
+auto_pause_antick.4 = {
+	type = letter_event
+	opening = auto_pause_antick.4.t
+	desc = auto_pause_antick.4.desc
+	sender = scope:previous_controller
+
+	immediate = {
+		scope:barony.title_province = {
+			save_scope_as = province
+		}
+	}
+	
+	option = {
+		name = auto_pause_antick.4.a
+	}
+}

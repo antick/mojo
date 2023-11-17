@@ -1,0 +1,92 @@
+﻿antick_age_of_invasion_trait = {
+    index = 7000
+
+    category = fame
+    ruler_designer_cost = 500
+
+    martial = 20
+    prowess = 20
+
+    stress_loss_mult = 0.5
+
+    # Combat modifiers
+    advantage = 10
+    siege_phase_time = -0.3
+    siege_morale_loss = 0.2
+    movement_speed = 0.2
+    enemy_terrain_advantage = -0.2
+    hard_casualty_modifier = -0.2
+    enemy_hard_casualty_modifier = 0.2
+    vassal_levy_contribution_mult = 0.5
+    army_maintenance_mult = -0.5
+
+    # Opinion modifiers
+    attraction_opinion = 10
+    vassal_opinion = 70
+    independent_ruler_opinion = -50
+    same_opinion = -50
+
+    ai_war_chance = 50
+
+    flag = higher_chance_of_dying_in_battle
+
+    ai_honor = low_negative_ai_value
+    ai_greed = very_high_positive_ai_value
+    ai_zeal = very_low_positive_ai_value
+    ai_energy = very_high_positive_ai_value
+    ai_boldness = high_positive_ai_value
+    ai_sociability = low_positive_ai_value
+
+    name = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { NOT = { exists = this } }
+                desc = trait_antick_age_of_invasion
+            }
+
+            triggered_desc = {
+                trigger = {
+                    AND = {
+                        faith = { religion_tag = islam_religion }
+                        culture = { has_cultural_pillar = heritage_turkic }
+                    }
+                }
+
+                desc = trait_antick_age_of_invasion_turkish
+            }
+
+            triggered_desc = {
+                trigger = {
+                    OR = {
+                        culture = { has_cultural_pillar = heritage_arabic }
+                    }
+                }
+                desc = trait_antick_age_of_invasion_arab
+            }
+
+            triggered_desc = {
+                trigger = {
+                    OR = {
+                        culture = { has_cultural_pillar = heritage_indo_aryan }
+                        culture = { has_cultural_pillar = heritage_dravidian }
+                    }
+                }
+                desc = trait_antick_age_of_invasion_indian
+            }
+
+            desc = trait_antick_age_of_invasion
+        }
+    }
+
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    NOT = { exists = this }
+                }
+                desc = trait_antick_age_of_invasion_desc
+            }
+            desc = trait_antick_age_of_invasion_character_desc
+        }
+    }
+}

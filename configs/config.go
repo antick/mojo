@@ -7,12 +7,10 @@ import (
 
 type Type struct {
 	GameDataPath            string
-	ModBuildPath            string
 	ModBuildPathLocal       string
 	ModPath                 string
 	GameCustomModPath       string
 	ModDescriptorSourcePath string
-	ModFileSourcePath       string
 	ThumbnailSourcePath     string
 	OriginalCk3Path         string
 	ModCk3Path              string
@@ -49,9 +47,7 @@ func Config() *Type {
 
 		ModPath:                 modPath,
 		GameCustomModPath:       gameCustomModPath,
-		ModBuildPath:            filepath.Join(gameCustomModPath, "mojo"),
 		ModDescriptorSourcePath: filepath.Join(modPath, "descriptor.mod"),
-		ModFileSourcePath:       filepath.Join(modPath, "mojo.mod"),
 		ThumbnailSourcePath:     filepath.Join(modPath, "thumbnail.png"),
 		OriginalCk3Path:         installedCk3GamePath,
 		ModCk3Path:              modCk3Path,

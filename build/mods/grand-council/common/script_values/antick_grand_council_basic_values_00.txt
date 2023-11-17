@@ -1,0 +1,3 @@
+﻿antick_grand_council_mode_real = 1
+antick_grand_council_mode_boost = 2
+antick_grand_council_mode_cheat = 3

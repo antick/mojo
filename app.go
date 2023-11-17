@@ -29,19 +29,28 @@ func (a *App) BuildModsInLocal(selectedModKeys []string, buildCombinedMod bool) 
 		return fmt.Errorf("No mods selected for building")
 	}
 
-	if err := scripts.BuildModFile(config.ModBuildPathLocal); err != nil {
-		fmt.Println("Error while processing mojo.mod file")
-		return err
+	if buildCombinedMod {
+		modFileName := modConfig.CombinedMod.Replacements["modFolderName"] + ".mod"
+		if err := scripts.BuildModFile(config.ModBuildPathLocal, modFileName); err != nil {
+			fmt.Println("Error while processing mojo.mod file")
+			return err
+		}
+
+		modBuildPath := filepath.Join(config.ModBuildPathLocal, modConfig.CombinedMod.Replacements["modFolderName"])
+		err := scripts.BuildCombinedMod(modBuildPath, selectedModKeys)
+		if err != nil {
+			fmt.Printf("Error building combined mod in local: %v \n", err)
+			return err
+		}
+	} else {
+		err := scripts.BuildLooseMods(config.ModBuildPathLocal, selectedModKeys)
+		if err != nil {
+			fmt.Printf("Error building selected mod(s) in local: %v \n", err)
+			return err
+		}
 	}
 
-	modBuildPath := filepath.Join(config.ModBuildPathLocal, modConfig.CombinedMod.Replacements["modFolderName"])
-	err := scripts.BuildMods(modBuildPath, selectedModKeys)
-	if err != nil {
-		fmt.Printf("Error building mods in local: %v \n", err)
-		return err
-	}
-
-	return err
+	return nil
 }
 
 func (a *App) BuildModsInGame(selectedModKeys []string, buildCombinedMod bool) error {
@@ -49,18 +58,28 @@ func (a *App) BuildModsInGame(selectedModKeys []string, buildCombinedMod bool) e
 		return fmt.Errorf("No mods selected for building")
 	}
 
-	if err := scripts.BuildModFile(config.GameCustomModPath); err != nil {
-		fmt.Println("Error while processing mojo.mod file")
-		return err
+	if buildCombinedMod {
+		modFileName := modConfig.CombinedMod.Replacements["modFolderName"] + ".mod"
+		if err := scripts.BuildModFile(config.GameCustomModPath, modFileName); err != nil {
+			fmt.Println("Error while processing mojo.mod file")
+			return err
+		}
+
+		modBuildPath := filepath.Join(config.GameCustomModPath, modConfig.CombinedMod.Replacements["modFolderName"])
+		err := scripts.BuildCombinedMod(modBuildPath, selectedModKeys)
+		if err != nil {
+			fmt.Printf("Error building combined mod in local: %v \n", err)
+			return err
+		}
+	} else {
+		err := scripts.BuildLooseMods(config.GameCustomModPath, selectedModKeys)
+		if err != nil {
+			fmt.Printf("Error building selected mod(s) in local: %v \n", err)
+			return err
+		}
 	}
 
-	err := scripts.BuildMods(config.ModBuildPath, selectedModKeys)
-	if err != nil {
-		fmt.Printf("Error building mods in game: %v \n", err)
-		return err
-	}
-
-	return err
+	return nil
 }
 
 func (a *App) PullCk3GameFiles() error {

@@ -1,0 +1,467 @@
+### IMPERIAL & ROYAL CHILDREN ###
+royal_prince = {
+    type = character
+    gender = male
+    special = ruler_child
+    tier = kingdom
+    governments = { feudal_government }
+    priority = 36
+}
+
+royal_princess = {
+    type = character
+    gender = female
+    special = ruler_child
+    tier = kingdom
+    governments = { feudal_government }
+    priority = 36
+}
+
+imperial_prince = {
+    type = character
+    gender = male
+    special = ruler_child
+    tier = empire
+    governments = { feudal_government }
+    priority = 36
+}
+
+imperial_princess = {
+    type = character
+    gender = female
+    special = ruler_child
+    tier = empire
+    governments = { feudal_government }
+    priority = 36
+}
+
+### PRINCELINGS ###
+duke_children_male = {
+    gender = male
+    special = ruler_child
+    tier = duchy
+    governments = { feudal_government }
+    priority = 25
+}
+
+duke_children_female = {
+    gender = female
+    special = ruler_child
+    tier = duchy
+    governments = { feudal_government }
+    priority = 25
+}
+
+countling_male = {
+    gender = male
+    special = ruler_child
+    tier = county
+    governments = { feudal_government }
+    priority = 15
+}
+
+countling_female = {
+    gender = female
+    special = ruler_child
+    tier = county
+    governments = { feudal_government }
+    priority = 15
+}
+
+baronnet_male = {
+    gender = male
+    special = ruler_child
+    tier = barony
+    governments = { feudal_government }
+    priority = 4
+}
+
+baronnet_female = {
+    gender = female
+    special = ruler_child
+    tier = barony
+    governments = { feudal_government }
+    priority = 4
+}
+
+### PRINCE FATHER AND PRINCE MOTHER: ALL RANK ##
+prince_father = {
+    type = character
+    gender = male
+    special = queen_mother
+    tier = kingdom
+    priority = 75
+    governments = { feudal_government clan_government }
+    top_liege = no
+}
+
+imperial_prince_father = {
+    type = character
+    gender = male
+    special = queen_mother
+    tier = empire
+    priority = 75
+    governments = { feudal_government clan_government }
+    top_liege = no
+}
+
+ducal_prince_father = {
+    type = character
+    gender = male
+    special = queen_mother
+    tier = duchy
+    priority = 34
+    governments = { feudal_government }
+    top_liege = no
+}
+
+comital_prince_father = {
+    type = character
+    gender = male
+    special = queen_mother
+    tier = duchy
+    priority = 34
+    governments = { feudal_government }
+    top_liege = no
+}
+
+ducal_prince_mother = {
+    type = character
+    gender = female
+    special = queen_mother
+    tier = duchy
+    priority = 34
+    governments = { feudal_government }
+    top_liege = no
+}
+
+comital_prince_mother = {
+    type = character
+    gender = female
+    special = queen_mother
+    tier = county
+    priority = 24
+    governments = { feudal_government }
+    top_liege = no
+}
+
+### IMPERIAL COUNCILLORS ###
+imperial_chancellor_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = empire
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_chancellor
+    top_liege = no
+}
+
+imperial_chancellor_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = empire
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_chancellor
+    top_liege = no
+}
+
+imperial_steward_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = empire
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_steward
+    top_liege = no
+}
+
+imperial_steward_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = empire
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_steward
+    top_liege = no
+}
+
+imperial_court_chaplain_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = empire
+    priority = 300
+    religions = { christianity_religion }
+    governments = { feudal_government }
+    council_position = councillor_court_chaplain
+    top_liege = no
+}
+
+imperial_court_chaplain_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = empire
+    priority = 300
+    religions = { christianity_religion }
+    governments = { feudal_government }
+    council_position = councillor_court_chaplain
+    top_liege = no
+}
+
+imperial_marshal_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = empire
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_marshal
+    top_liege = no
+}
+
+imperial_marshal_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = empire
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_marshal
+    top_liege = no
+}
+
+imperial_spymaster_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = empire
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_spymaster
+    top_liege = no
+}
+
+imperial_spymaster_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = empire
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_spymaster
+    top_liege = no
+}
+
+### ROYAL COUNCILLORS###
+royal_chancellor_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = kingdom
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_chancellor
+    top_liege = no
+}
+
+royal_chancellor_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = kingdom
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_chancellor
+    top_liege = no
+}
+
+royal_steward_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = kingdom
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_steward
+    top_liege = no
+}
+
+royal_steward_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = kingdom
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_steward
+    top_liege = no
+}
+
+royal_court_chaplain_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = kingdom
+    priority = 300
+    religions = { christianity_religion }
+    governments = { feudal_government }
+    council_position = councillor_court_chaplain
+    top_liege = no
+}
+
+royal_court_chaplain_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = kingdom
+    priority = 300
+    religions = { christianity_religion }
+    governments = { feudal_government }
+    council_position = councillor_court_chaplain
+    top_liege = no
+}
+
+royal_marshal_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = kingdom
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_marshal
+    top_liege = no
+}
+
+royal_marshal_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = kingdom
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_marshal
+    top_liege = no
+}
+
+royal_spymaster_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = kingdom
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_spymaster
+    top_liege = no
+}
+
+royal_spymaster_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = kingdom
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_spymaster
+    top_liege = no
+}
+
+### DUCAL AND COMITAL MATRIARCH, PATRIARCH & ARCHBISHOP ###
+
+ducal_court_chaplain_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = duchy
+    priority = 300
+    religions = { christianity_religion }
+    governments = { feudal_government }
+    council_position = councillor_court_chaplain
+    top_liege = no
+}
+
+ducal_court_chaplain_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = duchy
+    priority = 300
+    religions = { christianity_religion }
+    governments = { feudal_government }
+    council_position = councillor_court_chaplain
+    top_liege = no
+}
+
+comital_court_chaplain_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = county
+    priority = 300
+    religions = { christianity_religion }
+    governments = { feudal_government }
+    council_position = councillor_court_chaplain
+    top_liege = no
+}
+
+comital_court_chaplain_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = county
+    priority = 300
+    religions = { christianity_religion }
+    governments = { feudal_government }
+    council_position = councillor_court_chaplain
+    top_liege = no
+}
+
+### DUCAL & COMITAL MARSHAL ###
+ducal_marshal_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = duchy
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_marshal
+    top_liege = no
+}
+
+ducal_marshal_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = duchy
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_marshal
+    top_liege = no
+}
+
+comital_marshal_male = {
+    type = character
+    gender = male
+    special = councillor
+    tier = county
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_marshal
+    top_liege = no
+}
+
+comital_marshal_female = {
+    type = character
+    gender = female
+    special = councillor
+    tier = county
+    priority = 300
+    governments = { feudal_government }
+    council_position = councillor_marshal
+    top_liege = no
+}

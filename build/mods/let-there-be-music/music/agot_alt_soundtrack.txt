@@ -1,0 +1,98 @@
+﻿
+mood_moonembracingthesun = {
+	music = "file:/music/moonembracingthesun.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+}
+
+mood_russellbrowernightsong = {
+	music = "file:/music/russellbrowernightsong.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+}
+
+mood_shinsekaiyori = {
+	music = "file:/music/shinsekaiyori.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+}
+
+mood_yasuharutakanashidayandnight = {
+	music = "file:/music/yasuharutakanashidayandnight.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+}
+
+mood_michiruoshima = {
+	music = "file:/music/michiruoshima.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+}
+
+mood_mhysa = {
+	music = "file:/music/mhysa.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+
+}
+
+mood_inonzurafterthestorm = {
+	music = "file:/music/inonzurafterthestorm.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+}
+
+mood_frozennighti = {
+	music = "file:/music/frozennighti.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+}
+
+mood_dorian = {
+	music = "file:/music/dorian.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+}
+
+mood_austinwintoryiwasbornforthis = {
+	music = "file:/music/austinwintoryiwasbornforthis.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+}
+
+mood_bosworth = {
+	music = "file:/music/bosworth.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+}
+
+mood_sorrow = {
+	music = "file:/music/sorrow.ogg"
+	weight = 40
+	mood = yes
+	can_be_interrupted = yes 
+	#volume = 0.05
+}
+

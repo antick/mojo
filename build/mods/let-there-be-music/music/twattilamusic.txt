@@ -1,0 +1,525 @@
+twattila1 = {
+	music = "file:/music/01 - Attila (Hun Theme).ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila2 = {
+	music = "file:/music/02 - Call of Woden.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila3 = {
+	music = "file:/music/03 - Winter's Bard.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila4 = {
+	music = "file:/music/04 - Dark Forest.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila5 = {
+	music = "file:/music/05 - Men of the Sea.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila6 = {
+	music = "file:/music/06 - Fire & Ice.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila7 = {
+	music = "file:/music/07 - Warm Hearts.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila8 = {
+	music = "file:/music/08 - Migrators.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila9 = {
+	music = "file:/music/09 - Ode to Freo.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila10 = {
+	music = "file:/music/10 - Assault By Sea.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila11 = {
+	music = "file:/music/11 - Weeping Skies.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila12 = {
+	music = "file:/music/12 - Snowfall.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila13 = {
+	music = "file:/music/13 - Gathering of Clans.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila14 = {
+	music = "file:/music/14 - Out of the Mist.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila15 = {
+	music = "file:/music/15 - Let's Kill Some Romans.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila16 = {
+	music = "file:/music/16 - Lays of Eorde.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila17 = {
+	music = "file:/music/17 - Winter Realm.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila18 = {
+	music = "file:/music/18 - Song of the Lonely Nord.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila19 = {
+	music = "file:/music/19 - Lamentation.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila20 = {
+	music = "file:/music/20 - Fallen Kinsfolk.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila21 = {
+	music = "file:/music/21 - Autumn Rains.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila22 = {
+	music = "file:/music/22 - Riders of the East - Alternate.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila23 = {
+	music = "file:/music/23 - Bazaar.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila24 = {
+	music = "file:/music/24 - Sacred Fires.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila25 = {
+	music = "file:/music/25 - Warriors of Ahure.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila26 = {
+	music = "file:/music/26 - Empty Throne.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila27 = {
+	music = "file:/music/27 - Desert Omens.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila28 = {
+	music = "file:/music/28 - Burning Crescent.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila29 = {
+	music = "file:/music/29 - The Sahanshah.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila30 = {
+	music = "file:/music/30 - Arid Winds.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila31 = {
+	music = "file:/music/31 - Ctesiphon.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila32 = {
+	music = "file:/music/32 - People of The Desert.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila33 = {
+	music = "file:/music/33 - Riders of the East.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila34 = {
+	music = "file:/music/34 - Sea of Sand.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila35 = {
+	music = "file:/music/35 - Quiet Oasis.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila36 = {
+	music = "file:/music/36 - Journeying Caravans.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila37 = {
+	music = "file:/music/37 - Burning Crescent - Alternate.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila38 = {
+	music = "file:/music/38 - Blood for the Sky God.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila39 = {
+	music = "file:/music/39 - Under the Eternal Sky.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila40 = {
+	music = "file:/music/40 - Warriors of Ahure - Alternate.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila41 = {
+	music = "file:/music/41 - Menguu Kooq Tengri.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila42 = {
+	music = "file:/music/42 - Fiddler of the Plains.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila43 = {
+	music = "file:/music/43 - Scourge of God.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila44 = {
+	music = "file:/music/44 - Wanderers of the Steppe.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila45 = {
+	music = "file:/music/45 - To the West.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila46 = {
+	music = "file:/music/46 - Nomads.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila47 = {
+	music = "file:/music/47 - The Four Winds.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila48 = {
+	music = "file:/music/48 - Ten Thousand Arrows.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila49 = {
+	music = "file:/music/49 - The Journey West.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila50 = {
+	music = "file:/music/50 - On the Steppes.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila51 = {
+	music = "file:/music/51 - Harbringers.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila52 = {
+	music = "file:/music/52 - The Will of Tengri.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila53 = {
+	music = "file:/music/53 - Shaman Says.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila54 = {
+	music = "file:/music/54 - King of the Horde.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila55 = {
+	music = "file:/music/55 - Legions of the West - Alternate.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila56 = {
+	music = "file:/music/56 - Barbarians at the Gates.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila57 = {
+	music = "file:/music/57 - Vineyards.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila58 = {
+	music = "file:/music/58 - Champions of God.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila59 = {
+	music = "file:/music/59 - Seven Hills.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila60 = {
+	music = "file:/music/60 - Streets of Roma.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila61 = {
+	music = "file:/music/61 - The Red Horse - Alternate.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila62 = {
+	music = "file:/music/62 - Facing the Horde.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila63 = {
+	music = "file:/music/63 - Foederati.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila64 = {
+	music = "file:/music/64 - Legions of the West.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila65 = {
+	music = "file:/music/65 - Forgotten Glory.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila66 = {
+	music = "file:/music/66 - On the Field.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila67 = {
+	music = "file:/music/67 - Concealed Blades.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila68 = {
+	music = "file:/music/68 - The last Emperor.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila69 = {
+	music = "file:/music/69 - The Red Horse.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila70 = {
+	music = "file:/music/70 - Roma Pulchra.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila71 = {
+	music = "file:/music/71 - Hope in the East.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila72 = {
+	music = "file:/music/72 - With Lance and Mace.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila73 = {
+	music = "file:/music/73 - Glory.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila74 = {
+	music = "file:/music/74 - Champions of God - Alternate.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}
+twattila75 = {
+	music = "file:/music/75 - Settlers of Apocalypse.ogg"
+	weight = 24
+	mood = yes
+	can_be_interrupted = yes
+	volume = 0.25
+}

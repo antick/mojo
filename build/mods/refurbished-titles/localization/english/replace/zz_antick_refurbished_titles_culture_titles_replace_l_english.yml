@@ -1,0 +1,61 @@
+﻿l_english:
+
+ #############################################
+  #General names:
+ prince:0 "[Character.Custom('TitleTurkishPrince')]"
+ princess:0 "[Character.Custom('TitleTurkishPrince')]"
+  
+  #Default Feudal tiers
+ count_feudal_male:0 "[CHARACTER.Custom('RulerComitalPrincelingGrandchildren')]"
+ count_feudal_female:0 "[CHARACTER.Custom('RulerComitalPrincelingGrandchildren')]"
+ duke_feudal_male:0 "[CHARACTER.Custom('RulerDucalPrincelingGrandchildren')]"
+ duke_feudal_female:0 "[CHARACTER.Custom('RulerDucalPrincelingGrandchildren')]"
+ 
+ ### Arabic ###
+ # Republic 
+ duke_republic_female_arabic_group:0 "Wâlia-Emira"
+ king_republic_female_arabic_group:0 "Wâlia-Malika"
+ 
+ ### Turkish ###
+ # Feudal / Clan 
+ baron_feudal_male_turkish:1 "Agha"
+ baron_feudal_female_turkish:1 "Hatun"
+ barony_feudal_turkish:1 "Timariot"
+ count_feudal_male_turkish:1 "Bey"
+ count_feudal_female_turkish:1 "Hanim"
+ county_feudal_turkish:0 "Beylik"
+ duke_feudal_male_turkish:1 "Sanjak-Beyi"
+ duke_feudal_female_turkish:1 "Bey-Hatun"
+ duchy_feudal_turkish:1 "Sanjak-Beylik"
+ king_feudal_male_turkish:0 "[Character.Custom('TitleTurkishKing')]"
+ king_feudal_female_turkish:0 "[Character.Custom('TitleTurkishKing')]"
+ kingdom_feudal_turkish:0 "[Character.Custom('TitleKingdomTurkishKing')]"
+ emperor_feudal_male_turkish:1 "Sultan al-Muazzam"
+ emperor_feudal_female_turkish:1 "Sultana al-Muazzama"
+ empire_feudal_turkish:0 "Empire"
+  
+ ### Dravidian / Indo-Aryan ###
+ # Feudal / Clan / Tribal 
+ baron_feudal_male_dravidian_group:0 "Soobedar"
+ baron_feudal_female_dravidian_group:0 "Soobedarni
+ barony_feudal_dravidian_group:0 "Sooba"
+ count_feudal_male_dravidian_group:0 "Thakur"
+ count_feudal_female_dravidian_group:0 "Thakurani"
+ county_feudal_dravidian_group:0 "Thikana"
+ duke_feudal_male_dravidian_group:0 "Raja"
+ duke_feudal_female_dravidian_group:0 "Rani"
+ duchy_feudal_dravidian_group:0 "Raj"
+ king_feudal_male_dravidian_group:0 "Maharaja"
+ king_feudal_female_dravidian_group:0 "Maharani"
+ emperor_feudal_male_dravidian_group:0 "Samrat"
+ emperor_feudal_female_dravidian_group:0 "Samrajni"
+ samanta:0 "Thakur"
+ samanta_female:0 "Thakurani"
+ mahasamanta:0 "Samanta"
+ mahasamanta_female:0 "Samanta"
+ mahasamantadhipati:0 "Maha-samant"
+ mahasamantadhipati_female:0 "Maha-samant"
+  
+ ## Imperial Prince ##
+ prince_empire:0 "[Character.Custom('TitleTurkishPrince')]"
+ princess_empire:0 "[Character.Custom('TitleTurkishPrince')]"

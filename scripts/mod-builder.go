@@ -181,12 +181,25 @@ func BuildDescriptorFile(modBuildPath string) error {
 	return err
 }
 
-func BuildModFile(modBuildPath string) error {
+func BuildModFile(modBuildPath, modFileName string) error {
+	sourceModFilePath := filepath.Join(config.ModPath, modConfig.CombinedMod.Replacements["modFolderName"]+".mod")
 	err := ProcessFile(
 		modBuildPath,
-		config.ModFileSourcePath,
-		filepath.Join(modBuildPath, "mojo.mod"),
+		sourceModFilePath,
+		filepath.Join(modBuildPath, modFileName),
 		modConfig.CombinedMod.Replacements,
+	)
+
+	return err
+}
+
+func BuildLooseModFiles(modBuildPath string, modFileName string, replacements map[string]string) error {
+	sourceModFilePath := filepath.Join(config.ModPath, modConfig.CombinedMod.Replacements["modFolderName"]+".mod")
+	err := ProcessFile(
+		modBuildPath,
+		sourceModFilePath,
+		filepath.Join(modBuildPath, modFileName),
+		replacements,
 	)
 
 	return err
@@ -203,7 +216,7 @@ func BuildThumbnailFile(modBuildPath string) error {
 	return err
 }
 
-func BuildMods(modBuildPath string, selectedModKeys []string) error {
+func BuildCombinedMod(modBuildPath string, selectedModKeys []string) error {
 	fmt.Println("-----------------------------------")
 	err := Cleanup(modBuildPath)
 	if err != nil {
@@ -267,6 +280,63 @@ func BuildMods(modBuildPath string, selectedModKeys []string) error {
 
 	fmt.Println("-----------------------------------")
 	fmt.Printf("✅ Build successful in %s folder \n", modBuildPath)
+	fmt.Println("-----------------------------------")
+
+	return nil
+}
+
+func BuildLooseMods(buildPath string, selectedModKeys []string) error {
+	fmt.Println("-----------------------------------")
+	for _, modKey := range selectedModKeys {
+		modDetails, exists := modConfig.SubMods[modKey]
+		if !exists {
+			fmt.Printf("Mod %s not found\n", modKey)
+			continue
+		}
+
+		if !modDetails.Enabled {
+			fmt.Printf("❗️%s is disabled, skipping \n", modKey)
+			continue
+		} else {
+			fmt.Printf("📦 Building %s\n", modKey)
+		}
+
+		modFolderName := modDetails.Replacements["modFolderName"]
+		modBuildPath := filepath.Join(buildPath, modFolderName)
+		modFileName := modFolderName + ".mod"
+
+		fmt.Println("-----------------------------------")
+		err := Cleanup(modBuildPath)
+		if err != nil {
+			return err
+		}
+
+		if err := BuildLooseModFiles(buildPath, modFileName, modDetails.Replacements); err != nil {
+			fmt.Println("Error while processing mojo.mod file")
+			return err
+		}
+
+		if err = BuildDescriptorFile(modBuildPath); err != nil {
+			fmt.Println("Error while processing descriptor.mod file")
+			return err
+		}
+
+		if err = BuildThumbnailFile(modBuildPath); err != nil {
+			fmt.Println("Error while processing thumbnail.png file")
+			return err
+		}
+
+		err = Build(
+			modBuildPath,
+			modKey,
+			modDetails.Replacements,
+		)
+		if err != nil {
+			return err
+		}
+
+		fmt.Printf("✅ Build successful in %s folder \n", modBuildPath)
+	}
 	fmt.Println("-----------------------------------")
 
 	return nil
