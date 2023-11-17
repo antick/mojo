@@ -4,7 +4,7 @@
  auto_pause_antick.1.a:0 "Okay"
 
  auto_pause_antick.3.t:0 "Task Completed"
- auto_pause_antick.3.desc:0 "I have completed my task and now awaiting for your new instructions."
+ auto_pause_antick.3.desc:0 "I have completed my task and now awaiting for new instructions."
  auto_pause_antick.3.a:0 "Excellent"
 
  auto_pause_antick.4.t:0 "Siege won"

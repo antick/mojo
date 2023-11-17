@@ -31,14 +31,9 @@ https://wails.io/docs/gettingstarted/installation
 
 ## Usage
 
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
+To run in live development mode, run `wails dev` in the project directory.
 
-## Building
-
-To build a redistributable, production mode package, use `wails build`.
+To build a redistributable executable, use `wails build` in the project directory.
 
 ## In-Built Mod
 
@@ -46,8 +41,12 @@ This tool also comes up with an in-built mod called Mojo that has a few features
 
 ### Load order
 
-Place the in-built mod generated from this tool at the bottom of your load order to avoid overriding other mods. 
-However, you can adjust this based on your preferences, especially if you intend to avoid interfering with other mods.
+This should be the very last mod in your playlist.
+
+```
+...All your mods here
+Mojo by Antick
+```
 
 ### Compatibility
 
@@ -57,6 +56,14 @@ feedback through the mod's Steam page or GitHub issues.
 Given the substantial changes in this mod, compatibility with existing saved games may be affected. Starting a new 
 game might be necessary for optimal functionality. The impact depends on the submods included, so please report any 
 encountered issues to help improve the mod.
+
+#### Supported mods
+
+Not tested with other mods yet.
+
+#### Unsupported mods
+
+Not tested with other mods yet. Please report any issues that you encounter.
 
 ### Required Mods
 
@@ -68,13 +75,9 @@ CFP
 
 EPE
 
-### Supported mods
+### Supported CK3 Game Version
 
-Not tested with other mods yet.
-
-### Unsupported mods
-
-Not tested with other mods yet. Please report any issues that you encounter.
+1.11.0.1
 
 ## Features
 
@@ -103,6 +106,8 @@ Not tested with other mods yet. Please report any issues that you encounter.
 5. Rework on the paradox script file conversion.
 6. A file viewer to check if the build was generated correctly in the Local build folder.
 7. Show a loader when the app is doing something.
+8. Handle incompatibilities in two submods effectively.
+9. Find a way to distribute music mods. Since music mods cannot be uploaded to Github, we need to explore an alternative method for distribution. One option is to automate the process by uploading the music mod to a cloud storage service. Users can then use an application to easily download and place the files in the correct location with just a click of a button.
 
 ## Known issues
 
