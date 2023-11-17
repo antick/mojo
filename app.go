@@ -65,3 +65,7 @@ func (a *App) PullCk3GameFiles() error {
 	fmt.Printf("📦 Pulled CK3 game files to %s \n", config.ModCk3Path)
 	return nil
 }
+
+func (a *App) GetModList() (*configuration.ModType, error) {
+	return modConfig, nil
+}

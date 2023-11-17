@@ -10,6 +10,10 @@ export function BuildModsInLocal() {
   return window['go']['main']['App']['BuildModsInLocal']();
 }
 
+export function GetModList() {
+  return window['go']['main']['App']['GetModList']();
+}
+
 export function PullCk3GameFiles() {
   return window['go']['main']['App']['PullCk3GameFiles']();
 }

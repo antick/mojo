@@ -5,11 +5,14 @@
     BuildModsInLocal,
     BuildModsInGame,
     PullCk3GameFiles,
+    GetModList,
   } from '../wailsjs/go/main/App.js'
 
   let activeTab = 'tab1';
   let resultText: string = ""
   let buildingInProgress: boolean = false
+
+  $: subMods = null
 
   $: buttonClasses = buildingInProgress
     ? "border rounded btn bg-gray-300 text-gray-700 p-2 cursor-not-allowed"
@@ -41,6 +44,10 @@
       buildingInProgress = false
     })
   }
+
+  GetModList().then((modList: any) => {
+    subMods = modList.SubMods
+  })
 </script>
 
 <main>
@@ -77,26 +84,14 @@
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
               </svg>
             </p>
-            <div class="flex items-center mt-2">
-              <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
-              <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900">Age of invasion</label>
-            </div>
-            <div class="flex items-center mt-2">
-              <input id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500focus:ring-2">
-              <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900">Auto pause game</label>
-            </div>
-            <div class="flex items-center mt-2">
-              <input id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500focus:ring-2">
-              <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900">Grand council</label>
-            </div>
-            <div class="flex items-center mt-2">
-              <input id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500focus:ring-2">
-              <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900">United thrones</label>
-            </div>
-            <div class="flex items-center mt-2">
-              <input id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500focus:ring-2">
-              <label for="checked-checkbox" class="ms-2 text-sm font-medium text-gray-900">Refurbished Titles</label>
-            </div>
+            {#if subMods}
+              {#each Object.entries(subMods) as [modKey, subMod]}
+                <div class="flex items-center mt-2">
+                  <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+                  <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900" id="{modKey}"> {subMod.Replacements.modName}</label>
+                </div>
+              {/each}
+            {/if}
 
             <p class="mt-4 font-normal text-sm text-gray-700">
               Select the mods that you want to build. You can either select all of them or choose any specific mod. If you select only one mod, it will create a
