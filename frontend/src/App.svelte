@@ -11,6 +11,7 @@
   let activeTab = 'tab1';
   let resultText: string = ""
   let buildingInProgress: boolean = false
+  let checkedMods = new Set();
 
   $: subMods = null
 
@@ -19,21 +20,35 @@
     : "border rounded btn bg-gray-300 text-gray-700 p-2"
 
   function buildModsInLocal(): void {
+    const selectedModKeys = Array.from(checkedMods)
+
     buildingInProgress = true
     resultText = "Building mods in local..."
-    BuildModsInLocal().then(() => {
-      resultText = "Build generated in local build folder"
-      buildingInProgress = false
-    })
+    BuildModsInLocal(selectedModKeys)
+      .then(() => {
+        resultText = "Build generated in local build folder"
+        buildingInProgress = false
+      })
+      .catch((err) => {
+          resultText = err
+          buildingInProgress = false
+      })
   }
 
   function buildModsInGame(): void {
+    const selectedModKeys = Array.from(checkedMods)
+
     buildingInProgress = true
     resultText = "Building mods in game..."
-    BuildModsInGame().then(() => {
+    BuildModsInGame(selectedModKeys)
+      .then(() => {
         resultText = "Build generated in game build folder"
         buildingInProgress = false
-    })
+      })
+      .catch((err) => {
+        resultText = err
+        buildingInProgress = false
+      })
   }
 
   function pullCk3GameFiles(): void {
@@ -43,6 +58,14 @@
       resultText = "Successfully pulled CK3 files"
       buildingInProgress = false
     })
+  }
+
+  function handleCheckboxChange(modKey, event) {
+    if (event.target.checked) {
+      checkedMods.add(modKey);
+    } else {
+      checkedMods.delete(modKey);
+    }
   }
 
   GetModList().then((modList: any) => {
@@ -84,10 +107,18 @@
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
               </svg>
             </p>
+
             {#if subMods}
               {#each Object.entries(subMods) as [modKey, subMod]}
                 <div class="flex items-center mt-2">
-                  <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+                  <input
+                    checked
+                    id="default-checkbox"
+                    type="checkbox"
+                    value=""
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                    on:change={event => handleCheckboxChange(modKey, event)}
+                  >
                   <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900" id="{modKey}"> {subMod.Replacements.modName}</label>
                 </div>
               {/each}

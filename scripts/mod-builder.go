@@ -160,9 +160,9 @@ func Build(modBuildPath, modName string, replacements map[string]string) error {
 	return nil
 }
 
-func SortModList() []string {
-	keys := make([]string, 0, len(modConfig.SubMods))
-	for k := range modConfig.SubMods {
+func SortModList(subMods map[string]configuration.SubModType) []string {
+	keys := make([]string, 0, len(subMods))
+	for k := range subMods {
 		keys = append(keys, k)
 	}
 	sort.Strings(keys)
@@ -203,7 +203,7 @@ func BuildThumbnailFile(modBuildPath string) error {
 	return err
 }
 
-func BuildMods(modBuildPath string) error {
+func BuildMods(modBuildPath string, selectedModKeys []string) error {
 	fmt.Println("-----------------------------------")
 	err := Cleanup(modBuildPath)
 	if err != nil {
@@ -220,20 +220,44 @@ func BuildMods(modBuildPath string) error {
 		return err
 	}
 
-	sortedModList := SortModList()
-	for _, modName := range sortedModList {
-		modDetails := modConfig.SubMods[modName]
+	//sortedModList := SortModList(modConfig.SubMods)
+	//for _, modName := range sortedModList {
+	//	modDetails := modConfig.SubMods[modName]
+	//
+	//	if !modDetails.Enabled {
+	//		fmt.Printf("❗️%s is disabled, skipping \n", modName)
+	//		continue
+	//	} else {
+	//		fmt.Printf("📦 Building %s\n", modName)
+	//	}
+	//
+	//	err := Build(
+	//		modBuildPath,
+	//		modName,
+	//		modDetails.Replacements,
+	//	)
+	//	if err != nil {
+	//		return err
+	//	}
+	//}
+
+	for _, modKey := range selectedModKeys {
+		modDetails, exists := modConfig.SubMods[modKey]
+		if !exists {
+			fmt.Printf("Mod %s not found\n", modKey)
+			continue
+		}
 
 		if !modDetails.Enabled {
-			fmt.Printf("❗️%s is disabled, skipping \n", modName)
+			fmt.Printf("❗️%s is disabled, skipping \n", modKey)
 			continue
 		} else {
-			fmt.Printf("📦 Building %s\n", modName)
+			fmt.Printf("📦 Building %s\n", modKey)
 		}
 
 		err := Build(
 			modBuildPath,
-			modName,
+			modKey,
 			modDetails.Replacements,
 		)
 		if err != nil {

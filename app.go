@@ -24,14 +24,18 @@ func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
 }
 
-func (a *App) BuildModsInLocal() error {
+func (a *App) BuildModsInLocal(selectedModKeys []string) error {
+	if len(selectedModKeys) == 0 {
+		return fmt.Errorf("No mods selected for building")
+	}
+
 	if err := scripts.BuildModFile(config.ModBuildPathLocal); err != nil {
 		fmt.Println("Error while processing mojo.mod file")
 		return err
 	}
 
 	modBuildPath := filepath.Join(config.ModBuildPathLocal, modConfig.CombinedMod.Replacements["modFolderName"])
-	err := scripts.BuildMods(modBuildPath)
+	err := scripts.BuildMods(modBuildPath, selectedModKeys)
 	if err != nil {
 		fmt.Printf("Error building mods in local: %v \n", err)
 		return err
@@ -40,13 +44,17 @@ func (a *App) BuildModsInLocal() error {
 	return err
 }
 
-func (a *App) BuildModsInGame() error {
+func (a *App) BuildModsInGame(selectedModKeys []string) error {
+	if len(selectedModKeys) == 0 {
+		return fmt.Errorf("No mods selected for building")
+	}
+
 	if err := scripts.BuildModFile(config.GameCustomModPath); err != nil {
 		fmt.Println("Error while processing mojo.mod file")
 		return err
 	}
 
-	err := scripts.BuildMods(config.ModBuildPath)
+	err := scripts.BuildMods(config.ModBuildPath, selectedModKeys)
 	if err != nil {
 		fmt.Printf("Error building mods in game: %v \n", err)
 		return err

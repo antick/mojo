@@ -19,7 +19,7 @@ func main() {
 	err := wails.Run(&options.App{
 		Title:  "Mojo Mod Builder by Antick",
 		Width:  1000,
-		Height: 540,
+		Height: 640,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
