@@ -3,5 +3,6 @@ tags={
 	"Utilities"
 }
 name="Let there be music"
+picture="thumbnail.png"
 supported_version="1.10.0.1"
 

@@ -4,5 +4,6 @@ tags={
 	"Utilities"
 }
 name="Auto Pause Game"
+picture="thumbnail.png"
 supported_version="1.11.0.1"
 remote_file_id="2906586207"
