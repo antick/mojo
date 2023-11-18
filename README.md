@@ -17,6 +17,8 @@ By splitting big mods into smaller parts, you can keep them working well, update
 worry about the order they load. Check the guide (WIP) to learn how to write these smaller parts, build full mods, and 
 even put them on Steam the way you like.
 
+This is a great tool for modders who manage a lot of mods and find it hard to keep track of them.
+
 ## Installation
 
 Install Go 1.20 or higher:
@@ -86,7 +88,7 @@ EPE
 1. Convert paradox script files to JSON format.
 2. Collection of pre-generated male and female DNA.
 3. Collection of COA (Coat-of-Arms) templates.
-4. In-built collection of mods.
+4. In-built mods; Age of invasion, auto pause game, grand council, refurbished titles, united thrones, and more.
 
 ## Planned features in mods
 
@@ -109,7 +111,7 @@ EPE
 6. Show a loader when the app is doing something.
 7. Handle incompatibilities in two submods effectively.
 8. Find a way to distribute music mods. Since music mods cannot be uploaded to Github, we need to explore an alternative method for distribution. One option is to automate the process by uploading the music mod to a cloud storage service. Users can then use an application to easily download and place the files in the correct location with just a click of a button.
-9. Allow the user to select a mode that determines whether to build a combined mod containing all selected mods or build them individually in their respective folders.
+9. Allow user to configure the path in the app itself rather than hard coding those in the code.
 
 ## Known issues
 
@@ -120,6 +122,24 @@ None at the moment. Please report any issues you encounter.
 ### Is it Ironman and Achievement compatible?
 
 Yes.
+
+## Pre-defined variables used in the mod text files
+
+We have defined a few variables that can be used within the mod text file. These variables are helpful for compatibility detection and other important tasks while building mods.
+
+```
+# $canConflict=yes
+# $modifiedGameFile=common\council_tasks\00_chancellor_tasks.txt
+# $author=antick
+```
+
+These variables start with a `$` and are placed within the comment section of the mod text files. Currently, only the three variables mentioned above are supported.
+
+The `$canConflict` variable can have a value of either `yes` or `no`. This indicates whether this file modifies a game file, and there may be a conflict if another mod writes to the same file and scope.
+
+The `$modifiedGameFile` variable is the path of the game file that this mod text file modifies. This is used to detect conflicts with other mods.
+
+The `$author` variable represents the name of the author of this mod text file. Currently, this variable does not have any significance and only for the informational purpose.
 
 ## Support
 
