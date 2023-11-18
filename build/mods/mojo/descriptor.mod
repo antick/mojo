@@ -12,5 +12,6 @@ tags={
 	"Warfare"
 }
 name="Mojo by Antick"
+picture="thumbnail.png"
 supported_version="1.11.0.1"
 
