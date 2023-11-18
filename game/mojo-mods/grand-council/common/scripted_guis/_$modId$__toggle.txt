@@ -1,0 +1,7 @@
+_$modId$__toggle = {
+    scope = character
+
+    is_shown = {
+        has_game_rule = _$modId$__player_enabled
+    }
+}

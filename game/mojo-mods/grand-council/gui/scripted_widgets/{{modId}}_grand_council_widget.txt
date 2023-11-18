@@ -1,2 +1,0 @@
-﻿gui/{{modId}}_grand_council.gui = {{modId}}_window
-gui/{{modId}}_grand_council.gui = {{modId}}_window_toggler

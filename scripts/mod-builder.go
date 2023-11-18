@@ -25,9 +25,10 @@ func Cleanup(modPath string) error {
 
 func ProcessFile(modBuildPath, srcPath, destPath string, replacements map[string]string) error {
 	destFile := filepath.Base(destPath)
+	formatToReplace := "_\\$%s\\$_"
 
 	for placeholder, replacement := range replacements {
-		re := regexp.MustCompile(fmt.Sprintf("{{%s}}", placeholder))
+		re := regexp.MustCompile(fmt.Sprintf(formatToReplace, placeholder))
 		destFile = re.ReplaceAllString(destFile, replacement)
 	}
 
@@ -55,7 +56,7 @@ func ProcessFile(modBuildPath, srcPath, destPath string, replacements map[string
 	data := string(file)
 
 	for placeholder, replacement := range replacements {
-		re := regexp.MustCompile(fmt.Sprintf("{{%s}}", placeholder))
+		re := regexp.MustCompile(fmt.Sprintf(formatToReplace, placeholder))
 		data = re.ReplaceAllString(data, replacement)
 	}
 

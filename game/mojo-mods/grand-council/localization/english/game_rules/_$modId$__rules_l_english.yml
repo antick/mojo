@@ -1,0 +1,6 @@
+﻿l_english:
+ rule__$modId$__player:0 "Grand Council"
+ setting__$modId$__player_enabled:1 "Enabled"
+ setting__$modId$__player_enabled_desc:0 "Enable the Grand Council for player."
+ setting__$modId$__player_disabled:1 "Disabled"
+ setting__$modId$__player_disabled_desc:0 "Disable the Grand Council for player."

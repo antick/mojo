@@ -1,0 +1,142 @@
+﻿_$modId$__setting_set_initial = {
+    scope = character
+    effect = {
+        if = {
+            limit = {
+                NOT = { exists = global_var:_$modId$__gr_mode }
+            }
+            set_global_variable = {
+                name = _$modId$__gr_mode
+                value = 1
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = {
+                    exists = global_var:_$modId$__task_benefits_value_multiplier
+                }
+            }
+            set_global_variable = {
+                name = _$modId$__task_benefits_value_multiplier
+                value = 5
+            }
+        }
+    }
+}
+
+_$modId$__setting_set_realistic = {
+    scope = character
+    effect = {
+        set_global_variable = {
+            name = _$modId$__gr_mode
+            value = 1
+        }
+    }
+}
+
+_$modId$__setting_set_boost = {
+    scope = character
+    effect = {
+        set_global_variable = {
+            name = _$modId$__gr_mode
+            value = 2
+        }
+    }
+}
+
+_$modId$__setting_set_cheat = {
+    scope = character
+    effect = {
+        set_global_variable = {
+            name = _$modId$__gr_mode
+            value = 3
+        }
+    }
+}
+
+_$modId$__setting_multiplier_inc = {
+    scope = character
+    effect = {
+        if = {
+            limit = {
+                exists = global_var:_$modId$__task_benefits_value_multiplier
+            }
+            change_global_variable = {
+                name = _$modId$__task_benefits_value_multiplier
+                add = 1
+            }
+        }
+        else = {
+            set_global_variable = {
+                name = _$modId$__task_benefits_value_multiplier
+                value = 1
+            }
+        }
+    }
+}
+
+_$modId$__setting_multiplier_inc_2 = {
+    scope = character
+    effect = {
+        if = {
+            limit = {
+                exists = global_var:_$modId$__task_benefits_value_multiplier
+            }
+            change_global_variable = {
+                name = _$modId$__task_benefits_value_multiplier
+                add = 10
+            }
+        }
+        else = {
+            set_global_variable = {
+                name = _$modId$__task_benefits_value_multiplier
+                value = 1
+            }
+        }
+    }
+}
+
+_$modId$__setting_multiplier_dec = {
+    scope = character
+    effect = {
+        if = {
+            limit = {
+                exists = global_var:_$modId$__task_benefits_value_multiplier
+                global_var:_$modId$__task_benefits_value_multiplier > 1
+            }
+            change_global_variable = {
+                name = _$modId$__task_benefits_value_multiplier
+                subtract = 1
+            }
+        }
+        else = {
+            set_global_variable = {
+                name = _$modId$__task_benefits_value_multiplier
+                value = 1
+            }
+        }
+    }
+}
+
+_$modId$__setting_multiplier_dec_2 = {
+    scope = character
+    effect = {
+        if = {
+            limit = {
+                exists = global_var:_$modId$__task_benefits_value_multiplier
+                global_var:_$modId$__task_benefits_value_multiplier > 10
+            }
+            change_global_variable = {
+                name = _$modId$__task_benefits_value_multiplier
+                subtract = 10
+            }
+        }
+        else = {
+            set_global_variable = {
+                name = _$modId$__task_benefits_value_multiplier
+                value = 1
+            }
+        }
+    }
+}

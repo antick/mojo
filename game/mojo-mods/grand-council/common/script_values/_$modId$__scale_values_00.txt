@@ -1,0 +1,1953 @@
+﻿_$modId$__scale_advisor_self_default = {
+    value = 0
+
+    liege = {
+        add = diplomacy
+    }
+    liege = {
+        add = martial
+    }
+    liege = {
+        add = stewardship
+    }
+    liege = {
+        add = intrigue
+    }
+    liege = {
+        add = learning
+    }
+
+    if = {
+        limit = {
+            liege = { has_perk = loyalty_and_respect_perk }
+        }
+        multiply = 1.25
+    }
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            OR = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        if = {
+            limit = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+            }
+            multiply = 2
+        }
+        else = {
+            multiply = 5
+        }
+    }
+    min = 1
+}
+
+_$modId$__scale_advisor_assist_diplomacy = {
+    value = 0
+
+    add = diplomacy
+
+    if = {
+        limit = {
+            diplomacy > mediocre_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            diplomacy > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            diplomacy > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            diplomacy > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            diplomacy > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            diplomacy > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diplomat
+        }
+        add = 5
+    }
+    if = {
+        limit = {
+            has_trait = august
+        }
+        add = 3
+    }
+    if = {
+        limit = {
+            has_trait = shrewd
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_3
+        }
+        add = 3
+    }
+
+
+    if = {
+        limit = {
+            has_education_diplomacy_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_diplomacy_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            has_trait = education_diplomacy_3
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            has_trait = education_diplomacy_2
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            has_trait = education_diplomacy_1
+        }
+        add = 1
+    }
+
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            global_var:_$modId$__gr_mode > _$modId$__mode_real
+        }
+        if = {
+            limit = {
+                exists = global_var:_$modId$__task_benefits_value_multiplier
+            }
+            multiply = global_var:_$modId$__task_benefits_value_multiplier
+        }
+        else = {
+            multiply = 5
+        }
+    }
+}
+
+_$modId$__scale_advisor_assist_martial = {
+    value = 0
+
+    add = martial
+
+    if = {
+        limit = {
+            martial > mediocre_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            martial > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            martial > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            martial > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            martial > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            martial > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = gallant
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = strategist
+        }
+        add = 2
+    }
+    if = {
+        limit = {
+            has_trait = overseer
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = shrewd
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_3
+        }
+        add = 3
+    }
+
+
+    if = {
+        limit = {
+            has_education_martial_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_3
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_2
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_1
+        }
+        add = 1
+    }
+
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            global_var:_$modId$__gr_mode > _$modId$__mode_real
+        }
+        if = {
+            limit = {
+                exists = global_var:_$modId$__task_benefits_value_multiplier
+            }
+            multiply = global_var:_$modId$__task_benefits_value_multiplier
+        }
+        else = {
+            multiply = 5
+        }
+    }
+}
+
+_$modId$__scale_advisor_assist_stewardship = {
+    value = 0
+
+    add = stewardship
+
+    if = {
+        limit = {
+            stewardship > mediocre_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            stewardship > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            stewardship > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            stewardship > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            stewardship > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            stewardship > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = architect
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = administrator
+        }
+        add = 2
+    }
+    # if = {
+    # 	limit = {
+    # 		has_trait = avaricious
+    # 	}
+    # 	add = 1
+    # }
+    if = {
+        limit = {
+            has_trait = overseer
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = shrewd
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_3
+        }
+        add = 3
+    }
+
+
+    if = {
+        limit = {
+            has_education_stewardship_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_stewardship_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            has_trait = education_stewardship_3
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            has_trait = education_stewardship_2
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            has_trait = education_stewardship_1
+        }
+        add = 1
+    }
+
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            global_var:_$modId$__gr_mode > _$modId$__mode_real
+        }
+        if = {
+            limit = {
+                exists = global_var:_$modId$__task_benefits_value_multiplier
+            }
+            multiply = global_var:_$modId$__task_benefits_value_multiplier
+        }
+        else = {
+            multiply = 5
+        }
+    }
+}
+
+_$modId$__scale_advisor_assist_intrigue = {
+    value = 0
+
+    add = intrigue
+
+    if = {
+        limit = {
+            intrigue >= mediocre_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            intrigue > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            intrigue > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            intrigue > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            intrigue > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            intrigue > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = schemer
+        }
+        add = 3
+    }
+    if = {
+        limit = {
+            has_trait = shrewd
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_3
+        }
+        add = 3
+    }
+
+
+    if = {
+        limit = {
+            has_education_intrigue_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_intrigue_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            has_trait = education_intrigue_3
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            has_trait = education_intrigue_2
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            has_trait = education_intrigue_1
+        }
+        add = 1
+    }
+
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            global_var:_$modId$__gr_mode > _$modId$__mode_real
+        }
+        if = {
+            limit = {
+                exists = global_var:_$modId$__task_benefits_value_multiplier
+            }
+            multiply = global_var:_$modId$__task_benefits_value_multiplier
+        }
+        else = {
+            multiply = 5
+        }
+    }
+}
+
+_$modId$__scale_advisor_assist_learning = {
+    value = 0
+
+    add = learning
+
+    if = {
+        limit = {
+            learning > mediocre_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            learning > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            learning > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            learning > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            learning > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            learning > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = scholar
+        }
+        add = 3
+    }
+    if = {
+        limit = {
+            has_trait = theologian
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = lifestyle_mystic
+        }
+        add = 3
+    }
+    if = {
+        limit = {
+            has_trait = shrewd
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_3
+        }
+        add = 3
+    }
+
+
+    if = {
+        limit = {
+            has_education_learning_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_learning_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            has_trait = education_learning_3
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            has_trait = education_learning_2
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            has_trait = education_learning_1
+        }
+        add = 1
+    }
+
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            global_var:_$modId$__gr_mode > _$modId$__mode_real
+        }
+        if = {
+            limit = {
+                exists = global_var:_$modId$__task_benefits_value_multiplier
+            }
+            multiply = global_var:_$modId$__task_benefits_value_multiplier
+        }
+        else = {
+            multiply = 5
+        }
+    }
+}
+
+_$modId$__scale_advisor_assist_prowess = {
+    value = 0
+
+    add = prowess
+
+    if = {
+        limit = {
+            prowess > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > medium_skill_rating
+            has_trait = scholar
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > medium_skill_rating
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = giant
+        }
+        add = 2
+    }
+    if = {
+        limit = {
+            has_trait = physique_good_3
+        }
+        add = 2
+    }
+    if = {
+        limit = {
+            has_trait = physique_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = strong
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_4
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_learning_4
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = gallant
+        }
+        add = 2
+    }
+    if = {
+        limit = {
+            has_trait = torturer
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = sadistic
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = order_member
+        }
+        add = 1
+    }
+
+
+    if = {
+        limit = {
+            has_education_prowess_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_prowess_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = education_martial_prowess_3
+                has_trait = lifestyle_blademaster
+            }
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = education_martial_prowess_2
+                has_trait = lifestyle_blademaster
+                has_trait = lifestyle_hunter
+                has_trait = berserker
+            }
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = education_martial_prowess_1
+                has_trait = lifestyle_blademaster
+                has_trait = lifestyle_hunter
+            }
+        }
+        add = 1
+    }
+
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            global_var:_$modId$__gr_mode > _$modId$__mode_real
+        }
+        if = {
+            limit = {
+                exists = global_var:_$modId$__task_benefits_value_multiplier
+            }
+            multiply = global_var:_$modId$__task_benefits_value_multiplier
+        }
+        else = {
+            multiply = 5
+        }
+    }
+}
+
+_$modId$__scale_exclusive_diplomacy = {
+    value = 1
+    if = {
+        limit = {
+            has_education_diplomacy_trigger = no
+            exists = global_var:_$modId$__gr_mode
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+}
+
+_$modId$__scale_exclusive_martial = {
+    value = 1
+    if = {
+        limit = {
+            has_education_martial_trigger = no
+            exists = global_var:_$modId$__gr_mode
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+}
+
+_$modId$__scale_exclusive_stewardship = {
+    value = 1
+    if = {
+        limit = {
+            has_education_stewardship_trigger = no
+            exists = global_var:_$modId$__gr_mode
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+}
+
+_$modId$__scale_exclusive_intrigue = {
+    value = 1
+    if = {
+        limit = {
+            has_education_intrigue_trigger = no
+            exists = global_var:_$modId$__gr_mode
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+}
+
+_$modId$__scale_exclusive_learning = {
+    value = 1
+    if = {
+        limit = {
+            has_education_learning_trigger = no
+            exists = global_var:_$modId$__gr_mode
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+}
+
+_$modId$__scale_exclusive_prowess = {
+    value = 1
+    if = {
+        limit = {
+            # has_education_martial_trigger = no
+            has_education_prowess_trigger = no
+            exists = global_var:_$modId$__gr_mode
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+}
+
+_$modId$__scale_advisor_assist_diplomacy_exclusive = {
+    value = _$modId$__scale_advisor_assist_diplomacy
+    multiply = _$modId$__scale_exclusive_diplomacy
+}
+
+_$modId$__scale_advisor_assist_martial_exclusive = {
+    value = _$modId$__scale_advisor_assist_martial
+    multiply = _$modId$__scale_exclusive_martial
+}
+
+_$modId$__scale_advisor_assist_stewardship_exclusive = {
+    value = _$modId$__scale_advisor_assist_stewardship
+    multiply = _$modId$__scale_exclusive_stewardship
+}
+
+_$modId$__scale_advisor_assist_intrigue_exclusive = {
+    value = _$modId$__scale_advisor_assist_intrigue
+    multiply = _$modId$__scale_exclusive_intrigue
+}
+
+_$modId$__scale_advisor_assist_learning_exclusive = {
+    value = _$modId$__scale_advisor_assist_learning
+    multiply = _$modId$__scale_exclusive_learning
+}
+
+_$modId$__scale_advisor_assist_prowess_exclusive = {
+    value = _$modId$__scale_advisor_assist_prowess
+    multiply = _$modId$__scale_exclusive_prowess
+}
+
+_$modId$__scale_advisor_assist_diplomacy_cheat = {
+    value = 0
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            OR = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        if = {
+            limit = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+            }
+            add = diplomacy
+            multiply = 2
+        }
+        else = {
+            add = diplomacy
+            multiply = 5
+        }
+    }
+    else = {
+        add = diplomacy
+    }
+
+    if = {
+        limit = {
+            has_education_diplomacy_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_diplomacy_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            has_trait = education_diplomacy_3
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            has_trait = education_diplomacy_2
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            has_trait = education_diplomacy_1
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            diplomacy > mediocre_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            diplomacy > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            diplomacy > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            diplomacy > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            diplomacy > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            diplomacy > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diplomat
+        }
+        add = 5
+    }
+    if = {
+        limit = {
+            has_trait = august
+        }
+        add = 3
+    }
+    if = {
+        limit = {
+            has_trait = shrewd
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_3
+        }
+        add = 3
+    }
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+    else = {
+        multiply = 5
+    }
+}
+
+_$modId$__scale_advisor_assist_martial_cheat = {
+    value = 0
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            OR = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        if = {
+            limit = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+            }
+            add = martial
+            multiply = 2
+        }
+        else = {
+            add = martial
+            multiply = 5
+        }
+    }
+    else = {
+        add = martial
+    }
+
+    if = {
+        limit = {
+            has_education_martial_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_3
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_2
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_1
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            martial > mediocre_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            martial > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            martial > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            martial > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            martial > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            martial > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = gallant
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = strategist
+        }
+        add = 2
+    }
+    if = {
+        limit = {
+            has_trait = overseer
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = shrewd
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_3
+        }
+        add = 3
+    }
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+    else = {
+        multiply = 5
+    }
+}
+
+_$modId$__scale_advisor_assist_stewardship_cheat = {
+    value = 0
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            OR = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        if = {
+            limit = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+            }
+            add = stewardship
+            multiply = 2
+        }
+        else = {
+            add = stewardship
+            multiply = 5
+        }
+    }
+    else = {
+        add = stewardship
+    }
+
+    if = {
+        limit = {
+            has_education_stewardship_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_stewardship_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            has_trait = education_stewardship_3
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            has_trait = education_stewardship_2
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            has_trait = education_stewardship_1
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            stewardship > mediocre_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            stewardship > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            stewardship > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            stewardship > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            stewardship > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            stewardship > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = architect
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = administrator
+        }
+        add = 2
+    }
+    # if = {
+    # 	limit = {
+    # 		has_trait = avaricious
+    # 	}
+    # 	add = 1
+    # }
+    if = {
+        limit = {
+            has_trait = overseer
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = shrewd
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_3
+        }
+        add = 3
+    }
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+    else = {
+        multiply = 5
+    }
+}
+
+_$modId$__scale_advisor_assist_intrigue_cheat = {
+    value = 0
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            OR = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        if = {
+            limit = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+            }
+            add = intrigue
+            multiply = 2
+        }
+        else = {
+            add = intrigue
+            multiply = 5
+        }
+    }
+    else = {
+        add = intrigue
+    }
+
+    if = {
+        limit = {
+            has_education_intrigue_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_intrigue_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            has_trait = education_intrigue_3
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            has_trait = education_intrigue_2
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            has_trait = education_intrigue_1
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            intrigue >= mediocre_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            intrigue > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            intrigue > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            intrigue > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            intrigue > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            intrigue > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = schemer
+        }
+        add = 3
+    }
+    if = {
+        limit = {
+            has_trait = shrewd
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_3
+        }
+        add = 3
+    }
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+    else = {
+        multiply = 5
+    }
+}
+
+_$modId$__scale_advisor_assist_learning_cheat = {
+    value = 0
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            OR = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        if = {
+            limit = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+            }
+            add = learning
+            multiply = 2
+        }
+        else = {
+            add = learning
+            multiply = 5
+        }
+    }
+    else = {
+        add = learning
+    }
+
+    if = {
+        limit = {
+            has_education_learning_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_learning_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            has_trait = education_learning_3
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            has_trait = education_learning_2
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            has_trait = education_learning_1
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            learning > mediocre_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            learning > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            learning > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            learning > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            learning > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            learning > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = scholar
+        }
+        add = 3
+    }
+    if = {
+        limit = {
+            has_trait = theologian
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = lifestyle_mystic
+        }
+        add = 3
+    }
+    if = {
+        limit = {
+            has_trait = shrewd
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = intellect_good_3
+        }
+        add = 3
+    }
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+    else = {
+        multiply = 5
+    }
+}
+
+_$modId$__scale_advisor_assist_prowess_cheat = {
+    value = 0
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            OR = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        if = {
+            limit = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_boost
+            }
+            add = prowess
+            multiply = 2
+        }
+        else = {
+            add = prowess
+            multiply = 5
+        }
+    }
+    else = {
+        add = prowess
+    }
+
+    if = {
+        limit = {
+            has_education_prowess_trigger = yes
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_prowess_4
+        }
+        multiply = 2
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = education_martial_prowess_3
+                has_trait = lifestyle_blademaster
+            }
+        }
+        multiply = 1.65
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = education_martial_prowess_2
+                has_trait = lifestyle_blademaster
+                has_trait = lifestyle_hunter
+                has_trait = berserker
+            }
+        }
+        multiply = 1.35
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = education_martial_prowess_1
+                has_trait = lifestyle_blademaster
+                has_trait = lifestyle_hunter
+            }
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > medium_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > decent_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > very_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > extremely_high_skill_rating
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > medium_skill_rating
+            has_trait = scholar
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            prowess > medium_skill_rating
+            has_trait = diligent
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = giant
+        }
+        add = 2
+    }
+    if = {
+        limit = {
+            has_trait = physique_good_3
+        }
+        add = 2
+    }
+    if = {
+        limit = {
+            has_trait = physique_good_2
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = strong
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_martial_4
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = education_learning_4
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = gallant
+        }
+        add = 2
+    }
+    if = {
+        limit = {
+            has_trait = torturer
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = sadistic
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            has_trait = order_member
+        }
+        add = 1
+    }
+
+    if = {
+        limit = {
+            NOT = {
+                global_var:_$modId$__gr_mode = _$modId$__mode_cheat
+            }
+        }
+        multiply = 0
+    }
+    else = {
+        multiply = 5
+    }
+}
+
+_$modId$__scale_advisor_simple = {
+    value = 1
+
+    if = {
+        limit = {
+            exists = global_var:_$modId$__gr_mode
+            global_var:_$modId$__gr_mode > _$modId$__mode_real
+        }
+        if = {
+            limit = {
+                exists = global_var:_$modId$__task_benefits_value_multiplier
+            }
+            multiply = global_var:_$modId$__task_benefits_value_multiplier
+        }
+        else = {
+            multiply = 5
+        }
+    }
+}
+
+_$modId$__scale_steward_tax = {
+    value = _$modId$__scale_advisor_assist_stewardship_exclusive
+    divide = 500
+}
+
+_$modId$__scale_steward_domain_limit = {
+    value = _$modId$__scale_advisor_simple
+    divide = 10
+    ceiling = yes
+}
+
+_$modId$__scale_intrigue_scheme_personal = {
+    value = _$modId$__scale_advisor_simple
+    divide = 10
+    ceiling = yes
+}

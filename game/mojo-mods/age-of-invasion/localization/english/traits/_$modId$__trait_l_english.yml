@@ -1,0 +1,8 @@
+﻿l_english:
+ trait__$modId$_:0 "The Conqueror"
+ trait__$modId$__turkish:0 "Fatih"
+ trait__$modId$__indian:0 "Vishwa-Vijeta"
+ trait__$modId$__arab:0 "Al-Fatih"
+
+ trait__$modId$__desc:0 "A master of strategy with unshackled ambition, this character is determined to conquer it all."
+ trait__$modId$__character_desc:1 "As a master of strategy with unshackled ambition, [ROOT.GetCharacter.GetFullNameNoTooltip] is determined to conquer it all. \nAs a result, [ROOT.GetCharacter.GetHerHis] followers are ready to lend their strength in support."

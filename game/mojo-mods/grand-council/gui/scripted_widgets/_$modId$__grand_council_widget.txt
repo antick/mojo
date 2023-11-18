@@ -1,0 +1,2 @@
+﻿gui/_$modId$__grand_council.gui = _$modId$__window
+gui/_$modId$__grand_council.gui = _$modId$__window_toggler

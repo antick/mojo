@@ -1,6 +1,6 @@
-version="{{modVersion}}"
-tags={{modTags}}
-name="{{modName}}"
+version="_$modVersion$_"
+tags=_$modTags$_
+name="_$modName$_"
 picture="thumbnail.png"
-supported_version="{{supportedGameVersion}}"
-{{modRemoteFileId}}
+supported_version="_$supportedGameVersion$_"
+_$modRemoteFileId$_

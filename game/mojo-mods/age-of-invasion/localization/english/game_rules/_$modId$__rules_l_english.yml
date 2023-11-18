@@ -1,0 +1,22 @@
+﻿l_english:
+ rule__$modId$__player:0 "Age of Invasion: Player can become a Conqueror"
+ setting__$modId$__player_yes:1 "Yes"
+ setting__$modId$__player_yes_desc:0 "The player can become a conqueror"
+ setting__$modId$__player_no:1 "No"
+ setting__$modId$__player_no_desc:0 "The player cannot become a conqueror"
+
+ rule__$modId$__increased_chances:0 "Age of Invasion: Become Conqueror Chances"
+ setting__$modId$__increased_default:1 "Default Chances"
+ setting__$modId$__increased_default_desc:0 "The default chances"
+ setting__$modId$__increased_little:1 "Increased (Little)"
+ setting__$modId$__increased_little_desc:0 "Chances of becoming the conqueror is increased by 2%"
+ setting__$modId$__increased_big:1 "Increased (Big)"
+ setting__$modId$__increased_big_desc:0 "Chances of becoming the conqueror is increased by 5%"
+
+ rule__$modId$__inheritance:0 "Age of Invasion: Troops Inheritance"
+ setting__$modId$__inheritance_yes:1 "Enabled"
+ setting__$modId$__inheritance_yes_desc:0 "Conqueror troops will be inherited by their successor."
+ setting__$modId$__inheritance_no:1 "Disabled"
+ setting__$modId$__inheritance_no_desc:0 "Conqueror troops will NOT be inherited by their successor."
+
+ game_rule_category_mojo:0 "Mojo"

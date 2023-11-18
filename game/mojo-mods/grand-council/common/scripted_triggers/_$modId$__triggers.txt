@@ -1,0 +1,209 @@
+﻿can_be_advisor_trigger = {
+    can_be_councillor_basics_trigger = yes
+    NOT = { has_council_position = councillor_spouse }
+    exists = root.liege_or_court_owner
+    OR = {
+        is_vassal_of = root.liege_or_court_owner
+        COURT_OWNER = root.liege_or_court_owner
+    }
+    # exists = global_var:_$modId$__gr_mode
+}
+
+can_be_advisor_king_trigger = {
+    can_be_councillor_basics_trigger = yes
+    can_be_advisor_trigger = yes
+    root.liege_or_court_owner = {
+        highest_held_title_tier >= tier_kingdom
+    }
+    highest_held_title_tier >= tier_barony
+}
+
+can_be_advisor_emperor_trigger = {
+    can_be_councillor_basics_trigger = yes
+    can_be_advisor_trigger = yes
+    root.liege_or_court_owner = {
+        highest_held_title_tier >= tier_empire
+    }
+    highest_held_title_tier > tier_barony
+    # highest_held_title_tier > tier_county
+}
+
+can_be_advisor_1_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_2
+        has_council_position = councillor_advisor_3
+        has_council_position = councillor_advisor_4
+        has_council_position = councillor_advisor_5
+        has_council_position = councillor_advisor_6
+    }
+}
+
+can_be_advisor_2_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_1
+        has_council_position = councillor_advisor_3
+        has_council_position = councillor_advisor_4
+        has_council_position = councillor_advisor_5
+        has_council_position = councillor_advisor_6
+    }
+}
+
+can_be_advisor_3_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_1
+        has_council_position = councillor_advisor_2
+        has_council_position = councillor_advisor_4
+        has_council_position = councillor_advisor_5
+        has_council_position = councillor_advisor_6
+    }
+}
+
+can_be_advisor_4_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_1
+        has_council_position = councillor_advisor_2
+        has_council_position = councillor_advisor_3
+        has_council_position = councillor_advisor_5
+        has_council_position = councillor_advisor_6
+    }
+}
+
+can_be_advisor_5_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_1
+        has_council_position = councillor_advisor_2
+        has_council_position = councillor_advisor_3
+        has_council_position = councillor_advisor_4
+        has_council_position = councillor_advisor_6
+    }
+}
+
+can_be_advisor_6_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_1
+        has_council_position = councillor_advisor_2
+        has_council_position = councillor_advisor_3
+        has_council_position = councillor_advisor_4
+        has_council_position = councillor_advisor_5
+    }
+}
+
+can_be_advisor_king_1_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_king_2
+        has_council_position = councillor_advisor_king_3
+        has_council_position = councillor_advisor_king_4
+        has_council_position = councillor_advisor_king_5
+        has_council_position = councillor_advisor_king_6
+    }
+}
+
+can_be_advisor_king_2_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_king_1
+        has_council_position = councillor_advisor_king_3
+        has_council_position = councillor_advisor_king_4
+        has_council_position = councillor_advisor_king_5
+        has_council_position = councillor_advisor_king_6
+    }
+}
+
+can_be_advisor_king_3_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_king_1
+        has_council_position = councillor_advisor_king_2
+        has_council_position = councillor_advisor_king_4
+        has_council_position = councillor_advisor_king_5
+        has_council_position = councillor_advisor_king_6
+    }
+}
+
+can_be_advisor_king_4_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_king_1
+        has_council_position = councillor_advisor_king_2
+        has_council_position = councillor_advisor_king_3
+        has_council_position = councillor_advisor_king_5
+        has_council_position = councillor_advisor_king_6
+    }
+}
+
+can_be_advisor_king_5_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_king_1
+        has_council_position = councillor_advisor_king_2
+        has_council_position = councillor_advisor_king_3
+        has_council_position = councillor_advisor_king_4
+        has_council_position = councillor_advisor_king_6
+    }
+}
+
+can_be_advisor_king_6_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_king_1
+        has_council_position = councillor_advisor_king_2
+        has_council_position = councillor_advisor_king_3
+        has_council_position = councillor_advisor_king_4
+        has_council_position = councillor_advisor_king_5
+    }
+}
+
+can_be_advisor_emperor_1_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_emperor_2
+        has_council_position = councillor_advisor_emperor_3
+        has_council_position = councillor_advisor_emperor_4
+        has_council_position = councillor_advisor_emperor_5
+        has_council_position = councillor_advisor_emperor_6
+    }
+}
+
+can_be_advisor_emperor_2_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_emperor_1
+        has_council_position = councillor_advisor_emperor_3
+        has_council_position = councillor_advisor_emperor_4
+        has_council_position = councillor_advisor_emperor_5
+        has_council_position = councillor_advisor_emperor_6
+    }
+}
+
+can_be_advisor_emperor_3_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_emperor_1
+        has_council_position = councillor_advisor_emperor_2
+        has_council_position = councillor_advisor_emperor_4
+        has_council_position = councillor_advisor_emperor_5
+        has_council_position = councillor_advisor_emperor_6
+    }
+}
+
+can_be_advisor_emperor_4_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_emperor_1
+        has_council_position = councillor_advisor_emperor_2
+        has_council_position = councillor_advisor_emperor_3
+        has_council_position = councillor_advisor_emperor_5
+        has_council_position = councillor_advisor_emperor_6
+    }
+}
+
+can_be_advisor_emperor_5_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_emperor_1
+        has_council_position = councillor_advisor_emperor_2
+        has_council_position = councillor_advisor_emperor_3
+        has_council_position = councillor_advisor_emperor_4
+        has_council_position = councillor_advisor_emperor_6
+    }
+}
+
+can_be_advisor_emperor_6_trigger = {
+    NOR = {
+        has_council_position = councillor_advisor_emperor_1
+        has_council_position = councillor_advisor_emperor_2
+        has_council_position = councillor_advisor_emperor_3
+        has_council_position = councillor_advisor_emperor_4
+        has_council_position = councillor_advisor_emperor_5
+    }
+}

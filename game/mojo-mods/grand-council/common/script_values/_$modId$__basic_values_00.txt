@@ -1,0 +1,3 @@
+﻿_$modId$__mode_real = 1
+_$modId$__mode_boost = 2
+_$modId$__mode_cheat = 3

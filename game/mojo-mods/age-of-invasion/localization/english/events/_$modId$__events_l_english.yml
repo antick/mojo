@@ -1,0 +1,10 @@
+﻿l_english:
+ _$modId$__event.0002.t:0 "Rise of [g__$modId$_.GetTitledFirstName]"
+ _$modId$__event.0002.d:0 "[g__$modId$_.GetTitledFirstName], an ambitious man has gained some attention recently with his endeavours. \nHe is already beginning to take over the region. \n\nHe is sure to go down in history as a great conquering king."
+ _$modId$__event.0002.a:0 "This isn't good..."
+ _$modId$__event.0003.t:0 "The Great Conquering King..."
+ _$modId$__event.0003.d:0 "My recent endeavours have led me to be regarded as one of the great conquerors of the world, with my soaring ambition and my military prowess, I am often being compared to the likes of Ceasar and Alexander The Great. \n\nEveryone fears me, and for a good reason too."
+ _$modId$__event.0003.a:0 "[ROOT.Char.GetHouse.GetMotto]!"
+ _$modId$__event.0003.b:0 "*Yawn* What a dream that was."
+ _$modId$__0003_tt:0 "You will become the Great Conqueror"
+ _$modId$__troops:0 "The Great Army"
