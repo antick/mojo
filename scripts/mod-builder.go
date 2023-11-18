@@ -170,12 +170,23 @@ func SortModList(subMods map[string]configuration.SubModType) []string {
 	return keys
 }
 
-func BuildDescriptorFile(modBuildPath string) error {
+func BuildCombinedDescriptorFile(modBuildPath string) error {
 	err := ProcessFile(
 		modBuildPath,
 		config.ModDescriptorSourcePath,
 		filepath.Join(modBuildPath, "descriptor.mod"),
 		modConfig.CombinedMod.Replacements,
+	)
+
+	return err
+}
+
+func BuildLooseDescriptorFiles(modBuildPath string, replacements map[string]string) error {
+	err := ProcessFile(
+		modBuildPath,
+		config.ModDescriptorSourcePath,
+		filepath.Join(modBuildPath, "descriptor.mod"),
+		replacements,
 	)
 
 	return err
@@ -223,7 +234,7 @@ func BuildCombinedMod(modBuildPath string, selectedModKeys []string) error {
 		return err
 	}
 
-	if err = BuildDescriptorFile(modBuildPath); err != nil {
+	if err = BuildCombinedDescriptorFile(modBuildPath); err != nil {
 		fmt.Println("Error while processing descriptor.mod file")
 		return err
 	}
@@ -316,7 +327,7 @@ func BuildLooseMods(buildPath string, selectedModKeys []string) error {
 			return err
 		}
 
-		if err = BuildDescriptorFile(modBuildPath); err != nil {
+		if err = BuildLooseDescriptorFiles(modBuildPath, modDetails.Replacements); err != nil {
 			fmt.Println("Error while processing descriptor.mod file")
 			return err
 		}
