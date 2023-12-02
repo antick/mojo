@@ -112,6 +112,8 @@ EPE
 7. Handle incompatibilities in two submods effectively.
 8. Find a way to distribute music mods. Since music mods cannot be uploaded to Github, we need to explore an alternative method for distribution. One option is to automate the process by uploading the music mod to a cloud storage service. Users can then use an application to easily download and place the files in the correct location with just a click of a button.
 9. Allow user to configure the path in the app itself rather than hard coding those in the code.
+10. Ability to use and merge existing mods from steam workshop with your mod on fly. Need to find a way to handle the incompatibility.
+11. Create a simple app version for non-tech/non-dev users.
 
 ## Known issues
 
