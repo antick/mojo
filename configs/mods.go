@@ -193,7 +193,7 @@ func ModConfig() *ModType {
 					"modVersion":           "1.0.0",
 					"supportedGameVersion": "1.7.2",
 					"modRemoteFileId":      "",
-					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "auto-pause-game"), "\\", "/"),
+					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "traits-mania"), "\\", "/"),
 					"modTags": `{
 	"Balance"
 	"Decisions"
