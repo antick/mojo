@@ -1,0 +1,120 @@
+namespace = height_gene_distribution
+
+height_gene_distribution.1 = {
+	type = character_event
+	trigger = {
+		is_ai = no
+	}
+
+	title = height_gene_distribution.1.title
+	desc = {
+		desc = height_gene_distribution.1.desc
+	}
+
+	theme = diplomacy 
+
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	override_sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_generic"
+	}	
+
+	immediate = {
+		hidden_effect = {
+			add_gold = 1
+		}
+	}
+
+	#Choose new height
+	option = {
+		name = height_gene_distribution.1.choose_new
+		custom_tooltip = height_gene_distribution.1.choose_new.tooltip
+		remove_trait = height_short_1
+		remove_trait = height_short_2
+		remove_trait = height_tall_1
+		remove_trait = height_tall_2
+		remove_trait = height_average_1
+		remove_trait = dwarf
+		remove_trait = giant
+		trigger_event = height_gene_distribution.2
+	}
+	
+	#Dont Change Height
+	option = {
+		name = height_gene_distribution.1.stay_same
+		custom_tooltip = height_gene_distribution.1.stay_same.tooltip
+	}
+}
+
+height_gene_distribution.2 = {
+	type = character_event
+	trigger = {
+		is_ai = no
+	}
+	
+	title = height_gene_distribution.2.title
+	
+	desc = {
+		desc = height_gene_distribution.2.desc
+	}
+
+	theme = diplomacy 
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	override_sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_generic"
+	}	
+
+	immediate = {
+		hidden_effect = {
+			add_gold = 1 #Why not, cuz maybe not adding an immediate fucks something up
+		}
+	}
+
+	#Choose Tall height 1
+	option = {
+		name = height_gene_distribution.2.tall_1
+		custom_tooltip = height_gene_distribution.2.tall_1.tooltip
+		add_trait = height_tall_1
+		ai_chance = 0
+	}
+
+	#Choose Tall height 2
+	option = {
+		name = height_gene_distribution.2.tall_2
+		custom_tooltip = height_gene_distribution.2.tall_2.tooltip
+		add_trait = height_tall_2
+		ai_chance = 0
+	}
+
+	#Choose Average Height
+	option = {
+		name = height_gene_distribution.2.average_1
+		custom_tooltip = height_gene_distribution.2.average_1.tooltip
+		add_trait = height_average_1
+		ai_chance = 0
+	}
+
+	#Choose Short height 1
+	option = {
+		name = height_gene_distribution.2.short_1
+		custom_tooltip = height_gene_distribution.2.short_1.tooltip
+		add_trait = height_short_1
+		ai_chance = 0
+	}
+
+	#Choose Short height 2
+	option = {
+		name = height_gene_distribution.2.short_2
+		custom_tooltip = height_gene_distribution.2.short_2.tooltip
+		add_trait = height_short_2
+		ai_chance = 0
+	}
+}
+

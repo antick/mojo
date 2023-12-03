@@ -1,0 +1,5 @@
+﻿_$modId$__height_enabled = {
+	default = _$modId$__height_enabled_true
+	_$modId$__height_enabled_false = {}
+	_$modId$__height_enabled_true = {}
+}

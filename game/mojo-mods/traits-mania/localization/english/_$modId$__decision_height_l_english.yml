@@ -1,0 +1,44 @@
+﻿l_english:
+
+ #Decision: choose height
+ _$modId$__choose_height_decision:0 "Choose Your Character's Height"
+ _$modId$__choose_height_decision_desc:0 "This decision leads to an event which gives you a choice:"
+ _$modId$__choose_height_decision_desc_selection_tooltip:0 "Choose your height"
+ _$modId$__choose_height_decision_confirm:0 "Fetch the ruler!"
+ _$modId$__choose_height_decision.1.tt: "You may choose whether or not your current listed height is accurate.\n"
+ _$modId$__choose_height_decision.2.tt: "Alternatively, you may decide that a different height is more fitting."
+
+
+ #Event: choose height
+ height_gene_distribution.1.title:0 "Choose your height"
+ height_gene_distribution.1.desc:0 "Do you wish to choose your height?"
+
+ height_gene_distribution.1.stay_same:0 "I'm fine with my current height!"
+ height_gene_distribution.1.stay_same.tooltip:0 "Choose this if you have already chosen your height in the ruler designer!"
+
+ height_gene_distribution.1.choose_new:0 "I'd like to choose my height."
+ height_gene_distribution.1.choose_new.tooltip:0 "You will be given the choice of what height gene your character will have"
+
+ height_gene_distribution.2.title:0 "Choose your height"
+ height_gene_distribution.2.desc:0 "How tall are you?"
+
+ height_gene_distribution.2.tall_1:0 "Slightly Tall"
+ height_gene_distribution.2.tall_1.tooltip:0 "This will give you the Slightly Tall trait."
+
+ height_gene_distribution.2.tall_2:0 "Noticeably Tall"
+ height_gene_distribution.2.tall_2.tooltip:0 "This will give you the Noticeably Tall trait."
+
+ height_gene_distribution.2.tall_3:0 "Freakishy Tall"
+ height_gene_distribution.2.tall_3.tooltip:0 "This will give you the Freakishly Tall trait."
+
+ height_gene_distribution.2.average_1:0 "Average Height"
+ height_gene_distribution.2.average_1.tooltip:0 "This will give you the Average Height trait."
+
+ height_gene_distribution.2.short_1:0 "Slightly Short"
+ height_gene_distribution.2.short_1.tooltip:0 "This will give you the Slightly Short trait."
+
+ height_gene_distribution.2.short_2:0 "Noticeably Short"
+ height_gene_distribution.2.short_2.tooltip:0 "This will give you the Noticeably Short trait."
+
+ height_gene_distribution.2.short_3:0 "Freakishly Short"
+ height_gene_distribution.2.short_3.tooltip:0 "This will give you the Freakishly Short trait."

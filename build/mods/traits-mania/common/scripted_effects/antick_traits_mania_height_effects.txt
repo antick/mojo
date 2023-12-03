@@ -1,0 +1,118 @@
+﻿# antick_traits_mania_seed_height_traits_effect
+
+# antick_traits_mania_remove_height_trait_effect
+# antick_traits_mania_add_height_short_1_effect
+# antick_traits_mania_add_height_short_2_effect
+# antick_traits_mania_add_height_tall_1_effect
+# antick_traits_mania_add_height_tall_2_effect
+# antick_traits_mania_add_height_short_1_effect
+
+# randomly seed inactive height traits
+antick_traits_mania_seed_height_traits_effect = {
+	limit = {
+		NOR = { 
+			has_character_flag = antick_traits_mania_height_traits_seeded
+			antick_traits_mania_has_any_height_gene_trigger = yes
+		}
+	}
+	if = {
+		limit = { has_character_flag = antick_traits_mania_seed_height_tall_1 }
+		antick_traits_mania_add_height_tall_1_effect = yes
+	}
+	else_if = {
+		limit = { has_character_flag = antick_traits_mania_seed_height_tall_2 }
+		antick_traits_mania_add_height_tall_2_effect = yes
+	}
+	else_if = {
+		limit = { has_character_flag = antick_traits_mania_seed_height_average_1 }
+		antick_traits_mania_add_height_average_1_effect = yes
+	}
+	else_if = {
+		limit = { has_character_flag = antick_traits_mania_seed_height_short_1 }
+		antick_traits_mania_add_height_short_1_effect = yes
+	}
+	else_if = {
+		limit = { has_character_flag = antick_traits_mania_seed_height_short_2 }
+		antick_traits_mania_add_height_short_2_effect = yes
+	}
+	else_if = {
+		limit = {
+			antick_traits_mania_has_any_height_gene_trigger = no
+		}
+		random_list = {
+			55 = {
+				add_trait = height_average_1
+			}
+			15 = {
+				add_trait = height_short_1
+			}
+			5 = {
+				add_trait = height_short_2
+			}
+			20 = {
+				add_trait = height_tall_1
+			}
+			5 = {
+				add_trait = height_tall_2
+			}
+		}
+	}
+	add_character_flag = antick_traits_mania_height_traits_seeded
+	#make_trait_inactive = height_average_1
+}
+
+# makes average trait invisible
+#antick_traits_mania_hide_average_effect = {}
+
+# So that in Choose your height event there's no trait conflict
+antick_traits_mania_remove_height_trait_effect = {
+	remove_trait = height_short_1
+	remove_trait = height_short_2
+	remove_trait = height_tall_1
+	remove_trait = height_tall_2
+	remove_trait = height_average_1
+}
+
+#
+# this series of scripted effects adds height if the game rules are enabled, useful for scripted characters you want to be endowed a certain way
+#
+antick_traits_mania_add_height_tall_1_effect = {
+	if = {
+		limit = { has_game_rule = antick_traits_mania_height_enabled_true }
+		add_trait = height_tall_1
+	}
+	add_character_flag = antick_traits_mania_height_traits_seeded
+}
+
+antick_traits_mania_add_height_tall_2_effect = {
+	if = {
+		limit = { has_game_rule = antick_traits_mania_height_enabled_true }
+		add_trait = height_tall_2
+	}
+	add_character_flag = antick_traits_mania_height_traits_seeded
+}
+
+antick_traits_mania_add_height_average_1_effect = {
+	if = {
+		limit = { has_game_rule = antick_traits_mania_height_enabled_true }
+		add_trait = height_average_1
+	}
+	add_character_flag = antick_traits_mania_height_traits_seeded
+}
+
+antick_traits_mania_add_height_short_1_effect = {
+	if = {
+		limit = { has_game_rule = antick_traits_mania_height_enabled_true }
+		add_trait = height_short_1
+	}
+	add_character_flag = antick_traits_mania_height_traits_seeded
+}
+
+antick_traits_mania_add_height_short_2_effect = {
+	if = {
+		limit = { has_game_rule = antick_traits_mania_height_enabled_true }
+		add_trait = height_short_2
+	}
+	add_character_flag = antick_traits_mania_height_traits_seeded
+}
+

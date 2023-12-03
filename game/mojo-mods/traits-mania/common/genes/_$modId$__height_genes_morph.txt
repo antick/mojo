@@ -1,0 +1,150 @@
+﻿morph_genes = {
+    gene_height = {
+        index = 91
+        can_have_portrait_extremity_shift = no
+
+        normal_height = { 
+            index = 0
+            male = {
+                setting = { attribute = "body_height" value = { min = -0.2 max = 0.2 } age = age_preset_height  }
+                setting = { attribute = "head_body_height" value = { min = -0.2 max = 0.2 } age = age_preset_height }
+                setting = {
+                    attribute = "bs_dwarf_1"
+                    # value = { min = 1.0 max = -1.0 }
+                    curve = {
+                    { 0.0   1.0 }
+                    { 0.5   0.0 }
+                    { 1.0   0.0 }
+                    }
+                    age = age_preset_height
+                }
+                setting = {
+                    attribute = "bs_body_dwarf_1"
+                    # value = { min = 1.0 max = -1.0 }
+                    curve = {
+                    { 0.0   1.0 }
+                    { 0.5   0.0 }
+                    { 1.0   0.0 }
+                    }
+                    age = age_preset_height
+                }
+            }
+            female = male
+            boy = male
+            girl = male
+        }
+
+        dwarf_height = { 
+            index = 1
+            male = {
+                setting = {
+                    attribute = "body_height"
+                    value = { min = -0.5 max = -0.25 }
+                    age = age_preset_height
+                }
+                setting = {
+                    attribute = "head_body_height"
+                    value = { min = -0.5 max = -0.25 }
+                    age = age_preset_height
+                }
+                setting = {
+                    attribute = "bs_dwarf_1"
+                    # value = { min = 1.0 max = 0.5 }
+                    curve = {
+                    { 0.0   1.0 }
+                    { 1.0   0.75 }
+                    }
+                    age = age_preset_height
+                }
+                setting = {
+                    attribute = "bs_body_dwarf_1"
+                    # value = { min = 1.0 max = 0.5 }
+                    curve = {
+                    { 0.0   1.0 }
+                    { 1.0   0.75 }
+                    }
+                    age = age_preset_height
+                }
+            }
+            female = male
+            boy = male
+            girl = male
+        }
+
+        giant_height = {
+            index = 2
+            male = {
+                setting = {
+                    attribute = "body_height"
+                    value = { min = 0.51 max = 0.6 }
+                    age = age_preset_height
+                }
+                setting = {
+                    attribute = "head_body_height"
+                    value = { min = 0.5 max = 0.6 }
+                    age = age_preset_height
+                }
+            }
+            female = male
+            boy = male
+            girl = male
+        }
+       
+        towering_height = { 
+            index = 3
+            male = { 
+                setting = { attribute = "body_height" value = { min = 0.35 max = 0.5 } age = age_preset_height } 
+                setting = { attribute = "head_body_height" value = { min = 0.3 max = 0.5 } age = age_preset_height }
+            }
+            female = male
+            boy = male
+            girl = male
+        }
+        
+        tall_height = { 
+            index = 4
+            male = { 
+                setting = { attribute = "body_height" value = { min = 0.25 max = 0.4 } age = age_preset_height } 
+                setting = { attribute = "head_body_height" value = { min = 0.2 max = 0.3 } age = age_preset_height } 
+                setting = { attribute = "bs_dwarf_1"    value = { min = -0.1 max = -1.0 } age = age_preset_height   } 
+                setting = { attribute = "bs_body_dwarf_1"   value = { min = -0.1 max = -1.0 }   age = age_preset_height }  
+            }
+            female = male
+            boy = male
+            girl = male
+        }
+
+        average_height = { 
+            index = 5
+            male = { 
+                setting = { attribute = "body_height" value = { min = 0 max = 0.20 } age = age_preset_height  } 
+                setting = { attribute = "head_body_height" value = { min = -0.1 max = 0.1 } age = age_preset_height } 
+            }
+            female = male
+            boy = male
+            girl = male
+        }
+
+        short_height = { 
+            index = 6
+            male = { 
+                setting = { attribute = "body_height" value = { min = -0.10 max = -0.05 } age = age_preset_height } 
+                setting = { attribute = "head_body_height" value = { min = -0.25 max = -0.2 } age = age_preset_height }
+            }
+            female = male
+            boy = male
+            girl = male
+        }
+
+        small_height = {
+            index = 7
+            male = { 
+                setting = { attribute = "body_height" value = { min = -0.20 max = -0.15 } age = age_preset_height } 
+                setting = { attribute = "head_body_height" value = { min = -0.30 max = -0.25 } age = age_preset_height } 
+            }
+            female = male
+            boy = male
+            girl = male
+        }
+    }
+}

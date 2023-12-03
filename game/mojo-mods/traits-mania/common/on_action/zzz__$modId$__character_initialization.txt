@@ -1,0 +1,51 @@
+﻿# there's no way for us to easily catch every character that's generated
+# so instead we have to do this horribly clunky workaround...
+
+# "zzz" so that this on_game_start_after_lobby fires last after all pdx events (hopefully)
+
+on_game_start_after_lobby = {
+    on_actions = {
+        _$modId$__height_character_initialization
+    }
+}
+
+_$modId$__height_character_initialization = {
+    trigger = {
+        has_game_rule = _$modId$__height_enabled_true
+    }
+
+    effect = {
+        every_living_character = {
+            _$modId$__seed_height_traits_effect = yes
+        }
+    }
+}
+
+_$modId$__character_initialization_pulse = {
+    trigger = {
+        has_game_rule = _$modId$__height_enabled_true
+        NOR = { 
+            has_character_flag = _$modId$__height_traits_seeded
+            _$modId$__has_any_height_gene_trigger = yes
+        }
+    }
+	effect = {
+        _$modId$__seed_height_traits_effect = yes
+    }
+}
+
+on_join_court = {
+	on_actions = { _$modId$__character_initialization_pulse }
+}
+
+on_birthday = {
+	on_actions = { _$modId$__character_initialization_pulse }
+}
+
+on_title_gain = {
+	on_actions = { _$modId$__character_initialization_pulse }
+}
+
+on_birth_child = {
+	on_actions = { _$modId$__character_initialization_pulse }
+}

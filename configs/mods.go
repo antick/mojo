@@ -183,6 +183,25 @@ func ModConfig() *ModType {
 }`,
 				},
 			},
+
+			"traits-mania": {
+				Enabled: true,
+				Replacements: map[string]string{
+					"modId":                config.ModIdPrefix + "_traits_mania",
+					"modFolderName":        "traits-mania",
+					"modName":              "Traits Mania",
+					"modVersion":           "1.0.0",
+					"supportedGameVersion": "1.7.2",
+					"modRemoteFileId":      "",
+					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "auto-pause-game"), "\\", "/"),
+					"modTags": `{
+	"Balance"
+	"Decisions"
+	"Gameplay"
+	"Utilities"
+}`,
+				},
+			},
 		},
 	}
 }

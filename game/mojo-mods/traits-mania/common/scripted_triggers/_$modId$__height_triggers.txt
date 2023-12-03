@@ -1,0 +1,14 @@
+﻿# _$modId$__has_any_height_gene_trigger
+
+# returns true if this character has any congenital height trait, active or inactive
+_$modId$__has_any_height_gene_trigger = {
+	OR = {
+		has_trait = height_short_1
+		has_trait = height_short_2
+		has_trait = height_tall_1
+		has_trait = height_tall_2
+		has_trait = height_average_1
+		has_trait = giant
+		has_trait = dwarf
+	}
+}

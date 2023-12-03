@@ -1,0 +1,51 @@
+﻿# there's no way for us to easily catch every character that's generated
+# so instead we have to do this horribly clunky workaround...
+
+# "zzz" so that this on_game_start_after_lobby fires last after all pdx events (hopefully)
+
+on_game_start_after_lobby = {
+    on_actions = {
+        antick_traits_mania_height_character_initialization
+    }
+}
+
+antick_traits_mania_height_character_initialization = {
+    trigger = {
+        has_game_rule = antick_traits_mania_height_enabled_true
+    }
+
+    effect = {
+        every_living_character = {
+            antick_traits_mania_seed_height_traits_effect = yes
+        }
+    }
+}
+
+antick_traits_mania_character_initialization_pulse = {
+    trigger = {
+        has_game_rule = antick_traits_mania_height_enabled_true
+        NOR = { 
+            has_character_flag = antick_traits_mania_height_traits_seeded
+            antick_traits_mania_has_any_height_gene_trigger = yes
+        }
+    }
+	effect = {
+        antick_traits_mania_seed_height_traits_effect = yes
+    }
+}
+
+on_join_court = {
+	on_actions = { antick_traits_mania_character_initialization_pulse }
+}
+
+on_birthday = {
+	on_actions = { antick_traits_mania_character_initialization_pulse }
+}
+
+on_title_gain = {
+	on_actions = { antick_traits_mania_character_initialization_pulse }
+}
+
+on_birth_child = {
+	on_actions = { antick_traits_mania_character_initialization_pulse }
+}

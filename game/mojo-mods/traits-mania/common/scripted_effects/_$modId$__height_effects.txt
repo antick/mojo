@@ -1,0 +1,118 @@
+﻿# _$modId$__seed_height_traits_effect
+
+# _$modId$__remove_height_trait_effect
+# _$modId$__add_height_short_1_effect
+# _$modId$__add_height_short_2_effect
+# _$modId$__add_height_tall_1_effect
+# _$modId$__add_height_tall_2_effect
+# _$modId$__add_height_short_1_effect
+
+# randomly seed inactive height traits
+_$modId$__seed_height_traits_effect = {
+	limit = {
+		NOR = { 
+			has_character_flag = _$modId$__height_traits_seeded
+			_$modId$__has_any_height_gene_trigger = yes
+		}
+	}
+	if = {
+		limit = { has_character_flag = _$modId$__seed_height_tall_1 }
+		_$modId$__add_height_tall_1_effect = yes
+	}
+	else_if = {
+		limit = { has_character_flag = _$modId$__seed_height_tall_2 }
+		_$modId$__add_height_tall_2_effect = yes
+	}
+	else_if = {
+		limit = { has_character_flag = _$modId$__seed_height_average_1 }
+		_$modId$__add_height_average_1_effect = yes
+	}
+	else_if = {
+		limit = { has_character_flag = _$modId$__seed_height_short_1 }
+		_$modId$__add_height_short_1_effect = yes
+	}
+	else_if = {
+		limit = { has_character_flag = _$modId$__seed_height_short_2 }
+		_$modId$__add_height_short_2_effect = yes
+	}
+	else_if = {
+		limit = {
+			_$modId$__has_any_height_gene_trigger = no
+		}
+		random_list = {
+			55 = {
+				add_trait = height_average_1
+			}
+			15 = {
+				add_trait = height_short_1
+			}
+			5 = {
+				add_trait = height_short_2
+			}
+			20 = {
+				add_trait = height_tall_1
+			}
+			5 = {
+				add_trait = height_tall_2
+			}
+		}
+	}
+	add_character_flag = _$modId$__height_traits_seeded
+	#make_trait_inactive = height_average_1
+}
+
+# makes average trait invisible
+#_$modId$__hide_average_effect = {}
+
+# So that in Choose your height event there's no trait conflict
+_$modId$__remove_height_trait_effect = {
+	remove_trait = height_short_1
+	remove_trait = height_short_2
+	remove_trait = height_tall_1
+	remove_trait = height_tall_2
+	remove_trait = height_average_1
+}
+
+#
+# this series of scripted effects adds height if the game rules are enabled, useful for scripted characters you want to be endowed a certain way
+#
+_$modId$__add_height_tall_1_effect = {
+	if = {
+		limit = { has_game_rule = _$modId$__height_enabled_true }
+		add_trait = height_tall_1
+	}
+	add_character_flag = _$modId$__height_traits_seeded
+}
+
+_$modId$__add_height_tall_2_effect = {
+	if = {
+		limit = { has_game_rule = _$modId$__height_enabled_true }
+		add_trait = height_tall_2
+	}
+	add_character_flag = _$modId$__height_traits_seeded
+}
+
+_$modId$__add_height_average_1_effect = {
+	if = {
+		limit = { has_game_rule = _$modId$__height_enabled_true }
+		add_trait = height_average_1
+	}
+	add_character_flag = _$modId$__height_traits_seeded
+}
+
+_$modId$__add_height_short_1_effect = {
+	if = {
+		limit = { has_game_rule = _$modId$__height_enabled_true }
+		add_trait = height_short_1
+	}
+	add_character_flag = _$modId$__height_traits_seeded
+}
+
+_$modId$__add_height_short_2_effect = {
+	if = {
+		limit = { has_game_rule = _$modId$__height_enabled_true }
+		add_trait = height_short_2
+	}
+	add_character_flag = _$modId$__height_traits_seeded
+}
+

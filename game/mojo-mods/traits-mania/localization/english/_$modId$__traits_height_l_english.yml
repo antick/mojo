@@ -1,0 +1,26 @@
+﻿l_english:
+
+ #Physical Traits
+ trait_height_tall:0 "Tall"
+ trait_height_average:0 "Average"
+ trait_height_short:0 "Short"
+
+ trait_height_tall_1:0 "Tall"
+ trait_height_tall_1_desc:0 "This character is noticeably taller than the average person of their gender, providing a small advantage in combat, but making it a bit harder for them to sneak about unnoticed."
+ trait_height_tall_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is slightly taller than the average person of their gender, providing a small advantage in combat, but making it a bit harder for them to sneak about unnoticed."
+
+ trait_height_tall_2:0 "Towering"
+ trait_height_tall_2_desc:0 "This character is often the first to be seen in a group of people of their gender, and is naturally a bit stronger than most, but has a very hard time sneaking about unnoticed."
+ trait_height_tall_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is often the first to be seen in a group of people of their gender, but has a very hard time sneaking about unnoticed."
+
+  trait_height_average_1:0 "Average Stature"
+ trait_height_average_1_desc:0 "This character is of average height for their gender."
+ trait_height_average_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is of average height for their gender."
+
+ trait_height_short_1:0 "Short"
+ trait_height_short_1_desc:0 "This character is noticeably shorter than the average person of their gender, giving them a small disadvantage in combat, but making it a bit easier for them to sneak about unnoticed."
+ trait_height_short_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is slightly shorter than the average person of their gender, giving them a small disadvantage in combat, but making it a bit easier for them to sneak about unnoticed."
+
+ trait_height_short_2:0 "Small"
+ trait_height_short_2_desc:0 "This character is often the last to be seen in a group of people of their gender, and is naturally weaker than most, but but it is much easier for them to sneak about unnoticed."
+ trait_height_short_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is often the last to be seen in a group of people of their gender, and is naturally weaker than most, but it is much easier for them to sneak about unnoticed."

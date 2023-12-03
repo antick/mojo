@@ -217,10 +217,21 @@ func BuildLooseModFiles(modBuildPath string, modFileName string, replacements ma
 	return err
 }
 
-func BuildThumbnailFile(modBuildPath string) error {
+func BuildCombinedThumbnailFile(modBuildPath string) error {
 	err := ProcessFile(
 		modBuildPath,
 		config.ThumbnailSourcePath,
+		filepath.Join(modBuildPath, "thumbnail.png"),
+		map[string]string{},
+	)
+
+	return err
+}
+
+func BuildLooseThumbnailFiles(modBuildPath string, modFolderName string) error {
+	err := ProcessFile(
+		modBuildPath,
+		filepath.Join(config.ModPath, modFolderName, "thumbnail.png"),
 		filepath.Join(modBuildPath, "thumbnail.png"),
 		map[string]string{},
 	)
@@ -240,7 +251,7 @@ func BuildCombinedMod(modBuildPath string, selectedModKeys []string) error {
 		return err
 	}
 
-	if err = BuildThumbnailFile(modBuildPath); err != nil {
+	if err = BuildCombinedThumbnailFile(modBuildPath); err != nil {
 		fmt.Println("Error while processing thumbnail.png file")
 		return err
 	}
@@ -333,7 +344,7 @@ func BuildLooseMods(buildPath string, selectedModKeys []string) error {
 			return err
 		}
 
-		if err = BuildThumbnailFile(modBuildPath); err != nil {
+		if err = BuildLooseThumbnailFiles(modBuildPath, modFolderName); err != nil {
 			fmt.Println("Error while processing thumbnail.png file")
 			return err
 		}
