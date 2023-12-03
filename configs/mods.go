@@ -166,6 +166,23 @@ func ModConfig() *ModType {
 }`,
 				},
 			},
+
+			"epe-barbershop-idle-pose-compatch": {
+				Enabled: true,
+				Replacements: map[string]string{
+					"modId":                config.ModIdPrefix + "_idle_pose_compatch",
+					"modFolderName":        "epe-barbershop-idle-pose-compatch",
+					"modName":              "EPE + Barbershop Idle Pose Compatch By Antick",
+					"modVersion":           "1.1.1",
+					"supportedGameVersion": "1.8.1",
+					"modRemoteFileId":      "remote_file_id=\"2870777363\"",
+					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "epe-barbershop-idle-pose-compatch"), "\\", "/"),
+					"modTags": `{
+	"Fixes"
+	"Portraits"
+}`,
+				},
+			},
 		},
 	}
 }
