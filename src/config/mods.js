@@ -71,7 +71,7 @@ module.exports = {
     },
 
     'tweak-n-treat': {
-      modId: `${config.modIdPrefix}_tweak_it`,
+      modId: `${config.modIdPrefix}_tweak_n_treat`,
       modFolderName: 'tweak-n-treat',
       modName: 'Tweak n Treat',
       modVersion: '1.0.0',
@@ -143,7 +143,7 @@ module.exports = {
       modName: 'Traits Mania',
       modVersion: '1.0.0',
       supportedGameVersion: '1.7.2',
-      modRemoteFileId: 'remote_file_id="2870777363"',
+      modRemoteFileId: '',
       modBuildPath: path.join(config.ck3GameModPath, 'traits-mania').replaceAll(/\\/g, '/'),
       modTags: `{
 	"Balance"
