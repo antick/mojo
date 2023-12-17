@@ -227,7 +227,9 @@ async function buildCombinedMod(modBuildPath, selectedModKeys) {
     await buildCombinedDescriptorFile(modBuildPath);
     await buildCombinedThumbnailFile(modBuildPath);
 
-    for (const modKey of selectedModKeys) {
+    const subMods = !selectedModKeys.length ? Object.keys(modConfig.subMods) : selectedModKeys;
+
+    for (const modKey of subMods) {
       const modDetails = modConfig.subMods[modKey];
       if (!modDetails) {
         console.log(`Mod ${modKey} not found`);

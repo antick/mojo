@@ -27,7 +27,7 @@ https://nodejs.org/en/download
 
 ## Usage
 
-Run the program `npm run start`
+Run the program `npm start`
 
 ## In-Built Mod
 

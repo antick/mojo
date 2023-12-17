@@ -20,9 +20,30 @@ function main() {
     answer = answer.trim();
     switch (answer) {
       case '1':
-        app.buildModsInLocal([], true)
-          .then(() => console.log('Mods built successfully in local!'))
-          .catch((err) => console.error('Error building local mods:', err));
+        console.log('Do you want to build a combined mod?');
+        console.log('1: Build a single combined Mod (Local)');
+        console.log('2: Build individual mods (Local)');
+        console.log('\nYour choice (1/2): ');
+
+        rl.question('', answer => {
+          answer = answer.trim();
+          switch (answer) {
+            case '1':
+              app.buildModsInLocal([], true)
+                .then(() => console.log('Mods built successfully in local!'))
+                .catch((err) => console.error('Error building local mods:', err));
+              break;
+            case '2':
+              app.buildModsInLocal([], false)
+                .then(() => console.log('Mods built successfully in local!'))
+                .catch((err) => console.error('Error building local mods:', err));
+              break;
+            default:
+              console.error('Invalid choice');
+              break;
+          }
+        });
+
         break;
       case '2':
         app.buildModsInGame([], true)
@@ -42,3 +63,5 @@ function main() {
     rl.close();
   });
 }
+
+main();

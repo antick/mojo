@@ -5,24 +5,19 @@ const syncGameFiles = require('./scripts/sync-game-files');
 const modBuilder = require('./scripts/mod-builder');
 
 async function buildModsInLocal(selectedModKeys, buildCombinedMod) {
-  if (!selectedModKeys.length) {
-    throw new Error('No mods selected for building');
-  }
-
   if (buildCombinedMod) {
-    const modFileName = `${modConfig.combinedMod.modFolderName}.mod`;
-
     try {
-      await modBuilder.buildModFile(config.localModBuildPath, modFileName);
+      await modBuilder.buildModFile(config.localModBuildPath, `${modConfig.combinedMod.modFolderName}.mod`);
     } catch (error) {
-      console.error('Error while processing mojo.mod file:', error);
+      console.error('Error while processing .mod file:', error);
       return error;
     }
 
-    const modBuildPath = path.join(config.localModBuildPath, modConfig.combinedMod.modFolderName);
-
     try {
-      await modBuilder.buildCombinedMod(modBuildPath, selectedModKeys);
+      await modBuilder.buildCombinedMod(
+        path.join(config.localModBuildPath, modConfig.combinedMod.modFolderName),
+        selectedModKeys
+      );
     } catch (error) {
       console.error(`Error building combined mod in local: ${error}`);
       return error;
@@ -41,7 +36,7 @@ async function buildModsInLocal(selectedModKeys, buildCombinedMod) {
 
 async function buildModsInGame(selectedModKeys, buildCombinedMod) {
   if (!selectedModKeys.length) {
-    throw new Error('No mods selected for building');
+    throw new Error('No mods selected for building in game');
   }
 
   if (buildCombinedMod) {
