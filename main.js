@@ -25,42 +25,45 @@ function main() {
         console.log('2: Build individual mods (Local)');
         console.log('\nYour choice (1/2): ');
 
-        rl.question('', answer => {
-          answer = answer.trim();
-          switch (answer) {
+        rl.question('', answer2 => {
+          answer2 = answer2.trim();
+          switch (answer2) {
             case '1':
               app.buildModsInLocal([], true)
                 .then(() => console.log('Mods built successfully in local!'))
-                .catch((err) => console.error('Error building local mods:', err));
+                .catch((err) => console.error('Error building local mods:', err))
+                .finally(() => rl.close());
               break;
             case '2':
               app.buildModsInLocal([], false)
                 .then(() => console.log('Mods built successfully in local!'))
-                .catch((err) => console.error('Error building local mods:', err));
+                .catch((err) => console.error('Error building local mods:', err))
+                .finally(() => rl.close());
               break;
             default:
               console.error('Invalid choice');
+              rl.close();
               break;
           }
         });
-
         break;
       case '2':
         app.buildModsInGame([], true)
           .then(() => console.log('Mods built successfully in game folder!'))
-          .catch((err) => console.error('Error building game mods:', err));
+          .catch((err) => console.error('Error building game mods:', err))
+          .finally(() => rl.close());
         break;
       case '3':
         app.syncCk3GameFiles()
           .then(() => console.log('CK3 game files synced successfully!'))
-          .catch((err) => console.error('Error syncing CK3 game files:', err));
+          .catch((err) => console.error('Error syncing CK3 game files:', err))
+          .finally(() => rl.close());
         break;
       default:
         console.error('Invalid choice');
+        rl.close();
         break;
     }
-
-    rl.close();
   });
 }
 
