@@ -21,23 +21,13 @@ This is a great tool for modders who manage a lot of mods and find it hard to ke
 
 ## Installation
 
-Install Go 1.20 or higher:
-
-https://go.dev/doc/install
-
-Download and install Node.js 20:
+Download and install Node.js 21 or later:
 
 https://nodejs.org/en/download
 
-Install Wails from their documentation:
-
-https://wails.io/docs/gettingstarted/installation
-
 ## Usage
 
-To run in live development mode, run `wails dev` in the project directory.
-
-To build a redistributable executable, use `wails build` in the project directory.
+Run the program `npm run start`
 
 ## In-Built Mod
 
@@ -48,8 +38,8 @@ This tool also comes up with an in-built mod called Mojo that has a few features
 This should be the very last mod in your playlist.
 
 ```
-...All your mods here
-Mojo by Antick
+...other mods
+Mojo Mod
 ```
 
 ### Compatibility
@@ -114,10 +104,6 @@ EPE
 9. Allow user to configure the path in the app itself rather than hard coding those in the code.
 10. Ability to use and merge existing mods from steam workshop with your mod on fly. Need to find a way to handle the incompatibility.
 11. Create a simple app version for non-tech/non-dev users.
-
-## Known issues
-
-None at the moment. Please report any issues you encounter.
 
 ## FAQ
 

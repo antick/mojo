@@ -1,0 +1,343 @@
+############### Physical ##############
+
+# Height (0) - Average
+height_average_1 = {
+	opposites = {
+		height_short
+		height_tall
+		dwarf
+		giant
+	}
+	
+	birth = 0	#handled through script
+	random_creation = 0	#handled through script
+
+	group = height_average
+	level = 1
+
+	genetic = yes
+	physical = yes
+
+	same_opinion = 5
+
+	genetic_constraint_all = height_average_1
+	genetic_constraint_men = male_height_average_1
+	genetic_constraint_women = female_height_average_1
+
+	ruler_designer_cost = 0
+
+	compatibility = {
+		height_short_1 = @pos_compat_low
+		height_short_2 = @pos_compat_low
+		dwarf = @pos_compat_low
+		height_tall_1 = @pos_compat_low
+		height_tall_2 = @pos_compat_low
+		giant = @pos_compat_low
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_height_average_1_desc
+			}
+			desc = trait_height_average_1_character_desc
+		}
+	}
+}
+
+# Height (-1) - Short
+height_short_1 = {
+	opposites = {
+		height_average
+		height_tall
+		height_short_2
+		dwarf
+		giant
+	}
+
+	prowess = -1
+	intrigue = 1
+	life_expectancy = 5
+	dread_decay_mult = 0.1
+
+	birth = 0	#handled through script
+	random_creation = 0	#handled through script
+
+	attraction_opinion = -5
+
+	owned_scheme_secrecy_add = 5
+	hostile_scheme_power_mult = 0.10
+	hostile_scheme_resistance_add = 10
+
+	group = height_short
+	level = 1
+
+	genetic = yes
+	physical = yes
+
+	genetic_constraint_all = short_1
+	genetic_constraint_men = male_short_1
+	genetic_constraint_women = female_short_1
+
+	ruler_designer_cost = -10
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_height_short_1_desc
+			}
+			desc = trait_height_short_1_character_desc
+		}
+	}
+}
+
+# Height (-2) - Small
+height_short_2 = {
+	opposites = {
+		height_average
+		height_tall
+		height_short_1
+		dwarf
+		giant
+	}
+
+	prowess = -3
+	martial = -2
+	intrigue = 3
+	life_expectancy = 5
+	dread_decay_mult = 0.2
+
+	birth = 0	#handled through script
+	random_creation = 0	#handled through script
+
+	attraction_opinion = -10
+
+	owned_scheme_secrecy_add = 10
+	hostile_scheme_power_mult = 0.20
+	hostile_scheme_resistance_add = 20
+
+	group = height_short
+	level = 2
+
+	genetic = yes
+	physical = yes
+
+	genetic_constraint_all = short_2
+	genetic_constraint_men = male_short_2
+	genetic_constraint_women = female_short_2
+
+	flag = lower_chance_of_dying_in_combat
+
+	ruler_designer_cost = -30
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_height_short_2_desc
+			}
+			desc = trait_height_short_2_character_desc
+		}
+	}
+}
+
+# Height (+1) - Tall
+height_tall_1 = {
+	opposites = {
+		height_average
+		height_short
+		height_tall_2 #To prevent multiple tiers of the same congenital trait
+		dwarf
+		giant
+	}
+
+	prowess = 1
+	martial = 1
+	intrigue = -2
+	life_expectancy = -5
+	monthly_prestige_gain_mult = 0.1
+	dread_gain_mult = 0.1
+
+	birth = 0 	# Handled through script
+	random_creation = 0 # Handled through script
+
+	attraction_opinion = 5
+	vassal_opinion = 5
+	tribal_government_opinion = 10
+
+	group = height_tall
+	level = 1
+
+	genetic = yes
+	physical = yes
+	good = yes
+
+	genetic_constraint_all = tall_1
+	genetic_constraint_men = male_tall_1
+	genetic_constraint_women = female_tall_1
+
+	ruler_designer_cost = 60
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_height_tall_1_desc
+			}
+			desc = trait_height_tall_1_character_desc
+		}
+	}
+}
+
+# Height (+2) - Towering
+height_tall_2 = {
+	opposites = {
+		height_average
+		height_short
+		height_tall_1 #To prevent multiple tiers of the same congenital trait
+		dwarf
+		giant
+	}
+
+	prowess = 3
+	martial = 3
+	intrigue = -4
+	life_expectancy = -5
+	monthly_prestige_gain_mult = 0.2
+	dread_gain_mult = 0.2
+
+	birth = 0 	# Handled through script
+	random_creation = 0 # Handled through script
+
+	attraction_opinion = 15
+	vassal_opinion = 10
+	tribal_government_opinion = 20
+	
+	flag = higher_chance_of_dying_in_battle
+
+	group = height_tall
+	level = 2
+
+	genetic = yes
+	physical = yes
+	good = yes
+
+	genetic_constraint_all = tall_2
+	genetic_constraint_men = male_tall_2
+	genetic_constraint_women = female_tall_2
+
+	ruler_designer_cost = 120
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_height_tall_2_desc
+			}
+			desc = trait_height_tall_2_character_desc
+		}
+	}
+}
+
+# Dwarfism
+dwarf = {
+	prowess = -5
+	diplomacy = -5
+	martial = -5
+	intrigue = 6
+
+	life_expectancy = 10
+	dread_decay_mult = 0.4
+
+	opposites = {
+		giant
+		height_tall
+		height_average
+		height_short
+	}	
+
+	genetic = yes
+	physical = yes
+	good = no
+
+	enables_inbred = yes
+	birth = 0.5
+	random_creation = 0.5
+	
+	owned_scheme_secrecy_add = 20
+	hostile_scheme_power_mult = 0.40
+	hostile_scheme_resistance_add = 30
+
+	attraction_opinion = -30
+	same_opinion = 20
+	
+	ruler_designer_cost = 0
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_dwarf_desc
+			}
+			desc = trait_dwarf_character_desc
+		}
+	}
+}
+
+# Gigantism
+giant = {
+	opposites = {
+		dwarf
+		height_tall
+		height_average
+		height_short
+	}
+
+	prowess = 6
+	martial = 4
+	intrigue = -6
+	health = -0.25
+	life_expectancy = -20
+	dread_gain_mult = 0.4
+
+	genetic = yes
+	physical = yes
+	good = no
+
+	enables_inbred = yes
+	birth = 0.5
+	random_creation = 0.5
+	
+	attraction_opinion = -10
+	tribal_government_opinion = 30
+	vassal_opinion = 10
+	same_opinion = 20
+	
+	ruler_designer_cost = 60
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_giant_desc
+			}
+			desc = trait_giant_character_desc
+		}
+	}
+}

@@ -1,0 +1,5 @@
+﻿antick_traits_mania_height_enabled = {
+	default = antick_traits_mania_height_enabled_true
+	antick_traits_mania_height_enabled_false = {}
+	antick_traits_mania_height_enabled_true = {}
+}

@@ -1,0 +1,7 @@
+﻿l_english:
+ # Height Game Rule
+ rule_antick_traits_mania_height_enabled:0 "#X More Congenital Traits:#! Height Traits"
+ setting_antick_traits_mania_height_enabled_false:0 "Disabled"
+ setting_antick_traits_mania_height_enabled_false_desc:0 "Characters will NOT spawn with congenital height traits."
+ setting_antick_traits_mania_height_enabled_true:0 "#high Enabled#!"
+ setting_antick_traits_mania_height_enabled_true_desc:0 "Characters will spawn with congenital height traits."

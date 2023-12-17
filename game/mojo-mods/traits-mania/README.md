@@ -8,7 +8,7 @@ Collection of traits for CK3.
 
 Source: https://steamcommunity.com/sharedfiles/filedetails/?id=2707217128
 
-This mod was good but it's not being updated for a long time. And there are couple of issues with it. So I decided to make my own version of it.
+This mod was good, but it's not being updated for a long time. And there are a couple of issues with it. So I decided to make my own version of it.
 
 I have made following fixes in the above mod:
 1. Removed the Enormous Trait and tweaked Giant to be used for the same.

@@ -1,0 +1,25 @@
+antick_traits_mania_choose_height_decision = {
+	ai_check_interval = 0
+	picture = "gfx/interface/illustrations/event_scenes/study.dds"
+
+	desc = antick_traits_mania_choose_height_decision_desc
+
+	selection_tooltip = antick_traits_mania_choose_height_decision_desc_selection_tooltip
+
+	major = yes
+	is_shown = {
+		NOT = { exists = global_var:player_has_taken_height_decision }
+		is_ai = no
+	}
+
+	effect = {
+		trigger_event = { id = height_gene_distribution.1 }
+		set_global_variable = {
+			name = player_has_taken_height_decision
+			value = yes
+		}
+
+		custom_tooltip = antick_traits_mania_choose_height_decision.1.tt
+		custom_tooltip = antick_traits_mania_choose_height_decision.2.tt
+	}
+}

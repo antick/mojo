@@ -1,0 +1,24 @@
+﻿NChildbirth = {
+	# Note that the recessive chance is checked only if inheriting it outright fails
+	# Chances are in %. Values above 100% work and can make sense if there's modifiers that might reduce the chance
+	ACTIVE_TRAIT_CHANCE_ACTIVE_ACTIVE = 95			# Chance of outright inheriting a genetic trait if both parents have it
+	ACTIVE_TRAIT_CHANCE_ACTIVE_INACTIVE = 50		# Chance of outright inheriting a genetic trait if one parent has it, and one is carrying it recessively
+	ACTIVE_TRAIT_CHANCE_ACTIVE_NONE = 50			# Chance of outright inheriting a genetic trait if one parent has it
+	ACTIVE_TRAIT_CHANCE_INACTIVE_INACTIVE = 25		# Chance of outright inheriting a genetic trait if both parents are carrying it
+	ACTIVE_TRAIT_CHANCE_INACTIVE_NONE = 15			# Chance of outright inheriting a genetic trait if one parent is carrying it
+	INACTIVE_TRAIT_CHANCE_ACTIVE_ACTIVE = 150		# Chance of recessively inheriting a genetic trait if both parents have it. Deliberately over 100% so even if it is a bad trait, the modifiers to inheritance won't let you avoid it
+	INACTIVE_TRAIT_CHANCE_ACTIVE_INACTIVE = 100		# Chance of recessively inheriting a genetic trait if one parent has it, and one is carrying it recessively
+	INACTIVE_TRAIT_CHANCE_ACTIVE_NONE = 75			# Chance of recessively inheriting a genetic trait if one parent has it
+	INACTIVE_TRAIT_CHANCE_INACTIVE_INACTIVE = 50	# Chance of recessively inheriting a genetic trait if both parents are carrying it
+	INACTIVE_TRAIT_CHANCE_INACTIVE_NONE = 25		# Chance of recessively inheriting a genetic trait if one parent is carrying it
+
+	# General logic for tiered trait inheritance:
+	# 1. Start from highest trait
+	# 2. Calc active chance. Lower tiers ( including inactive ) count as inactive of the tier. Each level down beyond the first multiplies chance by a define
+	# 3. If active, use it; DONE
+	# 4. Otherwise, go down a tier, if inactive pretend 1 more parent has that tier active, otherwise 1 more parent has it inactive.GOTO 2
+	MATCHED_TRAIT_DIFFERENCE_MULT = 0.5				# When trying to inherit a tiered genetic trait, and the other person has one of lower tier, we pretend that means they've  got the higher tier one recessively, and reduce the chance of inheritance by this much per tier further down than 1 the other parent's trait is
+	TIER_TRAIT_REDUCTION_MULT = 0.9					# When going down a tier, add this chance
+		
+	TRAIT_REINFORCEMENT_CHANCE = 0.1				# The chance that a trait that gets inherited from both parents will get reinforced to a higher level.
+}
