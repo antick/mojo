@@ -1,2 +1,0 @@
-﻿gui/antick_grand_council_grand_council.gui = antick_grand_council_window
-gui/antick_grand_council_grand_council.gui = antick_grand_council_window_toggler

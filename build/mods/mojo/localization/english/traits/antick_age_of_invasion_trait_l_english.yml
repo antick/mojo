@@ -1,8 +1,0 @@
-﻿l_english:
- trait_antick_age_of_invasion:0 "The Conqueror"
- trait_antick_age_of_invasion_turkish:0 "Fatih"
- trait_antick_age_of_invasion_indian:0 "Vishwa-Vijeta"
- trait_antick_age_of_invasion_arab:0 "Al-Fatih"
-
- trait_antick_age_of_invasion_desc:0 "A master of strategy with unshackled ambition, this character is determined to conquer it all."
- trait_antick_age_of_invasion_character_desc:1 "As a master of strategy with unshackled ambition, [ROOT.GetCharacter.GetFullNameNoTooltip] is determined to conquer it all. \nAs a result, [ROOT.GetCharacter.GetHerHis] followers are ready to lend their strength in support."

@@ -1,35 +1,35 @@
 const path = require('path');
 const config = require('./config');
-const scripts = require('./scripts');
+const modConfig = require('./config/mods');
+const syncGameFiles = require('./scripts/sync-game-files');
+const modBuilder = require('./scripts/mod-builder');
 
-const modConfig = config.ModConfig();
-
-async function BuildModsInLocal(selectedModKeys, buildCombinedMod) {
+async function buildModsInLocal(selectedModKeys, buildCombinedMod) {
   if (!selectedModKeys.length) {
     throw new Error('No mods selected for building');
   }
 
   if (buildCombinedMod) {
-    const modFileName = `${modConfig.CombinedMod.Replacements.modFolderName}.mod`;
+    const modFileName = `${modConfig.combinedMod.modFolderName}.mod`;
 
     try {
-      await scripts.BuildModFile(config.ModBuildPathLocal, modFileName);
+      await modBuilder.buildModFile(config.localModBuildPath, modFileName);
     } catch (error) {
       console.error('Error while processing mojo.mod file:', error);
       return error;
     }
 
-    const modBuildPath = path.join(config.ModBuildPathLocal, modConfig.CombinedMod.Replacements.modFolderName);
+    const modBuildPath = path.join(config.localModBuildPath, modConfig.combinedMod.modFolderName);
 
     try {
-      await scripts.BuildCombinedMod(modBuildPath, selectedModKeys);
+      await modBuilder.buildCombinedMod(modBuildPath, selectedModKeys);
     } catch (error) {
       console.error(`Error building combined mod in local: ${error}`);
       return error;
     }
   } else {
     try {
-      await scripts.BuildLooseMods(config.ModBuildPathLocal, selectedModKeys);
+      await modBuilder.buildLooseMods(config.localModBuildPath, selectedModKeys);
     } catch (error) {
       console.error(`Error building selected mod(s) in local: ${error}`);
       return error;
@@ -39,32 +39,32 @@ async function BuildModsInLocal(selectedModKeys, buildCombinedMod) {
   return null;
 }
 
-async function BuildModsInGame(selectedModKeys, buildCombinedMod) {
+async function buildModsInGame(selectedModKeys, buildCombinedMod) {
   if (!selectedModKeys.length) {
     throw new Error('No mods selected for building');
   }
 
   if (buildCombinedMod) {
-    const modFileName = `${modConfig.CombinedMod.Replacements.modFolderName}.mod`;
+    const modFileName = `${modConfig.combinedMod.modFolderName}.mod`;
 
     try {
-      await scripts.BuildModFile(config.GameCustomModPath, modFileName);
+      await modBuilder.buildModFile(config.ck3GameModPath, modFileName);
     } catch (error) {
       console.error('Error while processing mojo.mod file:', error);
       return error;
     }
 
-    const modBuildPath = path.join(config.GameCustomModPath, modConfig.CombinedMod.Replacements.modFolderName);
+    const modBuildPath = path.join(config.ck3GameModPath, modConfig.combinedMod.modFolderName);
 
     try {
-      await scripts.BuildCombinedMod(modBuildPath, selectedModKeys);
+      await modBuilder.buildCombinedMod(modBuildPath, selectedModKeys);
     } catch (error) {
       console.error(`Error building combined mod in game: ${error}`);
       return error;
     }
   } else {
     try {
-      await scripts.BuildLooseMods(config.GameCustomModPath, selectedModKeys);
+      await modBuilder.buildLooseMods(config.ck3GameModPath, selectedModKeys);
     } catch (error) {
       console.error(`Error building selected mod(s) in game: ${error}`);
       return error;
@@ -74,26 +74,21 @@ async function BuildModsInGame(selectedModKeys, buildCombinedMod) {
   return null;
 }
 
-async function PullCk3GameFiles() {
+async function syncCk3GameFiles() {
   try {
-    await scripts.Pull(config.Ck3PullMapping);
-    console.log(`📦 Pulled CK3 game files to ${configuration.ModCk3Path}`);
+    await syncGameFiles.syncCk3Files(config.gameFoldersToSync);
+    console.log(`📦 Synced CK3 game files to ${config.syncedCk3Folder}`);
   } catch (error) {
-    console.error(`Error pulling CK3 game files: ${error}`);
+    console.error(`Error syncing CK3 game files: ${error}`);
     return error;
   }
 
-  console.log(` Pulled CK3 game files to ${config.ModCk3Path}`);
+  console.log(`Synced CK3 game files to ${config.syncedCk3Folder}`);
   return null;
 }
 
-async function GetModList() {
-  return modConfig;
-}
-
 module.exports = {
-  BuildModsInLocal,
-  BuildModsInGame,
-  PullCk3GameFiles,
-  GetModList,
+  buildModsInLocal,
+  buildModsInGame,
+  syncCk3GameFiles,
 };

@@ -1,13 +1,11 @@
 const fs = require('fs').promises;
 const path = require('path');
-
-// Configurations would be imported from your configuration files.
-const config = require('../config').Config();
-const modConfig = require('../config').ModConfig();
+const config = require('../config');
+const modConfig = require('../config/mods');
 
 async function cleanup(modPath) {
   try {
-    await fs.rm(modPath, { recursive: true, force: true });
+    await fs.rm(modPath, {recursive: true, force: true});
     console.log(`🧹 Cleaned ${modPath} folder`);
   } catch (err) {
     console.error(`Error while removing ${modPath}:`, err);
@@ -16,9 +14,9 @@ async function cleanup(modPath) {
 }
 
 async function processDirectory(modBuildPath, srcDirectory, destDirectory, replacements) {
-  await fs.mkdir(destDirectory, { recursive: true });
+  await fs.mkdir(destDirectory, {recursive: true});
 
-  const items = await fs.readdir(srcDirectory, { withFileTypes: true });
+  const items = await fs.readdir(srcDirectory, {withFileTypes: true});
 
   for (const item of items) {
     const srcPath = path.join(srcDirectory, item.name);
@@ -34,11 +32,11 @@ async function processDirectory(modBuildPath, srcDirectory, destDirectory, repla
 
 async function processFile(modBuildPath, srcPath, destPath, replacements) {
   let destFile = path.basename(destPath);
-  const formatToReplace = "_\\$%s\\$_"; // This may need to be adjusted for JavaScript regex syntax
+  const formatToReplace = '_\\$%s\\$_';
 
   for (const [placeholder, replacement] of Object.entries(replacements)) {
-    const re = new RegExp(formatToReplace.replace('%s', placeholder), 'g');
-    destFile = destFile.replace(re, replacement);
+    const re = new RegExp(formatToReplace.replaceAll('%s', placeholder), 'g');
+    destFile = destFile.replaceAll(re, replacement);
   }
 
   const finalDestPath = path.join(path.dirname(destPath), destFile);
@@ -53,7 +51,7 @@ async function processFile(modBuildPath, srcPath, destPath, replacements) {
 
   // Skip text replacement for certain file types
   const ext = path.extname(srcPath);
-  if (ext === ".dds" || ext === ".png") {
+  if (ext === '.dds' || ext === '.png') {
     return copyFiles(srcPath, finalDestPath);
   }
 
@@ -61,14 +59,14 @@ async function processFile(modBuildPath, srcPath, destPath, replacements) {
     let data = await fs.readFile(srcPath, 'utf8');
 
     for (const [placeholder, replacement] of Object.entries(replacements)) {
-      const re = new RegExp(formatToReplace.replace('%s', placeholder), 'g');
-      data = data.replace(re, replacement);
+      const re = new RegExp(formatToReplace.replaceAll('%s', placeholder), 'g');
+      data = data.replaceAll(re, replacement);
     }
 
-    await fs.mkdir(modBuildPath, { recursive: true });
+    await fs.mkdir(modBuildPath, {recursive: true});
     await fs.writeFile(finalDestPath, data);
   } catch (err) {
-    console.error("Error processing file:", err);
+    console.error('Error processing file:', err);
     throw err;
   }
 }
@@ -78,7 +76,7 @@ const copyFiles = async (src, dst) => {
     const data = await fs.readFile(src);
     await fs.writeFile(dst, data);
   } catch (err) {
-    console.error("Error while copying the file:", err);
+    console.error('Error while copying the file:', err);
     throw err;
   }
 };
@@ -86,12 +84,11 @@ const copyFiles = async (src, dst) => {
 const build = async (modBuildPath, modName, replacements) => {
   const filesAndFolderMapping = {};
 
-  // Assuming 'config.ModFoldersToProcess' and 'config.ModPath' are defined
-  config.ModFoldersToProcess.forEach(value => {
-    filesAndFolderMapping[path.join(config.ModPath, modName, value)] = path.join(modBuildPath, value);
+  config.modFoldersToProcess.forEach(value => {
+    filesAndFolderMapping[path.join(config.modSourcePath, modName, value)] = path.join(modBuildPath, value);
   });
 
-  const textReplacement = mergeReplacements(replacements, baseReplacements());
+  const textReplacement = mergeReplacements(replacements, {});
 
   for (const [srcPath, destPath] of Object.entries(filesAndFolderMapping)) {
     let info;
@@ -102,23 +99,23 @@ const build = async (modBuildPath, modName, replacements) => {
         // File or directory does not exist, skip
         continue;
       } else {
-        console.error("Build failed while accessing the given path:", err);
+        console.error('Build failed while accessing the given path:', err);
         throw err;
       }
     }
 
     if (info.isDirectory()) {
       try {
-        processDirectory(modBuildPath, srcPath, destPath, textReplacement); // Function not provided, assuming it exists
+        await processDirectory(modBuildPath, srcPath, destPath, textReplacement);
       } catch (err) {
-        console.error("Build failed for the given directory:", err);
+        console.error('Build failed for the given directory:', err);
         throw err;
       }
     } else {
       try {
-        processFile(modBuildPath, srcPath, destPath, textReplacement);
+        await processFile(modBuildPath, srcPath, destPath, textReplacement);
       } catch (err) {
-        console.error("Build failed:", err);
+        console.error('Build failed:', err);
         throw err;
       }
     }
@@ -136,20 +133,14 @@ function mergeReplacements(map1, map2) {
   return mergedMap;
 }
 
-function baseReplacements() {
-  return {};
-}
-
 async function buildCombinedDescriptorFile(modBuildPath) {
   try {
-    const err = await processFile(
+    return await processFile(
       modBuildPath,
-      config.ModDescriptorSourcePath,
+      config.modDescriptorSourcePath,
       path.join(modBuildPath, 'descriptor.mod'),
-      modConfig.CombinedMod.Replacements
+      modConfig.combinedMod
     );
-
-    return err;
   } catch (error) {
     console.error('Error in buildCombinedDescriptorFile:', error);
     throw error;
@@ -158,14 +149,12 @@ async function buildCombinedDescriptorFile(modBuildPath) {
 
 async function buildLooseDescriptorFiles(modBuildPath, replacements) {
   try {
-    const err = await processFile(
+    return await processFile(
       modBuildPath,
-      config.ModDescriptorSourcePath,
+      config.modDescriptorSourcePath,
       path.join(modBuildPath, 'descriptor.mod'),
       replacements
     );
-
-    return err;
   } catch (error) {
     console.error('Error in buildLooseDescriptorFiles:', error);
     throw error;
@@ -174,15 +163,13 @@ async function buildLooseDescriptorFiles(modBuildPath, replacements) {
 
 async function buildModFile(modBuildPath, modFileName) {
   try {
-    const sourceModFilePath = path.join(config.ModPath, modConfig.CombinedMod.Replacements['modFolderName'] + '.mod');
-    const err = await processFile(
+    const sourceModFilePath = path.join(config.modSourcePath, modConfig.combinedMod['modFolderName'] + '.mod');
+    return await processFile(
       modBuildPath,
       sourceModFilePath,
       path.join(modBuildPath, modFileName),
-      modConfig.CombinedMod.Replacements
+      modConfig.combinedMod
     );
-
-    return err;
   } catch (error) {
     console.error('Error in buildModFile:', error);
     throw error;
@@ -191,15 +178,14 @@ async function buildModFile(modBuildPath, modFileName) {
 
 async function buildLooseModFiles(modBuildPath, modFileName, replacements) {
   try {
-    const sourceModFilePath = path.join(config.ModPath, modConfig.CombinedMod.Replacements['modFolderName'] + '.mod');
-    const err = await processFile(
+    const sourceModFilePath = path.join(config.modSourcePath, modConfig.combinedMod['modFolderName'] + '.mod');
+
+    return await processFile(
       modBuildPath,
       sourceModFilePath,
       path.join(modBuildPath, modFileName),
       replacements
     );
-
-    return err;
   } catch (error) {
     console.error('Error in buildLooseModFiles:', error);
     throw error;
@@ -208,14 +194,12 @@ async function buildLooseModFiles(modBuildPath, modFileName, replacements) {
 
 async function buildCombinedThumbnailFile(modBuildPath) {
   try {
-    const err = await processFile(
+    return await processFile(
       modBuildPath,
-      config.ThumbnailSourcePath,
+      config.thumbnailSourcePath,
       path.join(modBuildPath, 'thumbnail.png'),
       {}
     );
-
-    return err;
   } catch (error) {
     console.error('Error in buildCombinedThumbnailFile:', error);
     throw error;
@@ -224,14 +208,12 @@ async function buildCombinedThumbnailFile(modBuildPath) {
 
 async function buildLooseThumbnailFiles(modBuildPath, modFolderName) {
   try {
-    const err = await processFile(
+    return await processFile(
       modBuildPath,
-      path.join(config.ModPath, modFolderName, 'thumbnail.png'),
+      path.join(config.modSourcePath, modFolderName, 'thumbnail.png'),
       path.join(modBuildPath, 'thumbnail.png'),
       {}
     );
-
-    return err;
   } catch (error) {
     console.error('Error in buildLooseThumbnailFiles:', error);
     throw error;
@@ -239,68 +221,58 @@ async function buildLooseThumbnailFiles(modBuildPath, modFolderName) {
 }
 
 async function buildCombinedMod(modBuildPath, selectedModKeys) {
-  console.log("-----------------------------------");
+  console.log('-----------------------------------');
   try {
     await cleanup(modBuildPath);
     await buildCombinedDescriptorFile(modBuildPath);
     await buildCombinedThumbnailFile(modBuildPath);
 
     for (const modKey of selectedModKeys) {
-      const modDetails = modConfig.SubMods[modKey];
+      const modDetails = modConfig.subMods[modKey];
       if (!modDetails) {
         console.log(`Mod ${modKey} not found`);
         continue;
       }
 
-      if (!modDetails.Enabled) {
-        console.log(`❗️${modKey} is disabled, skipping`);
-        continue;
-      } else {
-        console.log(`📦 Building ${modKey}`);
-      }
+      console.log(`📦 Building ${modKey}`);
 
-      await build(modBuildPath, modKey, modDetails.Replacements);
+      await build(modBuildPath, modKey, modDetails);
     }
 
-    console.log("-----------------------------------");
+    console.log('-----------------------------------');
     console.log(`✅ Build successful in ${modBuildPath} folder`);
-    console.log("-----------------------------------");
+    console.log('-----------------------------------');
   } catch (err) {
     throw err;
   }
 }
 
 async function buildLooseMods(buildPath, selectedModKeys) {
-  console.log("-----------------------------------");
+  console.log('-----------------------------------');
   try {
     for (const modKey of selectedModKeys) {
-      const modDetails = modConfig.SubMods[modKey];
+      const modDetails = modConfig.subMods[modKey];
       if (!modDetails) {
         console.log(`Mod ${modKey} not found`);
         continue;
       }
 
-      if (!modDetails.Enabled) {
-        console.log(`❗️${modKey} is disabled, skipping`);
-        continue;
-      } else {
-        console.log(`📦 Building ${modKey}`);
-      }
+      console.log(`📦 Building ${modKey}`);
 
-      const modFolderName = modDetails.Replacements["modFolderName"];
+      const modFolderName = modDetails['modFolderName'];
       const modBuildPath = path.join(buildPath, modFolderName);
-      const modFileName = modFolderName + ".mod";
+      const modFileName = modFolderName + '.mod';
 
-      console.log("-----------------------------------");
+      console.log('-----------------------------------');
       await cleanup(modBuildPath);
-      await buildLooseModFiles(buildPath, modFileName, modDetails.Replacements);
-      await buildLooseDescriptorFiles(modBuildPath, modDetails.Replacements);
+      await buildLooseModFiles(buildPath, modFileName, modDetails);
+      await buildLooseDescriptorFiles(modBuildPath, modDetails);
       await buildLooseThumbnailFiles(modBuildPath, modFolderName);
-      await build(modBuildPath, modKey, modDetails.Replacements);
+      await build(modBuildPath, modKey, modDetails);
 
       console.log(`✅ Build successful in ${modBuildPath} folder`);
     }
-    console.log("-----------------------------------");
+    console.log('-----------------------------------');
   } catch (err) {
     throw err;
   }
@@ -309,12 +281,7 @@ async function buildLooseMods(buildPath, selectedModKeys) {
 module.exports = {
   build,
   cleanup,
-  processFile,
-  processDirectory,
-  buildCombinedDescriptorFile,
-  buildLooseDescriptorFiles,
+  buildCombinedMod,
   buildModFile,
-  buildLooseModFiles,
-  buildCombinedThumbnailFile,
-  buildLooseThumbnailFiles
+  buildLooseMods,
 };

@@ -1,0 +1,445 @@
+﻿### IMPERIAL ###
+
+CouncilImperialChancellorPosition = {
+    type = character
+    text = {
+        trigger = {
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = imperial_chancellor_greek
+    }
+    text = {
+        trigger = {
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = imperial_chancellor_default
+    }
+    text = {
+        localization_key = imperial_chancellor_default
+        fallback = yes
+    }
+}
+
+CouncilImperialStewardPosition = {
+    type = character
+    text = {
+        trigger = {
+            is_male = yes
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = imperial_steward_male_greek
+    }
+    text = {
+        trigger = {
+            is_male = no
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = imperial_steward_female_greek
+    }
+    text = {
+        trigger = {
+            is_male = yes
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = imperial_steward_male_default
+    }
+    text = {
+        trigger = {
+            is_male = no
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = imperial_steward_female_default
+    }
+    text = {
+        localization_key = imperial_steward_male_default
+        fallback = yes
+    }
+}
+
+CouncilImperialCourtChaplainPosition = {
+    type = character
+    text = {
+        trigger = {
+            is_male = yes
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+            root.faith = { has_doctrine = doctrine_temporal_head }
+        }
+        localization_key = imperial_court_chaplain_male_greek
+    }
+    text = {
+        trigger = {
+            is_male = no
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+            root.faith = { has_doctrine = doctrine_temporal_head }
+        }
+        localization_key = imperial_court_chaplain_female_greek
+    }
+    text = {
+        trigger = {
+            is_male = yes
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+                root.faith = { has_doctrine = doctrine_temporal_head }
+            }
+        }
+        localization_key = imperial_court_chaplain_male_default
+    }
+    text = {
+        trigger = {
+            is_male = no
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+                root.faith = { has_doctrine = doctrine_temporal_head }
+            }
+        }
+        localization_key = imperial_court_chaplain_female_default
+    }
+    text = {
+        localization_key = imperial_court_chaplain_neutral_default
+        fallback = yes
+    }
+}
+
+CouncilImperialMarshalPosition = {
+    type = character
+    text = {
+        trigger = {
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = imperial_marshal_greek
+    }
+    text = {
+        trigger = {
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = imperial_marshal_default
+    }
+    text = {
+        localization_key = imperial_marshal_default
+        fallback = yes
+    }
+}
+
+CouncilImperialSpymasterPosition = {
+    type = character
+    text = {
+        trigger = {
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = imperial_spymaster_greek
+    }
+    text = {
+        trigger = {
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = imperial_spymaster_default
+    }
+    text = {
+        localization_key = imperial_spymaster_default
+        fallback = yes
+    }
+}
+
+### ROYAL ###
+
+CouncilRoyalChancellorPosition = {
+    type = character
+    text = {
+        trigger = {
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = royal_chancellor_greek
+    }
+    text = {
+        trigger = {
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = royal_chancellor_default
+    }
+    text = {
+        localization_key = royal_chancellor_default
+        fallback = yes
+    }
+}
+
+CouncilRoyalStewardPosition = {
+    type = character
+    text = {
+        trigger = {
+            is_male = yes
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = royal_steward_male_greek
+    }
+    text = {
+        trigger = {
+            is_male = no
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = royal_steward_female_greek
+    }
+    text = {
+        trigger = {
+            is_male = yes
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = royal_steward_male_default
+    }
+    text = {
+        trigger = {
+            is_male = no
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = royal_steward_female_default
+    }
+    text = {
+        localization_key = royal_steward_male_default
+        fallback = yes
+    }
+}
+
+CouncilRoyalCourtChaplainPosition = {
+    type = character
+    text = {
+        trigger = {
+            is_male = yes
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+            root.faith = { has_doctrine = doctrine_temporal_head }
+        }
+        localization_key = royal_court_chaplain_male_greek
+    }
+    text = {
+        trigger = {
+            is_male = no
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+            root.faith = { has_doctrine = doctrine_temporal_head }
+        }
+        localization_key = royal_court_chaplain_female_greek
+    }
+    text = {
+        trigger = {
+            is_male = yes
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+                root.faith = { has_doctrine = doctrine_temporal_head }
+            }
+        }
+        localization_key = royal_court_chaplain_male_default
+    }
+    text = {
+        trigger = {
+            is_male = no
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+                root.faith = { has_doctrine = doctrine_temporal_head }
+            }
+        }
+        localization_key = royal_court_chaplain_female_default
+    }
+    text = {
+        localization_key = royal_court_chaplain_neutral_default
+        fallback = yes
+    }
+}
+
+CouncilRoyalMarshalPosition = {
+    type = character
+    text = {
+        trigger = {
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = royal_marshal_greek
+    }
+    text = {
+        trigger = {
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = royal_marshal_default
+    }
+    text = {
+        localization_key = royal_marshal_default
+        fallback = yes
+    }
+}
+
+CouncilRoyalSpymasterPosition = {
+    type = character
+    text = {
+        trigger = {
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = royal_spymaster_greek
+    }
+    text = {
+        trigger = {
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = royal_spymaster_default
+    }
+    text = {
+        localization_key = royal_spymaster_default
+        fallback = yes
+    }
+}
+
+### DUCAL AND COMITAL MATRIARCH, PATRIARCH & ARCHBISHOP ###
+
+CouncilDucalCourtChaplainPosition = {
+    type = character
+    text = {
+        trigger = {
+            is_male = yes
+            root.faith = {
+                OR = {
+                    has_doctrine = doctrine_temporal_head
+                    has_doctrine = doctrine_theocracy_lay_clergy
+                }
+            }
+        }
+        localization_key = ducal_layclergy_male
+    }
+    text = {
+        trigger = {
+            is_male = no
+            root.faith = {
+                OR = {
+                    has_doctrine = doctrine_temporal_head
+                    has_doctrine = doctrine_theocracy_lay_clergy
+                }
+            }
+        }
+        localization_key = ducal_layclergy_female
+    }
+    text = {
+        trigger = {
+            is_male = yes
+            root.faith = {
+                OR = {
+                    has_faith = faith:catholic
+                    NOR = {
+                        has_doctrine = doctrine_temporal_head
+                        has_doctrine = doctrine_theocracy_lay_clergy
+                    }
+                }
+            }
+        }
+        localization_key = ducal_bishop_default
+    }
+    text = {
+        localization_key = ducal_bishop_default
+        fallback = yes
+    }
+}
+
+CouncilComitalCourtChaplainPosition = {
+    type = character
+    text = {
+        trigger = {
+            is_male = yes
+            root.faith = {
+                OR = {
+                    has_doctrine = doctrine_temporal_head
+                    has_doctrine = doctrine_theocracy_lay_clergy
+                }
+            }
+        }
+        localization_key = comital_layclergy_male
+    }
+    text = {
+        trigger = {
+            is_male = no
+            root.faith = {
+                OR = {
+                    has_doctrine = doctrine_temporal_head
+                    has_doctrine = doctrine_theocracy_lay_clergy
+                }
+            }
+        }
+        localization_key = comital_layclergy_female
+    }
+    text = {
+        trigger = {
+            is_male = yes
+            root.faith = {
+                OR = {
+                    has_faith = faith:catholic
+                    NOR = {
+                        has_doctrine = doctrine_temporal_head
+                        has_doctrine = doctrine_theocracy_lay_clergy
+                    }
+                }
+            }
+        }
+        localization_key = comital_bishop_default
+    }
+    text = {
+        localization_key = comital_bishop_default
+        fallback = yes
+    }
+}
+
+### DUCAL AND COMITAL MARSHAL ###
+
+CouncilDucalMarshalPosition = {
+    type = character
+    text = {
+        trigger = {
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = ducal_marshal_greek
+    }
+    text = {
+        trigger = {
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = ducal_marshal_default
+    }
+    text = {
+        localization_key = ducal_marshal_default
+        fallback = yes
+    }
+}
+
+CouncilComitalMarshalPosition = {
+    type = character
+    text = {
+        trigger = {
+            liege.culture = { has_cultural_pillar = heritage_byzantine }
+        }
+        localization_key = comital_marshal_greek
+    }
+    text = {
+        trigger = {
+            liege.culture = {
+                NOT = { has_cultural_pillar = heritage_byzantine }
+            }
+        }
+        localization_key = comital_marshal_default
+    }
+    text = {
+        localization_key = comital_marshal_default
+        fallback = yes
+    }
+}

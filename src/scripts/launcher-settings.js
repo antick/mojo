@@ -26,10 +26,8 @@ async function updateGameDataPath(filePath, newGameDataPath) {
     const data = await readFile(filePath, 'utf8');
     const jsonData = JSON.parse(data);
 
-    // Update the gameDataPath property
     jsonData.gameDataPath = newGameDataPath;
 
-    // Write the updated JSON file
     await writeFile(filePath, JSON.stringify(jsonData, null, 2));
     console.log('Game data path successfully updated in launcher-settings.json!');
   } catch (error) {
