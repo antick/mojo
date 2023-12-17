@@ -252,7 +252,9 @@ async function buildCombinedMod(modBuildPath, selectedModKeys) {
 async function buildLooseMods(buildPath, selectedModKeys) {
   console.log('-----------------------------------');
   try {
-    for (const modKey of selectedModKeys) {
+    const subMods = !selectedModKeys.length ? Object.keys(modConfig.subMods) : selectedModKeys;
+
+    for (const modKey of subMods) {
       const modDetails = modConfig.subMods[modKey];
       if (!modDetails) {
         console.log(`Mod ${modKey} not found`);
