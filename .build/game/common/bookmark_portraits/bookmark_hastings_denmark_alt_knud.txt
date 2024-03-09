@@ -2,7 +2,7 @@
 # History database id:101519
 bookmark_hastings_denmark_alt_knud={
 	type=male
-	id=19492
+	id=19892
 	age=0.230000
 	genes={ 		hair_color={ 165 115 97 92 }
  		skin_color={ 66 96 78 96 }
@@ -14,7 +14,7 @@ bookmark_hastings_denmark_alt_knud={
  		gene_eye_depth={ "eye_depth_pos" 136 "eye_depth_pos" 131 }
  		gene_eye_height={ "eye_height_pos" 138 "eye_height_neg" 124 }
  		gene_eye_distance={ "eye_distance_pos" 128 "eye_distance_neg" 87 }
- 		gene_eye_shut={ "eye_shut_neg" 62 "eye_shut_neg" 106 }
+ 		gene_eye_shut={ "eye_shut_neg" 124 "eye_shut_neg" 106 }
  		gene_forehead_angle={ "forehead_angle_pos" 136 "forehead_angle_neg" 115 }
  		gene_forehead_brow_height={ "forehead_brow_height_neg" 90 "forehead_brow_height_pos" 142 }
  		gene_forehead_roundness={ "forehead_roundness_pos" 143 "forehead_roundness_pos" 148 }
@@ -53,7 +53,7 @@ bookmark_hastings_denmark_alt_knud={
  		gene_bs_eye_upper_lid_size={ "eye_upper_lid_size_neg" 44 "eye_upper_lid_size_pos" 80 }
  		gene_bs_forehead_brow_curve={ "forehead_brow_curve_pos" 50 "forehead_brow_curve_pos" 0 }
  		gene_bs_forehead_brow_forward={ "forehead_brow_forward_pos" 122 "forehead_brow_forward_pos" 35 }
- 		gene_bs_forehead_brow_inner_height={ "forehead_brow_inner_height_pos" 127 "forehead_brow_inner_height_pos" 11 }
+ 		gene_bs_forehead_brow_inner_height={ "forehead_brow_inner_height_pos" 21 "forehead_brow_inner_height_pos" 11 }
  		gene_bs_forehead_brow_outer_height={ "forehead_brow_outer_height_neg" 49 "forehead_brow_outer_height_neg" 38 }
  		gene_bs_forehead_brow_width={ "forehead_brow_width_neg" 6 "forehead_brow_width_pos" 119 }
  		gene_bs_jaw_def={ "jaw_def_pos" 47 "jaw_def_pos" 80 }
@@ -92,12 +92,12 @@ bookmark_hastings_denmark_alt_knud={
  		face_detail_temple_def={ "temple_def" 124 "temple_def" 200 }
  		expression_brow_wrinkles={ "brow_wrinkles_03" 72 "brow_wrinkles_04" 250 }
  		expression_eye_wrinkles={ "eye_wrinkles_01" 255 "eye_wrinkles_03" 210 }
- 		expression_forehead_wrinkles={ "forehead_wrinkles_03" 255 "forehead_wrinkles_01" 33 }
- 		expression_other={ "cheek_wrinkles_both_01" 38 "cheek_wrinkles_both_01" 0 }
+ 		expression_forehead_wrinkles={ "forehead_wrinkles_03" 141 "forehead_wrinkles_01" 33 }
+ 		expression_other={ "cheek_wrinkles_left_01" 0 "cheek_wrinkles_both_01" 0 }
  		complexion={ "complexion_5" 159 "complexion_7" 78 }
  		gene_height={ "normal_height" 159 "normal_height" 132 }
- 		gene_bs_body_type={ "body_fat_head_fat_low" 101 "body_fat_head_fat_medium" 149 }
- 		gene_bs_body_shape={ "body_shape_hourglass_half" 39 "body_shape_triangle_half" 12 }
+ 		gene_bs_body_type={ "body_fat_head_fat_low" 112 "body_fat_head_fat_medium" 149 }
+ 		gene_bs_body_shape={ "body_shape_hourglass_half" 49 "body_shape_triangle_half" 12 }
  		gene_bs_bust={ "bust_clothes" 78 "bust_shape_3_full" 133 }
  		gene_age={ "old_1" 82 "old_4" 87 }
  		gene_eyebrows_shape={ "avg_spacing_avg_thickness" 170 "avg_spacing_avg_thickness" 153 }
@@ -110,13 +110,50 @@ bookmark_hastings_denmark_alt_knud={
  		eyelashes_accessory={ "normal_eyelashes" 216 "normal_eyelashes" 216 }
  		pose={ "" 255 "" 0 }
  		beards={ "no_beard" 127 "no_beard" 0 }
- 		hairstyles={ "all_hairstyles" 34 "all_hairstyles" 0 }
- 		legwear={ "western_common_legwear" 199 "all_legwear" 0 }
+ 		cloaks={ "no_cloak" 144 "no_cloak" 0 }
+ 		hairstyles={ "all_hairstyles" 35 "all_hairstyles" 0 }
+ 		legwear={ "western_common_legwear" 127 "all_legwear" 0 }
  		gene_shrink_body={ "shrink_all" 255 "" 0 }
  		gene_bs_additive_headgears={ "additive_headgears" 255 "" 0 }
- 		clothes={ "northern_commoner_clothes" 193 "most_clothes" 0 }
- 		headgear={ "northern_common" 182 "no_headgear" 0 }
+ 		gene_bs_cloak_offset={ "cloak_offset" 255 "" 0 }
+ 		gene_bs_long_beard={ "long_beard" 255 "" 0 }
+ 		clothes={ "northern_commoner_clothes" 196 "most_clothes" 0 }
+ 		headgear={ "northern_common" 176 "no_headgear" 0 }
+ 		gene_balding_hair_effect={ "no_baldness" 255 "no_baldness" 0 }
  }
-	entity={ 1903276529 1903276529 }
+	entity={ 979141817 979141817 }
+	tags={ {
+			hash=2125534279
+			invert=no
+		}
+ {
+			hash=681013727
+			invert=no
+		}
+ {
+			hash=3672171019
+			invert=no
+		}
+ {
+			hash=1921638387
+			invert=no
+		}
+ {
+			hash=2670398845
+			invert=no
+		}
+ {
+			hash=1563190100
+			invert=no
+		}
+ {
+			hash=1485265044
+			invert=no
+		}
+ {
+			hash=1945936758
+			invert=no
+		}
+ }
 }
 

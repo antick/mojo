@@ -71,6 +71,7 @@ fp3_the_umma_strikes_back_achievement = {
 			is_ai = no
 			exists = global_var:fp3_the_umma_strikes_back_achievement_tracker
 			has_title = title:e_arabia
+			has_title = title:d_sunni
 			faith = {
 				has_doctrine = muhammad_succession_sunni_doctrine
 				prev = religious_head
@@ -80,7 +81,7 @@ fp3_the_umma_strikes_back_achievement = {
 }
 
 fp3_royal_flush_achievement = { # Achievement for commiting sassasinations
-	possible = { employs_court_position = master_assassin_court_position }
+	possible = { has_fp3_dlc_trigger = yes }
 	happened = {
 		custom_description = {
 			text = fp3_royal_flush_achievement_trigger

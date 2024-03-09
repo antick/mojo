@@ -1,6 +1,6 @@
 ﻿l_english:
  ACTIVE_COUNCIL_TASK_TT:2 "My [ActiveCouncilTask.GetPositionType.GetName] [ActiveCouncilTask.GetCouncillor.GetUIName] is assigned to [ActiveCouncilTask.GetTaskType.GetName|V]"
- ACTIVE_COUNCIL_TASK_FROZEN_TT:1 "#T [ActiveCouncilTask.GetTaskType.GetName|V] #!\n@warning_icon!#X Assign a character to this council position to continue progressing the task#!"
+ ACTIVE_COUNCIL_TASK_FROZEN_TT:1 "#T [ActiveCouncilTask.GetTaskType.GetName|V] #!\n@warning_icon! #X Assign a character to this council position to continue progressing the task#!"
  POTENTIAL_COUNCIL_TASK_TT:2 "[ActiveCouncilTask.GetCouncillor.GetUIName] will be assigned to [ActiveCouncilTask.GetTaskType.GetName|V]"
  COUNCIL_TASK_TT:0 "#T [ActiveCouncilTask.GetTaskType.GetName]#!\n[SelectLocalization( GuiPotentialCouncilTask.IsActive, 'ACTIVE_COUNCIL_TASK_TT', 'POTENTIAL_COUNCIL_TASK_TT' )]"
  COUNCIL_TASK_MAP_TT:0 "#T [ActiveCouncilTask.GetTaskType.GetName]#!\n$ACTIVE_COUNCIL_TASK_TT$"
@@ -395,7 +395,7 @@
  CUSTOMS_DYNASTY_PERK_BONUS_VALUE:0 "[GetDynastyPerk('ep1_culture_legacy_2').GetName]"
  KHVARENAH_DYNASTY_PERK_BONUS_VALUE: "[GetDynastyPerk('fp3_khvarenah_legacy_4').GetName]"
 
- SCALED_COUNCILLOR_LEARNING_VALUE:2 "[councillor.GetCouncilTitle] [councillor.GetShortUINamePossessive] Learning Skill"
+ SCALED_COUNCILLOR_LEARNING_VALUE:2 "[councillor.GetCouncilTitleFirstNamePossessive] [learning|E]"
  COURT_CHAPLAIN_PROGRESS_BASE:0 "Base"
  CONVERSION_PERK_BONUS_VALUE:1 "[GetPerk('zealous_proselytizer_perk').GetName(GetPlayer)]"
  CONVERSION_DYNASTY_PERK_BONUS_VALUE:1 "[GetDynastyPerk('erudition_legacy_5').GetName]"
@@ -504,3 +504,10 @@
  task_vizier_manage_domain_effect_desc: "$task_manage_domain_effect_desc$"
  task_vizier_patronage: "$task_patronage$"
  task_vizier_patronage_effect_desc: "$task_patronage_effect_desc$"
+
+ liege_converting_county_title: "Liege Converting [county.GetNameNoTierNoTooltip]"
+ liege_converting_county_desc: "[councillor_liege.GetShortUINamePossessive] [councillor.GetCouncilTitle] is [converting|E] the [county.GetName] to [councillor_liege.GetFaith.GetName] #weak ([old_faith.GetAdjective])#!"
+ liege_stopped_converting_county_title: "Liege Conversion Halted"
+ liege_stopped_converting_county_desc: "[councillor_liege.GetShortUINamePossessive] [councillor.GetCouncilTitle] has stopped [converting|E] the [county.GetName] to [councillor_liege.GetFaith.GetName] #weak ([old_faith.GetAdjective])#!"
+ liege_converted_county_title: "Liege Converted [county.GetNameNoTierNoTooltip]"
+ liege_converted_county_desc: "[councillor_liege.GetShortUINamePossessive] [councillor.GetCouncilTitle] has [converted|E] the [county.GetName] to [councillor_liege.GetFaith.GetName] #weak ([old_faith.GetAdjective])#!"

@@ -104,6 +104,7 @@ middle_east_decisions.0001 = {
 					set_de_jure_liege_title = title:k_jerusalem
 				}
 			}
+			legend_seed_new_title_effect = yes
 		}
 		hidden_effect = {
 			random_list = {
@@ -379,6 +380,7 @@ middle_east_decisions.0005 = {
 	immediate = {
 		play_music_cue = "mx_cue_faith_conversion"
 		create_israel_scripted_effect = yes
+		legend_seed_new_title_effect = yes
 		hidden_effect = {
 			random_list = {
 				50 = { set_nickname_effect = { NICKNAME = nick_the_shepherd } }
@@ -656,6 +658,16 @@ middle_east_decisions.0007 = {
 			}
 			resolve_title_and_vassal_change = scope:change
 		}
+		create_legend_seed = {
+			type = holy
+			quality = famed
+			chronicle = priesthood_restoration
+			properties = {
+				founder = scope:new_priest
+				faith = scope:new_priest.faith
+				religion = scope:new_priest.religion
+			}
+		}
 		hidden_effect = {
 			every_player = {
 				limit = {
@@ -761,6 +773,21 @@ middle_east_decisions.0009 = {
 	immediate = {
 		play_music_cue = "mx_cue_faith_conversion"
 		save_scope_as = scoped_ruler
+		if = { #remove the HoF blocker for all Zoroastrian faiths
+			limit = {
+				religion = {
+					any_faith = { has_doctrine = special_doctrine_not_allowed_to_hof }
+				}
+			}
+			religion = {
+				every_faith = {
+					limit = {
+						has_doctrine = special_doctrine_not_allowed_to_hof
+					}
+					remove_doctrine = special_doctrine_not_allowed_to_hof
+				}
+			}
+		}
 		if = { # Check if Temporal first.
 			limit = {
 				faith = { has_doctrine = doctrine_temporal_head }
@@ -850,6 +877,16 @@ middle_east_decisions.0009 = {
 				}
 			}
 			resolve_title_and_vassal_change = scope:change
+		}
+		create_legend_seed = {
+			type = holy
+			quality = famed
+			chronicle = priesthood_restoration
+			properties = {
+				founder = scope:new_priest
+				faith = scope:new_priest.faith
+				religion = scope:new_priest.religion
+			}
 		}
 		hidden_effect = {
 			every_player = {
@@ -1210,6 +1247,8 @@ middle_east_decisions.0014 = {
 			limit = { exists = title:e_roman_empire.holder }
 			title:e_roman_empire.holder = { save_scope_as = roman_emperor }
 		}
+
+		legend_seed_new_title_effect = yes
 		# De jure shifts.
 
 		# k_anatolia: d_cilicia d_cibyrrhaeot d_anatolia d_cappadocia
@@ -1363,6 +1402,7 @@ middle_east_decisions.1001 = {
 	immediate = {
 		play_music_cue = "mx_cue_epic_sacral_moment"
 		revive_armenian_empire_decision_scripted_effect = yes
+		legend_seed_new_title_effect = yes
 	}
 
 	#Take the nickname.

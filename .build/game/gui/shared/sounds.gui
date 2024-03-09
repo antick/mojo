@@ -120,6 +120,13 @@ template Sound_Kill_Siege_SFX
     }
 }
 
+template Sound_Panel_Popup_Snapshot
+{
+    start_sound = {
+        soundeffect = "snapshot:/Gameplay/PanelPopup"
+    }
+}
+
 ####################################
 ############## BUTTONS #############
 ####################################

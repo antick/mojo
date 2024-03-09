@@ -8,8 +8,10 @@ action_appoint_tax_collector = {
 			limit = {
 				any_tax_slot = {
 					has_tax_collector = no
+					any_tax_slot_vassal = {
+						is_ruler = yes
+					}
 				}
-				government_has_flag = government_is_clan
 				any_vassal = { government_has_flag = government_is_clan }
 			}
 
@@ -33,7 +35,6 @@ action_assign_tax_payers = {
 		if = {
 			limit = {
 				employs_tax_collector = yes
-				government_has_flag = government_is_clan
 				any_tax_collector = {
 					count = all
 					any_tax_collector_vassal = { 

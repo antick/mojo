@@ -3,6 +3,7 @@
 	graphical_faith = "zoroastrian_gfx"
 
 	doctrine = doctrine_monogamy
+	doctrine = special_doctrine_not_allowed_to_hof
 	doctrine = heresy_hostility_doctrine # Needs to be before eastern_hostility_doctrine in order to override the same religion hostility
 	doctrine = eastern_hostility_doctrine
 	doctrine = doctrine_gender_male_dominated
@@ -27,6 +28,9 @@
 
 	#Allow pilgrimages
 	doctrine = doctrine_pilgrimage_encouraged
+
+	#Funeral tradition
+	doctrine = doctrine_funeral_sky_burial
 	
 	traits = {
 		virtues = { honest just diligent }
@@ -207,6 +211,7 @@
 		DeathDeityNamePossessive = zoroastrianism_death_deity_name_possessive
 		DeathDeitySheHe = CHARACTER_SHEHE_HE
 		DeathDeityHerHis = CHARACTER_HERHIS_HIS
+		DeathDeityHerHim = CHARACTER_HERHIM_HIM
 		WitchGodName = zoroastrianism_devil_name
 		WitchGodNamePossessive = zoroastrianism_devil_name_possessive
 		WitchGodHerHis = CHARACTER_HERHIS_HIS
@@ -232,7 +237,7 @@
 			holy_site = yazd
 
 			doctrine = tenet_divine_marriage
-			doctrine = tenet_sky_burials
+			doctrine = tenet_communal_identity
 			doctrine = tenet_ritual_celebrations
 
 			doctrine = doctrine_spiritual_head
@@ -252,7 +257,7 @@
 			holy_site = yazd
 
 			doctrine = tenet_reincarnation 
-			doctrine = tenet_sky_burials
+			doctrine = tenet_communal_identity
 			doctrine = tenet_islamic_syncretism
 
 			doctrine = doctrine_polygamy
@@ -276,7 +281,7 @@
 			holy_site = adur_burzen_mihr
 
 			doctrine = tenet_ritual_celebrations
-			doctrine = tenet_sky_burials
+			doctrine = tenet_communal_identity
 			doctrine = tenet_astrology
 
 			doctrine = doctrine_witchcraft_shunned
@@ -298,7 +303,7 @@
 			
 			doctrine = tenet_adaptive	
 			doctrine = tenet_ancestor_worship 
-			doctrine = tenet_sky_burials
+			doctrine = tenet_communal_identity
 
 			doctrine = doctrine_spiritual_head
 			doctrine = doctrine_pluralism_pluralistic

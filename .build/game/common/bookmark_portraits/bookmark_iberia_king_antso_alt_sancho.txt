@@ -2,7 +2,7 @@
 # History database id:110500
 bookmark_iberia_king_antso_alt_sancho={
 	type=male
-	id=19362
+	id=19759
 	age=0.240000
 	genes={ 		hair_color={ 172 247 113 231 }
  		skin_color={ 116 96 133 100 }
@@ -93,11 +93,11 @@ bookmark_iberia_king_antso_alt_sancho={
  		expression_brow_wrinkles={ "brow_wrinkles_02" 255 "brow_wrinkles_01" 128 }
  		expression_eye_wrinkles={ "eye_wrinkles_03" 250 "eye_wrinkles_01" 19 }
  		expression_forehead_wrinkles={ "forehead_wrinkles_02" 231 "forehead_wrinkles_01" 44 }
- 		expression_other={ "cheek_wrinkles_both_01" 51 "cheek_wrinkles_both_01" 0 }
+ 		expression_other={ "cheek_wrinkles_both_01" 0 "cheek_wrinkles_both_01" 0 }
  		complexion={ "complexion_2" 134 "complexion_4" 203 }
  		gene_height={ "normal_height" 120 "normal_height" 135 }
- 		gene_bs_body_type={ "body_fat_head_fat_medium" 89 "body_fat_head_fat_full" 116 }
- 		gene_bs_body_shape={ "body_shape_hourglass_half" 82 "body_shape_rectangle_half" 20 }
+ 		gene_bs_body_type={ "body_fat_head_fat_medium" 92 "body_fat_head_fat_full" 116 }
+ 		gene_bs_body_shape={ "body_shape_hourglass_half" 62 "body_shape_rectangle_half" 20 }
  		gene_bs_bust={ "bust_clothes" 143 "bust_shape_3_full" 213 }
  		gene_age={ "old_1" 143 "old_1" 253 }
  		gene_eyebrows_shape={ "far_spacing_avg_thickness" 224 "far_spacing_avg_thickness" 237 }
@@ -109,16 +109,51 @@ bookmark_iberia_king_antso_alt_sancho={
  		teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
  		eyelashes_accessory={ "normal_eyelashes" 239 "normal_eyelashes" 239 }
  		pose={ "" 255 "" 0 }
- 		beards={ "all_beards" 191 "no_beard" 0 }
- 		cloaks={ "western_royalty" 138 "no_cloak" 0 }
- 		hairstyles={ "all_hairstyles" 218 "all_hairstyles" 0 }
- 		legwear={ "western_common_legwear" 87 "all_legwear" 0 }
+ 		beards={ "all_beards" 176 "no_beard" 0 }
+ 		cloaks={ "sp2_cloak_imperial" 163 "no_cloak" 0 }
+ 		hairstyles={ "all_hairstyles" 194 "all_hairstyles" 0 }
+ 		legwear={ "western_common_legwear" 52 "all_legwear" 0 }
  		gene_shrink_body={ "shrink_all" 255 "" 0 }
  		gene_bs_additive_headgears={ "additive_headgears" 255 "" 0 }
- 		clothes={ "western_high_nobility_clothes" 146 "most_clothes" 0 }
- 		headgear={ "ep1_western_royalty" 225 "no_headgear" 0 }
- 		additive_headgear={ "western_veils" 139 "western_veils" 0 }
+ 		gene_bs_cloak_offset={ "cloak_offset" 255 "" 0 }
+ 		gene_bs_long_beard={ "long_beard" 255 "" 0 }
+ 		clothes={ "fp2_christian_high_nobility_clothes" 61 "most_clothes" 0 }
+ 		headgear={ "fp2_christian_royalty" 81 "no_headgear" 0 }
+ 		gene_balding_hair_effect={ "no_baldness" 255 "no_baldness" 0 }
  }
-	entity={ 1663114784 1663114784 }
+	entity={ 1863162561 1863162561 }
+	tags={ {
+			hash=2125534279
+			invert=no
+		}
+ {
+			hash=681013727
+			invert=no
+		}
+ {
+			hash=2793867254
+			invert=no
+		}
+ {
+			hash=3672171019
+			invert=no
+		}
+ {
+			hash=2670398845
+			invert=no
+		}
+ {
+			hash=1500963499
+			invert=no
+		}
+ {
+			hash=1563190100
+			invert=no
+		}
+ {
+			hash=1945936758
+			invert=no
+		}
+ }
 }
 

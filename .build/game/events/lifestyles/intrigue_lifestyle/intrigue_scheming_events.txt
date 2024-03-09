@@ -3159,6 +3159,15 @@ intrigue_scheming.3052 = {
 				}
 				scope:vassal_target = {
 					add_trait = scarred
+					add_trait_xp = {
+		                trait = scarred
+		                value = {
+		                    integer_range = {
+		                        min = 5
+		                        max = 25
+		                    }
+		                }
+		            }
 				}
 			}
 		}
@@ -3250,6 +3259,15 @@ intrigue_scheming.3053 = {
 				}
 				scope:vassal_target = {
 					add_trait = scarred
+					add_trait_xp = {
+		                trait = scarred
+		                value = {
+		                    integer_range = {
+		                        min = 5
+		                        max = 25
+		                    }
+		                }
+		            }
 				}
 			}
 		}
@@ -3548,9 +3566,15 @@ intrigue_scheming.3061 = {
 		save_scope_as = template
 		create_character = {
 			location = root.capital_province
-			template = servant_character
-			gender = male
+			culture = scope:target.culture
+			faith = scope:target.faith
+			template = servant_father_character
 			save_scope_as = commoner_target
+		}
+		hidden_effect = {
+			scope:commoner_target = {
+				change_age = scope:heir.age
+			}
 		}
 
 		# Save target's Spymaster if they exist

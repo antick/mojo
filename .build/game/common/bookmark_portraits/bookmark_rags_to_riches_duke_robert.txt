@@ -2,7 +2,7 @@
 # History database id:1128
 bookmark_rags_to_riches_duke_robert={
 	type=male
-	id=16559
+	id=16926
 	age=0.510000
 	genes={ 		hair_color={ 9 238 9 238 }
  		skin_color={ 130 116 130 116 }
@@ -91,20 +91,20 @@ bookmark_rags_to_riches_duke_robert={
  		face_detail_nose_tip_def={ "nose_tip_def" 15 "nose_tip_def" 15 }
  		face_detail_temple_def={ "temple_def" 169 "temple_def" 169 }
  		expression_brow_wrinkles={ "brow_wrinkles_01" 255 "brow_wrinkles_01" 200 }
- 		expression_eye_wrinkles={ "eye_wrinkles_01" 140 "eye_wrinkles_01" 14 }
+ 		expression_eye_wrinkles={ "eye_wrinkles_01" 122 "eye_wrinkles_01" 14 }
  		expression_forehead_wrinkles={ "forehead_wrinkles_01" 27 "forehead_wrinkles_01" 27 }
- 		expression_other={ "cheek_wrinkles_both_01" 45 "cheek_wrinkles_left_01" 0 }
+ 		expression_other={ "cheek_wrinkles_both_01" 26 "cheek_wrinkles_left_01" 0 }
  		complexion={ "complexion_1" 123 "complexion_1" 123 }
  		gene_height={ "normal_height" 119 "normal_height" 117 }
- 		gene_bs_body_type={ "body_fat_head_fat_low" 122 "body_fat_head_fat_low" 121 }
- 		gene_bs_body_shape={ "body_shape_average" 199 "body_shape_pear_full" 6 }
+ 		gene_bs_body_type={ "body_fat_head_fat_low" 126 "body_fat_head_fat_low" 121 }
+ 		gene_bs_body_shape={ "body_shape_average" 158 "body_shape_pear_full" 6 }
  		gene_bs_bust={ "bust_clothes" 156 "bust_shape_4_half" 196 }
  		gene_age={ "old_4" 13 "old_4" 13 }
  		gene_eyebrows_shape={ "far_spacing_high_thickness" 172 "far_spacing_high_thickness" 172 }
  		gene_eyebrows_fullness={ "layer_2_avg_thickness" 192 "layer_2_avg_thickness" 192 }
  		gene_body_hair={ "body_hair_avg" 164 "body_hair_sparse" 91 }
  		gene_hair_type={ "hair_straight" 128 "hair_straight" 128 }
- 		gene_baldness={ "no_baldness" 127 "no_baldness" 127 }
+ 		gene_baldness={ "no_baldness" 220 "no_baldness" 127 }
  		eye_accessory={ "normal_eyes" 177 "normal_eyes" 177 }
  		teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
  		eyelashes_accessory={ "normal_eyelashes" 153 "normal_eyelashes" 153 }
@@ -112,13 +112,41 @@ bookmark_rags_to_riches_duke_robert={
  		beards={ "scripted_character_beards_03" 255 "no_beard" 0 }
  		cloaks={ "ep2_cloak_western_era1_high_nobility" 255 "no_cloak" 0 }
  		hairstyles={ "scripted_character_hairstyles_01" 47 "all_hairstyles" 0 }
- 		legwear={ "western_common_legwear" 179 "all_legwear" 0 }
+ 		legwear={ "western_common_legwear" 67 "all_legwear" 0 }
  		gene_shrink_body={ "shrink_all" 255 "" 0 }
  		gene_bs_additive_headgears={ "additive_headgears" 255 "" 0 }
+ 		gene_bs_cloak_offset={ "cloak_offset" 255 "" 0 }
+ 		gene_bs_long_beard={ "long_beard" 255 "" 0 }
  		clothes={ "western_high_nobility_clothes" 217 "most_clothes" 0 }
  		headgear={ "western_high_nobility" 255 "no_headgear" 0 }
- 		additive_headgear={ "ep2_western_era2_veils" 171 "western_veils" 0 }
+ 		additive_headgear={ "ep2_western_era2_veils" 67 "no_additive" 0 }
+ 		gene_balding_hair_effect={ "no_baldness" 255 "no_baldness" 0 }
  }
 	entity={ 2268070609 2268070609 }
+	tags={ {
+			hash=2125534279
+			invert=no
+		}
+ {
+			hash=2670398845
+			invert=no
+		}
+ {
+			hash=1500963499
+			invert=no
+		}
+ {
+			hash=681013727
+			invert=no
+		}
+ {
+			hash=1563190100
+			invert=no
+		}
+ {
+			hash=1945936758
+			invert=no
+		}
+ }
 }
 

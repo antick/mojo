@@ -2,7 +2,7 @@
 # History database id:102535
 bookmark_hastings_norway_alt_ingegerd={
 	type=female
-	id=19898
+	id=20299
 	age=0.200000
 	genes={ 		hair_color={ 126 234 116 108 }
  		skin_color={ 73 85 74 78 }
@@ -91,13 +91,13 @@ bookmark_hastings_norway_alt_ingegerd={
  		face_detail_nose_tip_def={ "nose_tip_def" 149 "nose_tip_def" 224 }
  		face_detail_temple_def={ "temple_def" 216 "temple_def" 221 }
  		expression_brow_wrinkles={ "brow_wrinkles_04" 68 "brow_wrinkles_01" 132 }
- 		expression_eye_wrinkles={ "eye_wrinkles_01" 80 "eye_wrinkles_01" 71 }
+ 		expression_eye_wrinkles={ "eye_wrinkles_01" 174 "eye_wrinkles_01" 71 }
  		expression_forehead_wrinkles={ "forehead_wrinkles_03" 131 "forehead_wrinkles_01" 79 }
  		expression_other={ "cheek_wrinkles_both_01" 51 "cheek_wrinkles_left_01" 0 }
  		complexion={ "complexion_2" 89 "complexion_2" 78 }
  		gene_height={ "normal_height" 150 "normal_height" 127 }
- 		gene_bs_body_type={ "body_fat_head_fat_low" 138 "body_fat_head_fat_medium" 121 }
- 		gene_bs_body_shape={ "body_shape_rectangle_half" 91 "body_shape_apple_full" 15 }
+ 		gene_bs_body_type={ "body_fat_head_fat_low" 136 "body_fat_head_fat_medium" 121 }
+ 		gene_bs_body_shape={ "body_shape_rectangle_half" 50 "body_shape_apple_full" 15 }
  		gene_bs_bust={ "bust_clothes" 56 "bust_shape_4_full" 158 }
  		gene_age={ "old_2" 0 "old_2" 61 }
  		gene_eyebrows_shape={ "avg_spacing_avg_thickness" 125 "avg_spacing_lower_thickness" 133 }
@@ -109,14 +109,39 @@ bookmark_hastings_norway_alt_ingegerd={
  		teeth_accessory={ "normal_teeth" 0 "normal_teeth" 0 }
  		eyelashes_accessory={ "normal_eyelashes" 76 "normal_eyelashes" 76 }
  		pose={ "" 255 "" 0 }
- 		beards={ "no_beard" 180 "no_beard" 0 }
- 		hairstyles={ "northern_hairstyles_straight" 215 "all_hairstyles" 0 }
- 		legwear={ "western_common_legwear" 89 "all_legwear" 0 }
+ 		beards={ "northern_beards_straight" 49 "no_beard" 0 }
+ 		cloaks={ "no_cloak" 84 "no_cloak" 0 }
+ 		hairstyles={ "northern_hairstyles_straight" 243 "all_hairstyles" 0 }
+ 		legwear={ "western_common_legwear" 140 "all_legwear" 0 }
  		gene_shrink_body={ "shrink_all" 255 "" 0 }
  		gene_bs_additive_headgears={ "additive_headgears" 255 "" 0 }
- 		clothes={ "northern_commoner_clothes" 87 "most_clothes" 0 }
- 		headgear={ "northern_common" 82 "no_headgear" 0 }
+ 		gene_bs_cloak_offset={ "cloak_offset" 255 "" 0 }
+ 		gene_bs_long_beard={ "long_beard" 255 "" 0 }
+ 		clothes={ "northern_commoner_clothes" 55 "most_clothes" 0 }
+ 		headgear={ "northern_common" 215 "no_headgear" 0 }
+ 		gene_balding_hair_effect={ "no_baldness" 255 "no_baldness" 0 }
  }
-	entity={ 616600735 616600735 }
+	entity={ 2697330347 2697330347 }
+	tags={ {
+			hash=1989892411
+			invert=no
+		}
+ {
+			hash=1921638387
+			invert=no
+		}
+ {
+			hash=2670398845
+			invert=no
+		}
+ {
+			hash=2125534279
+			invert=no
+		}
+ {
+			hash=681013727
+			invert=no
+		}
+ }
 }
 

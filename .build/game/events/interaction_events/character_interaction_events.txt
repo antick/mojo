@@ -514,6 +514,16 @@ char_interaction.0083 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
+					NOT = { is_close_family_of = scope:ward }
+				}
+				desc = char_interaction.0083.not_related
+			}
+			desc = char_interaction.0083.related
+		}
+		desc = char_interaction.0083.outro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
 					NOT = { this = scope:guardian }
 				}
 				desc = char_interaction.0083.desc.host
@@ -1254,6 +1264,21 @@ char_interaction.0231 = {
 		animation = sadness
 	}
 	theme = prison
+	
+	immediate = {
+		# If you have no imprisonment reason and they're your rightful vassal you lose some legitimacy
+		if = {
+			limit = {
+				NOT = { has_imprisonment_reason = scope:recipient }
+			}
+			if = {
+				limit = {
+					scope:actor = { is_rightful_liege_of = scope:recipient }
+				}
+				scope:actor = { add_legitimacy = miniscule_legitimacy_loss }
+			}
+		}
+	}
 
 	option = {
 		name = char_interaction.0231.a

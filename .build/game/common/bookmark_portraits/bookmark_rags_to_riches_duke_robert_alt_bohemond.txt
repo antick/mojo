@@ -2,7 +2,7 @@
 # History database id:1140
 bookmark_rags_to_riches_duke_robert_alt_bohemond={
 	type=boy
-	id=20790
+	id=21197
 	age=0.110000
 	genes={ 		hair_color={ 14 240 39 246 }
  		skin_color={ 111 49 84 131 }
@@ -14,7 +14,7 @@ bookmark_rags_to_riches_duke_robert_alt_bohemond={
  		gene_eye_depth={ "eye_depth_neg" 124 "eye_depth_neg" 124 }
  		gene_eye_height={ "eye_height_neg" 123 "eye_height_neg" 82 }
  		gene_eye_distance={ "eye_distance_pos" 124 "eye_distance_pos" 129 }
- 		gene_eye_shut={ "eye_shut_pos" 31 "eye_shut_pos" 146 }
+ 		gene_eye_shut={ "eye_shut_pos" 63 "eye_shut_pos" 146 }
  		gene_forehead_angle={ "forehead_angle_pos" 144 "forehead_angle_pos" 131 }
  		gene_forehead_brow_height={ "forehead_brow_height_neg" 122 "forehead_brow_height_neg" 127 }
  		gene_forehead_roundness={ "forehead_roundness_pos" 127 "forehead_roundness_pos" 170 }
@@ -91,13 +91,13 @@ bookmark_rags_to_riches_duke_robert_alt_bohemond={
  		face_detail_nose_tip_def={ "nose_tip_def" 144 "nose_tip_def" 1 }
  		face_detail_temple_def={ "temple_def" 165 "temple_def" 25 }
  		expression_brow_wrinkles={ "brow_wrinkles_01" 6 "brow_wrinkles_01" 6 }
- 		expression_eye_wrinkles={ "eye_wrinkles_01" 255 "eye_wrinkles_01" 81 }
- 		expression_forehead_wrinkles={ "forehead_wrinkles_01" 255 "forehead_wrinkles_01" 78 }
- 		expression_other={ "cheek_wrinkles_both_01" 74 "cheek_wrinkles_both_01" 0 }
+ 		expression_eye_wrinkles={ "eye_wrinkles_01" 219 "eye_wrinkles_01" 81 }
+ 		expression_forehead_wrinkles={ "forehead_wrinkles_01" 196 "forehead_wrinkles_01" 78 }
+ 		expression_other={ "cheek_wrinkles_both_01" 37 "cheek_wrinkles_both_01" 0 }
  		complexion={ "complexion_1" 219 "complexion_4" 221 }
  		gene_height={ "normal_height" 200 "normal_height" 120 }
- 		gene_bs_body_type={ "body_fat_head_fat_medium" 132 "body_fat_head_fat_full" 128 }
- 		gene_bs_body_shape={ "body_shape_rectangle_half" 122 "body_shape_rectangle_half" 0 }
+ 		gene_bs_body_type={ "body_fat_head_fat_medium" 115 "body_fat_head_fat_full" 128 }
+ 		gene_bs_body_shape={ "body_shape_rectangle_half" 101 "body_shape_rectangle_half" 0 }
  		gene_bs_bust={ "bust_clothes" 104 "bust_shape_3_full" 143 }
  		gene_age={ "old_4" 125 "old_4" 125 }
  		gene_eyebrows_shape={ "avg_spacing_lower_thickness" 255 "avg_spacing_low_thickness" 208 }
@@ -110,14 +110,38 @@ bookmark_rags_to_riches_duke_robert_alt_bohemond={
  		eyelashes_accessory={ "normal_eyelashes" 173 "normal_eyelashes" 173 }
  		pose={ "" 255 "" 0 }
  		beards={ "scripted_character_beards_03" 255 "no_beard" 0 }
- 		cloaks={ "no_cloak" 139 "no_cloak" 0 }
+ 		cloaks={ "no_cloak" 133 "no_cloak" 0 }
  		hairstyles={ "scripted_character_hairstyles_01" 47 "all_hairstyles" 0 }
- 		legwear={ "western_common_legwear" 183 "all_legwear" 0 }
+ 		legwear={ "western_common_legwear" 211 "all_legwear" 0 }
  		gene_shrink_body={ "shrink_all" 255 "" 0 }
  		gene_bs_additive_headgears={ "additive_headgears" 255 "" 0 }
- 		clothes={ "western_commoner_clothes" 183 "most_clothes" 0 }
+ 		gene_bs_cloak_offset={ "cloak_offset" 255 "" 0 }
+ 		gene_bs_long_beard={ "long_beard" 255 "" 0 }
+ 		clothes={ "western_commoner_clothes" 211 "most_clothes" 0 }
  		headgear={ "no_headgear" 0 "no_headgear" 0 }
+ 		gene_balding_hair_effect={ "no_baldness" 255 "no_baldness" 0 }
  }
-	entity={ 1903276529 1903276529 }
+	entity={ 616600735 3478549277 }
+	tags={ {
+			hash=2125534279
+			invert=no
+		}
+ {
+			hash=2670398845
+			invert=no
+		}
+ {
+			hash=681013727
+			invert=no
+		}
+ {
+			hash=1563190100
+			invert=no
+		}
+ {
+			hash=1945936758
+			invert=no
+		}
+ }
 }
 

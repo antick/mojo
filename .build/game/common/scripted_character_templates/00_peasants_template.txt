@@ -471,6 +471,13 @@ peasant_child_character = {
 	}
 }
 
+peasant_toddler_character = {
+	age = { 3 8 }
+	dynasty = none
+	gender_female_chance = 50
+	random_traits = yes
+}
+
 bandit_character = {
 	age = { 20 40 }
 	random_traits = no
@@ -576,6 +583,38 @@ child_peasant_character = {
 	age = { 6 14 }
 	dynasty = none
 	random_traits = yes
+	
+	after_creation = {
+		random_list = {
+			200 = {
+				# Character is of average weight, nothing happens	
+			}
+			25 = {
+				change_current_weight = -25
+			}
+			25 = {
+				change_current_weight = -75
+			}
+			25 = {
+				change_current_weight = 25
+			}
+			25 = {
+				change_current_weight = 75
+			}
+		}
+		add_character_flag = peasant_outfit
+	}
+}
+
+servant_father_character = {
+	age = { 16 36 }
+	random_traits = yes
+	dynasty = none
+	gender = male
+	intrigue = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
 	
 	after_creation = {
 		random_list = {
