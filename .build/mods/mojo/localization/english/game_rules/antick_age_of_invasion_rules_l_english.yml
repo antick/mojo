@@ -9,9 +9,9 @@
  setting_antick_age_of_invasion_increased_default:1 "Default Chances"
  setting_antick_age_of_invasion_increased_default_desc:0 "The default chances"
  setting_antick_age_of_invasion_increased_little:1 "Increased (Little)"
- setting_antick_age_of_invasion_increased_little_desc:0 "Chances of becoming the conqueror is increased by 2%"
+ setting_antick_age_of_invasion_increased_little_desc:0 "Chances of becoming the conqueror is increased by 5%"
  setting_antick_age_of_invasion_increased_big:1 "Increased (Big)"
- setting_antick_age_of_invasion_increased_big_desc:0 "Chances of becoming the conqueror is increased by 5%"
+ setting_antick_age_of_invasion_increased_big_desc:0 "Chances of becoming the conqueror is increased by 10%"
 
  rule_antick_age_of_invasion_inheritance:0 "Age of Invasion: Troops Inheritance"
  setting_antick_age_of_invasion_inheritance_yes:1 "Enabled"
