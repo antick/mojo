@@ -71,14 +71,13 @@ async function buildModsInGame(selectedModKeys, buildCombinedMod) {
 
 async function syncCk3GameFiles() {
   try {
-    await syncGameFiles.syncCk3Files(config.gameFoldersToSync);
-    console.log(`📦 Synced CK3 game files to ${config.syncedCk3Folder}`);
+    await syncGameFiles.syncCk3Files(config.gameFoldersToSync());
   } catch (error) {
     console.error(`Error syncing CK3 game files: ${error}`);
     return error;
   }
 
-  console.log(`Synced CK3 game files to ${config.syncedCk3Folder}`);
+  console.log(`📦 Synced CK3 game files to ${config.syncedCk3Folder}`);
   return null;
 }
 
