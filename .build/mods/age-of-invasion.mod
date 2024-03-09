@@ -6,6 +6,6 @@ tags={
 }
 name="Age of Invasion"
 picture="thumbnail.png"
-supported_version="1.10.0.1"
+supported_version="1.12.2.1"
 path="C:/Users/panka/OneDrive/Documents/Paradox Interactive/Crusader Kings III/mod/age-of-invasion"
 
