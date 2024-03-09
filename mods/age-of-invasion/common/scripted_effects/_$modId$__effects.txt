@@ -14,7 +14,7 @@ _$modId$__spawn_army_effect = {
                 inheritable = yes
                 name = _$modId$__troops
                 levies = {
-                    value = 2500
+                    value = 3000
                 }
                 men_at_arms = {
                     type = horse_archers
@@ -48,7 +48,7 @@ _$modId$__spawn_army_effect = {
                 inheritable = yes
                 name = _$modId$__troops
                 levies = {
-                    value = 2500
+                    value = 3000
                 }
                 men_at_arms = {
                     type = horse_archers
@@ -82,7 +82,7 @@ _$modId$__spawn_army_effect = {
                 inheritable = yes
                 name = _$modId$__troops
                 levies = {
-                    value = 2500
+                    value = 3000
                 }
                 men_at_arms = {
                     type = horse_archers
@@ -157,7 +157,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = yes
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -191,7 +191,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = yes
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -225,7 +225,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = yes
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -259,7 +259,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = yes
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -294,7 +294,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = yes
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -327,7 +327,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = yes
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -360,7 +360,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = yes
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -393,7 +393,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = yes
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -434,7 +434,7 @@ _$modId$__spawn_army_effect = {
                 inheritable = no
                 name = _$modId$__troops
                 levies = {
-                    value = 2500
+                    value = 3000
                 }
                 men_at_arms = {
                     type = horse_archers
@@ -467,7 +467,7 @@ _$modId$__spawn_army_effect = {
                 inheritable = no
                 name = _$modId$__troops
                 levies = {
-                    value = 2500
+                    value = 3000
                 }
                 men_at_arms = {
                     type = horse_archers
@@ -500,7 +500,7 @@ _$modId$__spawn_army_effect = {
                 inheritable = no
                 name = _$modId$__troops
                 levies = {
-                    value = 2500
+                    value = 3000
                 }
                 men_at_arms = {
                     type = horse_archers
@@ -533,7 +533,7 @@ _$modId$__spawn_army_effect = {
                 inheritable = no
                 name = _$modId$__troops
                 levies = {
-                    value = 2500
+                    value = 3000
                 }
                 men_at_arms = {
                     type = horse_archers
@@ -574,7 +574,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = no
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -607,7 +607,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = no
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -640,7 +640,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = no
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -673,7 +673,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = no
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -708,7 +708,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = no
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -774,7 +774,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = no
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen
@@ -807,7 +807,7 @@ _$modId$__spawn_army_effect = {
                     inheritable = no
                     name = _$modId$__troops
                     levies = {
-                        value = 2500
+                        value = 3000
                     }
                     men_at_arms = {
                         type = light_horsemen

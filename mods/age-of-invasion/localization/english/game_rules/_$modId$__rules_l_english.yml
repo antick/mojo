@@ -9,9 +9,9 @@
  setting__$modId$__increased_default:1 "Default Chances"
  setting__$modId$__increased_default_desc:0 "The default chances"
  setting__$modId$__increased_little:1 "Increased (Little)"
- setting__$modId$__increased_little_desc:0 "Chances of becoming the conqueror is increased by 2%"
+ setting__$modId$__increased_little_desc:0 "Chances of becoming the conqueror is increased by 5%"
  setting__$modId$__increased_big:1 "Increased (Big)"
- setting__$modId$__increased_big_desc:0 "Chances of becoming the conqueror is increased by 5%"
+ setting__$modId$__increased_big_desc:0 "Chances of becoming the conqueror is increased by 10%"
 
  rule__$modId$__inheritance:0 "Age of Invasion: Troops Inheritance"
  setting__$modId$__inheritance_yes:1 "Enabled"

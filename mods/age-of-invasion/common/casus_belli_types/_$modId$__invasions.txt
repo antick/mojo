@@ -82,6 +82,9 @@
     on_victory = {
         scope:attacker = { show_pow_release_message_effect = yes }
 
+        # Legitimacy
+        add_legitimacy_attacker_victory_effect = yes
+
         #EP2 accolade glory gain for winning against higher ranked enemy
         scope:attacker = { accolade_attacker_war_end_glory_gain_high_effect = yes }
 
@@ -183,6 +186,9 @@
 
     on_defeat = {
         scope:attacker = { show_pow_release_message_effect = yes }
+
+        # Legitimacy
+        add_legitimacy_attacker_defeat_effect = yes
 
         #EP2 accolade glory gain for winning against higher ranked enemy
         scope:defender = { accolade_defender_war_end_glory_gain_high_effect = yes }
@@ -335,6 +341,9 @@ _$modId$__apocalyptic_invasion_war = {
     on_victory = {
         scope:attacker = { show_pow_release_message_effect = yes }
 
+        # Legitimacy
+        add_legitimacy_attacker_victory_effect = yes
+
         #EP2 accolade glory gain for winning against higher ranked enemy
         scope:attacker = { accolade_attacker_war_end_glory_gain_high_effect = yes }
 
@@ -343,7 +352,6 @@ _$modId$__apocalyptic_invasion_war = {
             save_scope_as = change
             add_claim_on_loss = yes
         }
-
 
         # go through the dejure hierarchy under target titles, transfer titles with same or worse tolerance holders (their religion equaly or less tolerated than the defender's),
         # take the holder as vassal otherwise and don't go deeper
@@ -505,6 +513,9 @@ _$modId$__apocalyptic_invasion_war = {
 
     on_defeat = {
         scope:attacker = { show_pow_release_message_effect = yes }
+
+        # Legitimacy
+        add_legitimacy_attacker_defeat_effect = yes
 
         #EP2 accolade glory gain for winning against higher ranked enemy
         scope:defender = { accolade_defender_war_end_glory_gain_high_effect = yes }
@@ -668,6 +679,9 @@ _$modId$__apocalyptic_realm_invasion_war = {
 
     on_victory = {
         scope:attacker = { show_pow_release_message_effect = yes }
+
+        # Legitimacy
+        add_legitimacy_attacker_victory_effect = yes
 
         #EP2 accolade glory gain for winning against higher ranked enemy
         scope:attacker = { accolade_attacker_war_end_glory_gain_very_high_effect = yes }
@@ -852,6 +866,9 @@ _$modId$__apocalyptic_realm_invasion_war = {
 
     on_defeat = {
         scope:attacker = { show_pow_release_message_effect = yes }
+
+        # Legitimacy
+        add_legitimacy_attacker_defeat_effect = yes
 
         #EP2 accolade glory gain for winning against higher ranked enemy
         scope:defender = { accolade_defender_war_end_glory_gain_very_high_effect = yes }

@@ -10,7 +10,7 @@ const syncedCk3Folder = path.join('.build', 'game');
 const modSourcePath = path.join('mods');
 
 module.exports = {
-  lastSyncedCk3Version: '1.11.0.1',
+  lastSyncedCk3Version: '1.12.2.1',
   localModBuildPath: '.build/mods',
   ck3GameModPath,
   syncedCk3Folder,

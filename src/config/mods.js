@@ -32,7 +32,7 @@ module.exports = {
       modFolderName: 'age-of-invasion',
       modName: 'Age of Invasion',
       modVersion: '1.0.0',
-      supportedGameVersion: '1.10.0.1',
+      supportedGameVersion: '1.12.2.1',
       modRemoteFileId: '',
       modBuildPath: path.join(config.ck3GameModPath, 'age-of-invasion').replaceAll(/\\/g, '/'),
       modTags: `{

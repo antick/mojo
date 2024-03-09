@@ -44,7 +44,7 @@ _$modId$__create = {
                 has_trait = education_martial_4
             }
             modifier = {
-                add = 2
+                add = 5
                 has_trait = ambitious
             }
             modifier = {
@@ -69,11 +69,11 @@ _$modId$__create = {
                 }
             }
             modifier = {
-                add = 2
+                add = 5
                 has_game_rule = _$modId$__increased_little
             }
             modifier = {
-                add = 5
+                add = 10
                 has_game_rule = _$modId$__increased_big
             }
             trigger_event = {
