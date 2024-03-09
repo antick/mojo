@@ -35,10 +35,6 @@ async function buildModsInLocal(selectedModKeys, buildCombinedMod) {
 }
 
 async function buildModsInGame(selectedModKeys, buildCombinedMod) {
-  if (!selectedModKeys.length) {
-    throw new Error('No mods selected for building in game');
-  }
-
   if (buildCombinedMod) {
     const modFileName = `${modConfig.combinedMod.modFolderName}.mod`;
 
