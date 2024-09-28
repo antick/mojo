@@ -1,44 +1,46 @@
+# $relates_to=common\game_rules\00_game_rules.txt
+
 _$modId$__player = {
-    default = _$modId$__player_yes
+  categories = {
+    mojo
+  }
 
-    categories = {
-        mojo
-    }
+  default = _$modId$__player_yes
 
-    _$modId$__player_yes = {
-    }
+  _$modId$__player_yes = {
+  }
 
-    _$modId$__player_no = {
-    }
+  _$modId$__player_no = {
+  }
 }
 
 _$modId$__increased_chances = {
-    default = _$modId$__increased_default
+  categories = {
+    mojo
+  }
 
-    categories = {
-        mojo
-    }
+  default = _$modId$__increased_default
 
-    _$modId$__increased_default = {
-    }
+  _$modId$__increased_default = {
+  }
 
-    _$modId$__increased_little = {
-    }
+  _$modId$__increased_little = {
+  }
 
-    _$modId$__increased_big = {
-    }
+  _$modId$__increased_big = {
+  }
 }
 
 _$modId$__inheritance = {
-    default = _$modId$__inheritance_yes
+  categories = {
+    mojo
+  }
 
-    categories = {
-        mojo
-    }
+  default = _$modId$__inheritance_yes
 
-    _$modId$__inheritance_yes = {
-    }
+  _$modId$__inheritance_yes = {
+  }
 
-    _$modId$__inheritance_no = {
-    }
+  _$modId$__inheritance_no = {
+  }
 }

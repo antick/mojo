@@ -1,9 +1,11 @@
-﻿_$modId$__limited_player = {
-	default = _$modId$__player_not_limited
+﻿# $relates_to=common\game_rules\00_game_rules.txt
 
+_$modId$__limited_player = {
 	categories = {
 		mojo
 	}
+
+	default = _$modId$__player_not_limited
 
 	_$modId$__player_not_limited = {
 	}
@@ -13,11 +15,11 @@
 }
 
 _$modId$__limited_rivalry_war = {
-	default = _$modId$__rivalry_is_limited
-
 	categories = {
 		mojo
 	}
+
+	default = _$modId$__rivalry_is_limited
 
 	_$modId$__rivalry_is_limited = {
 	}

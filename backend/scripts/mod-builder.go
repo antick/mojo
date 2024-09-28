@@ -12,6 +12,8 @@ import (
 var config = configuration.Config()
 var modConfig = configuration.ModConfig()
 
+var formatToReplace = "_\\$%s\\$_"
+
 func Cleanup(modPath string) error {
 	err := os.RemoveAll(modPath)
 	if err != nil {
@@ -25,7 +27,6 @@ func Cleanup(modPath string) error {
 
 func ProcessFile(modBuildPath, srcPath, destPath string, replacements map[string]string) error {
 	destFile := filepath.Base(destPath)
-	formatToReplace := "_\\$%s\\$_"
 
 	for placeholder, replacement := range replacements {
 		re := regexp.MustCompile(fmt.Sprintf(formatToReplace, placeholder))

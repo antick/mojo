@@ -7,14 +7,14 @@ under heavy development so a lot of breaking updates would be coming until it re
 
 ## What is Mojo?
 
-Mojo lets you make mods in different parts, making it easy to manage and build. With this tool, not only can you pick 
-which parts to use for bigger and detailed mods, but you can also work on several small parts at the same time. This 
-lets you put together a big mod with all your ideas. Instead of having a lot of separate mods and worrying if they'll 
-work well together, you can group them using Mojo. Even if one part has problems, you can keep making the others in the 
+Mojo lets you make mods in different parts, making it easy to manage and build. With this tool, not only can you pick
+which parts to use for bigger and detailed mods, but you can also work on several small parts at the same time. This
+lets you put together a big mod with all your ideas. Instead of having a lot of separate mods and worrying if they'll
+work well together, you can group them using Mojo. Even if one part has problems, you can keep making the others in the
 main mod space.
 
-By splitting big mods into smaller parts, you can keep them working well, update them for new CK3 versions, and not 
-worry about the order they load. Check the guide (WIP) to learn how to write these smaller parts, build full mods, and 
+By splitting big mods into smaller parts, you can keep them working well, update them for new CK3 versions, and not
+worry about the order they load. Check the guide (WIP) to learn how to write these smaller parts, build full mods, and
 even put them on Steam the way you like.
 
 This is a great tool for modders who manage a lot of mods and find it hard to keep track of them.
@@ -81,11 +81,11 @@ Mojo By Antick
 
 ### Compatibility
 
-Compatibility with other mods may vary. A list of supported and unsupported mods will be updated as users provide 
+Compatibility with other mods may vary. A list of supported and unsupported mods will be updated as users provide
 feedback through the mod's Steam page or GitHub issues.
 
-Given the substantial changes in this mod, compatibility with existing saved games may be affected. Starting a new 
-game might be necessary for optimal functionality. The impact depends on the submods included, so please report any 
+Given the substantial changes in this mod, compatibility with existing saved games may be affected. Starting a new
+game might be necessary for optimal functionality. The impact depends on the submods included, so please report any
 encountered issues to help improve the mod.
 
 #### Supported mods
@@ -99,6 +99,10 @@ Not tested with other mods yet. Please report any issues that you encounter.
 ### Required DLCs
 
 Royal Court
+
+Fate of Iberia
+
+Tour and Tournaments
 
 ### Required Mods
 
@@ -156,10 +160,13 @@ Yes.
 
 We have defined a few variables that can be used within the mod text file. These variables are helpful for compatibility detection and other important tasks while building mods.
 
+Few examples:
+
 ```
 # $canConflict=yes
 # $modifiedGameFile=common\council_tasks\00_chancellor_tasks.txt
 # $author=antick
+# $relates_to=common\casus_belli_types\00_struggle_war.txt
 ```
 
 These variables start with a `$` and are placed within the comment section of the mod text files. Currently, only the three variables mentioned above are supported.
@@ -169,6 +176,8 @@ The `$canConflict` variable can have a value of either `yes` or `no`. This indic
 The `$modifiedGameFile` variable is the path of the game file that this mod text file modifies. This is used to detect conflicts with other mods.
 
 The `$author` variable represents the name of the author of this mod text file. Currently, this variable does not have any significance and only for the informational purpose.
+
+The `$relates_to` variable is used to specify the path of the mod text file that this mod text file relates to for the new updates. Every time there is an update in the specified file path, we will have to update the respective file where this variable is defined.
 
 ## Support
 

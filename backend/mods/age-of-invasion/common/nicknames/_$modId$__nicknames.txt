@@ -1,1 +1,3 @@
-﻿_$modId$__nick = {}
+﻿# $relates_to=common\nicknames\_nicknames.info
+
+_$modId$__nick = {}
