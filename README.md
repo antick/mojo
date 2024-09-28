@@ -1,7 +1,7 @@
 # Mojo
 
 Mojo is a versatile tool designed for creating and managing mods for CK3 (Crusader Kings 3). Please note that this is
-under heavy development so a lot of updates would be coming until it reaches to version 1.0.
+under heavy development so a lot of breaking updates would be coming until it reaches to version 1.0.
 
 ![Mojo By Antick](snapshot.png)
 
@@ -21,25 +21,62 @@ This is a great tool for modders who manage a lot of mods and find it hard to ke
 
 ## Installation
 
-Download and install Node.js 21 or later:
+Install Go 1.20 or higher:
+
+https://go.dev/doc/install
+
+Download and install Nodejs 21:
 
 https://nodejs.org/en/download
 
+Install Wails from their documentation:
+
+https://wails.io/docs/gettingstarted/installation
+
 ## Usage
 
-Run the program `npm start`
+To run in live development mode, run `wails dev` in the project directory.
+
+To build a redistributable executable, use `wails build` in the project directory.
+
+## Development
+
+### Frontend
+```console
+cd frontend
+```
+
+```console
+npm install
+```
+
+#### Installing Components
+To install components, use shadcn's CLI tool to install
+
+More info here: https://ui.shadcn.com/docs/cli#add
+
+Example:
+```console
+npx shadcn-ui@latest add [component]
+```
+
+#### Live Development
+
+To run in live development mode, run `wails dev` in the project directory. In another terminal, go into the `frontend`
+directory and run `npm run dev`. The frontend dev server will run on http://localhost:34115. Connect to this in your
+browser and connect to your application.
 
 ## In-Built Mod
 
 This tool also comes up with an in-built mod called Mojo that has a few features to help you get started.
 
-### Load order
+### Load order in game
 
 This should be the very last mod in your playlist.
 
 ```
 ...other mods
-Mojo Mod
+Mojo By Antick
 ```
 
 ### Compatibility
@@ -58,6 +95,10 @@ Not tested with other mods yet.
 #### Unsupported mods
 
 Not tested with other mods yet. Please report any issues that you encounter.
+
+### Required DLCs
+
+Royal Court
 
 ### Required Mods
 
