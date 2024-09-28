@@ -5,4 +5,4 @@
  trait_antick_enter_the_warlord_arab:0 "The Great Warlord"
 
  trait_antick_enter_the_warlord_desc:0 "This character is a master of strategy, driven by unrestrained ambition and relentless in the quest to conquer all."
- trait_antick_enter_the_warlord_character_desc:1 "[ROOT.GetCharacter.GetFullNameNoTooltip] is a master of strategy, driven by boundless ambition and an insatiable thirst for power. [ROOT.GetCharacter.GetHerHis] desire is to overcome every obstacle, leaving nothing but submission and triumph on the path to total domination."
+ trait_antick_enter_the_warlord_character_desc:1 "[ROOT.GetCharacter.GetFullNameNoTooltip] is a master of strategy, driven by boundless ambition and an insatiable thirst for power."

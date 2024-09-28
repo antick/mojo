@@ -39,8 +39,8 @@ antick_enter_the_warlord_trait = {
 
   # Opinion modifiers
   attraction_opinion = 10
-  vassal_opinion = 70
-  independent_ruler_opinion = -50
+  vassal_opinion = 50
+  independent_ruler_opinion = -30
   same_opinion = -50
 
   ai_honor = low_negative_ai_value
