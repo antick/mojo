@@ -6,5 +6,5 @@ tags={
 }
 name="Age of Invasion"
 picture="thumbnail.png"
-supported_version="1.12.2.1"
+supported_version="1.13.0.3"
 

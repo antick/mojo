@@ -1,5 +1,5 @@
 ﻿l_english:
- rule_antick_age_of_invasion_limited_player:0 "Does Player need traits for Advanced Casus Belli"
+ rule_antick_age_of_invasion_limited_player:0 "Does Player need traits for Invasion Casus Belli"
  setting_antick_age_of_invasion_player_not_limited:0 "Player is not limited"
  setting_antick_age_of_invasion_player_is_limited:0 "Player needs traits"
  setting_antick_age_of_invasion_player_not_limited_desc:0 "The Player does not need specific character traits to start Border Disputes"

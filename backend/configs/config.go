@@ -33,7 +33,7 @@ func Config() *Type {
 	modCk3Path := filepath.Join("build", "ck3-game")
 
 	// Path of the folder where source code of the mods is stored
-	modPath := filepath.Join("game", "mojo-mods")
+	modPath := filepath.Join("backend", "mods")
 
 	return &Type{
 		// Current ck3 version that we have synced in "game" folder

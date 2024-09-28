@@ -1,178 +1,180 @@
-﻿namespace = antick_age_of_invasion_event
+﻿# $depends_on=events\_events.info
+
+namespace = antick_age_of_invasion_event
 
 antick_age_of_invasion_event.0001 = {
-    theme = war
-    hidden = yes
-    desc = antick_age_of_invasion_event.0002.d
+  theme = war
+  hidden = yes
+  desc = antick_age_of_invasion_event.0002.d
 
-    immediate = {
-        random = {
-            chance = 25
-            trigger_event = antick_age_of_invasion_event.0005
-            save_scope_as = g_antick_age_of_invasion
-        }
+  immediate = {
+    random = {
+      chance = 50
+      trigger_event = antick_age_of_invasion_event.0005
+      save_scope_as = g_antick_age_of_invasion
     }
+  }
 
-    option = {
-        name = {
-            text = antick_age_of_invasion_event.0002.a
-        }
+  option = {
+    name = {
+      text = antick_age_of_invasion_event.0002.a
     }
+  }
 }
 
 antick_age_of_invasion_event.999 = {
-    theme = war
-    hidden = yes
-    desc = antick_age_of_invasion_event.0002.d
+  theme = war
+  hidden = yes
+  desc = antick_age_of_invasion_event.0002.d
 
-    immediate = {
-        random_ruler = {
-            limit = {
-                NOT = {
-                    this = {
-                        has_truce = root
-                    }
-                    this = {
-                        is_allied_to = root
-                    }
-                }
-
-                this = {
-                    character_is_land_realm_neighbor = root
-                    is_independent_ruler = yes
-                }
-            }
-
-            this = {
-                save_scope_as = att_ruler
-            }
+  immediate = {
+    random_ruler = {
+      limit = {
+        NOT = {
+          this = {
+            has_truce = root
+          }
+          this = {
+            is_allied_to = root
+          }
         }
 
-        start_war = {
-            cb = antick_age_of_invasion_conquer_kingdom
-            target = scope:att_ruler
+        this = {
+          character_is_land_realm_neighbor = root
+          is_independent_ruler = yes
         }
+      }
+
+      this = {
+        save_scope_as = att_ruler
+      }
     }
 
-    option = {
-        name = {
-            text = antick_age_of_invasion_event.0002.a
-        }
+    start_war = {
+      cb = antick_age_of_invasion_conquer_kingdom
+      target = scope:att_ruler
     }
+  }
+
+  option = {
+    name = {
+      text = antick_age_of_invasion_event.0002.a
+    }
+  }
 }
 
 antick_age_of_invasion_event.0005 = {
-    theme = war
-    hidden = yes
-    desc = antick_age_of_invasion_event.0002.d
+  theme = war
+  hidden = yes
+  desc = antick_age_of_invasion_event.0002.d
 
-    immediate = {
-        root = {
-            save_scope_as = g_antick_age_of_invasion
-            trigger_event = antick_age_of_invasion_event.0003
-        }
+  immediate = {
+    root = {
+      save_scope_as = g_antick_age_of_invasion
+      trigger_event = antick_age_of_invasion_event.0003
     }
+  }
 
-    option = {
-        name = {
-            text = antick_age_of_invasion_event.0002.a
-        }
+  option = {
+    name = {
+      text = antick_age_of_invasion_event.0002.a
     }
+  }
 }
 
 antick_age_of_invasion_event.0002 = {
-    theme = war
-    type = character_event
-    title = antick_age_of_invasion_event.0002.t
-    desc = antick_age_of_invasion_event.0002.d
+  theme = war
+  type = character_event
+  title = antick_age_of_invasion_event.0002.t
+  desc = antick_age_of_invasion_event.0002.d
 
-    override_background = {
-        reference = wilderness
+  override_background = {
+    reference = wilderness
+  }
+
+  left_portrait = scope:g_antick_age_of_invasion
+
+  option = {
+    name = {
+      text = antick_age_of_invasion_event.0002.a
     }
-
-    left_portrait = scope:g_antick_age_of_invasion
-
-    option = {
-        name = {
-            text = antick_age_of_invasion_event.0002.a
-        }
-    }
+  }
 }
 
 antick_age_of_invasion_event.0003 = {
-    theme = war
-    type = character_event
-    title = antick_age_of_invasion_event.0003.t
-    desc = antick_age_of_invasion_event.0003.d
+  theme = war
+  type = character_event
+  title = antick_age_of_invasion_event.0003.t
+  desc = antick_age_of_invasion_event.0003.d
 
-    override_background = {
-        reference = wilderness
+  override_background = {
+    reference = wilderness
+  }
+
+  left_portrait = root
+
+  option = {
+    name = {
+      text = antick_age_of_invasion_event.0003.a
     }
 
-    left_portrait = root
+    custom_tooltip = antick_age_of_invasion_0003_tt
 
-    option = {
-        name = {
-            text = antick_age_of_invasion_event.0003.a
+    hidden_effect = {
+      every_player = {
+        limit = {
+          NOT = {
+            this = root
+          }
         }
+        trigger_event = antick_age_of_invasion_event.0002
+      }
 
-        custom_tooltip = antick_age_of_invasion_0003_tt
+      give_nickname = antick_age_of_invasion_nick
+      add_trait = antick_age_of_invasion_trait
+      add_gold = 5000
+      add_prestige = 5000
+      add_piety = 5000
+      dynasty = {
+        add_dynasty_prestige_level = 3
+        add_dynasty_prestige = 10000
+      }
 
-        hidden_effect = {
-            every_player = {
-                limit = {
-                    NOT = {
-                        this = root
-                    }
-                }
-                trigger_event = antick_age_of_invasion_event.0002
-            }
-
-            give_nickname = antick_age_of_invasion_nick
-            add_trait = antick_age_of_invasion_trait
-            add_gold = 5000
-            add_prestige = 5000
-            add_piety = 5000
-            dynasty = {
-                add_dynasty_prestige_level = 3
-                add_dynasty_prestige = 10000
-            }
-
-            if = {
-                limit = {
-                    NOT = {
-                        has_trait = ambitious
-                    }
-                }
-                add_trait = ambitious
-            }
-
-            if = {
-                limit = {
-                    NOT = {
-                        has_trait = education_martial_4
-                    }
-                }
-                remove_trait = education_martial_1
-                remove_trait = education_martial_2
-                remove_trait = education_martial_3
-                add_trait = education_martial_4
-            }
-            antick_age_of_invasion_spawn_army_effect = yes
+      if = {
+        limit = {
+          NOT = {
+            has_trait = ambitious
+          }
         }
+        add_trait = ambitious
+      }
 
-        ai_chance = {
-            base = 100
+      if = {
+        limit = {
+          NOT = {
+            has_trait = education_martial_4
+          }
         }
+        remove_trait = education_martial_1
+        remove_trait = education_martial_2
+        remove_trait = education_martial_3
+        add_trait = education_martial_4
+      }
+      antick_age_of_invasion_spawn_army_effect = yes
     }
 
-    option = {
-        name = {
-            text = antick_age_of_invasion_event.0003.b
-        }
-        add_internal_flag = dangerous
-        ai_chance = {
-            base = 0
-        }
+    ai_chance = {
+      base = 100
     }
+  }
+
+  option = {
+    name = {
+      text = antick_age_of_invasion_event.0003.b
+    }
+    add_internal_flag = dangerous
+    ai_chance = {
+      base = 0
+    }
+  }
 }
