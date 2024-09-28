@@ -30,7 +30,7 @@ func Config() *Type {
 	gameCustomModPath := filepath.Join(userHomeDir, "OneDrive", "Documents", "Paradox Interactive", "Crusader Kings III", "mod")
 
 	// Path of the folder where we are storing a copy of game files to track the changes that comes in new releases
-	modCk3Path := filepath.Join("game", "original-game-files")
+	modCk3Path := filepath.Join("build", "ck3-game")
 
 	// Path of the folder where source code of the mods is stored
 	modPath := filepath.Join("game", "mojo-mods")
