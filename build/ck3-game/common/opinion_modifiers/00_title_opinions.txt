@@ -14,8 +14,8 @@ destroyed_title = {
 }
 
 pressed_my_claim = {
-	opinion = 50
-	years = 20
+	opinion = 100
+	years = 50
 }
 
 revoked_title = {
@@ -42,4 +42,9 @@ treasonous_retract_refusal = {
 	years = 10
 	imprisonment_reason = yes
 	revoke_title_reason = yes
+}
+
+made_co_ruler_opinion = {
+	opinion = 50
+	years = 10
 }

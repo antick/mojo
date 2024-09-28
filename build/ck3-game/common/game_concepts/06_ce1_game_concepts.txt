@@ -26,6 +26,12 @@ legend = {
 	alias = { legends legend_i }
 }
 
+owned_legend = {
+	texture = "gfx/interface/icons/legend_hud.dds"
+	alias = { owning_legend }
+	parent = legend
+}
+
 promoted_legend = {
 	texture = "gfx/interface/icons/legend_hud.dds"
 	alias = { promoting_legend }
@@ -65,6 +71,11 @@ legend_promoter = {
 legend_type = {
 	texture = "gfx/interface/icons/legend_hud.dds"
 	alias = { legend_types legend_heroic legend_holy legend_legitimizing }
+	parent = legend
+}
+
+legend_library = {
+	texture = "gfx/interface/icons/legend_hud.dds"
 	parent = legend
 }
 

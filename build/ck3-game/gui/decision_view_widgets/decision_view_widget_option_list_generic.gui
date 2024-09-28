@@ -58,6 +58,14 @@ types DecisionOptionTypes
 				name = "option_icon"
 				size = { 45 45 }
 				texture = "[Entry.GetIcon]"
+				visible = "[Not( Entry.IsFlatIcon )]"
+			}
+
+			highlight_icon_building = {
+				name = "flat_option_icon"
+				size = { 45 45 }
+				texture = "[Entry.GetIcon]"
+				visible = "[Entry.IsFlatIcon]"
 			}
 
 			vbox = {

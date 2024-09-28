@@ -30,7 +30,7 @@ cat_story_allergy_modifier = {
 
 cat_killing_rodents_modifier = {
 	icon = cat_positive
-	health = 1
+	epidemic_resistance = 10
 }
 
 cat_story_fur_mittens_modifier = {

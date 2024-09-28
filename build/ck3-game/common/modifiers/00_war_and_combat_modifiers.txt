@@ -45,7 +45,7 @@ sparring_full_of_confidence_modifier = {
 
 sparring_chivalric_motivation_modifier = {
 	icon = fertility_positive
-	courting_scheme_power_add = 10
+	courting_scheme_phase_duration_add = minor_scheme_phase_duration_bonus_value
 	attraction_opinion = 10
 }
 
@@ -75,4 +75,11 @@ sparring_sprained_ankle_modifier = {
 	icon = health_negative
 	health = -0.1
 	prowess = -3
+}
+
+hampered_by_false_information_modifier = {
+	icon = intrigue_negative
+	movement_speed = -0.2
+	army_damage_mult = -0.2
+	advantage = -10
 }

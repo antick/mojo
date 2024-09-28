@@ -55,6 +55,7 @@ spread_increase_add_high = 4
 spread_decrease_add_low = -0.5
 spread_decrease_add_medium = -1
 spread_decrease_add_high = -2
+spread_decrease_add_very_high = -3
 
 spread_increase_mult_low = 0.25
 spread_increase_mult_medium = 0.75
@@ -301,23 +302,7 @@ outbreak_chance_minor_mult_value = {
 		add = outbreak_increase_mult_low
 	}
 	
-	#If the realm is not infected, more likely to create something
-	if = {
-		limit = {
-			county.holder.top_liege = {
-				any_sub_realm_county = {
-					any_county_province = {
-						NOT = {
-							any_province_epidemic = {
-								count >= 1
-							}
-						}
-					}
-				}
-			}
-		}
-		add = outbreak_increase_mult_high
-	}
+	multiply = 0.8
 	min = 0.001
 }
 
@@ -562,6 +547,8 @@ outbreak_chance_major_mult_value = {
 		add = outbreak_increase_mult_low
 	}
 	
+	multiply = 1.05
+	
 	min = 0.001
 }
 
@@ -800,6 +787,8 @@ outbreak_chance_apocalyptic_mult_value = {
 		add = outbreak_increase_mult_low
 	}
 	
+	multiply = 1.05
+	
 	min = 0.0005
 }
 
@@ -1008,13 +997,6 @@ outbreak_chance_black_plague_default_value = {
 
 	if = {
 		limit = {
-			has_game_rule = bd_occurrence_random
-		}
-		add = outbreak_increase_add_high
-	}
-
-	if = {
-		limit = {
 			has_building_or_higher = common_tradeport_03
 		}
 		add = outbreak_increase_add_medium
@@ -1046,6 +1028,20 @@ outbreak_chance_black_plague_default_value = {
 	if = {
 		limit = {
 			has_building_or_higher = common_tradeport_08
+		}
+		add = outbreak_increase_add_high
+	}
+	
+	if = {
+		limit = {
+			has_game_rule = epidemic_frequency_disabled
+		}
+		multiply = 0
+	}
+
+	if = {
+		limit = {
+			has_game_rule = bd_occurrence_random
 		}
 		add = outbreak_increase_add_high
 	}
@@ -1473,7 +1469,7 @@ spread_chance_epidemics_default_value = {
 	else_if = {
 		limit = {
 			county.culture = {
-				has_cultural_tradition = tradition_isolationist
+				has_cultural_parameter = less_plague_spread_culture
 			}
 		}
 		add = spread_decrease_add_high
@@ -1488,7 +1484,7 @@ spread_chance_epidemics_default_value = {
 				}
 			}
 		}
-		add = spread_decrease_add_high
+		add = spread_decrease_add_very_high
 	}
 }
 
@@ -1863,6 +1859,54 @@ character_infection_chance_default_value = {
 		}
 		add = 20
 	}
+	# Camp resistance.
+	if = {
+		limit = {
+			host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_1 }
+		}
+		# Max buff.
+		if = {
+			limit = {
+				host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_6 }
+			}
+			add = -40
+		}
+		# Very high buff.
+		else_if = {
+			limit = {
+				host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_5 }
+			}
+			add = -30
+		}
+		# High buff.
+		else_if = {
+			limit = {
+				host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_4 }
+			}
+			add = -25
+		}
+		# Medium buff.
+		else_if = {
+			limit = {
+				host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_3 }
+			}
+			add = -20
+		}
+		# Small buff.
+		else_if = {
+			limit = {
+				host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_2 }
+			}
+			add = -15
+		}
+		# Slight buff.
+		else_if = {
+			limit = {
+				host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_1 }
+			}
+			add = -10
+		}
+	}
 	#Would you follow social distancing?
 	#your numerical social distance value gets transformed here into a bonus/malus
 	add = {
@@ -1946,33 +1990,24 @@ recent_epidemics_outbreak_mult_value = {
 		}
 		if = {
 			limit = {
-				has_game_rule = epidemic_frequency_often
+				has_game_rule = epidemic_frequency_very_often
 			}
 			value = outbreak_decrease_mult_high
 		}
 		else_if = {
 			limit = {
-				has_game_rule = epidemic_frequency_very_often
-			}
-			value = outbreak_decrease_mult_medium
-		}
-		else_if = {
-			limit = {
 				has_game_rule = epidemic_frequency_doomsday
 			}
-			value = outbreak_decrease_mult_low
+			value = outbreak_decrease_mult_medium
 		}
 		else = {
 			value = outbreak_decrease_mult_unlikely
 		}
 		
 	}
-	else = {
-		value = 1
-	}
 
 	#People still remember how to social distance in general
-	if = {
+	else_if = {
 		limit = {
 			has_variable = epidemic_cooldown_general #Average social memory
 		}
@@ -1991,9 +2026,6 @@ recent_epidemics_outbreak_mult_value = {
 		else = {
 			value = outbreak_decrease_mult_high
 		}
-	}
-	else = {
-		value = 1
 	}
 }
 

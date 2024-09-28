@@ -31,7 +31,7 @@ ce1_heroic_legacy_1 = { # Heroes of Old
 					dynasty_prestige_level >= high_dynasty_prestige_level
 				}
 			}
-			multiply = 10
+			multiply = 2
 		}
 		if = {
 			limit = {

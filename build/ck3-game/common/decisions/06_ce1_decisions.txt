@@ -4,18 +4,19 @@
 #isolate_family_decision
 
 commission_legend_artifact_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_smith.dds"
-	
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	}
 	cooldown = { days = standard_commission_artifact_cooldown_time }
 	sort_order = 100
-	
+
 	is_shown = {
 		is_landed = yes
 		highest_held_title_tier >= tier_county
 		exists = capital_province
 		has_dlc_feature = legends
 	}
-	
+
 	is_valid_showing_failures_only = {
 		# Only valid for characters with an antiquaria OR chronicler
 		custom_tooltip = {
@@ -56,6 +57,12 @@ commission_legend_artifact_decision = {
 			else = {
 				value = 400
 			}
+			if = {
+				limit = { # Estate discount bonus
+					domicile ?= { has_domicile_parameter = estate_reduce_commission_artifact_cost }
+				}
+				multiply = estate_reduce_commission_artifact_cost_value
+			}
 		}
 	}
 
@@ -91,7 +98,7 @@ commission_legend_artifact_decision = {
 	}
 
 	ai_check_interval = 36
-	
+
 	ai_potential = {
 		is_at_war = no
 		ai_greed < medium_positive_ai_value
@@ -105,16 +112,29 @@ commission_legend_artifact_decision = {
 }
 
 clear_ground_for_legendary_building = {
-	picture = "gfx/interface/illustrations/decisions/decision_legend.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
+	}
+	decision_group_type = major
 	sort_order = 100
-	
+
 	is_shown = {
 		exists = var:legendary_reward_location
 		has_dlc_feature = legends
+		is_landed = yes
 	}
-	
+
 	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = clear_ground_for_legendary_building_no_barony_tt
+			any_held_title = {
+				tier = tier_barony
+				title_province = { has_special_building_slot = no }
+				is_capital_barony = yes
+				holder = root
+				is_leased_out = no
+			}
+		}
 	}
 
 	widget = {
@@ -134,6 +154,7 @@ clear_ground_for_legendary_building = {
 			current_description = clear_ground_legendary_shrine_desc
 			localization = clear_ground_legendary_shrine
 			icon = "gfx/interface/icons/building_types/icon_building_legendary_shrine.dds"
+			flat = yes
 			ai_chance = { value = 10 }
 		}
 		item = { # Statue
@@ -147,6 +168,7 @@ clear_ground_for_legendary_building = {
 			current_description = clear_ground_legendary_statue_desc
 			localization = clear_ground_legendary_statue
 			icon = "gfx/interface/icons/building_types/icon_building_legendary_statue.dds"
+			flat = yes
 			ai_chance = { value = 10 }
 		}
 		item = { # Palace
@@ -160,6 +182,7 @@ clear_ground_for_legendary_building = {
 			current_description = clear_ground_legendary_palace_desc
 			localization = clear_ground_legendary_palace
 			icon = "gfx/interface/icons/building_types/icon_building_legendary_palace.dds"
+			flat = yes
 			ai_chance = { value = 10 }
 		}
 		item = { # Watchtower
@@ -173,6 +196,7 @@ clear_ground_for_legendary_building = {
 			current_description = clear_ground_legendary_watchtower_desc
 			localization = clear_ground_legendary_watchtower
 			icon = "gfx/interface/icons/building_types/icon_building_legendary_watchtower.dds"
+			flat = yes
 			ai_chance = { value = 10 }
 		}
 		item = { # Hunting lodge
@@ -186,125 +210,189 @@ clear_ground_for_legendary_building = {
 			current_description = clear_ground_legendary_hunting_lodge_desc
 			localization = clear_ground_legendary_hunting_lodge
 			icon = "gfx/interface/icons/building_types/icon_building_legendary_hunting_grounds.dds"
+			flat = yes
 			ai_chance = { value = 10 }
 		}
 	}
 
 	effect = {
-		send_interface_toast = {
-			title = clear_ground_for_legendary_building.toast
-			if = {
-				limit = {
-					scope:clear_ground_legendary_shrine = yes
-				}
-				var:legendary_reward_location = {
-					add_special_building_slot = legendary_shrine
-				}
-			}
-			else_if = {
-				limit = {
-					scope:clear_ground_legendary_palace = yes
-				}
-				var:legendary_reward_location = {
-					add_special_building_slot = legendary_palace
-				}
-			}
-			else_if = {
-				limit = {
-					scope:clear_ground_legendary_statue = yes
-				}
-				var:legendary_reward_location = {
-					add_special_building_slot = legendary_statue
-				}
-			}
-			else_if = {
-				limit = {
-					scope:clear_ground_legendary_watchtower = yes
-				}
-				var:legendary_reward_location = {
-					add_special_building_slot = legendary_watchtower
-				}
-			}
-			else_if = {
-				limit = {
-					scope:clear_ground_legendary_hunting_lodge = yes
-				}
-				var:legendary_reward_location = {
-					add_special_building_slot = legendary_hunting_lodge
-				}
-			}
-		}
-		hidden_effect = {
-			# Shift the legend protagonist to the province
-			if = {
-				limit = {
-					exists = var:legendary_figure
-				}
-				var:legendary_reward_location = {
-					set_variable = {
-						name = legendary_figure
-						value =  root.var:legendary_figure
-					}
-				}
-				remove_variable = legendary_figure
-			}
-			# Cleanup
-			if = {
-				limit = {
-					has_character_flag = legendary_shrine_flag
-				}
-				remove_character_flag = legendary_shrine_flag
-			}
-			if = {
-				limit = {
-					has_character_flag = legendary_statue_flag
-				}
-				remove_character_flag = legendary_statue_flag
-			}
-			if = {
-				limit = {
-					has_character_flag = legendary_palace_flag
-				}
-				remove_character_flag = legendary_palace_flag
-			}
-			if = {
-				limit = {
-					has_character_flag = legendary_watchtower_flag
-				}
-				remove_character_flag = legendary_watchtower_flag
-			}
-			if = {
-				limit = {
-					has_character_flag = legendary_hunting_lodge_flag
-				}
-				remove_character_flag = legendary_hunting_lodge_flag
-			}
-			if = {
-				limit = {
-					exists = var:legendary_reward_location
-				}
-				remove_variable = legendary_reward_location
-			}
-		}
-	}
+		custom_tooltip = clear_ground_for_legendary_building_custom_tt
+        switch = {
+            trigger = yes
+            scope:clear_ground_legendary_shrine = {
+                set_variable = {
+                    name = clear_ground
+                    value = flag:legendary_shrine
+                }
+            }
+            scope:clear_ground_legendary_palace = {
+                set_variable = {
+                    name = clear_ground
+                    value = flag:legendary_palace
+                }
+            }
+            scope:clear_ground_legendary_statue = {
+                set_variable = {
+                    name = clear_ground
+                    value = flag:legendary_statue
+                }
+            }
+            scope:clear_ground_legendary_watchtower = {
+                set_variable = {
+                    name = clear_ground
+                    value = flag:legendary_watchtower
+                }
+            }
+            scope:clear_ground_legendary_hunting_lodge = {
+                set_variable = {
+                    name = clear_ground
+                    value = flag:legendary_hunting_lodge
+                }
+            }
+        }
+        open_view_data = {
+            view = decision_detail
+            data = decision:pick_legendary_barony_decision
+            player = root
+        }
+    }
+    ai_check_interval = 36
+    ai_potential = {
+        is_at_war = no
+        ai_greed < medium_positive_ai_value
+        short_term_gold > ai_war_chest_desired_gold_value
+        war_chest_gold >= halved_ai_war_chest_gold_maximum
+    }
+    ai_will_do = {
+        base = 100 #AI should always reap rewards
+    }
+}
 
-	ai_check_interval = 36
-	
-	ai_potential = {
-		is_at_war = no
-		ai_greed < medium_positive_ai_value
-		short_term_gold > ai_war_chest_desired_gold_value
-		war_chest_gold >= halved_ai_war_chest_gold_maximum
-	}
-
-	ai_will_do = {
-		base = 100 #AI should always reap rewards
-	}
+pick_legendary_barony_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
+    }
+	decision_group_type = major
+    ai_goal = yes
+    is_invisible = yes
+    widget = {
+        controller = create_holy_order
+        barony_valid = {
+            trigger_if = {
+                limit = { exists = this }
+				title_province = { has_special_building_slot = no }
+				is_capital_barony = yes
+				holder = scope:ruler
+				is_leased_out = no
+            }
+        }
+    }
+    is_valid_showing_failures_only = { # Error suppressing
+		has_variable = clear_ground
+    }
+    cost = {
+    }
+    effect = {
+        send_interface_toast = {
+            type = event_toast_effect_good
+            title = clear_ground_for_legendary_building.toast
+            switch = {
+                trigger = root.var:clear_ground
+                flag:legendary_shrine = {
+                    scope:barony.title_province ?= {
+                        add_special_building_slot = legendary_shrine
+                    }
+                }
+                flag:legendary_palace = {
+                    scope:barony.title_province ?= {
+                        add_special_building_slot = legendary_palace
+                    }
+                }
+                flag:legendary_statue = {
+                    scope:barony.title_province ?= {
+                        add_special_building_slot = legendary_statue
+                    }
+                }
+                flag:legendary_watchtower = {
+                    scope:barony.title_province ?= {
+                        add_special_building_slot = legendary_watchtower
+                    }
+                }
+                flag:legendary_hunting_lodge = {
+                    scope:barony.title_province ?= {
+                        add_special_building_slot = legendary_hunting_lodge
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            remove_variable = clear_ground
+            # Shift the legend protagonist to the province
+            if = {
+                limit = {
+                    exists = var:legendary_figure
+                }
+                scope:barony.title_province ?= {
+                    set_variable = {
+                        name = legendary_figure
+                        value =  root.var:legendary_figure
+                    }
+                }
+                remove_variable = legendary_figure
+            }
+            # Cleanup
+            if = {
+                limit = {
+                    has_character_flag = legendary_shrine_flag
+                }
+                remove_character_flag = legendary_shrine_flag
+            }
+            if = {
+                limit = {
+                    has_character_flag = legendary_statue_flag
+                }
+                remove_character_flag = legendary_statue_flag
+            }
+            if = {
+                limit = {
+                    has_character_flag = legendary_palace_flag
+                }
+                remove_character_flag = legendary_palace_flag
+            }
+            if = {
+                limit = {
+                    has_character_flag = legendary_watchtower_flag
+                }
+                remove_character_flag = legendary_watchtower_flag
+            }
+            if = {
+                limit = {
+                    has_character_flag = legendary_hunting_lodge_flag
+                }
+                remove_character_flag = legendary_hunting_lodge_flag
+            }
+            if = {
+                limit = {
+                    exists = var:legendary_reward_location
+                }
+                remove_variable = legendary_reward_location
+            }
+        }
+    }
+    
+    ai_potential = {
+        is_playable_character = yes
+    }
+    ai_will_do = {
+        base = 200
+    }
 }
 
 isolate_capital_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_black_plague.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_black_plague.dds"
+	}
+	decision_group_type = major
 	sort_order = 100
 
 	title = {
@@ -336,16 +424,35 @@ isolate_capital_decision = {
 			desc = isolate_capital_decision_confirm
 		}
 	}
-	
+
 	is_shown = {
 		is_landed = yes
+		exists = capital_county
 		highest_held_title_tier >= tier_county
-		OR = {
-			realm_has_any_epidemic = {
-				SIZE = 1
-				INTENSITY = minor
+		trigger_if = {
+			limit = {
+				is_ai = yes
 			}
-			capital_county = { has_county_modifier = isolate_capital_decision_modifier }
+			OR = {
+				any_held_title = {
+					tier = tier_county
+					any_county_province = {
+						any_province_epidemic = {
+							count >= 1
+						}
+					}
+				}
+				capital_county = { has_county_modifier = isolate_capital_decision_modifier }
+			}
+		}
+		trigger_else = {
+			OR = {
+				realm_has_any_epidemic = {
+					SIZE = 1
+					INTENSITY = minor
+				}
+				capital_county = { has_county_modifier = isolate_capital_decision_modifier }
+			}
 		}
 	}
 
@@ -358,11 +465,7 @@ isolate_capital_decision = {
 		item = { # Isolate your capital
 			value = isolate_capital_decision
 			is_valid = {
-				is_landed = yes
-				highest_held_title_tier >= tier_county
-				NOT = {
-					capital_county = { has_county_modifier = isolate_capital_decision_modifier }
-				}
+				capital_county ?= { NOT = { has_county_modifier = isolate_capital_decision_modifier } }
 				custom_tooltip = {
 					text = isolate_capital_decision_tt
 					any_sub_realm_county = {
@@ -379,65 +482,27 @@ isolate_capital_decision = {
 			icon = "gfx/interface/icons/message_feed/plague.dds"
 			ai_chance = {
 				value = 100
-				if = {
-					limit = {
-						any_sub_realm_county = {
-							any_county_province = {
-								any_province_epidemic = {
-									outbreak_intensity >= major
-								}
-							}
-						}
-					}
-					multiply = 1.5
-				}
-				if = {
-					limit = {
-						any_sub_realm_county = {
-							any_county_province = {
-								any_province_epidemic = {
-									outbreak_intensity >= apocalyptic
-								}
-							}
-						}
-					}
-					multiply = 2
-				}
 			}
 		}
 
 		item = { # End isolation of your capital
 			value = unisolate_capital_decision
 			is_valid = {
-				is_landed = yes
-				highest_held_title_tier >= tier_county
 				custom_tooltip = {
 					text = unisolate_capital_decision_tt
 					exists = capital_county
-					capital_county = { has_county_modifier = isolate_capital_decision_modifier }
+					capital_county ?= { has_county_modifier = isolate_capital_decision_modifier }
 				}
 			}
 			current_description = unisolate_capital_decision_desc
 			localization = unisolate_capital_decision
-			icon = "gfx/interface/icons/court_position_types/court_cave_hermit_position.dds"
+			icon = "gfx/interface/icons/court_position_types/cave_hermit_court_position.dds"
 			ai_chance = {
 				value = 100
-				if = {
-					limit = {
-						OR = {
-							has_character_flag = ai_capital_isolation_cooldown
-							realm_has_any_epidemic = {
-								SIZE = 1
-								INTENSITY = major
-							}
-						}
-					}
-					multiply = 0
-				}
 			}
 		}
 	}
-	
+
 	cooldown = { days = 365 }
 
 	effect = {
@@ -445,6 +510,7 @@ isolate_capital_decision = {
 			limit = {
 				scope:isolate_capital_decision = yes
 			}
+			add_legitimacy_effect = { LEGITIMACY = miniscule_legitimacy_loss }
 			capital_county = {
 				add_county_modifier = {
 					modifier = isolate_capital_decision_modifier
@@ -453,7 +519,7 @@ isolate_capital_decision = {
 			}
 			add_character_flag = {
 				flag = ai_capital_isolation_cooldown
-				years = 5
+				years = 1
 			}
 		}
 		if = {
@@ -466,21 +532,98 @@ isolate_capital_decision = {
 		}
 	}
 
-	ai_check_interval = 36
-	
+	ai_check_interval = 6
+
 	ai_potential = {
-		NOT = { ai_rationality <= medium_positive_ai_value }
 		NOT = { has_character_flag = ai_capital_isolation_cooldown }
 	}
 
 	ai_will_do = {
-		base = 100
+		base = 0
+		modifier = {
+			add = 100
+			NOT = { capital_county = { has_county_modifier = isolate_capital_decision_modifier } }
+		}
+		modifier = {
+			add = 100
+			NOT = { capital_county = { has_county_modifier = isolate_capital_decision_modifier } }
+			has_trait = paranoid
+		}
+		modifier = {
+			add = -50
+			NOT = { capital_county = { has_county_modifier = isolate_capital_decision_modifier } }
+			has_trait = brave
+		}
+		modifier = {
+			add = -50
+			NOT = { capital_county = { has_county_modifier = isolate_capital_decision_modifier } }
+			has_trait = greedy
+		}
+		modifier = {
+			add = -50
+			NOT = { capital_county = { has_county_modifier = isolate_capital_decision_modifier } }
+			ai_rationality <= -50
+		}
+		modifier = {
+			add = 50
+			NOT = { capital_county = { has_county_modifier = isolate_capital_decision_modifier } }
+			any_held_title = {
+				tier = tier_county
+				any_county_province = {
+					any_province_epidemic = {
+						count >= 1
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 50
+			NOT = { capital_county = { has_county_modifier = isolate_capital_decision_modifier } }
+			any_held_title = {
+				tier = tier_county
+				any_county_province = {
+					any_province_epidemic = {
+						count >= 1
+						outbreak_intensity >= major
+					}
+				}
+			}
+		}
+		modifier = {
+			add = ai_rationality
+			NOT = { capital_county = { has_county_modifier = isolate_capital_decision_modifier } }
+			ai_rationality > 0
+			any_held_title = {
+				tier = tier_county
+				any_county_province = {
+					any_province_epidemic = {
+						count >= 1
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 100
+			capital_county = { has_county_modifier = isolate_capital_decision_modifier }
+			NOT = {
+				any_held_title = {
+					tier = tier_county
+					any_county_province = {
+						any_province_epidemic = {
+							count >= 1
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
 isolate_family_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_black_plague.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_black_plague.dds"
+	}
+	decision_group_type = major
 	sort_order = 100
 
 	title = {
@@ -512,18 +655,45 @@ isolate_family_decision = {
 			desc = isolate_family_decision_confirm
 		}
 	}
-	
+
 	is_shown = {
 		is_landed = yes
-		OR = {
-			any_sub_realm_county = {
-				any_county_province = {
-					any_province_epidemic = {
-						count >= 1
+		trigger_if = {
+			limit = {
+				is_ai = yes
+			}
+			OR = {
+				has_character_modifier = isolating_modifier
+				capital_province.county ?= {
+					any_neighboring_county = {
+						any_county_province = {
+							any_province_epidemic = {
+								count >= 1
+							}
+						}
+					}
+				}
+				any_held_title = {
+					tier = tier_county
+					any_county_province = {
+						any_province_epidemic = {
+							count >= 1
+						}
 					}
 				}
 			}
-			has_character_modifier = isolating_modifier
+		}
+		trigger_else = {
+			OR = {
+				any_sub_realm_county = {
+					any_county_province = {
+						any_province_epidemic = {
+							count >= 1
+						}
+					}
+				}
+				has_character_modifier = isolating_modifier
+			}
 		}
 	}
 
@@ -552,31 +722,7 @@ isolate_family_decision = {
 			localization = isolate_family_decision
 			icon = "gfx/interface/icons/message_feed/plague.dds"
 			ai_chance = {
-				value = 10
-				if = {
-					limit = {
-						has_trait = paranoid
-					}
-					add = 90
-				}
-				if = {
-					limit = {
-						realm_has_any_epidemic = {
-							SIZE = 1
-							INTENSITY = major
-						}
-					}
-					multiply = 1.5
-				}
-				if = {
-					limit = {
-						realm_has_any_epidemic = {
-							SIZE = 1
-							INTENSITY = apocalyptic
-						}
-					}
-					multiply = 2
-				}
+				value = 100
 			}
 		}
 
@@ -587,22 +733,9 @@ isolate_family_decision = {
 			}
 			current_description = unisolate_family_decision_desc
 			localization = unisolate_family_decision
-			icon = "gfx/interface/icons/court_position_types/court_cave_hermit_position.dds"
+			icon = "gfx/interface/icons/court_position_types/cave_hermit_court_position.dds"
 			ai_chance = {
 				value = 100
-				subtract = ai_rationality
-				if = {
-					limit = {
-						OR = {
-							has_character_flag = ai_unisolate_cooldown # We keep you isolating for 1y
-							realm_has_any_epidemic = { #If there's a major/apocalyptic plague you should stay inside
-								SIZE = 1
-								INTENSITY = major
-							}
-						}
-					}
-					multiply = 0
-				}
 			}
 		}
 	}
@@ -635,29 +768,80 @@ isolate_family_decision = {
 	}
 
 	ai_will_do = {
-		base = 10
+		base = 0
 		modifier = {
-			add = 90
+			add = 100
+			NOT = { has_character_modifier = isolating_modifier }
 			has_trait = paranoid
 		}
-		ai_value_modifier = {
-			ai_boldness = -2.5
-			ai_rationality = -0.5
-			ai_sociability = -0.5
+		modifier = {
+			add = -50
+			NOT = { has_character_modifier = isolating_modifier }
+			has_trait = brave
 		}
 		modifier = {
-			factor = 1.5
-			realm_has_any_epidemic = {
-				SIZE = 1
-				INTENSITY = major
+			add = -50
+			NOT = { has_character_modifier = isolating_modifier }
+			ai_rationality <= -50
+		}
+		modifier = {
+			add = 50
+			NOT = { has_character_modifier = isolating_modifier }
+			any_held_title = {
+				tier = tier_county
+				any_county_province = {
+					any_province_epidemic = {
+						count >= 1
+					}
+				}
 			}
 		}
 		modifier = {
-			factor = 2
-			realm_has_any_epidemic = {
-				SIZE = 1
-				INTENSITY = apocalyptic
+			add = 50
+			NOT = { has_character_modifier = isolating_modifier }
+			any_held_title = {
+				tier = tier_county
+				any_county_province = {
+					any_province_epidemic = {
+						count >= 1
+						outbreak_intensity >= major
+					}
+				}
+			}
+		}
+		modifier = {
+			add = ai_rationality
+			NOT = { has_character_modifier = isolating_modifier }
+			ai_rationality > 0
+			any_held_title = {
+				tier = tier_county
+				any_county_province = {
+					any_province_epidemic = {
+						count >= 1
+					}
+				}
+			}
+		}
+		modifier = {
+			add = 100
+			has_character_modifier = isolating_modifier
+			NOR = {
+				has_character_flag = ai_unisolate_cooldown # We keep you isolating for 1y
+				capital_province = { # For barons to not exit too early
+					any_province_epidemic = {
+						count >= 1
+					}
+				}
+				any_held_title = {
+					tier = tier_county
+					any_county_province = {
+						any_province_epidemic = {
+							count >= 1
+						}
+					}
+				}
 			}
 		}
 	}
 }
+

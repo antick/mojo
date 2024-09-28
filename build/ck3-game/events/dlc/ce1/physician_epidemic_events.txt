@@ -29,7 +29,7 @@ physician_epidemic_events.1000 = {
 	}
 	cooldown = { years = 5 } 
 	trigger = {
-		realm_has_any_epidemic = { INTENSITY = major SIZE = 1 }
+		realm_has_any_nearby_epidemic = { INTENSITY = major SIZE = 1 }
 		court_position:court_physician_court_position ?= {
 			probably_superstitious = yes
 			is_available_ai_adult = yes
@@ -47,7 +47,7 @@ physician_epidemic_events.1000 = {
 	}
 
 	immediate = {
-		get_random_realm_epidemic = { INTENSITY = major }
+		get_random_nearby_realm_epidemic = { INTENSITY = major }
 		court_position:court_physician_court_position = { save_scope_as = physician }
 		if = {
 			limit = {
@@ -242,11 +242,11 @@ physician_epidemic_events.1010 = {
 		court_position:court_physician_court_position ?= {
 			is_available_ai_adult = yes
 		}
-		realm_has_any_epidemic = { SIZE = 5 INTENSITY = major }
+		realm_has_any_nearby_epidemic = { SIZE = 5 INTENSITY = major }
 	}
 
 	immediate = {
-		get_random_realm_epidemic = { INTENSITY = major }
+		get_random_nearby_realm_epidemic = { INTENSITY = major }
 		court_position:court_physician_court_position = { save_scope_as = physician }
 	}
 
@@ -269,7 +269,6 @@ physician_epidemic_events.1010 = {
 				modifier = ce1_major_quarantine_county
 				years = 10
 			}
-			change_development_progress_with_overflow = epidemic_development_loss_value
 		}
 		stress_impact = {
 			greedy = medium_stress_impact_gain
@@ -424,7 +423,7 @@ physician_epidemic_events.1020 = {
 					has_trait = gregarious
 				}
 			}
-			animation = worry
+			animation = sadness
 		}
 		animation = thinking
 	}
@@ -487,6 +486,15 @@ physician_epidemic_events.1020 = {
 	#No treatment
 	option = {
 		name = physician_epidemic_events.1020.d
+		
+		if = { # Admin governors lose a bit of trait XP if they don't try to do something
+			limit = {
+				is_governor = yes
+				has_trait = governor
+			}
+			increase_governance_effect = { VALUE = -2 }
+		}
+		
 		ai_chance = { base = 0 }
 	}
 }
@@ -506,7 +514,7 @@ physician_epidemic_events.1021 = {
 	}
 	left_portrait = {
 		character = scope:physician
-		animation = admiration
+		animation = physician
 	}
 
 	immediate = {
@@ -519,6 +527,15 @@ physician_epidemic_events.1021 = {
 	#Neato!
 	option = {
 		name = physician_epidemic_events.1021.a
+		
+		if = { # Admin governors gain some XP when successful
+			limit = {
+				is_governor = yes
+				has_trait = governor
+			}
+			increase_governance_effect = { VALUE = 2 }
+		}
+		
 		ai_chance = { base = 10 }
 	}
 }
@@ -638,6 +655,15 @@ physician_epidemic_events.1023 = {
 	#Neato!
 	option = {
 		name = physician_epidemic_events.1023.a
+		
+		if = { # Admin governors gain some XP when successful
+			limit = {
+				is_governor = yes
+				has_trait = governor
+			}
+			increase_governance_effect = { VALUE = 4 }
+		}
+		
 		ai_chance = { base = 10 }
 	}
 }
@@ -770,6 +796,15 @@ physician_epidemic_events.1025 = {
 	#Neato!
 	option = {
 		name = physician_epidemic_events.1025.a
+		
+		if = { # Admin governors gain some XP when successful
+			limit = {
+				is_governor = yes
+				has_trait = governor
+			}
+			increase_governance_effect = { VALUE = 6 }
+		}
+		
 		ai_chance = { base = 10 }
 	}
 }
@@ -899,12 +934,12 @@ physician_epidemic_events.1030 = {
 		court_position:court_physician_court_position = {
 			is_available_ai_adult = yes
 		}
-		realm_has_any_epidemic = { INTENSITY = major SIZE = 1 }
+		realm_has_any_nearby_epidemic = { INTENSITY = major SIZE = 1 }
 	}
 
 	immediate = {
 		court_position:court_physician_court_position = { save_scope_as = physician }
-		get_random_realm_epidemic = { INTENSITY = major }
+		get_random_nearby_realm_epidemic = { INTENSITY = major }
 	}
 
 	#Go for it king!
@@ -1100,9 +1135,11 @@ physician_epidemic_events.1040 = {
 		character = scope:physician
 		animation = steward
 	}
+	
+	cooldown = { years = 20 }
 
 	trigger = {
-		realm_has_any_epidemic = { INTENSITY = major SIZE = 1 }
+		realm_has_any_nearby_epidemic = { INTENSITY = major SIZE = 1 }
 		exists = court_position:court_physician_court_position
 		court_position:court_physician_court_position = {
 			is_available_ai_adult = yes
@@ -1110,7 +1147,7 @@ physician_epidemic_events.1040 = {
 	}
 
 	immediate = {
-		get_random_realm_epidemic = { INTENSITY = major }
+		get_random_nearby_realm_epidemic = { INTENSITY = major }
 		court_position:court_physician_court_position = { save_scope_as = physician }
 	}
 
@@ -1139,9 +1176,66 @@ physician_epidemic_events.1040 = {
 					has_trait = scope:epidemic_scope.epidemic_type.epidemic_trait
 				}
 			}
-			random = {
-				chance = 15
-				add_trait = scope:epidemic_scope.epidemic_type.epidemic_trait
+			if = {
+				limit = {
+					NOT = {
+						has_trait = scope:epidemic_scope.epidemic_type.epidemic_trait
+					}
+				}
+				if = {
+					limit = {
+						scope:epidemic_scope.epidemic_type.epidemic_trait = trait:smallpox
+					}
+					random = {
+						chance = 15
+						contract_disease_effect = { DISEASE = smallpox TREATMENT_EVENT = yes }
+					}
+				}
+				else_if = {
+					limit = {
+						scope:epidemic_scope.epidemic_type.epidemic_trait = trait:measles
+					}
+					random = {
+						chance = 15
+						contract_disease_effect = { DISEASE = measles TREATMENT_EVENT = yes }
+					}
+				}
+				else_if = {
+					limit = {
+						scope:epidemic_scope.epidemic_type.epidemic_trait = trait:dysentery
+					}
+					random = {
+						chance = 15
+						contract_disease_effect = { DISEASE = dysentery TREATMENT_EVENT = yes }
+					}
+				}
+				else_if = {
+					limit = {
+						scope:epidemic_scope.epidemic_type.epidemic_trait = trait:bubonic_plague
+					}
+					random = {
+						chance = 15
+						contract_disease_effect = { DISEASE = bubonic_plague TREATMENT_EVENT = yes }
+					}
+				}
+				else_if = {
+					limit = {
+						scope:epidemic_scope.epidemic_type.epidemic_trait = trait:typhus
+					}
+					random = {
+						chance = 15
+						contract_disease_effect = { DISEASE = typhus TREATMENT_EVENT = yes }
+					}
+				}
+				else_if = {
+					limit = {
+						scope:epidemic_scope.epidemic_type.epidemic_trait = trait:consumption
+					}
+					random = {
+						chance = 15
+						contract_disease_effect = { DISEASE = consumption TREATMENT_EVENT = yes }
+					}
+				}
 			}
 		}
 		stress_impact = {
@@ -1221,7 +1315,7 @@ physician_epidemic_events.1050 = {
 	trigger = {
 		is_at_war = yes
 		exists = court_position:court_physician_court_position
-		realm_has_any_epidemic = { INTENSITY = major SIZE = 1 }
+		realm_has_any_nearby_epidemic = { INTENSITY = major SIZE = 1 }
 		court_position:court_physician_court_position = {
 			is_available_ai_adult = yes
 			OR = { # Would be willing to heal the enemy
@@ -1234,7 +1328,7 @@ physician_epidemic_events.1050 = {
 	}
 
 	immediate = {
-		get_random_realm_epidemic = { INTENSITY = major }
+		get_random_nearby_realm_epidemic = { INTENSITY = major }
 		court_position:court_physician_court_position = { save_scope_as = physician }
 		random_primary_war_enemy = {
 			limit = {
@@ -1331,6 +1425,13 @@ physician_epidemic_events.1060 = {
 		exists = court_position:court_physician_court_position
 		any_sub_realm_county = {
 			any_county_province = {
+				OR = {
+					county.holder = root
+					squared_distance = {
+						target = root.capital_province
+						value <= squared_distance_medium #250 map-pixels. Roughly one Ireland away (top to bottom).
+					}
+				}
 				any_province_epidemic = {
 					count >= 1
 					outbreak_intensity >= major
@@ -1350,7 +1451,7 @@ physician_epidemic_events.1060 = {
 	}
 
 	immediate = {
-		get_random_realm_epidemic = { INTENSITY = major }
+		get_random_nearby_realm_epidemic = { INTENSITY = major }
 		court_position:court_physician_court_position = { save_scope_as = physician }
 		random_close_or_extended_family_member = {
 			limit = {
@@ -1369,7 +1470,7 @@ physician_epidemic_events.1060 = {
 			limit = {
 				has_trait = scope:epidemic_scope.epidemic_type.epidemic_trait
 			}
-			banish = yes
+			banish = yes # banish_effect not used for unlanded
 		}
 		every_courtier_or_guest = {
 			custom = every_uninfected_courtier_or_guest
