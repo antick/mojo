@@ -26,3 +26,17 @@
 - Perk system: Receive 3 perks in each lifestyle tree upon becoming a Warlord
 - Subjugation demands: Send ultimatums to neighboring realms
 - "The Great Warlord" decision to activate it for Player.
+
+## Reference for more ideas:
+
+- https://steamcommunity.com/sharedfiles/filedetails/?id=3210993419
+- https://steamcommunity.com/sharedfiles/filedetails/?id=3337744568
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2854634087
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2417264466
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2821151401
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2272530786
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2854634087
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2868373364
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2921920824
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2704810852
+- https://steamcommunity.com/sharedfiles/filedetails/?id=3059198209
