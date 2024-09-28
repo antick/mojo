@@ -13,17 +13,3 @@ _$modId$__limited_player = {
 	_$modId$__player_is_limited = {
 	}
 }
-
-_$modId$__limited_rivalry_war = {
-	categories = {
-		mojo
-	}
-
-	default = _$modId$__rivalry_is_limited
-
-	_$modId$__rivalry_is_limited = {
-	}
-
-	_$modId$__rivalry_not_limited = {
-	}
-}

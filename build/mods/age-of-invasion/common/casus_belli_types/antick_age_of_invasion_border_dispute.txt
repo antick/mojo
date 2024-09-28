@@ -9,10 +9,9 @@ antick_age_of_invasion_border_dispute_cb = {
   combine_into_one = yes
   interface_priority = 111
   should_show_war_goal_subview = yes
-  mutually_exclusive_titles = { always = yes }
 
   truce_days = 100
-  white_peace_possible = no
+  white_peace_possible = yes
   ai_only_against_neighbors = yes
 
   ai_score_mult = {
@@ -38,7 +37,7 @@ antick_age_of_invasion_border_dispute_cb = {
     }
 
     is_independent_ruler = yes
-    highest_held_title_tier >= tier_county
+    highest_held_title_tier > tier_county
 
     OR = {
       AND = {
@@ -69,8 +68,9 @@ antick_age_of_invasion_border_dispute_cb = {
 		NOT = { scope:attacker = { any_liege_or_above = { this = scope:defender } } }
 	}
 
-  target_titles = neighbor_land_or_water
+  target_titles = neighbor_land
   target_title_tier = county
+  ignore_effect = change_title_holder
 
   valid_to_start = {
     scope:target = {
@@ -102,7 +102,7 @@ antick_age_of_invasion_border_dispute_cb = {
 
   cost = {
     piety = {
-      value = 0
+      value = 500
       if = {
         limit = {
           scope:defender.faith = scope:attacker.faith
@@ -115,7 +115,7 @@ antick_age_of_invasion_border_dispute_cb = {
       multiply = common_cb_piety_cost_multiplier
     }
     prestige = {
-      value = 0
+      value = 1000
       if = {
         limit = {
           NOT = { scope:defender.faith = scope:attacker.faith }
@@ -197,7 +197,7 @@ antick_age_of_invasion_border_dispute_cb = {
       scope:attacker = {
         add_prestige_experience = {
           value = medium_prestige_value
-          multiply = -1.0
+          multiply = -0.5
         }
       }
     }
@@ -208,7 +208,7 @@ antick_age_of_invasion_border_dispute_cb = {
       scope:attacker = {
         add_piety = {
           value = minor_piety_value
-          multiply = -2.0
+          multiply = -0.5
         }
       }
     }
@@ -339,21 +339,13 @@ antick_age_of_invasion_border_dispute_cb = {
   attacker_allies_inherit = no
 	defender_allies_inherit = no
 
-  attacker_ticking_warscore_delay = { months = 12 } # How much ticking War Score should be delayed before increasing for the Attacker
-  defender_ticking_warscore_delay = { months = 6 }  # How much ticking War Score should be delayed before increasing for the Defender
-  attacker_ticking_warscore = 0.125                 # How much ticking warscore increases every day for the attacker
-  defender_ticking_warscore = 0.125                 # How much ticking warscore increases every day for the Defender
-  attacker_wargoal_percentage = 0.75                # How much the Attacker need to occupy of a wargoal to gain ticking War Score. 0.0 means "at least one occupation"
-  defender_wargoal_percentage = 0.75                # How much the Defender need to occupy of a wargoal to gain ticking War Score. 0.0 means "at least one occupation"
-  attacker_score_from_occupation_scale = 150        # War Score from occupation by the Attacker is modified by this value
-  defender_score_from_occupation_scale = 150        # War Score from occupation by the defender is modified by this value
+  attacker_score_from_occupation_scale = 120        # War Score from occupation by the Attacker is modified by this value
+  defender_score_from_occupation_scale = 120        # War Score from occupation by the defender is modified by this value
   attacker_score_from_battles_scale = 100           # War Score from battles won by the Attacker is modified by this value
   defender_score_from_battles_scale = 100           # War Score from battles won by the Defender is modified by this value
   max_attacker_score_from_battles = 20              # How much War Score the Attacker can gain from battles in total
   max_defender_score_from_battles = 70              # How much War Score the Defender can gain from battles in total
-  max_attacker_score_from_occupation = 150          # How much War Score the Attacker can gain from occupation in total
-  max_defender_score_from_occupation = 100          # How much War Score the Defender can gain from occupation in total
-  full_occupation_by_defender_gives_victory = no    # Full occupation by the defender won't automatically give 100% warscore
+  max_attacker_score_from_occupation = 100          # How much War Score the Attacker can gain from occupation in total
   full_occupation_by_attacker_gives_victory = yes   # Full occupation by the attacker won't automatically give 100% warscore
 
   attacker_capital_gives_war_score = no             # No warscore from attacker capital

@@ -7,7 +7,7 @@ Welcome to the Age of Invasion mod! This mod lets you become a powerful warlord 
 - You get a special "Warlord" trait, allowing you to go after others' lands.
 - New rules are added for things like inheriting troops, better chances for greatness, and you can decide to be a warlord.
 - Improved the Horse Lords, so they now have real horse archers and light fighters instead of just knights.
-- Enjoy the Iberian struggle style border dispute wars CB.
+- Makes Iberian style border struggle available to dukes and above but with some negative effects.
 - Get access to powerful apocalyptic invasions CB like the Mongol Khans Invasion.
 
 ## TODO

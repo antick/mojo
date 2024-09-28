@@ -1,9 +1,11 @@
 ﻿# $relates_to=common\traits\00_traits.txt
 
 _$modId$__trait = {
-  index = 7000
+  index = 1200
 
   category = fame
+  flag = conqueror_bonuses_modifier
+
   ruler_designer_cost = 1000
 
   ai_war_chance = 50
@@ -13,7 +15,7 @@ _$modId$__trait = {
 	title_creation_cost_mult = -0.75
 	monthly_legitimacy_add = 5
 	men_at_arms_maintenance = -0.75
-	monthly_income = 5
+	monthly_income = 20
 	enemy_hostile_scheme_phase_duration_add = 25
 	enemy_hostile_scheme_success_chance_max_add = -40
 	enemy_hostile_scheme_success_chance_growth_add = -3

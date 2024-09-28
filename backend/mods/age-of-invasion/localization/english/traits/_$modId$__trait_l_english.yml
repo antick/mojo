@@ -1,8 +1,8 @@
 ﻿l_english:
- trait__$modId$_:0 "The Warlord"
- trait__$modId$__turkish:0 "Fatih"
- trait__$modId$__indian:0 "Vishwa-Vijeta"
- trait__$modId$__arab:0 "Al-Fatih"
+ trait__$modId$_:0 "The Great Warlord"
+ trait__$modId$__turkish:0 "The Great Warlord"
+ trait__$modId$__indian:0 "The Great Warlord"
+ trait__$modId$__arab:0 "The Great Warlord"
 
- trait__$modId$__desc:0 "A master of strategy with unshackled ambition, this character is determined to conquer it all."
- trait__$modId$__character_desc:1 "As a master of strategy with unshackled ambition, [ROOT.GetCharacter.GetFullNameNoTooltip] is determined to conquer it all. \nAs a result, [ROOT.GetCharacter.GetHerHis] followers are ready to lend their strength in support."
+ trait__$modId$__desc:0 "This character is a master of strategy, driven by unrestrained ambition and relentless in the quest to conquer all."
+ trait__$modId$__character_desc:1 "[ROOT.GetCharacter.GetFullNameNoTooltip] is a master of strategy, driven by boundless ambition and an insatiable thirst for power. [ROOT.GetCharacter.GetHerHis] desire is to overcome every obstacle, leaving nothing but submission and triumph on the path to total domination."

@@ -1,5 +1,5 @@
 ﻿l_english:
- antick_age_of_invasion_border_dispute_cb:0 "Border Dispute"
+ antick_age_of_invasion_border_dispute_cb:0 "Border Invasion"
  antick_age_of_invasion_border_dispute_invalidated_message:1 "The [war.GetName] has ended: [defender.GetShortUIName] no longer [Select_CString( defender.IsLocalPlayer, 'control', 'controls' )] the County."
  antick_age_of_invasion_border_dispute_cb_victory_desc_attacker:0 "You will unethically occupy the county."
  antick_age_of_invasion_border_dispute_cb_defeat_desc:0 "The county will remain under rightful control."
