@@ -1,0 +1,15 @@
+﻿# $relates_to=common\game_rules\00_game_rules.txt
+
+antick_enter_the_warlord_limited_player = {
+	categories = {
+		mojo
+	}
+
+	default = antick_enter_the_warlord_player_not_limited
+
+	antick_enter_the_warlord_player_not_limited = {
+	}
+
+	antick_enter_the_warlord_player_is_limited = {
+	}
+}

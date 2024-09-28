@@ -1,0 +1,46 @@
+# $relates_to=common\game_rules\00_game_rules.txt
+
+antick_enter_the_warlord_player = {
+  categories = {
+    mojo
+  }
+
+  default = antick_enter_the_warlord_player_yes
+
+  antick_enter_the_warlord_player_yes = {
+  }
+
+  antick_enter_the_warlord_player_no = {
+  }
+}
+
+antick_enter_the_warlord_increased_chances = {
+  categories = {
+    mojo
+  }
+
+  default = antick_enter_the_warlord_increased_default
+
+  antick_enter_the_warlord_increased_default = {
+  }
+
+  antick_enter_the_warlord_increased_little = {
+  }
+
+  antick_enter_the_warlord_increased_big = {
+  }
+}
+
+antick_enter_the_warlord_inheritance = {
+  categories = {
+    mojo
+  }
+
+  default = antick_enter_the_warlord_inheritance_yes
+
+  antick_enter_the_warlord_inheritance_yes = {
+  }
+
+  antick_enter_the_warlord_inheritance_no = {
+  }
+}

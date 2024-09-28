@@ -1,0 +1,105 @@
+﻿# $relates_to=common\traits\00_traits.txt
+
+_$modId$__trait = {
+  index = 1200
+
+  category = fame
+  flag = conqueror_bonuses_modifier
+
+  ruler_designer_cost = 1000
+
+  ai_war_chance = 50
+	ai_war_cooldown = 50
+	ai_amenity_spending = -0.25
+	ai_amenity_target_baseline = -0.4
+	title_creation_cost_mult = -0.75
+	monthly_legitimacy_add = 5
+	men_at_arms_maintenance = -0.75
+	monthly_income = 20
+	enemy_hostile_scheme_phase_duration_add = 25
+	enemy_hostile_scheme_success_chance_max_add = -40
+	enemy_hostile_scheme_success_chance_growth_add = -3
+
+	shown_in_ruler_designer = yes
+
+  martial = 30
+  prowess = 30
+
+  stress_loss_mult = 0.5
+
+  # Combat modifiers
+  advantage = 10
+  siege_phase_time = -0.3
+  siege_morale_loss = 0.2
+  movement_speed = 0.2
+  enemy_terrain_advantage = -0.2
+  hard_casualty_modifier = -0.2
+  enemy_hard_casualty_modifier = 0.2
+  vassal_levy_contribution_mult = 0.5
+
+  # Opinion modifiers
+  attraction_opinion = 10
+  vassal_opinion = 50
+  independent_ruler_opinion = -30
+  same_opinion = -50
+
+  ai_honor = low_negative_ai_value
+  ai_greed = very_high_positive_ai_value
+  ai_zeal = very_low_positive_ai_value
+  ai_energy = very_high_positive_ai_value
+  ai_boldness = high_positive_ai_value
+  ai_sociability = low_positive_ai_value
+
+  name = {
+    first_valid = {
+      triggered_desc = {
+        trigger = { NOT = { exists = this } }
+        desc = trait__$modId$_
+      }
+
+      triggered_desc = {
+        trigger = {
+          AND = {
+            faith = { religion_tag = islam_religion }
+            culture = { has_cultural_pillar = heritage_turkic }
+          }
+        }
+
+        desc = trait__$modId$__turkish
+      }
+
+      triggered_desc = {
+        trigger = {
+          OR = {
+            culture = { has_cultural_pillar = heritage_arabic }
+          }
+        }
+        desc = trait__$modId$__arab
+      }
+
+      triggered_desc = {
+        trigger = {
+          OR = {
+            culture = { has_cultural_pillar = heritage_indo_aryan }
+            culture = { has_cultural_pillar = heritage_dravidian }
+          }
+        }
+        desc = trait__$modId$__indian
+      }
+
+      desc = trait__$modId$_
+    }
+  }
+
+  desc = {
+    first_valid = {
+      triggered_desc = {
+        trigger = {
+            NOT = { exists = this }
+        }
+        desc = trait__$modId$__desc
+      }
+      desc = trait__$modId$__character_desc
+    }
+  }
+}

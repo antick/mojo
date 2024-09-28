@@ -1,0 +1,3 @@
+﻿# $relates_to=common\nicknames\_nicknames.info
+
+antick_enter_the_warlord_nick = {}

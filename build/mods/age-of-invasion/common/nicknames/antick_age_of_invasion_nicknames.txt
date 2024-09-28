@@ -1,3 +1,0 @@
-﻿# $relates_to=common\nicknames\_nicknames.info
-
-antick_age_of_invasion_nick = {}

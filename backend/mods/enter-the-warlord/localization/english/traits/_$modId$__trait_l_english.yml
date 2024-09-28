@@ -1,0 +1,8 @@
+﻿l_english:
+ trait__$modId$_:0 "The Great Warlord"
+ trait__$modId$__turkish:0 "The Great Warlord"
+ trait__$modId$__indian:0 "The Great Warlord"
+ trait__$modId$__arab:0 "The Great Warlord"
+
+ trait__$modId$__desc:0 "This character is a master of strategy, driven by unrestrained ambition and relentless in the quest to conquer all."
+ trait__$modId$__character_desc:1 "[ROOT.GetCharacter.GetFullNameNoTooltip] is a master of strategy, driven by boundless ambition and an insatiable thirst for power."
