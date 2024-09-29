@@ -6,7 +6,6 @@
 	desc = antick_holdings_reimagined_decision_buildings_construction_desc
 	selection_tooltip = antick_holdings_reimagined_decision_buildings_construction_tooltip
 	decision_group_type = major
-	sort_order = 1000
 
 	cost = {
 		gold = {

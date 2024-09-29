@@ -26,6 +26,8 @@ It also enables cities for all government types.
 
 It has a scroll area for building slots in the county view so you can see all your slots without cluttering the county window.
 
+This mod also removes the need for holdings with multiple baronies to have a Castle, City and Temple Holding. This allows you to build only Castles or only Cities/Temples on your counties.
+
 ## Game Rules
 
 - **Change Holding Type Cost**: Change the cost of changing holding type

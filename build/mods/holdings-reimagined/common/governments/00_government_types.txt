@@ -18,8 +18,8 @@ feudal_government = {
 	primary_holding = castle_holding
 	#### Mojo change begins ####
 	valid_holdings = { city_holding }
+	# required_county_holdings = { castle_holding city_holding church_holding }
 	#### Mojo change ends ####
-	required_county_holdings = { castle_holding city_holding church_holding }
 
 	vassal_contract = {
 		feudal_government_taxes
@@ -47,7 +47,9 @@ feudal_government = {
 republic_government = {
 	primary_holding = city_holding
 	valid_holdings = { castle_holding }
-	required_county_holdings = { city_holding castle_holding church_holding }
+	#### Mojo change begins ####
+	# required_county_holdings = { city_holding castle_holding church_holding }
+	#### Mojo change ends ####
 
 	government_rules = {
 		inherit_from_dynastic_government = no
@@ -81,7 +83,10 @@ theocracy_government = {
 
 	primary_holding = church_holding
 	valid_holdings = { castle_holding }
-	required_county_holdings = { church_holding castle_holding city_holding }
+
+	#### Mojo change begins ####
+	# required_county_holdings = { church_holding castle_holding city_holding }
+	#### Mojo change ends ####
 
 	ai = {
 		use_legends = no
@@ -124,8 +129,8 @@ clan_government = {
 	#### Mojo change begins ####
 	# valid_holdings = { castle_holding }
 	valid_holdings = { castle_holding city_holding }
+	# required_county_holdings = { castle_holding city_holding church_holding }
 	#### Mojo change ends ####
-	required_county_holdings = { castle_holding city_holding church_holding }
 	always_use_patronym = yes
 
 	house_unity = clan_house_unity
@@ -208,9 +213,9 @@ tribal_government = {
 
 	supply_limit_mult_for_others = -0.5
 	primary_holding = tribal_holding
-	required_county_holdings = { tribal_holding }
 
 	#### Mojo change begins ####
+	# required_county_holdings = { tribal_holding }
 	# valid_holdings = { castle_holding }
 	valid_holdings = { castle_holding city_holding }
 	#### Mojo change ends ####
@@ -325,7 +330,10 @@ administrative_government = {
 
 	primary_holding = castle_holding
 	valid_holdings = { city_holding }
-	required_county_holdings = { castle_holding city_holding church_holding }
+
+	#### Mojo change begins ####
+	# required_county_holdings = { castle_holding city_holding church_holding }
+	#### Mojo change ends ####
 
 	vassal_contract = {
 		administrative_obligations
