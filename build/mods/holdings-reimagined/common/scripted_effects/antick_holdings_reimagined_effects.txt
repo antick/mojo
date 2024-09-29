@@ -893,3 +893,139 @@ antick_holdings_reimagined_effect_remove_special_buildings = { # scope:province
 		}
 	}
 }
+
+## New building effects
+
+antick_holdings_reimagined_game_rule_slots_effect = {
+	if = {
+		limit = { has_game_rule = less_slots_limit }
+		every_county = {
+			every_county_province = {
+				add_province_modifier = extra_building_slot
+			}
+		}
+	}
+	else_if = {
+		limit = { has_game_rule = more_slots_limit }
+		every_county = {
+			every_county_province = {
+				add_province_modifier = extra_building_slot
+				add_province_modifier = extra_building_slot
+			}
+		}
+	}
+	else_if = {
+		limit = { has_game_rule = extreme_slots_limit }
+		every_county = {
+			every_county_province = {
+				add_province_modifier = extra_building_slot
+				add_province_modifier = extra_building_slot
+				add_province_modifier = extra_building_slot
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_civil_engineering_constructed_effect = {
+	$PROVINCE$ = {
+		add_province_modifier = extra_building_slot
+	}
+
+	remove_building = civil_engineering_01
+}
+
+antick_holdings_reimagined_coach_house_04_constructed_effect = {
+	save_scope_as = antick_holdings_reimagined_this_province
+	scope:antick_holdings_reimagined_this_province = {
+		if = {
+			limit = {
+				antick_holdings_reimagined_coach_house_has_spy_trigger = yes
+			}
+
+			county = {
+				holder = {
+					set_variable = { name = antick_holdings_reimagined_province_with_spy value = scope:antick_holdings_reimagined_this_province }
+					create_story = antick_holdings_reimagined_story_spy
+				}
+			}
+
+			if = {
+				limit = {
+					not = {
+						is_target_in_global_variable_list = { name = antick_holdings_reimagined_poi_province_list target = this }
+					}
+				}
+
+				add_to_global_variable_list = { name = antick_holdings_reimagined_poi_province_list target = this }
+			}
+
+			add_travel_point_of_interest = antick_holdings_reimagined_poi
+		}
+	}
+}
+
+antick_holdings_reimagined_coach_house_06_constructed_effect = {
+	save_scope_as = antick_holdings_reimagined_this_province
+	scope:antick_holdings_reimagined_this_province = {
+		if = {
+			limit = {
+				antick_holdings_reimagined_coach_house_has_gamekeeper_trigger = yes
+			}
+		}
+
+		county = {
+			holder = {
+				set_variable = { name = antick_holdings_reimagined_province_with_gamekeeper value = scope:antick_holdings_reimagined_this_province }
+				create_story = antick_holdings_reimagined_story_gamekeeper
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_coach_house_08_constructed_effect = {
+	save_scope_as = antick_holdings_reimagined_this_province
+	scope:antick_holdings_reimagined_this_province = {
+		if = {
+			limit = {
+				antick_holdings_reimagined_coach_house_has_casino_trigger = yes
+			}
+		}
+
+		county = {
+			holder = {
+				set_variable = { name = antick_holdings_reimagined_province_with_casino value = scope:antick_holdings_reimagined_this_province }
+				create_story = antick_holdings_reimagined_story_casino
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_warden_station_04_constructed_effect = {
+	save_scope_as = antick_holdings_reimagined_this_province
+	scope:antick_holdings_reimagined_this_province = {
+		if = {
+			limit = {
+				antick_holdings_reimagined_warden_station_has_blademaster_trigger = yes
+			}
+
+			county = {
+				holder = {
+					set_variable = { name = antick_holdings_reimagined_province_with_blademaster value = scope:antick_holdings_reimagined_this_province }
+					create_story = antick_holdings_reimagined_story_blademaster
+				}
+			}
+
+			if = {
+				limit = {
+					not = {
+						is_target_in_global_variable_list = { name = antick_holdings_reimagined_poi_province_list target = this }
+					}
+				}
+
+				add_to_global_variable_list = { name = antick_holdings_reimagined_poi_province_list target = this }
+			}
+
+			add_travel_point_of_interest = antick_holdings_reimagined_poi
+		}
+	}
+}

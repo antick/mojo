@@ -1,0 +1,75 @@
+﻿l_english:
+_$modId$__X_X_X_name: "Holdings Reimagined"
+_$modId$__X_X_X_alert: "[_$modId$_|E] update"
+_$modId$__X_X_X_alert_desc: "[_$modId$_|E] has updated since you started this campaign."
+_$modId$__X_X_X_alert_click: "#P #italic Left-click to read Changelog and remove this alert#!#!"
+
+_$modId$__X_X_X_alert_interaction: "[_$modId$_|E] Changelog"
+_$modId$__X_X_X_alert_interaction_desc: "Changelog for [_$modId$_|E]"
+_$modId$__X_X_X_alert_interaction_send: "Apply Patch"
+_$modId$__X_X_X_alert_introduction: "[_$modId$_|E] has updated since you started this campaign"
+
+_$modId$__X_X_X_changelog_patch: "This update is savegame compatible"
+
+
+
+# change
+_$modId$__2_1_0_alert: "$_$modId$__X_X_X_alert$"
+_$modId$__2_1_0_alert_version: "v2.1.0"
+_$modId$__2_1_0_alert_building: "Coach House"
+_$modId$__2_1_0_changelog: "#bold $_$modId$__X_X_X_name$ $_$modId$__2_1_0_alert_version$#!"
+_$modId$__2_1_0_changelog_1: "$_$modId$__2_1_0_alert_building$ buildings have been split into three separate terrain specific building types, for general/desert/steppe terrains, but all have the same functionality."
+_$modId$__2_1_0_changelog_2: "The existing $_$modId$__2_1_0_alert_building$ buildings in your campaign need to be converted to $_$modId$__2_1_0_alert_version$ building types."
+# /change
+
+# copy
+_$modId$__2_1_0_alert_desc: "$_$modId$__X_X_X_alert_desc$"
+_$modId$__2_1_0_alert_click: "$_$modId$__X_X_X_alert_click$"
+_$modId$__2_1_0_alert_interaction: "$_$modId$__X_X_X_alert_interaction$"
+_$modId$__2_1_0_alert_interaction_desc: "$_$modId$__X_X_X_alert_interaction_desc$"
+_$modId$__2_1_0_alert_interaction_send: "$_$modId$__X_X_X_alert_interaction_send$"
+_$modId$__2_1_0_alert_introduction: "$_$modId$__X_X_X_alert_introduction$"
+_$modId$__2_1_0_changelog_patch: "$_$modId$__X_X_X_changelog_patch$"
+# /copy
+
+
+
+# change
+_$modId$__2_4_0_alert: "$_$modId$__X_X_X_alert$"
+_$modId$__2_4_0_alert_version: "v2.4.0"
+_$modId$__2_4_0_alert_building: "Interior Expansion and Exterior Improvements"
+_$modId$__2_4_0_changelog: "#bold $_$modId$__X_X_X_name$ $_$modId$__2_4_0_alert_version$#!"
+_$modId$__2_4_0_changelog_1: "$_$modId$__2_4_0_alert_building$ buildings have been split into three separate terrain specific building types, for general/desert/steppe terrains, but all have the same functionality."
+_$modId$__2_4_0_changelog_2: "The existing $_$modId$__2_4_0_alert_building$ buildings in your campaign need to be converted to $_$modId$__2_4_0_alert_version$ building types."
+# /change
+
+# copy
+_$modId$__2_4_0_alert_desc: "$_$modId$__X_X_X_alert_desc$"
+_$modId$__2_4_0_alert_click: "$_$modId$__X_X_X_alert_click$"
+_$modId$__2_4_0_alert_interaction: "$_$modId$__X_X_X_alert_interaction$"
+_$modId$__2_4_0_alert_interaction_desc: "$_$modId$__X_X_X_alert_interaction_desc$"
+_$modId$__2_4_0_alert_interaction_send: "$_$modId$__X_X_X_alert_interaction_send$"
+_$modId$__2_4_0_alert_introduction: "$_$modId$__X_X_X_alert_introduction$"
+_$modId$__2_4_0_changelog_patch: "$_$modId$__X_X_X_changelog_patch$"
+# /copy
+
+
+# change
+_$modId$__2_6_0_alert: "$_$modId$__X_X_X_alert$"
+_$modId$__2_6_0_alert_version: "v2.6.0"
+_$modId$__2_6_0_alert_building: "Coach House (including variants) and the Militia"
+_$modId$__2_6_0_changelog: "#bold $_$modId$__X_X_X_name$ $_$modId$__2_6_0_alert_version$#!"
+_$modId$__2_6_0_changelog_1: "$_$modId$__2_6_0_alert_building$ buildings are now travel points of interest."
+_$modId$__2_6_0_changelog_2: "The existing $_$modId$__2_6_0_alert_building$ buildings in your campaign need to be converted to $_$modId$__2_6_0_alert_version$ building types."
+_$modId$__2_6_0_changelog_3: "Click the $_$modId$__X_X_X_alert_interaction_send$ button to convert existing buildings to POI versions."
+# /change
+
+# copy
+_$modId$__2_6_0_alert_desc: "$_$modId$__X_X_X_alert_desc$"
+_$modId$__2_6_0_alert_click: "$_$modId$__X_X_X_alert_click$"
+_$modId$__2_6_0_alert_interaction: "$_$modId$__X_X_X_alert_interaction$"
+_$modId$__2_6_0_alert_interaction_desc: "$_$modId$__X_X_X_alert_interaction_desc$"
+_$modId$__2_6_0_alert_interaction_send: "$_$modId$__X_X_X_alert_interaction_send$"
+_$modId$__2_6_0_alert_introduction: "$_$modId$__X_X_X_alert_introduction$"
+_$modId$__2_6_0_changelog_patch: "$_$modId$__X_X_X_changelog_patch$"
+# /copy

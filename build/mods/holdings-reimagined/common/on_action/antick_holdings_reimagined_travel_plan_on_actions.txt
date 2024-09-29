@@ -1,0 +1,164 @@
+﻿# Arrival in any province during travel
+on_travel_plan_movement = {
+	on_actions = {
+		antick_holdings_reimagined_coach_house_on_action_spy
+		antick_holdings_reimagined_coach_house_on_action_gamekeeper
+		antick_holdings_reimagined_coach_house_on_action_casino
+		antick_holdings_reimagined_warden_station_on_action_blademaster
+	}
+}
+
+antick_holdings_reimagined_coach_house_on_action_spy = {
+	trigger = {
+		current_travel_plan.current_location = {
+			has_variable = antick_holdings_reimagined_province_spy_story
+			not = { root = county.holder }
+		}
+	}
+
+	effect = {
+		root = { save_scope_as = antick_holdings_reimagined_coach_house_traveller }
+		scope:antick_holdings_reimagined_coach_house_traveller = {
+			current_travel_plan.current_location.county.holder = { save_scope_as = antick_holdings_reimagined_coach_house_patron }
+			if = {
+				limit = {
+					not = { has_character_flag = antick_holdings_reimagined_had_scheme_advance }
+					scope:antick_holdings_reimagined_coach_house_patron = {
+						any_scheme = {
+							scheme_target_character = scope:antick_holdings_reimagined_coach_house_traveller
+						}
+					}
+				}
+				antick_holdings_reimagined_advance_scheme_effect = yes
+			}
+			else_if = {
+				limit = {
+					not = { has_character_flag = antick_holdings_reimagined_had_scheme_discovery }
+					any_scheme = {
+						antick_holdings_reimagined_unexposed_hostile_scheme_target_charactering_patron_trigger = yes
+					}
+				}
+				random = {
+					chance = antick_holdings_reimagined_coach_house_spy_chance
+
+					antick_holdings_reimagined_spy_uncover_scheme_effect = yes
+				}
+			}
+			else_if = {
+				limit = {
+					not = { has_character_flag = antick_holdings_reimagined_had_secret_discovery }
+					has_any_secrets = yes
+					any_secret = {
+						not = { is_known_by = scope:antick_holdings_reimagined_coach_house_patron }
+					}
+				}
+				random = {
+					chance = antick_holdings_reimagined_coach_house_spy_chance
+
+					antick_holdings_reimagined_spy_learn_secrets_effect = yes
+				}
+			}
+			else = {
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_coach_house_on_action_casino = {
+	trigger = {
+		not = { has_character_flag = antick_holdings_reimagined_had_casino }
+		current_travel_plan.current_location = {
+			has_variable =  antick_holdings_reimagined_province_casino_story
+			not = { root = county.holder }
+		}
+	}
+
+	effect = {
+		root = { save_scope_as = antick_holdings_reimagined_coach_house_traveller }
+		scope:antick_holdings_reimagined_coach_house_traveller = {
+			current_travel_plan.current_location.county.holder = { save_scope_as = antick_holdings_reimagined_coach_house_patron }
+			if = {
+				limit = {
+					short_term_gold > 10
+					scope:antick_holdings_reimagined_coach_house_patron = { short_term_gold > 10 }
+				}
+				random_list = {
+					50 = {
+						modifier = {
+							add = 25
+							or = {
+								has_trait = lifestyle_reveler
+								has_trait = brave
+								has_trait = gregarious
+								has_trait = greedy
+								has_trait = ambitious
+								has_trait = fickle
+								has_trait = arrogant
+								has_trait = gluttonous
+								ai_greed >= 25
+								ai_boldness >= 25
+							}
+						}
+						antick_holdings_reimagined_casino_effect = yes
+					}
+					50 = {
+						modifier = {
+							add = 25
+							has_trait = temperate
+							has_trait = craven
+							has_trait = content
+							has_trait = shy
+							has_trait = paranoid
+							ai_greed < 25
+							ai_boldness < 25
+						}
+					}
+				}
+			}
+			else = {
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_coach_house_on_action_gamekeeper = {
+	trigger = {
+		not = { has_character_flag = antick_holdings_reimagined_had_training_hunt }
+		current_travel_plan.current_location = {
+			has_variable =  antick_holdings_reimagined_province_gamekeeper_story
+		}
+	}
+
+	effect = {
+		root = { save_scope_as = antick_holdings_reimagined_coach_house_traveller }
+		scope:antick_holdings_reimagined_coach_house_traveller = {
+			current_travel_plan.current_location.county.holder = { save_scope_as = antick_holdings_reimagined_coach_house_patron }
+
+			if = {
+				limit = { has_trait = lifestyle_hunter }
+				antick_holdings_reimagined_gamekeeper_effect = yes
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_warden_station_on_action_blademaster = {
+	trigger = {
+		not = { has_character_flag = antick_holdings_reimagined_had_training_blade }
+		current_travel_plan.current_location = {
+			has_variable =  antick_holdings_reimagined_province_blademaster_story
+		}
+	}
+
+	effect = {
+		root = { save_scope_as = antick_holdings_reimagined_warden_station_traveller }
+		scope:antick_holdings_reimagined_warden_station_traveller = {
+			current_travel_plan.current_location.county.holder = { save_scope_as = antick_holdings_reimagined_warden_station_patron }
+
+			if = {
+				limit = { has_trait = lifestyle_hunter }
+				antick_holdings_reimagined_blademaster_effect = yes
+			}
+		}
+	}
+}

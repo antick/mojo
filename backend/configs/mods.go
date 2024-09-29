@@ -81,6 +81,8 @@ func ModConfig() *ModType {
 					"modTags": `{
 	"Balance"
 	"Fixes"
+	"Historical"
+	"Graphics"
 	"Gameplay"
 }`,
 				},

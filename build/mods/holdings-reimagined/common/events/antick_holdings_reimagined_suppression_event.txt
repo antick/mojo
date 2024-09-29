@@ -1,0 +1,12 @@
+﻿namespace = antick_holdings_reimagined_suppression_event
+
+antick_holdings_reimagined_suppression_event.0001 = {
+	hidden = yes
+	orphan = yes
+
+	immediate = {
+		hidden_effect = {
+			xxx_silence_CK3_error_log_effect = { ERROR = antick_holdings_reimagined_scheme_target_character }
+		}
+	}
+}

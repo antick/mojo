@@ -1,4 +1,6 @@
-﻿###########
+﻿# $relates_to=common\buildings\00_special_buildings.txt
+
+###########
 ## Generic Holy Site Buildings
 ###########
 

@@ -48,3 +48,4 @@ You would not need below mods after installing this mod:
 - rule cities (https://steamcommunity.com/sharedfiles/filedetails/?id=3304957618)
 - Special buildings ignore restrictions on religious sites (https://steamcommunity.com/sharedfiles/filedetails/?id=3186615224)
 - Always Move Realm Capital (https://steamcommunity.com/sharedfiles/filedetails/?id=2259210465)
+- County Building UI Fix (https://steamcommunity.com/sharedfiles/filedetails/?id=3228628199)

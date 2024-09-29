@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "game",
+			"path": "../../../../../Program Files (x86)/Steam/steamapps/common/Crusader Kings III/game"
+		},
+		{
+			"name": "Crusader Kings III",
+			"path": "../../../OneDrive/Documents/Paradox Interactive/Crusader Kings III"
+		},
+		{
+			"name": "content",
+			"path": "../../../../../Program Files (x86)/Steam/steamapps/workshop/content"
+		}
+	]
+}

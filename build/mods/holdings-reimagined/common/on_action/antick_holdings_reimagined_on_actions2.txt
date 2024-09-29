@@ -1,0 +1,56 @@
+﻿on_game_start = {
+	on_actions = { antick_holdings_reimagined_on_game_start }
+}
+
+antick_holdings_reimagined_on_game_start = {
+	effect = {
+		set_global_variable = antick_holdings_reimagined_2_1_0
+		set_global_variable = antick_holdings_reimagined_2_4_0
+		set_global_variable = antick_holdings_reimagined_2_6_0
+
+		if = {
+			limit = {
+				or = {
+					has_game_rule = less_slots_limit
+					has_game_rule = more_slots_limit
+					has_game_rule = extreme_slots_limit
+				}
+			}
+
+			if = {
+				limit = { has_game_rule = less_slots_limit }
+				antick_holdings_reimagined_game_rule_slots_effect = yes
+			}
+			if = {
+				limit = { has_game_rule = more_slots_limit }
+				antick_holdings_reimagined_game_rule_slots_effect = yes
+			}
+			if = {
+				limit = { has_game_rule = extreme_slots_limit }
+				antick_holdings_reimagined_game_rule_slots_effect = yes
+			}
+		}
+	}
+}
+
+yearly_global_pulse = {
+	on_actions = { antick_holdings_reimagined_yearly_global_pulse }
+}
+antick_holdings_reimagined_yearly_global_pulse = {
+	effect = {
+		every_in_global_list = {
+			variable = antick_holdings_reimagined_poi_province_list
+
+			if = {
+				limit = {
+					nand = {
+						has_building_with_flag = { flag = antick_holdings_reimagined_coach_house_spy }
+						has_building_with_flag = { flag = antick_holdings_reimagined_militia_blademaster }
+					}
+				}
+
+				remove_list_global_variable = { name = antick_holdings_reimagined_poi_province_list target = this }
+			}
+		}
+	}
+}

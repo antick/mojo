@@ -1,0 +1,19 @@
+﻿l_english:
+BUILDING_REQUIREMENT_CASTLE_CITY_CHURCH_TRIBE_FAILED: "[PROVINCE.GetName] must be a [castle|E], [city|E], [temple|E] or [tribe|E]"
+NOT_BUILDING_REQUIREMENT_CASTLE_CITY_CHURCH_TRIBE_FAILED: "[PROVINCE.GetName] is not a [castle|E], [city|E], [temple|E] or [tribe|E]"
+
+BUILDING_REQUIREMENT_CASTLE_TRIBE_FAILED: "[PROVINCE.GetName] must be a [castle|E] or [tribe|E]"
+NOT_BUILDING_REQUIREMENT_CASTLE_TRIBE_FAILED: "[PROVINCE.GetName] is not a [castle|E] or [tribe|E]"
+
+_$modId$__NEED_LAW_1_OR_ERUDITE_1_FAILED: "Your [dynasty|E] must have [dynasty_perk|E] [GetDynastyPerk('law_legacy_1').GetName] or [GetDynastyPerk('erudition_legacy_1').GetName]"
+NOT__$modId$__NEED_LAW_1_OR_ERUDITE_1_FAILED: "Your [dynasty|E] does not have [dynasty_perk|E] [GetDynastyPerk('law_legacy_1').GetName] or [GetDynastyPerk('erudition_legacy_1').GetName]"
+
+_$modId$__NEED_LAW_3_OR_ERUDITE_3_FAILED: "Your [dynasty|E] must have [dynasty_perk|E] [GetDynastyPerk('law_legacy_3').GetName] or [GetDynastyPerk('erudition_legacy_3').GetName]"
+NOT__$modId$__NEED_LAW_3_OR_ERUDITE_3_FAILED: "Your [dynasty|E] must have [dynasty_perk|E] [GetDynastyPerk('law_legacy_3').GetName] or [GetDynastyPerk('erudition_legacy_3').GetName]"
+
+_$modId$__MUST_BE_YOUR_CAPITAL_FAILED: "Can only be constructed in your capital"
+NOT__$modId$__MUST_BE_YOUR_CAPITAL_FAILED: "Not your capital"
+
+_$modId$__county_development_requirement: "Requires county development level >= 5"
+
+_$modId$__CAN_ONLY_HAVE_ONE_COACH_HOUSE_OR_WARDEN_STATION: "Can only have on Coach House (including terrain variants) or Warden Station per county."

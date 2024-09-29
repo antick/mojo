@@ -1,0 +1,159 @@
+﻿_$modId$__2_1_0_alert_interaction = {
+	interface_priority = 120
+	common_interaction = yes
+	icon = _$modId$__character_interaction_icon
+
+	category = interaction_category_uncategorized
+
+	desc = _$modId$__2_1_0_alert_interaction_desc
+
+	send_name = _$modId$__2_1_0_alert_interaction_send
+
+	is_shown = {
+		scope:actor = scope:recipient
+		NOT = { has_global_variable = _$modId$__2_1_0 }
+	}
+
+	is_valid_showing_failures_only = {}
+
+	can_send = {}
+
+	is_highlighted = {}
+
+	auto_accept = {}
+
+	on_send = {}
+
+	on_auto_accept = {}
+
+	on_accept = {
+		scope:actor = { add_to_list = _$modId$__2_1_0_players_list }
+		every_in_list = {
+			list = _$modId$__2_1_0_players_list
+			custom = _$modId$__2_1_0_alert_introduction
+		}
+		if = {
+			limit = { NOT = { has_global_variable = _$modId$__2_1_0 }}
+
+			every_in_list = {
+				list = _$modId$__2_1_0_players_list
+				custom = _$modId$__2_1_0_changelog
+				custom_tooltip = _$modId$__2_1_0_changelog_patch
+				custom_tooltip = _$modId$__2_1_0_changelog_1
+				custom_tooltip = _$modId$__2_1_0_changelog_2
+			}
+
+			_$modId$__2_1_0_conversion_effect = yes
+			set_global_variable = _$modId$__2_1_0
+		}
+	}
+
+	on_decline = {}
+}
+
+_$modId$__2_4_0_alert_interaction = {
+	interface_priority = 120
+	common_interaction = yes
+	icon = _$modId$__character_interaction_icon
+
+	category = interaction_category_uncategorized
+
+	desc = _$modId$__2_4_0_alert_interaction_desc
+
+	send_name = _$modId$__2_4_0_alert_interaction_send
+
+	is_shown = {
+		scope:actor = scope:recipient
+		NOT = { has_global_variable = _$modId$__2_4_0 }
+	}
+
+	is_valid_showing_failures_only = {}
+
+	can_send = {}
+
+	is_highlighted = {}
+
+	auto_accept = {}
+
+	on_send = {}
+
+	on_auto_accept = {}
+
+	on_accept = {
+		scope:actor = { add_to_list = _$modId$__2_4_0_players_list }
+		every_in_list = {
+			list = _$modId$__2_4_0_players_list
+			custom = _$modId$__2_4_0_alert_introduction
+		}
+		if = {
+			limit = { NOT = { has_global_variable = _$modId$__2_4_0 }}
+
+			every_in_list = {
+				list = _$modId$__2_4_0_players_list
+				custom = _$modId$__2_4_0_changelog
+				custom_tooltip = _$modId$__2_4_0_changelog_patch
+				custom_tooltip = _$modId$__2_4_0_changelog_1
+				custom_tooltip = _$modId$__2_4_0_changelog_2
+			}
+
+			_$modId$__2_4_0_conversion_effect = yes
+			set_global_variable = _$modId$__2_4_0
+		}
+	}
+
+	on_decline = {}
+}
+
+_$modId$__2_6_0_alert_interaction = {
+	interface_priority = 120
+	common_interaction = yes
+	icon = _$modId$__character_interaction_icon
+
+	category = interaction_category_uncategorized
+
+	desc = _$modId$__2_6_0_alert_interaction_desc
+
+	send_name = _$modId$__2_6_0_alert_interaction_send
+
+	is_shown = {
+		scope:actor = scope:recipient
+		NOT = { has_global_variable = _$modId$__2_6_0 }
+	}
+
+	is_valid_showing_failures_only = {}
+
+	can_send = {}
+
+	is_highlighted = {}
+
+	auto_accept = {}
+
+	on_send = {}
+
+	on_auto_accept = {}
+
+	on_accept = {
+		scope:actor = { add_to_list = _$modId$__2_6_0_players_list }
+		every_in_list = {
+			list = _$modId$__2_6_0_players_list
+			custom = _$modId$__2_6_0_alert_introduction
+		}
+		if = {
+			limit = { NOT = { has_global_variable = _$modId$__2_6_0 } }
+
+			every_in_list = {
+				list = _$modId$__2_6_0_players_list
+				custom = _$modId$__2_6_0_changelog
+				custom_tooltip = _$modId$__2_6_0_changelog_patch
+				custom_tooltip = _$modId$__2_6_0_changelog_1
+				custom_tooltip = _$modId$__2_6_0_changelog_2
+				custom_tooltip = _$modId$__2_6_0_changelog_3
+			}
+
+			_$modId$__2_6_0_conversion_effect = yes
+			set_global_variable = _$modId$__2_6_0
+		}
+	}
+
+	on_decline = {}
+}

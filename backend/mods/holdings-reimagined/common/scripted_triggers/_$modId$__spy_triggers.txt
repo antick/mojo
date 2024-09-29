@@ -1,0 +1,52 @@
+﻿_$modId$__spymaster_task_find_secrets_suitable_minor_secret_trigger = {
+	OR = {
+		is_shunned_for = secret_owner
+		AND = {
+			NOT = {
+				is_blackmailable_secret_trigger = {
+					PARTICIPANT = secret_owner
+					BLACKMAILER = scope:councillor_liege
+				}
+			}
+			secret_is_always_interesting_trigger = yes
+		}
+	}
+	NOT = { is_known_by = scope:councillor_liege }
+	NOT = {
+		any_secret_participant = {
+			this = scope:councillor_liege
+		}
+	}
+	spymaster_task_find_secrets_interesting_secret_type_trigger = yes
+}
+
+_$modId$__spymaster_task_find_secrets_suitable_major_secret_trigger = {
+	is_criminal_for = secret_owner
+	NOT = { is_known_by = scope:councillor_liege }
+	NOT = {
+		any_secret_participant = {
+			this = scope:councillor_liege
+		}
+	}
+	spymaster_task_find_secrets_interesting_secret_type_trigger = yes
+}
+
+_$modId$__has_minor_secrets_trigger = {
+	has_any_secrets = yes
+	any_secret = {
+		_$modId$__spymaster_task_find_secrets_suitable_minor_secret_trigger = yes
+	}
+}
+
+_$modId$__has_major_secrets_trigger = {
+	has_any_secrets = yes
+	any_secret = {
+		_$modId$__spymaster_task_find_secrets_suitable_major_secret_trigger = yes
+	}
+}
+
+_$modId$__unexposed_hostile_scheme_target_charactering_patron_trigger = {
+	scheme_target_character = scope:_$modId$__coach_house_patron
+	hostile_scheme_trigger = yes
+	is_scheme_exposed = no
+}

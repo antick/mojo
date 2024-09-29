@@ -1,0 +1,12 @@
+﻿namespace = _$modId$__suppression_event
+
+_$modId$__suppression_event.0001 = {
+	hidden = yes
+	orphan = yes
+
+	immediate = {
+		hidden_effect = {
+			xxx_silence_CK3_error_log_effect = { ERROR = _$modId$__scheme_target_character }
+		}
+	}
+}

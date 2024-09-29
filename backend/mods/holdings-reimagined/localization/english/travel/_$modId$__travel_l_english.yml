@@ -1,0 +1,7 @@
+﻿l_english:
+_$modId$__poi_capitals.visit.blademaster: "$building_type_militia_01$ of [province.GetTitle.GetHolder.GetNameNoTooltip]"
+_$modId$__poi_capitals.visit.coach_house_spy: "$building_horse_01$ with it's $building_horse_04$ of [province.GetTitle.GetHolder.GetNameNoTooltip]"
+_$modId$__poi_capitals.visit.coach_house_gamekeeper: "$building_horse_01$ with it's $building_horse_04$ and $building_horse_06$ of [province.GetTitle.GetHolder.GetNameNoTooltip]"
+_$modId$__poi_capitals.visit.coach_house_casino: "$building_horse_01$ with it's $building_horse_04$, $building_horse_06$ and $building_horse_08$ of [province.GetTitle.GetHolder.GetNameNoTooltip]"
+
+TRAVEL_POINT_OF_INTEREST_TT__$modId$__poi: "[province.Custom('_$modId$__poi_tt_GetBuildingType')]"

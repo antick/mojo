@@ -1,0 +1,53 @@
+﻿_$modId$__gamekeeper_effect = {
+	random_list = {
+		50 = {
+			scope:_$modId$__coach_house_traveller = {
+				add_character_flag = {
+					flag = _$modId$__had_training_hunt
+					months = 12
+				}
+			}
+			add_character_modifier = {
+				modifier = _$modId$__gamekeeper_training_modifier
+				years = 5
+			}
+
+			hunter_progress_point_gain_effect = { CHANGE = 1 RANDOM_CHANGE = 2 }
+
+			random_list = {
+				50 = {
+					send_interface_message = {
+						type = event_generic_good
+						title = _$modId$__message_hunter_training_title
+						desc = _$modId$__message_hunter_training_revonator
+						left_icon = scope:_$modId$__coach_house_traveller
+						hunter_lifestyle_rank_up_check_effect = { FALCONRY = no }
+					}
+				}
+				50 = {
+					send_interface_message = {
+						type = event_generic_good
+						title = _$modId$__message_hunter_training_title
+						desc = _$modId$__message_hunter_training_falconry
+						left_icon = scope:_$modId$__coach_house_traveller
+						hunter_lifestyle_rank_up_check_effect = { FALCONRY = yes }
+					}
+				}
+			}
+
+			if = {
+				limit = { scope:_$modId$__coach_house_traveller = scope:_$modId$__coach_house_patron }
+				scope:_$modId$__coach_house_patron = {
+					remove_short_term_gold = 5
+				}
+			}
+			else = {
+				scope:_$modId$__coach_house_patron = {
+					add_gold = 15
+				}
+			}
+		}
+		50 = {
+		}
+	}
+}

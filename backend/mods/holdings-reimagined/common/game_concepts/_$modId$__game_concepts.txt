@@ -1,0 +1,3 @@
+﻿_$modId$_ = {
+	texture = "gfx/interface/icons/message_feed/_$modId$__game_concept_icon.dds"
+}

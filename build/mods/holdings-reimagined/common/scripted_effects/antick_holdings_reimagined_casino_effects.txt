@@ -1,0 +1,68 @@
+﻿antick_holdings_reimagined_casino_gamble_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		duel = {
+			skills = { $SKILL_1$ $SKILL_2$ }
+			target = scope:antick_holdings_reimagined_coach_house_traveller
+
+			70 = {
+				modifier = {
+					add = {
+						value = scope:duel_value
+						multiply = 10
+					}
+				}
+				pay_short_term_gold = {
+					target = scope:antick_holdings_reimagined_coach_house_patron
+					gold = { 1 3 }
+				}
+			}
+			30 = {
+				modifier = {
+					add = {
+						value = scope:duel_value
+						multiply = -10
+					}
+				}
+				# multiple winners in the same travel party could rinse patrons gold, but they need to win something so add gold if patron's short term gold depleted
+				scope:antick_holdings_reimagined_coach_house_patron = {
+					if = {
+						limit = { short_term_gold >= 10 }
+						pay_short_term_gold = {
+							target = scope:antick_holdings_reimagined_coach_house_traveller
+							gold = { 1 3 }
+						}
+					}
+					else = {
+						scope:antick_holdings_reimagined_coach_house_traveller = { add_gold = { 1 3 } }
+					}
+				}
+			}
+		}
+	}
+	scope:antick_holdings_reimagined_coach_house_traveller = {
+		add_character_flag = {
+			flag = antick_holdings_reimagined_had_casino
+			months = 12
+		}
+	}
+}
+
+antick_holdings_reimagined_casino_effect = {
+	random_list = {
+		50 = {
+			random_list = {
+				33 = {
+					antick_holdings_reimagined_casino_gamble_effect = { SKILL_1 = diplomacy SKILL_2 = intrigue }
+				}
+				33 = {
+					antick_holdings_reimagined_casino_gamble_effect = { SKILL_1 = martial SKILL_2 = prowess }
+				}
+				33 = {
+					antick_holdings_reimagined_casino_gamble_effect = { SKILL_1 = learning SKILL_2 = stewardship }
+				}
+			}
+		}
+		50 = {
+		}
+	}
+}

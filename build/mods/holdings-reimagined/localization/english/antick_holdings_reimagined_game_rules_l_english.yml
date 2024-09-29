@@ -1,0 +1,10 @@
+﻿l_english:
+rule_building_slots:0 "#B Mojo: #!Building Slots"
+setting_default_slots_limit:0 "Default"
+setting_default_slots_limit_desc:0 "Vanilla holdings unchanged."
+setting_less_slots_limit:0 "Plus 1"
+setting_less_slots_limit_desc:0 "Adds 1 building slot to all holdings in the game."
+setting_more_slots_limit:0 "Plus 2"
+setting_more_slots_limit_desc:0 "Adds 2 building slots to all holdings in the game."
+setting_extreme_slots_limit:0 "Plus 3"
+setting_extreme_slots_limit_desc:0 "Adds 3 building slots to all holdings in the game."

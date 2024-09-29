@@ -1,0 +1,26 @@
+﻿_$modId$__story_gamekeeper = {
+	on_setup = {
+		set_variable = {
+			name = province_building_with_gamekeeper_post
+			value = story_owner.var:_$modId$__province_with_gamekeeper
+		}
+
+		save_scope_as = this_story
+		var:province_building_with_gamekeeper_post = {
+			set_variable = {
+				name = _$modId$__province_gamekeeper_story
+				value = scope:this_story
+			}
+		}
+
+		story_owner = {
+			remove_variable = _$modId$__province_with_gamekeeper
+		}
+	}
+
+	on_end = {
+	}
+
+	on_owner_death = {
+	}
+}

@@ -1,0 +1,11 @@
+﻿_$modId$__gamekeeper_training_modifier = {
+	icon = hunt_positive
+	prowess = 2
+	trait_track_hunter_xp_gain_mult = 0.2
+}
+
+_$modId$__blademaster_training_modifier = {
+	icon = hunt_positive
+	prowess = 2
+	lifestyle_blademaster_xp_gain_mult = 0.2
+}

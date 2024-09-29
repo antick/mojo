@@ -4,7 +4,6 @@
   game_rule_category_holding_manager:0 "$_$modId$__idiom_rule$"
 
 
-
   rule__$modId$__control_change_holding_type_cost:0 "$_$modId$__idiom_rule$ Changing [holding_type|E] Cost $basis_idiom_player$"
   setting__$modId$__rule_change_holding_type_cost_very_cheap:0 "#_$modId$__green Very Cheap#!"
   setting__$modId$__rule_change_holding_type_cost_very_cheap_desc:0 "#_$modId$__green [gold_i|E] [EmptyScope.ScriptValue('_$modId$__value_change_holding_type_cost_very_cheap')|0]#!"

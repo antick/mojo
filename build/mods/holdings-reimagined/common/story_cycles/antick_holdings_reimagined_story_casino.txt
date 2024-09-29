@@ -1,0 +1,26 @@
+﻿antick_holdings_reimagined_story_casino = {
+	on_setup = {
+		set_variable = {
+			name = province_building_with_casino_post
+			value = story_owner.var:antick_holdings_reimagined_province_with_casino
+		}
+
+		save_scope_as = this_story
+		var:province_building_with_casino_post = {
+			set_variable = {
+				name = antick_holdings_reimagined_province_casino_story
+				value = scope:this_story
+			}
+		}
+
+		story_owner = {
+			remove_variable = antick_holdings_reimagined_province_with_casino
+		}
+	}
+
+	on_end = {
+	}
+
+	on_owner_death = {
+	}
+}

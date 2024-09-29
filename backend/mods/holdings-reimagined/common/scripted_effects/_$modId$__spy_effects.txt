@@ -1,0 +1,537 @@
+﻿_$modId$__advance_scheme_effect = {
+	scope:_$modId$__coach_house_patron = {
+		random_scheme = {
+			limit = {
+				scheme_target_character = scope:_$modId$__coach_house_traveller
+			}
+
+			save_scope_as = _$modId$__scheme
+			scheme_target_character = { save_scope_as = _$modId$__scheme_target_character }
+
+			random_list = {
+				10 = {
+					trigger = { scheme_type = befriend }
+					_$modId$__spy_befriend_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = seduce }
+					_$modId$__spy_seduce_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = courting }
+					_$modId$__spy_courting_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = elope }
+					_$modId$__spy_elope_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = learn_language }
+					_$modId$__spy_learn_language_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = sway }
+					_$modId$__spy_sway_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = murder }
+					_$modId$__spy_murder_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = abduct }
+					_$modId$__spy_abduct_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = claim_throne }
+					_$modId$__spy_claim_throne_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = fabricate_hook }
+					_$modId$__spy_fabricate_hook_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = convert_to_witchcraft }
+					_$modId$__spy_convert_to_witchcraft_effect = yes
+				}
+				10 = {
+				}
+			}
+		}
+	}
+}
+
+_$modId$__spy_befriend_effect = {
+	scope:_$modId$__coach_house_patron = {
+		send_interface_message = {
+			type = event_generic_good
+			left_icon = scope:_$modId$__coach_house_traveller
+			title = _$modId$__message_scheme_buff_title
+			desc = _$modId$__message_scheme_befriend_buff
+			scope:_$modId$__scheme_target_character = {
+				random_list = {
+					20 = {
+						set_variable = {
+							name = recipient_stubborness_scheme
+							value = -5
+						}
+					}
+					20 = {
+						set_variable = {
+							name = recipient_stubborness_scheme
+							value = -10
+						}
+					}
+					20 = {
+						set_variable = {
+							name = recipient_stubborness_scheme
+							value = -15
+						}
+					}
+					20 = {
+						set_variable = {
+							name = recipient_stubborness_scheme
+							value = -20
+						}
+					}
+					20 = {
+						set_variable = {
+							name = recipient_stubborness_scheme
+							value = -25
+						}
+					}
+				}
+			}
+		}
+	}
+	scope:_$modId$__coach_house_traveller = {
+		add_character_flag = {
+			flag = _$modId$__had_scheme_advance
+			months = 12
+		}
+	}
+}
+
+_$modId$__spy_seduce_effect = {
+	save_scope_as = _$modId$__patron_scheme
+	random_list = {
+		25 = {
+			scope:_$modId$__coach_house_patron = {
+				send_interface_message = {
+					type = event_generic_good
+					title = _$modId$__message_scheme_buff_title
+					desc = _$modId$__message_scheme_seduce_buff
+					left_icon = scope:_$modId$__coach_house_traveller
+					scope:_$modId$__patron_scheme = {
+						add_scheme_modifier = {
+							type = sex_memory_modifier
+						}
+					}
+				}
+			}
+			scope:_$modId$__coach_house_traveller = {
+				add_character_flag = {
+					flag = _$modId$__had_scheme_advance
+					months = 12
+				}
+			}
+		}
+		25 = {
+			scope:_$modId$__coach_house_patron = {
+				send_interface_message = {
+					type = event_generic_good
+					title = _$modId$__message_scheme_buff_title
+					desc = _$modId$__message_scheme_seduce_buff
+					left_icon = scope:_$modId$__coach_house_traveller
+					scope:_$modId$__patron_scheme = {
+						add_scheme_progress = scheme_progress_gain
+					}
+				}
+			}
+			scope:_$modId$__coach_house_traveller = {
+				add_character_flag = {
+					flag = _$modId$__had_scheme_advance
+					months = 12
+				}
+			}
+		}
+		50 = {
+		}
+	}
+}
+
+_$modId$__spy_courting_effect = {
+	scope:_$modId$__coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:_$modId$__coach_house_traveller
+					title = _$modId$__message_scheme_buff_title
+					desc = _$modId$__message_scheme_court_buff
+					scope:_$modId$__scheme = {
+						random_list = {
+							25 = {
+								add_scheme_modifier = {
+									type = sex_memory_modifier
+								}
+							}
+							25 = {
+								add_scheme_progress = scheme_progress_gain
+							}
+						}
+					}
+					scope:_$modId$__coach_house_traveller = {
+						add_character_flag = {
+							flag = _$modId$__had_scheme_advance
+							months = 12
+						}
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+_$modId$__spy_elope_effect = {
+	scope:_$modId$__coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:_$modId$__coach_house_traveller
+					title = _$modId$__message_scheme_buff_title
+					desc = _$modId$__message_scheme_elope_buff
+					scope:_$modId$__scheme = {
+						add_scheme_modifier = {
+							type = lifestyle_converted_informants_modifier
+							days = 1825
+						}
+					}
+				}
+				scope:_$modId$__coach_house_traveller = {
+					add_character_flag = {
+						flag = _$modId$__had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+_$modId$__spy_learn_language_effect = {
+	scope:_$modId$__coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:_$modId$__coach_house_traveller
+					title = _$modId$__message_scheme_buff_title
+					desc = _$modId$__message_scheme_learn_language_buff
+					scope:_$modId$__scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:_$modId$__coach_house_traveller = {
+					add_character_flag = {
+						flag = _$modId$__had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+_$modId$__spy_sway_effect = {
+	scope:_$modId$__coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:_$modId$__coach_house_traveller
+					title = _$modId$__message_scheme_buff_title
+					desc = _$modId$__message_scheme_sway_buff
+					scope:_$modId$__scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:_$modId$__coach_house_traveller = {
+					add_character_flag = {
+						flag = _$modId$__had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+_$modId$__spy_murder_effect = {
+	scope:_$modId$__coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:_$modId$__coach_house_traveller
+					title = _$modId$__message_scheme_buff_title
+					desc = _$modId$__message_scheme_murder_buff
+					scope:_$modId$__scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:_$modId$__coach_house_traveller = {
+					add_character_flag = {
+						flag = _$modId$__had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+_$modId$__spy_abduct_effect = {
+	scope:_$modId$__coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:_$modId$__coach_house_traveller
+					title = _$modId$__message_scheme_buff_title
+					desc = _$modId$__message_scheme_abduct_buff
+					scope:_$modId$__scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:_$modId$__coach_house_traveller = {
+					add_character_flag = {
+						flag = _$modId$__had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+_$modId$__spy_claim_throne_effect = {
+	scope:_$modId$__coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:_$modId$__coach_house_traveller
+					title = _$modId$__message_scheme_buff_title
+					desc = _$modId$__message_scheme_claim_throne_buff
+					scope:_$modId$__scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:_$modId$__coach_house_traveller = {
+					add_character_flag = {
+						flag = _$modId$__had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+_$modId$__spy_fabricate_hook_effect = {
+	scope:_$modId$__coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:_$modId$__coach_house_traveller
+					title = _$modId$__message_scheme_buff_title
+					desc = _$modId$__message_scheme_fabricate_hook_buff
+					scope:_$modId$__scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:_$modId$__coach_house_traveller = {
+					add_character_flag = {
+						flag = _$modId$__had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+_$modId$__spy_convert_to_witchcraft_effect = {
+	scope:_$modId$__coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:_$modId$__coach_house_traveller
+					title = _$modId$__message_scheme_buff_title
+					desc = _$modId$__message_scheme_convert_to_witchcraft_buff
+					scope:_$modId$__scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:_$modId$__coach_house_traveller = {
+					add_character_flag = {
+						flag = _$modId$__had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+_$modId$__spy_learn_secrets_effect = {
+	scope:_$modId$__coach_house_patron = { save_scope_as = councillor_liege }
+
+	scope:_$modId$__coach_house_patron = {
+		duel = {
+			skill = intrigue
+			target = scope:_$modId$__coach_house_traveller
+
+			70 = {
+				modifier = {
+					add = {
+						value = scope:duel_value
+						multiply = 10
+					}
+				}
+				scope:_$modId$__coach_house_traveller = {
+					if = {
+						limit = {
+							_$modId$__has_minor_secrets_trigger = yes
+							_$modId$__has_major_secrets_trigger = yes
+						}
+						random_list = {
+							25 = {
+								if = {
+									limit = { _$modId$__has_minor_secrets_trigger = yes }
+									random_secret = {
+										limit = { _$modId$__spymaster_task_find_secrets_suitable_minor_secret_trigger = yes }
+										save_scope_as = _$modId$__found_secret
+										_$modId$__spy_reveal_secret_effect = yes
+									}
+								}
+							}
+							25 = {
+								if = {
+									limit = { _$modId$__has_major_secrets_trigger = yes }
+									random_secret = {
+										limit = { _$modId$__spymaster_task_find_secrets_suitable_major_secret_trigger = yes }
+										save_scope_as = _$modId$__found_secret
+										_$modId$__spy_reveal_secret_effect = yes
+									}
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = { _$modId$__has_major_secrets_trigger = yes }
+						random_secret = {
+							limit = { _$modId$__spymaster_task_find_secrets_suitable_major_secret_trigger = yes }
+							save_scope_as = _$modId$__found_secret
+							_$modId$__spy_reveal_secret_effect = yes
+						}
+					}
+					else = {
+						random_secret = {
+							limit = { _$modId$__spymaster_task_find_secrets_suitable_minor_secret_trigger = yes }
+							save_scope_as = _$modId$__found_secret
+							_$modId$__spy_reveal_secret_effect = yes
+						}
+					}
+				}
+			}
+			30 = {
+				modifier = {
+					add = {
+						value = scope:duel_value
+						multiply = -10
+					}
+				}
+			}
+		}
+	}
+}
+
+_$modId$__spy_reveal_secret_effect = {
+	scope:_$modId$__coach_house_traveller = {
+		add_character_flag = {
+			flag = _$modId$__had_secret_discovery
+			months = 12
+		}
+	}
+	scope:_$modId$__coach_house_patron = {
+		send_interface_message = {
+			type = event_generic_good
+			left_icon = scope:_$modId$__coach_house_traveller
+			title = _$modId$__message_secret_revealed_title
+			desc = _$modId$__message_secret_revealed
+			scope:_$modId$__found_secret = { reveal_to = scope:_$modId$__coach_house_patron }
+		}
+	}
+}
+
+_$modId$__spy_uncover_scheme_effect = {
+	scope:_$modId$__coach_house_traveller = {
+		random_scheme = {
+			limit = {
+				_$modId$__unexposed_hostile_scheme_target_charactering_patron_trigger = yes
+			}
+			save_scope_as = _$modId$__hostile_scheme
+		}
+	}
+
+	if = {
+		limit = { exists = scope:_$modId$__hostile_scheme }
+
+		scope:_$modId$__coach_house_patron = {
+			duel = {
+				skill = intrigue
+				target = scope:_$modId$__coach_house_traveller
+
+				50 = {
+					modifier = {
+						add = {
+							value = scope:duel_value
+							multiply = 10
+						}
+					}
+					send_interface_message = {
+						type = event_generic_good
+						title = _$modId$__message_scheme_revealed_title
+						desc = _$modId$__message_scheme_revealed
+						left_icon = scope:_$modId$__coach_house_traveller
+						scope:_$modId$__hostile_scheme = {
+							expose_scheme = yes
+						}
+					}
+					scope:_$modId$__coach_house_traveller = {
+						add_character_flag = {
+							flag = _$modId$__had_scheme_discovery
+							months = 12
+						}
+					}
+				}
+				50 = {
+					modifier = {
+						add = {
+							value = scope:duel_value
+							multiply = -10
+						}
+					}
+				}
+			}
+		}
+	}
+}

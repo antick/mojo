@@ -1,0 +1,56 @@
+﻿on_game_start = {
+	on_actions = { _$modId$__on_game_start }
+}
+
+_$modId$__on_game_start = {
+	effect = {
+		set_global_variable = _$modId$__2_1_0
+		set_global_variable = _$modId$__2_4_0
+		set_global_variable = _$modId$__2_6_0
+
+		if = {
+			limit = {
+				or = {
+					has_game_rule = less_slots_limit
+					has_game_rule = more_slots_limit
+					has_game_rule = extreme_slots_limit
+				}
+			}
+
+			if = {
+				limit = { has_game_rule = less_slots_limit }
+				_$modId$__game_rule_slots_effect = yes
+			}
+			if = {
+				limit = { has_game_rule = more_slots_limit }
+				_$modId$__game_rule_slots_effect = yes
+			}
+			if = {
+				limit = { has_game_rule = extreme_slots_limit }
+				_$modId$__game_rule_slots_effect = yes
+			}
+		}
+	}
+}
+
+yearly_global_pulse = {
+	on_actions = { _$modId$__yearly_global_pulse }
+}
+_$modId$__yearly_global_pulse = {
+	effect = {
+		every_in_global_list = {
+			variable = _$modId$__poi_province_list
+
+			if = {
+				limit = {
+					nand = {
+						has_building_with_flag = { flag = _$modId$__coach_house_spy }
+						has_building_with_flag = { flag = _$modId$__militia_blademaster }
+					}
+				}
+
+				remove_list_global_variable = { name = _$modId$__poi_province_list target = this }
+			}
+		}
+	}
+}

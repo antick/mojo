@@ -1,0 +1,35 @@
+﻿_$modId$__poi_tt_GetBuildingType = {
+	type = province
+
+	text = {
+		trigger = {
+			has_building_or_higher = horse_08
+		}
+
+		localization_key = _$modId$__poi_capitals.visit.coach_house_casino
+	}
+
+	text = {
+		trigger = {
+			has_building_or_higher = horse_06
+		}
+
+		localization_key = _$modId$__poi_capitals.visit.coach_house_gamekeeper
+	}
+
+	text = {
+		trigger = {
+			has_building_or_higher = horse_04
+		}
+
+		localization_key = _$modId$__poi_capitals.visit.coach_house_spy
+	}
+
+	text = {
+		trigger = {
+			has_building_or_higher = militia_04
+		}
+
+		localization_key = _$modId$__poi_capitals.visit.blademaster
+	}
+}

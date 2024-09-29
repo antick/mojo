@@ -4,7 +4,6 @@
   game_rule_category_holding_manager:0 "$antick_holdings_reimagined_idiom_rule$"
 
 
-
   rule_antick_holdings_reimagined_control_change_holding_type_cost:0 "$antick_holdings_reimagined_idiom_rule$ Changing [holding_type|E] Cost $basis_idiom_player$"
   setting_antick_holdings_reimagined_rule_change_holding_type_cost_very_cheap:0 "#antick_holdings_reimagined_green Very Cheap#!"
   setting_antick_holdings_reimagined_rule_change_holding_type_cost_very_cheap_desc:0 "#antick_holdings_reimagined_green [gold_i|E] [EmptyScope.ScriptValue('antick_holdings_reimagined_value_change_holding_type_cost_very_cheap')|0]#!"

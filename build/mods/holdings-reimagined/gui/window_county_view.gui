@@ -13,7 +13,7 @@ window = {
 	layer = windows_layer
 	### Mojo change begins ###
 	# size = { 625 645 }
-	size = { 680 770 }
+	size = { 720 780 }
 	### Mojo change ends ###
 
 	background = {
@@ -1609,7 +1609,7 @@ window = {
 						using = Background_Area_Dark
 						alpha = 0.7
 						margin_left = 5
-						margin_bottom = -202
+						margin_bottom = -210
 					}
 
 					### Tax Income
@@ -1900,7 +1900,7 @@ window = {
 							name = "buildings_grid_special"
 							parentanchor = right
 							ignoreinvisible = yes
-							margin_top = 1
+							margin_top = 4
 
 							#### Mojo CHANGE START ####
 							# Upgrade buildings
@@ -2244,8 +2244,8 @@ window = {
 		using = Animation_FadeIn_Quick
 		#### Mojo change begins ####
 		# position_x = 0
-		position_x = 108
-		position_y = 7
+		position_x = 80
+		position_y = -7
 		#### Mojo change ends ####
 	}
 
@@ -3250,7 +3250,12 @@ window = {
 	movable = no
 	layer = windows_layer
 	parentanchor = bottom|hcenter
-	position = { 40 -50 }
+
+	#### Mojo change begins ####
+	#position = { 40 -50 }
+	position = { -238 -134 }
+	#### Mojo change ends ####
+
 	using = Animation_ShowHide_Quick
 
 	using = Window_Background_Subwindow
@@ -3560,4 +3565,3 @@ types CountyViewTypes
 		}
 	}
 }
-

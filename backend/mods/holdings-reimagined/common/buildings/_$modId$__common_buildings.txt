@@ -1,0 +1,962 @@
+﻿####################
+# Common Buildings #
+####################
+
+### vineyard
+
+vineyard_01 = { ### small vineyard
+	construction_time = _$modId$__construction_time_half_year
+
+	can_construct_potential = {
+		building_vineyard_requirement_terrain = yes
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+
+	province_modifier = {
+		monthly_income = good_building_tax_tier_1
+		supply_limit = 100
+	}
+	county_modifier = {
+		county_opinion_add = 15
+	}
+
+	next_building = vineyard_02
+
+	type_icon = "icon_building_vineyard.dds"
+
+	ai_value = {
+		base = 10
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__foundation
+	flag = _$modId$__vineyard
+}
+
+vineyard_02 = { ###wine pressers
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct_potential = {
+		culture = {
+			has_innovation = innovation_crop_rotation
+		}
+	}
+
+	cost_gold = normal_building_tier_2_cost
+
+	province_modifier = {
+		monthly_income = good_building_tax_tier_2
+		supply_limit = 200
+	}
+	county_modifier = {
+		county_opinion_add = 2
+	}
+
+	next_building = vineyard_03
+	ai_value = {
+		base = 1
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__vineyard
+}
+
+vineyard_03 = { ###large vineyard
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_manorialism
+		}
+	}
+
+	cost_gold = normal_building_tier_3_cost
+
+	province_modifier = {
+		monthly_income = good_building_tax_tier_4
+		supply_limit = 300
+	}
+	county_modifier = {
+		county_opinion_add = 4
+	}
+
+	next_building = vineyard_04
+	ai_value = {
+		base = 1
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__vineyard
+}
+
+vineyard_04 = { ###wine workshop
+	construction_time = _$modId$__construction_time_2_years
+
+	can_construct = {
+		culture = {
+			has_innovation = innovation_windmills
+		}
+	}
+
+	cost_gold = normal_building_tier_4_cost
+
+	province_modifier = {
+		monthly_income = good_building_tax_tier_6
+		supply_limit = 400
+	}
+	county_modifier = {
+		county_opinion_add = 4
+		tax_mult = 0.01
+	}
+
+	next_building = vineyard_05
+	ai_value = {
+		base = 1
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__vineyard
+}
+
+vineyard_05 = { ###grape plantation
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+
+	cost_gold = normal_building_tier_5_cost
+
+	province_modifier = {
+		monthly_income = good_building_tax_tier_8
+		supply_limit = 500
+	}
+	county_modifier = {
+		county_opinion_add = 5
+		tax_mult = 0.02
+	}
+
+	ai_value = {
+		base = 1
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__vineyard
+}
+
+###tunnel networks
+###bolt holes
+
+tunnel_01 = {
+	construction_time = _$modId$__construction_time_half_year
+
+	can_construct_potential = {
+		building_tunnel_requirement_terrain = yes
+		building_requirement_tribal = no
+		county = {
+			NOT = {
+				any_county_province = {
+					has_building_or_higher = tunnel_01
+				}
+			}
+		}
+	}
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	cost_gold = normal_building_tier_1_cost
+
+	province_modifier = {
+		defender_holding_advantage = 2
+		supply_limit = 500
+		levy_reinforcement_rate = 0.01
+	}
+
+	next_building = tunnel_02
+
+	type_icon = "icon_building_tunnel.dds"
+
+	ai_value = {
+		base = 3
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__foundation
+	flag = _$modId$__tunnel
+}
+
+tunnel_02 = { ###primitive digging
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		scope:holder.culture = {
+			has_innovation = innovation_crop_rotation
+		}
+	}
+
+	cost_gold = normal_building_tier_2_cost
+
+	province_modifier = {
+		monthly_income = 0.2
+		defender_holding_advantage = 2
+		supply_limit = 1000
+		levy_reinforcement_rate = 0.02
+	}
+
+
+	next_building = tunnel_03
+
+	ai_value = {
+		base = 3
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__tunnel
+}
+
+tunnel_03 = { #deep shafts
+	construction_time = _$modId$__construction_time_1_and_half_years
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+
+		scope:holder.culture = {
+			has_innovation = innovation_crop_rotation
+		}
+	}
+
+	cost_gold = normal_building_tier_3_cost
+
+	province_modifier = {
+		monthly_income = 0.3
+		defender_holding_advantage = 4
+		supply_limit = 1500
+		levy_reinforcement_rate = 0.03
+	}
+
+	next_building = tunnel_04
+
+	ai_value = {
+		base = 3
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__tunnel
+}
+
+tunnel_04 = { #tunnel passages
+	construction_time = _$modId$__construction_time_4_years
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		scope:holder.culture = {
+			has_innovation = innovation_manorialism
+		}
+	}
+
+	cost_gold = normal_building_tier_4_cost
+
+	province_modifier = {
+		monthly_income = 0.5
+		defender_holding_advantage = 4
+		supply_limit = 2000
+		levy_reinforcement_rate = 0.05
+	}
+
+	next_building = tunnel_05
+
+	ai_value = {
+		base = 3
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__tunnel
+}
+
+tunnel_05 = { #cave storage
+	construction_time = _$modId$__construction_time_2_years
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		scope:holder.culture = {
+			has_innovation = innovation_windmills
+		}
+	}
+
+	cost_gold = normal_building_tier_5_cost
+
+	province_modifier = {
+		monthly_income = 0.8
+		defender_holding_advantage = 4
+		supply_limit = 2500
+		levy_reinforcement_rate = 0.10
+	}
+
+	ai_value = {
+		base = 3
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__tunnel
+}
+
+###Hospital (placeholder for epidemic DLC)
+
+hospital_01 = { ###sickhouse
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	is_enabled = {
+		is_county_capital = yes
+	}
+
+	cost_gold = normal_building_tier_1_cost
+
+	character_modifier = {
+		negate_health_penalty_add = 0.05
+		health = 0.05
+	}
+
+	county_modifier = {
+		development_growth = 0.1
+		county_opinion_add = 2
+		epidemic_resistance = 4
+	}
+
+	next_building = hospital_02
+
+	type_icon = "icon_building_hospital.dds"
+
+	ai_value = {
+		base = 10
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__foundation
+	flag = _$modId$__hospital
+}
+
+
+hospital_02 = { ###treatment camps
+	construction_time = _$modId$__construction_time_half_year
+
+	can_construct_potential = {
+		culture = {
+			has_innovation = innovation_crop_rotation
+		}
+	}
+
+	cost_gold = normal_building_tier_2_cost
+
+	character_modifier = {
+		negate_health_penalty_add = 0.05
+		health = 0.05
+		monthly_piety = 0.1
+		clergy_opinion = 2
+		legitimacy_gain_mult = 0.01
+	}
+
+	county_modifier = {
+		development_growth = 0.1
+		county_opinion_add = 4
+		epidemic_resistance = 8
+	}
+
+	next_building = hospital_03
+	ai_value = {
+		base = 1
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__hospital
+}
+
+hospital_03 = { ###soup kitchen
+	construction_time = _$modId$__construction_time_half_year
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_manorialism
+		}
+	}
+
+	cost_gold = normal_building_tier_3_cost
+
+	character_modifier = {
+		negate_health_penalty_add = 0.05
+		health = 0.05
+		monthly_piety = 0.2
+		clergy_opinion = 4
+		stress_gain_mult = -0.05
+		legitimacy_gain_mult = 0.02
+	}
+
+	county_modifier = {
+		development_growth = 0.1
+		county_opinion_add = 6
+		epidemic_resistance = 12
+	}
+
+	next_building = hospital_04
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__hospital
+}
+
+hospital_04 = { ###leper colony
+	construction_time = _$modId$__construction_time_1_and_half_years
+
+	can_construct = {
+		culture = {
+			has_innovation = innovation_manorialism
+		}
+	}
+
+	cost_gold = normal_building_tier_4_cost
+
+	character_modifier = {
+		negate_health_penalty_add = 0.1
+		health = 0.05
+		monthly_piety = 0.2
+		clergy_opinion = 4
+		vassal_opinion = 2
+		stress_gain_mult = -0.1
+		legitimacy_gain_mult = 0.03
+	}
+
+	county_modifier = {
+		development_growth = 0.1
+		county_opinion_add = 8
+		epidemic_resistance = 16
+	}
+
+	next_building = hospital_05
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__hospital
+}
+
+hospital_05 = { ###clinics
+	construction_time = _$modId$__construction_time_1_and_half_years
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		culture = {
+			has_innovation = innovation_windmills
+		}
+	}
+
+	cost_gold = normal_building_tier_5_cost
+
+	character_modifier = {
+		negate_health_penalty_add = 0.1
+		health = 0.05
+		monthly_piety = 0.2
+		clergy_opinion = 4
+		vassal_opinion = 2
+		stress_gain_mult = -0.1
+		stress_loss_mult = 0.1
+		legitimacy_gain_mult = 0.04
+		owned_legend_spread_mult = 0.1
+	}
+
+	county_modifier = {
+		development_growth = 0.2
+		county_opinion_add = 10
+		epidemic_resistance = 20
+	}
+
+	next_building = hospital_06
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__hospital
+}
+
+hospital_06 = { ###chapel ward
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		culture = {
+			has_innovation = innovation_windmills
+		}
+	}
+
+	cost_gold = normal_building_tier_6_cost
+
+	character_modifier = {
+		negate_health_penalty_add = 0.1
+		health = 0.05
+		monthly_piety = 0.3
+		clergy_opinion = 6
+		vassal_opinion = 4
+		stress_gain_mult = -0.1
+		stress_loss_mult = 0.1
+		legitimacy_gain_mult = 0.05
+		owned_legend_spread_mult = 0.2
+	}
+
+	county_modifier = {
+		development_growth = 0.2
+		county_opinion_add = 10
+		epidemic_resistance = 24
+	}
+
+	next_building = hospital_07
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__hospital
+}
+hospital_07 = { ###Cremation site
+	construction_time = _$modId$__construction_time_half_year
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+
+	cost_gold = normal_building_tier_7_cost
+
+	character_modifier = {
+		negate_health_penalty_add = 0.5
+		health = 0.05
+		monthly_piety = 0.3
+		clergy_opinion = 8
+		vassal_opinion = 5
+		stress_gain_mult = -0.15
+		stress_loss_mult = 0.15
+		legitimacy_gain_mult = 0.06
+		owned_legend_spread_mult = 0.3
+	}
+
+	county_modifier = {
+		development_growth = 0.2
+		county_opinion_add = 15
+		epidemic_resistance = 28
+	}
+
+	next_building = hospital_08
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__hospital
+}
+
+hospital_08 = { ###expanded sick house
+	construction_time = _$modId$__construction_time_3_years
+
+	can_construct = {
+		culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+
+	cost_gold = normal_building_tier_8_cost
+
+	character_modifier = {
+		negate_health_penalty_add = 0.5
+		health = 0.5
+		monthly_piety = 0.3
+		clergy_opinion = 10
+		vassal_opinion = 10
+		stress_gain_mult = -0.2
+		stress_loss_mult = 0.2
+		legitimacy_gain_mult = 0.7
+		owned_legend_spread_mult = 0.4
+	}
+
+	county_modifier = {
+		development_growth = 0.3
+		county_opinion_add = 15
+		epidemic_resistance = 32
+	}
+
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__hospital
+}
+
+### variety farm
+
+farming_01 = { ###land preparation
+	construction_time = _$modId$__construction_time_half_year
+
+	can_construct_potential = {
+		building_farming_requirement_terrain = yes
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+
+	province_modifier = {
+		monthly_income = 0.1
+		hostile_raid_time = -0.05
+	}
+
+	next_building = farming_02
+
+	type_icon = "icon_building_farming.dds"
+
+	ai_value = {
+		base = 10
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__foundation
+	flag = _$modId$__farming
+}
+
+farming_02 = { ###3 way crop rotation
+	construction_time = _$modId$__construction_time_half_year
+
+	can_construct_potential = {
+		culture = {
+			has_innovation = innovation_crop_rotation
+		}
+	}
+
+	cost_gold = normal_building_tier_2_cost
+
+	province_modifier = {
+		monthly_income = 0.7
+		supply_limit = 100
+		hostile_raid_time = -0.10
+	}
+
+	next_building = farming_03
+	ai_value = {
+		base = 1
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__farming
+}
+
+farming_03 = { ###vegetable plantation
+	construction_time = _$modId$__construction_time_half_year
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_manorialism
+		}
+	}
+
+	cost_gold = normal_building_tier_3_cost
+
+	province_modifier = {
+		monthly_income = 1.4
+		supply_limit = 200
+		supply_limit_mult = 0.05
+		hostile_raid_time = -0.10
+	}
+
+	next_building = farming_04
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__farming
+}
+
+farming_04 = { ###farming market
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		culture = {
+			has_innovation = innovation_manorialism
+		}
+	}
+
+	cost_gold = normal_building_tier_4_cost
+
+	province_modifier = {
+		monthly_income = 2.2
+		supply_limit = 350
+		supply_limit_mult = 0.05
+		hostile_raid_time = -0.15
+	}
+
+	next_building = farming_05
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__farming
+}
+
+farming_05 = { ###tools and oxs
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		culture = {
+			has_innovation = innovation_windmills
+		}
+	}
+
+	cost_gold = normal_building_tier_5_cost
+
+	province_modifier = {
+		monthly_income = 3.1
+		supply_limit = 500
+		supply_limit_mult = 0.05
+		hostile_raid_time = -0.15
+	}
+
+	next_building = farming_06
+
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__farming
+}
+
+farming_06 = { ###production
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct_potential = {
+		building_vineyard_requirement_terrain = yes
+	}
+	can_construct = {
+		culture = {
+			has_innovation = innovation_windmills
+		}
+	}
+
+	cost_gold = normal_building_tier_6_cost
+
+	province_modifier = {
+		monthly_income = 3.9
+		supply_limit = 600
+		supply_limit_mult = 0.05
+		hostile_raid_time = -0.15
+	}
+
+	next_building = farming_07
+
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__farming
+}
+
+farming_07 = { ###water mill inclusion
+	construction_time = _$modId$__construction_time_2_years
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+
+	cost_gold = normal_building_tier_7_cost
+
+	province_modifier = {
+		monthly_income = 4.6
+		supply_limit = 1000
+		supply_limit_mult = 0.10
+		hostile_raid_time = -0.20
+	}
+
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__farming
+}
+
+### Embassy
+
+embassy_01 = { # consulate
+	construction_time = _$modId$__construction_time_1_and_half_years
+
+	can_construct_potential = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 01 }
+	}
+
+	can_construct_showing_failures_only = {
+		_$modId$__consulate_can_construct_or_enabled_trigger = yes
+	}
+
+	cost_gold = normal_building_tier_1_cost
+
+	county_modifier = {
+		development_growth = _$modId$__consulate_building_development_growth_factor_tier_5
+	}
+
+	character_modifier = {
+		different_culture_opinion = 5
+		opinion_of_different_culture = 5
+		court_grandeur_baseline_add = 5
+		short_reign_duration_mult = -0.1
+		monthly_prestige = 0.2
+		enemy_hostile_scheme_phase_duration_add = 5
+		legitimacy_gain_mult = 0.15
+	}
+
+	next_building = embassy_02
+
+	type_icon = "icon_building_embassy.dds"
+
+	on_complete = {
+		county.holder = { add_prestige = medium_prestige_value }
+	}
+
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_general_building_modifier = yes
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__foundation
+	flag = _$modId$__embassy
+}
+
+embassy_02 = { # Embassy
+	construction_time = _$modId$__construction_time_2_and_half_years
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+	}
+
+	can_construct_showing_failures_only = {
+		_$modId$__embassy_can_construct_or_enabled_trigger = yes
+	}
+
+	cost_gold = expensive_building_tier_2_cost
+
+	county_modifier = {
+		development_growth = _$modId$__embassy_building_development_growth_factor_tier_8
+	}
+
+	character_modifier = {
+		different_culture_opinion = 15
+		opinion_of_different_culture = 10
+		court_grandeur_baseline_add = 9
+		short_reign_duration_mult = -0.2
+		monthly_prestige = 0.4
+		enemy_hostile_scheme_phase_duration_add = 10
+		monthly_dynasty_prestige_mult = 0.05
+		legitimacy_gain_mult = 0.3
+		owned_legend_spread_mult = 0.3
+	}
+
+	levy = 225
+
+	on_complete = {
+		county.holder = { add_prestige = major_prestige_value }
+	}
+
+	ai_value = {
+		base = 10
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__embassy
+}

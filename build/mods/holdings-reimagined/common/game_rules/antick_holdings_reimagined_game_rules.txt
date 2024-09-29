@@ -1,0 +1,15 @@
+﻿building_slots = {
+	categories = {
+		tweaks
+	}
+
+	default = default_slots_limit
+
+	default_slots_limit = { flag = GG_can_change_rule }
+
+	less_slots_limit = { flag = GG_can_change_rule }
+
+	more_slots_limit = { flag = GG_can_change_rule }
+
+	extreme_slots_limit = {flag = GG_can_change_rule }
+}

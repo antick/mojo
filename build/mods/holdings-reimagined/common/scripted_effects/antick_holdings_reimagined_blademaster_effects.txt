@@ -1,0 +1,63 @@
+﻿antick_holdings_reimagined_blademaster_effect = {
+	random_list = {
+		50 = {
+			add_character_flag = {
+				flag = antick_holdings_reimagined_had_training_blade
+				months = 12
+			}
+
+			send_interface_message = {
+				type = event_generic_good
+				title = antick_holdings_reimagined_message_blademaster_training_title
+				desc = antick_holdings_reimagined_message_blademaster_training
+				left_icon = scope:antick_holdings_reimagined_warden_station_traveller
+
+				add_character_modifier = {
+					modifier = antick_holdings_reimagined_blademaster_training_modifier
+					years = 5
+				}
+
+				if = {
+					limit = { not = { has_trait = lifestyle_blademaster } }
+
+					add_trait = lifestyle_blademaster
+					add_trait_xp = {
+						trait = lifestyle_blademaster
+						value = small_lifestyle_random_xp_low
+					}
+				}
+				else_if = {
+					limit = {
+						has_trait_xp = {
+							trait = lifestyle_blademaster
+							value < trait_third_level
+						}
+					}
+					add_trait_xp = {
+						trait = lifestyle_blademaster
+						value = {
+							integer_range = {
+								min = small_lifestyle_random_xp_low
+								max = small_lifestyle_random_xp_high
+							}
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { scope:antick_holdings_reimagined_warden_station_traveller = scope:antick_holdings_reimagined_warden_station_patron }
+				scope:antick_holdings_reimagined_warden_station_patron = {
+					remove_short_term_gold = 5
+				}
+			}
+			else = {
+				scope:antick_holdings_reimagined_warden_station_patron = {
+					add_gold = 15
+				}
+			}
+		}
+		50 = {
+		}
+	}
+}

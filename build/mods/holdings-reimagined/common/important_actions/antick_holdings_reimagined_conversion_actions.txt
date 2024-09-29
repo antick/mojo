@@ -1,0 +1,86 @@
+﻿antick_holdings_reimagined_2_1_0_alert = {
+	type = alert
+	is_dangerous = yes
+	priority = 999
+	icon = antick_holdings_reimagined_alert_icon
+
+	check_create_action = {
+		if = {
+			limit = {
+				is_character_interaction_shown = {
+					recipient = root
+					interaction = antick_holdings_reimagined_2_1_0_alert_interaction
+				}
+			}
+			try_create_important_action = {
+				important_action_type = antick_holdings_reimagined_2_1_0_alert
+			}
+		}
+	}
+
+	effect = {
+		open_interaction_window = {
+			interaction = antick_holdings_reimagined_2_1_0_alert_interaction
+			actor = root
+			recipient = root
+		}
+	}
+}
+
+antick_holdings_reimagined_2_4_0_alert = {
+	type = alert
+	is_dangerous = yes
+	priority = 999
+	icon = antick_holdings_reimagined_alert_icon
+
+	check_create_action = {
+		if = {
+			limit = {
+				is_character_interaction_shown = {
+					recipient = root
+					interaction = antick_holdings_reimagined_2_4_0_alert_interaction
+				}
+			}
+			try_create_important_action = {
+				important_action_type = antick_holdings_reimagined_2_4_0_alert
+			}
+		}
+	}
+
+	effect = {
+		open_interaction_window = {
+			interaction = antick_holdings_reimagined_2_4_0_alert_interaction
+			actor = root
+			recipient = root
+		}
+	}
+}
+
+antick_holdings_reimagined_2_6_0_alert = {
+	type = alert
+	is_dangerous = yes
+	priority = 999
+	icon = antick_holdings_reimagined_alert_icon
+
+	check_create_action = {
+		if = {
+			limit = {
+				is_character_interaction_shown = {
+					recipient = root
+					interaction = antick_holdings_reimagined_2_6_0_alert_interaction
+				}
+			}
+			try_create_important_action = {
+				important_action_type = antick_holdings_reimagined_2_6_0_alert
+			}
+		}
+	}
+
+	effect = {
+		open_interaction_window = {
+			interaction = antick_holdings_reimagined_2_6_0_alert_interaction
+			actor = root
+			recipient = root
+		}
+	}
+}

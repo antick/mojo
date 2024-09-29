@@ -1,0 +1,32 @@
+﻿l_english:
+_$modId$__message_lead: "Your spy at one of your outposts"
+_$modId$__message_generic: "has managed to provide aid in your"
+_$modId$__message_tail: "scheme against [ROOT.Char.GetName]"
+
+_$modId$__message_secret_revealed_title: "Your spy ring uncovered a secret"
+_$modId$__message_secret_revealed: "$_$modId$__message_lead$ have sent you details of one of [ROOT.Char.GetName]'s secrets."
+
+_$modId$__message_scheme_revealed_title: "Hostile scheme exposed by spy ring"
+_$modId$__message_scheme_revealed: "$_$modId$__message_lead$ have sent you details of one of [ROOT.Char.GetName]'s hostile schemes targeting you."
+
+_$modId$__message_scheme_buff_title: "Spy ring advanced your scheme"
+_$modId$__message_scheme_befriend_buff: "$_$modId$__message_lead$ $_$modId$__message_generic$ befriend $_$modId$__message_tail$"
+_$modId$__message_scheme_seduce_buff: "$_$modId$__message_lead$ $_$modId$__message_generic$ seduction $_$modId$__message_tail$"
+_$modId$__message_scheme_court_buff: "$_$modId$__message_lead$ $_$modId$__message_generic$ courtship $_$modId$__message_tail$"
+_$modId$__message_scheme_elope_buff: "$_$modId$__message_lead$ $_$modId$__message_generic$ elopement $_$modId$__message_tail$"
+_$modId$__message_scheme_learn_language_buff: "$_$modId$__message_lead$ $_$modId$__message_generic$ learn language $_$modId$__message_tail$"
+_$modId$__message_scheme_sway_buff: "$_$modId$__message_lead$ $_$modId$__message_generic$ sway $_$modId$__message_tail$"
+_$modId$__message_scheme_murder_buff: "$_$modId$__message_lead$ $_$modId$__message_generic$ murder $_$modId$__message_tail$"
+_$modId$__message_scheme_abduct_buff: "$_$modId$__message_lead$ $_$modId$__message_generic$ abduction $_$modId$__message_tail$"
+_$modId$__message_scheme_claim_throne_buff: "$_$modId$__message_lead$ $_$modId$__message_generic$ claim throne $_$modId$__message_tail$"
+_$modId$__message_scheme_fabricate_hook_buff: "$_$modId$__message_lead$ $_$modId$__message_generic$ fabricate hook $_$modId$__message_tail$"
+_$modId$__message_scheme_convert_to_witchcraft_buff: "$_$modId$__message_lead$ $_$modId$__message_generic$ witchcraft conversion $_$modId$__message_tail$"
+
+_$modId$__message_blademaster_training_title: "You have received Blademaster training"
+_$modId$__message_blademaster_training: "You received Blademaster training by a renowned knight while travelling."
+
+_$modId$__message_hunter_training_title: "You have received hunt training"
+_$modId$__message_hunter_training_lead: "You received training in"
+_$modId$__message_hunter_training_tail: "by an eminent hunter while travelling."
+_$modId$__message_hunter_training_revonator: "$_$modId$__message_hunter_training_lead$ the revenator track $_$modId$__message_hunter_training_tail$"
+_$modId$__message_hunter_training_falconry: "$_$modId$__message_hunter_training_lead$ the falconry track $_$modId$__message_hunter_training_tail$"

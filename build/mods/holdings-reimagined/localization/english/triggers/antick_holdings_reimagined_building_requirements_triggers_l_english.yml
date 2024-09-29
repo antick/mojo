@@ -1,0 +1,19 @@
+﻿l_english:
+BUILDING_REQUIREMENT_CASTLE_CITY_CHURCH_TRIBE_FAILED: "[PROVINCE.GetName] must be a [castle|E], [city|E], [temple|E] or [tribe|E]"
+NOT_BUILDING_REQUIREMENT_CASTLE_CITY_CHURCH_TRIBE_FAILED: "[PROVINCE.GetName] is not a [castle|E], [city|E], [temple|E] or [tribe|E]"
+
+BUILDING_REQUIREMENT_CASTLE_TRIBE_FAILED: "[PROVINCE.GetName] must be a [castle|E] or [tribe|E]"
+NOT_BUILDING_REQUIREMENT_CASTLE_TRIBE_FAILED: "[PROVINCE.GetName] is not a [castle|E] or [tribe|E]"
+
+antick_holdings_reimagined_NEED_LAW_1_OR_ERUDITE_1_FAILED: "Your [dynasty|E] must have [dynasty_perk|E] [GetDynastyPerk('law_legacy_1').GetName] or [GetDynastyPerk('erudition_legacy_1').GetName]"
+NOT_antick_holdings_reimagined_NEED_LAW_1_OR_ERUDITE_1_FAILED: "Your [dynasty|E] does not have [dynasty_perk|E] [GetDynastyPerk('law_legacy_1').GetName] or [GetDynastyPerk('erudition_legacy_1').GetName]"
+
+antick_holdings_reimagined_NEED_LAW_3_OR_ERUDITE_3_FAILED: "Your [dynasty|E] must have [dynasty_perk|E] [GetDynastyPerk('law_legacy_3').GetName] or [GetDynastyPerk('erudition_legacy_3').GetName]"
+NOT_antick_holdings_reimagined_NEED_LAW_3_OR_ERUDITE_3_FAILED: "Your [dynasty|E] must have [dynasty_perk|E] [GetDynastyPerk('law_legacy_3').GetName] or [GetDynastyPerk('erudition_legacy_3').GetName]"
+
+antick_holdings_reimagined_MUST_BE_YOUR_CAPITAL_FAILED: "Can only be constructed in your capital"
+NOT_antick_holdings_reimagined_MUST_BE_YOUR_CAPITAL_FAILED: "Not your capital"
+
+antick_holdings_reimagined_county_development_requirement: "Requires county development level >= 5"
+
+antick_holdings_reimagined_CAN_ONLY_HAVE_ONE_COACH_HOUSE_OR_WARDEN_STATION: "Can only have on Coach House (including terrain variants) or Warden Station per county."

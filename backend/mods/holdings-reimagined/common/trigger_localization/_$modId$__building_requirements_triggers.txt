@@ -1,0 +1,23 @@
+﻿building_requirement_castle_city_church_tribe_failed = {
+	third = BUILDING_REQUIREMENT_CASTLE_CITY_CHURCH_TRIBE_FAILED
+}
+
+building_requirement_castle_tribe_failed = {
+	third = BUILDING_REQUIREMENT_CASTLE_TRIBE_FAILED
+}
+
+_$modId$__need_law_1_or_erudite_1_failed = {
+	third = _$modId$__NEED_LAW_1_OR_ERUDITE_1_FAILED
+}
+
+_$modId$__need_law_3_or_erudite_3_failed = {
+	third = _$modId$__NEED_LAW_3_OR_ERUDITE_3_FAILED
+}
+
+_$modId$__must_be_your_capital_failed = {
+	third = _$modId$__MUST_BE_YOUR_CAPITAL_FAILED
+}
+
+_$modId$__can_only_have_one_coach_house_or_warden_station = {
+	third = _$modId$__CAN_ONLY_HAVE_ONE_COACH_HOUSE_OR_WARDEN_STATION
+}

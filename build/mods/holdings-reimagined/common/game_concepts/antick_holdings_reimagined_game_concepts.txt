@@ -1,0 +1,3 @@
+﻿antick_holdings_reimagined = {
+	texture = "gfx/interface/icons/message_feed/antick_holdings_reimagined_game_concept_icon.dds"
+}

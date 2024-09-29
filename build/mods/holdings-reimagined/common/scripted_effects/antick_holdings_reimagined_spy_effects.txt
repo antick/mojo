@@ -1,0 +1,537 @@
+﻿antick_holdings_reimagined_advance_scheme_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		random_scheme = {
+			limit = {
+				scheme_target_character = scope:antick_holdings_reimagined_coach_house_traveller
+			}
+
+			save_scope_as = antick_holdings_reimagined_scheme
+			scheme_target_character = { save_scope_as = antick_holdings_reimagined_scheme_target_character }
+
+			random_list = {
+				10 = {
+					trigger = { scheme_type = befriend }
+					antick_holdings_reimagined_spy_befriend_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = seduce }
+					antick_holdings_reimagined_spy_seduce_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = courting }
+					antick_holdings_reimagined_spy_courting_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = elope }
+					antick_holdings_reimagined_spy_elope_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = learn_language }
+					antick_holdings_reimagined_spy_learn_language_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = sway }
+					antick_holdings_reimagined_spy_sway_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = murder }
+					antick_holdings_reimagined_spy_murder_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = abduct }
+					antick_holdings_reimagined_spy_abduct_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = claim_throne }
+					antick_holdings_reimagined_spy_claim_throne_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = fabricate_hook }
+					antick_holdings_reimagined_spy_fabricate_hook_effect = yes
+				}
+				10 = {
+					trigger = { scheme_type = convert_to_witchcraft }
+					antick_holdings_reimagined_spy_convert_to_witchcraft_effect = yes
+				}
+				10 = {
+				}
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_befriend_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		send_interface_message = {
+			type = event_generic_good
+			left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+			title = antick_holdings_reimagined_message_scheme_buff_title
+			desc = antick_holdings_reimagined_message_scheme_befriend_buff
+			scope:antick_holdings_reimagined_scheme_target_character = {
+				random_list = {
+					20 = {
+						set_variable = {
+							name = recipient_stubborness_scheme
+							value = -5
+						}
+					}
+					20 = {
+						set_variable = {
+							name = recipient_stubborness_scheme
+							value = -10
+						}
+					}
+					20 = {
+						set_variable = {
+							name = recipient_stubborness_scheme
+							value = -15
+						}
+					}
+					20 = {
+						set_variable = {
+							name = recipient_stubborness_scheme
+							value = -20
+						}
+					}
+					20 = {
+						set_variable = {
+							name = recipient_stubborness_scheme
+							value = -25
+						}
+					}
+				}
+			}
+		}
+	}
+	scope:antick_holdings_reimagined_coach_house_traveller = {
+		add_character_flag = {
+			flag = antick_holdings_reimagined_had_scheme_advance
+			months = 12
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_seduce_effect = {
+	save_scope_as = antick_holdings_reimagined_patron_scheme
+	random_list = {
+		25 = {
+			scope:antick_holdings_reimagined_coach_house_patron = {
+				send_interface_message = {
+					type = event_generic_good
+					title = antick_holdings_reimagined_message_scheme_buff_title
+					desc = antick_holdings_reimagined_message_scheme_seduce_buff
+					left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+					scope:antick_holdings_reimagined_patron_scheme = {
+						add_scheme_modifier = {
+							type = sex_memory_modifier
+						}
+					}
+				}
+			}
+			scope:antick_holdings_reimagined_coach_house_traveller = {
+				add_character_flag = {
+					flag = antick_holdings_reimagined_had_scheme_advance
+					months = 12
+				}
+			}
+		}
+		25 = {
+			scope:antick_holdings_reimagined_coach_house_patron = {
+				send_interface_message = {
+					type = event_generic_good
+					title = antick_holdings_reimagined_message_scheme_buff_title
+					desc = antick_holdings_reimagined_message_scheme_seduce_buff
+					left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+					scope:antick_holdings_reimagined_patron_scheme = {
+						add_scheme_progress = scheme_progress_gain
+					}
+				}
+			}
+			scope:antick_holdings_reimagined_coach_house_traveller = {
+				add_character_flag = {
+					flag = antick_holdings_reimagined_had_scheme_advance
+					months = 12
+				}
+			}
+		}
+		50 = {
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_courting_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+					title = antick_holdings_reimagined_message_scheme_buff_title
+					desc = antick_holdings_reimagined_message_scheme_court_buff
+					scope:antick_holdings_reimagined_scheme = {
+						random_list = {
+							25 = {
+								add_scheme_modifier = {
+									type = sex_memory_modifier
+								}
+							}
+							25 = {
+								add_scheme_progress = scheme_progress_gain
+							}
+						}
+					}
+					scope:antick_holdings_reimagined_coach_house_traveller = {
+						add_character_flag = {
+							flag = antick_holdings_reimagined_had_scheme_advance
+							months = 12
+						}
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_elope_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+					title = antick_holdings_reimagined_message_scheme_buff_title
+					desc = antick_holdings_reimagined_message_scheme_elope_buff
+					scope:antick_holdings_reimagined_scheme = {
+						add_scheme_modifier = {
+							type = lifestyle_converted_informants_modifier
+							days = 1825
+						}
+					}
+				}
+				scope:antick_holdings_reimagined_coach_house_traveller = {
+					add_character_flag = {
+						flag = antick_holdings_reimagined_had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_learn_language_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+					title = antick_holdings_reimagined_message_scheme_buff_title
+					desc = antick_holdings_reimagined_message_scheme_learn_language_buff
+					scope:antick_holdings_reimagined_scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:antick_holdings_reimagined_coach_house_traveller = {
+					add_character_flag = {
+						flag = antick_holdings_reimagined_had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_sway_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+					title = antick_holdings_reimagined_message_scheme_buff_title
+					desc = antick_holdings_reimagined_message_scheme_sway_buff
+					scope:antick_holdings_reimagined_scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:antick_holdings_reimagined_coach_house_traveller = {
+					add_character_flag = {
+						flag = antick_holdings_reimagined_had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_murder_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+					title = antick_holdings_reimagined_message_scheme_buff_title
+					desc = antick_holdings_reimagined_message_scheme_murder_buff
+					scope:antick_holdings_reimagined_scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:antick_holdings_reimagined_coach_house_traveller = {
+					add_character_flag = {
+						flag = antick_holdings_reimagined_had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_abduct_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+					title = antick_holdings_reimagined_message_scheme_buff_title
+					desc = antick_holdings_reimagined_message_scheme_abduct_buff
+					scope:antick_holdings_reimagined_scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:antick_holdings_reimagined_coach_house_traveller = {
+					add_character_flag = {
+						flag = antick_holdings_reimagined_had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_claim_throne_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+					title = antick_holdings_reimagined_message_scheme_buff_title
+					desc = antick_holdings_reimagined_message_scheme_claim_throne_buff
+					scope:antick_holdings_reimagined_scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:antick_holdings_reimagined_coach_house_traveller = {
+					add_character_flag = {
+						flag = antick_holdings_reimagined_had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_fabricate_hook_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+					title = antick_holdings_reimagined_message_scheme_buff_title
+					desc = antick_holdings_reimagined_message_scheme_fabricate_hook_buff
+					scope:antick_holdings_reimagined_scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:antick_holdings_reimagined_coach_house_traveller = {
+					add_character_flag = {
+						flag = antick_holdings_reimagined_had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_convert_to_witchcraft_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		random_list = {
+			50 = {
+				send_interface_message = {
+					type = event_generic_good
+					left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+					title = antick_holdings_reimagined_message_scheme_buff_title
+					desc = antick_holdings_reimagined_message_scheme_convert_to_witchcraft_buff
+					scope:antick_holdings_reimagined_scheme = { add_scheme_progress = scheme_progress_gain }
+				}
+				scope:antick_holdings_reimagined_coach_house_traveller = {
+					add_character_flag = {
+						flag = antick_holdings_reimagined_had_scheme_advance
+						months = 12
+					}
+				}
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_learn_secrets_effect = {
+	scope:antick_holdings_reimagined_coach_house_patron = { save_scope_as = councillor_liege }
+
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		duel = {
+			skill = intrigue
+			target = scope:antick_holdings_reimagined_coach_house_traveller
+
+			70 = {
+				modifier = {
+					add = {
+						value = scope:duel_value
+						multiply = 10
+					}
+				}
+				scope:antick_holdings_reimagined_coach_house_traveller = {
+					if = {
+						limit = {
+							antick_holdings_reimagined_has_minor_secrets_trigger = yes
+							antick_holdings_reimagined_has_major_secrets_trigger = yes
+						}
+						random_list = {
+							25 = {
+								if = {
+									limit = { antick_holdings_reimagined_has_minor_secrets_trigger = yes }
+									random_secret = {
+										limit = { antick_holdings_reimagined_spymaster_task_find_secrets_suitable_minor_secret_trigger = yes }
+										save_scope_as = antick_holdings_reimagined_found_secret
+										antick_holdings_reimagined_spy_reveal_secret_effect = yes
+									}
+								}
+							}
+							25 = {
+								if = {
+									limit = { antick_holdings_reimagined_has_major_secrets_trigger = yes }
+									random_secret = {
+										limit = { antick_holdings_reimagined_spymaster_task_find_secrets_suitable_major_secret_trigger = yes }
+										save_scope_as = antick_holdings_reimagined_found_secret
+										antick_holdings_reimagined_spy_reveal_secret_effect = yes
+									}
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = { antick_holdings_reimagined_has_major_secrets_trigger = yes }
+						random_secret = {
+							limit = { antick_holdings_reimagined_spymaster_task_find_secrets_suitable_major_secret_trigger = yes }
+							save_scope_as = antick_holdings_reimagined_found_secret
+							antick_holdings_reimagined_spy_reveal_secret_effect = yes
+						}
+					}
+					else = {
+						random_secret = {
+							limit = { antick_holdings_reimagined_spymaster_task_find_secrets_suitable_minor_secret_trigger = yes }
+							save_scope_as = antick_holdings_reimagined_found_secret
+							antick_holdings_reimagined_spy_reveal_secret_effect = yes
+						}
+					}
+				}
+			}
+			30 = {
+				modifier = {
+					add = {
+						value = scope:duel_value
+						multiply = -10
+					}
+				}
+			}
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_reveal_secret_effect = {
+	scope:antick_holdings_reimagined_coach_house_traveller = {
+		add_character_flag = {
+			flag = antick_holdings_reimagined_had_secret_discovery
+			months = 12
+		}
+	}
+	scope:antick_holdings_reimagined_coach_house_patron = {
+		send_interface_message = {
+			type = event_generic_good
+			left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+			title = antick_holdings_reimagined_message_secret_revealed_title
+			desc = antick_holdings_reimagined_message_secret_revealed
+			scope:antick_holdings_reimagined_found_secret = { reveal_to = scope:antick_holdings_reimagined_coach_house_patron }
+		}
+	}
+}
+
+antick_holdings_reimagined_spy_uncover_scheme_effect = {
+	scope:antick_holdings_reimagined_coach_house_traveller = {
+		random_scheme = {
+			limit = {
+				antick_holdings_reimagined_unexposed_hostile_scheme_target_charactering_patron_trigger = yes
+			}
+			save_scope_as = antick_holdings_reimagined_hostile_scheme
+		}
+	}
+
+	if = {
+		limit = { exists = scope:antick_holdings_reimagined_hostile_scheme }
+
+		scope:antick_holdings_reimagined_coach_house_patron = {
+			duel = {
+				skill = intrigue
+				target = scope:antick_holdings_reimagined_coach_house_traveller
+
+				50 = {
+					modifier = {
+						add = {
+							value = scope:duel_value
+							multiply = 10
+						}
+					}
+					send_interface_message = {
+						type = event_generic_good
+						title = antick_holdings_reimagined_message_scheme_revealed_title
+						desc = antick_holdings_reimagined_message_scheme_revealed
+						left_icon = scope:antick_holdings_reimagined_coach_house_traveller
+						scope:antick_holdings_reimagined_hostile_scheme = {
+							expose_scheme = yes
+						}
+					}
+					scope:antick_holdings_reimagined_coach_house_traveller = {
+						add_character_flag = {
+							flag = antick_holdings_reimagined_had_scheme_discovery
+							months = 12
+						}
+					}
+				}
+				50 = {
+					modifier = {
+						add = {
+							value = scope:duel_value
+							multiply = -10
+						}
+					}
+				}
+			}
+		}
+	}
+}

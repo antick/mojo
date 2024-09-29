@@ -1,0 +1,75 @@
+﻿l_english:
+antick_holdings_reimagined_X_X_X_name: "Holdings Reimagined"
+antick_holdings_reimagined_X_X_X_alert: "[antick_holdings_reimagined|E] update"
+antick_holdings_reimagined_X_X_X_alert_desc: "[antick_holdings_reimagined|E] has updated since you started this campaign."
+antick_holdings_reimagined_X_X_X_alert_click: "#P #italic Left-click to read Changelog and remove this alert#!#!"
+
+antick_holdings_reimagined_X_X_X_alert_interaction: "[antick_holdings_reimagined|E] Changelog"
+antick_holdings_reimagined_X_X_X_alert_interaction_desc: "Changelog for [antick_holdings_reimagined|E]"
+antick_holdings_reimagined_X_X_X_alert_interaction_send: "Apply Patch"
+antick_holdings_reimagined_X_X_X_alert_introduction: "[antick_holdings_reimagined|E] has updated since you started this campaign"
+
+antick_holdings_reimagined_X_X_X_changelog_patch: "This update is savegame compatible"
+
+
+
+# change
+antick_holdings_reimagined_2_1_0_alert: "$antick_holdings_reimagined_X_X_X_alert$"
+antick_holdings_reimagined_2_1_0_alert_version: "v2.1.0"
+antick_holdings_reimagined_2_1_0_alert_building: "Coach House"
+antick_holdings_reimagined_2_1_0_changelog: "#bold $antick_holdings_reimagined_X_X_X_name$ $antick_holdings_reimagined_2_1_0_alert_version$#!"
+antick_holdings_reimagined_2_1_0_changelog_1: "$antick_holdings_reimagined_2_1_0_alert_building$ buildings have been split into three separate terrain specific building types, for general/desert/steppe terrains, but all have the same functionality."
+antick_holdings_reimagined_2_1_0_changelog_2: "The existing $antick_holdings_reimagined_2_1_0_alert_building$ buildings in your campaign need to be converted to $antick_holdings_reimagined_2_1_0_alert_version$ building types."
+# /change
+
+# copy
+antick_holdings_reimagined_2_1_0_alert_desc: "$antick_holdings_reimagined_X_X_X_alert_desc$"
+antick_holdings_reimagined_2_1_0_alert_click: "$antick_holdings_reimagined_X_X_X_alert_click$"
+antick_holdings_reimagined_2_1_0_alert_interaction: "$antick_holdings_reimagined_X_X_X_alert_interaction$"
+antick_holdings_reimagined_2_1_0_alert_interaction_desc: "$antick_holdings_reimagined_X_X_X_alert_interaction_desc$"
+antick_holdings_reimagined_2_1_0_alert_interaction_send: "$antick_holdings_reimagined_X_X_X_alert_interaction_send$"
+antick_holdings_reimagined_2_1_0_alert_introduction: "$antick_holdings_reimagined_X_X_X_alert_introduction$"
+antick_holdings_reimagined_2_1_0_changelog_patch: "$antick_holdings_reimagined_X_X_X_changelog_patch$"
+# /copy
+
+
+
+# change
+antick_holdings_reimagined_2_4_0_alert: "$antick_holdings_reimagined_X_X_X_alert$"
+antick_holdings_reimagined_2_4_0_alert_version: "v2.4.0"
+antick_holdings_reimagined_2_4_0_alert_building: "Interior Expansion and Exterior Improvements"
+antick_holdings_reimagined_2_4_0_changelog: "#bold $antick_holdings_reimagined_X_X_X_name$ $antick_holdings_reimagined_2_4_0_alert_version$#!"
+antick_holdings_reimagined_2_4_0_changelog_1: "$antick_holdings_reimagined_2_4_0_alert_building$ buildings have been split into three separate terrain specific building types, for general/desert/steppe terrains, but all have the same functionality."
+antick_holdings_reimagined_2_4_0_changelog_2: "The existing $antick_holdings_reimagined_2_4_0_alert_building$ buildings in your campaign need to be converted to $antick_holdings_reimagined_2_4_0_alert_version$ building types."
+# /change
+
+# copy
+antick_holdings_reimagined_2_4_0_alert_desc: "$antick_holdings_reimagined_X_X_X_alert_desc$"
+antick_holdings_reimagined_2_4_0_alert_click: "$antick_holdings_reimagined_X_X_X_alert_click$"
+antick_holdings_reimagined_2_4_0_alert_interaction: "$antick_holdings_reimagined_X_X_X_alert_interaction$"
+antick_holdings_reimagined_2_4_0_alert_interaction_desc: "$antick_holdings_reimagined_X_X_X_alert_interaction_desc$"
+antick_holdings_reimagined_2_4_0_alert_interaction_send: "$antick_holdings_reimagined_X_X_X_alert_interaction_send$"
+antick_holdings_reimagined_2_4_0_alert_introduction: "$antick_holdings_reimagined_X_X_X_alert_introduction$"
+antick_holdings_reimagined_2_4_0_changelog_patch: "$antick_holdings_reimagined_X_X_X_changelog_patch$"
+# /copy
+
+
+# change
+antick_holdings_reimagined_2_6_0_alert: "$antick_holdings_reimagined_X_X_X_alert$"
+antick_holdings_reimagined_2_6_0_alert_version: "v2.6.0"
+antick_holdings_reimagined_2_6_0_alert_building: "Coach House (including variants) and the Militia"
+antick_holdings_reimagined_2_6_0_changelog: "#bold $antick_holdings_reimagined_X_X_X_name$ $antick_holdings_reimagined_2_6_0_alert_version$#!"
+antick_holdings_reimagined_2_6_0_changelog_1: "$antick_holdings_reimagined_2_6_0_alert_building$ buildings are now travel points of interest."
+antick_holdings_reimagined_2_6_0_changelog_2: "The existing $antick_holdings_reimagined_2_6_0_alert_building$ buildings in your campaign need to be converted to $antick_holdings_reimagined_2_6_0_alert_version$ building types."
+antick_holdings_reimagined_2_6_0_changelog_3: "Click the $antick_holdings_reimagined_X_X_X_alert_interaction_send$ button to convert existing buildings to POI versions."
+# /change
+
+# copy
+antick_holdings_reimagined_2_6_0_alert_desc: "$antick_holdings_reimagined_X_X_X_alert_desc$"
+antick_holdings_reimagined_2_6_0_alert_click: "$antick_holdings_reimagined_X_X_X_alert_click$"
+antick_holdings_reimagined_2_6_0_alert_interaction: "$antick_holdings_reimagined_X_X_X_alert_interaction$"
+antick_holdings_reimagined_2_6_0_alert_interaction_desc: "$antick_holdings_reimagined_X_X_X_alert_interaction_desc$"
+antick_holdings_reimagined_2_6_0_alert_interaction_send: "$antick_holdings_reimagined_X_X_X_alert_interaction_send$"
+antick_holdings_reimagined_2_6_0_alert_introduction: "$antick_holdings_reimagined_X_X_X_alert_introduction$"
+antick_holdings_reimagined_2_6_0_changelog_patch: "$antick_holdings_reimagined_X_X_X_changelog_patch$"
+# /copy

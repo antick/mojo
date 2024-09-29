@@ -1,0 +1,86 @@
+﻿_$modId$__2_1_0_alert = {
+	type = alert
+	is_dangerous = yes
+	priority = 999
+	icon = _$modId$__alert_icon
+
+	check_create_action = {
+		if = {
+			limit = {
+				is_character_interaction_shown = {
+					recipient = root
+					interaction = _$modId$__2_1_0_alert_interaction
+				}
+			}
+			try_create_important_action = {
+				important_action_type = _$modId$__2_1_0_alert
+			}
+		}
+	}
+
+	effect = {
+		open_interaction_window = {
+			interaction = _$modId$__2_1_0_alert_interaction
+			actor = root
+			recipient = root
+		}
+	}
+}
+
+_$modId$__2_4_0_alert = {
+	type = alert
+	is_dangerous = yes
+	priority = 999
+	icon = _$modId$__alert_icon
+
+	check_create_action = {
+		if = {
+			limit = {
+				is_character_interaction_shown = {
+					recipient = root
+					interaction = _$modId$__2_4_0_alert_interaction
+				}
+			}
+			try_create_important_action = {
+				important_action_type = _$modId$__2_4_0_alert
+			}
+		}
+	}
+
+	effect = {
+		open_interaction_window = {
+			interaction = _$modId$__2_4_0_alert_interaction
+			actor = root
+			recipient = root
+		}
+	}
+}
+
+_$modId$__2_6_0_alert = {
+	type = alert
+	is_dangerous = yes
+	priority = 999
+	icon = _$modId$__alert_icon
+
+	check_create_action = {
+		if = {
+			limit = {
+				is_character_interaction_shown = {
+					recipient = root
+					interaction = _$modId$__2_6_0_alert_interaction
+				}
+			}
+			try_create_important_action = {
+				important_action_type = _$modId$__2_6_0_alert
+			}
+		}
+	}
+
+	effect = {
+		open_interaction_window = {
+			interaction = _$modId$__2_6_0_alert_interaction
+			actor = root
+			recipient = root
+		}
+	}
+}

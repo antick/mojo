@@ -1,0 +1,123 @@
+﻿antick_holdings_reimagined_poi = {
+	build_province_list = {
+		every_in_global_list = {
+			variable = antick_holdings_reimagined_poi_province_list
+
+			if = {
+				limit = {
+					or = {
+						has_building_with_flag = { flag = antick_holdings_reimagined_coach_house_spy }
+						has_building_with_flag = { flag = antick_holdings_reimagined_militia_blademaster }
+					}
+				}
+
+				add_to_list = provinces
+			}
+		}
+	}
+
+	on_visit = {
+		send_interface_toast = {
+			title = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { scope:province = { has_building_with_flag = { flag = antick_holdings_reimagined_militia_blademaster } } }
+						desc = antick_holdings_reimagined_poi_capitals.visit.blademaster
+					}
+					triggered_desc = {
+						trigger = { scope:province = { has_building_with_flag = { flag = antick_holdings_reimagined_coach_house_spy } } }
+						desc = antick_holdings_reimagined_poi_capitals.visit.coach_house_spy
+					}
+					triggered_desc = {
+						trigger = { scope:province = { has_building_with_flag = { flag = antick_holdings_reimagined_coach_house_gamekeeper } } }
+						desc = antick_holdings_reimagined_poi_capitals.visit.coach_house_gamekeeper
+					}
+					triggered_desc = {
+						trigger = { scope:province = { has_building_with_flag = { flag = antick_holdings_reimagined_coach_house_casino } } }
+						desc = antick_holdings_reimagined_poi_capitals.visit.coach_house_casino
+					}
+				}
+			}
+			left_icon = root
+
+			scope:province = {
+				if = {
+					limit = {
+						has_building_with_flag = { flag = antick_holdings_reimagined_coach_house_casino }
+					}
+
+					root = {
+						add_stewardship_lifestyle_xp = travel_medium_xp
+					}
+				}
+
+				if = {
+					limit = {
+						has_building_with_flag = { flag = antick_holdings_reimagined_coach_house_gamekeeper }
+					}
+
+					root = {
+						if = {
+							limit = {
+								has_trait = lifestyle_hunter
+							}
+
+							if = {
+								limit = { has_trait_xp = { trait = lifestyle_hunter track = falconer value > 0 } }
+
+								hunter_progress_point_gain_effect = { CHANGE = 1 RANDOM_CHANGE = 2 }
+								hunter_lifestyle_rank_up_check_effect = { FALCONRY = yes }
+							}
+							else_if = {
+								limit = { has_trait_xp = { trait = lifestyle_hunter track = hunter value > 0 } }
+
+								hunter_progress_point_gain_effect = { CHANGE = 1 RANDOM_CHANGE = 2 }
+								hunter_lifestyle_rank_up_check_effect = { FALCONRY = no }
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						has_building_with_flag = { flag = antick_holdings_reimagined_coach_house_spy }
+					}
+
+					root = {
+						add_intrigue_lifestyle_xp = travel_medium_xp
+					}
+				}
+
+				if = {
+					limit = {
+						has_building_with_flag = { flag = antick_holdings_reimagined_militia_blademaster }
+					}
+
+					root = {
+						if = {
+							limit = {
+								has_trait = lifestyle_blademaster
+								has_trait_xp = { trait = lifestyle_blademaster value > 0 }
+							}
+
+							add_trait_xp = {
+								trait = lifestyle_blademaster
+								value = {
+									integer_range = {
+										min = small_lifestyle_random_xp_low
+										max = small_lifestyle_random_xp_high
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			traveler_travel_xp_effect = {
+				MIN = 3
+				MAX = 5
+			}
+		}
+	}
+}

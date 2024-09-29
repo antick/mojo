@@ -1,0 +1,167 @@
+﻿_$modId$__swap_building_effect = {
+	if = {
+		limit = { has_building = $BUILDING_1$_01 }
+
+		_$modId$__replace_building_effect = { BUILDING_1 = $BUILDING_1$_01 BUILDING_2 = $BUILDING_2$_01 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_02 }
+
+		_$modId$__replace_building_effect = { BUILDING_1 = $BUILDING_1$_02 BUILDING_2 = $BUILDING_2$_02 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_03 }
+
+		_$modId$__replace_building_effect = { BUILDING_1 = $BUILDING_1$_03 BUILDING_2 = $BUILDING_2$_03 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_04 }
+
+		_$modId$__replace_building_effect = { BUILDING_1 = $BUILDING_1$_04 BUILDING_2 = $BUILDING_2$_04 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_05 }
+
+		_$modId$__replace_building_effect = { BUILDING_1 = $BUILDING_1$_05 BUILDING_2 = $BUILDING_2$_05 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_06 }
+
+		_$modId$__replace_building_effect = { BUILDING_1 = $BUILDING_1$_06 BUILDING_2 = $BUILDING_2$_06 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_07 }
+
+		_$modId$__replace_building_effect = { BUILDING_1 = $BUILDING_1$_07 BUILDING_2 = $BUILDING_2$_07 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_08 }
+
+		_$modId$__replace_building_effect = { BUILDING_1 = $BUILDING_1$_08 BUILDING_2 = $BUILDING_2$_08 }
+	}
+}
+
+_$modId$__replace_building_effect = {
+	hidden_effect = {
+		remove_building = $BUILDING_1$
+		add_building = $BUILDING_2$
+	}
+}
+
+_$modId$__2_1_0_conversion_effect = {
+	debug_log = "_$modId$__2_1_0_conversion_effect converting buildings"
+
+	every_county = {
+		every_county_province = {
+			limit = { has_building_or_higher = horse_01 }
+
+			if = {
+				limit = { building_camel_farms_requirement_terrain = yes }
+
+				_$modId$__swap_building_effect = { BUILDING_1 = horse BUILDING_2 = _$modId$__camel }
+			}
+			else_if = {
+				limit = { building_horse_pastures_requirement_terrain = yes }
+
+				_$modId$__swap_building_effect = { BUILDING_1 = horse BUILDING_2 = _$modId$__horse_archer }
+			}
+		}
+	}
+
+	debug_log = "_$modId$__2_1_0_conversion_effect adding missing stories"
+
+	every_county = {
+		every_county_province = {
+			limit = {
+				or = {
+					_$modId$__coach_house_has_spy_trigger = yes
+					_$modId$__warden_station_has_blademaster_trigger = yes
+				}
+			}
+
+			if = {
+				limit = {
+					_$modId$__coach_house_has_spy_trigger = yes
+					not = { has_variable = _$modId$__province_spy_story }
+				}
+				_$modId$__coach_house_04_constructed_effect = yes
+			}
+
+			if = {
+				limit = {
+					_$modId$__coach_house_has_gamekeeper_trigger = yes
+					not = { has_variable = _$modId$__province_gamekeeper_story }
+				}
+				_$modId$__coach_house_06_constructed_effect = yes
+			}
+
+			if = {
+				limit = {
+					_$modId$__coach_house_has_casino_trigger = yes
+					not = { has_variable = _$modId$__province_casino_story }
+				}
+				_$modId$__coach_house_08_constructed_effect = yes
+			}
+
+			if = {
+				limit = {
+					_$modId$__warden_station_has_blademaster_trigger = yes
+					not = { has_variable = _$modId$__province_blademaster_story }
+				}
+				_$modId$__warden_station_04_constructed_effect = yes
+			}
+		}
+	}
+
+	debug_log = "_$modId$__2_1_0_conversion_effect conversion complete"
+}
+
+_$modId$__2_4_0_conversion_effect = {
+	debug_log = "_$modId$__2_4_0_conversion_effect converting buildings"
+
+	every_county = {
+		every_county_province = {
+			limit = { has_building_or_higher = expansion_01 }
+
+			if = {
+				limit = { building_camel_farms_requirement_terrain = yes }
+
+				_$modId$__swap_building_effect = { BUILDING_1 = expansion BUILDING_2 = expansion_camel_cavalry }
+			}
+			else_if = {
+				limit = { building_horse_pastures_requirement_terrain = yes }
+
+				_$modId$__swap_building_effect = { BUILDING_1 = expansion BUILDING_2 = expansion_archer_cavalry }
+			}
+		}
+	}
+
+	debug_log = "_$modId$__2_4_0_conversion_effect conversion complete"
+}
+
+_$modId$__2_6_0_conversion_effect = {
+	debug_log = "_$modId$__2_6_0_conversion_effect identifying POI provinces"
+
+	every_county = {
+		every_county_province = {
+			limit = {
+				or = {
+					has_building_with_flag = { flag = _$modId$__militia_blademaster }
+					has_building_with_flag = { flag = _$modId$__coach_house_spy }
+				}
+			}
+
+			if = {
+				limit = {
+					not = {
+						is_target_in_global_variable_list = { name = _$modId$__poi_province_list target = this }
+					}
+				}
+
+				add_to_global_variable_list = { name = _$modId$__poi_province_list target = this }
+			}
+		}
+	}
+
+	debug_log = "_$modId$__2_6_0_conversion_effect conversion complete"
+}

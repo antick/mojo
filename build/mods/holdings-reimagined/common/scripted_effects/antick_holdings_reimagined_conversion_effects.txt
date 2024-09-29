@@ -1,0 +1,167 @@
+﻿antick_holdings_reimagined_swap_building_effect = {
+	if = {
+		limit = { has_building = $BUILDING_1$_01 }
+
+		antick_holdings_reimagined_replace_building_effect = { BUILDING_1 = $BUILDING_1$_01 BUILDING_2 = $BUILDING_2$_01 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_02 }
+
+		antick_holdings_reimagined_replace_building_effect = { BUILDING_1 = $BUILDING_1$_02 BUILDING_2 = $BUILDING_2$_02 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_03 }
+
+		antick_holdings_reimagined_replace_building_effect = { BUILDING_1 = $BUILDING_1$_03 BUILDING_2 = $BUILDING_2$_03 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_04 }
+
+		antick_holdings_reimagined_replace_building_effect = { BUILDING_1 = $BUILDING_1$_04 BUILDING_2 = $BUILDING_2$_04 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_05 }
+
+		antick_holdings_reimagined_replace_building_effect = { BUILDING_1 = $BUILDING_1$_05 BUILDING_2 = $BUILDING_2$_05 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_06 }
+
+		antick_holdings_reimagined_replace_building_effect = { BUILDING_1 = $BUILDING_1$_06 BUILDING_2 = $BUILDING_2$_06 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_07 }
+
+		antick_holdings_reimagined_replace_building_effect = { BUILDING_1 = $BUILDING_1$_07 BUILDING_2 = $BUILDING_2$_07 }
+	}
+	else_if = {
+		limit = { has_building = $BUILDING_1$_08 }
+
+		antick_holdings_reimagined_replace_building_effect = { BUILDING_1 = $BUILDING_1$_08 BUILDING_2 = $BUILDING_2$_08 }
+	}
+}
+
+antick_holdings_reimagined_replace_building_effect = {
+	hidden_effect = {
+		remove_building = $BUILDING_1$
+		add_building = $BUILDING_2$
+	}
+}
+
+antick_holdings_reimagined_2_1_0_conversion_effect = {
+	debug_log = "antick_holdings_reimagined_2_1_0_conversion_effect converting buildings"
+
+	every_county = {
+		every_county_province = {
+			limit = { has_building_or_higher = horse_01 }
+
+			if = {
+				limit = { building_camel_farms_requirement_terrain = yes }
+
+				antick_holdings_reimagined_swap_building_effect = { BUILDING_1 = horse BUILDING_2 = antick_holdings_reimagined_camel }
+			}
+			else_if = {
+				limit = { building_horse_pastures_requirement_terrain = yes }
+
+				antick_holdings_reimagined_swap_building_effect = { BUILDING_1 = horse BUILDING_2 = antick_holdings_reimagined_horse_archer }
+			}
+		}
+	}
+
+	debug_log = "antick_holdings_reimagined_2_1_0_conversion_effect adding missing stories"
+
+	every_county = {
+		every_county_province = {
+			limit = {
+				or = {
+					antick_holdings_reimagined_coach_house_has_spy_trigger = yes
+					antick_holdings_reimagined_warden_station_has_blademaster_trigger = yes
+				}
+			}
+
+			if = {
+				limit = {
+					antick_holdings_reimagined_coach_house_has_spy_trigger = yes
+					not = { has_variable = antick_holdings_reimagined_province_spy_story }
+				}
+				antick_holdings_reimagined_coach_house_04_constructed_effect = yes
+			}
+
+			if = {
+				limit = {
+					antick_holdings_reimagined_coach_house_has_gamekeeper_trigger = yes
+					not = { has_variable = antick_holdings_reimagined_province_gamekeeper_story }
+				}
+				antick_holdings_reimagined_coach_house_06_constructed_effect = yes
+			}
+
+			if = {
+				limit = {
+					antick_holdings_reimagined_coach_house_has_casino_trigger = yes
+					not = { has_variable = antick_holdings_reimagined_province_casino_story }
+				}
+				antick_holdings_reimagined_coach_house_08_constructed_effect = yes
+			}
+
+			if = {
+				limit = {
+					antick_holdings_reimagined_warden_station_has_blademaster_trigger = yes
+					not = { has_variable = antick_holdings_reimagined_province_blademaster_story }
+				}
+				antick_holdings_reimagined_warden_station_04_constructed_effect = yes
+			}
+		}
+	}
+
+	debug_log = "antick_holdings_reimagined_2_1_0_conversion_effect conversion complete"
+}
+
+antick_holdings_reimagined_2_4_0_conversion_effect = {
+	debug_log = "antick_holdings_reimagined_2_4_0_conversion_effect converting buildings"
+
+	every_county = {
+		every_county_province = {
+			limit = { has_building_or_higher = expansion_01 }
+
+			if = {
+				limit = { building_camel_farms_requirement_terrain = yes }
+
+				antick_holdings_reimagined_swap_building_effect = { BUILDING_1 = expansion BUILDING_2 = expansion_camel_cavalry }
+			}
+			else_if = {
+				limit = { building_horse_pastures_requirement_terrain = yes }
+
+				antick_holdings_reimagined_swap_building_effect = { BUILDING_1 = expansion BUILDING_2 = expansion_archer_cavalry }
+			}
+		}
+	}
+
+	debug_log = "antick_holdings_reimagined_2_4_0_conversion_effect conversion complete"
+}
+
+antick_holdings_reimagined_2_6_0_conversion_effect = {
+	debug_log = "antick_holdings_reimagined_2_6_0_conversion_effect identifying POI provinces"
+
+	every_county = {
+		every_county_province = {
+			limit = {
+				or = {
+					has_building_with_flag = { flag = antick_holdings_reimagined_militia_blademaster }
+					has_building_with_flag = { flag = antick_holdings_reimagined_coach_house_spy }
+				}
+			}
+
+			if = {
+				limit = {
+					not = {
+						is_target_in_global_variable_list = { name = antick_holdings_reimagined_poi_province_list target = this }
+					}
+				}
+
+				add_to_global_variable_list = { name = antick_holdings_reimagined_poi_province_list target = this }
+			}
+		}
+	}
+
+	debug_log = "antick_holdings_reimagined_2_6_0_conversion_effect conversion complete"
+}
