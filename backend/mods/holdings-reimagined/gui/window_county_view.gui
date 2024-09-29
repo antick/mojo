@@ -13,7 +13,7 @@ window = {
 	layer = windows_layer
 	### Mojo change begins ###
 	# size = { 625 645 }
-	size = { 750 774 }
+	size = { 680 770 }
 	### Mojo change ends ###
 
 	background = {
@@ -2175,22 +2175,50 @@ window = {
 			# 		}
 			# 	}
 			# }
-			fixedgridbox = {
-				name = "buildings_grid"
-				visible = "[HoldingView.GetTitle.HasHolder]"
-				parentanchor = top|right
-				position = { 3 284 }
-				flipdirection = yes
-				addcolumn = 58
-				addrow = 58
-				datamodel = "[HoldingView.GetBuildings]"
-				datamodel_wrap = 8
-				maxhorizontalslots = 8
-				maxverticalslots = 3
 
-				item = {
-					widget_building_item = {
-						parentanchor = top|left
+			flowcontainer = {
+				parentanchor = bottom|right
+				spacing = 5
+				direction = vertical
+				visible = "[HoldingView.GetTitle.HasHolder]"
+
+				flowcontainer = {
+					name = "buildings_grid_special"
+					parentanchor = right
+					ignoreinvisible = yes
+					margin_right = -3
+					direction = vertical
+					layoutpolicy_horizontal = fixed
+					layoutpolicy_vertical = growing
+
+					# Upgrade buildings
+					scrollbox = {
+						size = {350 120}
+						name = "buildings_grid_scroll_area"
+						scrollbarpolicy_horizontal = always_off
+
+						scrollwidget = {
+							fixedgridbox = {
+								name = "buildings_grid"
+								visible = "[HoldingView.GetTitle.HasHolder]"
+								datamodel = "[HoldingView.GetBuildings]"
+								parentanchor = right
+								ignoreinvisible = yes
+								spacing = 3
+								flipdirection = yes
+								addcolumn = 58
+								addrow = 58
+								datamodel_wrap = 6
+								maxhorizontalslots = 6
+								maxverticalslots = 600
+
+								item = {
+									widget_building_item = {
+										parentanchor = top|left
+									}
+								}
+							}
+						}
 					}
 				}
 			}

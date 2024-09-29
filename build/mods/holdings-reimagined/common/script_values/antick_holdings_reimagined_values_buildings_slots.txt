@@ -190,7 +190,7 @@ antick_holdings_reimagined_value_ai_slot_minimum_cost = {
 	multiply = 2
 }
 
-antick_holdings_reimagined_value_max_slots = 24
+antick_holdings_reimagined_value_max_slots = 30
 
 antick_holdings_reimagined_value_default_slots = {
 	value = 0
@@ -280,7 +280,7 @@ antick_holdings_reimagined_value_event_buildings = { #scope: province
 }
 
 antick_holdings_reimagined_value_potential_buildings = { #scope: province
-	value = 0
+	value = antick_holdings_reimagined_value_max_slots
 	# tribal buildings
 	if = {
 		limit = { antick_holdings_reimagined_trigger_construct_longhouses = yes }

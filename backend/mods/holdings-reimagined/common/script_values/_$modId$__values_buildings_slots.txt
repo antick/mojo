@@ -190,7 +190,7 @@ _$modId$__value_ai_slot_minimum_cost = {
 	multiply = 2
 }
 
-_$modId$__value_max_slots = 24
+_$modId$__value_max_slots = 30
 
 _$modId$__value_default_slots = {
 	value = 0
@@ -280,7 +280,7 @@ _$modId$__value_event_buildings = { #scope: province
 }
 
 _$modId$__value_potential_buildings = { #scope: province
-	value = 0
+	value = _$modId$__value_max_slots
 	# tribal buildings
 	if = {
 		limit = { _$modId$__trigger_construct_longhouses = yes }
