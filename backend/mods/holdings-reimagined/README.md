@@ -41,6 +41,10 @@ Game rules are in the category: Mojo
 
 Modified game files: gui/window_county_view.gui
 
-## References
+You would not need below mods after installing this mod:
 
-
+- No Holding Type Requirement (https://steamcommunity.com/sharedfiles/filedetails/?id=3221910948)
+- Holding Manager (https://steamcommunity.com/sharedfiles/filedetails/?id=2633505646)
+- rule cities (https://steamcommunity.com/sharedfiles/filedetails/?id=3304957618)
+- Special buildings ignore restrictions on religious sites (https://steamcommunity.com/sharedfiles/filedetails/?id=3186615224)
+- Always Move Realm Capital (https://steamcommunity.com/sharedfiles/filedetails/?id=2259210465)
