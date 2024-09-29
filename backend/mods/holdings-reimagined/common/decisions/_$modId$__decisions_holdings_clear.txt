@@ -1,7 +1,11 @@
 ﻿_$modId$__decision_remove_all = {
-	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+
 	desc = _$modId$__decision_remove_all_desc
 	selection_tooltip = _$modId$__decision_remove_all_tooltip
+	decision_group_type = major
 
 	is_shown = {
 		global_var:_$modId$__show_decisions ?= yes
@@ -35,5 +39,11 @@
 		}
 	}
 
-	ai_check_interval = 0
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
 }

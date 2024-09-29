@@ -1,7 +1,11 @@
 ﻿_$modId$__decision_buildings_construction = {
-	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+
 	desc = _$modId$__decision_buildings_construction_desc
 	selection_tooltip = _$modId$__decision_buildings_construction_tooltip
+	decision_group_type = major
 
 	cost = {
 		gold = {
@@ -41,9 +45,10 @@
 	}
 
 	is_shown = {
+		is_landless_adventurer = no
+		is_landed = yes
 		global_var:_$modId$__show_decisions ?= yes
 		NOT = { has_game_rule = _$modId$__rule_ai_extra_slots_disabled }
-		is_landed = yes
 		any_directly_owned_province = {
 			count > 0
 			has_ongoing_construction = no
@@ -78,6 +83,7 @@
 		}
 	}
 
-	ai_check_interval = 0
+	ai_will_do = {
+		base = 0
+	}
 }
-

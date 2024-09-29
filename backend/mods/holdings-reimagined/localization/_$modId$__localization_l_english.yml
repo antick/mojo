@@ -213,8 +213,3 @@
 
   duchy_capital_moved:0 "[duchy|E] [de_jure_capital|E] Moved"
   realm_capital_moved:0 "[realm_capital|E] Moved"
-
-  _$modId$__decision_ai_add_slot:0 ""
-  _$modId$__decision_ai_add_slot_desc:0 ""
-  _$modId$__decision_ai_add_slot_tooltip:0 ""
-  _$modId$__decision_ai_add_slot_confirm:0 ""

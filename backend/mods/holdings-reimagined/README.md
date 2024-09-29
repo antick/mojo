@@ -24,6 +24,8 @@ There is also no religious restriction on special buildings.
 
 It also enables cities for all government types.
 
+It has a scroll area for building slots in the county view so you can see all your slots without cluttering the county window.
+
 ## Game Rules
 
 - **Change Holding Type Cost**: Change the cost of changing holding type

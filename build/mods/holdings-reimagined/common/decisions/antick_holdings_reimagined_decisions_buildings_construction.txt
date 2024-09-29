@@ -1,7 +1,12 @@
 ﻿antick_holdings_reimagined_decision_buildings_construction = {
-	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+
 	desc = antick_holdings_reimagined_decision_buildings_construction_desc
 	selection_tooltip = antick_holdings_reimagined_decision_buildings_construction_tooltip
+	decision_group_type = major
+	sort_order = 1000
 
 	cost = {
 		gold = {
@@ -41,9 +46,10 @@
 	}
 
 	is_shown = {
+		is_landless_adventurer = no
+		is_landed = yes
 		global_var:antick_holdings_reimagined_show_decisions ?= yes
 		NOT = { has_game_rule = antick_holdings_reimagined_rule_ai_extra_slots_disabled }
-		is_landed = yes
 		any_directly_owned_province = {
 			count > 0
 			has_ongoing_construction = no
@@ -78,6 +84,7 @@
 		}
 	}
 
-	ai_check_interval = 0
+	ai_will_do = {
+		base = 0
+	}
 }
-
