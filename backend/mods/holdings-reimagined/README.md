@@ -22,6 +22,8 @@ There are also domain-wide decisions for the above 1-3 functions.(useful, if you
 
 There is also no religious restriction on special buildings.
 
+It also enables cities for all government types.
+
 ## Game Rules
 
 - **Change Holding Type Cost**: Change the cost of changing holding type
