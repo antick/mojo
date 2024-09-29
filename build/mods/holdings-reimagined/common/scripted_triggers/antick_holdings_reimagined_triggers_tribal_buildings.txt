@@ -1,0 +1,88 @@
+﻿antick_holdings_reimagined_trigger_construct_tribe_02 = {
+	has_building = tribe_01
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = { has_innovation = innovation_plenary_assemblies }
+	}
+}
+antick_holdings_reimagined_trigger_upgrade_tribe = {
+	antick_holdings_reimagined_trigger_construct_tribe_02 = yes
+}
+
+antick_holdings_reimagined_trigger_construct_longhouses_01 = {
+	NOT = { has_building_or_higher = longhouses_01 }
+	has_building_or_higher = tribe_01
+}
+antick_holdings_reimagined_trigger_construct_longhouses_02 = {
+	has_building = longhouses_01
+	has_building_or_higher = tribe_01
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = { has_innovation = innovation_barracks }
+	}
+
+}
+antick_holdings_reimagined_trigger_construct_longhouses = {
+	antick_holdings_reimagined_trigger_construct_longhouses_01 = yes
+}
+antick_holdings_reimagined_trigger_upgrade_longhouses = {
+	antick_holdings_reimagined_trigger_construct_longhouses_02 = yes
+}
+
+antick_holdings_reimagined_trigger_construct_war_camps_01 = {
+	NOT = { has_building_or_higher = war_camps_01 }
+	has_building_or_higher = tribe_01
+}
+antick_holdings_reimagined_trigger_construct_war_camps_02 = {
+	has_building = war_camps_01
+	has_building_or_higher = tribe_01
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = { has_innovation = innovation_barracks }
+	}
+
+}
+antick_holdings_reimagined_trigger_construct_war_camps = {
+	antick_holdings_reimagined_trigger_construct_war_camps_01 = yes
+}
+antick_holdings_reimagined_trigger_upgrade_war_camps = {
+	antick_holdings_reimagined_trigger_construct_war_camps_02 = yes
+}
+
+antick_holdings_reimagined_trigger_construct_palisades_01 = {
+	NOT = { has_building_or_higher = palisades_01 }
+	has_building_or_higher = tribe_01
+}
+antick_holdings_reimagined_trigger_construct_palisades_02 = {
+	has_building = palisades_01
+	has_building_or_higher = tribe_01
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = { has_innovation = innovation_motte }
+	}
+}
+antick_holdings_reimagined_trigger_construct_palisades = {
+	antick_holdings_reimagined_trigger_construct_palisades_01 = yes
+}
+antick_holdings_reimagined_trigger_upgrade_palisades = {
+	antick_holdings_reimagined_trigger_construct_palisades_02 = yes
+}
+
+antick_holdings_reimagined_trigger_construct_market_villages_01 = {
+	NOT = { has_building_or_higher = market_villages_01 }
+	has_building_or_higher = tribe_01
+}
+antick_holdings_reimagined_trigger_construct_market_villages_02 = {
+	has_building = market_villages_01
+	has_building_or_higher = tribe_01
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = { has_innovation = innovation_city_planning }
+	}
+}
+antick_holdings_reimagined_trigger_construct_market_villages = {
+	antick_holdings_reimagined_trigger_construct_market_villages_01 = yes
+}
+antick_holdings_reimagined_trigger_upgrade_market_villages = {
+	antick_holdings_reimagined_trigger_construct_market_villages_02 = yes
+}

@@ -1,0 +1,27 @@
+﻿antick_holdings_reimagined_value_construct_castle_02_gold_cost = {
+	value = main_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_castle_03_gold_cost = {
+	value = main_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_castle_04_gold_cost = {
+	value = main_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_upgrade_castle_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_castle_02 = yes }
+		add = antick_holdings_reimagined_value_construct_castle_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_castle_03 = yes }
+		add = antick_holdings_reimagined_value_construct_castle_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_castle_04 = yes }
+		add = antick_holdings_reimagined_value_construct_castle_04_gold_cost
+	}
+}

@@ -1,0 +1,130 @@
+﻿antick_holdings_reimagined_effect_upgrade_tribe = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_tribe_02 = yes }
+		add_building = tribe_02
+	}
+}
+
+antick_holdings_reimagined_effect_construct_longhouses = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_longhouses = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = longhouses_01
+		}
+		else_if = {
+			limit = { antick_holdings_reimagined_trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = longhouses_01
+		}
+	}
+}
+antick_holdings_reimagined_effect_upgrade_longhouses = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_longhouses_02 = yes }
+		add_building = longhouses_02
+	}
+}
+antick_holdings_reimagined_effect_remove_longhouses = {
+	if = {
+		limit = { has_building = longhouses_01 }
+		remove_building = longhouses_01
+	}
+	else_if = {
+		limit = { has_building =longhouses_02 }
+		remove_building = longhouses_02
+	}
+}
+
+antick_holdings_reimagined_effect_construct_war_camps = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_war_camps = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = war_camps_01
+		}
+		else_if = {
+			limit = { antick_holdings_reimagined_trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = war_camps_01
+		}
+	}
+}
+antick_holdings_reimagined_effect_upgrade_war_camps = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_war_camps_02 = yes }
+		add_building = war_camps_02
+	}
+}
+antick_holdings_reimagined_effect_remove_war_camps = {
+	if = {
+		limit = { has_building = war_camps_01 }
+		remove_building = war_camps_01
+	}
+	else_if = {
+		limit = { has_building =war_camps_02 }
+		remove_building = war_camps_02
+	}
+}
+
+antick_holdings_reimagined_effect_construct_palisades = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_palisades = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = palisades_01
+		}
+		else_if = {
+			limit = { antick_holdings_reimagined_trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = palisades_01
+		}
+	}
+}
+antick_holdings_reimagined_effect_upgrade_palisades = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_palisades_02 = yes }
+		add_building = palisades_02
+	}
+}
+antick_holdings_reimagined_effect_remove_palisades = {
+	if = {
+		limit = { has_building = palisades_01 }
+		remove_building = palisades_01
+	}
+	else_if = {
+		limit = { has_building =palisades_02 }
+		remove_building = palisades_02
+	}
+}
+
+antick_holdings_reimagined_effect_construct_market_villages = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_market_villages = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = market_villages_01
+		}
+		else_if = {
+			limit = { antick_holdings_reimagined_trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = market_villages_01
+		}
+	}
+}
+antick_holdings_reimagined_effect_upgrade_market_villages = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_market_villages_02 = yes }
+		add_building = market_villages_02
+	}
+}
+antick_holdings_reimagined_effect_remove_market_villages = {
+	if = {
+		limit = { has_building = market_villages_01 }
+		remove_building = market_villages_01
+	}
+	else_if = {
+		limit = { has_building =market_villages_02 }
+		remove_building = market_villages_02
+	}
+}

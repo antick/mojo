@@ -1,0 +1,78 @@
+﻿_$modId$__decision_buildings_upgrade = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	desc = _$modId$__decision_buildings_upgrade_desc
+	selection_tooltip = _$modId$__decision_buildings_upgrade_tooltip
+
+	cost = {
+		gold = {
+			every_directly_owned_province = {
+				limit = {
+					has_ongoing_construction = no
+					barony = {
+						is_leased_out = no
+					}
+				}
+				add = _$modId$__value_upgrade_buildings_gold_cost
+			}
+			if = {
+				limit = {
+					debug_only = yes
+				}
+				multiply = 0
+			}
+		}
+		prestige = {
+			every_directly_owned_province = {
+				limit = {
+					has_ongoing_construction = no
+					barony = {
+						is_leased_out = no
+					}
+				}
+				add = _$modId$__value_upgrade_buildings_prestige_cost
+			}
+			if = {
+				limit = {
+					debug_only = yes
+				}
+				multiply = 0
+			}
+		}
+	}
+
+	is_shown = {
+		global_var:_$modId$__show_decisions ?= yes
+		is_landed = yes
+		any_directly_owned_province = {
+			count > 0
+			has_ongoing_construction = no
+			barony = {
+				is_leased_out = no
+			}
+			_$modId$__trigger_upgrade_buildings = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_at_war = no
+	}
+
+	effect = {
+		custom_tooltip = _$modId$__effect_upgrade_buildings_tooltip
+		hidden_effect = {
+			every_directly_owned_province = {
+				limit = {
+					has_ongoing_construction = no
+					barony = {
+						is_leased_out = no
+					}
+				}
+				_$modId$__effect_upgrade_buildings = yes
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}
+

@@ -1,0 +1,71 @@
+﻿antick_holdings_reimagined_value_move_duchy_capital_cooldown_very_short = 1
+antick_holdings_reimagined_value_move_duchy_capital_cooldown_short = 5
+antick_holdings_reimagined_value_move_duchy_capital_cooldown_default = 10
+antick_holdings_reimagined_value_move_duchy_capital_cooldown_long = 15
+antick_holdings_reimagined_value_move_duchy_capital_cooldown_very_long = 20
+
+antick_holdings_reimagined_value_move_realm_capital_cooldown_very_short = 1
+antick_holdings_reimagined_value_move_realm_capital_cooldown_short = 5
+antick_holdings_reimagined_value_move_realm_capital_cooldown_default = 10
+antick_holdings_reimagined_value_move_realm_capital_cooldown_long = 15
+antick_holdings_reimagined_value_move_realm_capital_cooldown_very_long = 20
+
+antick_holdings_reimagined_value_move_duchy_capital_cooldown = {
+    if = {
+        limit = {
+            has_game_rule = antick_holdings_reimagined_rule_move_duchy_capital_cooldown_very_short
+        }
+        value = antick_holdings_reimagined_value_move_duchy_capital_cooldown_very_short
+    }
+    else_if = {
+        limit = {
+            has_game_rule = antick_holdings_reimagined_rule_move_duchy_capital_cooldown_short
+        }
+        value = antick_holdings_reimagined_value_move_duchy_capital_cooldown_short
+    }
+    else_if = {
+        limit = {
+            has_game_rule = antick_holdings_reimagined_rule_move_duchy_capital_cooldown_long
+        }
+        value = antick_holdings_reimagined_value_move_duchy_capital_cooldown_long
+    }
+    else_if = {
+        limit = {
+            has_game_rule = antick_holdings_reimagined_rule_move_duchy_capital_cooldown_very_long
+        }
+        value = antick_holdings_reimagined_value_move_duchy_capital_cooldown_very_long
+    }
+    else = {
+        value = antick_holdings_reimagined_value_move_duchy_capital_cooldown_default
+    }
+}
+
+antick_holdings_reimagined_value_move_realm_capital_cooldown = {
+    if = {
+        limit = {
+            has_game_rule = antick_holdings_reimagined_rule_move_realm_capital_cooldown_very_short
+        }
+        value = antick_holdings_reimagined_value_move_realm_capital_cooldown_very_short
+    }
+    else_if = {
+        limit = {
+            has_game_rule = antick_holdings_reimagined_rule_move_realm_capital_cooldown_short
+        }
+        value = antick_holdings_reimagined_value_move_realm_capital_cooldown_short
+    }
+    else_if = {
+        limit = {
+            has_game_rule = antick_holdings_reimagined_rule_move_realm_capital_cooldown_long
+        }
+        value = antick_holdings_reimagined_value_move_realm_capital_cooldown_long
+    }
+    else_if = {
+        limit = {
+            has_game_rule = antick_holdings_reimagined_rule_move_realm_capital_cooldown_very_long
+        }
+        value = antick_holdings_reimagined_value_move_realm_capital_cooldown_very_long
+    }
+    else = {
+        value = antick_holdings_reimagined_value_move_realm_capital_cooldown_default
+    }
+}

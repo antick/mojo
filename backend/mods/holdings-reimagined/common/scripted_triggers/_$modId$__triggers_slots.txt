@@ -1,0 +1,71 @@
+﻿_$modId$__trigger_player_add_slot = { #scope: province
+	trigger_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_player_extra_slots_enabled
+		}
+		_$modId$__value_max_slots > building_slots
+	}
+	trigger_else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_player_extra_slots_per_holding_level
+		}
+		_$modId$__value_available_slots_for_holding_level > 0
+	}
+	trigger_else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_player_extra_slots_per_development_level
+		}
+		_$modId$__value_available_slots_for_development_level > 0
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+_$modId$__trigger_ai_add_slot = { #scope: province
+	trigger_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_ai_extra_slots_enabled
+		}
+		_$modId$__value_max_slots > building_slots
+	}
+	trigger_else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_ai_extra_slots_per_holding_level
+		}
+		_$modId$__value_available_slots_for_holding_level > 0
+	}
+	trigger_else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_ai_extra_slots_per_development_level
+		}
+		_$modId$__value_available_slots_for_development_level > 0
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+_$modId$__trigger_add_slot = { #scope: province
+	trigger_if = {
+		limit = {
+			trigger_if = {
+				limit = {
+					barony = { is_leased_out = no }
+				}
+				province_owner = {
+					is_ai = no
+				}
+			}
+			trigger_else = {
+				barony.lessee = {
+					is_ai = no
+				}
+			}
+		}
+		_$modId$__trigger_player_add_slot = yes
+	}
+	trigger_else = {
+		_$modId$__trigger_ai_add_slot = yes
+	}
+}

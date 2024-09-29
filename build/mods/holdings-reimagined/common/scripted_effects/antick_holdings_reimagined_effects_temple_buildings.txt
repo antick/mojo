@@ -1,0 +1,251 @@
+﻿antick_holdings_reimagined_effect_upgrade_temple = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_temple_02 = yes }
+		add_building = temple_02
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_temple_03 = yes }
+		add_building = temple_03
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_temple_04 = yes }
+		add_building = temple_04
+	}
+}
+
+antick_holdings_reimagined_effect_construct_scriptorium = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = scriptorium_01
+		}
+		else_if = {
+			limit = { antick_holdings_reimagined_trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = scriptorium_01
+		}
+	}
+}
+antick_holdings_reimagined_effect_upgrade_scriptorium = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_02 = yes }
+		add_building = scriptorium_02
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_03 = yes }
+		add_building = scriptorium_03
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_04 = yes }
+		add_building = scriptorium_04
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_05 = yes }
+		add_building = scriptorium_05
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_06 = yes }
+		add_building = scriptorium_06
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_07 = yes }
+		add_building = scriptorium_07
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_08 = yes }
+		add_building = scriptorium_08
+	}
+}
+antick_holdings_reimagined_effect_remove_scriptorium = {
+	if = {
+		limit = { has_building = scriptorium_01 }
+		remove_building = scriptorium_01
+	}
+	else_if = {
+		limit = { has_building =scriptorium_02 }
+		remove_building = scriptorium_02
+	}
+	else_if = {
+		limit = { has_building = scriptorium_03 }
+		remove_building = scriptorium_03
+	}
+	else_if = {
+		limit = { has_building =scriptorium_04 }
+		remove_building = scriptorium_04
+	}
+	else_if = {
+		limit = { has_building = scriptorium_05 }
+		remove_building = scriptorium_05
+	}
+	else_if = {
+		limit = { has_building =scriptorium_06 }
+		remove_building = scriptorium_06
+	}
+	else_if = {
+		limit = { has_building = scriptorium_07 }
+		remove_building = scriptorium_07
+	}
+	else_if = {
+		limit = { has_building =scriptorium_08 }
+		remove_building = scriptorium_08
+	}
+}
+
+antick_holdings_reimagined_effect_construct_monastic_schools = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = monastic_schools_01
+		}
+		else_if = {
+			limit = { antick_holdings_reimagined_trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = monastic_schools_01
+		}
+	}
+}
+antick_holdings_reimagined_effect_upgrade_monastic_schools = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_02 = yes }
+		add_building = monastic_schools_02
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_03 = yes }
+		add_building = monastic_schools_03
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_04 = yes }
+		add_building = monastic_schools_04
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_05 = yes }
+		add_building = monastic_schools_05
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_06 = yes }
+		add_building = monastic_schools_06
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_07 = yes }
+		add_building = monastic_schools_07
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_08 = yes }
+		add_building = monastic_schools_08
+	}
+}
+antick_holdings_reimagined_effect_remove_monastic_schools = {
+	if = {
+		limit = { has_building = monastic_schools_01 }
+		remove_building = monastic_schools_01
+	}
+	else_if = {
+		limit = { has_building =monastic_schools_02 }
+		remove_building = monastic_schools_02
+	}
+	else_if = {
+		limit = { has_building = monastic_schools_03 }
+		remove_building = monastic_schools_03
+	}
+	else_if = {
+		limit = { has_building =monastic_schools_04 }
+		remove_building = monastic_schools_04
+	}
+	else_if = {
+		limit = { has_building = monastic_schools_05 }
+		remove_building = monastic_schools_05
+	}
+	else_if = {
+		limit = { has_building =monastic_schools_06 }
+		remove_building = monastic_schools_06
+	}
+	else_if = {
+		limit = { has_building = monastic_schools_07 }
+		remove_building = monastic_schools_07
+	}
+	else_if = {
+		limit = { has_building =monastic_schools_08 }
+		remove_building = monastic_schools_08
+	}
+}
+
+antick_holdings_reimagined_effect_construct_megalith = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = megalith_01
+		}
+		else_if = {
+			limit = { antick_holdings_reimagined_trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = megalith_01
+		}
+	}
+}
+antick_holdings_reimagined_effect_upgrade_megalith = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_02 = yes }
+		add_building = megalith_02
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_03 = yes }
+		add_building = megalith_03
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_04 = yes }
+		add_building = megalith_04
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_05 = yes }
+		add_building = megalith_05
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_06 = yes }
+		add_building = megalith_06
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_07 = yes }
+		add_building = megalith_07
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_08 = yes }
+		add_building = megalith_08
+	}
+}
+antick_holdings_reimagined_effect_remove_megalith = {
+	if = {
+		limit = { has_building = megalith_01 }
+		remove_building = megalith_01
+	}
+	else_if = {
+		limit = { has_building =megalith_02 }
+		remove_building = megalith_02
+	}
+	else_if = {
+		limit = { has_building = megalith_03 }
+		remove_building = megalith_03
+	}
+	else_if = {
+		limit = { has_building =megalith_04 }
+		remove_building = megalith_04
+	}
+	else_if = {
+		limit = { has_building = megalith_05 }
+		remove_building = megalith_05
+	}
+	else_if = {
+		limit = { has_building =megalith_06 }
+		remove_building = megalith_06
+	}
+	else_if = {
+		limit = { has_building = megalith_07 }
+		remove_building = megalith_07
+	}
+	else_if = {
+		limit = { has_building =megalith_08 }
+		remove_building = megalith_08
+	}
+}

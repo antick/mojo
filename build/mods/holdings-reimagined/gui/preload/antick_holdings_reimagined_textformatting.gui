@@ -1,0 +1,19 @@
+textformatting = {
+
+
+	format = {
+		name = antick_holdings_reimagined_rule
+		format = "color:{0, 1, 1}"
+	}
+
+	format = {
+		name = antick_holdings_reimagined_green
+		format = "color:{0.25, 0.75, 0}"
+	}
+
+	format = {
+		name = antick_holdings_reimagined_red
+		format = "color:{0.75, 0.25, 0}"
+	}
+
+}

@@ -1,0 +1,17 @@
+textformatting = {
+	format = {
+		name = _$modId$__rule
+		format = "color:{0, 1, 1}"
+	}
+
+	format = {
+		name = _$modId$__green
+		format = "color:{0.25, 0.75, 0}"
+	}
+
+	format = {
+		name = _$modId$__red
+		format = "color:{0.75, 0.25, 0}"
+	}
+
+}

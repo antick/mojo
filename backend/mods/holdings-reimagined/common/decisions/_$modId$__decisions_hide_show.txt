@@ -1,0 +1,46 @@
+﻿_$modId$__decision_hide_all = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	desc = _$modId$__decision_hide_all_desc
+	selection_tooltip = _$modId$__decision_hide_all_tooltip
+
+	is_shown = {
+		global_var:_$modId$__show_decisions ?= yes
+	}
+
+	effect = {
+		custom_tooltip = _$modId$__hide_all_effect_tooltip
+		hidden_effect = {
+			set_global_variable = {
+				name = _$modId$__show_decisions
+				value = no
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}
+
+_$modId$__decision_show_all = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	desc = _$modId$__decision_show_all_desc
+	selection_tooltip = _$modId$__decision_show_all_tooltip
+
+	is_shown = {
+		OR = {
+			NOT = { exists = global_var:_$modId$__show_decisions }
+			global_var:_$modId$__show_decisions = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = _$modId$__show_all_effect_tooltip
+		hidden_effect = {
+			set_global_variable = {
+				name = _$modId$__show_decisions
+				value = yes
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}

@@ -1,0 +1,202 @@
+﻿_$modId$__value_construct_tribe_02_gold_cost = {
+	value = expensive_building_tier_1_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_upgrade_tribe_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_tribe_02 = yes }
+		add = _$modId$__value_construct_tribe_02_gold_cost
+	}
+}
+_$modId$__value_upgrade_tribe_02_prestige_cost = {
+	value = expensive_building_tier_3_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_upgrade_tribe_prestige_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_tribe_02 = yes }
+		add = _$modId$__value_upgrade_tribe_02_prestige_cost
+	}
+}
+
+_$modId$__value_construct_longhouses_01_gold_cost = {
+	value = tribal_building_tier_1_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_longhouses_02_gold_cost = {
+	value = tribal_building_tier_2_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_longhouses_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_longhouses_01 = yes }
+		add = _$modId$__value_construct_longhouses_01_gold_cost
+	}
+}
+_$modId$__value_upgrade_longhouses_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_longhouses_02 = yes }
+		add = _$modId$__value_construct_longhouses_02_gold_cost
+	}
+}
+_$modId$__value_construct_longhouses_01_prestige_cost = {
+	value = expensive_building_tier_1_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_longhouses_02_prestige_cost = {
+	value = expensive_building_tier_2_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_longhouses_prestige_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_longhouses_01 = yes }
+		add = _$modId$__value_construct_longhouses_01_prestige_cost
+	}
+}
+_$modId$__value_upgrade_longhouses_prestige_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_longhouses_02 = yes }
+		add = _$modId$__value_construct_longhouses_02_prestige_cost
+	}
+}
+
+_$modId$__value_construct_war_camps_01_gold_cost = {
+	value = tribal_building_tier_1_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_war_camps_02_gold_cost = {
+	value = tribal_building_tier_2_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_war_camps_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_war_camps_01 = yes }
+		add = _$modId$__value_construct_war_camps_01_gold_cost
+	}
+}
+_$modId$__value_upgrade_war_camps_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_war_camps_02 = yes }
+		add = _$modId$__value_construct_war_camps_02_gold_cost
+	}
+}
+_$modId$__value_construct_war_camps_01_prestige_cost = {
+	value = expensive_building_tier_1_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_war_camps_02_prestige_cost = {
+	value = expensive_building_tier_2_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_war_camps_prestige_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_war_camps_01 = yes }
+		add = _$modId$__value_construct_war_camps_01_prestige_cost
+	}
+}
+_$modId$__value_upgrade_war_camps_prestige_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_war_camps_02 = yes }
+		add = _$modId$__value_construct_war_camps_02_prestige_cost
+	}
+}
+
+_$modId$__value_construct_palisades_01_gold_cost = {
+	value = tribal_building_tier_1_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_palisades_02_gold_cost = {
+	value = tribal_building_tier_2_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_palisades_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_palisades_01 = yes }
+		add = _$modId$__value_construct_palisades_01_gold_cost
+	}
+}
+_$modId$__value_upgrade_palisades_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_palisades_02 = yes }
+		add = _$modId$__value_construct_palisades_02_gold_cost
+	}
+}
+_$modId$__value_construct_palisades_01_prestige_cost = {
+	value = expensive_building_tier_1_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_palisades_02_prestige_cost = {
+	value = expensive_building_tier_2_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_palisades_prestige_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_palisades_01 = yes }
+		add = _$modId$__value_construct_palisades_01_prestige_cost
+	}
+}
+_$modId$__value_upgrade_palisades_prestige_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_palisades_02 = yes }
+		add = _$modId$__value_construct_palisades_02_prestige_cost
+	}
+}
+
+_$modId$__value_construct_market_villages_01_gold_cost = {
+	value = tribal_building_tier_1_cost
+	multiply = _$modId$__value_multiplier_quick_construction_time_cost
+}
+_$modId$__value_construct_market_villages_02_gold_cost = {
+	value = tribal_building_tier_2_cost
+	multiply = _$modId$__value_multiplier_quick_construction_time_cost
+}
+_$modId$__value_construct_market_villages_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_market_villages_01 = yes }
+		add = _$modId$__value_construct_market_villages_01_gold_cost
+	}
+}
+_$modId$__value_upgrade_market_villages_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_market_villages_02 = yes }
+		add = _$modId$__value_construct_market_villages_02_gold_cost
+	}
+}
+_$modId$__value_construct_market_villages_01_prestige_cost = {
+	value = expensive_building_tier_1_cost
+	multiply = _$modId$__value_multiplier_quick_construction_time_cost
+}
+_$modId$__value_construct_market_villages_02_prestige_cost = {
+	value = expensive_building_tier_2_cost
+	multiply = _$modId$__value_multiplier_quick_construction_time_cost
+}
+_$modId$__value_construct_market_villages_prestige_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_market_villages_01 = yes }
+		add = _$modId$__value_construct_market_villages_01_prestige_cost
+	}
+}
+_$modId$__value_upgrade_market_villages_prestige_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_market_villages_02 = yes }
+		add = _$modId$__value_construct_market_villages_02_prestige_cost
+	}
+}

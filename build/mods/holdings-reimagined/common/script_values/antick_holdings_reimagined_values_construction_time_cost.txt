@@ -1,0 +1,53 @@
+﻿antick_holdings_reimagined_value_multiplier_very_quick_construction_time_cost = {
+	value = 1
+	add = {
+		add = very_quick_construction_time
+		divide = 1825
+		multiply = antick_holdings_reimagined_value_multiplier_construction_time_cost
+	}
+}
+
+antick_holdings_reimagined_value_multiplier_quick_construction_time_cost = {
+	value = 1
+	add = {
+		add = quick_construction_time
+		divide = 1825
+		multiply = antick_holdings_reimagined_value_multiplier_construction_time_cost
+	}
+}
+
+antick_holdings_reimagined_value_multiplier_standard_construction_time_cost = {
+	value = 1
+	add = {
+		add = standard_construction_time
+		divide = 1825
+		multiply = antick_holdings_reimagined_value_multiplier_construction_time_cost
+	}
+}
+
+antick_holdings_reimagined_value_multiplier_slow_construction_time_cost = {
+	value = 1
+	add = {
+		add = slow_construction_time
+		divide = 1825
+		multiply = antick_holdings_reimagined_value_multiplier_construction_time_cost
+	}
+}
+
+antick_holdings_reimagined_value_multiplier_very_slow_construction_time_cost = {
+	value = 1
+	add = {
+		add = very_slow_construction_time
+		divide = 1825
+		multiply = antick_holdings_reimagined_value_multiplier_construction_time_cost
+	}
+}
+
+antick_holdings_reimagined_value_multiplier_construction_time_cost = {
+	value = 1
+	if = { limit = { has_game_rule = antick_holdings_reimagined_rule_construction_time_cost_very_cheap } multiply = 0.25 }
+	else_if = { limit = { has_game_rule = antick_holdings_reimagined_rule_construction_time_cost_cheap } multiply = 0.5 }
+	else_if = { limit = { has_game_rule = antick_holdings_reimagined_rule_construction_time_cost_expensive } multiply = 2 }
+	else_if = { limit = { has_game_rule = antick_holdings_reimagined_rule_construction_time_cost_very_expensive } multiply = 4 }
+	else_if = { limit = { has_game_rule = antick_holdings_reimagined_rule_construction_time_cost_free } multiply = 0 }
+}

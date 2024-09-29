@@ -1,0 +1,385 @@
+﻿antick_holdings_reimagined_trigger_construct_city_02 = {
+	has_building = city_01
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_manorialism }
+	}
+}
+antick_holdings_reimagined_trigger_construct_city_03 = {
+	has_building = city_02
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_windmills }
+	}
+}
+antick_holdings_reimagined_trigger_construct_city_04 = {
+	has_building = city_03
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_cranes }
+	}
+}
+antick_holdings_reimagined_trigger_upgrade_city = {
+	OR = {
+		antick_holdings_reimagined_trigger_construct_city_02 = yes
+		antick_holdings_reimagined_trigger_construct_city_03 = yes
+		antick_holdings_reimagined_trigger_construct_city_04 = yes
+	}
+}
+
+antick_holdings_reimagined_trigger_construct_guild_halls_01 = {
+	NOT = { has_building_or_higher = guild_halls_01 }
+	antick_holdings_reimagined_building_requirement_tribal = no
+	has_building_or_higher = city_01
+}
+antick_holdings_reimagined_trigger_construct_guild_halls_02 = {
+	has_building = guild_halls_01
+	antick_holdings_reimagined_building_requirement_tribal = no
+	has_building_or_higher = city_01
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			OR = {
+				has_innovation = innovation_crop_rotation
+				has_cultural_parameter = next_level_guild_halls
+			}
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_guild_halls_03 = {
+	has_building = guild_halls_02
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			has_building_or_higher = city_02
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_01
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_manorialism
+			# }
+			has_building_or_higher = city_02
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_crop_rotation
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_01
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_guild_halls_04 = {
+	has_building = guild_halls_03
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			has_building_or_higher = city_02
+
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_01
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_manorialism
+			# }
+			has_building_or_higher = city_02
+
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_crop_rotation
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_01
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_guild_halls_05 = {
+	has_building = guild_halls_04
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			has_building_or_higher = city_03
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_02
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_guilds
+			# }
+			has_building_or_higher = city_03
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_manorialism
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_02
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_guild_halls_06 = {
+	has_building = guild_halls_05
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			has_building_or_higher = city_03
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_02
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_guilds
+			# }
+			has_building_or_higher = city_03
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_manorialism
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_02
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_guild_halls_07 = {
+	has_building = guild_halls_06
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_cranes
+			}
+			has_building_or_higher = city_04
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_03
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_cranes
+			# }
+			has_building_or_higher = city_04
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_guilds
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_03
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_guild_halls_08 = {
+	has_building = guild_halls_07
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_cranes
+			}
+			has_building_or_higher = city_04
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_03
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_cranes
+			# }
+			has_building_or_higher = city_04
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_guilds
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_03
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_guild_halls = {
+	antick_holdings_reimagined_trigger_construct_guild_halls_01 = yes
+}
+antick_holdings_reimagined_trigger_upgrade_guild_halls = {
+	OR = {
+		antick_holdings_reimagined_trigger_construct_guild_halls_02 = yes
+		antick_holdings_reimagined_trigger_construct_guild_halls_03 = yes
+		antick_holdings_reimagined_trigger_construct_guild_halls_04 = yes
+		antick_holdings_reimagined_trigger_construct_guild_halls_05 = yes
+		antick_holdings_reimagined_trigger_construct_guild_halls_06 = yes
+		antick_holdings_reimagined_trigger_construct_guild_halls_07 = yes
+		antick_holdings_reimagined_trigger_construct_guild_halls_08 = yes
+	}
+}

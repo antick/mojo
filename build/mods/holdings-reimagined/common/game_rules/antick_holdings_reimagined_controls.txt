@@ -1,0 +1,136 @@
+﻿antick_holdings_reimagined_control_change_holding_type_cost = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_change_holding_type_cost_default
+	antick_holdings_reimagined_rule_change_holding_type_cost_very_cheap = {}
+	antick_holdings_reimagined_rule_change_holding_type_cost_cheap = {}
+	antick_holdings_reimagined_rule_change_holding_type_cost_default = {}
+	antick_holdings_reimagined_rule_change_holding_type_cost_expensive = {}
+	antick_holdings_reimagined_rule_change_holding_type_cost_very_expensive = {}
+}
+
+antick_holdings_reimagined_control_change_holding_type_cooldown = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_change_holding_type_cooldown_default
+	antick_holdings_reimagined_rule_change_holding_type_cooldown_very_short = {}
+	antick_holdings_reimagined_rule_change_holding_type_cooldown_short = {}
+	antick_holdings_reimagined_rule_change_holding_type_cooldown_default = {}
+	antick_holdings_reimagined_rule_change_holding_type_cooldown_long = {}
+	antick_holdings_reimagined_rule_change_holding_type_cooldown_very_long = {}
+}
+
+antick_holdings_reimagined_control_move_duchy_capital_cooldown = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_move_duchy_capital_cooldown_default
+	antick_holdings_reimagined_rule_move_duchy_capital_cooldown_very_short = {}
+	antick_holdings_reimagined_rule_move_duchy_capital_cooldown_short = {}
+	antick_holdings_reimagined_rule_move_duchy_capital_cooldown_default = {}
+	antick_holdings_reimagined_rule_move_duchy_capital_cooldown_long = {}
+	antick_holdings_reimagined_rule_move_duchy_capital_cooldown_very_long = {}
+	antick_holdings_reimagined_rule_move_duchy_capital_cooldown_lifetime = {}
+}
+
+antick_holdings_reimagined_control_move_realm_capital_cooldown = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_move_realm_capital_cooldown_default
+	antick_holdings_reimagined_rule_move_realm_capital_cooldown_very_short = {}
+	antick_holdings_reimagined_rule_move_realm_capital_cooldown_short = {}
+	antick_holdings_reimagined_rule_move_realm_capital_cooldown_default = {}
+	antick_holdings_reimagined_rule_move_realm_capital_cooldown_long = {}
+	antick_holdings_reimagined_rule_move_realm_capital_cooldown_very_long = {}
+	antick_holdings_reimagined_rule_move_realm_capital_cooldown_lifetime = {}
+}
+
+antick_holdings_reimagined_control_can_replace_buildings = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_can_replace_buildings_default
+	antick_holdings_reimagined_rule_can_replace_buildings_default = {}
+	antick_holdings_reimagined_rule_can_replace_buildings_vassals = {}
+}
+
+antick_holdings_reimagined_control_can_feudalize_holdings = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_can_feudalize_holdings_default
+	antick_holdings_reimagined_rule_can_feudalize_holdings_default = {}
+	antick_holdings_reimagined_rule_can_feudalize_holdings_vassals = {}
+}
+
+antick_holdings_reimagined_control_feudalize_holding_cost = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_feudalize_holding_cost_default
+	antick_holdings_reimagined_rule_feudalize_holding_cost_very_cheap = {}
+	antick_holdings_reimagined_rule_feudalize_holding_cost_cheap = {}
+	antick_holdings_reimagined_rule_feudalize_holding_cost_default = {}
+	antick_holdings_reimagined_rule_feudalize_holding_cost_expensive = {}
+	antick_holdings_reimagined_rule_feudalize_holding_cost_very_expensive = {}
+}
+
+antick_holdings_reimagined_control_player_extra_slots = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_player_extra_slots_enabled
+	antick_holdings_reimagined_rule_player_extra_slots_disabled = {}
+	antick_holdings_reimagined_rule_player_extra_slots_per_holding_level = {}
+	antick_holdings_reimagined_rule_player_extra_slots_per_development_level = {}
+	antick_holdings_reimagined_rule_player_extra_slots_enabled = {}
+}
+
+antick_holdings_reimagined_control_player_slot_base_cost = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_player_slot_base_cost_default
+	antick_holdings_reimagined_rule_player_slot_base_cost_very_cheap = {}
+	antick_holdings_reimagined_rule_player_slot_base_cost_cheap = {}
+	antick_holdings_reimagined_rule_player_slot_base_cost_default = {}
+	antick_holdings_reimagined_rule_player_slot_base_cost_expensive = {}
+	antick_holdings_reimagined_rule_player_slot_base_cost_very_expensive = {}
+}
+
+antick_holdings_reimagined_control_player_slot_step_cost = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_player_slot_step_cost_default
+	antick_holdings_reimagined_rule_player_slot_step_cost_very_cheap = {}
+	antick_holdings_reimagined_rule_player_slot_step_cost_cheap = {}
+	antick_holdings_reimagined_rule_player_slot_step_cost_default = {}
+	antick_holdings_reimagined_rule_player_slot_step_cost_expensive = {}
+	antick_holdings_reimagined_rule_player_slot_step_cost_very_expensive = {}
+}
+
+antick_holdings_reimagined_control_ai_extra_slots = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_ai_extra_slots_enabled
+	antick_holdings_reimagined_rule_ai_extra_slots_disabled = {}
+	antick_holdings_reimagined_rule_ai_extra_slots_per_holding_level = {}
+	antick_holdings_reimagined_rule_ai_extra_slots_per_development_level = {}
+	antick_holdings_reimagined_rule_ai_extra_slots_enabled = {}
+}
+
+antick_holdings_reimagined_control_ai_slot_base_cost = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_ai_slot_base_cost_default
+	antick_holdings_reimagined_rule_ai_slot_base_cost_free = {}
+	antick_holdings_reimagined_rule_ai_slot_base_cost_very_cheap = {}
+	antick_holdings_reimagined_rule_ai_slot_base_cost_cheap = {}
+	antick_holdings_reimagined_rule_ai_slot_base_cost_default = {}
+	antick_holdings_reimagined_rule_ai_slot_base_cost_expensive = {}
+	antick_holdings_reimagined_rule_ai_slot_base_cost_very_expensive = {}
+}
+
+antick_holdings_reimagined_control_ai_slot_step_cost = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_ai_slot_step_cost_default
+	antick_holdings_reimagined_rule_ai_slot_step_cost_free = {}
+	antick_holdings_reimagined_rule_ai_slot_step_cost_very_cheap = {}
+	antick_holdings_reimagined_rule_ai_slot_step_cost_cheap = {}
+	antick_holdings_reimagined_rule_ai_slot_step_cost_default = {}
+	antick_holdings_reimagined_rule_ai_slot_step_cost_expensive = {}
+	antick_holdings_reimagined_rule_ai_slot_step_cost_very_expensive = {}
+}
+
+antick_holdings_reimagined_control_construction_time_cost = {
+	categories = { holding_manager }
+	default = antick_holdings_reimagined_rule_construction_time_cost_default
+	antick_holdings_reimagined_rule_construction_time_cost_free = {}
+	antick_holdings_reimagined_rule_construction_time_cost_very_cheap = {}
+	antick_holdings_reimagined_rule_construction_time_cost_cheap = {}
+	antick_holdings_reimagined_rule_construction_time_cost_default = {}
+	antick_holdings_reimagined_rule_construction_time_cost_expensive = {}
+	antick_holdings_reimagined_rule_construction_time_cost_very_expensive = {}
+}

@@ -1,0 +1,98 @@
+﻿_$modId$__value_construct_city_02_gold_cost = {
+	value = main_building_tier_2_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_city_03_gold_cost = {
+	value = main_building_tier_3_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_city_04_gold_cost = {
+	value = main_building_tier_4_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_upgrade_city_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_city_02 = yes }
+		add = _$modId$__value_construct_city_02_gold_cost
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_city_03 = yes }
+		add = _$modId$__value_construct_city_03_gold_cost
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_city_04 = yes }
+		add = _$modId$__value_construct_city_04_gold_cost
+	}
+}
+
+_$modId$__value_construct_guild_halls_01_gold_cost = {
+	value = normal_building_tier_1_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_guild_halls_02_gold_cost = {
+	value = normal_building_tier_2_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_guild_halls_03_gold_cost = {
+	value = normal_building_tier_3_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_guild_halls_04_gold_cost = {
+	value = normal_building_tier_4_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_guild_halls_05_gold_cost = {
+	value = normal_building_tier_5_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_guild_halls_06_gold_cost = {
+	value = normal_building_tier_6_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_guild_halls_07_gold_cost = {
+	value = normal_building_tier_7_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_guild_halls_08_gold_cost = {
+	value = normal_building_tier_8_cost
+	multiply = _$modId$__value_multiplier_standard_construction_time_cost
+}
+_$modId$__value_construct_guild_halls_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_guild_halls_01 = yes }
+		add = _$modId$__value_construct_guild_halls_01_gold_cost
+	}
+}
+_$modId$__value_upgrade_guild_halls_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_guild_halls_02 = yes }
+		add = _$modId$__value_construct_guild_halls_02_gold_cost
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_guild_halls_03 = yes }
+		add = _$modId$__value_construct_guild_halls_03_gold_cost
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_guild_halls_04 = yes }
+		add = _$modId$__value_construct_guild_halls_04_gold_cost
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_guild_halls_05 = yes }
+		add = _$modId$__value_construct_guild_halls_05_gold_cost
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_guild_halls_06 = yes }
+		add = _$modId$__value_construct_guild_halls_06_gold_cost
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_guild_halls_07 = yes }
+		add = _$modId$__value_construct_guild_halls_07_gold_cost
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_guild_halls_08 = yes }
+		add = _$modId$__value_construct_guild_halls_08_gold_cost
+	}
+}

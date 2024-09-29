@@ -1,0 +1,49 @@
+﻿_$modId$__feudalize_button = {
+	scope = character
+	saved_scopes = { gui_title }
+
+	is_shown = {
+		NOT = { government_has_flag = government_is_tribal }
+		trigger_if = {
+			limit = {
+				has_game_rule = _$modId$__rule_can_feudalize_holdings_vassals
+			}
+			completely_controls = scope:gui_title
+			scope:gui_title.holder = {
+				NOT = { government_has_flag = government_is_tribal }
+			}
+		}
+		trigger_else = {
+			scope:gui_title = {
+				holder = root
+			}
+		}
+		scope:gui_title = {
+			is_capital_barony = no # we'll use the county in that case
+			title_province = {
+				has_holding_type = tribal_holding
+			}
+		}
+	}
+	is_valid = {
+		gold >= _$modId$__value_feudalize_holding_cost
+		scope:gui_title = {
+			title_province = {
+				has_ongoing_construction = no
+			}
+		}
+	}
+	effect = {
+		send_interface_toast = {
+			title = feudalize_tribal_holding_interaction_notification
+
+			right_icon = root
+
+			scope:gui_title.title_province ?= {
+				set_holding_type = castle_holding
+			}
+
+			remove_long_term_gold = _$modId$__value_feudalize_holding_cost
+		}
+	}
+}

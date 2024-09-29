@@ -1,0 +1,88 @@
+﻿_$modId$__trigger_construct_tribe_02 = {
+	has_building = tribe_01
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = { has_innovation = innovation_plenary_assemblies }
+	}
+}
+_$modId$__trigger_upgrade_tribe = {
+	_$modId$__trigger_construct_tribe_02 = yes
+}
+
+_$modId$__trigger_construct_longhouses_01 = {
+	NOT = { has_building_or_higher = longhouses_01 }
+	has_building_or_higher = tribe_01
+}
+_$modId$__trigger_construct_longhouses_02 = {
+	has_building = longhouses_01
+	has_building_or_higher = tribe_01
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = { has_innovation = innovation_barracks }
+	}
+
+}
+_$modId$__trigger_construct_longhouses = {
+	_$modId$__trigger_construct_longhouses_01 = yes
+}
+_$modId$__trigger_upgrade_longhouses = {
+	_$modId$__trigger_construct_longhouses_02 = yes
+}
+
+_$modId$__trigger_construct_war_camps_01 = {
+	NOT = { has_building_or_higher = war_camps_01 }
+	has_building_or_higher = tribe_01
+}
+_$modId$__trigger_construct_war_camps_02 = {
+	has_building = war_camps_01
+	has_building_or_higher = tribe_01
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = { has_innovation = innovation_barracks }
+	}
+
+}
+_$modId$__trigger_construct_war_camps = {
+	_$modId$__trigger_construct_war_camps_01 = yes
+}
+_$modId$__trigger_upgrade_war_camps = {
+	_$modId$__trigger_construct_war_camps_02 = yes
+}
+
+_$modId$__trigger_construct_palisades_01 = {
+	NOT = { has_building_or_higher = palisades_01 }
+	has_building_or_higher = tribe_01
+}
+_$modId$__trigger_construct_palisades_02 = {
+	has_building = palisades_01
+	has_building_or_higher = tribe_01
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = { has_innovation = innovation_motte }
+	}
+}
+_$modId$__trigger_construct_palisades = {
+	_$modId$__trigger_construct_palisades_01 = yes
+}
+_$modId$__trigger_upgrade_palisades = {
+	_$modId$__trigger_construct_palisades_02 = yes
+}
+
+_$modId$__trigger_construct_market_villages_01 = {
+	NOT = { has_building_or_higher = market_villages_01 }
+	has_building_or_higher = tribe_01
+}
+_$modId$__trigger_construct_market_villages_02 = {
+	has_building = market_villages_01
+	has_building_or_higher = tribe_01
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = { has_innovation = innovation_city_planning }
+	}
+}
+_$modId$__trigger_construct_market_villages = {
+	_$modId$__trigger_construct_market_villages_01 = yes
+}
+_$modId$__trigger_upgrade_market_villages = {
+	_$modId$__trigger_construct_market_villages_02 = yes
+}

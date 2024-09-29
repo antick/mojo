@@ -1,0 +1,291 @@
+﻿_$modId$__trigger_construct_temple_02 = {
+	has_building = temple_01
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_manorialism }
+	}
+}
+_$modId$__trigger_construct_temple_03 = {
+	has_building = temple_02
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_windmills }
+	}
+}
+_$modId$__trigger_construct_temple_04 = {
+	has_building = temple_03
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_cranes }
+	}
+}
+_$modId$__trigger_upgrade_temple = {
+	OR = {
+		_$modId$__trigger_construct_temple_02 = yes
+		_$modId$__trigger_construct_temple_03 = yes
+		_$modId$__trigger_construct_temple_04 = yes
+	}
+}
+
+_$modId$__trigger_construct_scriptorium_01 = {
+	NOT = { has_building_or_higher = scriptorium_01 }
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_01
+	province_owner = { has_dlc_feature = legends }
+}
+_$modId$__trigger_construct_scriptorium_02 = {
+	has_building = scriptorium_01
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_01
+	province_owner = { has_dlc_feature = legends }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_city_planning }
+	}
+}
+_$modId$__trigger_construct_scriptorium_03 = {
+	has_building = scriptorium_02
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_02
+	province_owner = { has_dlc_feature = legends }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_manorialism }
+	}
+}
+_$modId$__trigger_construct_scriptorium_04 = {
+	has_building = scriptorium_03
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_02
+	province_owner = { has_dlc_feature = legends }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_manorialism }
+	}
+}
+_$modId$__trigger_construct_scriptorium_05 = {
+	has_building = scriptorium_04
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_03
+	province_owner = { has_dlc_feature = legends }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_windmills }
+	}
+}
+_$modId$__trigger_construct_scriptorium_06 = {
+	has_building = scriptorium_05
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_03
+	province_owner = { has_dlc_feature = legends }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_windmills }
+	}
+}
+_$modId$__trigger_construct_scriptorium_07 = {
+	has_building = scriptorium_06
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_04
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_cranes }
+	}
+}
+_$modId$__trigger_construct_scriptorium_08 = {
+	has_building = scriptorium_07
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_04
+	province_owner = { has_dlc_feature = legends }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_cranes }
+	}
+}
+_$modId$__trigger_construct_scriptorium = {
+	_$modId$__trigger_construct_scriptorium_01 = yes
+}
+_$modId$__trigger_upgrade_scriptorium = {
+	OR = {
+		_$modId$__trigger_construct_scriptorium_02 = yes
+		_$modId$__trigger_construct_scriptorium_03 = yes
+		_$modId$__trigger_construct_scriptorium_04 = yes
+		_$modId$__trigger_construct_scriptorium_05 = yes
+		_$modId$__trigger_construct_scriptorium_06 = yes
+		_$modId$__trigger_construct_scriptorium_07 = yes
+		_$modId$__trigger_construct_scriptorium_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_monastic_schools_01 = {
+	NOT = { has_building_or_higher = monastic_schools_01 }
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_01
+}
+_$modId$__trigger_construct_monastic_schools_02 = {
+	has_building = monastic_schools_01
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_01
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_city_planning }
+	}
+}
+_$modId$__trigger_construct_monastic_schools_03 = {
+	has_building = monastic_schools_02
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_02
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_manorialism }
+	}
+}
+_$modId$__trigger_construct_monastic_schools_04 = {
+	has_building = monastic_schools_03
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_02
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_manorialism }
+	}
+}
+_$modId$__trigger_construct_monastic_schools_05 = {
+	has_building = monastic_schools_04
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_03
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_windmills }
+	}
+}
+_$modId$__trigger_construct_monastic_schools_06 = {
+	has_building = monastic_schools_05
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_03
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_windmills }
+	}
+}
+_$modId$__trigger_construct_monastic_schools_07 = {
+	has_building = monastic_schools_06
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_04
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_cranes }
+	}
+}
+_$modId$__trigger_construct_monastic_schools_08 = {
+	has_building = monastic_schools_07
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_04
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_cranes }
+	}
+}
+_$modId$__trigger_construct_monastic_schools = {
+	_$modId$__trigger_construct_monastic_schools_01 = yes
+}
+_$modId$__trigger_upgrade_monastic_schools = {
+	OR = {
+		_$modId$__trigger_construct_monastic_schools_02 = yes
+		_$modId$__trigger_construct_monastic_schools_03 = yes
+		_$modId$__trigger_construct_monastic_schools_04 = yes
+		_$modId$__trigger_construct_monastic_schools_05 = yes
+		_$modId$__trigger_construct_monastic_schools_06 = yes
+		_$modId$__trigger_construct_monastic_schools_07 = yes
+		_$modId$__trigger_construct_monastic_schools_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_megalith_01 = {
+	NOT = { has_building_or_higher = megalith_01 }
+	#_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_01
+	province_owner.faith = { has_doctrine_parameter = can_build_megaliths }
+}
+_$modId$__trigger_construct_megalith_02 = {
+	has_building = megalith_01
+	#_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_01
+	province_owner.faith = { has_doctrine_parameter = can_build_megaliths }
+}
+_$modId$__trigger_construct_megalith_03 = {
+	has_building = megalith_02
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_01
+	province_owner.faith = { has_doctrine_parameter = can_build_megaliths }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_city_planning }
+	}
+}
+_$modId$__trigger_construct_megalith_04 = {
+	has_building = megalith_03
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_02
+	province_owner.faith = { has_doctrine_parameter = can_build_megaliths }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_city_planning }
+	}
+}
+_$modId$__trigger_construct_megalith_05 = {
+	has_building = megalith_04
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_02
+	province_owner.faith = { has_doctrine_parameter = can_build_megaliths }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_city_planning }
+	}
+}
+_$modId$__trigger_construct_megalith_06 = {
+	has_building = megalith_05
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_02
+	province_owner.faith = { has_doctrine_parameter = can_build_megaliths }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_city_planning }
+	}
+}
+_$modId$__trigger_construct_megalith_07 = {
+	has_building = megalith_06
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_02
+	province_owner.faith = { has_doctrine_parameter = can_build_megaliths }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_city_planning }
+	}
+}
+_$modId$__trigger_construct_megalith_08 = {
+	has_building = megalith_07
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = temple_02
+	province_owner.faith = { has_doctrine_parameter = can_build_megaliths }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_city_planning }
+	}
+}
+_$modId$__trigger_construct_megalith = {
+	_$modId$__trigger_construct_megalith_01 = yes
+}
+_$modId$__trigger_upgrade_megalith = {
+	OR = {
+		_$modId$__trigger_construct_megalith_02 = yes
+		_$modId$__trigger_construct_megalith_03 = yes
+		_$modId$__trigger_construct_megalith_04 = yes
+		_$modId$__trigger_construct_megalith_05 = yes
+		_$modId$__trigger_construct_megalith_06 = yes
+		_$modId$__trigger_construct_megalith_07 = yes
+		_$modId$__trigger_construct_megalith_08 = yes
+	}
+}

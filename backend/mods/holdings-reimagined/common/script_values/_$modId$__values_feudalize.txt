@@ -1,0 +1,41 @@
+﻿_$modId$__value_feudalize_holding_cost_very_cheap = 125
+_$modId$__value_feudalize_holding_cost_cheap = 250
+_$modId$__value_feudalize_holding_cost_default = 500
+_$modId$__value_feudalize_holding_cost_expensive = 1000
+_$modId$__value_feudalize_holding_cost_very_expensive = 2000
+
+_$modId$__value_feudalize_holding_cost = {
+	if = {
+		limit = {
+			debug_only = yes
+		}
+		value = 0
+	}
+	else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_feudalize_holding_cost_very_cheap
+		}
+		value = _$modId$__value_feudalize_holding_cost_very_cheap
+	}
+	else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_feudalize_holding_cost_cheap
+		}
+		value = _$modId$__value_feudalize_holding_cost_cheap
+	}
+	else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_feudalize_holding_cost_expensive
+		}
+		value = _$modId$__value_feudalize_holding_cost_expensive
+	}
+	else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_feudalize_holding_cost_very_expensive
+		}
+		value = _$modId$__value_feudalize_holding_cost_very_expensive
+	}
+	else = {
+		value = _$modId$__value_feudalize_holding_cost_default
+	}
+}

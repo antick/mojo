@@ -1,0 +1,71 @@
+﻿_$modId$__value_move_duchy_capital_cooldown_very_short = 1
+_$modId$__value_move_duchy_capital_cooldown_short = 5
+_$modId$__value_move_duchy_capital_cooldown_default = 10
+_$modId$__value_move_duchy_capital_cooldown_long = 15
+_$modId$__value_move_duchy_capital_cooldown_very_long = 20
+
+_$modId$__value_move_realm_capital_cooldown_very_short = 1
+_$modId$__value_move_realm_capital_cooldown_short = 5
+_$modId$__value_move_realm_capital_cooldown_default = 10
+_$modId$__value_move_realm_capital_cooldown_long = 15
+_$modId$__value_move_realm_capital_cooldown_very_long = 20
+
+_$modId$__value_move_duchy_capital_cooldown = {
+    if = {
+        limit = {
+            has_game_rule = _$modId$__rule_move_duchy_capital_cooldown_very_short
+        }
+        value = _$modId$__value_move_duchy_capital_cooldown_very_short
+    }
+    else_if = {
+        limit = {
+            has_game_rule = _$modId$__rule_move_duchy_capital_cooldown_short
+        }
+        value = _$modId$__value_move_duchy_capital_cooldown_short
+    }
+    else_if = {
+        limit = {
+            has_game_rule = _$modId$__rule_move_duchy_capital_cooldown_long
+        }
+        value = _$modId$__value_move_duchy_capital_cooldown_long
+    }
+    else_if = {
+        limit = {
+            has_game_rule = _$modId$__rule_move_duchy_capital_cooldown_very_long
+        }
+        value = _$modId$__value_move_duchy_capital_cooldown_very_long
+    }
+    else = {
+        value = _$modId$__value_move_duchy_capital_cooldown_default
+    }
+}
+
+_$modId$__value_move_realm_capital_cooldown = {
+    if = {
+        limit = {
+            has_game_rule = _$modId$__rule_move_realm_capital_cooldown_very_short
+        }
+        value = _$modId$__value_move_realm_capital_cooldown_very_short
+    }
+    else_if = {
+        limit = {
+            has_game_rule = _$modId$__rule_move_realm_capital_cooldown_short
+        }
+        value = _$modId$__value_move_realm_capital_cooldown_short
+    }
+    else_if = {
+        limit = {
+            has_game_rule = _$modId$__rule_move_realm_capital_cooldown_long
+        }
+        value = _$modId$__value_move_realm_capital_cooldown_long
+    }
+    else_if = {
+        limit = {
+            has_game_rule = _$modId$__rule_move_realm_capital_cooldown_very_long
+        }
+        value = _$modId$__value_move_realm_capital_cooldown_very_long
+    }
+    else = {
+        value = _$modId$__value_move_realm_capital_cooldown_default
+    }
+}

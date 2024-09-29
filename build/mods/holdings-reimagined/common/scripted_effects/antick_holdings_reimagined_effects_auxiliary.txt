@@ -1,0 +1,89 @@
+﻿antick_holdings_reimagined_effect_resolve_holding = {
+	#### Prepare things ####
+	if = {
+		limit = {
+			OR = {
+				root = barony.holder
+				AND = {
+					barony = { is_leased_out = yes }
+					NOT = { has_holding_type = church_holding }
+				}
+			}
+		}
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		barony = {
+			change_title_holder = {
+				holder = root
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+
+	#### Do the real job ####
+	if = {
+		limit = {
+			NOT = { root = barony.holder }
+			has_holding_type = castle_holding
+		}
+		if = {
+			limit = {
+				root = { government_has_flag = government_is_feudal }
+			}
+			barony.holder = { change_government = feudal_government }
+		}
+		else = {
+			barony.holder = { change_government = clan_government }
+		}
+	}
+	else_if = {
+		limit = {
+			has_holding_type = church_holding
+		}
+		if = {
+			limit = {
+				root.faith = { has_doctrine = doctrine_theocracy_temporal }
+			}
+			create_title_and_vassal_change = {
+				type = leased_out
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			barony = {
+				change_title_holder = {
+					holder = root
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+		else_if = {
+			limit = {
+				root.faith = { has_doctrine = doctrine_theocracy_lay_clergy }
+			}
+			create_title_and_vassal_change = {
+				type = revoked
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			barony = {
+				change_title_holder = {
+					holder = root
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { root = barony.holder }
+			has_holding_type = city_holding
+		}
+		barony.holder = { change_government = republic_government }
+	}
+}

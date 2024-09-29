@@ -1,0 +1,33 @@
+textformatting = {
+	format = {
+		name = basis_default
+		format = "color:{0.5, 0.5, 0.5}"
+	}
+
+	format = {
+		name = basis_player
+		format = "color:{0, 0.5, 1}"
+	}
+	format = {
+		name = basis_ai
+		format = "color:{1, 0.5, 0}"
+	}
+	format = {
+		name = basis_all
+		format = "color:{1, 1, 1}"
+	}
+
+	format = {
+		name = basis_enabled
+		format = "color:{0.5, 1, 0.5}"
+	}
+	format = {
+		name = basis_disabled
+		format = "color:{0.5, 0.5, 0.5}"
+	}
+
+	format = {
+		name = basis_0
+		format = "color:{1, 1, 1}"
+	}
+}

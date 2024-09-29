@@ -1,0 +1,1250 @@
+﻿_$modId$__trigger_construct_wind_furnace_01 = {
+	NOT = { has_building_or_higher = wind_furnace_01 }
+	_$modId$__building_requirement_tribal = no
+	_$modId$__building_wind_furnace_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+}
+_$modId$__trigger_construct_wind_furnace_02 = {
+	has_building = wind_furnace_01
+	_$modId$__building_requirement_tribal = no
+	_$modId$__building_wind_furnace_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+}
+_$modId$__trigger_construct_wind_furnace_03 = {
+	has_building = wind_furnace_02
+	_$modId$__building_requirement_tribal = no
+	_$modId$__building_wind_furnace_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_wind_furnace_04 = {
+	has_building = wind_furnace_03
+	_$modId$__building_requirement_tribal = no
+	_$modId$__building_wind_furnace_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_wind_furnace_05 = {
+	has_building = wind_furnace_04
+	_$modId$__building_requirement_tribal = no
+	_$modId$__building_wind_furnace_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_wind_furnace_06 = {
+	has_building = wind_furnace_05
+	_$modId$__building_requirement_tribal = no
+	_$modId$__building_wind_furnace_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_wind_furnace_07 = {
+	has_building = wind_furnace_06
+	_$modId$__building_requirement_tribal = no
+	_$modId$__building_wind_furnace_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_wind_furnace_08 = {
+	has_building = wind_furnace_07
+	_$modId$__building_requirement_tribal = no
+	_$modId$__building_wind_furnace_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_wind_furnace = {
+	_$modId$__trigger_construct_wind_furnace_01 = yes
+}
+_$modId$__trigger_upgrade_wind_furnace = {
+	OR = {
+		_$modId$__trigger_construct_wind_furnace_02 = yes
+		_$modId$__trigger_construct_wind_furnace_03 = yes
+		_$modId$__trigger_construct_wind_furnace_04 = yes
+		_$modId$__trigger_construct_wind_furnace_05 = yes
+		_$modId$__trigger_construct_wind_furnace_06 = yes
+		_$modId$__trigger_construct_wind_furnace_07 = yes
+		_$modId$__trigger_construct_wind_furnace_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_workshops_01 = {
+	NOT = { has_building_or_higher = workshops_01 }
+	_$modId$__building_requirement_tribal = no
+	building_workshops_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	province_owner.culture = {
+		has_innovation = innovation_advanced_bowmaking
+	}
+}
+_$modId$__trigger_construct_workshops_02 = {
+	has_building = workshops_01
+	_$modId$__building_requirement_tribal = no
+	building_workshops_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_advanced_bowmaking
+		}
+	}
+}
+_$modId$__trigger_construct_workshops_03 = {
+	has_building = workshops_02
+	_$modId$__building_requirement_tribal = no
+	building_workshops_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_advanced_bowmaking
+		}
+	}
+}
+_$modId$__trigger_construct_workshops_04 = {
+	has_building = workshops_03
+	_$modId$__building_requirement_tribal = no
+	building_workshops_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_advanced_bowmaking
+		}
+	}
+}
+_$modId$__trigger_construct_workshops_05 = {
+	has_building = workshops_04
+	_$modId$__building_requirement_tribal = no
+	building_workshops_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_advanced_bowmaking
+		}
+	}
+}
+_$modId$__trigger_construct_workshops_06 = {
+	has_building = workshops_05
+	_$modId$__building_requirement_tribal = no
+	building_workshops_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_workshops_07 = {
+	has_building = workshops_06
+	_$modId$__building_requirement_tribal = no
+	building_workshops_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_workshops_08 = {
+	has_building = workshops_07
+	_$modId$__building_requirement_tribal = no
+	building_workshops_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_workshops = {
+	_$modId$__trigger_construct_workshops_01 = yes
+}
+_$modId$__trigger_upgrade_workshops = {
+	OR = {
+		_$modId$__trigger_construct_workshops_02 = yes
+		_$modId$__trigger_construct_workshops_03 = yes
+		_$modId$__trigger_construct_workshops_04 = yes
+		_$modId$__trigger_construct_workshops_05 = yes
+		_$modId$__trigger_construct_workshops_06 = yes
+		_$modId$__trigger_construct_workshops_07 = yes
+		_$modId$__trigger_construct_workshops_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_horse_pastures_01 = {
+	NOT = { has_building_or_higher = horse_pastures_01 }
+	building_horse_pastures_requirement_terrain = yes
+}
+_$modId$__trigger_construct_horse_pastures_02 = {
+	has_building = horse_pastures_01
+	building_horse_pastures_requirement_terrain = yes
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+}
+_$modId$__trigger_construct_horse_pastures_03 = {
+	has_building = horse_pastures_02
+	_$modId$__building_requirement_tribal = no
+	building_horse_pastures_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_horse_pastures_04 = {
+	has_building = horse_pastures_03
+	_$modId$__building_requirement_tribal = no
+	building_horse_pastures_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_horse_pastures_05 = {
+	has_building = horse_pastures_04
+	_$modId$__building_requirement_tribal = no
+	building_horse_pastures_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_horse_pastures_06 = {
+	has_building = horse_pastures_05
+	_$modId$__building_requirement_tribal = no
+	building_horse_pastures_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_horse_pastures_07 = {
+	has_building = horse_pastures_06
+	_$modId$__building_requirement_tribal = no
+	building_horse_pastures_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_horse_pastures_08 = {
+	has_building = horse_pastures_07
+	_$modId$__building_requirement_tribal = no
+	building_horse_pastures_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_horse_pastures = {
+	_$modId$__trigger_construct_horse_pastures_01 = yes
+}
+_$modId$__trigger_upgrade_horse_pastures = {
+	OR = {
+		_$modId$__trigger_construct_horse_pastures_02 = yes
+		_$modId$__trigger_construct_horse_pastures_03 = yes
+		_$modId$__trigger_construct_horse_pastures_04 = yes
+		_$modId$__trigger_construct_horse_pastures_05 = yes
+		_$modId$__trigger_construct_horse_pastures_06 = yes
+		_$modId$__trigger_construct_horse_pastures_07 = yes
+		_$modId$__trigger_construct_horse_pastures_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_hillside_grazing_01 = {
+	NOT = { has_building_or_higher = hillside_grazing_01 }
+	building_hillside_grazing_requirement_terrain = yes
+}
+_$modId$__trigger_construct_hillside_grazing_02 = {
+	has_building = hillside_grazing_01
+	building_hillside_grazing_requirement_terrain = yes
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+}
+_$modId$__trigger_construct_hillside_grazing_03 = {
+	has_building = hillside_grazing_02
+	_$modId$__building_requirement_tribal = no
+	building_hillside_grazing_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_hillside_grazing_04 = {
+	has_building = hillside_grazing_03
+	_$modId$__building_requirement_tribal = no
+	building_hillside_grazing_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_hillside_grazing_05 = {
+	has_building = hillside_grazing_04
+	_$modId$__building_requirement_tribal = no
+	building_hillside_grazing_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_hillside_grazing_06 = {
+	has_building = hillside_grazing_05
+	_$modId$__building_requirement_tribal = no
+	building_hillside_grazing_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_hillside_grazing_07 = {
+	has_building = hillside_grazing_06
+	_$modId$__building_requirement_tribal = no
+	building_hillside_grazing_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_hillside_grazing_08 = {
+	has_building = hillside_grazing_07
+	_$modId$__building_requirement_tribal = no
+	building_hillside_grazing_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_hillside_grazing = {
+	_$modId$__trigger_construct_hillside_grazing_01 = yes
+}
+_$modId$__trigger_upgrade_hillside_grazing = {
+	OR = {
+		_$modId$__trigger_construct_hillside_grazing_02 = yes
+		_$modId$__trigger_construct_hillside_grazing_03 = yes
+		_$modId$__trigger_construct_hillside_grazing_04 = yes
+		_$modId$__trigger_construct_hillside_grazing_05 = yes
+		_$modId$__trigger_construct_hillside_grazing_06 = yes
+		_$modId$__trigger_construct_hillside_grazing_07 = yes
+		_$modId$__trigger_construct_hillside_grazing_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_warrior_lodges_01 = {
+	NOT = { has_building_or_higher = warrior_lodges_01 }
+	building_warrior_lodges_requirement_terrain = yes
+}
+_$modId$__trigger_construct_warrior_lodges_02 = {
+	has_building = warrior_lodges_01
+	building_warrior_lodges_requirement_terrain = yes
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+}
+_$modId$__trigger_construct_warrior_lodges_03 = {
+	has_building = warrior_lodges_02
+	_$modId$__building_requirement_tribal = no
+	building_warrior_lodges_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_warrior_lodges_04 = {
+	has_building = warrior_lodges_03
+	_$modId$__building_requirement_tribal = no
+	building_warrior_lodges_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_warrior_lodges_05 = {
+	has_building = warrior_lodges_04
+	_$modId$__building_requirement_tribal = no
+	building_warrior_lodges_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_warrior_lodges_06 = {
+	has_building = warrior_lodges_05
+	_$modId$__building_requirement_tribal = no
+	building_warrior_lodges_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_warrior_lodges_07 = {
+	has_building = warrior_lodges_06
+	_$modId$__building_requirement_tribal = no
+	building_warrior_lodges_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_warrior_lodges_08 = {
+	has_building = warrior_lodges_07
+	_$modId$__building_requirement_tribal = no
+	building_warrior_lodges_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_warrior_lodges = {
+	_$modId$__trigger_construct_warrior_lodges_01 = yes
+}
+_$modId$__trigger_upgrade_warrior_lodges = {
+	OR = {
+		_$modId$__trigger_construct_warrior_lodges_02 = yes
+		_$modId$__trigger_construct_warrior_lodges_03 = yes
+		_$modId$__trigger_construct_warrior_lodges_04 = yes
+		_$modId$__trigger_construct_warrior_lodges_05 = yes
+		_$modId$__trigger_construct_warrior_lodges_06 = yes
+		_$modId$__trigger_construct_warrior_lodges_07 = yes
+		_$modId$__trigger_construct_warrior_lodges_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_military_camps_01 = {
+	NOT = { has_building_or_higher = military_camps_01 }
+	_$modId$__building_requirement_tribal = no
+	building_military_camps_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+}
+_$modId$__trigger_construct_military_camps_02 = {
+	has_building = military_camps_01
+	_$modId$__building_requirement_tribal = no
+	building_military_camps_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+}
+_$modId$__trigger_construct_military_camps_03 = {
+	has_building = military_camps_02
+	_$modId$__building_requirement_tribal = no
+	building_military_camps_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_military_camps_04 = {
+	has_building = military_camps_03
+	_$modId$__building_requirement_tribal = no
+	building_military_camps_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_military_camps_05 = {
+	has_building = military_camps_04
+	_$modId$__building_requirement_tribal = no
+	building_military_camps_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_military_camps_06 = {
+	has_building = military_camps_05
+	_$modId$__building_requirement_tribal = no
+	building_military_camps_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_military_camps_07 = {
+	has_building = military_camps_06
+	_$modId$__building_requirement_tribal = no
+	building_military_camps_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_military_camps_08 = {
+	has_building = military_camps_07
+	_$modId$__building_requirement_tribal = no
+	building_military_camps_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_military_camps = {
+	_$modId$__trigger_construct_military_camps_01 = yes
+}
+_$modId$__trigger_upgrade_military_camps = {
+	OR = {
+		_$modId$__trigger_construct_military_camps_02 = yes
+		_$modId$__trigger_construct_military_camps_03 = yes
+		_$modId$__trigger_construct_military_camps_04 = yes
+		_$modId$__trigger_construct_military_camps_05 = yes
+		_$modId$__trigger_construct_military_camps_06 = yes
+		_$modId$__trigger_construct_military_camps_07 = yes
+		_$modId$__trigger_construct_military_camps_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_regimental_grounds_01 = {
+	NOT = { has_building_or_higher = regimental_grounds_01 }
+	_$modId$__building_requirement_tribal = no
+	building_regimental_grounds_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+}
+_$modId$__trigger_construct_regimental_grounds_02 = {
+	has_building = regimental_grounds_01
+	_$modId$__building_requirement_tribal = no
+	building_regimental_grounds_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+}
+_$modId$__trigger_construct_regimental_grounds_03 = {
+	has_building = regimental_grounds_02
+	_$modId$__building_requirement_tribal = no
+	building_regimental_grounds_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_regimental_grounds_04 = {
+	has_building = regimental_grounds_03
+	_$modId$__building_requirement_tribal = no
+	building_regimental_grounds_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_regimental_grounds_05 = {
+	has_building = regimental_grounds_04
+	_$modId$__building_requirement_tribal = no
+	building_regimental_grounds_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_regimental_grounds_06 = {
+	has_building = regimental_grounds_05
+	_$modId$__building_requirement_tribal = no
+	building_regimental_grounds_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_regimental_grounds_07 = {
+	has_building = regimental_grounds_06
+	_$modId$__building_requirement_tribal = no
+	building_regimental_grounds_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_regimental_grounds_08 = {
+	has_building = regimental_grounds_07
+	_$modId$__building_requirement_tribal = no
+	building_regimental_grounds_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_regimental_grounds = {
+	_$modId$__trigger_construct_regimental_grounds_01 = yes
+}
+_$modId$__trigger_upgrade_regimental_grounds = {
+	OR = {
+		_$modId$__trigger_construct_regimental_grounds_02 = yes
+		_$modId$__trigger_construct_regimental_grounds_03 = yes
+		_$modId$__trigger_construct_regimental_grounds_04 = yes
+		_$modId$__trigger_construct_regimental_grounds_05 = yes
+		_$modId$__trigger_construct_regimental_grounds_06 = yes
+		_$modId$__trigger_construct_regimental_grounds_07 = yes
+		_$modId$__trigger_construct_regimental_grounds_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_outposts_01 = {
+	NOT = { has_building_or_higher = outposts_01 }
+	_$modId$__building_requirement_tribal = no
+	building_outposts_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+}
+_$modId$__trigger_construct_outposts_02 = {
+	has_building = outposts_01
+	_$modId$__building_requirement_tribal = no
+	building_outposts_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+}
+_$modId$__trigger_construct_outposts_03 = {
+	has_building = outposts_02
+	_$modId$__building_requirement_tribal = no
+	building_outposts_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_outposts_04 = {
+	has_building = outposts_03
+	_$modId$__building_requirement_tribal = no
+	building_outposts_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_outposts_05 = {
+	has_building = outposts_04
+	_$modId$__building_requirement_tribal = no
+	building_outposts_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_outposts_06 = {
+	has_building = outposts_05
+	_$modId$__building_requirement_tribal = no
+	building_outposts_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_outposts_07 = {
+	has_building = outposts_06
+	_$modId$__building_requirement_tribal = no
+	building_outposts_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_outposts_08 = {
+	has_building = outposts_07
+	_$modId$__building_requirement_tribal = no
+	building_outposts_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_outposts = {
+	_$modId$__trigger_construct_outposts_01 = yes
+}
+_$modId$__trigger_upgrade_outposts = {
+	OR = {
+		_$modId$__trigger_construct_outposts_02 = yes
+		_$modId$__trigger_construct_outposts_03 = yes
+		_$modId$__trigger_construct_outposts_04 = yes
+		_$modId$__trigger_construct_outposts_05 = yes
+		_$modId$__trigger_construct_outposts_06 = yes
+		_$modId$__trigger_construct_outposts_07 = yes
+		_$modId$__trigger_construct_outposts_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_barracks_01 = {
+	NOT = { has_building_or_higher = barracks_01 }
+	_$modId$__building_requirement_tribal = no
+	building_barracks_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+}
+_$modId$__trigger_construct_barracks_02 = {
+	has_building = barracks_01
+	_$modId$__building_requirement_tribal = no
+	building_barracks_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+}
+_$modId$__trigger_construct_barracks_03 = {
+	has_building = barracks_02
+	_$modId$__building_requirement_tribal = no
+	building_barracks_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_barracks_04 = {
+	has_building = barracks_03
+	_$modId$__building_requirement_tribal = no
+	building_barracks_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_barracks_05 = {
+	has_building = barracks_04
+	_$modId$__building_requirement_tribal = no
+	building_barracks_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_barracks_06 = {
+	has_building = barracks_05
+	_$modId$__building_requirement_tribal = no
+	building_barracks_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_barracks_07 = {
+	has_building = barracks_06
+	_$modId$__building_requirement_tribal = no
+	building_barracks_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_barracks_08 = {
+	has_building = barracks_07
+	_$modId$__building_requirement_tribal = no
+	building_barracks_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_barracks = {
+	_$modId$__trigger_construct_barracks_01 = yes
+}
+_$modId$__trigger_upgrade_barracks = {
+	OR = {
+		_$modId$__trigger_construct_barracks_02 = yes
+		_$modId$__trigger_construct_barracks_03 = yes
+		_$modId$__trigger_construct_barracks_04 = yes
+		_$modId$__trigger_construct_barracks_05 = yes
+		_$modId$__trigger_construct_barracks_06 = yes
+		_$modId$__trigger_construct_barracks_07 = yes
+		_$modId$__trigger_construct_barracks_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_camel_farms_01 = {
+	NOT = { has_building_or_higher = camel_farms_01 }
+	_$modId$__building_requirement_tribal = no
+	building_camel_farms_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+}
+_$modId$__trigger_construct_camel_farms_02 = {
+	has_building = camel_farms_01
+	_$modId$__building_requirement_tribal = no
+	building_camel_farms_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+}
+_$modId$__trigger_construct_camel_farms_03 = {
+	has_building = camel_farms_02
+	_$modId$__building_requirement_tribal = no
+	building_camel_farms_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_camel_farms_04 = {
+	has_building = camel_farms_03
+	_$modId$__building_requirement_tribal = no
+	building_camel_farms_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_camel_farms_05 = {
+	has_building = camel_farms_04
+	_$modId$__building_requirement_tribal = no
+	building_camel_farms_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_camel_farms_06 = {
+	has_building = camel_farms_05
+	_$modId$__building_requirement_tribal = no
+	building_camel_farms_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_camel_farms_07 = {
+	has_building = camel_farms_06
+	_$modId$__building_requirement_tribal = no
+	building_camel_farms_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_camel_farms_08 = {
+	has_building = camel_farms_07
+	_$modId$__building_requirement_tribal = no
+	building_camel_farms_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_camel_farms = {
+	_$modId$__trigger_construct_camel_farms_01 = yes
+}
+_$modId$__trigger_upgrade_camel_farms = {
+	OR = {
+		_$modId$__trigger_construct_camel_farms_02 = yes
+		_$modId$__trigger_construct_camel_farms_03 = yes
+		_$modId$__trigger_construct_camel_farms_04 = yes
+		_$modId$__trigger_construct_camel_farms_05 = yes
+		_$modId$__trigger_construct_camel_farms_06 = yes
+		_$modId$__trigger_construct_camel_farms_07 = yes
+		_$modId$__trigger_construct_camel_farms_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_stables_01 = {
+	NOT = { has_building_or_higher = stables_01 }
+	_$modId$__building_requirement_tribal = no
+	building_stables_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+}
+_$modId$__trigger_construct_stables_02 = {
+	has_building = stables_01
+	_$modId$__building_requirement_tribal = no
+	building_stables_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+}
+_$modId$__trigger_construct_stables_03 = {
+	has_building = stables_02
+	_$modId$__building_requirement_tribal = no
+	building_stables_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_stables_04 = {
+	has_building = stables_03
+	_$modId$__building_requirement_tribal = no
+	building_stables_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_stables_05 = {
+	has_building = stables_04
+	_$modId$__building_requirement_tribal = no
+	building_stables_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_stables_06 = {
+	has_building = stables_05
+	_$modId$__building_requirement_tribal = no
+	building_stables_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_stables_07 = {
+	has_building = stables_06
+	_$modId$__building_requirement_tribal = no
+	building_stables_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_stables_08 = {
+	has_building = stables_07
+	_$modId$__building_requirement_tribal = no
+	building_stables_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_stables = {
+	_$modId$__trigger_construct_stables_01 = yes
+}
+_$modId$__trigger_upgrade_stables = {
+	OR = {
+		_$modId$__trigger_construct_stables_02 = yes
+		_$modId$__trigger_construct_stables_03 = yes
+		_$modId$__trigger_construct_stables_04 = yes
+		_$modId$__trigger_construct_stables_05 = yes
+		_$modId$__trigger_construct_stables_06 = yes
+		_$modId$__trigger_construct_stables_07 = yes
+		_$modId$__trigger_construct_stables_08 = yes
+	}
+}
+
+_$modId$__trigger_construct_smiths_01 = {
+	NOT = { has_building_or_higher = smiths_01 }
+	_$modId$__building_requirement_tribal = no
+	building_smiths_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+}
+_$modId$__trigger_construct_smiths_02 = {
+	has_building = smiths_01
+	_$modId$__building_requirement_tribal = no
+	building_smiths_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+}
+_$modId$__trigger_construct_smiths_03 = {
+	has_building = smiths_02
+	_$modId$__building_requirement_tribal = no
+	building_smiths_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_smiths_04 = {
+	has_building = smiths_03
+	_$modId$__building_requirement_tribal = no
+	building_smiths_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+}
+_$modId$__trigger_construct_smiths_05 = {
+	has_building = smiths_04
+	_$modId$__building_requirement_tribal = no
+	building_smiths_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+}
+_$modId$__trigger_construct_smiths_06 = {
+	has_building = smiths_05
+	_$modId$__building_requirement_tribal = no
+	building_smiths_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_smiths_07 = {
+	has_building = smiths_06
+	_$modId$__building_requirement_tribal = no
+	building_smiths_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_smiths_08 = {
+	has_building = smiths_07
+	_$modId$__building_requirement_tribal = no
+	building_smiths_requirement_terrain = yes
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		province_owner.culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+}
+_$modId$__trigger_construct_smiths = {
+	_$modId$__trigger_construct_smiths_01 = yes
+}
+_$modId$__trigger_upgrade_smiths = {
+	OR = {
+		_$modId$__trigger_construct_smiths_02 = yes
+		_$modId$__trigger_construct_smiths_03 = yes
+		_$modId$__trigger_construct_smiths_04 = yes
+		_$modId$__trigger_construct_smiths_05 = yes
+		_$modId$__trigger_construct_smiths_06 = yes
+		_$modId$__trigger_construct_smiths_07 = yes
+		_$modId$__trigger_construct_smiths_08 = yes
+	}
+}

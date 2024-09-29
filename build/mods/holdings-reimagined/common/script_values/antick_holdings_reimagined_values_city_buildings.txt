@@ -1,0 +1,98 @@
+﻿antick_holdings_reimagined_value_construct_city_02_gold_cost = {
+	value = main_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_city_03_gold_cost = {
+	value = main_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_city_04_gold_cost = {
+	value = main_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_upgrade_city_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_city_02 = yes }
+		add = antick_holdings_reimagined_value_construct_city_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_city_03 = yes }
+		add = antick_holdings_reimagined_value_construct_city_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_city_04 = yes }
+		add = antick_holdings_reimagined_value_construct_city_04_gold_cost
+	}
+}
+
+antick_holdings_reimagined_value_construct_guild_halls_01_gold_cost = {
+	value = normal_building_tier_1_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_guild_halls_02_gold_cost = {
+	value = normal_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_guild_halls_03_gold_cost = {
+	value = normal_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_guild_halls_04_gold_cost = {
+	value = normal_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_guild_halls_05_gold_cost = {
+	value = normal_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_guild_halls_06_gold_cost = {
+	value = normal_building_tier_6_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_guild_halls_07_gold_cost = {
+	value = normal_building_tier_7_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_guild_halls_08_gold_cost = {
+	value = normal_building_tier_8_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_guild_halls_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_01 = yes }
+		add = antick_holdings_reimagined_value_construct_guild_halls_01_gold_cost
+	}
+}
+antick_holdings_reimagined_value_upgrade_guild_halls_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_02 = yes }
+		add = antick_holdings_reimagined_value_construct_guild_halls_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_03 = yes }
+		add = antick_holdings_reimagined_value_construct_guild_halls_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_04 = yes }
+		add = antick_holdings_reimagined_value_construct_guild_halls_04_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_05 = yes }
+		add = antick_holdings_reimagined_value_construct_guild_halls_05_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_06 = yes }
+		add = antick_holdings_reimagined_value_construct_guild_halls_06_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_07 = yes }
+		add = antick_holdings_reimagined_value_construct_guild_halls_07_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_08 = yes }
+		add = antick_holdings_reimagined_value_construct_guild_halls_08_gold_cost
+	}
+}

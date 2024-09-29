@@ -1,0 +1,28 @@
+﻿on_game_start = {
+	on_actions = {
+		_$modId$__on_action_game_start
+	}
+}
+
+_$modId$__on_action_game_start = {
+	effect = {
+		if = {
+			limit = {
+				NOT = { exists = global_var:_$modId$__is_loaded }
+			}
+			set_global_variable = {
+				name = _$modId$__is_loaded
+				value = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:_$modId$__show_decisions }
+			}
+			set_global_variable = {
+				name = _$modId$__show_decisions
+				value = no
+			}
+		}
+	}
+}

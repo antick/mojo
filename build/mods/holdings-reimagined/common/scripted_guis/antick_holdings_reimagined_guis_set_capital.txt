@@ -1,0 +1,156 @@
+﻿antick_holdings_reimagined_set_county_capital_button = {
+	scope = character
+	saved_scopes = { gui_holding }
+    is_shown = {
+		scope:gui_holding = {
+			is_county_capital = no
+			county.holder = root
+		}
+    }
+    # is_valid = {
+    # }
+    effect = {
+		scope:gui_holding.barony = {
+			set_capital_barony = yes
+		}
+    }
+}
+
+antick_holdings_reimagined_set_duchy_capital_button = {
+	scope = character
+	saved_scopes = { gui_holding }
+    is_shown = {
+		scope:gui_holding = {
+			is_county_capital = yes
+			NOT = { this = duchy.title_capital_county.title_province }
+			county.holder = root
+			duchy.holder = root
+			duchy.title_capital_county.holder = root
+		}
+    }
+    is_valid = {
+		trigger_if = {
+			limit = {
+				debug_only = no
+			}
+    		NOT = { has_character_flag = duchy_capital_moved }
+		}
+    }
+	effect = {
+		custom_tooltip = antick_holdings_reimagined_set_duchy_capital.tt
+		if = {
+			limit = {
+				debug_only = no
+			}
+			if = {
+				limit = {
+					has_game_rule = antick_holdings_reimagined_rule_move_duchy_capital_cooldown_lifetime
+				}
+				add_character_flag = {
+					flag = duchy_capital_moved
+				}
+			}
+			else = {
+				add_character_flag = {
+					flag = duchy_capital_moved
+					years = antick_holdings_reimagined_value_move_duchy_capital_cooldown
+				}
+			}
+		}
+		hidden_effect = {
+			scope:gui_holding.duchy = {
+				save_scope_as = antick_holdings_reimagined_gui_scope_old_title
+			}
+
+			create_dynamic_title = {
+				tier = duchy
+				name = NEW_CREATED_TITLE_NAME
+			}
+
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+
+			scope:new_title = {
+				set_delete_on_destroy = yes
+				change_title_holder = {
+					holder = root
+					change = scope:change
+				}
+			}
+
+			resolve_title_and_vassal_change = scope:change
+
+			scope:antick_holdings_reimagined_gui_scope_old_title = {
+				set_capital_county = scope:gui_holding.county
+				every_in_de_jure_hierarchy = {
+					limit = {
+						tier = tier_county
+						NOT = { title_capital_county = de_jure_liege.title_capital_county }
+						#NOT = { this = scope:antick_holdings_reimagined_gui_scope_old_title.title_capital_county }
+					}
+					add_to_list = moved_counties
+				}
+			}
+
+			every_in_list = {
+				list = moved_counties
+				set_de_jure_liege_title = scope:new_title
+			}
+
+			every_in_list = {
+				list = moved_counties
+				set_de_jure_liege_title = scope:antick_holdings_reimagined_gui_scope_old_title
+			}
+
+			destroy_title = scope:new_title
+		}
+    }
+}
+
+antick_holdings_reimagined_set_realm_capital_button = {
+	scope = character
+	saved_scopes = { gui_holding }
+    # is_shown = {
+	# 	scope:gui_holding = {
+	# 		is_county_capital = yes
+	# 		root = county.holder
+	# 	}
+	# 	NOT = { capital_province = scope:gui_holding }
+    # }
+    is_valid = {
+		trigger_if = {
+			limit = {
+				debug_only = no
+			}
+			OR = {
+				primary_title.title_capital_county.title_province = scope:gui_holding
+				NOT = { has_character_flag = realm_capital_moved }
+			}
+		}
+    }
+    effect = {
+		if = {
+			limit = {
+				debug_only = no
+			}
+			if = {
+				limit = {
+					has_game_rule = antick_holdings_reimagined_rule_move_realm_capital_cooldown_lifetime
+				}
+				add_character_flag = {
+					flag = realm_capital_moved
+				}
+			}
+			else = {
+				add_character_flag = {
+					flag = realm_capital_moved
+					years = antick_holdings_reimagined_value_move_realm_capital_cooldown
+				}
+			}
+		}
+		set_realm_capital = scope:gui_holding.barony
+    }
+}

@@ -1,0 +1,31 @@
+﻿_$modId$__trigger_construct_castle_02 = {
+	has_building = castle_01
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_battlements }
+	}
+}
+_$modId$__trigger_construct_castle_03 = {
+	has_building = castle_02
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_hoardings }
+	}
+}
+_$modId$__trigger_construct_castle_04 = {
+	has_building = castle_03
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_machicolations }
+	}
+}
+_$modId$__trigger_upgrade_castle = {
+	OR = {
+		_$modId$__trigger_construct_castle_02 = yes
+		_$modId$__trigger_construct_castle_03 = yes
+		_$modId$__trigger_construct_castle_04 = yes
+	}
+}

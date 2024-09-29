@@ -1,0 +1,46 @@
+﻿antick_holdings_reimagined_decision_hide_all = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    desc = antick_holdings_reimagined_decision_hide_all_desc
+	selection_tooltip = antick_holdings_reimagined_decision_hide_all_tooltip
+
+	is_shown = {
+		global_var:antick_holdings_reimagined_show_decisions ?= yes
+	}
+
+	effect = {
+		custom_tooltip = antick_holdings_reimagined_hide_all_effect_tooltip
+		hidden_effect = {
+			set_global_variable = {
+				name = antick_holdings_reimagined_show_decisions
+				value = no
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}
+
+antick_holdings_reimagined_decision_show_all = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    desc = antick_holdings_reimagined_decision_show_all_desc
+	selection_tooltip = antick_holdings_reimagined_decision_show_all_tooltip
+
+	is_shown = {
+		OR = {
+			NOT = { exists = global_var:antick_holdings_reimagined_show_decisions }
+			global_var:antick_holdings_reimagined_show_decisions = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = antick_holdings_reimagined_show_all_effect_tooltip
+		hidden_effect = {
+			set_global_variable = {
+				name = antick_holdings_reimagined_show_decisions
+				value = yes
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}

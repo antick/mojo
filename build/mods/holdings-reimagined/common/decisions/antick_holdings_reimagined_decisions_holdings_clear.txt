@@ -1,0 +1,39 @@
+﻿antick_holdings_reimagined_decision_remove_all = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    desc = antick_holdings_reimagined_decision_remove_all_desc
+	selection_tooltip = antick_holdings_reimagined_decision_remove_all_tooltip
+
+	is_shown = {
+		global_var:antick_holdings_reimagined_show_decisions ?= yes
+		is_landed = yes
+		any_directly_owned_province = {
+			has_ongoing_construction = no
+			barony = {
+				is_leased_out = no
+			}
+			antick_holdings_reimagined_trigger_remove_buildings = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_at_war = no
+	}
+
+	effect = {
+		custom_tooltip = antick_holdings_reimagined_remove_all_effect_tooltip
+		hidden_effect = {
+			every_directly_owned_province = {
+				limit = {
+					has_ongoing_construction = no
+					barony = {
+						is_leased_out = no
+					}
+				}
+				antick_holdings_reimagined_effect_remove_buildings = yes
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}

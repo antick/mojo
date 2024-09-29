@@ -1,0 +1,14 @@
+﻿antick_holdings_reimagined_effect_upgrade_castle = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_castle_02 = yes }
+		add_building = castle_02
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_castle_03 = yes }
+		add_building = castle_03
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_castle_04 = yes }
+		add_building = castle_04
+	}
+}

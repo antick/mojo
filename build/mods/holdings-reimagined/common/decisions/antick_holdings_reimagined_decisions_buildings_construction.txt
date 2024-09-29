@@ -1,0 +1,83 @@
+﻿antick_holdings_reimagined_decision_buildings_construction = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    desc = antick_holdings_reimagined_decision_buildings_construction_desc
+	selection_tooltip = antick_holdings_reimagined_decision_buildings_construction_tooltip
+
+	cost = {
+		gold = {
+			every_directly_owned_province = {
+				limit = {
+					has_ongoing_construction = no
+					barony = {
+						is_leased_out = no
+					}
+				}
+				add = antick_holdings_reimagined_value_max_building_slots_and_construct_buildings_gold_cost
+			}
+			if = {
+				limit = {
+					debug_only = yes
+				}
+				multiply = 0
+			}
+		}
+		prestige = {
+			every_directly_owned_province = {
+				limit = {
+					has_ongoing_construction = no
+					barony = {
+						is_leased_out = no
+					}
+				}
+				add = antick_holdings_reimagined_value_construct_buildings_prestige_cost
+			}
+			if = {
+				limit = {
+					debug_only = yes
+				}
+				multiply = 0
+			}
+		}
+	}
+
+	is_shown = {
+		global_var:antick_holdings_reimagined_show_decisions ?= yes
+		NOT = { has_game_rule = antick_holdings_reimagined_rule_ai_extra_slots_disabled }
+		is_landed = yes
+		any_directly_owned_province = {
+			count > 0
+			has_ongoing_construction = no
+			barony = {
+				is_leased_out = no
+			}
+			antick_holdings_reimagined_trigger_construct_buildings = yes
+			OR = {
+				antick_holdings_reimagined_trigger_player_add_slot = yes
+				has_free_building_slot = yes
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_at_war = no
+	}
+
+	effect = {
+		custom_tooltip = antick_holdings_reimagined_effect_construct_buildings_tooltip
+		hidden_effect = {
+			every_directly_owned_province = {
+				limit = {
+					has_ongoing_construction = no
+					barony = {
+						is_leased_out = no
+					}
+				}
+				antick_holdings_reimagined_effect_construct_buildings = yes
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}
+

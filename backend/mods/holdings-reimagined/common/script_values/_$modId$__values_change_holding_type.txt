@@ -1,0 +1,71 @@
+﻿_$modId$__value_change_holding_type_cost_very_cheap = 125
+_$modId$__value_change_holding_type_cost_cheap = 250
+_$modId$__value_change_holding_type_cost_default = 500
+_$modId$__value_change_holding_type_cost_expensive = 1000
+_$modId$__value_change_holding_type_cost_very_expensive = 2000
+
+_$modId$__value_change_holding_type_cooldown_very_short = 1
+_$modId$__value_change_holding_type_cooldown_short = 2
+_$modId$__value_change_holding_type_cooldown_default = 3
+_$modId$__value_change_holding_type_cooldown_long = 4
+_$modId$__value_change_holding_type_cooldown_very_long = 5
+
+_$modId$__value_change_holding_type_cost = {
+	if = {
+		limit = {
+			has_game_rule = _$modId$__rule_change_holding_type_cost_very_cheap
+		}
+		value = _$modId$__value_change_holding_type_cost_very_cheap
+	}
+	else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_change_holding_type_cost_cheap
+		}
+		value = _$modId$__value_change_holding_type_cost_cheap
+	}
+	else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_change_holding_type_cost_expensive
+		}
+		value = _$modId$__value_change_holding_type_cost_expensive
+	}
+	else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_change_holding_type_cost_very_expensive
+		}
+		value = _$modId$__value_change_holding_type_cost_very_expensive
+	}
+	else = {
+		value = _$modId$__value_change_holding_type_cost_default
+	}
+}
+
+_$modId$__value_change_holding_type_cooldown = {
+	if = {
+		limit = {
+			has_game_rule = _$modId$__rule_change_holding_type_cooldown_very_short
+		}
+		value = _$modId$__value_change_holding_type_cooldown_very_short
+	}
+	else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_change_holding_type_cooldown_short
+		}
+		value = _$modId$__value_change_holding_type_cooldown_short
+	}
+	else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_change_holding_type_cooldown_long
+		}
+		value = _$modId$__value_change_holding_type_cooldown_long
+	}
+	else_if = {
+		limit = {
+			has_game_rule = _$modId$__rule_change_holding_type_cooldown_very_long
+		}
+		value = _$modId$__value_change_holding_type_cooldown_very_long
+	}
+	else = {
+		value = _$modId$__value_change_holding_type_cooldown_default
+	}
+}

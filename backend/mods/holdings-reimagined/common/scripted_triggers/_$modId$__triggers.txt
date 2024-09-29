@@ -1,0 +1,162 @@
+﻿_$modId$__trigger_construct_buildings = {
+	OR = {
+		# tribal buildings
+		_$modId$__trigger_construct_longhouses = yes
+		_$modId$__trigger_construct_war_camps = yes
+		_$modId$__trigger_construct_palisades = yes
+		_$modId$__trigger_construct_market_villages = yes
+		# castle buildings
+		# city buildings
+		_$modId$__trigger_construct_guild_halls = yes
+		# temple buildings
+		_$modId$__trigger_construct_scriptorium = yes
+		_$modId$__trigger_construct_monastic_schools = yes
+		_$modId$__trigger_construct_megalith = yes
+		# common buildings
+		_$modId$__trigger_construct_hospices = yes
+		# standard fortification buildings
+		_$modId$__trigger_construct_ramparts = yes
+		_$modId$__trigger_construct_curtain_walls = yes
+		_$modId$__trigger_construct_watchtowers = yes
+		_$modId$__trigger_construct_hill_forts = yes
+		# standard economy buildings
+		_$modId$__trigger_construct_caravanserai = yes
+		_$modId$__trigger_construct_watermills = yes
+		_$modId$__trigger_construct_windmills = yes
+		_$modId$__trigger_construct_common_tradeport = yes
+		_$modId$__trigger_construct_pastures = yes
+		_$modId$__trigger_construct_hunting_grounds = yes
+		_$modId$__trigger_construct_orchards = yes
+		_$modId$__trigger_construct_farm_estates = yes
+		_$modId$__trigger_construct_cereal_fields = yes
+		_$modId$__trigger_construct_logging_camps = yes
+		_$modId$__trigger_construct_peat_quarries = yes
+		_$modId$__trigger_construct_hill_farms = yes
+		_$modId$__trigger_construct_elephant_pens = yes
+		_$modId$__trigger_construct_plantations = yes
+		_$modId$__trigger_construct_quarries = yes
+		# standard military buildings
+		_$modId$__trigger_construct_wind_furnace = yes
+		_$modId$__trigger_construct_workshops = yes
+		_$modId$__trigger_construct_horse_pastures = yes
+		_$modId$__trigger_construct_hillside_grazing = yes
+		_$modId$__trigger_construct_warrior_lodges = yes
+		_$modId$__trigger_construct_military_camps = yes
+		_$modId$__trigger_construct_regimental_grounds = yes
+		_$modId$__trigger_construct_outposts = yes
+		_$modId$__trigger_construct_barracks = yes
+		_$modId$__trigger_construct_camel_farms = yes
+		_$modId$__trigger_construct_stables = yes
+		_$modId$__trigger_construct_smiths = yes
+	}
+}
+
+_$modId$__trigger_upgrade_buildings = {
+	OR = {
+		# tribal buildings
+		_$modId$__trigger_upgrade_tribe = yes
+		_$modId$__trigger_upgrade_longhouses = yes
+		_$modId$__trigger_upgrade_war_camps = yes
+		_$modId$__trigger_upgrade_palisades = yes
+		_$modId$__trigger_upgrade_market_villages = yes
+		# castle buildings
+		_$modId$__trigger_upgrade_castle = yes
+		# city buildings
+		_$modId$__trigger_upgrade_city = yes
+		_$modId$__trigger_upgrade_guild_halls = yes
+		# temple buildings
+		_$modId$__trigger_upgrade_temple = yes
+		_$modId$__trigger_upgrade_scriptorium = yes
+		_$modId$__trigger_upgrade_monastic_schools = yes
+		_$modId$__trigger_upgrade_megalith = yes
+		# common buildings
+		_$modId$__trigger_upgrade_hospices = yes
+		# standard fortification buildings
+		_$modId$__trigger_upgrade_ramparts = yes
+		_$modId$__trigger_upgrade_curtain_walls = yes
+		_$modId$__trigger_upgrade_watchtowers = yes
+		_$modId$__trigger_upgrade_hill_forts = yes
+		# standard economy buildings
+		_$modId$__trigger_upgrade_caravanserai = yes
+		_$modId$__trigger_upgrade_watermills = yes
+		_$modId$__trigger_upgrade_windmills = yes
+		_$modId$__trigger_upgrade_common_tradeport = yes
+		_$modId$__trigger_upgrade_pastures = yes
+		_$modId$__trigger_upgrade_hunting_grounds = yes
+		_$modId$__trigger_upgrade_orchards = yes
+		_$modId$__trigger_upgrade_farm_estates = yes
+		_$modId$__trigger_upgrade_cereal_fields = yes
+		_$modId$__trigger_upgrade_logging_camps = yes
+		_$modId$__trigger_upgrade_peat_quarries = yes
+		_$modId$__trigger_upgrade_hill_farms = yes
+		_$modId$__trigger_upgrade_elephant_pens = yes
+		_$modId$__trigger_upgrade_plantations = yes
+		_$modId$__trigger_upgrade_quarries = yes
+		# standard military buildings
+		_$modId$__trigger_upgrade_wind_furnace = yes
+		_$modId$__trigger_upgrade_workshops = yes
+		_$modId$__trigger_upgrade_horse_pastures = yes
+		_$modId$__trigger_upgrade_hillside_grazing = yes
+		_$modId$__trigger_upgrade_warrior_lodges = yes
+		_$modId$__trigger_upgrade_military_camps = yes
+		_$modId$__trigger_upgrade_regimental_grounds = yes
+		_$modId$__trigger_upgrade_outposts = yes
+		_$modId$__trigger_upgrade_barracks = yes
+		_$modId$__trigger_upgrade_camel_farms = yes
+		_$modId$__trigger_upgrade_stables = yes
+		_$modId$__trigger_upgrade_smiths = yes
+	}
+}
+
+_$modId$__trigger_remove_buildings = {
+	OR = {
+		# tribal buildings
+		has_building_or_higher = longhouses_01
+		has_building_or_higher = war_camps_01
+		has_building_or_higher = palisades_01
+		has_building_or_higher = market_villages_01
+		# castle buildings
+		# city buildings
+		has_building_or_higher = guild_halls_01
+		# temple buildings
+		has_building_or_higher = scriptorium_01
+		has_building_or_higher = monastic_schools_01
+		has_building_or_higher = megalith_01
+		# common buildings
+		has_building_or_higher = hospices_01
+		# standard fortification buildings
+		has_building_or_higher = ramparts_01
+		has_building_or_higher = curtain_walls_01
+		has_building_or_higher = watchtowers_01
+		has_building_or_higher = hill_forts_01
+		# standard economy buildings
+		has_building_or_higher = caravanserai_01
+		has_building_or_higher = watermills_01
+		has_building_or_higher = windmills_01
+		has_building_or_higher = common_tradeport_01
+		has_building_or_higher = pastures_01
+		has_building_or_higher = hunting_grounds_01
+		has_building_or_higher = orchards_01
+		has_building_or_higher = farm_estates_01
+		has_building_or_higher = cereal_fields_01
+		has_building_or_higher = logging_camps_01
+		has_building_or_higher = peat_quarries_01
+		has_building_or_higher = hill_farms_01
+		has_building_or_higher = elephant_pens_01
+		has_building_or_higher = plantations_01
+		has_building_or_higher = quarries_01
+		# standard military buildings
+		has_building_or_higher = wind_furnace_01
+		has_building_or_higher = workshops_01
+		has_building_or_higher = horse_pastures_01
+		has_building_or_higher = hillside_grazing_01
+		has_building_or_higher = warrior_lodges_01
+		has_building_or_higher = military_camps_01
+		has_building_or_higher = regimental_grounds_01
+		has_building_or_higher = outposts_01
+		has_building_or_higher = barracks_01
+		has_building_or_higher = camel_farms_01
+		has_building_or_higher = stables_01
+		has_building_or_higher = smiths_01
+	}
+}

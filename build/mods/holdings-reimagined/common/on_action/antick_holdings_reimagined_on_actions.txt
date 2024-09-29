@@ -1,0 +1,28 @@
+﻿on_game_start = {
+	on_actions = {
+		antick_holdings_reimagined_on_action_game_start
+	}
+}
+
+antick_holdings_reimagined_on_action_game_start = {
+	effect = {
+		if = {
+			limit = {
+				NOT = { exists = global_var:antick_holdings_reimagined_is_loaded }
+			}
+			set_global_variable = {
+				name = antick_holdings_reimagined_is_loaded
+				value = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = global_var:antick_holdings_reimagined_show_decisions }
+			}
+			set_global_variable = {
+				name = antick_holdings_reimagined_show_decisions
+				value = no
+			}
+		}
+	}
+}

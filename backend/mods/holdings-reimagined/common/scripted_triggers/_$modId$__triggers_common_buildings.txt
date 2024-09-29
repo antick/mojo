@@ -1,0 +1,98 @@
+# hospices
+
+_$modId$__trigger_construct_hospices_01 = {
+	NOT = { has_building_or_higher = hospices_01 }
+	_$modId$__building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 01 }
+}
+_$modId$__trigger_construct_hospices_02 = {
+	has_building = hospices_01
+	_$modId$__building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_city_planning
+		}
+	}
+}
+_$modId$__trigger_construct_hospices_03 = {
+	has_building = hospices_02
+	_$modId$__building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_manorialism
+		}
+	}
+}
+_$modId$__trigger_construct_hospices_04 = {
+	has_building = hospices_03
+	_$modId$__building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_manorialism
+		}
+	}
+}
+_$modId$__trigger_construct_hospices_05 = {
+	has_building = hospices_04
+	_$modId$__building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_windmills
+		}
+	}
+}
+_$modId$__trigger_construct_hospices_06 = {
+	has_building = hospices_05
+	_$modId$__building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_windmills
+		}
+	}
+}
+_$modId$__trigger_construct_hospices_07 = {
+	has_building = hospices_06
+	_$modId$__building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+}
+_$modId$__trigger_construct_hospices_08 = {
+	has_building = hospices_07
+	_$modId$__building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+}
+_$modId$__trigger_construct_hospices = {
+	_$modId$__trigger_construct_hospices_01 = yes
+}
+_$modId$__trigger_upgrade_hospices = {
+	OR = {
+		_$modId$__trigger_construct_hospices_02 = yes
+		_$modId$__trigger_construct_hospices_03 = yes
+		_$modId$__trigger_construct_hospices_04 = yes
+		_$modId$__trigger_construct_hospices_05 = yes
+		_$modId$__trigger_construct_hospices_06 = yes
+		_$modId$__trigger_construct_hospices_07 = yes
+		_$modId$__trigger_construct_hospices_08 = yes
+	}
+}

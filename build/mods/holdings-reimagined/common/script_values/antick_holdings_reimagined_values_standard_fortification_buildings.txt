@@ -1,0 +1,283 @@
+﻿antick_holdings_reimagined_value_construct_ramparts_01_gold_cost = {
+	value = cheap_building_tier_1_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_ramparts_02_gold_cost = {
+	value = cheap_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_ramparts_03_gold_cost = {
+	value = cheap_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_ramparts_04_gold_cost = {
+	value = cheap_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_ramparts_05_gold_cost = {
+	value = cheap_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_ramparts_06_gold_cost = {
+	value = cheap_building_tier_6_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_ramparts_07_gold_cost = {
+	value = cheap_building_tier_7_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_ramparts_08_gold_cost = {
+	value = cheap_building_tier_8_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_ramparts_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_ramparts_01 = yes }
+		add = antick_holdings_reimagined_value_construct_ramparts_01_gold_cost
+	}
+}
+antick_holdings_reimagined_value_upgrade_ramparts_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_ramparts_02 = yes }
+		add = antick_holdings_reimagined_value_construct_ramparts_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_ramparts_03 = yes }
+		add = antick_holdings_reimagined_value_construct_ramparts_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_ramparts_04 = yes }
+		add = antick_holdings_reimagined_value_construct_ramparts_04_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_ramparts_05 = yes }
+		add = antick_holdings_reimagined_value_construct_ramparts_05_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_ramparts_06 = yes }
+		add = antick_holdings_reimagined_value_construct_ramparts_06_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_ramparts_07 = yes }
+		add = antick_holdings_reimagined_value_construct_ramparts_07_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_ramparts_08 = yes }
+		add = antick_holdings_reimagined_value_construct_ramparts_08_gold_cost
+	}
+}
+
+antick_holdings_reimagined_value_construct_curtain_walls_01_gold_cost = {
+	value = cheap_building_tier_1_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_curtain_walls_02_gold_cost = {
+	value = cheap_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_curtain_walls_03_gold_cost = {
+	value = cheap_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_curtain_walls_04_gold_cost = {
+	value = cheap_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_curtain_walls_05_gold_cost = {
+	value = cheap_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_curtain_walls_06_gold_cost = {
+	value = cheap_building_tier_6_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_curtain_walls_07_gold_cost = {
+	value = cheap_building_tier_7_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_curtain_walls_08_gold_cost = {
+	value = cheap_building_tier_8_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_curtain_walls_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_curtain_walls_01 = yes }
+		add = antick_holdings_reimagined_value_construct_curtain_walls_01_gold_cost
+	}
+}
+antick_holdings_reimagined_value_upgrade_curtain_walls_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_curtain_walls_02 = yes }
+		add = antick_holdings_reimagined_value_construct_curtain_walls_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_curtain_walls_03 = yes }
+		add = antick_holdings_reimagined_value_construct_curtain_walls_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_curtain_walls_04 = yes }
+		add = antick_holdings_reimagined_value_construct_curtain_walls_04_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_curtain_walls_05 = yes }
+		add = antick_holdings_reimagined_value_construct_curtain_walls_05_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_curtain_walls_06 = yes }
+		add = antick_holdings_reimagined_value_construct_curtain_walls_06_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_curtain_walls_07 = yes }
+		add = antick_holdings_reimagined_value_construct_curtain_walls_07_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_curtain_walls_08 = yes }
+		add = antick_holdings_reimagined_value_construct_curtain_walls_08_gold_cost
+	}
+}
+
+antick_holdings_reimagined_value_construct_watchtowers_01_gold_cost = {
+	value = cheap_building_tier_1_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_watchtowers_02_gold_cost = {
+	value = cheap_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_watchtowers_03_gold_cost = {
+	value = cheap_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_watchtowers_04_gold_cost = {
+	value = cheap_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_watchtowers_05_gold_cost = {
+	value = cheap_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_watchtowers_06_gold_cost = {
+	value = cheap_building_tier_6_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_watchtowers_07_gold_cost = {
+	value = cheap_building_tier_7_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_watchtowers_08_gold_cost = {
+	value = cheap_building_tier_8_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_watchtowers_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_watchtowers_01 = yes }
+		add = antick_holdings_reimagined_value_construct_watchtowers_01_gold_cost
+	}
+}
+antick_holdings_reimagined_value_upgrade_watchtowers_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_watchtowers_02 = yes }
+		add = antick_holdings_reimagined_value_construct_watchtowers_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_watchtowers_03 = yes }
+		add = antick_holdings_reimagined_value_construct_watchtowers_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_watchtowers_04 = yes }
+		add = antick_holdings_reimagined_value_construct_watchtowers_04_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_watchtowers_05 = yes }
+		add = antick_holdings_reimagined_value_construct_watchtowers_05_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_watchtowers_06 = yes }
+		add = antick_holdings_reimagined_value_construct_watchtowers_06_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_watchtowers_07 = yes }
+		add = antick_holdings_reimagined_value_construct_watchtowers_07_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_watchtowers_08 = yes }
+		add = antick_holdings_reimagined_value_construct_watchtowers_08_gold_cost
+	}
+}
+
+antick_holdings_reimagined_value_construct_hill_forts_01_gold_cost = {
+	value = cheap_building_tier_1_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hill_forts_02_gold_cost = {
+	value = cheap_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hill_forts_03_gold_cost = {
+	value = cheap_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hill_forts_04_gold_cost = {
+	value = cheap_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hill_forts_05_gold_cost = {
+	value = cheap_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hill_forts_06_gold_cost = {
+	value = cheap_building_tier_6_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hill_forts_07_gold_cost = {
+	value = cheap_building_tier_7_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hill_forts_08_gold_cost = {
+	value = cheap_building_tier_8_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hill_forts_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hill_forts_01 = yes }
+		add = antick_holdings_reimagined_value_construct_hill_forts_01_gold_cost
+	}
+}
+antick_holdings_reimagined_value_upgrade_hill_forts_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hill_forts_02 = yes }
+		add = antick_holdings_reimagined_value_construct_hill_forts_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hill_forts_03 = yes }
+		add = antick_holdings_reimagined_value_construct_hill_forts_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hill_forts_04 = yes }
+		add = antick_holdings_reimagined_value_construct_hill_forts_04_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hill_forts_05 = yes }
+		add = antick_holdings_reimagined_value_construct_hill_forts_05_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hill_forts_06 = yes }
+		add = antick_holdings_reimagined_value_construct_hill_forts_06_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hill_forts_07 = yes }
+		add = antick_holdings_reimagined_value_construct_hill_forts_07_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hill_forts_08 = yes }
+		add = antick_holdings_reimagined_value_construct_hill_forts_08_gold_cost
+	}
+}

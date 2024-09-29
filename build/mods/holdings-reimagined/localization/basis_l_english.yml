@@ -1,0 +1,11 @@
+﻿l_english:
+  basis_idiom_default:0 "#basis_default Default#!"
+
+  basis_idiom_player:0 "#basis_player (Player)#!"
+  basis_idiom_ai:0 "#basis_ai (AI)#!"
+  basis_idiom_all:0 "#basis_all (All)#!"
+
+  basis_idiom_enabled:0 "#basis_enabled Enabled#!"
+  basis_idiom_disabled:0 "#basis_disabled Disabled#!"
+
+  basis_idiom_0:0 "#basis_0 0#!"

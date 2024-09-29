@@ -1,0 +1,70 @@
+antick_holdings_reimagined_value_construct_hospices_01_gold_cost = {
+	value = normal_building_tier_1_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hospices_02_gold_cost = {
+	value = normal_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hospices_03_gold_cost = {
+	value = normal_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hospices_04_gold_cost = {
+	value = normal_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hospices_05_gold_cost = {
+	value = normal_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hospices_06_gold_cost = {
+	value = normal_building_tier_6_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hospices_07_gold_cost = {
+	value = normal_building_tier_7_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hospices_08_gold_cost = {
+	value = normal_building_tier_8_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_hospices_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hospices_01 = yes }
+		add = antick_holdings_reimagined_value_construct_hospices_01_gold_cost
+	}
+}
+antick_holdings_reimagined_value_upgrade_hospices_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hospices_02 = yes }
+		add = antick_holdings_reimagined_value_construct_hospices_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hospices_03 = yes }
+		add = antick_holdings_reimagined_value_construct_hospices_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hospices_04 = yes }
+		add = antick_holdings_reimagined_value_construct_hospices_04_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hospices_05 = yes }
+		add = antick_holdings_reimagined_value_construct_hospices_05_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hospices_06 = yes }
+		add = antick_holdings_reimagined_value_construct_hospices_06_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hospices_07 = yes }
+		add = antick_holdings_reimagined_value_construct_hospices_07_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_hospices_08 = yes }
+		add = antick_holdings_reimagined_value_construct_hospices_08_gold_cost
+	}
+}

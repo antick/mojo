@@ -1,0 +1,27 @@
+﻿_$modId$__value_construct_castle_02_gold_cost = {
+	value = main_building_tier_2_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_castle_03_gold_cost = {
+	value = main_building_tier_3_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_construct_castle_04_gold_cost = {
+	value = main_building_tier_4_cost
+	multiply = _$modId$__value_multiplier_slow_construction_time_cost
+}
+_$modId$__value_upgrade_castle_gold_cost = {
+	value = 0
+	if = {
+		limit = { _$modId$__trigger_construct_castle_02 = yes }
+		add = _$modId$__value_construct_castle_02_gold_cost
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_castle_03 = yes }
+		add = _$modId$__value_construct_castle_03_gold_cost
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_castle_04 = yes }
+		add = _$modId$__value_construct_castle_04_gold_cost
+	}
+}

@@ -1,0 +1,93 @@
+﻿antick_holdings_reimagined_effect_upgrade_city = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_city_02 = yes }
+		add_building = city_02
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_city_03 = yes }
+		add_building = city_03
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_city_04 = yes }
+		add_building = city_04
+	}
+}
+
+antick_holdings_reimagined_effect_construct_guild_halls = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = guild_halls_01
+		}
+		else_if = {
+			limit = { antick_holdings_reimagined_trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = guild_halls_01
+		}
+	}
+}
+antick_holdings_reimagined_effect_upgrade_guild_halls = {
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_02 = yes }
+		add_building = guild_halls_02
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_03 = yes }
+		add_building = guild_halls_03
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_04 = yes }
+		add_building = guild_halls_04
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_05 = yes }
+		add_building = guild_halls_05
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_06 = yes }
+		add_building = guild_halls_06
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_07 = yes }
+		add_building = guild_halls_07
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_guild_halls_08 = yes }
+		add_building = guild_halls_08
+	}
+}
+antick_holdings_reimagined_effect_remove_guild_halls = {
+	if = {
+		limit = { has_building = guild_halls_01 }
+		remove_building = guild_halls_01
+	}
+	else_if = {
+		limit = { has_building =guild_halls_02 }
+		remove_building = guild_halls_02
+	}
+	else_if = {
+		limit = { has_building = guild_halls_03 }
+		remove_building = guild_halls_03
+	}
+	else_if = {
+		limit = { has_building =guild_halls_04 }
+		remove_building = guild_halls_04
+	}
+	else_if = {
+		limit = { has_building = guild_halls_05 }
+		remove_building = guild_halls_05
+	}
+	else_if = {
+		limit = { has_building =guild_halls_06 }
+		remove_building = guild_halls_06
+	}
+	else_if = {
+		limit = { has_building = guild_halls_07 }
+		remove_building = guild_halls_07
+	}
+	else_if = {
+		limit = { has_building =guild_halls_08 }
+		remove_building = guild_halls_08
+	}
+}

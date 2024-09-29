@@ -1,0 +1,895 @@
+﻿_$modId$__effect_construct_buildings = {
+	# tribal buildings
+	_$modId$__effect_construct_longhouses = yes
+	_$modId$__effect_construct_war_camps = yes
+	_$modId$__effect_construct_palisades = yes
+	_$modId$__effect_construct_market_villages = yes
+	# castle buildings
+	# city buildings
+	_$modId$__effect_construct_guild_halls = yes
+	# temple buildings
+	_$modId$__effect_construct_scriptorium = yes
+	_$modId$__effect_construct_monastic_schools = yes
+	_$modId$__effect_construct_megalith = yes
+	# common buildings
+	_$modId$__effect_construct_hospices = yes
+	# standard fortification buildings
+	_$modId$__effect_construct_ramparts = yes
+	_$modId$__effect_construct_curtain_walls = yes
+	_$modId$__effect_construct_watchtowers = yes
+	_$modId$__effect_construct_hill_forts = yes
+	# standard economy buildings
+	_$modId$__effect_construct_caravanserai = yes
+	_$modId$__effect_construct_watermills = yes
+	_$modId$__effect_construct_windmills = yes
+	_$modId$__effect_construct_common_tradeport = yes
+	_$modId$__effect_construct_pastures = yes
+	_$modId$__effect_construct_hunting_grounds = yes
+	_$modId$__effect_construct_orchards = yes
+	_$modId$__effect_construct_farm_estates = yes
+	_$modId$__effect_construct_cereal_fields = yes
+	_$modId$__effect_construct_logging_camps = yes
+	_$modId$__effect_construct_peat_quarries = yes
+	_$modId$__effect_construct_hill_farms = yes
+	_$modId$__effect_construct_elephant_pens = yes
+	_$modId$__effect_construct_plantations = yes
+	_$modId$__effect_construct_quarries = yes
+	_$modId$__effect_construct_qanats = yes
+	# standard military buildings
+	_$modId$__effect_construct_wind_furnace = yes
+	_$modId$__effect_construct_workshops = yes
+	_$modId$__effect_construct_horse_pastures = yes
+	_$modId$__effect_construct_hillside_grazing = yes
+	_$modId$__effect_construct_warrior_lodges = yes
+	_$modId$__effect_construct_military_camps = yes
+	_$modId$__effect_construct_regimental_grounds = yes
+	_$modId$__effect_construct_outposts = yes
+	_$modId$__effect_construct_barracks = yes
+	_$modId$__effect_construct_camel_farms = yes
+	_$modId$__effect_construct_stables = yes
+	_$modId$__effect_construct_smiths = yes
+}
+
+_$modId$__effect_upgrade_buildings = { # scope:province
+	# tribal buildings
+	_$modId$__effect_upgrade_tribe = yes
+	_$modId$__effect_upgrade_longhouses = yes
+	_$modId$__effect_upgrade_war_camps = yes
+	_$modId$__effect_upgrade_palisades = yes
+	_$modId$__effect_upgrade_market_villages = yes
+	# castle buildings
+	_$modId$__effect_upgrade_castle = yes
+	# city buildings
+	_$modId$__effect_upgrade_city = yes
+	_$modId$__effect_upgrade_guild_halls = yes
+	# temple buildings
+	_$modId$__effect_upgrade_temple = yes
+	_$modId$__effect_upgrade_scriptorium = yes
+	_$modId$__effect_upgrade_monastic_schools = yes
+	_$modId$__effect_upgrade_megalith = yes
+	# common buildings
+	_$modId$__effect_upgrade_hospices = yes
+	# standard fortification buildings
+	_$modId$__effect_upgrade_ramparts = yes
+	_$modId$__effect_upgrade_curtain_walls = yes
+	_$modId$__effect_upgrade_watchtowers = yes
+	_$modId$__effect_upgrade_hill_forts = yes
+	# standard economy buildings
+	_$modId$__effect_upgrade_caravanserai = yes
+	_$modId$__effect_upgrade_watermills = yes
+	_$modId$__effect_upgrade_windmills = yes
+	_$modId$__effect_upgrade_common_tradeport = yes
+	_$modId$__effect_upgrade_pastures = yes
+	_$modId$__effect_upgrade_hunting_grounds = yes
+	_$modId$__effect_upgrade_orchards = yes
+	_$modId$__effect_upgrade_farm_estates = yes
+	_$modId$__effect_upgrade_cereal_fields = yes
+	_$modId$__effect_upgrade_logging_camps = yes
+	_$modId$__effect_upgrade_peat_quarries = yes
+	_$modId$__effect_upgrade_hill_farms = yes
+	_$modId$__effect_upgrade_elephant_pens = yes
+	_$modId$__effect_upgrade_plantations = yes
+	_$modId$__effect_upgrade_quarries = yes
+	_$modId$__effect_upgrade_qanats = yes
+	# standard military buildings
+	_$modId$__effect_upgrade_wind_furnace = yes
+	_$modId$__effect_upgrade_workshops = yes
+	_$modId$__effect_upgrade_horse_pastures = yes
+	_$modId$__effect_upgrade_hillside_grazing = yes
+	_$modId$__effect_upgrade_warrior_lodges = yes
+	_$modId$__effect_upgrade_military_camps = yes
+	_$modId$__effect_upgrade_regimental_grounds = yes
+	_$modId$__effect_upgrade_outposts = yes
+	_$modId$__effect_upgrade_barracks = yes
+	_$modId$__effect_upgrade_camel_farms = yes
+	_$modId$__effect_upgrade_stables = yes
+	_$modId$__effect_upgrade_smiths = yes
+}
+
+_$modId$__effect_remove_buildings = { # scope:province
+	# tribal buildings
+	_$modId$__effect_remove_longhouses = yes
+	_$modId$__effect_remove_war_camps = yes
+	_$modId$__effect_remove_palisades = yes
+	_$modId$__effect_remove_market_villages = yes
+	# castle buildings
+	# city buildings
+	_$modId$__effect_remove_guild_halls = yes
+	# temple buildings
+	_$modId$__effect_remove_scriptorium = yes
+	_$modId$__effect_remove_monastic_schools = yes
+	_$modId$__effect_remove_megalith = yes
+	# common buildings
+	_$modId$__effect_remove_hospices = yes
+	# standard fortification buildings
+	_$modId$__effect_remove_ramparts = yes
+	_$modId$__effect_remove_curtain_walls = yes
+	_$modId$__effect_remove_watchtowers = yes
+	_$modId$__effect_remove_hill_forts = yes
+	# standard economy buildings
+	_$modId$__effect_remove_caravanserai = yes
+	_$modId$__effect_remove_watermills = yes
+	_$modId$__effect_remove_windmills = yes
+	_$modId$__effect_remove_common_tradeport = yes
+	_$modId$__effect_remove_pastures = yes
+	_$modId$__effect_remove_hunting_grounds = yes
+	_$modId$__effect_remove_orchards = yes
+	_$modId$__effect_remove_farm_estates = yes
+	_$modId$__effect_remove_cereal_fields = yes
+	_$modId$__effect_remove_logging_camps = yes
+	_$modId$__effect_remove_peat_quarries = yes
+	_$modId$__effect_remove_hill_farms = yes
+	_$modId$__effect_remove_elephant_pens = yes
+	_$modId$__effect_remove_plantations = yes
+	_$modId$__effect_remove_quarries = yes
+	_$modId$__effect_remove_qanats = yes
+	# standard military buildings
+	_$modId$__effect_remove_wind_furnace = yes
+	_$modId$__effect_remove_workshops = yes
+	_$modId$__effect_remove_horse_pastures = yes
+	_$modId$__effect_remove_hillside_grazing = yes
+	_$modId$__effect_remove_warrior_lodges = yes
+	_$modId$__effect_remove_military_camps = yes
+	_$modId$__effect_remove_regimental_grounds = yes
+	_$modId$__effect_remove_outposts = yes
+	_$modId$__effect_remove_barracks = yes
+	_$modId$__effect_remove_camel_farms = yes
+	_$modId$__effect_remove_stables = yes
+	_$modId$__effect_remove_smiths = yes
+}
+
+_$modId$__effect_remove_special_buildings = { # scope:province
+	if = {
+		limit = { has_special_building = yes }
+		if = {
+			limit = { has_building = holy_site_cathedral_01 }
+			remove_building = holy_site_cathedral_01
+		}
+		if = {
+			limit = { has_building = holy_site_mosque_01 }
+			remove_building = holy_site_mosque_01
+		}
+		if = {
+			limit = { has_building = holy_site_pagan_grand_temple_01 }
+			remove_building = holy_site_pagan_grand_temple_01
+		}
+		if = {
+			limit = { has_building = holy_site_indian_grand_temple_01 }
+			remove_building = holy_site_indian_grand_temple_01
+		}
+		if = {
+			limit = { has_building = holy_site_other_grand_temple_01 }
+			remove_building = holy_site_other_grand_temple_01
+		}
+
+		if = {
+			limit = { has_building = holy_site_mahabodhi_temple_01 }
+			remove_building = holy_site_mahabodhi_temple_01
+		}
+		if = {
+			limit = { has_building = holy_site_imam_ali_mosque_01 }
+			remove_building = holy_site_imam_ali_mosque_01
+		}
+		if = {
+			limit = { has_building = holy_site_great_mosque_of_mecca_01 }
+			remove_building = holy_site_great_mosque_of_mecca_01
+		}
+		if = {
+			limit = { has_building = holy_site_great_mosque_of_cordoba_01 }
+			remove_building = holy_site_great_mosque_of_cordoba_01
+		}
+		if = {
+			limit = { has_building = holy_site_great_mosque_of_djenne_01 }
+			remove_building = holy_site_great_mosque_of_djenne_01
+		}
+		if = {
+			limit = { has_building = holy_site_great_mosque_of_samarra_01 }
+			remove_building = holy_site_great_mosque_of_samarra_01
+		}
+		if = {
+			limit = { has_building = holy_site_cologne_cathedral_01 }
+			remove_building = holy_site_cologne_cathedral_01
+		}
+		if = {
+			limit = { has_building = holy_site_canterbury_cathedral_01 }
+			remove_building = holy_site_canterbury_cathedral_01
+		}
+		if = {
+			limit = { has_building = holy_site_canterbury_cathedral_02 }
+			remove_building = holy_site_canterbury_cathedral_02
+		}
+		if = {
+			limit = { has_building = holy_site_canterbury_cathedral_03 }
+			remove_building = holy_site_canterbury_cathedral_03
+		}
+		if = {
+			limit = { has_building = holy_site_prophetic_mosque_01 }
+			remove_building = holy_site_prophetic_mosque_01
+		}
+		if = {
+			limit = { has_building = doges_palace_01 }
+			remove_building = doges_palace_01
+		}
+		if = {
+			limit = { has_building = walls_of_genoa_01 }
+			remove_building = walls_of_genoa_01
+		}
+		if = {
+			limit = { has_building = visby_ringmur_01 }
+			remove_building = visby_ringmur_01
+		}
+		if = {
+			limit = { has_building = walls_of_benin_01 }
+			remove_building = walls_of_benin_01
+		}
+		if = {
+			limit = { has_building = theodosian_walls_01 }
+			remove_building = theodosian_walls_01
+		}
+		if = {
+			limit = { has_building = aurelian_walls_01 }
+			remove_building = aurelian_walls_01
+		}
+		if = {
+			limit = { has_building = the_colosseum_01 }
+			remove_building = the_colosseum_01
+		}
+		if = {
+			limit = { has_building = iron_pillar_of_delhi_01 }
+			remove_building = iron_pillar_of_delhi_01
+		}
+		if = {
+			limit = { has_building = iron_pillar_of_dhar_01 }
+			remove_building = iron_pillar_of_dhar_01
+		}
+		if = {
+			limit = { has_building = the_pyramids_01 }
+			remove_building = the_pyramids_01
+		}
+		if = {
+			limit = { has_building = stonehenge_01 }
+			remove_building = stonehenge_01
+		}
+		if = {
+			limit = { has_building = offas_dyke_01 }
+			remove_building = offas_dyke_01
+		}
+		if = {
+			limit = { has_building = hadrians_wall_01 }
+			remove_building = hadrians_wall_01
+		}
+		if = {
+			limit = { has_building = petra_01 }
+			remove_building = petra_01
+		}
+		if = {
+			limit = { has_building = buddhas_of_bamian_01 }
+			remove_building = buddhas_of_bamian_01
+		}
+		if = {
+			limit = { has_building = alhambra_01 }
+			remove_building = alhambra_01
+		}
+		if = {
+			limit = { has_building = alhambra_02 }
+			remove_building = alhambra_02
+		}
+		if = {
+			limit = { has_building = citadel_of_aleppo_01 }
+			remove_building = citadel_of_aleppo_01
+		}
+		if = {
+			limit = { has_building = citadel_of_aleppo_02 }
+			remove_building = citadel_of_aleppo_02
+		}
+		if = {
+			limit = { has_building = house_of_wisdom_01 }
+			remove_building = house_of_wisdom_01
+		}
+		if = {
+			limit = { has_building = the_tower_of_london_01 }
+			remove_building = the_tower_of_london_01
+		}
+		if = {
+			limit = { has_building = notre_dame_01 }
+			remove_building = notre_dame_01
+		}
+		if = {
+			limit = { has_building = brihadeeswarar_temple_01 }
+			remove_building = brihadeeswarar_temple_01
+		}
+		if = {
+			limit = { has_building = shwedagon_pagoda_01 }
+			remove_building = shwedagon_pagoda_01
+		}
+		if = {
+			limit = { has_building = ananda_temple_01 }
+			remove_building = ananda_temple_01
+		}
+		if = {
+			limit = { has_building = the_friday_mosque_01 }
+			remove_building = the_friday_mosque_01
+		}
+		if = {
+			limit = { has_building = khajuraho_01 }
+			remove_building = khajuraho_01
+		}
+		if = {
+			limit = { has_building = palace_of_aachen_01 }
+			remove_building = palace_of_aachen_01
+		}
+		if = {
+			limit = { has_building = hagia_sophia_01 }
+			remove_building = hagia_sophia_01
+		}
+		if = {
+			limit = { has_building = hagia_sophia_02 }
+			remove_building = hagia_sophia_02
+		}
+		if = {
+			limit = { has_building = dome_of_the_rock_01 }
+			remove_building = dome_of_the_rock_01
+		}
+		if = {
+			limit = { has_building = temple_in_jerusalem_01 }
+			remove_building = temple_in_jerusalem_01
+		}
+		if = {
+			limit = { has_building = hall_of_heroes_01 }
+			remove_building = hall_of_heroes_01
+		}
+		if = {
+			limit = { has_building = hall_of_heroes_02 }
+			remove_building = hall_of_heroes_02
+		}
+		if = {
+			limit = { has_building = hall_of_heroes_03 }
+			remove_building = hall_of_heroes_03
+		}
+		if = {
+			limit = { has_building = hall_of_heroes_04 }
+			remove_building = hall_of_heroes_04
+		}
+		if = {
+			limit = { has_building = hall_of_heroes_05 }
+			remove_building = hall_of_heroes_05
+		}
+		if = {
+			limit = { has_building = generic_university }
+			remove_building = generic_university
+		}
+		if = {
+			limit = { has_building = al_azhar_university }
+			remove_building = al_azhar_university
+		}
+		if = {
+			limit = { has_building = sankore_university }
+			remove_building = sankore_university
+		}
+		if = {
+			limit = { has_building = siena_university }
+			remove_building = siena_university
+		}
+		if = {
+			limit = { has_building = nalanda_university }
+			remove_building = nalanda_university
+		}
+		if = {
+			limit = { has_building = special_sicilian_parliament_01 }
+			remove_building = special_sicilian_parliament_01
+		}
+		if = {
+			limit = { has_building = hotin_fort_01 }
+			remove_building = hotin_fort_01
+		}
+		if = {
+			limit = { has_building = hotin_fort_02 }
+			remove_building = hotin_fort_02
+		}
+		if = {
+			limit = { has_building = golden_gate_of_kiev_01 }
+			remove_building = golden_gate_of_kiev_01
+		}
+		if = {
+			limit = { has_building = heddal_stave_church_01 }
+			remove_building = heddal_stave_church_01
+		}
+		if = {
+			limit = { has_building = temple_of_uppsala_01 }
+			remove_building = temple_of_uppsala_01
+		}
+		if = {
+			limit = { has_building = temple_of_uppsala_02 }
+			remove_building = temple_of_uppsala_02
+		}
+		if = {
+			limit = { has_building = lund_cathedral_01 }
+			remove_building = lund_cathedral_01
+		}
+		if = {
+			limit = { has_building = danevirke_01 }
+			remove_building = danevirke_01
+		}
+		if = {
+			limit = { has_building = roman_wall_of_lugo_01 }
+			remove_building = roman_wall_of_lugo_01
+		}
+		if = {
+			limit = { has_building = rock_of_gibraltar_01 }
+			remove_building = rock_of_gibraltar_01
+		}
+		if = {
+			limit = { has_building = aljaferia_palace_01 }
+			remove_building = aljaferia_palace_01
+		}
+		if = {
+			limit = { has_building = tower_of_hercules_01 }
+			remove_building = tower_of_hercules_01
+		}
+		if = {
+			limit = { has_building = city_wall_of_toledo_01 }
+			remove_building = city_wall_of_toledo_01
+		}
+		if = {
+			limit = { has_building = alcazar_of_segovia_01 }
+			remove_building = alcazar_of_segovia_01
+		}
+		if = {
+			limit = { has_building = holy_site_basilica_santiago_01 }
+			remove_building = holy_site_basilica_santiago_01
+		}
+
+		if = {
+			limit = { has_building = rammelsberg_mines_01 }
+			remove_building = rammelsberg_mines_01
+		}
+		if = {
+			limit = { has_building = rammelsberg_mines_02 }
+			remove_building = rammelsberg_mines_02
+		}
+		if = {
+			limit = { has_building = rammelsberg_mines_03 }
+			remove_building = rammelsberg_mines_03
+		}
+		if = {
+			limit = { has_building = rammelsberg_mines_04 }
+			remove_building = rammelsberg_mines_04
+		}
+		if = {
+			limit = { has_building = kutna_hora_mines_01 }
+			remove_building = kutna_hora_mines_01
+		}
+		if = {
+			limit = { has_building = kutna_hora_mines_02 }
+			remove_building = kutna_hora_mines_02
+		}
+		if = {
+			limit = { has_building = kutna_hora_mines_03 }
+			remove_building = kutna_hora_mines_03
+		}
+		if = {
+			limit = { has_building = kutna_hora_mines_04 }
+			remove_building = kutna_hora_mines_04
+		}
+		if = {
+			limit = { has_building = kremnica_mines_01 }
+			remove_building = kremnica_mines_01
+		}
+		if = {
+			limit = { has_building = kremnica_mines_02 }
+			remove_building = kremnica_mines_02
+		}
+		if = {
+			limit = { has_building = kremnica_mines_03 }
+			remove_building = kremnica_mines_03
+		}
+		if = {
+			limit = { has_building = kremnica_mines_04 }
+			remove_building = kremnica_mines_04
+		}
+		if = {
+			limit = { has_building = falun_mines_01 }
+			remove_building = falun_mines_01
+		}
+		if = {
+			limit = { has_building = falun_mines_02 }
+			remove_building = falun_mines_02
+		}
+		if = {
+			limit = { has_building = falun_mines_03 }
+			remove_building = falun_mines_03
+		}
+		if = {
+			limit = { has_building = falun_mines_04 }
+			remove_building = falun_mines_04
+		}
+		if = {
+			limit = { has_building = schwaz_mines_01 }
+			remove_building = schwaz_mines_01
+		}
+		if = {
+			limit = { has_building = schwaz_mines_02 }
+			remove_building = schwaz_mines_02
+		}
+		if = {
+			limit = { has_building = schwaz_mines_03 }
+			remove_building = schwaz_mines_03
+		}
+		if = {
+			limit = { has_building = schwaz_mines_04 }
+			remove_building = schwaz_mines_04
+		}
+		if = {
+			limit = { has_building = argentiera_mines_01 }
+			remove_building = argentiera_mines_01
+		}
+		if = {
+			limit = { has_building = argentiera_mines_02 }
+			remove_building = argentiera_mines_02
+		}
+		if = {
+			limit = { has_building = argentiera_mines_03 }
+			remove_building = argentiera_mines_03
+		}
+		if = {
+			limit = { has_building = argentiera_mines_04 }
+			remove_building = argentiera_mines_04
+		}
+		if = {
+			limit = { has_building = kollur_mines_01 }
+			remove_building = kollur_mines_01
+		}
+		if = {
+			limit = { has_building = kollur_mines_02 }
+			remove_building = kollur_mines_02
+		}
+		if = {
+			limit = { has_building = kollur_mines_03 }
+			remove_building = kollur_mines_03
+		}
+		if = {
+			limit = { has_building = kollur_mines_04 }
+			remove_building = kollur_mines_04
+		}
+		if = {
+			limit = { has_building = siderokausia_mines_01 }
+			remove_building = siderokausia_mines_01
+		}
+		if = {
+			limit = { has_building = siderokausia_mines_02 }
+			remove_building = siderokausia_mines_02
+		}
+		if = {
+			limit = { has_building = siderokausia_mines_03 }
+			remove_building = siderokausia_mines_03
+		}
+		if = {
+			limit = { has_building = siderokausia_mines_04 }
+			remove_building = siderokausia_mines_04
+		}
+		if = {
+			limit = { has_building = mali_mines_01 }
+			remove_building = mali_mines_01
+		}
+		if = {
+			limit = { has_building = mali_mines_02 }
+			remove_building = mali_mines_02
+		}
+		if = {
+			limit = { has_building = mali_mines_03 }
+			remove_building = mali_mines_03
+		}
+		if = {
+			limit = { has_building = mali_mines_04 }
+			remove_building = mali_mines_04
+		}
+		if = {
+			limit = { has_building = konasamudram_mines_01 }
+			remove_building = konasamudram_mines_01
+		}
+		if = {
+			limit = { has_building = konasamudram_mines_02 }
+			remove_building = konasamudram_mines_02
+		}
+		if = {
+			limit = { has_building = konasamudram_mines_03 }
+			remove_building = konasamudram_mines_03
+		}
+		if = {
+			limit = { has_building = konasamudram_mines_04 }
+			remove_building = konasamudram_mines_04
+		}
+		if = {
+			limit = { has_building = dean_mines_01 }
+			remove_building = dean_mines_01
+		}
+		if = {
+			limit = { has_building = dean_mines_02 }
+			remove_building = dean_mines_02
+		}
+		if = {
+			limit = { has_building = dean_mines_03 }
+			remove_building = dean_mines_03
+		}
+		if = {
+			limit = { has_building = dean_mines_04 }
+			remove_building = dean_mines_04
+		}
+		if = {
+			limit = { has_building = zawar_mines_01 }
+			remove_building = zawar_mines_01
+		}
+		if = {
+			limit = { has_building = zawar_mines_02 }
+			remove_building = zawar_mines_02
+		}
+		if = {
+			limit = { has_building = zawar_mines_03 }
+			remove_building = zawar_mines_03
+		}
+		if = {
+			limit = { has_building = zawar_mines_04 }
+			remove_building = zawar_mines_04
+		}
+		if = {
+			limit = { has_building = takkeda_mines_01 }
+			remove_building = takkeda_mines_01
+		}
+		if = {
+			limit = { has_building = takkeda_mines_02 }
+			remove_building = takkeda_mines_02
+		}
+		if = {
+			limit = { has_building = takkeda_mines_03 }
+			remove_building = takkeda_mines_03
+		}
+		if = {
+			limit = { has_building = takkeda_mines_04 }
+			remove_building = takkeda_mines_04
+		}
+		if = {
+			limit = { has_building = khetri_mines_01 }
+			remove_building = khetri_mines_01
+		}
+		if = {
+			limit = { has_building = khetri_mines_02 }
+			remove_building = khetri_mines_02
+		}
+		if = {
+			limit = { has_building = khetri_mines_03 }
+			remove_building = khetri_mines_03
+		}
+		if = {
+			limit = { has_building = khetri_mines_04 }
+			remove_building = khetri_mines_04
+		}
+		if = {
+			limit = { has_building = taghaza_mines_01 }
+			remove_building = taghaza_mines_01
+		}
+		if = {
+			limit = { has_building = taghaza_mines_02 }
+			remove_building = taghaza_mines_02
+		}
+		if = {
+			limit = { has_building = taghaza_mines_03 }
+			remove_building = taghaza_mines_03
+		}
+		if = {
+			limit = { has_building = taghaza_mines_04 }
+			remove_building = taghaza_mines_04
+		}
+		if = {
+			limit = { has_building = ijil_mines_01 }
+			remove_building = ijil_mines_01
+		}
+		if = {
+			limit = { has_building = ijil_mines_02 }
+			remove_building = ijil_mines_02
+		}
+		if = {
+			limit = { has_building = ijil_mines_03 }
+			remove_building = ijil_mines_03
+		}
+		if = {
+			limit = { has_building = ijil_mines_04 }
+			remove_building = ijil_mines_04
+		}
+		if = {
+			limit = { has_building = turda_mines_01 }
+			remove_building = turda_mines_01
+		}
+		if = {
+			limit = { has_building = turda_mines_02 }
+			remove_building = turda_mines_02
+		}
+		if = {
+			limit = { has_building = turda_mines_03 }
+			remove_building = turda_mines_03
+		}
+		if = {
+			limit = { has_building = turda_mines_04 }
+			remove_building = turda_mines_04
+		}
+		if = {
+			limit = { has_building = phocaea_mines_01 }
+			remove_building = phocaea_mines_01
+		}
+		if = {
+			limit = { has_building = phocaea_mines_02 }
+			remove_building = phocaea_mines_02
+		}
+		if = {
+			limit = { has_building = phocaea_mines_03 }
+			remove_building = phocaea_mines_03
+		}
+		if = {
+			limit = { has_building = phocaea_mines_04 }
+			remove_building = phocaea_mines_04
+		}
+		if = {
+			limit = { has_building = pansjhir_mines_01 }
+			remove_building = pansjhir_mines_01
+		}
+		if = {
+			limit = { has_building = pansjhir_mines_02 }
+			remove_building = pansjhir_mines_02
+		}
+		if = {
+			limit = { has_building = pansjhir_mines_03 }
+			remove_building = pansjhir_mines_03
+		}
+		if = {
+			limit = { has_building = pansjhir_mines_04 }
+			remove_building = pansjhir_mines_04
+		}
+		if = {
+			limit = { has_building = trepca_mines_01 }
+			remove_building = trepca_mines_01
+		}
+		if = {
+			limit = { has_building = trepca_mines_02 }
+			remove_building = trepca_mines_02
+		}
+		if = {
+			limit = { has_building = trepca_mines_03 }
+			remove_building = trepca_mines_03
+		}
+		if = {
+			limit = { has_building = trepca_mines_04 }
+			remove_building = trepca_mines_04
+		}
+		if = {
+			limit = { has_building = rudnik_mines_01 }
+			remove_building = rudnik_mines_01
+		}
+		if = {
+			limit = { has_building = rudnik_mines_02 }
+			remove_building = rudnik_mines_02
+		}
+		if = {
+			limit = { has_building = rudnik_mines_03 }
+			remove_building = rudnik_mines_03
+		}
+		if = {
+			limit = { has_building = rudnik_mines_04 }
+			remove_building = rudnik_mines_04
+		}
+		if = {
+			limit = { has_building = cevennes_mines_01 }
+			remove_building = cevennes_mines_01
+		}
+		if = {
+			limit = { has_building = cevennes_mines_02 }
+			remove_building = cevennes_mines_02
+		}
+		if = {
+			limit = { has_building = cevennes_mines_03 }
+			remove_building = cevennes_mines_03
+		}
+		if = {
+			limit = { has_building = cevennes_mines_04 }
+			remove_building = cevennes_mines_04
+		}
+		if = {
+			limit = { has_building = allaq_mines_01 }
+			remove_building = allaq_mines_01
+		}
+		if = {
+			limit = { has_building = allaq_mines_02 }
+			remove_building = allaq_mines_02
+		}
+		if = {
+			limit = { has_building = allaq_mines_03 }
+			remove_building = allaq_mines_03
+		}
+		if = {
+			limit = { has_building = allaq_mines_04 }
+			remove_building = allaq_mines_04
+		}
+		if = {
+			limit = { has_building = verespatak_mines_01 }
+			remove_building = verespatak_mines_01
+		}
+		if = {
+			limit = { has_building = verespatak_mines_02 }
+			remove_building = verespatak_mines_02
+		}
+		if = {
+			limit = { has_building = verespatak_mines_03 }
+			remove_building = verespatak_mines_03
+		}
+		if = {
+			limit = { has_building = verespatak_mines_04 }
+			remove_building = verespatak_mines_04
+		}
+		if = {
+			limit = { has_building = nishapur_mines_01 }
+			remove_building = nishapur_mines_01
+		}
+		if = {
+			limit = { has_building = nishapur_mines_02 }
+			remove_building = nishapur_mines_02
+		}
+		if = {
+			limit = { has_building = nishapur_mines_03 }
+			remove_building = nishapur_mines_03
+		}
+		if = {
+			limit = { has_building = nishapur_mines_04 }
+			remove_building = nishapur_mines_04
+		}
+		if = {
+			limit = { has_building = srebrenica_mines_01 }
+			remove_building = srebrenica_mines_01
+		}
+		if = {
+			limit = { has_building = srebrenica_mines_02 }
+			remove_building = srebrenica_mines_02
+		}
+		if = {
+			limit = { has_building = srebrenica_mines_03 }
+			remove_building = srebrenica_mines_03
+		}
+		if = {
+			limit = { has_building = srebrenica_mines_04 }
+			remove_building = srebrenica_mines_04
+		}
+		if = {
+			limit = { has_building = ratnapura_mines_01 }
+			remove_building = ratnapura_mines_01
+		}
+		if = {
+			limit = { has_building = ratnapura_mines_02 }
+			remove_building = ratnapura_mines_02
+		}
+		if = {
+			limit = { has_building = ratnapura_mines_03 }
+			remove_building = ratnapura_mines_03
+		}
+		if = {
+			limit = { has_building = ratnapura_mines_04 }
+			remove_building = ratnapura_mines_04
+		}
+	}
+}

@@ -1,0 +1,385 @@
+﻿_$modId$__trigger_construct_city_02 = {
+	has_building = city_01
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_manorialism }
+	}
+}
+_$modId$__trigger_construct_city_03 = {
+	has_building = city_02
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_windmills }
+	}
+}
+_$modId$__trigger_construct_city_04 = {
+	has_building = city_03
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_cranes }
+	}
+}
+_$modId$__trigger_upgrade_city = {
+	OR = {
+		_$modId$__trigger_construct_city_02 = yes
+		_$modId$__trigger_construct_city_03 = yes
+		_$modId$__trigger_construct_city_04 = yes
+	}
+}
+
+_$modId$__trigger_construct_guild_halls_01 = {
+	NOT = { has_building_or_higher = guild_halls_01 }
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = city_01
+}
+_$modId$__trigger_construct_guild_halls_02 = {
+	has_building = guild_halls_01
+	_$modId$__building_requirement_tribal = no
+	has_building_or_higher = city_01
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			OR = {
+				has_innovation = innovation_crop_rotation
+				has_cultural_parameter = next_level_guild_halls
+			}
+		}
+	}
+}
+_$modId$__trigger_construct_guild_halls_03 = {
+	has_building = guild_halls_02
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			has_building_or_higher = city_02
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_01
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_manorialism
+			# }
+			has_building_or_higher = city_02
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_crop_rotation
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_01
+		}
+	}
+}
+_$modId$__trigger_construct_guild_halls_04 = {
+	has_building = guild_halls_03
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			has_building_or_higher = city_02
+
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_01
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_manorialism
+			# }
+			has_building_or_higher = city_02
+
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_crop_rotation
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_01
+		}
+	}
+}
+_$modId$__trigger_construct_guild_halls_05 = {
+	has_building = guild_halls_04
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			has_building_or_higher = city_03
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_02
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_guilds
+			# }
+			has_building_or_higher = city_03
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_manorialism
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_02
+		}
+	}
+}
+_$modId$__trigger_construct_guild_halls_06 = {
+	has_building = guild_halls_05
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			has_building_or_higher = city_03
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_02
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_guilds
+			# }
+			has_building_or_higher = city_03
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_manorialism
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_02
+		}
+	}
+}
+_$modId$__trigger_construct_guild_halls_07 = {
+	has_building = guild_halls_06
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_cranes
+			}
+			has_building_or_higher = city_04
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_03
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_cranes
+			# }
+			has_building_or_higher = city_04
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_guilds
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_03
+		}
+	}
+}
+_$modId$__trigger_construct_guild_halls_08 = {
+	has_building = guild_halls_07
+	_$modId$__building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			culture = {
+				has_innovation = innovation_cranes
+			}
+			has_building_or_higher = city_04
+		}
+		trigger_else = {
+			culture = {
+				has_innovation = innovation_guilds
+			}
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_03
+		}
+	}
+	trigger_else = {
+		trigger_if = {
+			limit = {
+				NOT = {
+					culture = {
+						has_cultural_parameter = next_level_guild_halls
+					}
+				}
+			}
+			# culture = {
+			# 	has_innovation = innovation_cranes
+			# }
+			has_building_or_higher = city_04
+		}
+		trigger_else = {
+			# culture = {
+			# 	has_innovation = innovation_guilds
+			# }
+			culture = {
+				has_cultural_parameter = next_level_guild_halls
+			}
+			has_building_or_higher = city_03
+		}
+	}
+}
+_$modId$__trigger_construct_guild_halls = {
+	_$modId$__trigger_construct_guild_halls_01 = yes
+}
+_$modId$__trigger_upgrade_guild_halls = {
+	OR = {
+		_$modId$__trigger_construct_guild_halls_02 = yes
+		_$modId$__trigger_construct_guild_halls_03 = yes
+		_$modId$__trigger_construct_guild_halls_04 = yes
+		_$modId$__trigger_construct_guild_halls_05 = yes
+		_$modId$__trigger_construct_guild_halls_06 = yes
+		_$modId$__trigger_construct_guild_halls_07 = yes
+		_$modId$__trigger_construct_guild_halls_08 = yes
+	}
+}

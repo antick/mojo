@@ -1,0 +1,78 @@
+﻿_$modId$__effect_construct_hospices = {
+	if = {
+		limit = { _$modId$__trigger_construct_hospices = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = hospices_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = hospices_01
+		}
+	}
+}
+_$modId$__effect_upgrade_hospices = {
+	if = {
+		limit = { _$modId$__trigger_construct_hospices_02 = yes }
+		add_building = hospices_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hospices_03 = yes }
+		add_building = hospices_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hospices_04 = yes }
+		add_building = hospices_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hospices_05 = yes }
+		add_building = hospices_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hospices_06 = yes }
+		add_building = hospices_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hospices_07 = yes }
+		add_building = hospices_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hospices_08 = yes }
+		add_building = hospices_08
+	}
+}
+_$modId$__effect_remove_hospices = {
+	if = {
+		limit = { has_building = hospices_01 }
+		remove_building = hospices_01
+	}
+	else_if = {
+		limit = { has_building =hospices_02 }
+		remove_building = hospices_02
+	}
+	else_if = {
+		limit = { has_building = hospices_03 }
+		remove_building = hospices_03
+	}
+	else_if = {
+		limit = { has_building =hospices_04 }
+		remove_building = hospices_04
+	}
+	else_if = {
+		limit = { has_building = hospices_05 }
+		remove_building = hospices_05
+	}
+	else_if = {
+		limit = { has_building =hospices_06 }
+		remove_building = hospices_06
+	}
+	else_if = {
+		limit = { has_building = hospices_07 }
+		remove_building = hospices_07
+	}
+	else_if = {
+		limit = { has_building =hospices_08 }
+		remove_building = hospices_08
+	}
+}

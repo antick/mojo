@@ -1,0 +1,947 @@
+﻿_$modId$__effect_construct_wind_furnace = {
+	if = {
+		limit = { _$modId$__trigger_construct_wind_furnace = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = wind_furnace_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = wind_furnace_01
+		}
+	}
+}
+_$modId$__effect_upgrade_wind_furnace = {
+	if = {
+		limit = { _$modId$__trigger_construct_wind_furnace_02 = yes }
+		add_building = wind_furnace_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_wind_furnace_03 = yes }
+		add_building = wind_furnace_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_wind_furnace_04 = yes }
+		add_building = wind_furnace_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_wind_furnace_05 = yes }
+		add_building = wind_furnace_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_wind_furnace_06 = yes }
+		add_building = wind_furnace_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_wind_furnace_07 = yes }
+		add_building = wind_furnace_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_wind_furnace_08 = yes }
+		add_building = wind_furnace_08
+	}
+}
+_$modId$__effect_remove_wind_furnace = {
+	if = {
+		limit = { has_building = wind_furnace_01 }
+		remove_building = wind_furnace_01
+	}
+	else_if = {
+		limit = { has_building =wind_furnace_02 }
+		remove_building = wind_furnace_02
+	}
+	else_if = {
+		limit = { has_building = wind_furnace_03 }
+		remove_building = wind_furnace_03
+	}
+	else_if = {
+		limit = { has_building =wind_furnace_04 }
+		remove_building = wind_furnace_04
+	}
+	else_if = {
+		limit = { has_building = wind_furnace_05 }
+		remove_building = wind_furnace_05
+	}
+	else_if = {
+		limit = { has_building =wind_furnace_06 }
+		remove_building = wind_furnace_06
+	}
+	else_if = {
+		limit = { has_building = wind_furnace_07 }
+		remove_building = wind_furnace_07
+	}
+	else_if = {
+		limit = { has_building =wind_furnace_08 }
+		remove_building = wind_furnace_08
+	}
+}
+
+_$modId$__effect_construct_workshops = {
+	if = {
+		limit = { _$modId$__trigger_construct_workshops = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = workshops_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = workshops_01
+		}
+	}
+}
+_$modId$__effect_upgrade_workshops = {
+	if = {
+		limit = { _$modId$__trigger_construct_workshops_02 = yes }
+		add_building = workshops_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_workshops_03 = yes }
+		add_building = workshops_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_workshops_04 = yes }
+		add_building = workshops_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_workshops_05 = yes }
+		add_building = workshops_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_workshops_06 = yes }
+		add_building = workshops_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_workshops_07 = yes }
+		add_building = workshops_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_workshops_08 = yes }
+		add_building = workshops_08
+	}
+}
+_$modId$__effect_remove_workshops = {
+	if = {
+		limit = { has_building = workshops_01 }
+		remove_building = workshops_01
+	}
+	else_if = {
+		limit = { has_building =workshops_02 }
+		remove_building = workshops_02
+	}
+	else_if = {
+		limit = { has_building = workshops_03 }
+		remove_building = workshops_03
+	}
+	else_if = {
+		limit = { has_building =workshops_04 }
+		remove_building = workshops_04
+	}
+	else_if = {
+		limit = { has_building = workshops_05 }
+		remove_building = workshops_05
+	}
+	else_if = {
+		limit = { has_building =workshops_06 }
+		remove_building = workshops_06
+	}
+	else_if = {
+		limit = { has_building = workshops_07 }
+		remove_building = workshops_07
+	}
+	else_if = {
+		limit = { has_building =workshops_08 }
+		remove_building = workshops_08
+	}
+}
+
+_$modId$__effect_construct_horse_pastures = {
+	if = {
+		limit = { _$modId$__trigger_construct_horse_pastures = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = horse_pastures_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = horse_pastures_01
+		}
+	}
+}
+_$modId$__effect_upgrade_horse_pastures = {
+	if = {
+		limit = { _$modId$__trigger_construct_horse_pastures_02 = yes }
+		add_building = horse_pastures_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_horse_pastures_03 = yes }
+		add_building = horse_pastures_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_horse_pastures_04 = yes }
+		add_building = horse_pastures_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_horse_pastures_05 = yes }
+		add_building = horse_pastures_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_horse_pastures_06 = yes }
+		add_building = horse_pastures_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_horse_pastures_07 = yes }
+		add_building = horse_pastures_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_horse_pastures_08 = yes }
+		add_building = horse_pastures_08
+	}
+}
+_$modId$__effect_remove_horse_pastures = {
+	if = {
+		limit = { has_building = horse_pastures_01 }
+		remove_building = horse_pastures_01
+	}
+	else_if = {
+		limit = { has_building =horse_pastures_02 }
+		remove_building = horse_pastures_02
+	}
+	else_if = {
+		limit = { has_building = horse_pastures_03 }
+		remove_building = horse_pastures_03
+	}
+	else_if = {
+		limit = { has_building =horse_pastures_04 }
+		remove_building = horse_pastures_04
+	}
+	else_if = {
+		limit = { has_building = horse_pastures_05 }
+		remove_building = horse_pastures_05
+	}
+	else_if = {
+		limit = { has_building =horse_pastures_06 }
+		remove_building = horse_pastures_06
+	}
+	else_if = {
+		limit = { has_building = horse_pastures_07 }
+		remove_building = horse_pastures_07
+	}
+	else_if = {
+		limit = { has_building =horse_pastures_08 }
+		remove_building = horse_pastures_08
+	}
+}
+
+_$modId$__effect_construct_hillside_grazing = {
+	if = {
+		limit = { _$modId$__trigger_construct_hillside_grazing = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = hillside_grazing_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = hillside_grazing_01
+		}
+	}
+}
+_$modId$__effect_upgrade_hillside_grazing = {
+	if = {
+		limit = { _$modId$__trigger_construct_hillside_grazing_02 = yes }
+		add_building = hillside_grazing_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hillside_grazing_03 = yes }
+		add_building = hillside_grazing_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hillside_grazing_04 = yes }
+		add_building = hillside_grazing_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hillside_grazing_05 = yes }
+		add_building = hillside_grazing_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hillside_grazing_06 = yes }
+		add_building = hillside_grazing_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hillside_grazing_07 = yes }
+		add_building = hillside_grazing_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_hillside_grazing_08 = yes }
+		add_building = hillside_grazing_08
+	}
+}
+_$modId$__effect_remove_hillside_grazing = {
+	if = {
+		limit = { has_building = hillside_grazing_01 }
+		remove_building = hillside_grazing_01
+	}
+	else_if = {
+		limit = { has_building =hillside_grazing_02 }
+		remove_building = hillside_grazing_02
+	}
+	else_if = {
+		limit = { has_building = hillside_grazing_03 }
+		remove_building = hillside_grazing_03
+	}
+	else_if = {
+		limit = { has_building =hillside_grazing_04 }
+		remove_building = hillside_grazing_04
+	}
+	else_if = {
+		limit = { has_building = hillside_grazing_05 }
+		remove_building = hillside_grazing_05
+	}
+	else_if = {
+		limit = { has_building =hillside_grazing_06 }
+		remove_building = hillside_grazing_06
+	}
+	else_if = {
+		limit = { has_building = hillside_grazing_07 }
+		remove_building = hillside_grazing_07
+	}
+	else_if = {
+		limit = { has_building =hillside_grazing_08 }
+		remove_building = hillside_grazing_08
+	}
+}
+
+_$modId$__effect_construct_warrior_lodges = {
+	if = {
+		limit = { _$modId$__trigger_construct_warrior_lodges = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = warrior_lodges_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = warrior_lodges_01
+		}
+	}
+}
+_$modId$__effect_upgrade_warrior_lodges = {
+	if = {
+		limit = { _$modId$__trigger_construct_warrior_lodges_02 = yes }
+		add_building = warrior_lodges_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_warrior_lodges_03 = yes }
+		add_building = warrior_lodges_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_warrior_lodges_04 = yes }
+		add_building = warrior_lodges_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_warrior_lodges_05 = yes }
+		add_building = warrior_lodges_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_warrior_lodges_06 = yes }
+		add_building = warrior_lodges_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_warrior_lodges_07 = yes }
+		add_building = warrior_lodges_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_warrior_lodges_08 = yes }
+		add_building = warrior_lodges_08
+	}
+}
+_$modId$__effect_remove_warrior_lodges = {
+	if = {
+		limit = { has_building = warrior_lodges_01 }
+		remove_building = warrior_lodges_01
+	}
+	else_if = {
+		limit = { has_building =warrior_lodges_02 }
+		remove_building = warrior_lodges_02
+	}
+	else_if = {
+		limit = { has_building = warrior_lodges_03 }
+		remove_building = warrior_lodges_03
+	}
+	else_if = {
+		limit = { has_building =warrior_lodges_04 }
+		remove_building = warrior_lodges_04
+	}
+	else_if = {
+		limit = { has_building = warrior_lodges_05 }
+		remove_building = warrior_lodges_05
+	}
+	else_if = {
+		limit = { has_building =warrior_lodges_06 }
+		remove_building = warrior_lodges_06
+	}
+	else_if = {
+		limit = { has_building = warrior_lodges_07 }
+		remove_building = warrior_lodges_07
+	}
+	else_if = {
+		limit = { has_building =warrior_lodges_08 }
+		remove_building = warrior_lodges_08
+	}
+}
+
+_$modId$__effect_construct_military_camps = {
+	if = {
+		limit = { _$modId$__trigger_construct_military_camps = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = military_camps_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = military_camps_01
+		}
+	}
+}
+_$modId$__effect_upgrade_military_camps = {
+	if = {
+		limit = { _$modId$__trigger_construct_military_camps_02 = yes }
+		add_building = military_camps_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_military_camps_03 = yes }
+		add_building = military_camps_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_military_camps_04 = yes }
+		add_building = military_camps_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_military_camps_05 = yes }
+		add_building = military_camps_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_military_camps_06 = yes }
+		add_building = military_camps_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_military_camps_07 = yes }
+		add_building = military_camps_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_military_camps_08 = yes }
+		add_building = military_camps_08
+	}
+}
+_$modId$__effect_remove_military_camps = {
+	if = {
+		limit = { has_building = military_camps_01 }
+		remove_building = military_camps_01
+	}
+	else_if = {
+		limit = { has_building =military_camps_02 }
+		remove_building = military_camps_02
+	}
+	else_if = {
+		limit = { has_building = military_camps_03 }
+		remove_building = military_camps_03
+	}
+	else_if = {
+		limit = { has_building =military_camps_04 }
+		remove_building = military_camps_04
+	}
+	else_if = {
+		limit = { has_building = military_camps_05 }
+		remove_building = military_camps_05
+	}
+	else_if = {
+		limit = { has_building =military_camps_06 }
+		remove_building = military_camps_06
+	}
+	else_if = {
+		limit = { has_building = military_camps_07 }
+		remove_building = military_camps_07
+	}
+	else_if = {
+		limit = { has_building =military_camps_08 }
+		remove_building = military_camps_08
+	}
+}
+
+_$modId$__effect_construct_regimental_grounds = {
+	if = {
+		limit = { _$modId$__trigger_construct_regimental_grounds = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = regimental_grounds_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = regimental_grounds_01
+		}
+	}
+}
+_$modId$__effect_upgrade_regimental_grounds = {
+	if = {
+		limit = { _$modId$__trigger_construct_regimental_grounds_02 = yes }
+		add_building = regimental_grounds_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_regimental_grounds_03 = yes }
+		add_building = regimental_grounds_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_regimental_grounds_04 = yes }
+		add_building = regimental_grounds_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_regimental_grounds_05 = yes }
+		add_building = regimental_grounds_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_regimental_grounds_06 = yes }
+		add_building = regimental_grounds_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_regimental_grounds_07 = yes }
+		add_building = regimental_grounds_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_regimental_grounds_08 = yes }
+		add_building = regimental_grounds_08
+	}
+}
+_$modId$__effect_remove_regimental_grounds = {
+	if = {
+		limit = { has_building = regimental_grounds_01 }
+		remove_building = regimental_grounds_01
+	}
+	else_if = {
+		limit = { has_building =regimental_grounds_02 }
+		remove_building = regimental_grounds_02
+	}
+	else_if = {
+		limit = { has_building = regimental_grounds_03 }
+		remove_building = regimental_grounds_03
+	}
+	else_if = {
+		limit = { has_building =regimental_grounds_04 }
+		remove_building = regimental_grounds_04
+	}
+	else_if = {
+		limit = { has_building = regimental_grounds_05 }
+		remove_building = regimental_grounds_05
+	}
+	else_if = {
+		limit = { has_building =regimental_grounds_06 }
+		remove_building = regimental_grounds_06
+	}
+	else_if = {
+		limit = { has_building = regimental_grounds_07 }
+		remove_building = regimental_grounds_07
+	}
+	else_if = {
+		limit = { has_building =regimental_grounds_08 }
+		remove_building = regimental_grounds_08
+	}
+}
+
+_$modId$__effect_construct_outposts = {
+	if = {
+		limit = { _$modId$__trigger_construct_outposts = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = outposts_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = outposts_01
+		}
+	}
+}
+_$modId$__effect_upgrade_outposts = {
+	if = {
+		limit = { _$modId$__trigger_construct_outposts_02 = yes }
+		add_building = outposts_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_outposts_03 = yes }
+		add_building = outposts_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_outposts_04 = yes }
+		add_building = outposts_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_outposts_05 = yes }
+		add_building = outposts_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_outposts_06 = yes }
+		add_building = outposts_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_outposts_07 = yes }
+		add_building = outposts_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_outposts_08 = yes }
+		add_building = outposts_08
+	}
+}
+_$modId$__effect_remove_outposts = {
+	if = {
+		limit = { has_building = outposts_01 }
+		remove_building = outposts_01
+	}
+	else_if = {
+		limit = { has_building =outposts_02 }
+		remove_building = outposts_02
+	}
+	else_if = {
+		limit = { has_building = outposts_03 }
+		remove_building = outposts_03
+	}
+	else_if = {
+		limit = { has_building =outposts_04 }
+		remove_building = outposts_04
+	}
+	else_if = {
+		limit = { has_building = outposts_05 }
+		remove_building = outposts_05
+	}
+	else_if = {
+		limit = { has_building =outposts_06 }
+		remove_building = outposts_06
+	}
+	else_if = {
+		limit = { has_building = outposts_07 }
+		remove_building = outposts_07
+	}
+	else_if = {
+		limit = { has_building =outposts_08 }
+		remove_building = outposts_08
+	}
+}
+
+_$modId$__effect_construct_barracks = {
+	if = {
+		limit = { _$modId$__trigger_construct_barracks = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = barracks_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = barracks_01
+		}
+	}
+}
+_$modId$__effect_upgrade_barracks = {
+	if = {
+		limit = { _$modId$__trigger_construct_barracks_02 = yes }
+		add_building = barracks_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_barracks_03 = yes }
+		add_building = barracks_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_barracks_04 = yes }
+		add_building = barracks_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_barracks_05 = yes }
+		add_building = barracks_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_barracks_06 = yes }
+		add_building = barracks_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_barracks_07 = yes }
+		add_building = barracks_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_barracks_08 = yes }
+		add_building = barracks_08
+	}
+}
+_$modId$__effect_remove_barracks = {
+	if = {
+		limit = { has_building = barracks_01 }
+		remove_building = barracks_01
+	}
+	else_if = {
+		limit = { has_building =barracks_02 }
+		remove_building = barracks_02
+	}
+	else_if = {
+		limit = { has_building = barracks_03 }
+		remove_building = barracks_03
+	}
+	else_if = {
+		limit = { has_building =barracks_04 }
+		remove_building = barracks_04
+	}
+	else_if = {
+		limit = { has_building = barracks_05 }
+		remove_building = barracks_05
+	}
+	else_if = {
+		limit = { has_building =barracks_06 }
+		remove_building = barracks_06
+	}
+	else_if = {
+		limit = { has_building = barracks_07 }
+		remove_building = barracks_07
+	}
+	else_if = {
+		limit = { has_building =barracks_08 }
+		remove_building = barracks_08
+	}
+}
+
+_$modId$__effect_construct_camel_farms = {
+	if = {
+		limit = { _$modId$__trigger_construct_camel_farms = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = camel_farms_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = camel_farms_01
+		}
+	}
+}
+_$modId$__effect_upgrade_camel_farms = {
+	if = {
+		limit = { _$modId$__trigger_construct_camel_farms_02 = yes }
+		add_building = camel_farms_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_camel_farms_03 = yes }
+		add_building = camel_farms_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_camel_farms_04 = yes }
+		add_building = camel_farms_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_camel_farms_05 = yes }
+		add_building = camel_farms_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_camel_farms_06 = yes }
+		add_building = camel_farms_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_camel_farms_07 = yes }
+		add_building = camel_farms_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_camel_farms_08 = yes }
+		add_building = camel_farms_08
+	}
+}
+_$modId$__effect_remove_camel_farms = {
+	if = {
+		limit = { has_building = camel_farms_01 }
+		remove_building = camel_farms_01
+	}
+	else_if = {
+		limit = { has_building =camel_farms_02 }
+		remove_building = camel_farms_02
+	}
+	else_if = {
+		limit = { has_building = camel_farms_03 }
+		remove_building = camel_farms_03
+	}
+	else_if = {
+		limit = { has_building =camel_farms_04 }
+		remove_building = camel_farms_04
+	}
+	else_if = {
+		limit = { has_building = camel_farms_05 }
+		remove_building = camel_farms_05
+	}
+	else_if = {
+		limit = { has_building =camel_farms_06 }
+		remove_building = camel_farms_06
+	}
+	else_if = {
+		limit = { has_building = camel_farms_07 }
+		remove_building = camel_farms_07
+	}
+	else_if = {
+		limit = { has_building =camel_farms_08 }
+		remove_building = camel_farms_08
+	}
+}
+
+_$modId$__effect_construct_stables = {
+	if = {
+		limit = { _$modId$__trigger_construct_stables = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = stables_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = stables_01
+		}
+	}
+}
+_$modId$__effect_upgrade_stables = {
+	if = {
+		limit = { _$modId$__trigger_construct_stables_02 = yes }
+		add_building = stables_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_stables_03 = yes }
+		add_building = stables_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_stables_04 = yes }
+		add_building = stables_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_stables_05 = yes }
+		add_building = stables_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_stables_06 = yes }
+		add_building = stables_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_stables_07 = yes }
+		add_building = stables_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_stables_08 = yes }
+		add_building = stables_08
+	}
+}
+_$modId$__effect_remove_stables = {
+	if = {
+		limit = { has_building = stables_01 }
+		remove_building = stables_01
+	}
+	else_if = {
+		limit = { has_building =stables_02 }
+		remove_building = stables_02
+	}
+	else_if = {
+		limit = { has_building = stables_03 }
+		remove_building = stables_03
+	}
+	else_if = {
+		limit = { has_building =stables_04 }
+		remove_building = stables_04
+	}
+	else_if = {
+		limit = { has_building = stables_05 }
+		remove_building = stables_05
+	}
+	else_if = {
+		limit = { has_building =stables_06 }
+		remove_building = stables_06
+	}
+	else_if = {
+		limit = { has_building = stables_07 }
+		remove_building = stables_07
+	}
+	else_if = {
+		limit = { has_building =stables_08 }
+		remove_building = stables_08
+	}
+}
+
+_$modId$__effect_construct_smiths = {
+	if = {
+		limit = { _$modId$__trigger_construct_smiths = yes }
+		if = {
+			limit = { has_free_building_slot = yes }
+			add_building = smiths_01
+		}
+		else_if = {
+			limit = { _$modId$__trigger_add_slot = yes }
+			add_province_modifier = extra_building_slot
+			add_building = smiths_01
+		}
+	}
+}
+_$modId$__effect_upgrade_smiths = {
+	if = {
+		limit = { _$modId$__trigger_construct_smiths_02 = yes }
+		add_building = smiths_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_smiths_03 = yes }
+		add_building = smiths_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_smiths_04 = yes }
+		add_building = smiths_04
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_smiths_05 = yes }
+		add_building = smiths_05
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_smiths_06 = yes }
+		add_building = smiths_06
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_smiths_07 = yes }
+		add_building = smiths_07
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_smiths_08 = yes }
+		add_building = smiths_08
+	}
+}
+_$modId$__effect_remove_smiths = {
+	if = {
+		limit = { has_building = smiths_01 }
+		remove_building = smiths_01
+	}
+	else_if = {
+		limit = { has_building =smiths_02 }
+		remove_building = smiths_02
+	}
+	else_if = {
+		limit = { has_building = smiths_03 }
+		remove_building = smiths_03
+	}
+	else_if = {
+		limit = { has_building =smiths_04 }
+		remove_building = smiths_04
+	}
+	else_if = {
+		limit = { has_building = smiths_05 }
+		remove_building = smiths_05
+	}
+	else_if = {
+		limit = { has_building =smiths_06 }
+		remove_building = smiths_06
+	}
+	else_if = {
+		limit = { has_building = smiths_07 }
+		remove_building = smiths_07
+	}
+	else_if = {
+		limit = { has_building =smiths_08 }
+		remove_building = smiths_08
+	}
+}

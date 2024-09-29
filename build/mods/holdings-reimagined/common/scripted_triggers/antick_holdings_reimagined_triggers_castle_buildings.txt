@@ -1,0 +1,31 @@
+﻿antick_holdings_reimagined_trigger_construct_castle_02 = {
+	has_building = castle_01
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_battlements }
+	}
+}
+antick_holdings_reimagined_trigger_construct_castle_03 = {
+	has_building = castle_02
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_hoardings }
+	}
+}
+antick_holdings_reimagined_trigger_construct_castle_04 = {
+	has_building = castle_03
+	antick_holdings_reimagined_building_requirement_tribal = no
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = { has_innovation = innovation_machicolations }
+	}
+}
+antick_holdings_reimagined_trigger_upgrade_castle = {
+	OR = {
+		antick_holdings_reimagined_trigger_construct_castle_02 = yes
+		antick_holdings_reimagined_trigger_construct_castle_03 = yes
+		antick_holdings_reimagined_trigger_construct_castle_04 = yes
+	}
+}

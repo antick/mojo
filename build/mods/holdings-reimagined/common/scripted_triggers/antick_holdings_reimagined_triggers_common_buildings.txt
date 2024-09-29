@@ -1,0 +1,98 @@
+# hospices
+
+antick_holdings_reimagined_trigger_construct_hospices_01 = {
+	NOT = { has_building_or_higher = hospices_01 }
+	antick_holdings_reimagined_building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 01 }
+}
+antick_holdings_reimagined_trigger_construct_hospices_02 = {
+	has_building = hospices_01
+	antick_holdings_reimagined_building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 01 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_city_planning
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_hospices_03 = {
+	has_building = hospices_02
+	antick_holdings_reimagined_building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_manorialism
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_hospices_04 = {
+	has_building = hospices_03
+	antick_holdings_reimagined_building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 02 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_manorialism
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_hospices_05 = {
+	has_building = hospices_04
+	antick_holdings_reimagined_building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_windmills
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_hospices_06 = {
+	has_building = hospices_05
+	antick_holdings_reimagined_building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 03 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_windmills
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_hospices_07 = {
+	has_building = hospices_06
+	antick_holdings_reimagined_building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_hospices_08 = {
+	has_building = hospices_07
+	antick_holdings_reimagined_building_requirement_tribal = no
+	building_requirement_castle_city_church = { LEVEL = 04 }
+	trigger_if = {
+		limit = { debug_only = no }
+		culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+}
+antick_holdings_reimagined_trigger_construct_hospices = {
+	antick_holdings_reimagined_trigger_construct_hospices_01 = yes
+}
+antick_holdings_reimagined_trigger_upgrade_hospices = {
+	OR = {
+		antick_holdings_reimagined_trigger_construct_hospices_02 = yes
+		antick_holdings_reimagined_trigger_construct_hospices_03 = yes
+		antick_holdings_reimagined_trigger_construct_hospices_04 = yes
+		antick_holdings_reimagined_trigger_construct_hospices_05 = yes
+		antick_holdings_reimagined_trigger_construct_hospices_06 = yes
+		antick_holdings_reimagined_trigger_construct_hospices_07 = yes
+		antick_holdings_reimagined_trigger_construct_hospices_08 = yes
+	}
+}

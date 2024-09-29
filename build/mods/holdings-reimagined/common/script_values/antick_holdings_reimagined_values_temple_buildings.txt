@@ -1,0 +1,240 @@
+﻿antick_holdings_reimagined_value_construct_temple_02_gold_cost = {
+	value = main_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_temple_03_gold_cost = {
+	value = main_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_temple_04_gold_cost = {
+	value = main_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_slow_construction_time_cost
+}
+antick_holdings_reimagined_value_upgrade_temple_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_temple_02 = yes }
+		add = antick_holdings_reimagined_value_construct_temple_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_temple_03 = yes }
+		add = antick_holdings_reimagined_value_construct_temple_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_temple_04 = yes }
+		add = antick_holdings_reimagined_value_construct_temple_04_gold_cost
+	}
+}
+
+antick_holdings_reimagined_value_construct_scriptorium_01_gold_cost = {
+	value = normal_building_tier_1_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_scriptorium_02_gold_cost = {
+	value = normal_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_scriptorium_03_gold_cost = {
+	value = normal_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_scriptorium_04_gold_cost = {
+	value = normal_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_scriptorium_05_gold_cost = {
+	value = normal_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_scriptorium_06_gold_cost = {
+	value = normal_building_tier_6_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_scriptorium_07_gold_cost = {
+	value = normal_building_tier_7_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_scriptorium_08_gold_cost = {
+	value = normal_building_tier_8_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_scriptorium_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_01 = yes }
+		add = antick_holdings_reimagined_value_construct_scriptorium_01_gold_cost
+	}
+}
+antick_holdings_reimagined_value_upgrade_scriptorium_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_02 = yes }
+		add = antick_holdings_reimagined_value_construct_scriptorium_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_03 = yes }
+		add = antick_holdings_reimagined_value_construct_scriptorium_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_04 = yes }
+		add = antick_holdings_reimagined_value_construct_scriptorium_04_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_05 = yes }
+		add = antick_holdings_reimagined_value_construct_scriptorium_05_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_06 = yes }
+		add = antick_holdings_reimagined_value_construct_scriptorium_06_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_07 = yes }
+		add = antick_holdings_reimagined_value_construct_scriptorium_07_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_scriptorium_08 = yes }
+		add = antick_holdings_reimagined_value_construct_scriptorium_08_gold_cost
+	}
+}
+
+antick_holdings_reimagined_value_construct_monastic_schools_01_gold_cost = {
+	value = normal_building_tier_1_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_monastic_schools_02_gold_cost = {
+	value = normal_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_monastic_schools_03_gold_cost = {
+	value = normal_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_monastic_schools_04_gold_cost = {
+	value = normal_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_monastic_schools_05_gold_cost = {
+	value = normal_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_monastic_schools_06_gold_cost = {
+	value = normal_building_tier_6_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_monastic_schools_07_gold_cost = {
+	value = normal_building_tier_7_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_monastic_schools_08_gold_cost = {
+	value = normal_building_tier_8_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_monastic_schools_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_01 = yes }
+		add = antick_holdings_reimagined_value_construct_monastic_schools_01_gold_cost
+	}
+}
+antick_holdings_reimagined_value_upgrade_monastic_schools_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_02 = yes }
+		add = antick_holdings_reimagined_value_construct_monastic_schools_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_03 = yes }
+		add = antick_holdings_reimagined_value_construct_monastic_schools_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_04 = yes }
+		add = antick_holdings_reimagined_value_construct_monastic_schools_04_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_05 = yes }
+		add = antick_holdings_reimagined_value_construct_monastic_schools_05_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_06 = yes }
+		add = antick_holdings_reimagined_value_construct_monastic_schools_06_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_07 = yes }
+		add = antick_holdings_reimagined_value_construct_monastic_schools_07_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_monastic_schools_08 = yes }
+		add = antick_holdings_reimagined_value_construct_monastic_schools_08_gold_cost
+	}
+}
+
+antick_holdings_reimagined_value_construct_megalith_01_gold_cost = {
+	value = normal_building_tier_1_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_megalith_02_gold_cost = {
+	value = normal_building_tier_2_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_megalith_03_gold_cost = {
+	value = normal_building_tier_3_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_megalith_04_gold_cost = {
+	value = normal_building_tier_4_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_megalith_05_gold_cost = {
+	value = normal_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_megalith_06_gold_cost = {
+	value = normal_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_megalith_07_gold_cost = {
+	value = normal_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_megalith_08_gold_cost = {
+	value = normal_building_tier_5_cost
+	multiply = antick_holdings_reimagined_value_multiplier_standard_construction_time_cost
+}
+antick_holdings_reimagined_value_construct_megalith_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_01 = yes }
+		add = antick_holdings_reimagined_value_construct_megalith_01_gold_cost
+	}
+}
+antick_holdings_reimagined_value_upgrade_megalith_gold_cost = {
+	value = 0
+	if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_02 = yes }
+		add = antick_holdings_reimagined_value_construct_megalith_02_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_03 = yes }
+		add = antick_holdings_reimagined_value_construct_megalith_03_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_04 = yes }
+		add = antick_holdings_reimagined_value_construct_megalith_04_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_05 = yes }
+		add = antick_holdings_reimagined_value_construct_megalith_05_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_06 = yes }
+		add = antick_holdings_reimagined_value_construct_megalith_06_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_07 = yes }
+		add = antick_holdings_reimagined_value_construct_megalith_07_gold_cost
+	}
+	else_if = {
+		limit = { antick_holdings_reimagined_trigger_construct_megalith_08 = yes }
+		add = antick_holdings_reimagined_value_construct_megalith_08_gold_cost
+	}
+}

@@ -1,0 +1,142 @@
+﻿_$modId$__revoke_lease_button = {
+	scope = character
+	saved_scopes = { gui_title }
+
+	is_shown = {
+		completely_controls = scope:gui_title
+		scope:gui_title = {
+			has_revokable_lease = yes
+		}
+	}
+	is_valid = {
+		NOT = { is_at_war_with = scope:gui_title.lessee }
+		scope:gui_title.lessee = {
+			NOT = { has_strong_hook = root }
+		}
+	}
+	effect = {
+		save_temporary_scope_as = _$modId$__gui_scope_revoker
+		scope:gui_title.lessee = {
+			save_temporary_scope_as = _$modId$__gui_scope_revoked
+		}
+
+		# Following code is from
+		# revoke_holy_order_lease_effect = {
+		# 	CHARACTER = scope:_$modId$__gui_scope_revoker
+		# 	TARGET = scope:_$modId$__gui_scope_revoked
+		# 	BARONY = scope:gui_title
+		# }
+		if = {
+			limit = {
+				scope:_$modId$__gui_scope_revoker.faith = {
+					any_faith_holy_order = {
+						num_leased_titles = 1
+						title = scope:gui_title.lessee_title
+					}
+				}
+			}
+			custom_tooltip = destroy_holy_order_warning
+		}
+
+		scope:_$modId$__gui_scope_revoker= {
+			send_interface_message = {
+				type = event_generic_neutral
+				title = revoke_leased_title_interaction_notification
+				right_icon = scope:_$modId$__gui_scope_revoked
+				scope:gui_title = {
+					revoke_lease = yes
+				}
+				# Zealous costs stress if same-faith.
+				if = {
+					limit = { scope:_$modId$__gui_scope_revoker.faith = scope:_$modId$__gui_scope_revoked.faith }
+					stress_impact = {
+						zealous = massive_stress_impact_gain
+						generous = medium_stress_impact_gain
+					}
+
+					add_piety = {
+						value = 0
+						subtract = cancel_holy_order_piety_cost
+					}
+				}
+				else_if = {
+					# Bit less but still some if you view the other faith as astray.
+					limit = {
+						scope:_$modId$__gui_scope_revoker.faith = {
+							faith_hostility_level = {
+								target = scope:_$modId$__gui_scope_revoked.faith
+								value <= faith_astray_level
+							}
+						}
+					}
+					stress_impact = {
+						zealous = major_stress_impact_gain
+						generous = medium_stress_impact_gain
+					}
+				}
+				else = {
+					# Otherwise, only generous is stressed.
+					stress_impact = {
+						generous = medium_stress_impact_gain
+					}
+
+					add_piety = {
+						value = cancel_holy_order_piety_cost
+					}
+				}
+			}
+		}
+
+		scope:_$modId$__gui_scope_revoked = {
+			hidden_effect = { #Nudge towards rivalry
+				if = {
+					limit = {
+						NOR = {
+							has_relation_rival = scope:_$modId$__gui_scope_revoker
+							has_relation_potential_rival = scope:_$modId$__gui_scope_revoker
+						}
+					}
+					set_relation_potential_rival = scope:_$modId$__gui_scope_revoker
+				}
+			}
+
+			if = {
+				limit = {
+					NOT = { this = scope:_$modId$__gui_scope_revoker }
+				}
+				add_opinion = {
+					target = scope:_$modId$__gui_scope_revoker
+					modifier = angry_opinion
+					opinion = -40
+				}
+			}
+
+			faith = {
+				religious_head ?= {
+					if = {
+						limit = {
+							NOT = { religious_head = scope:_$modId$__gui_scope_revoker }
+						}
+						add_opinion = {
+							modifier = angry_opinion
+							target = scope:_$modId$__gui_scope_revoker
+							opinion = -20
+						}
+						if = {
+							limit = {
+								has_opinion_modifier = {
+									target = scope:_$modId$__gui_scope_revoker
+									modifier = founded_holy_order_opinion
+								}
+							}
+							remove_opinion = {
+								target = scope:_$modId$__gui_scope_revoker
+								modifier = founded_holy_order_opinion
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

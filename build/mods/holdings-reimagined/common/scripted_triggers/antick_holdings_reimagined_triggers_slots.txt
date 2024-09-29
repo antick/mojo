@@ -1,0 +1,71 @@
+﻿antick_holdings_reimagined_trigger_player_add_slot = { #scope: province
+	trigger_if = {
+		limit = {
+			has_game_rule = antick_holdings_reimagined_rule_player_extra_slots_enabled
+		}
+		antick_holdings_reimagined_value_max_slots > building_slots
+	}
+	trigger_else_if = {
+		limit = {
+			has_game_rule = antick_holdings_reimagined_rule_player_extra_slots_per_holding_level
+		}
+		antick_holdings_reimagined_value_available_slots_for_holding_level > 0
+	}
+	trigger_else_if = {
+		limit = {
+			has_game_rule = antick_holdings_reimagined_rule_player_extra_slots_per_development_level
+		}
+		antick_holdings_reimagined_value_available_slots_for_development_level > 0
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+antick_holdings_reimagined_trigger_ai_add_slot = { #scope: province
+	trigger_if = {
+		limit = {
+			has_game_rule = antick_holdings_reimagined_rule_ai_extra_slots_enabled
+		}
+		antick_holdings_reimagined_value_max_slots > building_slots
+	}
+	trigger_else_if = {
+		limit = {
+			has_game_rule = antick_holdings_reimagined_rule_ai_extra_slots_per_holding_level
+		}
+		antick_holdings_reimagined_value_available_slots_for_holding_level > 0
+	}
+	trigger_else_if = {
+		limit = {
+			has_game_rule = antick_holdings_reimagined_rule_ai_extra_slots_per_development_level
+		}
+		antick_holdings_reimagined_value_available_slots_for_development_level > 0
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+antick_holdings_reimagined_trigger_add_slot = { #scope: province
+	trigger_if = {
+		limit = {
+			trigger_if = {
+				limit = {
+					barony = { is_leased_out = no }
+				}
+				province_owner = {
+					is_ai = no
+				}
+			}
+			trigger_else = {
+				barony.lessee = {
+					is_ai = no
+				}
+			}
+		}
+		antick_holdings_reimagined_trigger_player_add_slot = yes
+	}
+	trigger_else = {
+		antick_holdings_reimagined_trigger_ai_add_slot = yes
+	}
+}

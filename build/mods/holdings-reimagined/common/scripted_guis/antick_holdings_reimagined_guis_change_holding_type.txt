@@ -1,0 +1,227 @@
+﻿antick_holdings_reimagined_make_castle_button = {
+    scope = character
+	saved_scopes = { gui_holding }
+    is_shown = {
+		scope:gui_holding = {
+			barony = { is_under_holy_order_lease = no }
+			NOR = {
+				has_holding_type = tribal_holding
+				has_holding_type = castle_holding
+			}
+		}
+		trigger_if = {
+			limit = {
+				debug_only = no
+			}
+			trigger_if = {
+				limit = {
+					scope:gui_holding.barony = { is_leased_out = no }
+				}
+				OR = {
+					scope:gui_holding.province_owner = root
+					is_liege_or_above_of = scope:gui_holding.province_owner
+				}
+
+			}
+			trigger_else = {
+				OR = {
+					scope:gui_holding.barony.lessee = root
+					is_liege_or_above_of = scope:gui_holding.barony.lessee
+				}
+			}
+		}
+    }
+    is_valid = {
+		scope:gui_holding = {
+			has_ongoing_construction = no
+			trigger_if = {
+				limit = {
+					debug_only = no
+				}
+				NOT = { has_province_modifier = antick_holdings_reimagined_modifier_holding_type_changed_recently }
+				antick_holdings_reimagined_value_change_holding_type_cost <= root.gold
+			}
+		}
+    }
+    effect = {
+		scope:gui_holding = {
+			set_holding_type = castle_holding
+			hidden_effect = {
+				if = {
+					limit = {
+						is_county_capital = no
+					}
+					antick_holdings_reimagined_effect_resolve_holding = yes
+				}
+				if = {
+					limit = {
+						NOT = { debug_only = yes }
+					}
+					add_province_modifier = {
+						modifier = antick_holdings_reimagined_modifier_holding_type_changed_recently
+						years = antick_holdings_reimagined_value_change_holding_type_cooldown
+					}
+					save_temporary_scope_value_as = {
+						name = antick_holdings_reimagined_gui_scope_change_holding_type_cost
+						value = antick_holdings_reimagined_value_change_holding_type_cost
+					}
+					root = {
+						remove_long_term_gold = scope:antick_holdings_reimagined_gui_scope_change_holding_type_cost
+					}
+				}
+			}
+		}
+    }
+}
+
+antick_holdings_reimagined_make_temple_button = {
+    scope = character
+	saved_scopes = { gui_holding }
+    is_shown = {
+		scope:gui_holding = {
+			barony = { is_under_holy_order_lease = no }
+			NOR = {
+				has_holding_type = tribal_holding
+				has_holding_type = church_holding
+			}
+		}
+		trigger_if = {
+			limit = {
+				debug_only = no
+			}
+			trigger_if = {
+				limit = {
+					scope:gui_holding.barony = { is_leased_out = no }
+				}
+				OR = {
+					scope:gui_holding.province_owner = root
+					is_liege_or_above_of = scope:gui_holding.province_owner
+				}
+
+			}
+			trigger_else = {
+				OR = {
+					scope:gui_holding.barony.lessee = root
+					is_liege_or_above_of = scope:gui_holding.barony.lessee
+				}
+			}
+		}
+    }
+    is_valid = {
+		scope:gui_holding = {
+			has_ongoing_construction = no
+			trigger_if = {
+				limit = {
+					debug_only = no
+				}
+				NOT = { has_province_modifier = antick_holdings_reimagined_modifier_holding_type_changed_recently }
+				antick_holdings_reimagined_value_change_holding_type_cost <= root.gold
+			}
+		}
+    }
+    effect = {
+		scope:gui_holding = {
+			set_holding_type = church_holding
+			hidden_effect = {
+				if = {
+					limit = {
+						is_county_capital = no
+					}
+					antick_holdings_reimagined_effect_resolve_holding = yes
+				}
+				if = {
+					limit = {
+						NOT = { debug_only = yes }
+					}
+					add_province_modifier = {
+						modifier = antick_holdings_reimagined_modifier_holding_type_changed_recently
+						years = antick_holdings_reimagined_value_change_holding_type_cooldown
+					}
+					save_temporary_scope_value_as = {
+						name = antick_holdings_reimagined_gui_scope_change_holding_type_cost
+						value = antick_holdings_reimagined_value_change_holding_type_cost
+					}
+					root = {
+						remove_long_term_gold = scope:antick_holdings_reimagined_gui_scope_change_holding_type_cost
+					}
+				}
+			}
+		}
+    }
+}
+
+antick_holdings_reimagined_make_city_button = {
+    scope = character
+	saved_scopes = { gui_holding }
+    is_shown = {
+		scope:gui_holding = {
+			barony = { is_under_holy_order_lease = no }
+			NOR = {
+				has_holding_type = tribal_holding
+				has_holding_type = city_holding
+			}
+		}
+		trigger_if = {
+			limit = {
+				debug_only = no
+			}
+			trigger_if = {
+				limit = {
+					scope:gui_holding.barony = { is_leased_out = no }
+				}
+				OR = {
+					scope:gui_holding.province_owner = root
+					is_liege_or_above_of = scope:gui_holding.province_owner
+				}
+
+			}
+			trigger_else = {
+				OR = {
+					scope:gui_holding.barony.lessee = root
+					is_liege_or_above_of = scope:gui_holding.barony.lessee
+				}
+			}
+		}
+    }
+    is_valid = {
+		scope:gui_holding = {
+			has_ongoing_construction = no
+			trigger_if = {
+				limit = {
+					debug_only = no
+				}
+				NOT = { has_province_modifier = antick_holdings_reimagined_modifier_holding_type_changed_recently }
+				antick_holdings_reimagined_value_change_holding_type_cost <= root.gold
+			}
+		}
+    }
+    effect = {
+		scope:gui_holding = {
+			set_holding_type = city_holding
+			hidden_effect = {
+				if = {
+					limit = {
+						is_county_capital = no
+					}
+					antick_holdings_reimagined_effect_resolve_holding = yes
+				}
+				if = {
+					limit = {
+						NOT = { debug_only = yes }
+					}
+					add_province_modifier = {
+						modifier = antick_holdings_reimagined_modifier_holding_type_changed_recently
+						years = antick_holdings_reimagined_value_change_holding_type_cooldown
+					}
+					save_temporary_scope_value_as = {
+						name = antick_holdings_reimagined_gui_scope_change_holding_type_cost
+						value = antick_holdings_reimagined_value_change_holding_type_cost
+					}
+					root = {
+						remove_long_term_gold = scope:antick_holdings_reimagined_gui_scope_change_holding_type_cost
+					}
+				}
+			}
+		}
+    }
+}

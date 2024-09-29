@@ -1,0 +1,132 @@
+﻿antick_holdings_reimagined_value_construct_buildings_gold_cost = { # scope:province
+	value = 0
+	# tribal buildings
+	add = antick_holdings_reimagined_value_construct_longhouses_gold_cost
+	add = antick_holdings_reimagined_value_construct_war_camps_gold_cost
+	add = antick_holdings_reimagined_value_construct_palisades_gold_cost
+	add = antick_holdings_reimagined_value_construct_market_villages_gold_cost
+	# castle buildings
+	# city buildings
+	add = antick_holdings_reimagined_value_construct_guild_halls_gold_cost
+	# temple buildings
+	add = antick_holdings_reimagined_value_construct_scriptorium_gold_cost
+	add = antick_holdings_reimagined_value_construct_monastic_schools_gold_cost
+	add = antick_holdings_reimagined_value_construct_megalith_gold_cost
+	# common buildings
+	add = antick_holdings_reimagined_value_construct_hospices_gold_cost
+	# standard fortification buildings
+	add = antick_holdings_reimagined_value_construct_ramparts_gold_cost
+	add = antick_holdings_reimagined_value_construct_curtain_walls_gold_cost
+	add = antick_holdings_reimagined_value_construct_watchtowers_gold_cost
+	add = antick_holdings_reimagined_value_construct_hill_forts_gold_cost
+	# standard economy buildings
+	add = antick_holdings_reimagined_value_construct_caravanserai_gold_cost
+	add = antick_holdings_reimagined_value_construct_watermills_gold_cost
+	add = antick_holdings_reimagined_value_construct_windmills_gold_cost
+	add = antick_holdings_reimagined_value_construct_common_tradeport_gold_cost
+	add = antick_holdings_reimagined_value_construct_pastures_gold_cost
+	add = antick_holdings_reimagined_value_construct_hunting_grounds_gold_cost
+	add = antick_holdings_reimagined_value_construct_orchards_gold_cost
+	add = antick_holdings_reimagined_value_construct_farm_estates_gold_cost
+	add = antick_holdings_reimagined_value_construct_cereal_fields_gold_cost
+	add = antick_holdings_reimagined_value_construct_logging_camps_gold_cost
+	add = antick_holdings_reimagined_value_construct_peat_quarries_gold_cost
+	add = antick_holdings_reimagined_value_construct_hill_farms_gold_cost
+	add = antick_holdings_reimagined_value_construct_elephant_pens_gold_cost
+	add = antick_holdings_reimagined_value_construct_plantations_gold_cost
+	add = antick_holdings_reimagined_value_construct_quarries_gold_cost
+	# standard military buildings
+	add = antick_holdings_reimagined_value_construct_wind_furnace_gold_cost
+	add = antick_holdings_reimagined_value_construct_workshops_gold_cost
+	add = antick_holdings_reimagined_value_construct_horse_pastures_gold_cost
+	add = antick_holdings_reimagined_value_construct_hillside_grazing_gold_cost
+	add = antick_holdings_reimagined_value_construct_warrior_lodges_gold_cost
+	add = antick_holdings_reimagined_value_construct_military_camps_gold_cost
+	add = antick_holdings_reimagined_value_construct_regimental_grounds_gold_cost
+	add = antick_holdings_reimagined_value_construct_outposts_gold_cost
+	add = antick_holdings_reimagined_value_construct_barracks_gold_cost
+	add = antick_holdings_reimagined_value_construct_camel_farms_gold_cost
+	add = antick_holdings_reimagined_value_construct_stables_gold_cost
+	add = antick_holdings_reimagined_value_construct_smiths_gold_cost
+}
+
+antick_holdings_reimagined_value_construct_buildings_prestige_cost = { # scope:province
+	value = 0
+	# tribal buildings
+	add = antick_holdings_reimagined_value_construct_longhouses_prestige_cost
+	add = antick_holdings_reimagined_value_construct_war_camps_prestige_cost
+	add = antick_holdings_reimagined_value_construct_palisades_prestige_cost
+	add = antick_holdings_reimagined_value_construct_market_villages_prestige_cost
+}
+
+antick_holdings_reimagined_value_upgrade_buildings_gold_cost = { # scope:province
+	value = 0
+	# tribal buildings
+	add = antick_holdings_reimagined_value_upgrade_tribe_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_longhouses_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_war_camps_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_palisades_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_market_villages_gold_cost
+	# castle buildings
+	add = antick_holdings_reimagined_value_upgrade_castle_gold_cost
+	# city buildings
+	add = antick_holdings_reimagined_value_upgrade_city_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_guild_halls_gold_cost
+	# temple buildings
+	add = antick_holdings_reimagined_value_upgrade_temple_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_scriptorium_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_monastic_schools_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_megalith_gold_cost
+	# common buildings
+	add = antick_holdings_reimagined_value_upgrade_hospices_gold_cost
+	# standard fortification buildings
+	add = antick_holdings_reimagined_value_upgrade_ramparts_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_curtain_walls_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_watchtowers_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_hill_forts_gold_cost
+	# standard economy buildings
+	add = antick_holdings_reimagined_value_upgrade_caravanserai_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_watermills_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_windmills_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_common_tradeport_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_pastures_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_hunting_grounds_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_orchards_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_farm_estates_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_cereal_fields_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_logging_camps_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_peat_quarries_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_hill_farms_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_elephant_pens_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_plantations_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_quarries_gold_cost
+	# standard military buildings
+	add = antick_holdings_reimagined_value_upgrade_wind_furnace_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_workshops_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_horse_pastures_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_hillside_grazing_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_warrior_lodges_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_military_camps_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_regimental_grounds_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_outposts_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_barracks_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_camel_farms_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_stables_gold_cost
+	add = antick_holdings_reimagined_value_upgrade_smiths_gold_cost
+}
+
+antick_holdings_reimagined_value_upgrade_buildings_prestige_cost = { # scope:province
+	value = 0
+	# tribal buildings
+	add = antick_holdings_reimagined_value_upgrade_tribe_prestige_cost
+	add = antick_holdings_reimagined_value_upgrade_longhouses_prestige_cost
+	add = antick_holdings_reimagined_value_upgrade_war_camps_prestige_cost
+	add = antick_holdings_reimagined_value_upgrade_palisades_prestige_cost
+	add = antick_holdings_reimagined_value_upgrade_market_villages_prestige_cost
+}
+
+antick_holdings_reimagined_value_max_building_slots_and_construct_buildings_gold_cost = {
+	value = 0
+	add = antick_holdings_reimagined_value_max_slots_cost
+	add = antick_holdings_reimagined_value_construct_buildings_gold_cost
+}

@@ -1,0 +1,31 @@
+﻿antick_holdings_reimagined_building_requirement_tribal = {
+	province_owner = {
+		government_has_flag = government_is_tribal
+	}
+}
+
+antick_holdings_reimagined_building_wind_furnace_requirement_terrain = {
+	geographical_region = world_india
+	OR = {
+		is_coastal = yes
+		AND = {
+			province_owner.top_liege = {
+				any_realm_county = {
+					any_county_province = {
+						has_building_or_higher = konasamudram_mines_01
+					}
+				}
+			}
+			duchy = {
+				any_county = {
+					any_county_province = {
+						has_building_or_higher = konasamudram_mines_01
+					}
+				}
+			}
+		}
+
+	}
+
+	province_owner.culture = { has_innovation = innovation_wootz_steel }
+}

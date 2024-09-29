@@ -1,0 +1,136 @@
+﻿_$modId$__control_change_holding_type_cost = {
+	categories = { holding_manager }
+	default = _$modId$__rule_change_holding_type_cost_default
+	_$modId$__rule_change_holding_type_cost_very_cheap = {}
+	_$modId$__rule_change_holding_type_cost_cheap = {}
+	_$modId$__rule_change_holding_type_cost_default = {}
+	_$modId$__rule_change_holding_type_cost_expensive = {}
+	_$modId$__rule_change_holding_type_cost_very_expensive = {}
+}
+
+_$modId$__control_change_holding_type_cooldown = {
+	categories = { holding_manager }
+	default = _$modId$__rule_change_holding_type_cooldown_default
+	_$modId$__rule_change_holding_type_cooldown_very_short = {}
+	_$modId$__rule_change_holding_type_cooldown_short = {}
+	_$modId$__rule_change_holding_type_cooldown_default = {}
+	_$modId$__rule_change_holding_type_cooldown_long = {}
+	_$modId$__rule_change_holding_type_cooldown_very_long = {}
+}
+
+_$modId$__control_move_duchy_capital_cooldown = {
+	categories = { holding_manager }
+	default = _$modId$__rule_move_duchy_capital_cooldown_default
+	_$modId$__rule_move_duchy_capital_cooldown_very_short = {}
+	_$modId$__rule_move_duchy_capital_cooldown_short = {}
+	_$modId$__rule_move_duchy_capital_cooldown_default = {}
+	_$modId$__rule_move_duchy_capital_cooldown_long = {}
+	_$modId$__rule_move_duchy_capital_cooldown_very_long = {}
+	_$modId$__rule_move_duchy_capital_cooldown_lifetime = {}
+}
+
+_$modId$__control_move_realm_capital_cooldown = {
+	categories = { holding_manager }
+	default = _$modId$__rule_move_realm_capital_cooldown_default
+	_$modId$__rule_move_realm_capital_cooldown_very_short = {}
+	_$modId$__rule_move_realm_capital_cooldown_short = {}
+	_$modId$__rule_move_realm_capital_cooldown_default = {}
+	_$modId$__rule_move_realm_capital_cooldown_long = {}
+	_$modId$__rule_move_realm_capital_cooldown_very_long = {}
+	_$modId$__rule_move_realm_capital_cooldown_lifetime = {}
+}
+
+_$modId$__control_can_replace_buildings = {
+	categories = { holding_manager }
+	default = _$modId$__rule_can_replace_buildings_default
+	_$modId$__rule_can_replace_buildings_default = {}
+	_$modId$__rule_can_replace_buildings_vassals = {}
+}
+
+_$modId$__control_can_feudalize_holdings = {
+	categories = { holding_manager }
+	default = _$modId$__rule_can_feudalize_holdings_default
+	_$modId$__rule_can_feudalize_holdings_default = {}
+	_$modId$__rule_can_feudalize_holdings_vassals = {}
+}
+
+_$modId$__control_feudalize_holding_cost = {
+	categories = { holding_manager }
+	default = _$modId$__rule_feudalize_holding_cost_default
+	_$modId$__rule_feudalize_holding_cost_very_cheap = {}
+	_$modId$__rule_feudalize_holding_cost_cheap = {}
+	_$modId$__rule_feudalize_holding_cost_default = {}
+	_$modId$__rule_feudalize_holding_cost_expensive = {}
+	_$modId$__rule_feudalize_holding_cost_very_expensive = {}
+}
+
+_$modId$__control_player_extra_slots = {
+	categories = { holding_manager }
+	default = _$modId$__rule_player_extra_slots_enabled
+	_$modId$__rule_player_extra_slots_disabled = {}
+	_$modId$__rule_player_extra_slots_per_holding_level = {}
+	_$modId$__rule_player_extra_slots_per_development_level = {}
+	_$modId$__rule_player_extra_slots_enabled = {}
+}
+
+_$modId$__control_player_slot_base_cost = {
+	categories = { holding_manager }
+	default = _$modId$__rule_player_slot_base_cost_default
+	_$modId$__rule_player_slot_base_cost_very_cheap = {}
+	_$modId$__rule_player_slot_base_cost_cheap = {}
+	_$modId$__rule_player_slot_base_cost_default = {}
+	_$modId$__rule_player_slot_base_cost_expensive = {}
+	_$modId$__rule_player_slot_base_cost_very_expensive = {}
+}
+
+_$modId$__control_player_slot_step_cost = {
+	categories = { holding_manager }
+	default = _$modId$__rule_player_slot_step_cost_default
+	_$modId$__rule_player_slot_step_cost_very_cheap = {}
+	_$modId$__rule_player_slot_step_cost_cheap = {}
+	_$modId$__rule_player_slot_step_cost_default = {}
+	_$modId$__rule_player_slot_step_cost_expensive = {}
+	_$modId$__rule_player_slot_step_cost_very_expensive = {}
+}
+
+_$modId$__control_ai_extra_slots = {
+	categories = { holding_manager }
+	default = _$modId$__rule_ai_extra_slots_enabled
+	_$modId$__rule_ai_extra_slots_disabled = {}
+	_$modId$__rule_ai_extra_slots_per_holding_level = {}
+	_$modId$__rule_ai_extra_slots_per_development_level = {}
+	_$modId$__rule_ai_extra_slots_enabled = {}
+}
+
+_$modId$__control_ai_slot_base_cost = {
+	categories = { holding_manager }
+	default = _$modId$__rule_ai_slot_base_cost_default
+	_$modId$__rule_ai_slot_base_cost_free = {}
+	_$modId$__rule_ai_slot_base_cost_very_cheap = {}
+	_$modId$__rule_ai_slot_base_cost_cheap = {}
+	_$modId$__rule_ai_slot_base_cost_default = {}
+	_$modId$__rule_ai_slot_base_cost_expensive = {}
+	_$modId$__rule_ai_slot_base_cost_very_expensive = {}
+}
+
+_$modId$__control_ai_slot_step_cost = {
+	categories = { holding_manager }
+	default = _$modId$__rule_ai_slot_step_cost_default
+	_$modId$__rule_ai_slot_step_cost_free = {}
+	_$modId$__rule_ai_slot_step_cost_very_cheap = {}
+	_$modId$__rule_ai_slot_step_cost_cheap = {}
+	_$modId$__rule_ai_slot_step_cost_default = {}
+	_$modId$__rule_ai_slot_step_cost_expensive = {}
+	_$modId$__rule_ai_slot_step_cost_very_expensive = {}
+}
+
+_$modId$__control_construction_time_cost = {
+	categories = { holding_manager }
+	default = _$modId$__rule_construction_time_cost_default
+	_$modId$__rule_construction_time_cost_free = {}
+	_$modId$__rule_construction_time_cost_very_cheap = {}
+	_$modId$__rule_construction_time_cost_cheap = {}
+	_$modId$__rule_construction_time_cost_default = {}
+	_$modId$__rule_construction_time_cost_expensive = {}
+	_$modId$__rule_construction_time_cost_very_expensive = {}
+}

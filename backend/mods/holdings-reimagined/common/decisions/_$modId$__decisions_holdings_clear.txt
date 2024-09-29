@@ -1,0 +1,39 @@
+﻿_$modId$__decision_remove_all = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	desc = _$modId$__decision_remove_all_desc
+	selection_tooltip = _$modId$__decision_remove_all_tooltip
+
+	is_shown = {
+		global_var:_$modId$__show_decisions ?= yes
+		is_landed = yes
+		any_directly_owned_province = {
+			has_ongoing_construction = no
+			barony = {
+				is_leased_out = no
+			}
+			_$modId$__trigger_remove_buildings = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_at_war = no
+	}
+
+	effect = {
+		custom_tooltip = _$modId$__remove_all_effect_tooltip
+		hidden_effect = {
+			every_directly_owned_province = {
+				limit = {
+					has_ongoing_construction = no
+					barony = {
+						is_leased_out = no
+					}
+				}
+				_$modId$__effect_remove_buildings = yes
+			}
+		}
+	}
+
+	ai_check_interval = 0
+}

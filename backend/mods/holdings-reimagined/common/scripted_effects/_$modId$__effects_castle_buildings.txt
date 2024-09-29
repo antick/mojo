@@ -1,0 +1,14 @@
+﻿_$modId$__effect_upgrade_castle = {
+	if = {
+		limit = { _$modId$__trigger_construct_castle_02 = yes }
+		add_building = castle_02
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_castle_03 = yes }
+		add_building = castle_03
+	}
+	else_if = {
+		limit = { _$modId$__trigger_construct_castle_04 = yes }
+		add_building = castle_04
+	}
+}
