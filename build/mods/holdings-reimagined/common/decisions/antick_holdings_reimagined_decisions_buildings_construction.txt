@@ -1,6 +1,6 @@
 ﻿antick_holdings_reimagined_decision_buildings_construction = {
 	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
-    desc = antick_holdings_reimagined_decision_buildings_construction_desc
+	desc = antick_holdings_reimagined_decision_buildings_construction_desc
 	selection_tooltip = antick_holdings_reimagined_decision_buildings_construction_tooltip
 
 	cost = {

@@ -2214,7 +2214,11 @@ window = {
 	state = {
 		name = _show
 		using = Animation_FadeIn_Quick
-		position_x = 0
+		#### Mojo change begins ####
+		# position_x = 0
+		position_x = 108
+		position_y = 7
+		#### Mojo change ends ####
 	}
 
 	state = {
@@ -3341,7 +3345,7 @@ types CountyViewTypes
 				name = "building_icon"
 				visible = "[Not( GUIBuildingItem.CanUpgrade )]"
 				parentanchor = center
-				size = { 40 40 }
+				size = { 45 40 }
 				texture = "[GUIBuildingItem.GetCurrentOrConstrucingBuilding.GetTypeIcon]"
 			}
 
@@ -3349,7 +3353,7 @@ types CountyViewTypes
 				name = "building_icon_can_upgrade"
 				visible = "[GUIBuildingItem.CanUpgrade]"
 				parentanchor = center
-				size = { 40 40 }
+				size = { 45 40 }
 				texture = "[GUIBuildingItem.GetCurrentOrConstrucingBuilding.GetTypeIcon]"
 			}
 

@@ -1,5 +1,4 @@
 textformatting = {
-
 	format = {
 		name = basis_default
 		format = "color:{0.5, 0.5, 0.5}"
@@ -26,10 +25,9 @@ textformatting = {
 		name = basis_disabled
 		format = "color:{0.5, 0.5, 0.5}"
 	}
-	
+
 	format = {
 		name = basis_0
 		format = "color:{1, 1, 1}"
 	}
-
 }

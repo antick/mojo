@@ -1,7 +1,7 @@
 ﻿antick_holdings_reimagined_build_all_button = {
-    scope = character
+	scope = character
 	saved_scopes = { gui_holding }
-    is_shown = {
+	is_shown = {
 		NOT = { has_game_rule = antick_holdings_reimagined_rule_player_extra_slots_disabled }
 		scope:gui_holding = {
 			barony = { is_under_holy_order_lease = no }

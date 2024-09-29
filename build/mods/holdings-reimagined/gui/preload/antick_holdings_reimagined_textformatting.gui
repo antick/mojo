@@ -1,6 +1,4 @@
 textformatting = {
-
-
 	format = {
 		name = antick_holdings_reimagined_rule
 		format = "color:{0, 1, 1}"
