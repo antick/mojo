@@ -66,6 +66,7 @@ tribe_01 = {
 	can_construct_potential = {
 		# [_$modId$_]
 		always = yes	#Tribes are set at game start.
+		building_requirement_tribal_holding_in_county = yes
 		# [/_$modId$_]
 	}
 
