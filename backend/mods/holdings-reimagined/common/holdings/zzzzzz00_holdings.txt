@@ -1,5 +1,6 @@
 ﻿castle_holding = {
 	primary_building = castle_01
+
 	buildings = {
 		hospices_01
 		curtain_walls_01
@@ -40,7 +41,7 @@
 		qanats_01
 		murex_farm_01
 
-		# [antick_holdings_reimagined]
+		# [_$modId$_]
 		expansion_01
 		expansion_archer_cavalry_01
 		expansion_camel_cavalry_01
@@ -48,17 +49,38 @@
 		interior_01
 		support_01
 		town_01
-		hospital_01
-		farming_01
+		muhou_01
+		silk_01
+		czhen_01
+		district_01
+		waterfront_01
+		spice_01
+		plain_01
+		mif_01
+		shanqiu_01
 		vineyard_01
+		farming_01
+		restau_01
+		slaughterhouse_01
+		lcamp_01
+		tavern_01
+		supm_01
+		stash_01
+		crockery_01
+		currier_01
+		hbm_01
+		hospital_01
+		fayuan_01
+		heishi_01
+		farming_01
 		militia_01
 		horse_01
-		antick_holdings_reimagined_horse_archer_01
-		antick_holdings_reimagined_camel_01
+		_$modId$__horse_archer_01
+		_$modId$__camel_01
 		tunnel_01
 		embassy_01
 		civil_engineering_01
-		# [/antick_holdings_reimagined]
+		# [/_$modId$_]
 	}
 }
 
@@ -77,21 +99,25 @@ tribal_holding = {
 
 		common_tradeport_01 # only for trade_ports_enabled_for_tribals culture parameter
 
-		# [antick_holdings_reimagined]
+		# [_$modId$_]
+		car_01
 		Townsquare_01
+		zhanshi_01
 		raiding_01
+		liehu_01
+		pimao_01
 		war_01
 		tribeport_01
 		support_01
 		militia_01
 		horse_01
-		antick_holdings_reimagined_horse_archer_01
-		antick_holdings_reimagined_camel_01
+		_$modId$__horse_archer_01
+		_$modId$__camel_01
 		medicine_lodge_01
 		ting_01
 		embassy_01
 		civil_engineering_01
-		# [/antick_holdings_reimagined]
+		# [/_$modId$_]
 	}
 
 	flag = tribal
@@ -99,6 +125,7 @@ tribal_holding = {
 
 city_holding = {
 	primary_building = city_01
+
 	buildings = {
 		hospices_01
 		outposts_01
@@ -134,20 +161,38 @@ city_holding = {
 		qanats_01
 		murex_farm_01
 
-		# [antick_holdings_reimagined]
+		# [_$modId$_]
+		czhen_01
 		district_01
-		slaughterhouse_01
-		hospital_01
-		farming_01
+		waterfront_01
+		spice_01
+		silk_01
+		plain_01
+		mif_01
+		shanqiu_01
 		vineyard_01
+		farming_01
+		restau_01
+		slaughterhouse_01
+		lcamp_01
+		tavern_01
+		supm_01
+		stash_01
+		crockery_01
+		currier_01
+		hbm_01
+		hospital_01
+		fayuan_01
+		heishi_01
+		farming_01
 		militia_01
 		horse_01
-		antick_holdings_reimagined_horse_archer_01
-		antick_holdings_reimagined_camel_01
+		_$modId$__horse_archer_01
+		_$modId$__camel_01
 		tunnel_01
 		embassy_01
 		civil_engineering_01
-		# [/antick_holdings_reimagined]
+		# [/_$modId$_]
 	}
 
 	can_be_inherited = yes
@@ -155,6 +200,7 @@ city_holding = {
 
 church_holding = {
 	primary_building = temple_01
+
 	buildings = {
 		hospices_01
 		scriptorium_01
@@ -192,18 +238,30 @@ church_holding = {
 		hall_of_heroes_01
 		qanats_01
 
-		# [antick_holdings_reimagined]
+		# [_$modId$_]
+		spice_01
+		silk_01
+		plain_01
+		shanqiu_01
+		vineyard_01
+		farming_01
+		restau_01
+		stash_01
+		crockery_01
+		currier_01
+		hbm_01
 		hospital_01
 		farming_01
-		vineyard_01
+		fayuan_01
+		heishi_01
 		militia_01
 		horse_01
-		antick_holdings_reimagined_horse_archer_01
-		antick_holdings_reimagined_camel_01
+		_$modId$__horse_archer_01
+		_$modId$__camel_01
 		tunnel_01
 		embassy_01
 		civil_engineering_01
-		# [/antick_holdings_reimagined]
+		# [/_$modId$_]
 	}
 
 	can_be_inherited = yes

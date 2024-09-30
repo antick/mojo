@@ -52,6 +52,12 @@ horse_01 = {
 horse_02 = {
 	construction_time = _$modId$__construction_time_half_year
 
+	can_construct_potential = {
+		culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+
 	cost_gold = normal_building_tier_2_cost
 
 	province_modifier = {
@@ -95,6 +101,17 @@ horse_02 = {
 horse_03 = {
 	construction_time = _$modId$__construction_time_1_year
 
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_3_cost
 
 	province_modifier = {
@@ -136,6 +153,10 @@ horse_04 = {
 
 	can_construct = {
 		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 02 }
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_4_cost
@@ -191,6 +212,17 @@ horse_04 = {
 horse_05 = {
 	construction_time = _$modId$__construction_time_1_year
 
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 03 }
+		culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
 	cost_gold = normal_building_tier_5_cost
 
 	province_modifier = {
@@ -238,6 +270,17 @@ horse_05 = {
 
 horse_06 = {
 	construction_time = _$modId$__construction_time_half_year
+
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 03 }
+		culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
 
 	cost_gold = normal_building_tier_6_cost
 
@@ -292,6 +335,17 @@ horse_06 = {
 horse_07 = {
 	construction_time = _$modId$__construction_time_2_years
 
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 04 }
+		culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+	
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_7_cost
 
 	province_modifier = {
@@ -340,6 +394,17 @@ horse_07 = {
 
 horse_08 = {
 	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 04 }
+		culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
 
 	cost_gold = normal_building_tier_8_cost
 
@@ -443,6 +508,12 @@ _$modId$__horse_archer_01 = {
 _$modId$__horse_archer_02 = {
 	construction_time = _$modId$__construction_time_half_year
 
+	can_construct_potential = {
+		culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+
 	cost_gold = normal_building_tier_2_cost
 
 	province_modifier = {
@@ -486,6 +557,17 @@ _$modId$__horse_archer_02 = {
 _$modId$__horse_archer_03 = {
 	construction_time = _$modId$__construction_time_1_year
 
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_3_cost
 
 	province_modifier = {
@@ -525,8 +607,16 @@ _$modId$__horse_archer_03 = {
 _$modId$__horse_archer_04 = {
 	construction_time = _$modId$__construction_time_1_year
 
+
 	can_construct = {
 		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_4_cost
@@ -581,6 +671,17 @@ _$modId$__horse_archer_04 = {
 
 _$modId$__horse_archer_05 = {
 	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 03 }
+		culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
 
 	cost_gold = normal_building_tier_5_cost
 
@@ -683,6 +784,17 @@ _$modId$__horse_archer_06 = {
 _$modId$__horse_archer_07 = {
 	construction_time = _$modId$__construction_time_2_years
 
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 04 }
+		culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+	
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_7_cost
 
 	province_modifier = {
@@ -731,6 +843,17 @@ _$modId$__horse_archer_07 = {
 
 _$modId$__horse_archer_08 = {
 	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 04 }
+		culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
 
 	cost_gold = normal_building_tier_8_cost
 
@@ -834,6 +957,12 @@ _$modId$__camel_01 = {
 _$modId$__camel_02 = {
 	construction_time = _$modId$__construction_time_half_year
 
+	can_construct_potential = {
+		culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+
 	cost_gold = normal_building_tier_2_cost
 
 	province_modifier = {
@@ -877,6 +1006,17 @@ _$modId$__camel_02 = {
 _$modId$__camel_03 = {
 	construction_time = _$modId$__construction_time_1_year
 
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 04 }
+		culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_3_cost
 
 	province_modifier = {
@@ -916,8 +1056,16 @@ _$modId$__camel_03 = {
 _$modId$__camel_04 = {
 	construction_time = _$modId$__construction_time_1_year
 
+
 	can_construct = {
 		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_4_cost
@@ -973,6 +1121,17 @@ _$modId$__camel_04 = {
 _$modId$__camel_05 = {
 	construction_time = _$modId$__construction_time_1_year
 
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 03 }
+		culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_5_cost
 
 	province_modifier = {
@@ -1020,6 +1179,17 @@ _$modId$__camel_05 = {
 
 _$modId$__camel_06 = {
 	construction_time = _$modId$__construction_time_half_year
+
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 03 }
+		culture = {
+			has_innovation = innovation_castle_baileys
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
 
 	cost_gold = normal_building_tier_6_cost
 
@@ -1074,6 +1244,17 @@ _$modId$__camel_06 = {
 _$modId$__camel_07 = {
 	construction_time = _$modId$__construction_time_2_years
 
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 04 }
+		culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+	
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_7_cost
 
 	province_modifier = {
@@ -1122,6 +1303,17 @@ _$modId$__camel_07 = {
 
 _$modId$__camel_08 = {
 	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 04 }
+		culture = {
+			has_innovation = innovation_royal_armory
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
 
 	cost_gold = normal_building_tier_8_cost
 
@@ -1260,6 +1452,12 @@ militia_01 = {
 militia_02 = {
 	construction_time = _$modId$__construction_time_1_year
 
+	can_construct_potential = {
+		scope:holder.culture = {
+			has_innovation = innovation_barracks
+		}
+	}
+
 	cost_gold = normal_building_tier_2_cost
 
 	province_modifier = {
@@ -1307,6 +1505,17 @@ militia_02 = {
 militia_03 = {
 	construction_time = _$modId$__construction_time_1_year
 
+	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_3_cost
 
 	province_modifier = {
@@ -1350,8 +1559,16 @@ militia_03 = {
 militia_04 = {
 	construction_time = _$modId$__construction_time_1_year
 
+
 	can_construct = {
 		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 02 }
+		culture = {
+			has_innovation = innovation_burhs
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_4_cost
@@ -1404,8 +1621,9 @@ militia_05 = {
 	construction_time = _$modId$__construction_time_1_year
 
 	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 03 }
 		culture = {
-			has_innovation = innovation_manorialism
+			has_innovation = innovation_castle_baileys
 		}
 	}
 
@@ -1458,6 +1676,7 @@ militia_06 = {
 	construction_time = _$modId$__construction_time_1_year
 
 	can_construct = {
+		_$modId$__building_requirement_castle_city_church_tribe = { LEVEL = 03 }
 		culture = {
 			has_innovation = innovation_burhs
 		}
@@ -1512,9 +1731,9 @@ militia_07 = {
 	construction_time = _$modId$__construction_time_1_year
 
 	can_construct = {
-		building_requirement_castle_city_church = { LEVEL = 03 }
+		building_requirement_castle_city_church = { LEVEL = 04 }
 		culture = {
-			has_innovation = innovation_castle_baileys
+			has_innovation = innovation_royal_armory
 		}
 	}
 

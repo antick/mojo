@@ -471,6 +471,48 @@ ting_01 = { # gathering place to hold thing, specifically for government, trade 
 	flag = antick_holdings_reimagined_ting
 }
 
+ting_02 = { # gathering place to hold thing, specifically for government, trade and spiritual matters
+	construction_time = antick_holdings_reimagined_construction_time_2_years
+
+	is_enabled = {
+		building_requirement_tribal = yes
+	}
+	can_construct_potential = {
+		has_building_or_higher = tribe_02
+	}
+	can_construct_showing_failures_only = {
+		scope:holder = {
+			culture = { has_innovation = innovation_city_planning }
+		}
+	}
+
+	cost_prestige = expensive_building_tier_5_cost
+	cost_gold = 175
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.2
+		clergy_opinion = 5
+		vassal_opinion = 5
+		dynasty_opinion = 5
+		monthly_piety = 0.2
+		monthly_prestige = 0.4
+		legitimacy_gain_mult = 0.4
+		owned_legend_spread_mult = 0.2
+	}
+
+	on_complete = {
+		county.holder = { add_prestige = massive_prestige_value }
+	}
+
+	ai_value = {
+		base = 5
+	}
+
+	flag = antick_holdings_reimagined_building
+	flag = antick_holdings_reimagined_foundation
+	flag = antick_holdings_reimagined_ting
+}
+
 medicine_lodge_01 = { ###sickhouse
 	construction_time = antick_holdings_reimagined_construction_time_1_year
 
@@ -517,7 +559,6 @@ medicine_lodge_01 = { ###sickhouse
 	flag = antick_holdings_reimagined_foundation
 	flag = antick_holdings_reimagined_medicine_lodge
 }
-
 
 medicine_lodge_02 = { ###treatment camps
 	construction_time = antick_holdings_reimagined_construction_time_half_year
@@ -666,4 +707,362 @@ medicine_lodge_05 = { ###clinics
 	flag = antick_holdings_reimagined_building
 	flag = antick_holdings_reimagined_upgrade
 	flag = antick_holdings_reimagined_medicine_lodge
+}
+
+# Hunter
+
+liehu_01 = { ###ancestor stones
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+	effect_desc = hunting_grounds_desc
+
+	is_enabled = {
+		building_requirement_tribal = yes
+	}
+	can_construct_potential = {
+		has_building_or_higher = tribe_01
+	}
+	can_construct_showing_failures_only = {
+		scope:holder = {
+			has_government = tribal_government
+		}
+	}
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = tribal_building_tier_1_cost
+
+
+	character_modifier = {
+		monthly_prestige = 0.1
+	}
+
+	province_modifier = {
+		monthly_income = 0.2
+		stationed_archers_damage_mult = normal_maa_damage_tier_1
+		hostile_raid_time = 0.1
+	}
+
+
+	county_modifier = {
+		supply_limit = 200
+	}
+
+	next_building = liehu_02
+
+	type_icon = "icon_building_liehu.dds" #works
+
+	ai_value = {
+		base = 1
+	}
+
+}
+
+
+liehu_02 = { ###rally point
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+	effect_desc = hunting_grounds_desc
+
+	is_enabled = {
+		building_requirement_tribal = yes
+	}
+	can_construct_potential = {
+		has_building_or_higher = tribe_01
+	}
+	can_construct_showing_failures_only = {
+		scope:holder = {
+			culture = { has_innovation = innovation_city_planning }
+		}
+	}
+
+	cost_prestige = expensive_building_tier_2_cost
+	cost_gold = tribal_building_tier_2_cost
+
+	levy = normal_building_levy_tier_2
+
+	character_modifier = {
+		monthly_prestige = 0.2
+	}
+
+	province_modifier = {
+		monthly_income = 0.4
+		stationed_archers_damage_mult = normal_maa_damage_tier_2
+		hostile_raid_time = 0.3
+	}
+
+	county_modifier = {
+		development_growth_factor = 0.10
+		supply_limit = 400
+	}
+
+
+	on_complete = {
+		county.holder = { add_prestige = medium_prestige_value }
+	}
+
+	ai_value = {
+		base = 1
+	}
+
+}
+
+# Car
+
+car_01 = { ###ancestor stones
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+
+	is_enabled = {
+		building_requirement_tribal = yes
+	}
+	can_construct_potential = {
+		building_horse_pastures_requirement_terrain = yes
+		has_building_or_higher = tribe_01
+	}
+	can_construct_showing_failures_only = {
+		scope:holder = {
+			has_government = tribal_government
+		}
+	}
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = tribal_building_tier_1_cost
+
+	levy = 25
+
+	character_modifier = {
+		monthly_prestige = 0.1
+	}
+
+	province_modifier = {
+		monthly_income = 0.2
+		stationed_light_cavalry_toughness_mult = normal_maa_toughness_tier_1
+		stationed_light_cavalry_damage_mult = normal_maa_damage_tier_1
+		stationed_archer_cavalry_toughness_mult = low_maa_toughness_tier_1
+		stationed_archer_cavalry_damage_mult = normal_maa_damage_tier_1
+		stationed_archer_cavalry_screen_mult = normal_maa_screen_tier_1
+		stationed_archer_cavalry_pursuit_mult = normal_maa_pursuit_tier_1
+	}
+
+	county_modifier = {
+		supply_limit = 50
+	}
+
+	next_building = car_02
+
+	type_icon = "icon_building_car.dds" #works
+
+	ai_value = {
+		base = 3
+	}
+
+}
+
+
+car_02 = { ###rally point
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+
+	is_enabled = {
+		building_requirement_tribal = yes
+	}
+	can_construct_potential = {
+		has_building_or_higher = tribe_01
+	}
+	can_construct_showing_failures_only = {
+		scope:holder = {
+			culture = { has_innovation = innovation_city_planning }
+		}
+	}
+
+	cost_prestige = expensive_building_tier_2_cost
+	cost_gold = tribal_building_tier_2_cost
+
+	levy = 75
+
+	character_modifier = {
+		monthly_prestige = 0.2
+	}
+
+	province_modifier = {
+		monthly_income = 0.4
+		stationed_light_cavalry_toughness_mult = normal_maa_toughness_tier_2
+		stationed_light_cavalry_damage_mult = normal_maa_damage_tier_2
+		stationed_archer_cavalry_toughness_mult = low_maa_toughness_tier_2
+		stationed_archer_cavalry_damage_mult = normal_maa_damage_tier_2
+		stationed_archer_cavalry_screen_mult = normal_maa_screen_tier_2
+		stationed_archer_cavalry_pursuit_mult = normal_maa_pursuit_tier_2
+	}
+
+	county_modifier = {
+		supply_limit = 100
+	}
+
+
+	on_complete = {
+		county.holder = { add_prestige = medium_prestige_value }
+	}
+
+	ai_value = {
+		base = 3
+	}
+
+}
+
+# pimao
+
+pimao_01 = { ###ancestor stones
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+
+	is_enabled = {
+		building_requirement_tribal = yes
+	}
+	can_construct_potential = {
+		has_building_or_higher = tribe_01
+	}
+	can_construct_showing_failures_only = {
+		scope:holder = {
+			has_government = tribal_government
+		}
+	}
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = tribal_building_tier_1_cost
+
+
+	province_modifier = {
+		monthly_income = 0.1
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_1
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.1
+	}
+
+	next_building = pimao_02
+
+	type_icon = "icon_building_pimao.dds" #works
+
+	ai_value = {
+		base = 1
+	}
+
+}
+
+
+pimao_02 = { ###rally point
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+
+	is_enabled = {
+		building_requirement_tribal = yes
+	}
+	can_construct_potential = {
+		has_building_or_higher = tribe_01
+	}
+	can_construct_showing_failures_only = {
+		scope:holder = {
+			culture = { has_innovation = innovation_city_planning }
+		}
+	}
+
+	cost_prestige = expensive_building_tier_2_cost
+	cost_gold = tribal_building_tier_2_cost
+
+
+	province_modifier = {
+		monthly_income = 0.3
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_1
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.2
+	}
+
+
+	on_complete = {
+		county.holder = { add_prestige = medium_prestige_value }
+	}
+
+	ai_value = {
+		base = 1
+	}
+
+}
+
+# zhanshi
+
+zhanshi_01 = { ###ancestor stones
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+
+	is_enabled = {
+		building_requirement_tribal = yes
+	}
+	can_construct_potential = {
+		has_building_or_higher = tribe_01
+	}
+	can_construct_showing_failures_only = {
+		scope:holder = {
+			has_government = tribal_government
+		}
+	}
+	cost_prestige = expensive_building_tier_1_cost
+	cost_gold = tribal_building_tier_1_cost
+
+
+	character_modifier = {
+		monthly_prestige = 0.1
+	}
+
+	province_modifier = {
+		monthly_income = 0.2
+		stationed_skirmishers_damage_mult = low_maa_damage_tier_2
+		stationed_heavy_infantry_damage_mult = low_maa_damage_tier_2
+	}
+
+	levy = 25
+
+	next_building = zhanshi_02
+
+	type_icon = "icon_building_zhanshi.dds" #works
+
+	ai_value = {
+		base = 1
+	}
+
+}
+
+
+zhanshi_02 = { ###rally point
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+
+	is_enabled = {
+		building_requirement_tribal = yes
+	}
+	can_construct_potential = {
+		has_building_or_higher = tribe_01
+	}
+	can_construct_showing_failures_only = {
+		scope:holder = {
+			culture = { has_innovation = innovation_city_planning }
+		}
+	}
+
+	cost_prestige = expensive_building_tier_2_cost
+	cost_gold = tribal_building_tier_2_cost
+
+
+	character_modifier = {
+		monthly_prestige = 0.2
+	}
+
+	province_modifier = {
+		monthly_income = 0.4
+		stationed_skirmishers_damage_mult = low_maa_damage_tier_4
+		stationed_heavy_infantry_damage_mult = low_maa_damage_tier_4
+	}
+
+	levy = 75
+
+
+	on_complete = {
+		county.holder = { add_prestige = medium_prestige_value }
+	}
+
+	ai_value = {
+		base = 1
+	}
+
 }

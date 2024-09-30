@@ -268,6 +268,312 @@ support_04 = {
 		}
 	}
 
+	next_building = support_05
+
+	flag = antick_holdings_reimagined_building
+	flag = antick_holdings_reimagined_foundation
+	flag = antick_holdings_reimagined_support
+}
+
+support_05 = {
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+
+	can_construct = {
+		has_building_or_higher = castle_03
+		culture = {
+			has_innovation = innovation_hoardings
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_5_cost
+
+	province_modifier = {
+		fort_level = normal_building_fort_level_tier_4
+		stationed_maa_damage_mult = normal_maa_damage_tier_2
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_2
+		stationed_siege_weapon_toughness_mult = normal_maa_toughness_tier_1
+		stationed_siege_weapon_siege_value_mult = normal_maa_siege_value_tier_1
+		hostile_raid_time = 0.5
+		travel_danger = -15
+	}
+
+	province_terrain_modifier = {
+		parameter = tribal_holding_fort_level_in_jungle_bonus
+		terrain = jungle
+		additional_fort_level = tribal_holding_fort_level_in_jungle_bonus_value
+	}
+
+	province_terrain_modifier = {
+		parameter = castle_holding_fort_level_in_jungle_bonus
+		terrain = jungle
+		additional_fort_level = castle_holding_fort_level_in_jungle_bonus_value
+	}
+
+	province_terrain_modifier = {
+		parameter = coastal_holdings_give_defensive_bonus
+		is_coastal = yes
+		defender_holding_advantage = normal_building_advantage_tier_1
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.2
+		martial_per_prestige_level = 1
+		county_opinion_add = 5
+		army_maintenance_mult = -0.02
+	}
+
+	county_modifier = {
+		monthly_county_control_growth_factor = 0.02
+	}
+
+	next_building = support_06
+
+	type_icon = "icon_building_support.dds"
+
+	ai_value = {
+		base = 1
+		modifier = {
+			add = 1
+			scope:holder = {
+				or = {
+					has_government = feudal_government
+					has_government = clan_government
+				}
+			}
+		}
+	}
+
+	flag = antick_holdings_reimagined_building
+	flag = antick_holdings_reimagined_foundation
+	flag = antick_holdings_reimagined_support
+}
+
+support_06 = {
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+
+	can_construct = {
+		has_building_or_higher = castle_03
+		culture = {
+			has_innovation = innovation_hoardings
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_6_cost
+
+	province_modifier = {
+		fort_level = normal_building_fort_level_tier_5
+		stationed_maa_damage_mult = normal_maa_damage_tier_2
+		stationed_maa_toughness_mult = normal_maa_toughness_tier_2
+		stationed_siege_weapon_toughness_mult = normal_maa_toughness_tier_2
+		stationed_siege_weapon_siege_value_mult = normal_maa_siege_value_tier_2
+		hostile_raid_time = 0.6
+		travel_danger = -15
+	}
+
+	province_terrain_modifier = {
+		parameter = tribal_holding_fort_level_in_jungle_bonus
+		terrain = jungle
+		additional_fort_level = tribal_holding_fort_level_in_jungle_bonus_value
+	}
+
+	province_terrain_modifier = {
+		parameter = castle_holding_fort_level_in_jungle_bonus
+		terrain = jungle
+		additional_fort_level = castle_holding_fort_level_in_jungle_bonus_value
+	}
+
+	province_terrain_modifier = {
+		parameter = coastal_holdings_give_defensive_bonus
+		is_coastal = yes
+		defender_holding_advantage = normal_building_advantage_tier_2
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.2
+		martial_per_prestige_level = 1
+		county_opinion_add = 5
+		army_maintenance_mult = -0.02
+	}
+
+	county_modifier = {
+		monthly_county_control_growth_factor = 0.02
+	}
+
+	next_building = support_07
+
+	type_icon = "icon_building_support.dds"
+
+	ai_value = {
+		base = 1
+		modifier = {
+			add = 1
+			scope:holder = {
+				or = {
+					has_government = feudal_government
+					has_government = clan_government
+				}
+			}
+		}
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	flag = antick_holdings_reimagined_building
+	flag = antick_holdings_reimagined_foundation
+	flag = antick_holdings_reimagined_support
+}
+
+support_07 = {
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+
+	can_construct = {
+		has_building_or_higher = castle_04
+		culture = {
+			has_innovation = innovation_machicolations
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_7_cost
+
+	province_modifier = {
+		fort_level = normal_building_fort_level_tier_6
+		stationed_maa_damage_mult = high_maa_damage_tier_3
+		stationed_maa_toughness_mult = high_maa_toughness_tier_3
+		stationed_siege_weapon_toughness_mult = high_maa_toughness_tier_3
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_3
+		hostile_raid_time = 0.7
+		travel_danger = -20
+	}
+
+	province_terrain_modifier = {
+		parameter = castle_holding_fort_level_in_jungle_bonus
+		terrain = jungle
+		additional_fort_level = castle_holding_fort_level_in_jungle_bonus_value
+	}
+
+	province_terrain_modifier = {
+		parameter = coastal_holdings_give_defensive_bonus
+		is_coastal = yes
+		defender_holding_advantage = normal_building_advantage_tier_3
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.2
+		martial_per_prestige_level = 1
+		county_opinion_add = 5
+		army_maintenance_mult = -0.03
+	}
+
+	county_modifier = {
+		monthly_county_control_growth_factor = 0.03
+	}
+
+	next_building = support_08
+
+	type_icon = "icon_building_support.dds"
+
+	ai_value = {
+		base = 1
+		modifier = {
+			add = 1
+			scope:holder = {
+				or = {
+					has_government = feudal_government
+					has_government = clan_government
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			scope:holder = {
+				has_government = tribal_government
+			}
+		}
+	}
+
+	flag = antick_holdings_reimagined_building
+	flag = antick_holdings_reimagined_foundation
+	flag = antick_holdings_reimagined_support
+}
+
+support_08 = {
+	construction_time = antick_holdings_reimagined_construction_time_1_year
+
+	can_construct = {
+		has_building_or_higher = castle_04
+		culture = {
+			has_innovation = innovation_machicolations
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_8_cost
+
+	province_modifier = {
+		fort_level = normal_building_fort_level_tier_7
+		stationed_maa_damage_mult = high_maa_damage_tier_3
+		stationed_maa_toughness_mult = high_maa_toughness_tier_3
+		stationed_siege_weapon_toughness_mult = high_maa_toughness_tier_4
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_4
+		hostile_raid_time = 0.8
+		travel_danger = -20
+	}
+
+	province_terrain_modifier = {
+		parameter = castle_holding_fort_level_in_jungle_bonus
+		terrain = jungle
+		additional_fort_level = castle_holding_fort_level_in_jungle_bonus_value
+	}
+
+	province_terrain_modifier = {
+		parameter = coastal_holdings_give_defensive_bonus
+		is_coastal = yes
+		defender_holding_advantage = normal_building_advantage_tier_4
+	}
+
+	character_modifier = {
+		monthly_prestige = 0.2
+		martial_per_prestige_level = 1
+		county_opinion_add = 5
+		army_maintenance_mult = -0.04
+	}
+
+	county_modifier = {
+		monthly_county_control_growth_factor = 0.04
+	}
+
+	type_icon = "icon_building_support.dds"
+
+	ai_value = {
+		base = 1
+		modifier = {
+			add = 1
+			scope:holder = {
+				or = {
+					has_government = feudal_government
+					has_government = clan_government
+				}
+			}
+		}
+	}
+
 	flag = antick_holdings_reimagined_building
 	flag = antick_holdings_reimagined_foundation
 	flag = antick_holdings_reimagined_support

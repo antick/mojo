@@ -50,6 +50,10 @@ vineyard_02 = { ###wine pressers
 		}
 	}
 
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_2_cost
 
 	province_modifier = {
@@ -86,6 +90,10 @@ vineyard_03 = { ###large vineyard
 		}
 	}
 
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_3_cost
 
 	province_modifier = {
@@ -115,6 +123,10 @@ vineyard_04 = { ###wine workshop
 		culture = {
 			has_innovation = innovation_windmills
 		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_4_cost
@@ -150,6 +162,10 @@ vineyard_05 = { ###grape plantation
 		}
 	}
 
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_5_cost
 
 	province_modifier = {
@@ -159,6 +175,118 @@ vineyard_05 = { ###grape plantation
 	county_modifier = {
 		county_opinion_add = 5
 		tax_mult = 0.02
+	}
+
+	next_building = vineyard_06
+	ai_value = {
+		base = 1
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__vineyard
+}
+
+vineyard_06 = { ###wine workshop
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		scope:holder.culture = {
+			has_innovation = innovation_guilds
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_6_cost
+
+	province_modifier = {
+		monthly_income = 1.3
+		supply_limit = 400
+	}
+	county_modifier = {
+		county_opinion_add = 12
+		tax_mult = 0.02
+	}
+
+	next_building = vineyard_07
+
+	ai_value = {
+		base = 1
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__vineyard
+}
+
+vineyard_07 = { ###wine workshop
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		scope:holder.culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_7_cost
+
+	province_modifier = {
+		monthly_income = 1.5
+		supply_limit = 500
+	}
+	county_modifier = {
+		county_opinion_add = 14
+		tax_mult = 0.02
+	}
+
+	next_building = vineyard_08
+	ai_value = {
+		base = 1
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__vineyard
+}
+
+vineyard_08 = { ###wine workshop
+	construction_time = _$modId$__construction_time_1_year
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		scope:holder.culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_8_cost
+
+	province_modifier = {
+		monthly_income = 1.7
+		supply_limit = 600
+	}
+	county_modifier = {
+		county_opinion_add = 15
+		tax_mult = 0.03
 	}
 
 	ai_value = {
@@ -219,9 +347,14 @@ tunnel_02 = { ###primitive digging
 	construction_time = _$modId$__construction_time_1_year
 
 	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
 		scope:holder.culture = {
 			has_innovation = innovation_crop_rotation
 		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_2_cost
@@ -260,6 +393,10 @@ tunnel_03 = { #deep shafts
 		}
 	}
 
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_3_cost
 
 	province_modifier = {
@@ -288,6 +425,10 @@ tunnel_04 = { #tunnel passages
 		scope:holder.culture = {
 			has_innovation = innovation_manorialism
 		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_4_cost
@@ -327,6 +468,117 @@ tunnel_05 = { #cave storage
 		defender_holding_advantage = 4
 		supply_limit = 2500
 		levy_reinforcement_rate = 0.10
+	}
+
+	ai_value = {
+		base = 3
+	}
+
+	next_building = tunnel_06
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__tunnel
+}
+
+tunnel_06 = { #deep shafts
+	construction_time = _$modId$__construction_time_2_years
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		scope:holder.culture = {
+			has_innovation = innovation_guilds
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_6_cost
+
+	province_modifier = {
+		defender_holding_advantage = 7
+		supply_limit = 1000
+		levy_reinforcement_rate = 0.08
+	}
+
+	character_modifier = {
+		owned_hostile_scheme_success_chance_add = 4
+	}
+
+	next_building = tunnel_07
+
+	ai_value = {
+		base = 3
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__tunnel
+}
+
+tunnel_07 = { #tunnel passages
+	construction_time = _$modId$__construction_time_2_years
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		scope:holder.culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_7_cost
+
+	province_modifier = {
+		defender_holding_advantage = 8
+		supply_limit = 1200
+		levy_reinforcement_rate = 0.10
+	}
+
+	character_modifier = {
+		owned_hostile_scheme_success_chance_add = 4
+	}
+
+	next_building = tunnel_08
+
+	ai_value = {
+		base = 3
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__tunnel
+}
+
+tunnel_08 = { #cave storage
+	construction_time = _$modId$__construction_time_2_years
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		scope:holder.culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_8_cost
+
+	province_modifier = {
+		defender_holding_advantage = 10
+		supply_limit = 1500
+		levy_reinforcement_rate = 0.20
+	}
+
+	character_modifier = {
+		owned_hostile_scheme_success_chance_add = 5
 	}
 
 	ai_value = {
@@ -381,7 +633,6 @@ hospital_01 = { ###sickhouse
 	flag = _$modId$__hospital
 }
 
-
 hospital_02 = { ###treatment camps
 	construction_time = _$modId$__construction_time_half_year
 
@@ -389,6 +640,10 @@ hospital_02 = { ###treatment camps
 		culture = {
 			has_innovation = innovation_crop_rotation
 		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_2_cost
@@ -431,6 +686,10 @@ hospital_03 = { ###soup kitchen
 		}
 	}
 
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_3_cost
 
 	character_modifier = {
@@ -465,6 +724,10 @@ hospital_04 = { ###leper colony
 		culture = {
 			has_innovation = innovation_manorialism
 		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_4_cost
@@ -503,6 +766,10 @@ hospital_05 = { ###clinics
 		culture = {
 			has_innovation = innovation_windmills
 		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_5_cost
@@ -544,6 +811,10 @@ hospital_06 = { ###chapel ward
 		}
 	}
 
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_6_cost
 
 	character_modifier = {
@@ -573,6 +844,7 @@ hospital_06 = { ###chapel ward
 	flag = _$modId$__upgrade
 	flag = _$modId$__hospital
 }
+
 hospital_07 = { ###Cremation site
 	construction_time = _$modId$__construction_time_half_year
 
@@ -581,6 +853,10 @@ hospital_07 = { ###Cremation site
 		culture = {
 			has_innovation = innovation_cranes
 		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_7_cost
@@ -620,6 +896,10 @@ hospital_08 = { ###expanded sick house
 		culture = {
 			has_innovation = innovation_cranes
 		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_8_cost
@@ -694,6 +974,10 @@ farming_02 = { ###3 way crop rotation
 		}
 	}
 
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_2_cost
 
 	province_modifier = {
@@ -726,6 +1010,10 @@ farming_03 = { ###vegetable plantation
 		}
 	}
 
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_3_cost
 
 	province_modifier = {
@@ -752,6 +1040,10 @@ farming_04 = { ###farming market
 		culture = {
 			has_innovation = innovation_manorialism
 		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_4_cost
@@ -783,6 +1075,10 @@ farming_05 = { ###tools and oxs
 		}
 	}
 
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_5_cost
 
 	province_modifier = {
@@ -809,10 +1105,15 @@ farming_06 = { ###production
 	can_construct_potential = {
 		building_vineyard_requirement_terrain = yes
 	}
+
 	can_construct = {
 		culture = {
 			has_innovation = innovation_windmills
 		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
 	}
 
 	cost_gold = normal_building_tier_6_cost
@@ -845,6 +1146,10 @@ farming_07 = { ###water mill inclusion
 		}
 	}
 
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
 	cost_gold = normal_building_tier_7_cost
 
 	province_modifier = {
@@ -852,6 +1157,44 @@ farming_07 = { ###water mill inclusion
 		supply_limit = 1000
 		supply_limit_mult = 0.10
 		hostile_raid_time = -0.20
+	}
+
+	next_building = farming_08
+
+	ai_value = {
+		base = 1
+	}
+
+	flag = _$modId$__building
+	flag = _$modId$__upgrade
+	flag = _$modId$__farming
+}
+
+farming_08 = { ###water mill inclusion
+	construction_time = _$modId$__construction_time_2_years
+
+	can_construct_potential = {
+		building_cereal_fields_requirement_terrain = yes
+	}
+
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		scope:holder.culture = {
+			has_innovation = innovation_cranes
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_8_cost
+
+	province_modifier = {
+		monthly_income = 3.2
+		supply_limit = 1500
+		supply_limit_mult = 0.15
+		hostile_raid_time = -0.30
 	}
 
 	ai_value = {
@@ -938,6 +1281,7 @@ embassy_02 = { # Embassy
 		monthly_dynasty_prestige_mult = 0.05
 		legitimacy_gain_mult = 0.3
 		owned_legend_spread_mult = 0.3
+		diplomacy = 1
 	}
 
 	levy = 225
