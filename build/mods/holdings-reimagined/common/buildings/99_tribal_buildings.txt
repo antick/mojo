@@ -65,8 +65,9 @@ tribe_01 = {
 	}
 	can_construct_potential = {
 		# [antick_holdings_reimagined]
-		always = yes	#Tribes are set at game start.
-		building_requirement_tribal_holding_in_county = yes
+		# always = yes	#Tribes are set at game start.
+		building_requirement_tribal = yes
+		# building_requirement_tribal_holding_in_county = yes
 		# [/antick_holdings_reimagined]
 	}
 
