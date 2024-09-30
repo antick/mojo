@@ -2244,8 +2244,8 @@ window = {
 		using = Animation_FadeIn_Quick
 		#### Mojo change begins ####
 		# position_x = 0
-		position_x = 80
-		position_y = -7
+		position_x = 78
+		position_y = 9
 		#### Mojo change ends ####
 	}
 
@@ -3109,14 +3109,12 @@ window = {
 											button_round = {
 												#### Mojo CHANGE START ####
 												# name = "replace_button"
-												# onclick = "[GUITrackItem.Replace]"
-												# tooltip = "[GUITrackItem.GetReplaceTooltip]"
-												# visible = "[And(GUITrackItem.IsCurrentBuildingSelected, GUITrackItem.CanReplace)]"
 												name = "gui__$modId$__replace_button"
 												datacontext = "[GetScriptedGui('_$modId$__replace_button')]"
 												onclick = "[GUITrackItem.Replace]"
 												tooltip = "[GUITrackItem.GetReplaceTooltip]"
-												visible = "[And(GUITrackItem.IsCurrentBuildingSelected, ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('gui_holding', HoldingView.GetProvince.MakeScope).End))]"
+												visible = "[And(GUITrackItem.IsCurrentBuildingSelected, GUITrackItem.CanReplace)]"
+												# visible = "[And(GUITrackItem.IsCurrentBuildingSelected, ScriptedGui.IsShown(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('gui_holding', HoldingView.GetProvince.MakeScope).End))]"
 												#### Mojo CHANGE END ####
 
 												button_change = {

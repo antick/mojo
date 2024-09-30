@@ -318,11 +318,11 @@
 # @standard_construction_time_base = 1095
 # @slow_construction_time_base = 1825
 # @very_slow_construction_time_base = 2190
-@very_quick_construction_time_base = 60
-@quick_construction_time_base = 180
-@standard_construction_time_base = 365
-@slow_construction_time_base = 730
-@very_slow_construction_time_base = 1095
+@very_quick_construction_time_base = 30
+@quick_construction_time_base = 90
+@standard_construction_time_base = 180
+@slow_construction_time_base = 365
+@very_slow_construction_time_base = 730
 # [/_$modId$_]
 
 #####################
