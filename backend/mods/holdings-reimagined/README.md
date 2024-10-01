@@ -28,7 +28,7 @@ It has a scroll area for building slots in the county view so you can see all yo
 
 This mod also removes the need for holdings with multiple baronies to have a Castle, City and Temple Holding. This allows you to build only Castles or only Cities/Temples on your counties.
 
-Reduced the construction time of holdings by half.
+Reduced the construction time and cost of all buildings in holdings by half.
 
 Unlocks the ability for the player to build new tribal baronies.
 

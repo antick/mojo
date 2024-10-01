@@ -125,7 +125,7 @@ EPE
 3. Collection of COA (Coat-of-Arms) templates.
 4. In-built mods; Age of invasion, auto pause game, grand council, refurbished titles, united thrones, and more.
 
-## Planned features in mods
+## Other wild ideas for the mod
 
 1. New and intriguing events involving friends, family, enemies, vassals, courtiers, councilors, and your realm, enhancing gameplay diversity.
 2. Family reunion and diverse religious events on cultural, religious, and regional occasions.
@@ -135,6 +135,7 @@ EPE
 6. Rare and distinctive events offering opportunities to acquire resources like gold, prestige, piety, and renown.
 7. Raiding events.
 8. Trading events and decisions.
+9. A captive system where you can ransom your enemies, use them for labor, or even use them as tribute or as payment. A new building type that after constructing in a barony allows you to access this system.
 
 ## Planned features in the app
 
