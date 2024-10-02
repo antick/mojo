@@ -12,9 +12,6 @@ _$modId$_.1 = {
 		scope:battle_side.combat.location = {
 			save_scope_as = province
 		}
-		scope:battle_side.side_commander = {
-			save_scope_as = side_commander
-		}
 		scope:battle_side.enemy_side.side_primary_participant = {
 			save_scope_as = enemy_primary_participant
 		}
@@ -241,10 +238,6 @@ _$modId$_.10 = {
 
 	immediate = {
 		save_scope_as = battle_side
-
-		scope:battle_side.side_commander = {
-			save_scope_as = side_commander
-		}
 
 		scope:battle_side.combat.location = {
 			save_scope_as = province
