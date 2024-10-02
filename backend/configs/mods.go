@@ -176,7 +176,7 @@ func ModConfig() *ModType {
 					"modId":                config.ModIdPrefix + "_auto_pause",
 					"modFolderName":        "auto-pause-game",
 					"modName":              "Auto Pause Game",
-					"modVersion":           "1.0.2",
+					"modVersion":           "1.1.0",
 					"supportedGameVersion": "1.13.0.3",
 					"modRemoteFileId":      "remote_file_id=\"2906586207\"",
 					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "auto-pause-game"), "\\", "/"),
