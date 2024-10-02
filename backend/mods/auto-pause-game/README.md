@@ -4,16 +4,16 @@
 
 ## Introduction
 
-This mod fires auto-pauses game with custom events when one of these happens:
+This mod fires auto-pauses game with custom events with immersive text when one of these happens:
 
 1. Your councillor's integration task completes
 2. Your realm priest completes a conversion task
 3. Your marshal restores control
 4. Your steward converts culture
-5. Your armies completes a raid
-6. Major alert appears
-7. Battle is complete
-8. Siege is complete
+5. Your raiders make a successful raid
+6. Top notification alert appears
+7. Your army besieges a province
+8. You win or lose a battle
 
 ## Installation
 

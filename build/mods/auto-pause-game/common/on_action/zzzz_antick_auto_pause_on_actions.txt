@@ -1,6 +1,12 @@
 ﻿# $conflict_prone=no
 # $relates_to=common\on_action\_on_actions.info
 
+on_raid_action_completion = {
+	events = {
+		antick_auto_pause.5
+	}
+}
+
 on_siege_completion = {
 	events = {
 		antick_auto_pause.4
@@ -15,12 +21,6 @@ on_combat_end_winner = {
 
 on_combat_end_loser = {
 	events = {
-		antick_auto_pause.1
-	}
-}
-
-on_raid_action_completion = {
-	events = {
-		antick_auto_pause.5
+		antick_auto_pause.10
 	}
 }

@@ -12,15 +12,12 @@ _$modId$_.1 = {
 		scope:battle_side.combat.location = {
 			save_scope_as = province
 		}
-
+		scope:battle_side.side_commander = {
+			save_scope_as = side_commander
+		}
 		scope:battle_side.enemy_side.side_primary_participant = {
 			save_scope_as = enemy_primary_participant
 		}
-
-		scope:battle_side.enemy_side.side_commander = {
-			save_scope_as = side_commander
-		}
-
 		scope:battle_side.side_primary_participant = {
 			trigger_event = _$modId$_.2
 		}
@@ -28,10 +25,24 @@ _$modId$_.1 = {
 }
 
 _$modId$_.2 = {
-	type = letter_event
-	opening = _$modId$_.1.t
+	type = character_event
+	title = _$modId$_.1.t
 	desc = _$modId$_.1.desc
-	sender = scope:side_commander
+
+	theme = war
+	override_background = {
+		reference = battlefield
+	}
+
+	left_portrait = {
+		character = root
+		animation = marshal_shield
+	}
+
+	right_portrait = {
+		character = scope:enemy_primary_participant
+		animation = war_over_loss
+	}
 
 	option = {
 		name = _$modId$_.1.a
@@ -50,14 +61,35 @@ _$modId$_.3 = {
 }
 
 _$modId$_.4 = {
-	type = letter_event
-	opening = _$modId$_.4.t
+	type = character_event
+	title = _$modId$_.4.t
 	desc = _$modId$_.4.desc
-	sender = scope:previous_controller
 
 	immediate = {
 		scope:barony.title_province = {
 			save_scope_as = province
+		}
+	}
+
+	theme = war
+	override_background = {
+		reference = burning_building
+	}
+
+	left_portrait = {
+		character = root
+		animation = throne_room_two_handed_passive_1
+	}
+
+	right_portrait = {
+		character = scope:previous_controller
+		animation = worry
+		triggered_animation = {
+			trigger = {
+				ai_vengefulness >= medium_positive_ai_value
+				ai_boldness > high_negative_ai_value
+			}
+			animation = rage
 		}
 	}
 
@@ -125,7 +157,6 @@ _$modId$_.6 = {
 	}
 }
 
-
 _$modId$_.7 = {
 	type = character_event
 	title = _$modId$_.7.t
@@ -149,7 +180,6 @@ _$modId$_.7 = {
 		name = _$modId$_.7.a
 	}
 }
-
 
 _$modId$_.8 = {
 	type = character_event
@@ -196,5 +226,61 @@ _$modId$_.9 = {
 
 	option = {
 		name = _$modId$_.9.a
+	}
+}
+
+_$modId$_.10 = {
+	hidden = yes
+	scope = combat_side
+
+	trigger = {
+		exists = combat.location
+		exists = side_primary_participant
+		exists = enemy_side.side_primary_participant
+	}
+
+	immediate = {
+		save_scope_as = battle_side
+
+		scope:battle_side.side_commander = {
+			save_scope_as = side_commander
+		}
+
+		scope:battle_side.combat.location = {
+			save_scope_as = province
+		}
+
+		scope:battle_side.enemy_side.side_primary_participant = {
+			save_scope_as = enemy_primary_participant
+		}
+
+		scope:battle_side.side_primary_participant = {
+			trigger_event = _$modId$_.11
+		}
+	}
+}
+
+_$modId$_.11 = {
+	type = character_event
+	title = _$modId$_.10.t
+	desc = _$modId$_.10.desc
+
+	theme = war
+	override_background = {
+		reference = battlefield
+	}
+
+	left_portrait = {
+		character = scope:enemy_primary_participant
+		animation = marshal_shield
+	}
+
+	right_portrait = {
+		character = root
+		animation = war_over_loss
+	}
+
+	option = {
+		name = _$modId$_.10.a
 	}
 }

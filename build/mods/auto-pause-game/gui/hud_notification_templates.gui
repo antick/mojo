@@ -73,7 +73,7 @@ types Notifications {
                         state = {
                             name = "when_added"
                             next = e
-                                    position_y = 10
+                            position_y = 10
                             duration = 0.45
                             size = { 72 72 }
                             using = Animation_Curve_Default
@@ -82,12 +82,13 @@ types Notifications {
                             on_start = "[GUIAlertItem.PlayShowSound]"
                         }
 
-                        # Added by the mod @antick
-                        # state = {
-                        #     name = apoma
-                        #     trigger_when = "[And(Not(IsGamePaused), GUIAlertItem.IsAdding)]"
-                        #     on_start = "[OnPause]"
-                        # }
+                        # <antick_auto_pause>
+                        state = {
+                            name = antick_auto_pause
+                            trigger_when = "[And(Not(IsGamePaused), GUIAlertItem.IsAdding)]"
+                            on_start = "[OnPause]"
+                        }
+                        # </antick_auto_pause>
 
                         state = {
                             name = e
@@ -299,12 +300,13 @@ types Notifications {
                             scale = 1
                         }
 
-                        # Added by the mod @antick
-                        # state = {
-                        #     name = apoma
-                        #     trigger_when = "[And(Not(IsGamePaused), DiplomaticItem.IsAdding)]"
-                        #     on_start = "[OnPause]"
-                        # }
+                        # <antick_auto_pause>
+                        state = {
+                            name = antick_auto_pause
+                            trigger_when = "[And(Not(IsGamePaused), DiplomaticItem.IsAdding)]"
+                            on_start = "[OnPause]"
+                        }
+                        # </antick_auto_pause>
 
                         state = {
                             name = show
@@ -736,35 +738,6 @@ types Notifications {
                     widget_left_toast_icon_contents = {
                         size = { 120 90 }
                         allow_outside = yes
-
-                    # <Added by the mod @antick>
-                    # visible = "[PlayerMessageItem.HasLeftIcon]"
-
-                    # portrait_shoulders = {
-                    #     name = "portrait_left"
-                    #     datacontext = "[PlayerMessageItem.GetLeftCharacter]"
-                    #     visible = "[Character.IsValid]"
-                    #     parentanchor = center
-                    #     position = { 0 -25 }
-
-                    #     blockoverride "opinon_box" {}
-                    #     blockoverride "status_icons" {}
-                    # }
-
-                    # coa_title_medium = {
-                    #     name = "title_left"
-                    #     datacontext = "[PlayerMessageItem.GetLeftTitle]"
-                    #     visible = "[Title.IsValid]"
-                    #     parentanchor = center
-                    # }
-
-                    # icon_artifact = {
-                    #     name = "artifact_left"
-                    #     datacontext = "[PlayerMessageItem.GetLeftArtifact]"
-                    #     visible = "[Artifact.IsValid]"
-                    #     parentanchor = center
-                    # }
-                    # </Added by the mod @antick>
         }
 
                     vbox = {
@@ -1059,42 +1032,6 @@ types Notifications {
                     }
                 }
 
-                # widget_right_toast_icon_contents = {
-                #     size = { 120 90 }
-                #     # <Added by the mod @antick>
-                #     visible = "[PlayerMessageItem.HasRightIcon]"
-
-                #     portrait_shoulders = {
-                #         name = "portrait_right"
-                #         datacontext = "[PlayerMessageItem.GetRightCharacter]"
-                #         visible = "[Character.IsValid]"
-                #         parentanchor = center
-                #         position = { 0 -25 }
-
-                #         blockoverride "opinon_box" {}
-                #         blockoverride "status_icons" {}
-                #     }
-
-                #     coa_title_medium = {
-                #         name = "title_left"
-                #         datacontext = "[PlayerMessageItem.GetRightTitle]"
-                #         visible = "[Title.IsValid]"
-                #         parentanchor = center
-                #     }
-
-                #     icon_artifact = {
-                #         name = "artifact_right"
-                #         datacontext = "[PlayerMessageItem.GetRightArtifact]"
-                #         visible = "[Artifact.IsValid]"
-                #         parentanchor = center
-                #     }
-                #     # </Added by the mod @antick>
-                # }
-
-                # spacer = {
-                #     size = { 120 90 }
-                #     visible = "[Not( PlayerMessageItem.HasRightIcon )]"
-                # }
             }
 
             button_cancel = {

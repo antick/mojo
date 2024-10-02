@@ -1,6 +1,12 @@
 ﻿# $conflict_prone=no
 # $relates_to=common\on_action\_on_actions.info
 
+on_raid_action_completion = {
+	events = {
+		_$modId$_.5
+	}
+}
+
 on_siege_completion = {
 	events = {
 		_$modId$_.4
@@ -15,12 +21,6 @@ on_combat_end_winner = {
 
 on_combat_end_loser = {
 	events = {
-		_$modId$_.1
-	}
-}
-
-on_raid_action_completion = {
-	events = {
-		_$modId$_.5
+		_$modId$_.10
 	}
 }
