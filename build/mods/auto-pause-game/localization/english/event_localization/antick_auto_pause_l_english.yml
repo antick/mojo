@@ -3,14 +3,26 @@
  antick_auto_pause.1.desc:0 "The battle of [province.GetName] is over."
  antick_auto_pause.1.a:0 "Okay"
 
- antick_auto_pause.3.t:0 "Task Completed"
- antick_auto_pause.3.desc:0 "I have completed my task and now awaiting for new instructions."
- antick_auto_pause.3.a:0 "Excellent"
+ antick_auto_pause.3.t:0 "Integration Completed"
+ antick_auto_pause.3.desc:0 "I have completed my integration task and now awaiting for new instructions."
+ antick_auto_pause.3.a:0 "Well done"
 
  antick_auto_pause.4.t:0 "Siege won"
  antick_auto_pause.4.desc:0 "Your armies have besieged [province.GetName]"
  antick_auto_pause.4.a:0 "Hahaha"
 
- antick_auto_pause.6.t:0 "[raider.GetTitledFirstName] has sacked [sacked_barony.GetNameNoTierNoTooltip]"
- antick_auto_pause.6.desc:0 "The settlement of [sacked_barony.GetNameNoTierNoTooltip] in [sacked_county.GetNameNoTierNoTooltip], has fallen to my raiders. [sacked_county_owner.GetTitledFirstName] will surely be devastated by this news."
- antick_auto_pause.6.a:0 "Hehe"
+ antick_auto_pause.6.t:0 "You have sacked [sacked_barony.GetNameNoTierNoTooltip]"
+ antick_auto_pause.6.desc:0 "The once-proud settlement of [sacked_barony.GetNameNoTierNoTooltip] in [sacked_county.GetNameNoTierNoTooltip] now lies in ruins, a testament to the ferocity of my raiders. As the smoke rises from burning buildings and the screams of the vanquished fill the air, my men jubilantly gather the spoils of our conquest.\n\nThe streets run red with blood, and the cries of the defeated echo through the ravaged halls. [sacked_county_owner.GetTitledFirstName] will surely be devastated by this news, their power and prestige diminished in the wake of our ruthless assault.\n\nReports from my captains speak of overflowing coffers, priceless relics, and a stream of captives being led away in chains. The name of [raider.GetTitledFirstName] will be whispered in fear throughout the land, a stark reminder of the price of defiance.\n\nThis victory shall be etched into the annals of history, a cornerstone in the legacy of my ever-expanding domain."
+ antick_auto_pause.6.a:0 "Let their despair fuel our glory!"
+
+ antick_auto_pause.7.t:0 "[county.GetNameNoTierNoTooltip] is converted to [county.GetProvince.GetCounty.GetFaith.GetName]"
+ antick_auto_pause.7.desc:0 "The echoes of change resound through [county.GetName] as the last vestiges of the old faith give way to the new. Your diligent [councillor.GetCouncilTitle], [councillor.GetTitledFirstName], reports that the conversion process is complete.\n\nWhere once the [old_faith.GetAdjective] faith held sway, now the teachings of [county.GetProvince.GetCounty.GetFaith.GetName] take root. The landscape itself seems transformed; old shrines repurposed, new places of worship erected, and the very air thick with the scent of unfamiliar incense.\n\nThe people of [county.GetNameNoTier], though some still cling to old ways in secret, outwardly embrace their new spiritual path. Time will tell if this conversion will bring the unity and stability you seek, or if the embers of the old faith will continue to smolder beneath the surface."
+ antick_auto_pause.7.a:0 "May this bring prosperity to [county.GetName]"
+
+ antick_auto_pause.8.t:0 "Order Restored in [county.GetNameNoTierNoTooltip]"
+ antick_auto_pause.8.desc:0 "The tumultuous winds of chaos that once swept through [county.GetName] have finally been quelled. Our steadfast [councillor.GetCouncilTitle], [councillor.GetTitledFirstName], reports that control has been firmly reestablished.\n\nWhere once discord reigned, now the steady rhythm of everyday life has returned. The streets, previously rife with unrest, now bustle with the peaceful activities of contented subjects. Taxes, once withheld, now flow steadily into our coffers.\n\nOur [councillor.GetCouncilTitle]'s efforts have not gone unnoticed by the local populace. Many speak of [councillor.GetHerHis] firm but fair approach, praising the restoration of stability without resorting to excessive brutality.\n\nHowever, whispers persist of those who still harbor resentment. While open resistance has been quashed, we would do well to remain vigilant against any lingering sparks of rebellion that might reignite if left unchecked."
+ antick_auto_pause.8.a:0 "A strong realm is a stable realm"
+
+ antick_auto_pause.9.t:0 "Cultural Shift in [county.GetNameNoTierNoTooltip]"
+ antick_auto_pause.9.desc:0 "The vibrant tapestry of [county.GetName]'s cultural landscape has undergone a profound transformation. Our diligent [councillor.GetCouncilTitle], [councillor.GetTitledFirstName], reports that the local populace has embraced the [county.GetProvince.GetCounty.GetCulture.GetName] culture.\n\nWhere once the traditions of [old_culture.GetName] held sway, now the customs, language, and practices of [county.GetProvince.GetCounty.GetCulture.GetName] have taken root. The streets echo with new accents, the markets burst with unfamiliar flavors, and the people don attire that reflects their newfound cultural identity.\n\nThis shift has not come without challenges. Some elders cling to the old ways, their whispered tales of bygone days a bittersweet reminder of what once was. Yet, the younger generation eagerly adopts the new culture, seeing in it opportunities for advancement and connection to the broader realm."
+ antick_auto_pause.9.a:0 "Our realm grows stronger through unity"

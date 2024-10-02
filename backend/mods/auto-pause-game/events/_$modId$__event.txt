@@ -149,3 +149,52 @@ _$modId$_.7 = {
 		name = _$modId$_.7.a
 	}
 }
+
+
+_$modId$_.8 = {
+	type = character_event
+	title = _$modId$_.8.t
+	desc = _$modId$_.8.desc
+
+	theme = court
+
+	override_background = { reference = throne_room }
+
+	left_portrait = {
+		character = scope:councillor
+		animation = throne_room_chancellor
+	}
+
+	right_portrait = {
+		character = root
+		animation = throne_room_ruler
+	}
+
+	option = {
+		name = _$modId$_.8.a
+	}
+}
+
+_$modId$_.9 = {
+	type = character_event
+	title = _$modId$_.9.t
+	desc = _$modId$_.9.desc
+
+	theme = court
+
+	override_background = { reference = throne_room }
+
+	left_portrait = {
+		character = scope:councillor
+		animation = throne_room_chancellor
+	}
+
+	right_portrait = {
+		character = root
+		animation = throne_room_ruler
+	}
+
+	option = {
+		name = _$modId$_.9.a
+	}
+}

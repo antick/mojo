@@ -71,8 +71,11 @@ antick_auto_pause.5 = {
 	scope = army
 
 	immediate = {
-		root.army_commander = { save_scope_as = raid_leader }
-		scope:raid_leader = {
+		scope:raider = {
+			scope:county = { save_scope_as = sacked_county }
+			scope:barony = { save_scope_as = sacked_barony }
+			scope:raider.capital_province = { save_scope_as = raider_capital }
+
 			trigger_event = antick_auto_pause.6
 		}
 	}
@@ -87,25 +90,19 @@ antick_auto_pause.6 = {
 		reference = burning_building
 	}
 	left_portrait = {
-		character = scope:raid_leader
-		animation = war_over_win
+		character = scope:raider
+		animation = throne_room_one_handed_passive_1
 	}
 
 	right_portrait = {
 		character = scope:sacked_county_owner
-		animation = fear
+		animation = worry
 		triggered_animation = {
 			trigger = {
 				ai_vengefulness >= medium_positive_ai_value
 				ai_boldness > high_negative_ai_value
 			}
 			animation = rage
-		}
-	}
-
-	trigger = {
-		scope:raid_leader = {
-			is_alive = yes
 		}
 	}
 
@@ -124,6 +121,80 @@ antick_auto_pause.6 = {
 	}
 
 	option = {
-		name = antick_auto_pause.6.a:0
+		name = antick_auto_pause.6.a
+	}
+}
+
+
+antick_auto_pause.7 = {
+	type = character_event
+	title = antick_auto_pause.7.t
+	desc = antick_auto_pause.7.desc
+
+	theme = court
+
+	override_background = { reference = throne_room }
+
+	left_portrait = {
+		character = scope:councillor
+		animation = throne_room_chancellor
+	}
+
+	right_portrait = {
+		character = root
+		animation = throne_room_ruler
+	}
+
+	option = {
+		name = antick_auto_pause.7.a
+	}
+}
+
+
+antick_auto_pause.8 = {
+	type = character_event
+	title = antick_auto_pause.8.t
+	desc = antick_auto_pause.8.desc
+
+	theme = court
+
+	override_background = { reference = throne_room }
+
+	left_portrait = {
+		character = scope:councillor
+		animation = throne_room_chancellor
+	}
+
+	right_portrait = {
+		character = root
+		animation = throne_room_ruler
+	}
+
+	option = {
+		name = antick_auto_pause.8.a
+	}
+}
+
+antick_auto_pause.9 = {
+	type = character_event
+	title = antick_auto_pause.9.t
+	desc = antick_auto_pause.9.desc
+
+	theme = court
+
+	override_background = { reference = throne_room }
+
+	left_portrait = {
+		character = scope:councillor
+		animation = throne_room_chancellor
+	}
+
+	right_portrait = {
+		character = root
+		animation = throne_room_ruler
+	}
+
+	option = {
+		name = antick_auto_pause.9.a
 	}
 }

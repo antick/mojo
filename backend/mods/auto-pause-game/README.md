@@ -4,14 +4,16 @@
 
 ## Introduction
 
-This mod auto-pauses the game when:
+This mod fires auto-pauses game with custom events when one of these happens:
 
 1. Your councillor's integration task completes
 2. Your realm priest completes a conversion task
-3. Your armies completes a raid
-4. Major alert appears
-5. Battle is complete
-6. Siege is complete
+3. Your marshal restores control
+4. Your steward converts culture
+5. Your armies completes a raid
+6. Major alert appears
+7. Battle is complete
+8. Siege is complete
 
 ## Installation
 
