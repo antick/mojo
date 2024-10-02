@@ -1,0 +1,126 @@
+# $conflict_prone=no
+
+namespace = _$modId$_
+
+_$modId$_.1 = {
+	hidden = yes
+	scope = combat_side
+
+	immediate = {
+		save_scope_as = battle_side
+
+		scope:battle_side.combat.location = {
+			save_scope_as = province
+		}
+
+		scope:battle_side.enemy_side.side_primary_participant = {
+			save_scope_as = enemy_primary_participant
+		}
+
+		scope:battle_side.enemy_side.side_commander = {
+			save_scope_as = side_commander
+		}
+
+		scope:battle_side.side_primary_participant = {
+			trigger_event = _$modId$_.2
+		}
+	}
+}
+
+_$modId$_.2 = {
+	type = letter_event
+	opening = _$modId$_.1.t
+	desc = _$modId$_.1.desc
+	sender = scope:side_commander
+
+	option = {
+		name = _$modId$_.1.a
+	}
+}
+
+_$modId$_.3 = {
+	type = letter_event
+	opening = _$modId$_.3.t
+	desc = _$modId$_.3.desc
+	sender = scope:councillor
+
+	option = {
+		name = _$modId$_.3.a
+	}
+}
+
+_$modId$_.4 = {
+	type = letter_event
+	opening = _$modId$_.4.t
+	desc = _$modId$_.4.desc
+	sender = scope:previous_controller
+
+	immediate = {
+		scope:barony.title_province = {
+			save_scope_as = province
+		}
+	}
+
+	option = {
+		name = _$modId$_.4.a
+	}
+}
+
+_$modId$_.5 = {
+	hidden = yes
+	scope = army
+
+	immediate = {
+		scope:raider = {
+			scope:county = { save_scope_as = sacked_county }
+			scope:barony = { save_scope_as = sacked_barony }
+			scope:raider.capital_province = { save_scope_as = raider_capital }
+
+			trigger_event = _$modId$_.6
+		}
+	}
+}
+
+_$modId$_.6 = {
+	type = character_event
+	title = _$modId$_.6.t
+	desc = _$modId$_.6.desc
+	theme = war
+	override_background = {
+		reference = burning_building
+	}
+	left_portrait = {
+		character = scope:raider
+		animation = throne_room_one_handed_passive_1
+	}
+
+	right_portrait = {
+		character = scope:sacked_county_owner
+		animation = worry
+		triggered_animation = {
+			trigger = {
+				ai_vengefulness >= medium_positive_ai_value
+				ai_boldness > high_negative_ai_value
+			}
+			animation = rage
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { is_landed = no }
+			liege.capital_province = { save_scope_as = capital_province }
+		}
+		else = {
+			capital_province = { save_scope_as = capital_province }
+		}
+
+		scope:sacked_county.holder = { save_scope_as = sacked_county_owner }
+		scope:county = { save_scope_as = sacked_county }
+		scope:barony = { save_scope_as = sacked_barony }
+	}
+
+	option = {
+		name = _$modId$_.6.a
+	}
+}

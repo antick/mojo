@@ -1,0 +1,16 @@
+﻿l_english:
+ _$modId$_.1.t:0 "Battle Is Over"
+ _$modId$_.1.desc:0 "The battle of [province.GetName] is over."
+ _$modId$_.1.a:0 "Okay"
+
+ _$modId$_.3.t:0 "Task Completed"
+ _$modId$_.3.desc:0 "I have completed my task and now awaiting for new instructions."
+ _$modId$_.3.a:0 "Excellent"
+
+ _$modId$_.4.t:0 "Siege won"
+ _$modId$_.4.desc:0 "Your armies have besieged [province.GetName]"
+ _$modId$_.4.a:0 "Hahaha"
+
+ _$modId$_.6.t:0 "You have sacked [sacked_barony.GetNameNoTierNoTooltip]"
+ _$modId$_.6.desc:0 "The once-proud settlement of [sacked_barony.GetNameNoTierNoTooltip] in [sacked_county.GetNameNoTierNoTooltip] now lies in ruins, a testament to the ferocity of my raiders. As the smoke rises from burning buildings and the screams of the vanquished fill the air, my men jubilantly gather the spoils of our conquest.\n\nThe streets run red with blood, and the cries of the defeated echo through the ravaged halls. [sacked_county_owner.GetTitledFirstName] will surely be devastated by this news, their power and prestige diminished in the wake of our ruthless assault.\n\nReports from my captains speak of overflowing coffers, priceless relics, and a stream of captives being led away in chains. The name of [raider.GetTitledFirstName] will be whispered in fear throughout the land, a stark reminder of the price of defiance.\n\nThis victory shall be etched into the annals of history, a cornerstone in the legacy of my ever-expanding domain."
+ _$modId$_.6.a:0 "Let their despair fuel our glory!"

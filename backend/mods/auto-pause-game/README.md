@@ -1,6 +1,6 @@
 # Auto Pause Game On Major Events
 
-**Updated for 1.11.0.1**
+**Updated for 1.13.0.3**
 
 ## Introduction
 
@@ -27,7 +27,7 @@ This mod overwrites the following:
 
 1. task_promote_culture
 2. task_conversion
-3. task_integrate_title 
+3. task_integrate_title
 4. task_increase_control
 5. hud_notification_templates.gui
 

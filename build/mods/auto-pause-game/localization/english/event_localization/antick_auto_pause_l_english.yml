@@ -1,0 +1,16 @@
+﻿l_english:
+ antick_auto_pause.1.t:0 "Battle Is Over"
+ antick_auto_pause.1.desc:0 "The battle of [province.GetName] is over."
+ antick_auto_pause.1.a:0 "Okay"
+
+ antick_auto_pause.3.t:0 "Task Completed"
+ antick_auto_pause.3.desc:0 "I have completed my task and now awaiting for new instructions."
+ antick_auto_pause.3.a:0 "Excellent"
+
+ antick_auto_pause.4.t:0 "Siege won"
+ antick_auto_pause.4.desc:0 "Your armies have besieged [province.GetName]"
+ antick_auto_pause.4.a:0 "Hahaha"
+
+ antick_auto_pause.6.t:0 "[raider.GetTitledFirstName] has sacked [sacked_barony.GetNameNoTierNoTooltip]"
+ antick_auto_pause.6.desc:0 "The settlement of [sacked_barony.GetNameNoTierNoTooltip] in [sacked_county.GetNameNoTierNoTooltip], has fallen to my raiders. [sacked_county_owner.GetTitledFirstName] will surely be devastated by this news."
+ antick_auto_pause.6.a:0 "Hehe"
