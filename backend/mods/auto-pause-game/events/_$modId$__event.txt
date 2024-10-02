@@ -124,3 +124,28 @@ _$modId$_.6 = {
 		name = _$modId$_.6.a
 	}
 }
+
+
+_$modId$_.7 = {
+	type = character_event
+	title = _$modId$_.7.t
+	desc = _$modId$_.7.desc
+
+	theme = court
+
+	override_background = { reference = throne_room }
+
+	left_portrait = {
+		character = scope:councillor
+		animation = throne_room_chancellor
+	}
+
+	right_portrait = {
+		character = root
+		animation = throne_room_ruler
+	}
+
+	option = {
+		name = _$modId$_.7.a
+	}
+}

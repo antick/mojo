@@ -907,6 +907,14 @@ task_conversion = {
 		}
 		# Message for vassals
 		trigger_event = court_chaplain_task.8002
+
+		# <_$modId$_>
+		scope:county = {
+			scope:councillor_liege = {
+				trigger_event = _$modId$_.7
+			}
+		}
+		# </_$modId$_>
 	}
 
 	monthly_on_action = task_convert_side_effects
@@ -934,14 +942,6 @@ task_conversion = {
 			add = 10000
 		}
 	}
-
-	# <_$modId$_>
-	on_finish_task = {
-		scope:councillor_liege = {
-			trigger_event = _$modId$_.3
-		}
-	}
-	# </_$modId$_>
 }
 
 task_fabricate_claim = {

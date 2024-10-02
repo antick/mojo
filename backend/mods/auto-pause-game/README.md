@@ -1,4 +1,4 @@
-# Auto Pause Game On Major Events
+# Auto Pause Game
 
 **Updated for 1.13.0.3**
 
@@ -6,10 +6,12 @@
 
 This mod auto-pauses the game when:
 
-1. Council's task completes
-2. Major alert appears
-3. Battle is complete
-4. Siege is complete
+1. Your councillor's integration task completes
+2. Your realm priest completes a conversion task
+3. Your armies completes a raid
+4. Major alert appears
+5. Battle is complete
+6. Siege is complete
 
 ## Installation
 
