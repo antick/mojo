@@ -34,6 +34,14 @@ This mod overwrites the following:
 4. common/council_tasks/task_increase_control
 5. hud_notification_templates.gui
 
+[h2]More Ideas[/h2]
+
+1. Additional Dynasty Notifications [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2849527325]like this[/url]
+2. Alert when feudal contract can be changed [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2779440490]like this[/url]
+3. Alert when you can demand conversion [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2545408987]like this[/url]
+4. Notification when any courtier wants to leave [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2545408251]like this[/url]
+5. Notification when any guest arrives [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2523695492]like this[/url]
+
 [h2]On Request[/h2]
 
 1. Create compatibility patches
