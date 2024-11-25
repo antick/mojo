@@ -284,3 +284,49 @@ _$modId$_.11 = {
 		name = _$modId$_.10.a
 	}
 }
+
+_$modId$_.12 = {
+	hidden = yes
+	scope = army
+
+	trigger = {
+		has_raised_armies = yes
+		scope:army = {
+			exists = army_commander
+			location = { save_temporary_scope_as = current_location }
+		}
+
+		commanding_army = {
+			army_is_moving = no
+			is_army_in_combat = no
+		}
+	}
+
+	immediate = {
+		scope:army.location = { save_scope_as = current_location }
+
+		scope:army.army_commander = {
+			# trigger_event = _$modId$_.13
+		}
+	}
+}
+
+_$modId$_.13 = {
+	type = character_event
+	title = _$modId$_.13.t
+	desc = _$modId$_.13.desc
+
+	theme = war
+	override_background = {
+		reference = battlefield
+	}
+
+	right_portrait = {
+		character = root
+		animation = marshal_shield
+	}
+
+	option = {
+		name = _$modId$_.13.a
+	}
+}

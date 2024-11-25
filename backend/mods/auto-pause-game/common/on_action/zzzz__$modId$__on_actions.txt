@@ -24,3 +24,10 @@ on_combat_end_loser = {
 		_$modId$_.10
 	}
 }
+
+# IN PROGRESS - NOT WORKING AS EXPECTED ATM
+# on_army_enter_province = {
+# 	events = {
+# 		_$modId$_.12
+# 	}
+# }

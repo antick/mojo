@@ -30,3 +30,7 @@
  _$modId$_.10.t:0 "Defeat at [province.GetName]"
  _$modId$_.10.desc:0 "The clash of steel has faded, and a somber silence settles over the battlefield of [province.GetName]. Our forces, led by [ROOT.GetCharacter.GetTitledFirstName], have suffered a crushing defeat at the hands of [enemy_primary_participant.GetTitledFirstName]'s army.\n\nThe battle was fierce, with our soldiers fighting valiantly against overwhelming odds. Despite [ROOT.GetCharacter.GetTitledFirstName]'s efforts, the enemy's superior tactics proved decisive. A brilliant flanking maneuver by [enemy_primary_participant.GetTitledFirstName] shattered our lines, turning the tide of battle irreversibly against us.\n\nAs our remaining forces beat a hasty retreat, the victorious enemy raises their banners high, their triumphant cheers echoing across the blood-soaked field. This defeat will surely damage our reputation and embolden our foes.\n\nWe must act swiftly to mitigate the consequences of this loss and prevent further incursions into our territory."
  _$modId$_.10.a:0 "A dark day for our realm..."
+
+ _$modId$_.13.t:0 "Army reached [current_location.GetCounty.GetName]"
+ _$modId$_.13.desc:0 "Our Army has reached [current_location.GetCounty.GetName]. Our forces, led by [ROOT.GetCharacter.GetTitledFirstName], have reached the destination.\n\nAs our remaining forces enters the province, the enemy surrounds us."
+ _$modId$_.13.a:0 "Hmm..."

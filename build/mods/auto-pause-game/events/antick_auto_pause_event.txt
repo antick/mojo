@@ -284,3 +284,49 @@ antick_auto_pause.11 = {
 		name = antick_auto_pause.10.a
 	}
 }
+
+antick_auto_pause.12 = {
+	hidden = yes
+	scope = army
+
+	trigger = {
+		has_raised_armies = yes
+		scope:army = {
+			exists = army_commander
+			location = { save_temporary_scope_as = current_location }
+		}
+
+		commanding_army = {
+			army_is_moving = no
+			is_army_in_combat = no
+		}
+	}
+
+	immediate = {
+		scope:army.location = { save_scope_as = current_location }
+
+		scope:army.army_commander = {
+			# trigger_event = antick_auto_pause.13
+		}
+	}
+}
+
+antick_auto_pause.13 = {
+	type = character_event
+	title = antick_auto_pause.13.t
+	desc = antick_auto_pause.13.desc
+
+	theme = war
+	override_background = {
+		reference = battlefield
+	}
+
+	right_portrait = {
+		character = root
+		animation = marshal_shield
+	}
+
+	option = {
+		name = antick_auto_pause.13.a
+	}
+}

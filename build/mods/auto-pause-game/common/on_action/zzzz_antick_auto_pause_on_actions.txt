@@ -24,3 +24,10 @@ on_combat_end_loser = {
 		antick_auto_pause.10
 	}
 }
+
+# IN PROGRESS - NOT WORKING AS EXPECTED ATM
+# on_army_enter_province = {
+# 	events = {
+# 		antick_auto_pause.12
+# 	}
+# }
