@@ -841,3 +841,41 @@ _$modId$__spawn_army_effect = {
     }
   }
 }
+
+_$modId$__invasion_county_looting_chance_effect = {
+	save_temporary_scope_as = county
+	if = {
+		random = {
+			chance = scope:attacker.martial
+
+			# Send a message (and gold!) to the Mongol Emperor
+			scope:attacker = {
+				send_interface_message = {
+					type = event_war_bad
+					title = _$modId$__sieged_county.t
+					left_icon = scope:county.holder
+					right_icon = scope:county
+					add_gold = {
+						add = scope:county.development_level
+						multiply = 10
+					}
+					if = {
+						limit = { dread < 100 }
+						add_dread = 2
+					}
+				}
+				save_scope_as = mongol_emperor
+				# Send a message to the County's owner
+				scope:county.holder = {
+					send_interface_message = {
+						type = event_war_bad
+						title = _$modId$__sieged_county.t
+						left_icon = scope:mongol_emperor
+						right_icon = scope:county
+						scope:county = { mongols_devastate_county_effect = yes }
+					}
+				}
+			}
+		}
+	}
+}

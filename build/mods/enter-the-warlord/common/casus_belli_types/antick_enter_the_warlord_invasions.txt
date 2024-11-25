@@ -177,6 +177,9 @@ antick_enter_the_warlord_conquer_kingdom = {
 
     # FP1: note the victory for future memorialisation via stele (if applicable).
     scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
   }
 
   on_white_peace_desc = {
@@ -221,6 +224,9 @@ antick_enter_the_warlord_conquer_kingdom = {
         arrogant = medium_stress_impact_gain
       }
     }
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
   }
 
   on_defeat_desc = {
@@ -282,6 +288,9 @@ antick_enter_the_warlord_conquer_kingdom = {
       save_temporary_scope_as = loser
     }
     on_lost_aggression_war_discontent_loss = yes
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
   }
 
   transfer_behavior = transfer
@@ -493,7 +502,7 @@ antick_enter_the_warlord_apocalyptic_invasion_war = {
     # Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:attacker
-			FAME_BASE = mongol_invasion_cb_ally_prestige
+			FAME_BASE = 100
 			IS_RELIGIOUS_WAR = no
 			WINNER_ALLY_FAME_SCALE = 1
 			LOSER_ALLY_FAME_SCALE = 1
@@ -502,7 +511,7 @@ antick_enter_the_warlord_apocalyptic_invasion_war = {
     # Prestige level progress for the attacker
 		scope:attacker = {
 			add_prestige_experience = {
-				value = mongol_invasion_cb_prestige_experience_gain
+				value = 10
 			}
 		}
 
@@ -511,6 +520,9 @@ antick_enter_the_warlord_apocalyptic_invasion_war = {
 
     # FP1: note the victory for future memorialisation via stele (if applicable).
     scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
   }
 
   on_white_peace_desc = {
@@ -533,7 +545,7 @@ antick_enter_the_warlord_apocalyptic_invasion_war = {
     # Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:attacker # Not important as the scales are identical
-			FAME_BASE = mongol_invasion_cb_ally_prestige
+			FAME_BASE = 100
 			IS_RELIGIOUS_WAR = no
 			WINNER_ALLY_FAME_SCALE = 1
 			LOSER_ALLY_FAME_SCALE = 1
@@ -542,7 +554,7 @@ antick_enter_the_warlord_apocalyptic_invasion_war = {
     add_truce_white_peace_effect = yes
 
     scope:attacker = {
-			add_prestige = mongol_invasion_cb_prestige_white_peace
+			add_prestige = -100
 			stress_impact = {
 				ambitious = medium_stress_impact_gain
 				arrogant = medium_stress_impact_gain
@@ -554,6 +566,9 @@ antick_enter_the_warlord_apocalyptic_invasion_war = {
         arrogant = medium_stress_impact_gain
       }
     }
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
   }
 
   on_defeat_desc = {
@@ -578,7 +593,7 @@ antick_enter_the_warlord_apocalyptic_invasion_war = {
     # Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:defender # Not important as the scales are identical
-			FAME_BASE = mongol_invasion_cb_ally_prestige
+			FAME_BASE = 100
 			IS_RELIGIOUS_WAR = no
 			WINNER_ALLY_FAME_SCALE = 1
 			LOSER_ALLY_FAME_SCALE = 1
@@ -623,7 +638,7 @@ antick_enter_the_warlord_apocalyptic_invasion_war = {
 			every_vassal = {
 				custom = custom.every_vassal
 				add_opinion = {
-					modifier = liege_lost_mongol_invasion_war
+					modifier = liege_lost_apocalyptic_invasion_war
 					target = prev
 				}
 			}
@@ -633,6 +648,9 @@ antick_enter_the_warlord_apocalyptic_invasion_war = {
       save_temporary_scope_as = loser
     }
     on_lost_aggression_war_discontent_loss = yes
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
   }
 
   transfer_behavior = transfer
@@ -780,7 +798,7 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
 				# First check for the primary defender
 			every_realm_de_jure_empire = {
 				limit = {
-					any_in_de_jure_hierarchy = { # Then check how many de jure counties are in the Mongol Emperor's realm
+					any_in_de_jure_hierarchy = { # Then check how many de jure counties are in player's realm
 						count >= 8 # This number determines how many counties activates the threshold for taking these titles
 						continue = {
 							tier > tier_county
@@ -865,12 +883,12 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
     scope:defender = {
 			# Loot tooltip for display
 			every_held_county = {
-				custom = mongol_invasion_loot_county_tt
+				custom = antick_enter_the_warlord_invasion_loot_county_tt
 				random = {
 					chance = scope:attacker.martial
-					custom_tooltip = mongol_invasion_loot_gold_tt
-					custom_tooltip = mongol_invasion_loot_development_tt
-					custom_tooltip = mongol_invasion_loot_dread_tt
+					custom_tooltip = antick_enter_the_warlord_invasion_loot_gold_tt
+					custom_tooltip = antick_enter_the_warlord_invasion_loot_development_tt
+					custom_tooltip = antick_enter_the_warlord_invasion_loot_dread_tt
 				}
 			}
 			hidden_effect = {
@@ -880,7 +898,7 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
 					limit = {
 						duchy.kingdom.empire = { is_in_list = target_titles }
 					}
-					mongol_invasion_county_looting_chance_effect = yes
+					antick_enter_the_warlord_invasion_county_looting_chance_effect = yes
 				}
 				# Vassal sub realm looting
 				every_vassal_or_below = {
@@ -889,7 +907,7 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
 							holder = { is_ai = yes }
 							duchy.kingdom.empire = { is_in_list = target_titles }
 						}
-						mongol_invasion_county_looting_chance_effect = yes
+						antick_enter_the_warlord_invasion_county_looting_chance_effect = yes
 					}
 				}
 			}
@@ -934,7 +952,7 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
     # Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:attacker
-			FAME_BASE = mongol_invasion_cb_ally_prestige
+			FAME_BASE = 100
 			IS_RELIGIOUS_WAR = no
 			WINNER_ALLY_FAME_SCALE = 1
 			LOSER_ALLY_FAME_SCALE = 1
@@ -943,7 +961,7 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
     # Prestige level progress for the attacker
 		scope:attacker = {
 			add_prestige_experience = {
-				value = mongol_invasion_cb_prestige_experience_gain
+				value = 10
 			}
 		}
 
@@ -952,6 +970,9 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
 
     # FP1: note the victory for future memorialisation via stele (if applicable).
     scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
   }
 
   on_white_peace_desc = {
@@ -974,7 +995,7 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
     # Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:attacker # Not important as the scales are identical
-			FAME_BASE = mongol_invasion_cb_ally_prestige
+			FAME_BASE = 100
 			IS_RELIGIOUS_WAR = no
 			WINNER_ALLY_FAME_SCALE = 1
 			LOSER_ALLY_FAME_SCALE = 1
@@ -995,6 +1016,9 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
         arrogant = medium_stress_impact_gain
       }
     }
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
   }
 
   on_defeat_desc = {
@@ -1019,7 +1043,7 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
     # Allies on both sides get full prestige value for helping in the war, based on their war participation.
 		modify_allies_of_participants_fame_values = {
 			WINNER = scope:defender
-			FAME_BASE = mongol_invasion_cb_ally_prestige
+			FAME_BASE = 100
 			IS_RELIGIOUS_WAR = no
 			WINNER_ALLY_FAME_SCALE = 1
 			LOSER_ALLY_FAME_SCALE = 1
@@ -1068,7 +1092,7 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
 				every_vassal = {
 					custom = custom.every_vassal
 					add_opinion = {
-						modifier = liege_lost_mongol_invasion_war
+						modifier = liege_lost_apocalyptic_invasion_war
 						target = prev
 					}
 				}
@@ -1079,6 +1103,9 @@ antick_enter_the_warlord_apocalyptic_realm_invasion_war = {
 			save_temporary_scope_as = loser
 		}
 		on_lost_aggression_war_discontent_loss = yes
+
+		# EP3: note gold gained from military assistance/join war contracts and their war contribution threshold
+		laamp_as_mercenary_payout_tooltip_effect = yes
   }
 
   transfer_behavior = transfer

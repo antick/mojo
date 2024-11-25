@@ -56,8 +56,8 @@ func ModConfig() *ModType {
 					"modId":                config.ModIdPrefix + "_enter_the_warlord",
 					"modFolderName":        "enter-the-warlord",
 					"modName":              "Enter the Warlord",
-					"modVersion":           "0.1.0",
-					"supportedGameVersion": "1.13.0.3",
+					"modVersion":           "1.0.0",
+					"supportedGameVersion": "1.14.1",
 					"modRemoteFileId":      "",
 					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "enter-the-warlord"), "\\", "/"),
 					"modTags": `{
