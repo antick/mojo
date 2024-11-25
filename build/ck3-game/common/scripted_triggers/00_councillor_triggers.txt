@@ -925,10 +925,10 @@ councillor_liege_has_khvarenah_legacy_perk = {
 }
 
 can_be_knight_now_light_trigger = {
-	is_imprisoned = no
 	is_alive = yes
-	is_adult = yes
 	is_ai = yes # Players can't be knights
+	is_adult = yes
+	is_imprisoned = no
 }
 
 can_be_trained_as_knight_now_light_trigger = {

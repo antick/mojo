@@ -25,6 +25,10 @@ vassal_interaction.0001 = {
 				5 = {
 					modifier = {
 						add = 10
+						has_trait = loyal
+					}
+					modifier = {
+						add = 10
 						has_trait = craven
 					}
 					modifier = {
@@ -36,6 +40,31 @@ vassal_interaction.0001 = {
 						has_trait = content
 					}
 					modifier = {
+						# Admin governors are more likely to accept without demands by default. Increases with Bureaucracy level.
+						factor = {
+							value = 2
+							if = {
+								limit = {
+									top_liege = { has_realm_law = imperial_bureaucracy_3 }
+								}
+								add = 3
+							}
+							else_if = {
+								limit = {
+									top_liege = { has_realm_law = imperial_bureaucracy_2 }
+								}
+								add = 2
+							}
+							else_if = {
+								limit = {
+									top_liege = { has_realm_law = imperial_bureaucracy_1 }
+								}
+								add = 1
+							}
+						}
+						is_governor = yes
+					}
+					modifier = {
 						# Stubborn characters will always ask for something UNLESS they are intimidated.
 						factor = 0
 						has_trait = stubborn
@@ -45,6 +74,7 @@ vassal_interaction.0001 = {
 								level = 1
 							}
 						}
+						is_governor = no # Governors will never refuse simply because they are stubborn
 					}
 					modifier = {
 						# Intimidated characters more likely to accept without asking for anything.
@@ -675,6 +705,10 @@ vassal_interaction.0011 = {
 				5 = {
 					modifier = {
 						add = 10
+						has_trait = loyal
+					}
+					modifier = {
+						add = 10
 						has_trait = craven
 					}
 					modifier = {
@@ -686,6 +720,31 @@ vassal_interaction.0011 = {
 						has_trait = content
 					}
 					modifier = {
+						# Admin governors are more likely to accept without demands by default. Increases with Bureaucracy level.
+						factor = {
+							value = 2
+							if = {
+								limit = {
+									top_liege = { has_realm_law = imperial_bureaucracy_3 }
+								}
+								add = 3
+							}
+							else_if = {
+								limit = {
+									top_liege = { has_realm_law = imperial_bureaucracy_2 }
+								}
+								add = 2
+							}
+							else_if = {
+								limit = {
+									top_liege = { has_realm_law = imperial_bureaucracy_1 }
+								}
+								add = 1
+							}
+						}
+						is_governor = yes
+					}
+					modifier = {
 						# Stubborn characters will always ask for something UNLESS they are intimidated.
 						factor = 0
 						has_trait = stubborn
@@ -695,6 +754,7 @@ vassal_interaction.0011 = {
 								level = 1
 							}
 						}
+						is_governor = no # Governors will never refuse simply because they are stubborn
 					}
 					modifier = {
 						# Intimidated characters more likely to accept without asking for anything.

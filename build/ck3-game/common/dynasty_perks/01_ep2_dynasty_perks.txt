@@ -4,6 +4,8 @@
 ep2_activities_legacy_2 = { 
 	legacy = ep2_activities_legacy_track
 
+	can_be_picked = { has_ep2_dlc_trigger = yes }
+
 	effect = {
 		custom_description_no_bullet = { text = ep2_activities_legacy_2_grand_weddings_cheaper_effect }
 		custom_description_no_bullet = { text = ep2_activities_legacy_2_grand_weddings_acceptance_boost_effect }
@@ -26,6 +28,8 @@ ep2_activities_legacy_2 = {
 # Walking the Sacred Path
 ep2_activities_legacy_1 = { 
 	legacy = ep2_activities_legacy_track
+
+	can_be_picked = { has_ep2_dlc_trigger = yes }
 
 	character_modifier = {
 		name = ep2_activities_legacy_track
@@ -51,6 +55,8 @@ ep2_activities_legacy_1 = {
 ep2_activities_legacy_3 = { 
 	legacy = ep2_activities_legacy_track
 
+	can_be_picked = { has_ep2_dlc_trigger = yes }
+
 	effect = {
 		custom_description_no_bullet = { text = ep2_activities_legacy_3_tours_majesty_modifier_effect }
 		custom_description_no_bullet = { text = ep2_activities_legacy_3_tours_intimidation_modifier_effect }
@@ -70,6 +76,8 @@ ep2_activities_legacy_3 = {
 # Family Recipies
 ep2_activities_legacy_4 = { 
 	legacy = ep2_activities_legacy_track
+
+	can_be_picked = { has_ep2_dlc_trigger = yes }
 
 	character_modifier = {
 		name = ep2_activities_legacy_track
@@ -93,6 +101,8 @@ ep2_activities_legacy_4 = {
 # Field of the Cloth of Gold
 ep2_activities_legacy_5 = { 
 	legacy = ep2_activities_legacy_track
+
+	can_be_picked = { has_ep2_dlc_trigger = yes }
 
 	character_modifier = {
 		name = ep2_activities_legacy_track

@@ -105,6 +105,12 @@ stop_war_attacker_likelihood_calculation = {
 			}
 			add = -30
 		}
+		if = {
+			limit = {
+				has_trait = disloyal
+			}
+			add = -25
+		}
 
 		#########################
 		# Indimidation Modifier #
@@ -134,17 +140,49 @@ stop_war_attacker_likelihood_calculation = {
 			}
 			add = 30
 		}
+		if = {
+			limit = {
+				has_trait = loyal
+			}
+			add = 50
+		}
 
 		#######################
 		# Other Circumstances #
 		#######################
 
-		#Warscore
+		# Warscore
 		if = {
 			limit = {
 				exists = scope:target
 			}
 			subtract = scope:target.attacker_war_score
+		}
+		
+		# Admin
+		if = {
+			limit = {
+				is_governor = yes
+			}
+			add = 50
+			if = {
+				limit = {
+					scope:target = { has_realm_law = imperial_bureaucracy_3 }
+				}
+				add = 30
+			}
+			else_if = {
+				limit = {
+					scope:target = { has_realm_law = imperial_bureaucracy_2 }
+				}
+				add = 20
+			}
+			else_if = {
+				limit = {
+					scope:target = { has_realm_law = imperial_bureaucracy_1 }
+				}
+				add = 10
+			}
 		}
 
 		#TODO: Strong claim/Weak claim difference
@@ -213,6 +251,12 @@ stop_war_defender_likelihood_calculation = {
 		}
 		if = {
 			limit = {
+				has_trait = disloyal
+			}
+			add = -25
+		}
+		if = {
+			limit = {
 				has_trait = greedy
 			}
 			add = -20
@@ -245,18 +289,50 @@ stop_war_defender_likelihood_calculation = {
 				has_trait = humble
 			}
 			add = 20
-		}	
+		}
+		if = {
+			limit = {
+				has_trait = loyal
+			}
+			add = 50
+		}
 
 		#######################
 		# Other Circumstances #
 		#######################
 
-		#Warscore
+		# Warscore
 		if = {
 			limit = {
 				exists = scope:target
 			}
 			subtract = scope:target.defender_war_score
+		}
+		
+		# Admin
+		if = {
+			limit = {
+				is_governor = yes
+			}
+			add = 50
+			if = {
+				limit = {
+					scope:target = { has_realm_law = imperial_bureaucracy_3 }
+				}
+				add = 30
+			}
+			else_if = {
+				limit = {
+					scope:target = { has_realm_law = imperial_bureaucracy_2 }
+				}
+				add = 20
+			}
+			else_if = {
+				limit = {
+					scope:target = { has_realm_law = imperial_bureaucracy_1 }
+				}
+				add = 10
+			}
 		}
 
 		#TODO: Strong claim/Weak claim difference

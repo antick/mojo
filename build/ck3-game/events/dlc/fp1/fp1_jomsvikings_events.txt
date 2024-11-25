@@ -2057,6 +2057,7 @@ fp1_jomsvikings.1001 = {
 		desc = fp1_jomsvikings.1001.desc.outro
 	}
 	theme = faith
+	override_background = { reference = fp1_tribal_temple }
 	left_portrait = {
 		character = scope:leader
 		animation = shame

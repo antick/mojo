@@ -132,6 +132,26 @@ GetPetitionType = {
 		localization_key = petition_liege.9001.council_seat
 	}
 	text = {
+		trigger = { var:petition_type = flag:council_seat_family }
+		localization_key = petition_liege.9001.council_seat_family
+	}
+	text = {
+		trigger = { var:petition_type = flag:court_position }
+		localization_key = petition_liege.9001.court_position
+	}
+	text = {
+		trigger = { var:petition_type = flag:court_position_family }
+		localization_key = petition_liege.9001.court_position_family
+	}
+	text = {
+		trigger = { var:petition_type = flag:governorship_family }
+		localization_key = petition_liege.9001.governorship_family
+	}
+	text = {
+		trigger = { var:petition_type = flag:house_governorship_rights }
+		localization_key = petition_liege.9001.house_governorship_rights
+	}
+	text = {
 		trigger = { var:petition_type = flag:pay_debt }
 		localization_key = petition_liege.9001.pay_debt
 	}
@@ -182,5 +202,9 @@ GetPetitionType = {
 	text = {
 		trigger = { var:petition_type = flag:development }
 		localization_key = petition_liege.9001.development
+	}
+	text = {
+		trigger = { var:petition_type = flag:gold }
+		localization_key = petition_liege.9001.gold
 	}
 }

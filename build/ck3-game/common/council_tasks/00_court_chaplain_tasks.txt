@@ -733,7 +733,10 @@ task_conversion = {
 					scope:councillor_liege = {
 						is_ai = yes
 						faith = {
-							has_doctrine = tenet_tax_nonbelievers
+							OR = {
+								has_doctrine = tenet_tax_nonbelievers
+								has_doctrine = special_doctrine_jizya
+							}
 						}
 					}
 					OR = {
@@ -1082,6 +1085,18 @@ task_fabricate_claim = {
 			add = {
 				value = scope:councillor.court_chaplain_fabricate_claim_tradition_language_scholars_bonus
 				desc = FABRICATE_CLAIM_LANGUAGE_SCHOLARS_BONUS
+			}
+		}
+
+		if = { # Inspection Reward
+			limit = {
+				scope:councillor_liege = {
+					has_character_modifier = inspection_reward_focused_claims_modifier
+				}
+			}
+			add = {
+				value = scope:councillor.court_chaplain_fabricate_claim_inspection_reward_bonus
+				desc = FABRICATE_CLAIM_INSPECTION_BONUS
 			}
 		}
 

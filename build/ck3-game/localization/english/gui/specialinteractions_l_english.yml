@@ -71,6 +71,7 @@
  religious_taxation:0 "Religious Taxation"
  religious_protection_tt:1 "[vassal_contract|E] starts with [GetVassalContractType( 'religious_rights' ).GetObligationName( 'religious_rights_protected' )]"
  jizya_religious_protection_tt:0 "[vassal_contract|E] starts with [GetVassalContractType( 'jizya_special_rights' ).GetObligationName( 'jizya_special_rights_granted' )]"
+ SURVEYOR_PERK_REALM_ACCEPTANCE:0 "You have [GetPerk( 'know_your_land_know_your_people_perk' ).GetName( GetPlayer )]: $VALUE|=+0$"
 
  AI_ELOPE_CONSEQUENCES:0 "[recipient.GetShortUIName|U] is wary of consequences: $VALUE|=+0$"
  AI_SPOUSE_OPINION:0 "[CHARACTER.GetShortUINamePossessive] Opinion of [CHARACTER.GetHerHis] Spouse: $VALUE|=+0$"
@@ -562,6 +563,7 @@
  INTRIGUE_SKILL_REASON: "Intrigue Skill: $VALUE|=+0$"
  LEARNING_SKILL_REASON: "Learning Skill: $VALUE|=+0$"
  PROWESS_SKILL_REASON: "Prowess Skill: $VALUE|=+0$"
+ SCHEME_TARGET_LEARNING: "[target.GetShortUINamePossessive|U] [learning|E]: $VALUE|+=0$"
  AI_I_AM_INCAPABLE:0 "I am [GetTrait('incapable').GetName(GetNullCharacter)]: $VALUE|=+0$"
  AI_I_AM_IMPRISONED:0 "I am [imprisoned|E]: $VALUE|=+0$"
  AI_LACKS_POLITICAL_CAPITAL:0 "I don't have the [prestige|E] to resist: $VALUE|=+0$"
@@ -606,3 +608,9 @@
  RIVAL_VASSAL_REASON: "Rival [vassal|E] within the [realm|E]: $VALUE|=+0$"
 
  negotiate_settlement_title_cant_receive_reason_higher_tier_without_county: "[recipient.GetShortUINameNotMe] must hold or receive at least one county together with [target.GetName]"
+ 
+ STATE_FAITH_CREATE_FAITH_REASON: "You hold a lot of sway within the [realm|E]: $VALUE|=+0$"
+ HAS_PERK_PROPHET_REASON: "You have the [GetPerk('prophet_perk').GetName(GetPlayer)] [perk|E]: $VALUE|=+0$"
+
+ INSPECTION_REASON: "[inspection|E] Bonus: $VALUE|=+0$"
+

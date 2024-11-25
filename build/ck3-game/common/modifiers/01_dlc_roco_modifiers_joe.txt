@@ -105,7 +105,7 @@ harbors_criminals_modifier = {
 }
 
 fast_hard_justice_modifier = {
-	icon = signet_ring_mixed
+	icon = signet_ring_positive
 	religious_head_opinion = 10
 	county_opinion_add = 10
 	dread_gain_mult = 0.2

@@ -210,12 +210,125 @@
 
 	# Maintenance
 	effect_group = {
-		months = { 1 2 }
+		months = 4
+		
+		trigger = {
+			story_owner ?= {
+				ep3_adventurer_ai_logic_valid_trigger = yes
+			}
+		}
+		
+		# Hire Critical Officers
+		triggered_effect = {
+			trigger = {
+				story_owner ?= {
+					NOT = { employs_court_position = court_physician_court_position }
+					can_employ_court_position_type = court_physician_court_position
+					any_courtier = {
+						would_be_valid_for_court_position = {
+							employer = prev
+							court_position = court_physician_court_position
+						}
+					}
+				}
+			}
+			effect = {
+				story_owner = {
+					ordered_courtier = {
+						limit = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = court_physician_court_position
+							}
+						}
+						order_by = aptitude:court_physician_court_position
+						save_scope_as = officer
+					}
+					appoint_court_position = {
+						recipient = scope:officer
+						court_position = court_physician_court_position
+					}
+				}
+			}
+		}
+		triggered_effect = {
+			trigger = {
+				story_owner ?= {
+					NOT = { employs_court_position = travel_leader_court_position }
+					can_employ_court_position_type = travel_leader_court_position
+					any_courtier = {
+						would_be_valid_for_court_position = {
+							employer = prev
+							court_position = travel_leader_court_position
+						}
+					}
+				}
+			}
+			effect = {
+				story_owner = {
+					ordered_courtier = {
+						limit = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = travel_leader_court_position
+							}
+						}
+						order_by = aptitude:travel_leader_court_position
+						save_scope_as = officer
+					}
+					appoint_court_position = {
+						recipient = scope:officer
+						court_position = travel_leader_court_position
+					}
+				}
+			}
+		}
+		triggered_effect = {
+			trigger = {
+				story_owner ?= {
+					NOT = { employs_court_position = second_camp_officer }
+					can_employ_court_position_type = second_camp_officer
+					any_courtier = {
+						would_be_valid_for_court_position = {
+							employer = prev
+							court_position = second_camp_officer
+						}
+					}
+				}
+			}
+			effect = {
+				story_owner = {
+					ordered_courtier = {
+						limit = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = second_camp_officer
+							}
+						}
+						order_by = aptitude:second_camp_officer
+						save_scope_as = officer
+					}
+					appoint_court_position = {
+						recipient = scope:officer
+						court_position = second_camp_officer
+					}
+				}
+			}
+		}
+	}
+	
+	effect_group = {
+		months = 12
+		
+		trigger = {
+			story_owner ?= {
+				ep3_adventurer_ai_logic_valid_trigger = yes
+			}
+		}
 		
 		triggered_effect = { # Econ security
 			trigger = {
 				story_owner ?= {
-					ep3_adventurer_ai_logic_valid_trigger = yes
 					is_at_war = no
 					gold < 0
 				}
@@ -230,539 +343,10 @@
 			}
 		}
 		
-		first_valid = { # Hire Officers
+		first_valid = { # Hire Non-critical Officers
 			triggered_effect = {
 				trigger = {
 					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = court_physician_court_position }
-						can_employ_court_position_type = court_physician_court_position
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = court_physician_court_position
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = court_physician_court_position
-								}
-							}
-							order_by = aptitude:court_physician_court_position
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = court_physician_court_position
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = travel_leader_court_position }
-						can_employ_court_position_type = travel_leader_court_position
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = travel_leader_court_position
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = travel_leader_court_position
-								}
-							}
-							order_by = aptitude:travel_leader_court_position
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = travel_leader_court_position
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = second_camp_officer }
-						can_employ_court_position_type = second_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = second_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = second_camp_officer
-								}
-							}
-							order_by = aptitude:second_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = second_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = quartermaster_camp_officer }
-						can_employ_court_position_type = quartermaster_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = quartermaster_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = quartermaster_camp_officer
-								}
-							}
-							order_by = aptitude:quartermaster_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = quartermaster_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = armorer_camp_officer }
-						can_employ_court_position_type = armorer_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = armorer_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = armorer_camp_officer
-								}
-							}
-							order_by = aptitude:armorer_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = armorer_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = chief_forager_camp_officer }
-						can_employ_court_position_type = chief_forager_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = chief_forager_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = chief_forager_camp_officer
-								}
-							}
-							order_by = aptitude:chief_forager_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = chief_forager_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = master_thief_camp_officer }
-						can_employ_court_position_type = master_thief_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = master_thief_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = master_thief_camp_officer
-								}
-							}
-							order_by = aptitude:master_thief_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = master_thief_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = head_porter_camp_officer }
-						can_employ_court_position_type = head_porter_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = head_porter_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = head_porter_camp_officer
-								}
-							}
-							order_by = aptitude:head_porter_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = head_porter_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = head_groom_camp_officer }
-						can_employ_court_position_type = head_groom_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = head_groom_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = head_groom_camp_officer
-								}
-							}
-							order_by = aptitude:head_groom_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = head_groom_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = huntperson_camp_officer }
-						can_employ_court_position_type = huntperson_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = huntperson_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = huntperson_camp_officer
-								}
-							}
-							order_by = aptitude:huntperson_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = huntperson_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = kennelperson_camp_officer }
-						can_employ_court_position_type = kennelperson_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = kennelperson_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = kennelperson_camp_officer
-								}
-							}
-							order_by = aptitude:kennelperson_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = kennelperson_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = chief_engineer_camp_officer }
-						can_employ_court_position_type = chief_engineer_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = chief_engineer_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = chief_engineer_camp_officer
-								}
-							}
-							order_by = aptitude:chief_engineer_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = chief_engineer_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = witness_camp_officer }
-						can_employ_court_position_type = witness_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = witness_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = witness_camp_officer
-								}
-							}
-							order_by = aptitude:witness_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = witness_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = person_haggler_camp_officer }
-						can_employ_court_position_type = person_haggler_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = person_haggler_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = person_haggler_camp_officer
-								}
-							}
-							order_by = aptitude:person_haggler_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = person_haggler_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = camp_cook_camp_officer }
-						can_employ_court_position_type = camp_cook_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = camp_cook_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = camp_cook_camp_officer
-								}
-							}
-							order_by = aptitude:camp_cook_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = camp_cook_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = master_bard_camp_officer }
-						can_employ_court_position_type = master_bard_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = master_bard_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = master_bard_camp_officer
-								}
-							}
-							order_by = aptitude:master_bard_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = master_bard_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
 						NOT = { employs_court_position = stooge_camp_officer }
 						can_employ_court_position_type = stooge_camp_officer
 						any_courtier = {
@@ -795,436 +379,6 @@
 			triggered_effect = {
 				trigger = {
 					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = master_of_arms_camp_officer }
-						can_employ_court_position_type = master_of_arms_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = master_of_arms_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = master_of_arms_camp_officer
-								}
-							}
-							order_by = aptitude:master_of_arms_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = master_of_arms_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = light_cavalry_captain_camp_officer }
-						can_employ_court_position_type = light_cavalry_captain_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = light_cavalry_captain_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = light_cavalry_captain_camp_officer
-								}
-							}
-							order_by = aptitude:light_cavalry_captain_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = light_cavalry_captain_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = camelry_captain_camp_officer }
-						can_employ_court_position_type = camelry_captain_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = camelry_captain_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = camelry_captain_camp_officer
-								}
-							}
-							order_by = aptitude:camelry_captain_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = camelry_captain_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = elephantry_captain_camp_officer }
-						can_employ_court_position_type = elephantry_captain_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = elephantry_captain_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = elephantry_captain_camp_officer
-								}
-							}
-							order_by = aptitude:elephantry_captain_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = elephantry_captain_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = heavy_cavalry_captain_camp_officer }
-						can_employ_court_position_type = heavy_cavalry_captain_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = heavy_cavalry_captain_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = heavy_cavalry_captain_camp_officer
-								}
-							}
-							order_by = aptitude:heavy_cavalry_captain_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = heavy_cavalry_captain_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = horse_archer_captain_camp_officer }
-						can_employ_court_position_type = horse_archer_captain_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = horse_archer_captain_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = horse_archer_captain_camp_officer
-								}
-							}
-							order_by = aptitude:horse_archer_captain_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = horse_archer_captain_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = archer_captain_camp_officer }
-						can_employ_court_position_type = archer_captain_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = archer_captain_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = archer_captain_camp_officer
-								}
-							}
-							order_by = aptitude:archer_captain_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = archer_captain_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = heavy_infantry_captain_camp_officer }
-						can_employ_court_position_type = heavy_infantry_captain_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = heavy_infantry_captain_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = heavy_infantry_captain_camp_officer
-								}
-							}
-							order_by = aptitude:heavy_infantry_captain_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = heavy_infantry_captain_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = light_infantry_captain_camp_officer }
-						can_employ_court_position_type = light_infantry_captain_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = light_infantry_captain_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = light_infantry_captain_camp_officer
-								}
-							}
-							order_by = aptitude:light_infantry_captain_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = light_infantry_captain_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = pike_captain_camp_officer }
-						can_employ_court_position_type = pike_captain_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = pike_captain_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = pike_captain_camp_officer
-								}
-							}
-							order_by = aptitude:pike_captain_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = pike_captain_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = master_of_spoils_camp_officer }
-						can_employ_court_position_type = master_of_spoils_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = master_of_spoils_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = master_of_spoils_camp_officer
-								}
-							}
-							order_by = aptitude:master_of_spoils_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = master_of_spoils_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = laureate_camp_officer }
-						can_employ_court_position_type = laureate_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = laureate_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = laureate_camp_officer
-								}
-							}
-							order_by = aptitude:laureate_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = laureate_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
-						NOT = { employs_court_position = camp_priest_camp_officer }
-						can_employ_court_position_type = camp_priest_camp_officer
-						any_courtier = {
-							would_be_valid_for_court_position = {
-								employer = prev
-								court_position = camp_priest_camp_officer
-							}
-						}
-					}
-				}
-				effect = {
-					story_owner = {
-						ordered_courtier = {
-							limit = {
-								would_be_valid_for_court_position = {
-									employer = prev
-									court_position = camp_priest_camp_officer
-								}
-							}
-							order_by = aptitude:camp_priest_camp_officer
-							save_scope_as = officer
-						}
-						appoint_court_position = {
-							recipient = scope:officer
-							court_position = camp_priest_camp_officer
-						}
-					}
-				}
-			}
-			triggered_effect = {
-				trigger = {
-					story_owner ?= {
-						ep3_adventurer_ai_logic_valid_trigger = yes
 						can_employ_court_position_type = bodyguard_court_position
 						any_courtier = {
 							would_be_valid_for_court_position = {
@@ -1259,17 +413,853 @@
 					}
 				}
 			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = quartermaster_camp_officer }
+						can_employ_court_position_type = quartermaster_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = quartermaster_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = quartermaster_camp_officer
+								}
+							}
+							order_by = aptitude:quartermaster_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = quartermaster_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = armorer_camp_officer }
+						can_employ_court_position_type = armorer_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = armorer_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = armorer_camp_officer
+								}
+							}
+							order_by = aptitude:armorer_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = armorer_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = chief_forager_camp_officer }
+						can_employ_court_position_type = chief_forager_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = chief_forager_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = chief_forager_camp_officer
+								}
+							}
+							order_by = aptitude:chief_forager_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = chief_forager_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = master_thief_camp_officer }
+						can_employ_court_position_type = master_thief_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = master_thief_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = master_thief_camp_officer
+								}
+							}
+							order_by = aptitude:master_thief_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = master_thief_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = head_porter_camp_officer }
+						can_employ_court_position_type = head_porter_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = head_porter_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = head_porter_camp_officer
+								}
+							}
+							order_by = aptitude:head_porter_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = head_porter_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = head_groom_camp_officer }
+						can_employ_court_position_type = head_groom_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = head_groom_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = head_groom_camp_officer
+								}
+							}
+							order_by = aptitude:head_groom_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = head_groom_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = huntperson_camp_officer }
+						can_employ_court_position_type = huntperson_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = huntperson_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = huntperson_camp_officer
+								}
+							}
+							order_by = aptitude:huntperson_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = huntperson_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = kennelperson_camp_officer }
+						can_employ_court_position_type = kennelperson_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = kennelperson_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = kennelperson_camp_officer
+								}
+							}
+							order_by = aptitude:kennelperson_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = kennelperson_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = chief_engineer_camp_officer }
+						can_employ_court_position_type = chief_engineer_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = chief_engineer_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = chief_engineer_camp_officer
+								}
+							}
+							order_by = aptitude:chief_engineer_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = chief_engineer_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = witness_camp_officer }
+						can_employ_court_position_type = witness_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = witness_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = witness_camp_officer
+								}
+							}
+							order_by = aptitude:witness_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = witness_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = person_haggler_camp_officer }
+						can_employ_court_position_type = person_haggler_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = person_haggler_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = person_haggler_camp_officer
+								}
+							}
+							order_by = aptitude:person_haggler_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = person_haggler_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = camp_cook_camp_officer }
+						can_employ_court_position_type = camp_cook_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = camp_cook_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = camp_cook_camp_officer
+								}
+							}
+							order_by = aptitude:camp_cook_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = camp_cook_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = master_bard_camp_officer }
+						can_employ_court_position_type = master_bard_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = master_bard_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = master_bard_camp_officer
+								}
+							}
+							order_by = aptitude:master_bard_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = master_bard_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = master_of_arms_camp_officer }
+						can_employ_court_position_type = master_of_arms_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = master_of_arms_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = master_of_arms_camp_officer
+								}
+							}
+							order_by = aptitude:master_of_arms_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = master_of_arms_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = light_cavalry_captain_camp_officer }
+						can_employ_court_position_type = light_cavalry_captain_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = light_cavalry_captain_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = light_cavalry_captain_camp_officer
+								}
+							}
+							order_by = aptitude:light_cavalry_captain_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = light_cavalry_captain_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = camelry_captain_camp_officer }
+						can_employ_court_position_type = camelry_captain_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = camelry_captain_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = camelry_captain_camp_officer
+								}
+							}
+							order_by = aptitude:camelry_captain_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = camelry_captain_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = elephantry_captain_camp_officer }
+						can_employ_court_position_type = elephantry_captain_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = elephantry_captain_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = elephantry_captain_camp_officer
+								}
+							}
+							order_by = aptitude:elephantry_captain_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = elephantry_captain_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = heavy_cavalry_captain_camp_officer }
+						can_employ_court_position_type = heavy_cavalry_captain_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = heavy_cavalry_captain_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = heavy_cavalry_captain_camp_officer
+								}
+							}
+							order_by = aptitude:heavy_cavalry_captain_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = heavy_cavalry_captain_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = horse_archer_captain_camp_officer }
+						can_employ_court_position_type = horse_archer_captain_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = horse_archer_captain_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = horse_archer_captain_camp_officer
+								}
+							}
+							order_by = aptitude:horse_archer_captain_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = horse_archer_captain_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = archer_captain_camp_officer }
+						can_employ_court_position_type = archer_captain_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = archer_captain_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = archer_captain_camp_officer
+								}
+							}
+							order_by = aptitude:archer_captain_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = archer_captain_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = heavy_infantry_captain_camp_officer }
+						can_employ_court_position_type = heavy_infantry_captain_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = heavy_infantry_captain_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = heavy_infantry_captain_camp_officer
+								}
+							}
+							order_by = aptitude:heavy_infantry_captain_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = heavy_infantry_captain_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = light_infantry_captain_camp_officer }
+						can_employ_court_position_type = light_infantry_captain_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = light_infantry_captain_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = light_infantry_captain_camp_officer
+								}
+							}
+							order_by = aptitude:light_infantry_captain_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = light_infantry_captain_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = pike_captain_camp_officer }
+						can_employ_court_position_type = pike_captain_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = pike_captain_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = pike_captain_camp_officer
+								}
+							}
+							order_by = aptitude:pike_captain_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = pike_captain_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = master_of_spoils_camp_officer }
+						can_employ_court_position_type = master_of_spoils_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = master_of_spoils_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = master_of_spoils_camp_officer
+								}
+							}
+							order_by = aptitude:master_of_spoils_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = master_of_spoils_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = laureate_camp_officer }
+						can_employ_court_position_type = laureate_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = laureate_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = laureate_camp_officer
+								}
+							}
+							order_by = aptitude:laureate_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = laureate_camp_officer
+						}
+					}
+				}
+			}
+			triggered_effect = {
+				trigger = {
+					story_owner ?= {
+						NOT = { employs_court_position = camp_priest_camp_officer }
+						can_employ_court_position_type = camp_priest_camp_officer
+						any_courtier = {
+							would_be_valid_for_court_position = {
+								employer = prev
+								court_position = camp_priest_camp_officer
+							}
+						}
+					}
+				}
+				effect = {
+					story_owner = {
+						ordered_courtier = {
+							limit = {
+								would_be_valid_for_court_position = {
+									employer = prev
+									court_position = camp_priest_camp_officer
+								}
+							}
+							order_by = aptitude:camp_priest_camp_officer
+							save_scope_as = officer
+						}
+						appoint_court_position = {
+							recipient = scope:officer
+							court_position = camp_priest_camp_officer
+						}
+					}
+				}
+			}
 		}
 	}
 	
 	effect_group = {
 		months = { 12 24 }
 		
+		trigger = {
+			story_owner ?= {
+				ep3_adventurer_ai_logic_valid_trigger = yes
+			}
+		}
+		
 		triggered_effect = { # Get Married
 			trigger = {
-				story_owner ?= {
-					ep3_adventurer_ai_logic_valid_trigger = yes
-				}
+				always = yes
 			}
 			effect = {
 				story_owner ?= {
@@ -1363,7 +1353,6 @@
 		triggered_effect = { # Get Children/Grandchildren Married
 			trigger = {
 				story_owner ?= {
-					ep3_adventurer_ai_logic_valid_trigger = yes
 					any_courtier = {
 						is_physically_able_adult = yes
 						OR = {

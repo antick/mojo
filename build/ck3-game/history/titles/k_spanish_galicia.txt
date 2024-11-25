@@ -952,6 +952,7 @@ c_castelo_branco = {
 	}
 	1139.7.29 = {
 		liege = k_portugal
+		government = feudal_government
 	}
 	1190.3.25 = {
 		holder = 142010 # Mendo Gonçales de Sousa

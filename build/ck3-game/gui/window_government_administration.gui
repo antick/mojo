@@ -978,8 +978,10 @@ types GovernmentAdministrationThemes
 							text = ADMIN_WINDOW_THEME_ADMINISTRATION_TYPE_TEXT_ICON
 							max_width = 90
 						}
+
 						text_single = {
 							fontsize = 12
+							fontsize_min = 11
 							visible = "[Title.GetHolder.IsPlayerInteractionShown('give_vassal_directive_interaction')]"
 							text = "[Title.GetHolder.Custom('vassal_directive_icon')]"
 							tooltip = "[Title.GetHolder.Custom('vassal_directive_text')]"

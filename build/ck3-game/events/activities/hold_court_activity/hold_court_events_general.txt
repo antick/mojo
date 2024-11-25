@@ -1863,7 +1863,7 @@ hold_court.3030 = {
 		roles = {
 			scope:different_culture_peasant = {
 				group = petitioners_group
-				animation = bed
+				animation = beg
 			}
 		}
 	}
@@ -7515,6 +7515,9 @@ hold_court.6080 = {
 		}
 		scope:6080_county = {
 			random_county_province = {
+				limit = {
+					has_holding = no
+				}
 				save_scope_as = 6080_province
 			}
 		}
@@ -19009,7 +19012,12 @@ hold_court.8120 = {
 		if = {
 			limit = {
 				NOT = {
-					faith = { has_doctrine = tenet_tax_nonbelievers }
+					faith = {
+						OR = {
+							has_doctrine = tenet_tax_nonbelievers
+							has_doctrine = special_doctrine_jizya
+						}
+					}
 				}
 			}
 			custom_tooltip = hold_court.8120.c.tt_tenet
@@ -19035,7 +19043,12 @@ hold_court.8120 = {
 		scope:bishop = {
 			if = {
 				limit = {
-					faith = { has_doctrine = tenet_tax_nonbelievers }
+					faith = {
+						OR = {
+							has_doctrine = tenet_tax_nonbelievers
+							has_doctrine = special_doctrine_jizya
+						}
+					}
 				}
 				add_opinion = {
 					modifier = pious_opinion
@@ -19068,7 +19081,12 @@ hold_court.8120 = {
 			modifier = {	#Weight up for stress.
 				add = 30
 				NOT = {
-					faith = { has_doctrine = tenet_tax_nonbelievers }
+					faith = {
+						OR = {
+							has_doctrine = tenet_tax_nonbelievers
+							has_doctrine = special_doctrine_jizya
+						}
+					}
 				}
 				OR = {
 					has_trait = cynical
@@ -19078,7 +19096,12 @@ hold_court.8120 = {
 			modifier = {	#Weight down for stress.
 				add = -30
 				NOT = {
-					faith = { has_doctrine = tenet_tax_nonbelievers }
+					faith = {
+						OR = {
+							has_doctrine = tenet_tax_nonbelievers
+							has_doctrine = special_doctrine_jizya
+						}
+					}
 				}
 				OR = {
 					has_trait = honest
@@ -19087,7 +19110,12 @@ hold_court.8120 = {
 			}
 			modifier = {	#Weight down for stress.
 				add = -15
-				faith = { has_doctrine = tenet_tax_nonbelievers }
+				faith = {
+					OR = {
+						has_doctrine = tenet_tax_nonbelievers
+						has_doctrine = special_doctrine_jizya
+					}
+				}
 				has_trait = cynical
 			}
 			modifier = {	#Weight down for stress.
@@ -19961,7 +19989,7 @@ hold_court.8142 = { # Event on puppy adoption
 	override_background = { reference = throne_room }
 	left_portrait = {
 		character = scope:pup_house_ruler
-		animation = happy
+		animation = happiness
 	}
 
 	immediate = {

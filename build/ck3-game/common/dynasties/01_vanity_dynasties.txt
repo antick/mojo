@@ -651,6 +651,7 @@ vanity_bean = {
 vanity_dzediti = {
 	name = dynn_dzediti
 	culture = "vlach"
+	motto = dynn_dzediti_motto
 }
 
 vanity_passoni = {
@@ -742,6 +743,69 @@ vanity_bure = {
 	name = dynn_Bure
 	culture = "swedish"
 	motto = dynn_bure_motto
+}
+
+vanity_ronnback = {
+	name = dynn_Ronnback
+	culture = "swedish"
+	motto = dynn_ronnback_motto
+}
+
+vanity_bjurman = {
+	name = dynn_Bjurman
+	culture = "swedish"
+	motto = dynn_bjurman_motto
+}
+
+vanity_lager = {
+	name = dynn_Lager
+	culture = "baranis"
+}
+
+vanity_garcia = {
+	name = dynn_Garcia
+	culture = "castilian"
+}
+
+vanity_ostlund = {
+	name = dynn_Ostlund
+	culture = "swedish"
+}
+
+vanity_boseh = {
+	name = dynn_BoseH
+	culture = "swedish"
+}
+
+vanity_frostewarn = {
+	name = dynn_Frostewarn
+	culture = "swedish"
+	motto = dynn_Frostewarn_motto
+}
+
+vanity_lindkvist = {
+	name = dynn_Lindkvist
+	culture = "polish"
+}
+
+vanity_ender = {
+	name = dynn_Ender
+	culture = "polish"
+}
+
+vanity_mutel = {
+	name = dynn_Mutel
+	culture = "french"
+}
+
+vanity_kopparvall = {
+	name = dynn_Kopparvall
+	culture = "swedish"
+}
+
+vanity_wessman = {
+	name = dynn_Wessman
+	culture = "franconian"
 }
 
 vanity_holmqvist = {

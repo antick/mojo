@@ -63,6 +63,31 @@ employ_character_as_position_in_current_scope_court_effect = {
 	}
 }
 
+# hire scope as position but for laamps
+employ_character_as_position_in_current_scope_camp_effect = {
+	save_scope_as = current_scope
+	if = {
+		limit = {
+			can_appoint_char_to_court_position = {
+				CHAR = $CHARACTER$
+				COURT_POS = $POSITION$_camp_officer
+			}
+		}
+		#If character isn't already in your court, but a wandering guest, you recruit them
+		if = {
+			limit = {
+				$CHARACTER$ = { is_pool_guest = yes }
+			}
+			add_courtier = $CHARACTER$
+		}
+		camp_officer_grant_effect = {
+			EMPLOYER = scope:current_scope
+			POS = $POSITION$
+			CANDIDATE = $CHARACTER$
+		}
+	}
+}
+
 # Hire scope in any available position. You must have checked that one exists first!, for example by using can_be_employed_in_any_court_position_trigger!
 employ_character_as_any_free_position_effect = {
 	save_scope_as = hiring_character
@@ -1049,5 +1074,37 @@ court_event_character_flag_effect = {
 	add_character_flag = {
 		flag = in_court_event
 		days = 180
+	}
+}
+
+# Petition Liege Variable Cleanup
+petition_liege_variable_cleanup_effect = {
+	if = {
+		limit = { has_variable = petition_liege_scope }
+		remove_variable = petition_liege_scope
+	}
+	if = {
+		limit = { has_variable = petition_type }
+		remove_variable = petition_type
+	}
+	if = {
+		limit = { has_variable = petition_liege_council_first }
+		remove_variable = petition_liege_council_first
+	}
+	if = {
+		limit = { has_variable = petition_liege_council_second }
+		remove_variable = petition_liege_council_second
+	}
+	if = {
+		limit = { has_character_flag = petition_liege_character_flag }
+		remove_character_flag = petition_liege_character_flag
+	}
+	if = {
+		limit = { has_variable_list = available_petitions }
+		clear_variable_list = available_petitions
+	}
+	if = {
+		limit = { has_variable_list = petitions_to_show }
+		clear_variable_list = petitions_to_show
 	}
 }

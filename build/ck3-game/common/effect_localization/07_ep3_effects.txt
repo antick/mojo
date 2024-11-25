@@ -42,6 +42,21 @@ change_influence_level = {
 	global_past_neg = LOST_INFLUENCE_LEVEL_EFFECT
 }
 
+change_influence_no_experience = {
+	first = I_GAIN_INFLUENCE_EFFECT
+	first_neg = I_LOSE_INFLUENCE_EFFECT
+	third = THEY_GAIN_INFLUENCE_EFFECT
+	third_neg = THEY_LOSE_INFLUENCE_EFFECT
+	global = GAIN_INFLUENCE_EFFECT
+	global_neg = LOSE_INFLUENCE_EFFECT
+	first_past = I_GAINED_INFLUENCE_EFFECT
+	first_past_neg = I_LOST_INFLUENCE_EFFECT
+	third_past = THEY_GAINED_INFLUENCE_EFFECT
+	third_past_neg = THEY_LOST_INFLUENCE_EFFECT
+	global_past = GAINED_INFLUENCE_EFFECT
+	global_past_neg = LOST_INFLUENCE_EFFECT
+}
+
 create_task_contract = {
 	global = GLOBAL_CREATE_TASK_CONTRACT
 }
@@ -109,6 +124,34 @@ deplete_army_by_percentage = {
 	global = ARMY_IS_DEPLETED_GLOBAL
 	third_past = ARMY_WAS_DEPLETED
 	global_past = ARMY_WAS_DEPLETED_GLOBAL
+}
+
+add_supply = {
+	global = ARMY_ADD_SUPPLY
+	global_past = ARMY_ADDED_SUPPLY
+	third = ARMY_ADD_SUPPLY
+	third_past = ARMY_ADDED_SUPPLY
+}
+
+subtract_supply = {
+	global = ARMY_SUBTRACT_SUPPLY
+	global_past = ARMY_SUBTRACTED_SUPPLY
+	third = ARMY_SUBTRACT_SUPPLY
+	third_past = ARMY_SUBTRACTED_SUPPLY
+}
+
+clear_supply = {
+	global = ARMY_CLEAR_SUPPLY
+	global_past = ARMY_CLEARED_SUPPLY
+	third = ARMY_CLEAR_SUPPLY
+	third_past = ARMY_CLEARED_SUPPLY
+}
+
+refill_supply = {
+	global = ARMY_REFILL_SUPPLY
+	global_past = ARMY_REFILLED_SUPPLY
+	third = ARMY_REFILL_SUPPLY
+	third_past = ARMY_REFILLED_SUPPLY
 }
 
 execute_prisoner_interaction_tt_co_emperor_usurpation = {

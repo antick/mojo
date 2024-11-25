@@ -73,7 +73,7 @@ governance_1042_domineering_guild_modifier = {
 }
 
 governance_1051_independent_farmlands_modifier = {
-	icon = county_modifier_development_positive
+	icon = county_modifier_development_mixed
 	monthly_county_control_growth_factor = -0.50
 	development_growth = 0.25
 }

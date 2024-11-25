@@ -14,6 +14,9 @@
 				target = flag:form_portugal_decision
 			}
 		}
+		title:k_portugal = {
+			is_title_created = no
+		}
 	}
 
 	is_valid = {

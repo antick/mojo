@@ -1653,6 +1653,17 @@ ep2_wedding.0998 = {
 			}
 			remove_variable = promised_grand_wedding_by
 		}
+		if = {
+			limit = {
+				exists = scope:spouse_1
+				exists = scope:spouse_2
+			}
+			show_as_tooltip = {
+				scope:spouse_1 = {
+					break_betrothal = scope:spouse_2
+				}
+			}
+		}
 	}
 
 	option = {
@@ -2058,11 +2069,6 @@ ep2_wedding.1010 = {
 	}
 
 	cooldown = { years = 5 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		#DLC check.
@@ -2505,11 +2511,6 @@ ep2_wedding.1080 = {
 	lower_center_portrait = scope:matchmaking_2
 
 	cooldown = { years = 5 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		#DLC check.
@@ -6051,11 +6052,6 @@ ep2_wedding.1150 = {
 
 	cooldown = { years = 1 }
 
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
-
 	trigger = {
 		#DLC check.
 		has_ep2_dlc_trigger = yes
@@ -6356,11 +6352,6 @@ ep2_wedding.1160 = {
 	lower_right_portrait = scope:host
 
 	cooldown = { years = 1 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		#DLC check.
@@ -8162,11 +8153,6 @@ ep2_wedding.1210 = {
 	}
 
 	cooldown = { years = 1 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		#DLC check.
@@ -10772,11 +10758,6 @@ ep2_wedding.1090 = {
 
 	cooldown = { years = 5 }
 
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
-
 	trigger = {
 		#DLC check.
 		has_ep2_dlc_trigger = yes
@@ -10879,7 +10860,7 @@ ep2_wedding.1090 = {
 											}
 										}
 									}
-									add_prestige = minor_prestige_gain
+									root = { add_prestige = minor_prestige_gain }
 								}
 							}
 						}
@@ -12652,10 +12633,12 @@ ep2_wedding.1300 = {
 	left_portrait = {
 		character = root
 		animation = thinking
+		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:spouse_2
 		animation = worry
+		outfit_tags = { no_clothes }
 	}
 
 	cooldown = { years = 10 }
@@ -13352,10 +13335,12 @@ ep2_wedding.1301 = { #Spouse response
 	left_portrait = {
 		character = scope:spouse_1
 		animation = thinking
+		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = root
 		animation = worry
+		outfit_tags = { no_clothes }
 	}
 
 	option = { #I want to be worthy of your love...
@@ -16297,11 +16282,6 @@ ep2_wedding.2000 = {
 
 	cooldown = { years = 5 }
 
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
-
 	trigger = {
 		has_ep2_dlc_trigger = yes
 		has_activity_intent = diplomatic_intent
@@ -17619,10 +17599,12 @@ ep2_wedding.3030 = {
 			animation = flirtation_left
 		}
 		animation = love
+		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:my_spouse
 		animation = flirtation
+		outfit_tags = { no_clothes }
 	}
 	artifact = {
 		target = scope:love_memento
@@ -18316,11 +18298,6 @@ ep2_wedding.3050 = {
 	}
 
 	cooldown = { years = 5 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		#DLC check.
@@ -19199,7 +19176,6 @@ ep2_wedding.3300 = {
 	theme = wedding_night_activity
 	left_portrait = {
 		character = root
-		outfit_tags = { nightgown }
 		triggered_animation = {
 			trigger = {
 				OR = {
@@ -19219,10 +19195,10 @@ ep2_wedding.3300 = {
 			animation = flirtation_left
 		}
 		animation = idle
+		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:my_spouse
-		outfit_tags = { nightgown }
 		triggered_animation = {
 			trigger = {
 				OR = {
@@ -19242,6 +19218,7 @@ ep2_wedding.3300 = {
 			animation = flirtation
 		}
 		animation = idle
+		outfit_tags = { no_clothes }
 	}
 	lower_left_portrait = scope:bedding_witness_1
 	lower_center_portrait = scope:bedding_witness_2
@@ -22631,11 +22608,6 @@ ep2_wedding.4000 = {
 
 	cooldown = { years = 5 }
 
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
-
 	trigger = {
 		#DLC check.
 		has_ep2_dlc_trigger = yes
@@ -22876,11 +22848,6 @@ ep2_wedding.2010 = {
 	}
 
 	cooldown = { years = 5 }
-
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		this = scope:host #you're the host

@@ -6665,6 +6665,7 @@ pilgrimage.3003 = {
 		animation = disbelief
 	}
 	immediate = {
+		wayfarer_storyteller_fame_effect = { VALUE = roaming_reward_fame_small }
 		scope:naked_preacher = { set_character_faith = root.faith }
 		add_learning_lifestyle_xp = major_lifestyle_xp
 		add_piety = medium_piety_gain
@@ -6714,6 +6715,7 @@ pilgrimage.3004 = {
 		is_location_valid_for_travel_event_on_land = yes
 	}
 	immediate = {
+		wayfarer_storyteller_fame_effect = { VALUE = roaming_reward_fame_small }
 		random_dummy_gender_clergy_effect = yes
 		create_character = {
 			age = 40
@@ -10291,7 +10293,7 @@ pilgrimage.6531 = {
 			}
 			animation = thinking
 		}
-		animation = disbelief
+		animation = prayer
 	}
 	right_portrait = {
 		character = scope:local_guide
@@ -11007,10 +11009,6 @@ pilgrimage.6750 = {
 	left_portrait = {
 		character = root
 		animation = beg
-	}
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
 	}
 	#We don't really need a cooldown since it's once per character
 	trigger = {
@@ -11741,6 +11739,7 @@ pilgrimage.6780 = {
 					location = root.location
 					is_physically_able_adult = yes
 					is_available = yes
+					is_landed = no
 				}
 				any_courtier_or_guest = {
 					is_physically_able_adult = yes
@@ -11759,6 +11758,7 @@ pilgrimage.6780 = {
 						location = root.location
 						is_physically_able_adult = yes
 						is_available = yes
+						is_landed = no
 					}
 				}
 			}
@@ -11768,6 +11768,7 @@ pilgrimage.6780 = {
 						location = root.location
 						is_physically_able_adult = yes
 						is_available = yes
+						is_landed = no
 					}
 					save_scope_as = stolen_courtier
 				}
@@ -12798,7 +12799,7 @@ pilgrimage.6820 = {
 					create_artifact = {
 						name = pilgrim_guide_artifact
 						description = pilgrim_guide_artifact_desc
-						type = miscellaneous
+						type = journal
 						visuals = indian_book
 						modifier = artifact_monthly_piety_2_modifier
 						modifier = artifact_diplomacy_1_modifier
@@ -12809,7 +12810,7 @@ pilgrimage.6820 = {
 					create_artifact = {
 						name = pilgrim_guide_artifact
 						description = pilgrim_guide_artifact_desc
-						type = miscellaneous
+						type = journal
 						visuals = book
 						modifier = artifact_monthly_piety_2_modifier
 						modifier = artifact_diplomacy_1_modifier
@@ -12972,10 +12973,6 @@ pilgrimage.6830 = {
 		position = lower_center_portrait
 	}
 	cooldown = { years = 1 }
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 	trigger = {
 		has_activity_intent = reflection_intent
 		NOT = { religion = religion:tengrism_religion }
@@ -13872,6 +13869,17 @@ pilgrimage.9001 = {
 				}
 			}
 			custom_tooltip = cultural_ambassador_option.tt
+		}
+		# Allocates a tiny bit of Horse XP if you have the Hastiluder trait
+		if = {
+			limit = {
+				has_trait = tourney_participant
+			}
+			add_trait_xp = {
+				trait = tourney_participant
+				track = horse
+				value = tournament_hastiludes_xp_gain_miniscule_value
+			}
 		}
 	}
 	option = {

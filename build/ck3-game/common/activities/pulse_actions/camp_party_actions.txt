@@ -372,6 +372,10 @@ apa_guest_of_honor_impressed = {
 			name = apa_guest_of_honor_impressed
 			value = yes
 		}
+
+		scope:host = {
+			save_scope_as = root_scope
+		}
 		
 		special_guest:camp_party_honorary_guest = {
 			save_scope_as = first

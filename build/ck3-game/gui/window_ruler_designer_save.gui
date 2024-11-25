@@ -220,6 +220,7 @@ types SaveLoadRulers
 						text_single = {
 							name = "filename"
 							text = "[SaveRulerItem.GetFilename]"
+							elide = right
 							max_width = 250
 							layoutpolicy_horizontal = growing
 							default_format = "#high;bold"
@@ -252,6 +253,8 @@ types SaveLoadRulers
 							text_single = {
 								name = "customisation_points"
 								text = "RULER_DESIGNER_SAVE_LOAD_USED_POINTS_LABEL"
+								elide = right
+								layoutpolicy_horizontal = expanding
 							}
 
 							expand = {}

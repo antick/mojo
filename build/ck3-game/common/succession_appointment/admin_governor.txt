@@ -414,42 +414,65 @@
 			#ADJUST BASED ON GENDER LAW - MUST GO AT THE END
 			if = {
 				limit = {
-					scope:title.holder ?= { has_realm_law = male_preference_law }
+					scope:title.holder.top_liege ?= { has_realm_law = male_preference_law }
 					is_female = yes
 				}
 				multiply = {
-					value = 0.33
-					desc = male_preference_law
+					value = {
+						value = 1
+						subtract = appointment_non_preferred_gender_penalty_value
+					}
+					desc = appointment_male_preference_desc
 				}
 			}
 			else_if = {
 				limit = {
-					scope:title.holder ?= { has_realm_law = male_only_law }
+					scope:title.holder.top_liege ?= { has_realm_law = male_only_law }
 					is_female = yes
 				}
 				multiply = {
-					value = 0
-					desc = male_only_law
+					value = {
+						value = 1
+						subtract = appointment_opposite_gender_penalty_value
+					}
+					desc = appointment_male_only_desc
 				}
 			}
 			else_if = {
 				limit = {
-					scope:title.holder ?= { has_realm_law = female_preference_law }
+					scope:title.holder.top_liege ?= { has_realm_law = female_preference_law }
 					is_female = no
 				}
 				multiply = {
-					value = 0.33
-					desc = female_preference_law
+					value = {
+						value = 1
+						subtract = appointment_non_preferred_gender_penalty_value
+					}
+					desc = appointment_female_preference_desc
 				}
 			}
 			else_if = {
 				limit = {
-					scope:title.holder ?= { has_realm_law = female_only_law }
+					scope:title.holder.top_liege ?= { has_realm_law = female_only_law }
 					is_female = no
 				}
 				multiply = {
+					value = {
+						value = 1
+						subtract = appointment_opposite_gender_penalty_value
+					}
+					desc = appointment_female_only_desc
+				}
+			}
+			
+			# We remove all score from the emperor, to make sure you don't inherit governorships needlessly
+			if = {
+				limit = {
+					is_independent_ruler = yes
+				}
+				multiply = {
 					value = 0
-					desc = female_only_law
+					desc = appointment_is_top_liege
 				}
 			}
 		}

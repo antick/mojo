@@ -3176,7 +3176,6 @@
 	}
 	1137.8.1 = {
 		give_nickname = nick_the_great
-		dynasty = 86 #Capetian house of Dreux
 	}
 	1140.1.1 = {
 		add_spouse = 91133 #Agnès de Garlande

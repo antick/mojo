@@ -49,6 +49,18 @@ head_of_faith_male = {
 	}
 }
 
+head_of_faith_pope = {
+	type = character
+	gender = male
+	special = head_of_faith
+	priority = 1
+	flavourization_rules = { 
+		top_liege = no
+	}
+	governments = { theocracy_government }
+	faith = catholic
+}
+
 head_of_faith_female = {
 	type = character
 	gender = female
@@ -4108,7 +4120,7 @@ kingdom_feudal_muslim_arabic_group = {
 	type = title
 	tier = kingdom
 	priority = 48
-	governments = { feudal_government clan_government tribal_government administrative_government }
+	governments = { feudal_government clan_government tribal_government }
 	heritages = { heritage_arabic }
 	religions = { islam_religion }
 }
@@ -5827,6 +5839,10 @@ duchy_feudal_dravidian_group = {
 	priority = 27
 	governments = { feudal_government clan_government tribal_government administrative_government }
 	heritages = { heritage_dravidian heritage_indo_aryan }
+
+	flavourization_rules = {
+		ignore_top_liege_government = yes
+	}
 }
 duke_feudal_muslim_male_dravidian_group = {
 	type = character
@@ -7768,32 +7784,34 @@ duke_administrative_female_byzantine_group = {
 		spouse_takes_title = no
 	}
 }
-#king_administrative_male = {
-#	type = character
-#	gender = male
-#	special = holder
-#	tier = kingdom
-#	priority = 74
-#	governments = { administrative_government }
-#
-#	flavourization_rules = {
-#		top_liege = no
-#		spouse_takes_title = no
-#	}
-#}
-#king_administrative_female = {
-#	type = character
-#	gender = female
-#	special = holder
-#	tier = kingdom
-#	priority = 73
-#	governments = { administrative_government }
-#
-#	flavourization_rules = {
-#		top_liege = no
-#		spouse_takes_title = no
-#	}
-#}
+king_administrative_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 74
+	governments = { administrative_government }
+
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+		only_vassals = yes
+	}
+}
+king_administrative_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 73
+	governments = { administrative_government }
+
+	flavourization_rules = {
+		top_liege = no
+		spouse_takes_title = no
+		only_vassals = yes
+	}
+}
 king_administrative_male_byzantine_group = {
 	type = character
 	gender = male
@@ -7850,30 +7868,30 @@ king_administrative_female_roman = {
 		spouse_takes_title = no
 	}
 }
-#king_administrative_independent_male = {
-#	type = character
-#	gender = male
-#	special = holder
-#	tier = kingdom
-#	priority = 106
-#	governments = { administrative_government }
-#
-#	flavourization_rules = {
-#		only_independent = yes
-#	}
-#}
-#king_administrative_independent_female = {
-#	type = character
-#	gender = female
-#	special = holder
-#	tier = kingdom
-#	priority = 106
-#	governments = { administrative_government }
-#
-#	flavourization_rules = {
-#		only_independent = yes
-#	}
-#}
+king_administrative_independent_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 106
+	governments = { administrative_government }
+
+	flavourization_rules = {
+		only_independent = yes
+	}
+}
+king_administrative_independent_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 106
+	governments = { administrative_government }
+
+	flavourization_rules = {
+		only_independent = yes
+	}
+}
 king_administrative_independent_male_byzantine_group = {
 	type = character
 	gender = male
@@ -7974,6 +7992,7 @@ duke_landless_adventurer_male_camp = {
 	gender = male
 	special = holder
 	tier = duchy
+	domicile_type = camp
 	priority = 25
 	governments = { landless_adventurer_government }
 
@@ -7987,6 +8006,7 @@ duke_landless_adventurer_female_camp = {
 	gender = female
 	special = holder
 	tier = duchy
+	domicile_type = camp
 	priority = 25
 	governments = { landless_adventurer_government }
 
@@ -8084,6 +8104,7 @@ duke_landless_adventurer_camp_mercenaries = {
 	type = character
 	special = holder
 	tier = duchy
+	domicile_type = camp
 	priority = 31
 	governments = { landless_adventurer_government }
 	flag = flavourise_camp_purpose_mercenaries
@@ -8097,6 +8118,7 @@ duke_landless_adventurer_camp_wanderers = {
 	type = character
 	special = holder
 	tier = duchy
+	domicile_type = camp
 	priority = 31
 	governments = { landless_adventurer_government }
 	flag = flavourise_camp_purpose_wanderers
@@ -8110,6 +8132,7 @@ duke_landless_adventurer_camp_scholars = {
 	type = character
 	special = holder
 	tier = duchy
+	domicile_type = camp
 	priority = 31
 	governments = { landless_adventurer_government }
 	flag = flavourise_camp_purpose_scholars
@@ -8123,6 +8146,7 @@ duke_landless_adventurer_camp_explorers = {
 	type = character
 	special = holder
 	tier = duchy
+	domicile_type = camp
 	priority = 31
 	governments = { landless_adventurer_government }
 	flag = flavourise_camp_purpose_explorers
@@ -8136,6 +8160,7 @@ duke_landless_adventurer_camp_brigands = {
 	type = character
 	special = holder
 	tier = duchy
+	domicile_type = camp
 	priority = 31
 	governments = { landless_adventurer_government }
 	flag = flavourise_camp_purpose_brigands
@@ -8149,6 +8174,7 @@ duke_landless_adventurer_camp_legitimists = {
 	type = character
 	special = holder
 	tier = duchy
+	domicile_type = camp
 	priority = 31
 	governments = { landless_adventurer_government }
 	flag = flavourise_camp_purpose_legitimists

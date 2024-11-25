@@ -188,7 +188,7 @@ suspicious_of_furniture = {
 }
 
 playing_with_miniatures = {
-	icon = prestige_negative
+	icon = prestige_mixed
 	monthly_prestige = -0.1
 	monthly_income_mult = -0.01
 	learning = 2
@@ -197,7 +197,7 @@ playing_with_miniatures = {
 
 diligent_student = {
 	icon = learning_positive
-	learning = 1
+	monthly_lifestyle_xp_gain_mult = 0.15
 }
 
 recently_tortured = {

@@ -309,7 +309,15 @@ saved_contribution_value = {
 		}
 	}
 	max = 2000
-	min = 100	
+	min = 100
+	if = {
+		limit = {
+			scope:laamp_temp ?= {
+				has_character_flag = joined_as_mercenary
+			}
+		}
+		value = 1
+	}
 }
 
 ##################################################
@@ -607,6 +615,7 @@ struggle_iberia_ending_ending_decision_foreign_realm_total_value = {
 			limit = {
 				NOT = { this = root }
 				is_independent_ruler = yes
+				is_landless_adventurer = no
 				primary_title = { is_holy_order = no }
 				primary_title = { is_mercenary_company = no }
 			}
@@ -737,6 +746,7 @@ struggle_iberia_ending_compromise_decision_opinion_counter_value = {
 				is_independent_ruler = yes
 				primary_title = { is_holy_order = no }
 				primary_title = { is_mercenary_company = no }
+				is_landless_adventurer = no
 				save_temporary_scope_as = this_character
 				OR = {
 					root = { has_strong_hook = scope:this_character }
@@ -888,6 +898,7 @@ struggle_iberia_ending_conciliation_decision_alliance_counter_value = {
 			limit = {
 				NOT = { this = root }
 				is_independent_ruler = yes
+				is_landless_adventurer = no
 				primary_title = { is_holy_order = no }
 				primary_title = { is_mercenary_company = no }
 				is_allied_to = root

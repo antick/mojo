@@ -30,9 +30,10 @@ force_join_faction_interaction = {
 					OR = {
 						has_strong_usable_hook = scope:recipient
 						AND = {
-							influence >= scope:actor.monumental_influence_value
+							influence >= { value = scope:actor.monumental_influence_value multiply = 2 }
 							scope:recipient ?= {
 								NOT = { opinion = { target = scope:actor value <= -50 } }
+								NOT = { opinion = { target = scope:recipient.liege value >= 50 } }
 							}
 						}
 					}
@@ -115,10 +116,11 @@ force_join_faction_interaction = {
 			scope:actor = { government_allows = administrative }
 			scope:actor.top_liege ?= { government_allows = administrative }
 		}
-		is_valid = {
-			scope:actor ?= { influence >= scope:actor.monumental_influence_value }
+		is_valid = { # Convincing someone with influence is not available if they hate you or love the liege
+			scope:actor ?= { influence >= { value = scope:actor.monumental_influence_value multiply = 2 } }
 			scope:recipient ?= {
 				NOT = { opinion = { target = scope:actor value <= -50 } }
+				NOT = { opinion = { target = scope:recipient.liege value >= 50 } }
 			}
 		}
 		flag = influence	
@@ -136,6 +138,9 @@ force_join_faction_interaction = {
 	ai_potential = {
 		is_independent_ruler = no
 		is_a_faction_member = yes
+		
+		# Only force others to join a faction if you joined by your own free will
+		is_forced_into_faction = no
 	}
 	
 	ai_will_do = {

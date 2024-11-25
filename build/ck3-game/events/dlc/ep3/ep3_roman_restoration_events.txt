@@ -59,6 +59,14 @@ ep3_roman_restoration.0100 = {
 		custom_tooltip = ep3_roman_restoration.hard_mode
 		custom_tooltip = ep3_roman_restoration.end_hard_mode
 		custom_tooltip = ep3_roman_restoration.invasion_cb
+		every_held_title = {
+			limit = {
+				is_head_of_faith = yes
+			}
+			root = {
+				destroy_title = prev
+			}
+		}
 		set_character_faith = faith:hellenic_pagan 
 		primary_title = { set_state_faith = faith:hellenic_pagan }
 		every_held_title = {
@@ -82,20 +90,20 @@ ep3_roman_restoration.0100 = {
 			text = uses_custom_caesar_flavourization_tt
 			set_variable = uses_custom_caesar_flavourization
 		}
-	}
-
-	option = { # Easy Mode
-		name = ep3_roman_restoration.0100.b
-		custom_tooltip = ep3_roman_restoration.easy_mode
 		if = {
 			limit = {
 				any_owned_story = { story_type = ep3_story_cycle_restoring_rome }
 			}
 			random_owned_story = {
 				limit = { story_type = ep3_story_cycle_restoring_rome }
-				end_story = yes
+				set_variable = roman_empire_hard_mode
 			}
 		}
+	}
+
+	option = { # Easy Mode
+		name = ep3_roman_restoration.0100.b
+		custom_tooltip = ep3_roman_restoration.easy_mode
 	}
 
 	after = {

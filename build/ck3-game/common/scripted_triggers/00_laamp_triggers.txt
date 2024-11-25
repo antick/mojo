@@ -52,7 +52,7 @@ any_laamp_portion_at_sea_trigger = {
 }
 
 character_is_valid_for_harrying_of_the_north_trigger = {
-	title:k_england.holder = { owns_story_of_type = story_cycle_harrying_of_the_north }
+	title:k_england.holder ?= { owns_story_of_type = story_cycle_harrying_of_the_north }
 	trigger_if = {
 		limit = { is_ruler = yes }
 		OR = {
@@ -131,17 +131,22 @@ disable_interaction_for_hasan_trigger = {
 	}
 }
 
+laamp_request_likely_marriable_woman_trigger = {
+	is_female = yes
+	is_adult = yes
+	can_marry_trigger = yes
+}
+
+laamp_request_likely_marriable_man_trigger = {
+	is_male = yes
+	is_adult = yes
+	can_marry_trigger = yes
+}
+
 ##################################################
 # Transition Triggers
 
 is_valid_for_laampdom = {
-	is_adult = yes # Old enough to venture forth
-	trigger_if = {
-		limit = {
-			NOT = { exists = scope:allow_imprisoned_landless }
-		}
-		is_imprisoned = no # Must be free
-	}
 	custom_tooltip = {
 		text = adventurer_not_nf_head_trigger_tt
 		NOT = {
@@ -152,6 +157,13 @@ is_valid_for_laampdom = {
 	is_landless_ruler = no # Admin gov vassals should not become laamps
 	trigger_if = {
 		limit = { is_ai = yes }
+		trigger_if = {
+			limit = {
+				NOT = { exists = scope:allow_imprisoned_landless }
+			}
+			is_imprisoned = no # Must be free
+		}
+		is_adult = yes # Old enough to venture forth
 		age < 60 # Young enough to venture forth
 		health >= fine_health # Healthy enough to venture forth
 		OR = {

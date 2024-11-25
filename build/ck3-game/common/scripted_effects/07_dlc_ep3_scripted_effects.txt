@@ -540,6 +540,7 @@ create_landless_adventurer_title_effect = {
 			}
 		}
 		trigger_event = { id = misc.0001 days = 1 }
+		local_arbitration_boon_change_purpose_effect = yes
 	}
 	add_to_global_variable_list = {
 		name = laamps_tally
@@ -989,6 +990,7 @@ ep3_become_landed_transfer_effect = {
 		## Administrative.
 		if = {
 			limit = {
+				scope:new_primary_title = { tier > tier_duchy }
 				OR = {
 					scope:new_liege ?= { government_has_flag = government_is_administrative }
 					scope:old_government ?= flag:admin
@@ -999,10 +1001,13 @@ ep3_become_landed_transfer_effect = {
 		## Clan.
 		else_if = {
 			limit = {
-				ep3_is_clan_inclined_trigger = yes
 				OR = {
 					scope:new_liege ?= { government_has_flag = government_is_clan }
 					scope:old_government ?= flag:clan
+					AND = {
+						ep3_is_clan_inclined_trigger = yes
+						is_independent_ruler = yes
+					}
 				}
 			}
 			change_government = clan_government
@@ -2080,178 +2085,197 @@ adventurer_realm_destabilisation_list_effect = {
 								}
 							}
 						}
-						OR = {
-							primary_title.duchy ?= scope:title
-							primary_title.kingdom ?= scope:title
-							primary_title.empire ?= scope:title
+						any_held_title = {
+							target_is_de_jure_liege_or_above = scope:title
+						}
+					}
+					trigger_if = {
+						limit = {
+							government_allows = administrative
+						}
+						scope:title = {
+							OR = {
+								AND = {
+									scope:ruler.primary_title.tier = tier_kingdom
+									tier < tier_kingdom
+								}
+								tier < tier_empire
+							}
 						}
 					}
 				}
-				# Non-de jure automatically become independent
-				if = {
-					limit = {
-						NOR = {
-							primary_title.duchy ?= scope:title
-							primary_title.kingdom ?= scope:title
-							primary_title.empire ?= scope:title
+				# Calculate how likely are they to not become your vassal
+				random = {
+					chance = 0
+					### FAITH/CULTURE
+					modifier = { # Cultural acceptance differences
+						add = {
+							value = "culture.cultural_acceptance(scope:adventurer.culture)"
+							subtract = 100
+							abs = yes
+							divide = 5
+						}
+						culture = {
+							this != scope:adventurer.culture
+							cultural_acceptance = {
+								target = scope:adventurer.culture
+								value < 50
+							}
+							OR = {
+								this = scope:ruler.culture
+								"cultural_acceptance(scope:ruler.culture)" > "cultural_acceptance(scope:adventurer.culture)"
+							}
 						}
 					}
-					add_to_list = independent_vassals
-				}
-				# De jure have a chance to become independent
-				else = {
-					random = {
-						chance = 0
-						### FAITH/CULTURE
-						modifier = { # Cultural acceptance differences
-							add = {
-								value = "culture.cultural_acceptance(scope:adventurer.culture)"
-								subtract = 100
-								abs = yes
-								divide = 5
-							}
-							culture = {
-								this != scope:adventurer.culture
-								cultural_acceptance = {
-									target = scope:adventurer.culture
-									value < 50
-								}
-								OR = {
-									this = scope:ruler.culture
-									"cultural_acceptance(scope:ruler.culture)" > "cultural_acceptance(scope:adventurer.culture)"
-								}
-							}
+					modifier = { # Zealous of other faiths more likely
+						add = {
+							value = ai_zeal
+							multiply = 0.15
+							multiply = "scope:vassal_temp.faith.faith_hostility_level(scope:adventurer.faith)"
+							max = 25
 						}
-						modifier = { # Zealous of other faiths more likely
-							add = {
-								value = ai_zeal
-								multiply = 0.15
-								multiply = "scope:vassal_temp.faith.faith_hostility_level(scope:adventurer.faith)"
-								max = 25
-							}
-							ai_zeal > low_positive_zeal
-							faith = {
-								this != scope:adventurer.faith
-								"faith_hostility_level(scope:adventurer.faith)" > 0
-							}
+						ai_zeal > low_positive_zeal
+						faith = {
+							this != scope:adventurer.faith
+							"faith_hostility_level(scope:adventurer.faith)" > 0
 						}
-						### DISTANCE
-						modifier = { # Distant vassals more likely
-							add = {
-								value = 0
+					}
+					modifier = { # Theocatic Vassals of different faith more likely
+						factor = 2
+						has_government = theocracy_government
+						faith != scope:adventurer.faith
+					}
+					### DISTANCE
+					modifier = { # Distant vassals more likely
+						add = {
+							value = 0
+							add = scope:distance
+							if = {
+								limit = { scope:distance >= squared_distance_medium }
 								add = scope:distance
-								if = {
-									limit = { scope:distance >= squared_distance_medium }
-									add = scope:distance
-									multiply = 0.0001
-								}
-								max = 25
+								multiply = 0.0001
 							}
-							"capital_county.squared_distance(scope:ruler.capital_county)" >= squared_distance_medium
-							capital_county = {
-								save_temporary_scope_value_as = {
-									name = distance
-									value = "squared_distance(scope:ruler.capital_county)"
-								}
+							max = 25
+						}
+						"capital_county.squared_distance(scope:ruler.capital_county)" >= squared_distance_medium
+						capital_county = {
+							save_temporary_scope_value_as = {
+								name = distance
+								value = "squared_distance(scope:ruler.capital_county)"
 							}
 						}
-						### PERSONALITY
-						ai_value_modifier = { 
-							ai_boldness = 0.15
-							ai_energy = 0.15
-							ai_greed = 0.15
-							ai_honor = -0.15
-						}
-						### OPINION
-						opinion_modifier = { # More likely if dislikes adventurer
-							opinion_target = scope:adventurer
-							multiplier = -0.25
-						}
-						opinion_modifier = { # More likely if liked old ruler
-							opinion_target = scope:ruler
-							multiplier = 0.1
-						}
-						### STRENGTH
-						modifier = { # Small vassals less likely
-							add = -15
-							tier_difference = {
-								target = scope:ruler
-								value <= -2
-							}
-						}
-						modifier = {
-							add = -25
-							realm_size < tiny_realm_size
-						}
-						modifier = { # Powerful vassals more likely
-							factor = 1.25
-							is_powerful_vassal = yes
-						}
-						modifier = { # Powerful vassals more likely
-							add = {
-								value = highest_held_title_tier
-								multiply = 5
-							}
-						}
-						### RELEVANCE
-						modifier = { # Fringe vassals more likely
-							factor = 1.25
-							any_sub_realm_county = {
-								any_neighboring_county = { holder.top_liege != scope:ruler }
-							}
-						}
-						modifier = { # Core vassals less likely
-							factor = 0.75
-							scope:ruler.capital_county.kingdom = {
-								any_de_jure_county = { this = scope:vassal_temp.capital_county }
-							}
-						}
-						### FAMILY
-						modifier = { # Relatives of deposed more likely
-							factor = 1.1
-							is_close_family_of = scope:ruler
-							NOT = { is_close_family_of = scope:adventurer }
-						}
-						modifier = { # Dynasts of deposed more likely
-							factor = 1.1
-							dynasty ?= {
-								this = scope:ruler.dynasty
-								NOT = { this = scope:adventurer.dynasty }
-							}
-						}
-						modifier = { # Relatives of adventurer less likely
-							factor = 0.75
-							is_close_family_of = scope:adventurer
-							NOT = { is_close_family_of = scope:ruler }
-						}
-						modifier = { # Dynasts of adventurer less likely
-							factor = 0.75
-							dynasty ?= {
-								this = scope:adventurer.dynasty
-								NOT = { this = scope:ruler.dynasty }
-							}
-						}
-						### HOOKS
-						modifier = {
-							factor = 0
-							scope:adventurer = { has_hook = scope:vassal_temp }
-						}
-						modifier = {
-							factor = 2
-							scope:ruler = { has_hook = scope:vassal_temp }
-						}
-						### TIER
-						modifier = {
-							factor = 1.5
-							scope:ruler.primary_title.tier = tier_empire
-						}
-						modifier = {
-							factor = 1.25
-							scope:ruler.primary_title.tier = tier_kingdom
-						}
-						max = 95
-						add_to_list = independent_vassals
 					}
+					modifier = { # Vassals with capitals outside the de jure more likely
+						factor = 1.25
+						capital_county = {
+							NOT = {
+								target_is_de_jure_liege_or_above = scope:title
+							}
+						}
+					}
+					### PERSONALITY
+					ai_value_modifier = { 
+						ai_boldness = 0.15
+						ai_energy = 0.15
+						ai_greed = 0.15
+						ai_honor = -0.15
+					}
+					### OPINION
+					opinion_modifier = { # More likely if dislikes adventurer
+						opinion_target = scope:adventurer
+						multiplier = -0.25
+					}
+					opinion_modifier = { # More likely if liked old ruler
+						opinion_target = scope:ruler
+						multiplier = 0.1
+					}
+					### STRENGTH
+					modifier = { # Small vassals less likely
+						add = -15
+						tier_difference = {
+							target = scope:ruler
+							value <= -2
+						}
+					}
+					modifier = {
+						add = -25
+						realm_size < tiny_realm_size
+					}
+					modifier = { # Powerful vassals more likely
+						factor = 1.25
+						is_powerful_vassal = yes
+					}
+					modifier = { # Powerful vassals more likely
+						add = {
+							value = highest_held_title_tier
+							multiply = 5
+						}
+					}
+					### RELEVANCE
+					modifier = { # Fringe vassals more likely
+						factor = 1.25
+						any_sub_realm_county = {
+							any_neighboring_county = { holder.top_liege != scope:ruler }
+						}
+					}
+					modifier = { # Core vassals less likely
+						factor = 0.75
+						scope:ruler.capital_county.kingdom = {
+							any_de_jure_county = { this = scope:vassal_temp.capital_county }
+						}
+					}
+					### FAMILY
+					modifier = { # Relatives of deposed more likely
+						factor = 1.1
+						is_close_family_of = scope:ruler
+						NOT = { is_close_family_of = scope:adventurer }
+					}
+					modifier = { # Dynasts of deposed more likely
+						factor = 1.1
+						dynasty ?= {
+							this = scope:ruler.dynasty
+							NOT = { this = scope:adventurer.dynasty }
+						}
+					}
+					modifier = { # Relatives of adventurer less likely
+						factor = 0.75
+						is_close_family_of = scope:adventurer
+						NOT = { is_close_family_of = scope:ruler }
+					}
+					modifier = { # Dynasts of adventurer less likely
+						factor = 0.75
+						dynasty ?= {
+							this = scope:adventurer.dynasty
+							NOT = { this = scope:ruler.dynasty }
+						}
+					}
+					### HOOKS
+					modifier = {
+						factor = 0
+						scope:adventurer = { has_hook = scope:vassal_temp }
+					}
+					modifier = {
+						factor = 2
+						scope:ruler = { has_hook = scope:vassal_temp }
+					}
+					### TIER
+					modifier = {
+						factor = 1.5
+						scope:ruler.primary_title.tier = tier_empire
+					}
+					modifier = {
+						factor = 1.25
+						scope:ruler.primary_title.tier = tier_kingdom
+					}
+					### ADMIN
+					modifier = { # Noble Families should never leave admin realms
+						factor = 0
+						any_held_title = {
+							is_noble_family_title = yes
+						}
+					}
+					max = 95
+					add_to_list = independent_vassals
 				}
 			}
 			# Save heirs for claimant wars
@@ -3730,9 +3754,12 @@ spawn_governance_contract_effect = {
 					any_sub_realm_county = {
 						any_county_province = {
 							any_province_domicile = {
-								owner != scope:governor
 								is_domicile_type = estate
-								owner = { is_ai = yes }
+								owner = {
+									NOT = { this = scope:governor }
+									is_ai = yes
+									is_alive = yes
+								}
 							}
 						}
 					}
@@ -3744,18 +3771,24 @@ spawn_governance_contract_effect = {
 				limit = {
 					any_county_province = {
 						any_province_domicile = {
-							owner != scope:governor
 							is_domicile_type = estate
-							owner = { is_ai = yes }
+							owner = {
+								NOT = { this = scope:governor }
+								is_ai = yes
+								is_alive = yes
+							}
 						}
 					}
 				}
 				random_county_province = {
 					limit = {
 						any_province_domicile = {
-							owner != scope:governor
 							is_domicile_type = estate
-							owner = { is_ai = yes }
+							owner = {
+								NOT = { this = scope:governor }
+								is_ai = yes
+								is_alive = yes
+							}
 						}
 
 					}
@@ -3764,9 +3797,12 @@ spawn_governance_contract_effect = {
 				scope:target_province ?= {
 					random_province_domicile = {
 						limit = {
-							owner != scope:governor
 							is_domicile_type = estate
-							owner = { is_ai = yes }
+							owner = {
+								NOT = { this = scope:governor }
+								is_ai = yes
+								is_alive = yes
+							}
 						}
 						owner = { save_scope_as = employer }
 					}
@@ -4102,21 +4138,87 @@ add_influence_attacker_defeat_effect = {
 	}
 }
 
-admin_independence_government_change_effect = {
-	# Effect to change the government of an admin ruler becoming independent
-	if = { # Check if we prefer to become clan (as defined in 00_government_types.txt)
+admin_change_government_effect = {
+	# Make sure you only use this effect on characters you are sure should change government! Since we don't do any extended triggers here.
+	# For a consistent behaviour, this effect is based on "convert_whole_realm_to_feudalism_effect"
+	
+	# First, let's see if the character only has their noble family title - then we don't bother changing their government
+	# We only destroy the family title to make sure it doesn't linger
+	if = {
 		limit = {
+			is_landed = no
+			any_held_title = {
+				is_noble_family_title = yes
+			}
+			NOT = {
+				any_held_title = {
+					is_noble_family_title = no
+				}
+			}
+		}
+		every_held_title = {
+			limit = {
+				is_noble_family_title = yes
+			}
+			save_temporary_scope_as = family_title
+			prev = { destroy_title = scope:family_title }
+		}
+	}
+	
+	# If not, let's change the government type
+	# If liege has clan - Become clan!
+	else_if = {
+		limit = {
+			is_independent_ruler = no
 			OR = {
-				culture = { has_cultural_pillar = heritage_arabic }
-				culture = { has_cultural_pillar = heritage_iranian }
-				culture = { has_cultural_pillar = heritage_turkic }
-				has_religion = religion:islam_religion
+				liege = { government_has_flag = government_is_clan }
+				AND = {
+					liege = { government_has_flag = government_is_tribal }
+					religion = religion:islam_religion
+				}
 			}
 		}
 		change_government = clan_government
 	}
-	else = { # Otherwise, become feudal
+	# If liege has feudal - Become feudal!
+	else_if = {
+		limit = {
+			is_independent_ruler = no
+			OR = {
+				liege = { government_has_flag = government_is_feudal }
+				AND = {
+					liege = { government_has_flag = government_is_tribal }
+					NOT = { religion = religion:islam_religion }
+				}
+			}
+		}
 		change_government = feudal_government
+	}
+	# If you're an independent Muslim ruler - Become clan!
+	else_if = {
+		limit = {
+			is_independent_ruler = yes
+			faith = { religion_tag = islam_religion }
+		}
+		change_government = clan_government
+	}
+	# If you're an independent ruler with anything else - Become feudal!
+	else = { change_government = feudal_government }
+	
+	# Finally, let's double-check and see if there are any remaining family titles we should destroy
+	if = {
+		limit = {
+			any_held_title = {
+				is_noble_family_title = yes
+			}
+		}
+		every_held_title = {
+			limit = {
+				is_noble_family_title = yes
+			}
+			save_temporary_scope_as = family_title
+			prev = { destroy_title = scope:family_title }
+		}
 	}
 }
 
@@ -4386,7 +4488,6 @@ gather_charioteers_effect = {
 					}
 				}
 			}
-
 		}
 
 		# Finalize the list of charioteers
@@ -4394,14 +4495,11 @@ gather_charioteers_effect = {
 		chariot_racers_setup_effect = { TEAM = blue }
 		chariot_racers_setup_effect = { TEAM = red }
 		chariot_racers_setup_effect = { TEAM = white }
-
-		# Fill spectators guest subset
+		# And filter everyone remaining to spectators.
 		every_attending_character = {
 			limit = {
 				NOT = {
-					is_in_guest_subset = {
-						name = charioteers
-					}
+					is_in_guest_subset = { name = charioteers }
 				}
 			}
 			save_scope_as = temp_character
@@ -5593,6 +5691,14 @@ disburse_chariot_race_activity_host_rewards = {
 							}
 						}
 						add_legitimacy = miniscule_legitimacy_gain
+						if = {
+							limit = { has_activity_intent = reduce_stress_intent }
+							stress_impact = {
+								base = major_stress_loss
+								athletic = miniscule_stress_loss
+								gregarious = miniscule_stress_loss
+							}
+						}
 						custom_tooltip = chariot_race_reward_high_county_opinion_tt
 					}
 					else_if = {
@@ -5602,6 +5708,14 @@ disburse_chariot_race_activity_host_rewards = {
 							}
 						}
 						add_legitimacy = 5
+						if = {
+							limit = { has_activity_intent = reduce_stress_intent }
+							stress_impact = {
+								base = medium_stress_loss
+								athletic = miniscule_stress_loss
+								gregarious = miniscule_stress_loss
+							}
+						}
 						custom_tooltip = chariot_race_reward_low_county_opinion_tt
 					}
 					else = {
@@ -5624,9 +5738,18 @@ disburse_chariot_race_activity_host_rewards = {
 							}
 						}
 						add_legitimacy = minor_legitimacy_gain
+						if = {
+							limit = { has_activity_intent = reduce_stress_intent }
+							stress_impact = {
+								base = massive_stress_loss
+								athletic = miniscule_stress_loss
+								gregarious = miniscule_stress_loss
+							}
+						}
 						capital_county = {
 							change_county_control = miniscule_county_control_gain
 						}
+
 						custom_tooltip = chariot_race_reward_high_county_opinion_tt
 					}
 					else_if = {
@@ -5636,6 +5759,14 @@ disburse_chariot_race_activity_host_rewards = {
 							}
 						}
 						add_legitimacy = 10
+						if = {
+							limit = { has_activity_intent = reduce_stress_intent }
+							stress_impact = {
+								base = major_stress_loss
+								athletic = miniscule_stress_loss
+								gregarious = miniscule_stress_loss
+							}
+						}
 						custom_tooltip = chariot_race_reward_low_county_opinion_tt
 					}
 					else = {
@@ -5664,6 +5795,14 @@ disburse_chariot_race_activity_host_rewards = {
 							}
 						}
 						add_legitimacy = medium_legitimacy_gain
+						if = {
+							limit = { has_activity_intent = reduce_stress_intent }
+							stress_impact = {
+								base = monumental_stress_loss
+								athletic = miniscule_stress_loss
+								gregarious = miniscule_stress_loss
+							}
+						}
 						capital_county = {
 							change_county_control = minor_county_control_gain
 						}
@@ -5676,6 +5815,14 @@ disburse_chariot_race_activity_host_rewards = {
 							}
 						}
 						add_legitimacy = miniscule_legitimacy_gain
+						if = {
+							limit = { has_activity_intent = reduce_stress_intent }
+							stress_impact = {
+								base = miniscule_stress_loss
+								athletic = massive_stress_loss
+								gregarious = miniscule_stress_loss
+							}
+						}
 						custom_tooltip = chariot_race_reward_low_county_opinion_tt
 					}
 					else = {
@@ -5724,6 +5871,14 @@ disburse_chariot_race_activity_spectator_rewards = {
 			}
 		}
 		change_influence = monumental_influence_gain
+		if = {
+			limit = { has_activity_intent = reduce_stress_intent }
+			stress_impact = {
+				base = monumental_stress_loss
+				athletic = miniscule_stress_loss
+				gregarious = miniscule_stress_loss
+			}
+		}
 	}
 	else_if = {
 		limit = {
@@ -5733,6 +5888,14 @@ disburse_chariot_race_activity_spectator_rewards = {
 			}
 		}
 		change_influence = massive_influence_gain
+		if = {
+			limit = { has_activity_intent = reduce_stress_intent }
+			stress_impact = {
+				base = massive_stress_loss
+				athletic = miniscule_stress_loss
+				gregarious = miniscule_stress_loss
+			}
+		}
 	}
 	else_if = {
 		limit = {
@@ -5742,6 +5905,22 @@ disburse_chariot_race_activity_spectator_rewards = {
 			}
 		}
 		change_influence = major_influence_gain
+		if = {
+			limit = { has_activity_intent = reduce_stress_intent }
+			stress_impact = {
+				base = massive_stress_loss
+				athletic = miniscule_stress_loss
+				gregarious = miniscule_stress_loss
+			}
+		}
+	}
+	else_if = {
+		limit = { has_activity_intent = reduce_stress_intent }
+		stress_impact = {
+			base = miniscule_stress_loss
+			athletic = major_stress_loss
+			gregarious = miniscule_stress_loss
+		}
 	}
 }
 
@@ -11144,6 +11323,15 @@ laamp_as_mercenary_payout_effect = {
 					days = { 3 7 }
 				}
 			}
+			every_in_list = {
+				list = laamp_mercenaries
+				scope:employer = {
+					remove_list_variable = {
+					 	name = hired_mercenaries
+					 	target = prev
+					}
+				}
+			}
 		}
 		if = {
 			limit = {
@@ -11187,10 +11375,205 @@ laamp_as_mercenary_payout_effect = {
 					days = { 3 7 }
 				}
 			}
+			every_in_list = {
+				list = laamp_mercenaries
+				scope:employer = {
+					remove_list_variable = {
+					 	name = hired_mercenaries
+					 	target = prev
+					}
+				}
+			}
 		}
 	}
-	
 }
+
+laamp_as_mercenary_payout_tooltip_effect = {
+	show_as_tooltip = {
+		scope:defender = {
+			if = {
+				limit = {
+					any_war_ally = {
+						is_landless_adventurer = yes
+						OR = {
+							any_character_active_contract = {
+								has_task_contract_type = laamp_join_war_contract
+								var:task_contract_war = scope:war
+							}
+							AND = {
+								has_variable = owed_contract_assistance_gold
+								var:owed_contract_assistance_war ?= scope:war
+							}
+							has_variable = joined_as_mercenary
+						}
+					}
+				}
+				every_war_ally = {
+					if = {
+						limit = {
+							is_landless_adventurer = yes
+						}
+						save_scope_as = laamp_temp
+						save_scope_as = actor
+						save_scope_value_as = {
+							name = war_contribution_value
+							value = "scope:war.war_contribution(scope:laamp_temp)"
+						}
+						if = {
+							limit = {
+								any_character_active_contract = {
+									has_task_contract_type = laamp_join_war_contract
+									var:task_contract_war = scope:war
+								}
+							}
+							every_character_active_contract = {
+								limit = {
+									has_task_contract_type = laamp_join_war_contract
+									var:task_contract_war = scope:war
+								}
+								show_as_tooltip = {
+									task_contract_employer = {
+										save_scope_as = employer
+										custom_tooltip = ep3_join_war_payment_tt
+										pay_short_term_gold = {
+											target = scope:laamp_temp
+											gold = ep3_hire_laamp_mercs_payment_value
+										}
+									}
+								}
+							}
+						}
+						if = {
+							limit = {
+								has_variable = joined_as_mercenary
+								scope:defender = {
+									is_target_in_variable_list = {
+										name = hired_mercenaries
+										target = scope:laamp_temp
+									}
+								}
+							}
+							scope:defender = {
+								save_scope_as = employer
+								custom_tooltip = ep3_hire_laamp_mercs_payment_tt
+								pay_short_term_gold = {
+									target = scope:laamp_temp
+									gold = ep3_hire_laamp_mercs_payment_value
+								}
+							}
+						}
+						if = {
+							limit = {
+								has_variable = owed_contract_assistance_gold
+								var:owed_contract_assistance_war ?= scope:war
+							}
+							save_scope_as = contract_assistance_helper
+							scope:defender = {
+								save_scope_as = recipient
+								custom_tooltip = contract_assistance_interaction_condition_tt
+								pay_short_term_gold = {
+									target = scope:actor
+									gold = scope:actor.var:owed_contract_assistance_gold
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		scope:attacker = {
+			if = {
+				limit = {
+					any_war_ally = {
+						is_landless_adventurer = yes
+						OR = {
+							any_character_active_contract = {
+								has_task_contract_type = laamp_join_war_contract
+								var:task_contract_war = scope:war
+							}
+							AND = {
+								has_variable = owed_contract_assistance_gold
+								var:owed_contract_assistance_war ?= scope:war
+							}
+							has_variable = joined_as_mercenary
+						}
+					}
+				}
+				every_war_ally = {
+					if = {
+						limit = {
+							is_landless_adventurer = yes
+						}
+						save_scope_as = laamp_temp
+						save_scope_as = actor
+						save_scope_value_as = {
+							name = war_contribution_value
+							value = "scope:war.war_contribution(scope:laamp_temp)"
+						}
+						if = {
+							limit = {
+								any_character_active_contract = {
+									has_task_contract_type = laamp_join_war_contract
+									var:task_contract_war = scope:war
+								}
+							}
+							every_character_active_contract = {
+								limit = {
+									has_task_contract_type = laamp_join_war_contract
+									var:task_contract_war = scope:war
+								}
+								show_as_tooltip = {
+									task_contract_employer = {
+										save_scope_as = employer
+										custom_tooltip = ep3_hire_laamp_mercs_payment_tt
+										pay_short_term_gold = {
+											target = scope:laamp_temp
+											gold = ep3_hire_laamp_mercs_payment_value
+										}
+									}
+								}
+							}
+						}
+						if = {
+							limit = {
+								has_variable = joined_as_mercenary
+								scope:attacker = {
+									is_target_in_variable_list = {
+										name = hired_mercenaries
+										target = scope:laamp_temp
+									}
+								}
+							}
+							scope:attacker = {
+								save_scope_as = employer
+								custom_tooltip = ep3_hire_laamp_mercs_payment_tt
+								pay_short_term_gold = {
+									target = scope:laamp_temp
+									gold = ep3_hire_laamp_mercs_payment_value
+								}
+							}
+						}
+						if = {
+							limit = {
+								has_variable = owed_contract_assistance_gold
+								var:owed_contract_assistance_war ?= scope:war
+							}
+							save_scope_as = contract_assistance_helper
+							scope:attacker = {
+								custom_tooltip = contract_assistance_interaction_condition_tt
+								pay_short_term_gold = {
+									target = scope:actor
+									gold = scope:actor.var:owed_contract_assistance_gold
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 chariot_race_sow_discord_strong_response_effect = {
 	if = {
 		limit = {
@@ -12544,5 +12927,286 @@ assign_favourite_child_effect = {
 				}
 			}
 		} 
+	}
+}
+
+add_random_internal_estate_building = {
+	random_list = {
+		10 = {
+			trigger = {
+				NOT = { has_domicile_building_or_higher = servants_quarters_01 }
+			}
+			add_domicile_building = servants_quarters_01
+			if = {
+				limit = { has_domicile_building = estate_main_03 }
+				add_domicile_building = servants_quarters_02
+			}
+		}
+		10 = {
+			trigger = {
+				NOT = { has_domicile_building_or_higher = library_01 }
+			}
+			add_domicile_building = library_01
+			if = {
+				limit = { has_domicile_building = estate_main_03 }
+				add_domicile_building = library_02
+			}
+		}
+		10 = {
+			trigger = {
+				NOT = { has_domicile_building_or_higher = bath_01 }
+			}
+			add_domicile_building = bath_01
+			if = {
+				limit = { has_domicile_building = estate_main_03 }
+				add_domicile_building = bath_02
+			}
+		}
+		10 = {
+			trigger = {
+				NOT = { has_domicile_building_or_higher = courtyard_01 }
+			}
+			add_domicile_building = courtyard_01
+			if = {
+				limit = { has_domicile_building = estate_main_03 }
+				add_domicile_building = courtyard_02
+			}
+		}
+		10 = {
+			trigger = {
+				NOT = { has_domicile_building_or_higher = prison_01 }
+			}
+			add_domicile_building = prison_01
+			if = {
+				limit = { has_domicile_building = estate_main_03 }
+				add_domicile_building = prison_02
+			}
+		}
+		10 = {
+			trigger = {
+				NOT = { has_domicile_building_or_higher = living_quarters_01 }
+			}
+			add_domicile_building = living_quarters_01
+			if = {
+				limit = { has_domicile_building = estate_main_03 }
+				add_domicile_building = living_quarters_02
+			}
+		}
+		10 = {
+			trigger = {
+				NOT = { has_domicile_building_or_higher = trophy_room_01 }
+			}
+			add_domicile_building = trophy_room_01
+			if = {
+				limit = { has_domicile_building = estate_main_03 }
+				add_domicile_building = trophy_room_02
+			}
+		}
+		10 = {
+			trigger = {
+				NOT = { has_domicile_building_or_higher = office_01 }
+			}
+			add_domicile_building = office_01
+			if = {
+				limit = { has_domicile_building = estate_main_03 }
+				add_domicile_building = office_02
+			}
+		}
+		10 = {
+			trigger = {
+				NOT = { has_domicile_building_or_higher = guest_room_01 }
+			}
+			add_domicile_building = guest_room_01
+			if = {
+				limit = { has_domicile_building = estate_main_03 }
+				add_domicile_building = guest_room_02
+			}
+		}
+		10 = {
+			trigger = {
+				NOT = { has_domicile_building_or_higher = wine_cellar_01 }
+			}
+			add_domicile_building = wine_cellar_01
+			if = {
+				limit = { has_domicile_building = estate_main_03 }
+				add_domicile_building = wine_cellar_02
+			}
+		}
+	}
+}
+
+fill_external_estate_building_effect = {
+	switch = {
+		trigger = has_domicile_building_or_higher
+		estate_main_05 = {
+			while = {
+				limit = { free_external_domicile_building_slots >= 1 }
+				add_random_external_estate_building = yes
+			}
+		}
+		estate_main_04 = {
+			while = {
+				limit = { free_external_domicile_building_slots >= 2 }
+				add_random_external_estate_building = yes
+			}
+		}
+		estate_main_03 = {
+			while = {
+				limit = { free_external_domicile_building_slots >= 3 }
+				add_random_external_estate_building = yes
+			}
+		}
+		estate_main_02 = {
+			while = {
+				limit = { free_external_domicile_building_slots >= 4 }
+				add_random_external_estate_building = yes
+			}
+		}
+		estate_main_01 = {
+			while = {
+				limit = { free_external_domicile_building_slots >= 5 }
+				add_random_external_estate_building = yes
+			}
+		}
+	}
+}
+
+add_random_external_estate_building = {
+	if = {
+		limit = {
+			free_external_domicile_building_slots >= 1
+		}
+		random_list = {
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = temple_small_01 }
+				}
+				add_domicile_building = temple_small_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = temple_small_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = barracks_01 }
+				}
+				add_domicile_building = barracks_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = barracks_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = watchtower_01 }
+				}
+				add_domicile_building = watchtower_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = watchtower_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = vineyard_01 }
+				}
+				add_domicile_building = vineyard_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = vineyard_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = guardhouse_01 }
+				}
+				add_domicile_building = guardhouse_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = guardhouse_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = garden_01 }
+				}
+				add_domicile_building = garden_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = garden_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = storage_01 }
+				}
+				add_domicile_building = storage_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = storage_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = grain_field_01 }
+				}
+				add_domicile_building = grain_field_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = grain_field_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = stable_01 }
+				}
+				add_domicile_building = stable_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = stable_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = workshop_01 }
+				}
+				add_domicile_building = workshop_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = workshop_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = market_01 }
+				}
+				add_domicile_building = market_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = market_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = grazing_land_01 }
+				}
+				add_domicile_building = grazing_land_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = grazing_land_02
+				}
+			}
+			10 = {
+				trigger = {
+					NOT = { has_domicile_building_or_higher = olive_01 }
+				}
+				add_domicile_building = olive_01
+				if = {
+					limit = { has_domicile_building = estate_main_03 }
+					add_domicile_building = olive_02
+				}
+			}
+		}
 	}
 }

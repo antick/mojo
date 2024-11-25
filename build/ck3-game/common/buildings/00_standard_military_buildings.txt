@@ -1463,12 +1463,7 @@ warrior_lodges_01 = {
 		}
 	}
 	can_construct_potential = {
-		OR = {
-			building_warrior_lodges_requirement_terrain = yes
-			scope:holder.culture ?= {
-				has_cultural_parameter = warrior_lodges_lift_restrictions
-			}
-		}
+		building_warrior_lodges_requirement_terrain = yes
 	}
 
 	can_construct_showing_failures_only = {

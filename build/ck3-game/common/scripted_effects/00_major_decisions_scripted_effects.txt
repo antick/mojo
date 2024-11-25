@@ -13,6 +13,14 @@
 		}
 	}
 	#Create Roman Empire, shift dejure/history/laws, destroy e_byzantium.
+
+	if = {
+		limit = { capital_county = { this = title:c_byzantion } }
+		title:e_roman_empire = { 
+			set_capital_county = title:c_byzantion
+		}
+	}
+
 	hidden_effect = {
 		every_held_title = { #Should shift all dejure of all Empires owned at the time.
 			limit = {
@@ -48,6 +56,25 @@
 		copy_title_history = title:e_byzantium
 	}
 	resolve_title_and_vassal_change = scope:change
+	if = { # Move your Title MaAs to your new title if you have any
+		limit = {
+			government_allows = administrative
+			primary_title = {
+				any_title_maa_regiment = { count >= 1 }
+			}
+		}
+		hidden_effect = {
+			primary_title = { transfer_title_maa_ownership = title:e_roman_empire }
+		}
+	}
+	if = { # If you have founded the Varangian Guard, you get to keep the benefits
+		limit = {
+			primary_title = { has_variable = founded_varangian_guard }
+		}
+		hidden_effect = {
+			title:e_roman_empire = { set_variable = founded_varangian_guard }
+		}
+	}
 	hidden_effect = { set_primary_title_to = title:e_roman_empire }
 	every_held_title = { #Should destroy all other Empires owned at the time.
 		limit = {
@@ -113,6 +140,9 @@
 	}
 	hidden_effect = {
 		add_character_flag = flag_restorer_of_rome #used for Eulogy.
+		title:e_roman_empire = {
+			set_variable = rome_was_restored_by_byzantium
+		}
 	}
 }
 
@@ -150,6 +180,25 @@ create_roman_empire_holy_scripted_effect = {
 		copy_title_history = title:e_hre
 	}
 	resolve_title_and_vassal_change = scope:change
+	if = { # Move your Title MaAs to your new title if you have any
+		limit = {
+			government_allows = administrative
+			primary_title = {
+				any_title_maa_regiment = { count >= 1 }
+			}
+		}
+		hidden_effect = {
+			primary_title = { transfer_title_maa_ownership = title:e_roman_empire }
+		}
+	}
+	if = { # If you have founded the Varangian Guard, you get to keep the benefits (you are not likely to have done it here, but better safe than sorry)
+		limit = {
+			primary_title = { has_variable = founded_varangian_guard }
+		}
+		hidden_effect = {
+			title:e_roman_empire = { set_variable = founded_varangian_guard }
+		}
+	}
 	hidden_effect = { set_primary_title_to = title:e_roman_empire }
 	every_held_title = { #Should destroy all other Empires owned at the time.
 		limit = {
@@ -230,6 +279,25 @@ create_roman_empire_italy_scripted_effect = {
 		copy_title_history = title:e_italy
 	}
 	resolve_title_and_vassal_change = scope:change
+	if = { # Move your Title MaAs to your new title if you have any
+		limit = {
+			government_allows = administrative
+			primary_title = {
+				any_title_maa_regiment = { count >= 1 }
+			}
+		}
+		hidden_effect = {
+			primary_title = { transfer_title_maa_ownership = title:e_roman_empire }
+		}
+	}
+	if = { # If you have founded the Varangian Guard, you get to keep the benefits (you are not likely to have done it here, but better safe than sorry)
+		limit = {
+			primary_title = { has_variable = founded_varangian_guard }
+		}
+		hidden_effect = {
+			title:e_roman_empire = { set_variable = founded_varangian_guard }
+		}
+	}
 	hidden_effect = { set_primary_title_to = title:e_roman_empire }
 	every_held_title = { #Should destroy all other Empires owned at the time.
 		limit = {

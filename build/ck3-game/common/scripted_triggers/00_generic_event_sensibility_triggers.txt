@@ -7,17 +7,17 @@
 ###### LOVER TRIGGERS #####
 
 ######
-# are_characters_sensible_and_appropriate_open_lovers_trigger = { INSTIGATING_LOVER = scope:something TARGET_OF_LOVE  = scope:something_else }
+# are_characters_sensible_and_appropriate_open_lovers_trigger = { INSTIGATING_LOVER = scope:something TARGET_OF_LOVE = scope:something_else }
 # This is the most restrictive form of lover trigger,
 # use it when you need a couple of innocent lovers
 
 ######
-# are_characters_sensible_and_appropriate_lovers_trigger = { INSTIGATING_LOVER = scope:something TARGET_OF_LOVE  = scope:something_else }
+# are_characters_sensible_and_appropriate_lovers_trigger = { INSTIGATING_LOVER = scope:something TARGET_OF_LOVE = scope:something_else }
 # Is the pairing both sensible from an attraction standpoint,
 # and appropriate from a social standpoint?
 
 ######
-# are_characters_sensible_lovers_trigger = { INSTIGATING_LOVER = scope:something TARGET_OF_LOVE  = scope:something_else }
+# are_characters_sensible_lovers_trigger = { INSTIGATING_LOVER = scope:something TARGET_OF_LOVE = scope:something_else }
 # Is the pairing sensible from an attraction standpoint?
 # Does not restrict based on genetic bad looks,
 # this is about the _lover_ status, not attraction-based sex 

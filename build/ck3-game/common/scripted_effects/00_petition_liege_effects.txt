@@ -881,6 +881,7 @@ petition_neg_grandeur_renown_effect = {
 petition_type_outcome_effect = {
 	switch = {
 		trigger = scope:petition_vassal.var:petition_type
+		flag:fallback = { petition_liege_0101_gold_effect = yes }
 		flag:gold = { petition_liege_0101_gold_effect = yes }
 		flag:council_seat = {
 			if = {

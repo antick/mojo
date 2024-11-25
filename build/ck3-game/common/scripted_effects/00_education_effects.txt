@@ -3019,10 +3019,10 @@ ward_depart_effect = {
 				#allow landed ruler to landed ruler education
 				AND = {
 					scope:ward = {
-						is_landed = yes
+						is_landed_or_landless_administrative = yes
 					}
 					scope:guardian = {
-						is_landed = yes
+						is_landed_or_landless_administrative = yes
 					}
 				}
 			}
@@ -3184,6 +3184,18 @@ remove_guardian_effect = {
 			GUARDIAN = $GUARDIAN$
 			WARD = $WARD$
 			WARD_LIEGE = $WARD$.liege
+		}
+	}
+}
+
+knight_teacher_effect = {
+	if = {
+		limit = {
+			scope:educator = { has_character_modifier = knight_teacher_modifier }
+		}
+		change_variable = {
+			name = education_martial_variable
+			add = { integer_range = { min = 1 max = 3 } }
 		}
 	}
 }

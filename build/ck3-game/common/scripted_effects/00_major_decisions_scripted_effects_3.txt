@@ -731,6 +731,9 @@ recreate_ere_decision_effect = {
 		}
 		destroy_title = title:e_latin_empire
 	}
+	hidden_effect = {
+		title:e_byzantium = { set_state_faith = root.faith }
+	}
 }
 
 reinstitute_grain_dole_decision_effect = {

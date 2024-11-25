@@ -35,6 +35,11 @@
  NOMEN_ANSWER_DESC:0 "Will be rejected because of the "nomen" cheat"
  BASE_RELUCTANCE:0 "Reluctance: $VALUE|+0$"
  INTERACTION_COST:0 "Cost:"
+
+ # Custom Character Sorting Options
+ candidate_score_sort_name: "$game_concept_candidate_score$"
+ governor_efficiency_sort_name: "$game_concept_governor_efficiency$"
+
  start_spying:0 "Spy On #weak (Scheme)#!"
  start_murder_interaction:0 "Murder #weak (Scheme)#!"
  start_murder_interaction_notification:0 "Murder"
@@ -55,7 +60,7 @@
  liege_modify_vassal_contract_interaction.tt.diarch_powers_used:0 "You use your status as [diarch|E] to countersign some of your own changes"
  modify_vassal_contract_interaction_notification:0 "Modified Vassal Contract"
  vassal_modify_vassal_contract_interaction:0 "$modify_vassal_contract$"
- vassal_modify_vassal_contract_interaction_desc:0 "Renegotiate your [obligations|E] to [secondary_recipient.GetShortUINameNoTooltip]"
+ vassal_modify_vassal_contract_interaction_desc:0 "Renegotiate your [obligations|E] to [recipient.GetShortUINameNoTooltip]"
  vassal_modify_vassal_contract_interaction_extra_icon:0 "$hook_extra_icon$"
  visit_court_interaction:0 "Visit Court"
 
@@ -1102,7 +1107,7 @@
  vassal_modify_vassal_contract_unnecessary_hook_usage_equal:0 "You cannot use a [hook|E] on contract that is fair to the [vassal|E]"
  LIEGE_MODIFY_VASSAL_CONTRACT_CANNOT_EXCEED_TYRANNY_CAP:0 "You cannot demand more than one [tyrannical|E] change"
  MODIFY_VASSAL_CONTRACT_NOTIFICATION_TO_VASSAL:0 "I have decided to make the following changes to your contract, effective immediately."
- MODIFY_VASSAL_CONTRACT_NOTIFICATION_TO_LIEGE:0 "Circumstances have made it necessary for me to make the following alterations to my contract — I trust that you will find these changes to be fair?"
+ MODIFY_VASSAL_CONTRACT_NOTIFICATION_TO_LIEGE:0 "Circumstances have made it necessary for me to make the following alterations to the contract — I trust that you will find these changes to be fair?"
 
  GHW_DEFENDER_IS_NOT_LIEGE:0 "You must not be part of the targeted Realm"
  GHW_ATTACKER_IS_INDEPENDENT_OR_UNDER_FAITH:0 "You must be either Independent or a Vassal of a [CHARACTER.GetFaith.GetAdjective] Realm"
@@ -1393,6 +1398,9 @@
  feudalize_tribal_holding_interaction_desc:0 "Destroy all [buildings|E] in this [holding|E] and turn it [feudal|E]"
  feudalize_tribal_holding_interaction_title_not_county_or_below:0 "Select a [county|E] or [barony|E]"
  feudalize_tribal_holding_interaction_notification:0 "Feudalized Tribe"
+ 
+ support_feudalize_tribal_holding_interaction: "Aid Tribal Development"
+ support_feudalize_tribal_holding_interaction_desc: "Aid [recipient.GetShortUIName] develop [recipient.GetHerHis] [tribal|E] land and turn one of [recipient.GetHerHis] [tribal|E] [holdings|E] into a [castle|E]"
 
  has_all_tribal_innovations:1 "Has #V 70%#! of all Military & Civic Tribal Era [innovations|E]"
 
@@ -1554,7 +1562,7 @@
  challenge_for_artifact_interaction_valid_tt_2:0 "This character can't fight in a duel"
  challenge_for_artifact_interaction_valid_tt_3:0 "You are imprisoned"
  challenge_to_artifact_combat_interaction_victor_gets.tt:0 "The Victor will keep or gain the Artifact"
- challenge_to_artifact_combat_interaction_loser_gets.tt:0 "The Loser will lose the Artifact and any claim on it"
+ challenge_to_artifact_combat_interaction_loser_gets.tt:0 "The Loser will lose the Artifact or any [personal_artifact_claim|E]"
  challenge_to_artifact_combat_interaction_loser_result.tt:0 "You lost your right to the Artifact"
  challenge_to_artifact_combat_interaction_victor_result.tt:0 "You proved your right to the Artifact"
  demand_artifact_interaction_valid_tt_1:0 "$challenge_for_artifact_interaction_valid_tt_1$"
@@ -1798,6 +1806,7 @@
  VASSALS_REFUSAL_indomitable_azatani: "[GetCultureTradition('tradition_ep3_indomitable_azatani').GetName]: $VALUE|=+0$"
  cowed_from_visit_interaction_reason: "[recipient.GetShortUIName] was cowed by an imperial visit: $VALUE|=+0$"
  ELUDING_CASTRATOR: "Eluding attempted castrator: $VALUE|=+0$"
+
  laamp_from_contact_list_reason: "[recipient.GetShortUIName] is in [actor.GetShortUINamePossessive] [contact_list|E]: $VALUE|=+0$"
 
  prison_break_contract_interaction: "Start Prison Break Contract"
@@ -1813,11 +1822,12 @@
  TAKE_VOWS_CYNICAL_REASON: "[recipient.GetSheHe|U] is [GetTrait('cynical').GetName( GetNullCharacter )]: $VALUE|=+0$"
  
  joining_vassal_count_tt: "[actor.MakeScope.Var('joining_vassal_count').GetValue]"
-
  will_lose_administrative_government_type_tt: "@alert_icon! #alert_trial Because [recipient.GetName] is not [actor.GetGovernment.GetName|E], your [government|E] will change from [actor.GetGovernment.GetName|E] to [recipient.GetGovernment.GetName|E]#!"
  will_change_from_administrative_tt: "Adopts [recipient.GetGovernment.GetName|E] [government|E]"
 
  # EP3 - Rebalancing Old Perks
  influence_children_groomed_to_rule_perk_tt: "You have [GetPerk( 'groomed_to_rule_perk' ).GetName( GetPlayer )]: $VALUE|=+0$"
+
  distrust_laamps_for_marriage_tt: "[actor.GetGovernment.GetName|E]: $VALUE|=+0$"
  laamp_has_soldiers_negotiate_settlement_tt: "$SORT_MILITARY_STRENGTH$: $VALUE|=+0$"
+ 

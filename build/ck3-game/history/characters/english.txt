@@ -5582,7 +5582,7 @@
 	culture = "english"
 	trait = education_martial_2
 	father = 454153
-	mother = 7284
+	# mother = 7284
 	1240.1.1 = {
 		birth = "1240.1.1"
 	}
@@ -5605,9 +5605,9 @@
 	1174.1.1 = {
 		birth = "1174.1.1"
 	}
-	1196.1.1 = {
-		add_spouse = 7284
-	}
+	# 1196.1.1 = {
+	# add_spouse = 7284
+	# }
 	1243.2.17 = {
 		death = "1243.2.17"
 	}
@@ -5625,7 +5625,7 @@
 	trait = temperate
 	trait = education_martial_2
 	father = 454153
-	mother = 7284
+	# mother = 7284
 	1234.1.1 = {
 		birth = "1234.1.1"
 	}

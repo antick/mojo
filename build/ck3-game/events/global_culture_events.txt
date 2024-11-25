@@ -679,6 +679,11 @@ global_culture.0012 = {
 global_culture.0015 = {
 	type = character_event
 	title = global_culture.0015.t
+	override_background = { reference = fp1_beached_longships }
+	left_portrait = {
+		character = scope:portrait_scope
+		animation = inspect_weapon
+	}
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -691,6 +696,10 @@ global_culture.0015 = {
 		}
 	}
 	theme = culture_change
+	
+	immediate = {
+		culture:norse.culture_head ?= { save_scope_as = portrait_scope }
+	}
 
 	option = {
 		trigger = {

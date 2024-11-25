@@ -2032,7 +2032,7 @@ launch_hungarian_migration_scripted_effect = {
 						NOT = { this = title:d_syrmia }
 					}
 					#But if we have no other choice, Syrmia is better than no duchy.
-					limit = {
+					alternative_limit = {
 						title_capital_county.title_province = { geographical_region = custom_hungary }
 						tier = tier_duchy
 					}

@@ -464,12 +464,27 @@ elope.1002 = { #by Mathilda Bjarnehed
 
 #Success event for relatives of target and owner
 elope.1003 = {
-	type = letter_event
+	type = character_event
 	window = scheme_successful_event
-	opening = {
-		desc = elope.1003.opening
+	title = elope.1002.t
+	theme = love
+	override_background = {
+		reference = alley_night
+	}
+	left_portrait = {
+		character = scope:target_liege
+		animation = stressed_teacher
+	}
+	center_portrait = {
+		character = scope:owner
+		animation = wedding_bride_left
+	}
+	right_portrait = {
+		character = scope:target
+		animation = wedding_groom_right
 	}
 	desc = {
+		desc = elope.1003.opening
 		desc = elope.1003.start.desc
 
 		#Target name
@@ -525,10 +540,6 @@ elope.1003 = {
 		}
 
 		desc = elope.1003.end.desc
-	}
-	sender = {
-		character = scope:target_keeper
-		animation = anger
 	}
 
 	immediate = {

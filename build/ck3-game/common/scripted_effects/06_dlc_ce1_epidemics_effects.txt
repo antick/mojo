@@ -169,29 +169,29 @@ notify_holders_and_above = {
 				}
 				holder = {
 					trigger_event = epidemic_events.1100
-				}
-				every_liege_or_above = {
-					limit = { 
-						is_ai = no
-						notified_of_plague_trigger = no
+					every_liege_or_above = {
+						limit = { 
+							is_ai = no
+							notified_of_plague_trigger = no
+						}
+						send_interface_toast = {
+							type = msg_epidemic_outbreak
+							title = epidemic_events.alert_title
+							left_icon = scope:infected_county
+							custom_tooltip = epidemic_events.alert_description
+						}
 					}
-					send_interface_toast = {
-						type = msg_epidemic_outbreak
-						title = epidemic_events.alert_title
-						left_icon = scope:infected_county
-						custom_tooltip = epidemic_events.alert_description
-					}
-				}
-				every_vassal_or_below = {
-					limit = { 
-						is_ai = no
-						notified_of_plague_trigger = no
-					}
-					send_interface_toast = {
-						type = msg_epidemic_outbreak
-						title = epidemic_events.alert_title
-						left_icon = scope:infected_county
-						custom_tooltip = epidemic_events.alert_description
+					every_vassal_or_below = {
+						limit = { 
+							is_ai = no
+							notified_of_plague_trigger = no
+						}
+						send_interface_toast = {
+							type = msg_epidemic_outbreak
+							title = epidemic_events.alert_title
+							left_icon = scope:infected_county
+							custom_tooltip = epidemic_events.alert_description
+						}
 					}
 				}
 			}

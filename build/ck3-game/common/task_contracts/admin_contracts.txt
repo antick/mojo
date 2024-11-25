@@ -20,7 +20,10 @@ overdue_taxes = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -220,7 +223,10 @@ hoarding_mayor = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -421,7 +427,10 @@ bountiful_harvest = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -609,7 +618,10 @@ rampant_bandits = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -779,7 +791,10 @@ discontent_soldiers = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -918,7 +933,10 @@ inept_mayor = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -1053,7 +1071,10 @@ prov_investment = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -1238,7 +1259,10 @@ raiding_peasants = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -1378,7 +1402,10 @@ wild_predators = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -1575,7 +1602,10 @@ evil_presence = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -1732,7 +1762,10 @@ miraculous_healing = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -1882,7 +1915,10 @@ buried_treasure = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -2028,7 +2064,10 @@ public_land = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -2176,7 +2215,10 @@ mad_prophet = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -2357,7 +2399,10 @@ titles_sale = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -2499,7 +2544,10 @@ hungry_times = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 
@@ -2660,7 +2708,10 @@ wartime_measures = {
 
 	valid_to_accept = {
 		valid_governor_contract_trigger = yes
-		num_taken_task_contracts < 1
+		custom_tooltip = {
+			text = has_active_governance_issue
+			num_taken_task_contracts < 1
+		}
 		is_available = yes
 	}
 

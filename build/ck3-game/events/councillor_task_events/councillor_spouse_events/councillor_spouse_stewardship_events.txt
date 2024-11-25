@@ -1224,6 +1224,7 @@ councillor_spouse_stewardship.2002 = {
 		if = {
 			limit = {
 				exists = root.faith.religious_head
+				NOT = { root.faith.religious_head = root }
 			}
 			root.faith.religious_head = {
 				add_opinion = {

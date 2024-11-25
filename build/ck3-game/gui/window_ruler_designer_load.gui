@@ -105,12 +105,14 @@ window = {
 		size = { 620 820}
 		position = { 250 0 }
 		parentanchor = center
+		alwaystransparent = no
+		
 		datacontext = "[RulerDesignerLoadWindow.GetSelectedRuler]"
 		visible = "[RulerDesignerLoadWindow.IsRulerSelected]"
 
 		background = {
 			using = Background_Area_Light
-			using =Mask_Rough_Edges
+			using = Mask_Rough_Edges
 		}
 
 		background = {
@@ -133,7 +135,7 @@ window = {
 		vbox = {
 			hbox = {
 				name = "header"
-				margin = { 20 6}
+				margin = { 20 6 }
 				layoutpolicy_horizontal = expanding
 
 				background = {
@@ -172,9 +174,11 @@ window = {
 				text_single = {
 					name = "filename"
 					text = "[SaveRulerItem.GetFilename]"
+					elide = right
 					max_width = 320
 					using = Font_Type_Flavor
 					using = Font_Size_Big
+					fontsize_min = 20
 					align = nobaseline
 				}
 
@@ -647,8 +651,11 @@ window = {
 			expand = {}
 
 			hbox = {
+				name = "footer"
+
 				layoutpolicy_horizontal = expanding
 				margin = { 20 12}
+				spacing = 12
 
 				background = {
 					texture = "gfx/interface/colors/black.dds"
@@ -687,7 +694,6 @@ window = {
 
 					onclick = "[RulerDesignerLoadWindow.Delete]"
 
-
 					button_icon = {
 						name = "button_close"
 						texture = "gfx/interface/icons/flat_icons/window_close.dds"
@@ -698,10 +704,46 @@ window = {
 					}
 				}
 
-				expand = {}
+				dropdown_menu_standard = {
+					name = "load_options_dropdown"
 
+					blockoverride "dropdown_properties"
+					{
+						datamodel = "[RulerDesignerLoadWindow.GetRulerLoadOptions]"
+						onselectionchanged = "[RulerDesignerLoadWindow.SetRulerLoadOption]"
+						selectedindex = "[RulerDesignerLoadWindow.CurrentRulerLoadOption]"
+					}
+				
+					blockoverride "dropdown_active_item_properties"
+					{
+						text_single = {
+							align = nobaseline|left
+							margin_left = 15
+							parentanchor = vcenter
+							
+							text = "[CString.GetString]"	
+							default_format = "#clickable"
+						}
+					}
+		
+					blockoverride "dropdown_item_properties"
+					{
+						text_single = {
+							align = nobaseline|left
+							margin_left = 15
+							parentanchor = vcenter
+		
+							text = "[CString.GetString]"	
+							default_format = "#clickable"
+						}
+					}
+				}
+				
 				button_primary = {
 					name = "load_button"
+					
+					layoutpolicy_horizontal = expanding
+
 					text = "LOAD"
 					clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_start_game"
 

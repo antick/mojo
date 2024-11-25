@@ -2,7 +2,7 @@
 	obligation_levels = {
 		default = {
 			levies = {
-				value = 0.1
+				value = 0.3
 				#multiply = governor_efficiency
 			}
 
@@ -87,7 +87,6 @@ administrative_themes = {
 			color = { 0.2 0.2 0.7 1.0 }
 
 			tax_factor = 0.5
-			levies_factor = -0.75
 
 			vassal_modifier = {
 				development_growth_factor = 0.2
@@ -194,7 +193,7 @@ administrative_themes = {
 
 			vassal_modifier = {
 				fort_level = 2
-				defender_advantage = 8
+				defender_advantage = 6
 				hostile_county_attrition = -0.3
 				hostile_raid_time = 0.75
 				
@@ -207,6 +206,7 @@ administrative_themes = {
 			flag = admin_duchy_expansion_unlocked
 			flag = admin_ai_is_warlike
 			flag = admin_theme_frontier
+			flag = admin_theme_can_raid
 		}
 		admin_theme_imperial = {
 			position = { 1 1 }
@@ -365,7 +365,7 @@ administrative_themes = {
 				embarkation_cost_mult = -0.5
 				naval_movement_speed_mult = 0.25
 				no_disembark_penalty = yes
-				coastal_advantage = 15
+				coastal_advantage = 10
 				development_growth_factor = 0.1
 			}
 			

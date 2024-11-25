@@ -129,6 +129,7 @@ restore_roman_empire_holy_decision = {
 			government_has_flag = government_is_feudal
 			government_has_flag = government_is_republic
 			government_has_flag = government_is_clan
+			government_has_flag = government_is_administrative
 		}
 	}
 
@@ -232,6 +233,7 @@ restore_roman_empire_italian_decision = {
 			government_has_flag = government_is_feudal
 			government_has_flag = government_is_republic
 			government_has_flag = government_is_clan
+			government_has_flag = government_is_administrative
 		}
 	}
 

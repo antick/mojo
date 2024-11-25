@@ -222,6 +222,7 @@
  tradition_desert_nomads_desc:1 "This culture is no stranger to the harsh environment of the desert and has mastered the use of camels to aid them in travel, warfare, and everyday life."
  tradition_gardening_name:0 "Garden Architects"
  tradition_gardening_desc:0 "This culture has a long tradition of constructing and maintaining various types of gardens, building themselves a small paradise."
+ can_appoint_court_gardener_name: "$tradition_gardening_name$"
  tradition_monogamous_name:0 "Monogamous"
  tradition_monogamous_desc:0 "In this culture one keeps a single spouse, regardless of faith."
  tradition_polygamous_name:0 "Polygamous"
@@ -781,7 +782,7 @@
  culture_parameter_less_levies_from_inland_counties:0 "Inland [counties|E] give slightly less [levies|E]"
  culture_parameter_has_access_to_shieldmaidens:0 "[characters|E] of this [culture|E] may become [GetTrait('shieldmaiden').GetName(GetNullCharacter)]s if their [faithpossessive|E] [gender_doctrines|E] are biased against them"
  culture_parameter_has_access_to_trials_by_combat:0 "[crimes|E] by [characters|E] that you cannot [imprison|E] and who aren't your [liege|E] may be settled via [single_combat_fight|E]"
- culture_parameter_has_access_to_runestones:1 "[rulers|E] may raise runestones to commemorate certain major life events, earning [prestige_i][prestige|E]"
+ culture_parameter_has_access_to_runestones:1 "[rulers|E] may raise runestones to commemorate certain major life events, earning [prestige_i][prestige|E] #weak (Before the #color_white $culture_era_high_medieval$#! [era|E])#!"
  culture_parameter_craven_trait_costs_prestige:1 "The [GetTrait('craven').GetName(GetNullCharacter)] [trait|E] drains monthly [prestige_i][prestige|E]"
  culture_parameter_blademaster_traits_give_learning:1 "The [GetTrait('lifestyle_blademaster').GetName(GetNullCharacter)] [trait|E] gives [learning|E]"
 
@@ -815,6 +816,7 @@
  has_other_cultures_in_council_desc:0 "You must not have any [councillors|E] with a different [culture|E] from your own"
  20_percent_churches:0 "The [culture|E] does not have a [temple|E] in #V 20%#! of its [counties|E]"
  must_be_feudal_or_clan:0 "You must have the [feudal|E] or [clan|E] [government|E]"
+ must_be_feudal_clan_or_admin: "You must have the [feudal|E], [clan|E] or [administrative|E] [government|E]"
  only_one_marriage_tradition_allowed:0 "Only one [marriage|E] [tradition|E] is allowed and the following cannot be combined: $tradition_monogamous_name$, $tradition_polygamous_name$, and $tradition_concubines_name$"
  no_warrior_culture: "$tradition_fp3_beacon_of_learning_name$ is incompatible with $tradition_warrior_culture_name$"
  no_philosopher_culture: "$tradition_fp3_beacon_of_learning_name$ is incompatible with $tradition_philosopher_culture_name$"
@@ -1027,7 +1029,7 @@
  culture_emergence_events.0001.desc:0 "I am [ROOT.Char.GetCulture.GetName], but the people of my capital, the [capital_county_scope.GetBaseName], are [hybdridization_offer_culture.GetName]. As of late, I have seen my [hybdridization_offer_culture.GetNameNoTooltip] subjects emulating me and my [ROOT.Char.GetCulture.GetNameNoTooltip] ways.\n\nThey are blending our traditions. Some are old, some are new - but the most important thing is that they are more accepting of my rule!\n\nPerhaps this development should be encouraged?"
  culture_emergence_events.0001.a:0 "If they act like me, then I shall act like them. Soon we will be as if one."
  culture_emergence_events.0001.b:0 "Their admiration is enough!"
- cultural_acceptance_gain_event:0 "From Events" # TODO AO does 'Events in the realm of [hybridizer.GetUIName]' work?
+ cultural_acceptance_gain_event:0 "From Events"
  new_hybrid_culture_tt:0 "A [hybrid_culture|E] will appear that share a combination of [traditions|E] and [culture_pillars|E] from both the [ROOT.Char.GetCulture.GetName] and [hybdridization_offer_culture.GetName] [cultures|E]."
  culture_emergence_events.0001.existing_hybrid:0 "You and your lands will adopt the [existing_hybrid_culture.GetName] [culture|E]"
  culture_emergence_events.0001.new_hybrid:0 "You and your lands will adopt a newly emerged [hybrid_culture|E]"
@@ -1261,7 +1263,7 @@ tradition_ep3_palace_politics_desc: "Powerful eunuchs and silk-robed sycophants 
  culture_parameter_unlock_voluntary_laampdom: "[SelectLocalization( HasDlcFeature( 'landless_playable' ), 'culture_parameter_unlock_voluntary_laampdom_DLC', 'culture_parameter_unlock_voluntary_laampdom_NO_DLC' )]"
  culture_parameter_unlock_voluntary_laampdom_DLC: "Allows the [GetDecisionWithKey('become_landless_adventurer_decision').GetName] [decision|E]"
  culture_parameter_unlock_voluntary_laampdom_NO_DLC: ""
- unlock_voluntary_laampdom_name: "[GetCultureTradition('tradition_swords_for_hire').GetName], [GetCultureTradition('tradition_horse_lords').GetName], [GetCultureTradition('tradition_futuwaa').GetName] or [GetCultureTradition('tradition_ep3_audacious_cadets').GetName]"
+ unlock_voluntary_laampdom_name: "[GetCultureTradition('tradition_swords_for_hire').GetName], [GetCultureTradition('tradition_horse_lords').GetName], [GetCultureTradition('tradition_futuwaa').GetName], [GetCultureTradition('tradition_ep3_audacious_cadets').GetName], [GetCultureTradition('tradition_hird').GetName], [GetCultureTradition('tradition_caravaneers').GetName], [GetCultureTradition('tradition_diasporic').GetName], or [GetCultureTradition('tradition_fp1_coastal_warriors').GetName]"
 
  unlock_junior_emperors_name: "[nominal_duumvirates|E]"
  culture_parameter_unlock_junior_emperors: "[administrative|E] [emperors|E] may appoint one of their [children|E] as [junior_emperor|E], entering into a [nominal_duumvirate|E] until the $game_concept_child$ comes of age"
@@ -1297,3 +1299,11 @@ tradition_ep3_palace_politics_desc: "Powerful eunuchs and silk-robed sycophants 
  culture_parameter_resistant_to_desert_privation: ""
  culture_parameter_resistant_to_mountain_privation: ""
  culture_parameter_resistant_to_winter_privation: ""
+ 
+ allows_brewery: "Unlocks the #color_white $building_type_breweries_01$#! line of [buildings|E]"
+ culture_parameter_allows_brewery: "$allows_brewery$ for [city_holdings|E]"
+ culture_parameter_brewery_farming_bonus: "The #color_white $building_type_cereal_fields_01$#! and #color_white $building_type_farm_estates_01$#! line of [buildings|E] provide [county_opinion|E] bonuses"
+ tradition_brewery_name: "Brewing Culture"
+ tradition_brewery_desc: "This culture has a culture where brewing and drinking alcohol is an important role both in festivities and in daily life."
+ culture_in_farm_or_mansion_count_desc: "The [culture|E] is not present in at least #V 5#! [counties|E] with a #color_white $building_type_cereal_fields_01$#! or #color_white $building_type_farm_estates_01$#! [building|E]"
+
