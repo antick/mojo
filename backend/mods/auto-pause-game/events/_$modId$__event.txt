@@ -157,7 +157,7 @@ _$modId$_.6 = {
 	}
 }
 
-# Country converted
+# County converted
 _$modId$_.7 = {
 	type = character_event
 	title = _$modId$_.7.t
@@ -219,7 +219,7 @@ _$modId$_.9 = {
 
 	left_portrait = {
 		character = scope:councillor
-		animation = throne_room_cheer_2
+		animation = steward
 	}
 
 	right_portrait = {

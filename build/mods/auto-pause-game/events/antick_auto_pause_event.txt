@@ -12,9 +12,6 @@ antick_auto_pause.1 = {
 		scope:battle_side.combat.location = {
 			save_scope_as = province
 		}
-		scope:battle_side.side_commander = {
-			save_scope_as = side_commander
-		}
 		scope:battle_side.enemy_side.side_primary_participant = {
 			save_scope_as = enemy_primary_participant
 		}
@@ -24,6 +21,7 @@ antick_auto_pause.1 = {
 	}
 }
 
+# Victory
 antick_auto_pause.2 = {
 	type = character_event
 	title = antick_auto_pause.1.t
@@ -60,6 +58,7 @@ antick_auto_pause.3 = {
 	}
 }
 
+# Siege success
 antick_auto_pause.4 = {
 	type = character_event
 	title = antick_auto_pause.4.t
@@ -113,6 +112,7 @@ antick_auto_pause.5 = {
 	}
 }
 
+# Raid success
 antick_auto_pause.6 = {
 	type = character_event
 	title = antick_auto_pause.6.t
@@ -157,6 +157,7 @@ antick_auto_pause.6 = {
 	}
 }
 
+# County converted
 antick_auto_pause.7 = {
 	type = character_event
 	title = antick_auto_pause.7.t
@@ -168,12 +169,12 @@ antick_auto_pause.7 = {
 
 	left_portrait = {
 		character = scope:councillor
-		animation = throne_room_chancellor
+		animation = throne_room_cheer_2
 	}
 
 	right_portrait = {
 		character = root
-		animation = throne_room_ruler
+		animation = happiness
 	}
 
 	option = {
@@ -181,6 +182,7 @@ antick_auto_pause.7 = {
 	}
 }
 
+# Order restored
 antick_auto_pause.8 = {
 	type = character_event
 	title = antick_auto_pause.8.t
@@ -192,12 +194,12 @@ antick_auto_pause.8 = {
 
 	left_portrait = {
 		character = scope:councillor
-		animation = throne_room_chancellor
+		animation = throne_room_cheer_2
 	}
 
 	right_portrait = {
 		character = root
-		animation = throne_room_ruler
+		animation = happiness
 	}
 
 	option = {
@@ -205,6 +207,7 @@ antick_auto_pause.8 = {
 	}
 }
 
+# Culture converted
 antick_auto_pause.9 = {
 	type = character_event
 	title = antick_auto_pause.9.t
@@ -216,12 +219,12 @@ antick_auto_pause.9 = {
 
 	left_portrait = {
 		character = scope:councillor
-		animation = throne_room_chancellor
+		animation = steward
 	}
 
 	right_portrait = {
 		character = root
-		animation = throne_room_ruler
+		animation = happiness
 	}
 
 	option = {
@@ -242,10 +245,6 @@ antick_auto_pause.10 = {
 	immediate = {
 		save_scope_as = battle_side
 
-		scope:battle_side.side_commander = {
-			save_scope_as = side_commander
-		}
-
 		scope:battle_side.combat.location = {
 			save_scope_as = province
 		}
@@ -260,6 +259,7 @@ antick_auto_pause.10 = {
 	}
 }
 
+# Battle defeat
 antick_auto_pause.11 = {
 	type = character_event
 	title = antick_auto_pause.10.t

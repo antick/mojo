@@ -1,9 +1,9 @@
-version="1.1.0"
+version="1.1.1"
 tags={
 	"Fixes"
 	"Utilities"
 }
 name="Auto Pause Game"
 picture="thumbnail.png"
-supported_version="1.13.0.3"
+supported_version="1.14.1"
 remote_file_id="2906586207"
