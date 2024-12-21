@@ -1,0 +1,229 @@
+﻿# $conflict_prone=yes
+# $relates_to=common\on_action\childhood_on_actions.txt
+
+on_ward_arrive_at_guardian = {
+	effect = {
+		if = {
+			limit = {
+				# Ward still valid
+				is_alive = yes
+				is_adult = no
+				is_playable_character = no
+				num_of_relation_guardian = 0
+				# Guardian still valid
+				var:ward_travelling_to_guardian ?= {
+					is_alive = yes
+					num_of_relation_ward <= _$modId$__ward_limit
+				}
+				OR = {
+					scope:guardian = { is_playable_character = yes }
+					exists = scope:guardian.host
+					exists = scope:guardian.liege
+				}
+			}
+			# Move to court
+			if = {
+				limit = {
+					scope:guardian = { is_playable_character = yes }
+					NOT = { host = scope:guardian }
+				}
+				visit_court_of = scope:guardian
+			}
+			else_if = {
+				limit = {
+					exists = scope:guardian.host
+					NOT = { host = scope:guardian.host }
+				}
+				visit_court_of = scope:guardian.host
+			}
+			else_if = {
+				limit = {
+					exists = scope:guardian.liege
+					NOT = { host = scope:guardian.liege }
+				}
+				visit_court_of = scope:guardian.liege
+			}
+			# Set relation
+			set_relation_guardian = scope:guardian
+			# Opinion
+			guardian_add_opinion_effect = {
+				GUARDIAN = scope:guardian
+				WARD_LIEGE = scope:ward_liege
+				WARD = scope:ward
+			}
+			# Convert culture setup
+			scope:ward = {
+				if = {
+					limit = { has_character_flag = convert_culture }
+					scope:guardian = {
+						add_relation_flag = {
+							relation = ward
+							target = scope:ward
+							flag = convert_culture
+						}
+					}
+					remove_character_flag = convert_culture
+				}
+				# Convert faith setup
+				if = {
+					limit = { has_character_flag = convert_faith }
+					scope:guardian = {
+						add_relation_flag = {
+							relation = ward
+							target = scope:ward
+							flag = convert_faith
+						}
+					}
+					remove_character_flag = convert_faith
+				}
+			}
+			# Fire events
+			scope:guardian ?= { trigger_event = char_interaction.0083 }
+			if = {
+				limit = {
+					NOT = { scope:guardian_liege ?= scope:guardian }
+				}
+				scope:guardian_liege = { trigger_event = char_interaction.0083 }
+			}
+			scope:ward_liege ?= { trigger_event = char_interaction.0084 }
+		}
+		else = { # Invalidate travel
+			scope:guardian = {
+				send_interface_toast = {
+					type = event_toast_effect_neutral
+					title = ward_invalidated_during_travel_title
+					left_icon = scope:ward
+					right_icon = scope:guardian
+					show_as_tooltip = {
+						scope:ward = { remove_relation_guardian = scope:guardian }
+					}
+				}
+			}
+			scope:ward_liege ?= {
+				send_interface_toast = {
+					type = event_toast_effect_neutral
+					title = ward_invalidated_during_travel_title
+					left_icon = scope:ward
+					right_icon = scope:guardian
+					scope:ward = {
+						show_as_tooltip = { remove_relation_guardian = scope:guardian }
+						current_travel_plan ?= {
+							if = {
+								limit = { can_cancel = yes }
+								cancel_travel_plan = yes
+							}
+						}
+						set_location_to_default = yes
+					}
+				}
+			}
+			debug_log = "Invalidated ward travel on arrival"
+			debug_log_scopes = yes
+		}
+		# Clean up variables
+		remove_variable = ward_travelling_to_guardian
+		remove_variable = character_making_education_request
+		scope:guardian ?= { remove_variable = guardian_waiting_for_ward }
+	}
+}
+
+on_guardian_arrive_at_ward = {
+	effect = {
+		if = {
+			limit = {
+				# Guardian still valid
+				is_alive = yes
+				num_of_relation_ward <= _$modId$__ward_limit
+				# Ward still valid
+				var:guardian_travelling_to_ward ?= {
+					is_alive = yes
+					is_adult = no
+					is_playable_character = yes
+					num_of_relation_guardian = 0
+				}
+			}
+			# Move to court
+			visit_court_of = scope:ward
+			# Set relation
+			set_relation_ward = scope:ward
+			# Opinion
+			guardian_add_opinion_effect = {
+				GUARDIAN = scope:guardian
+				WARD_LIEGE = scope:ward_liege
+				WARD = scope:ward
+			}
+			# Convert culture setup
+			scope:ward = {
+				if = {
+					limit = { has_character_flag = convert_culture }
+					scope:guardian = {
+						add_relation_flag = {
+							relation = ward
+							target = scope:ward
+							flag = convert_culture
+						}
+					}
+					remove_character_flag = convert_culture
+				}
+				# Convert faith setup
+				if = {
+					limit = { has_character_flag = convert_faith }
+					scope:guardian = {
+						add_relation_flag = {
+							relation = ward
+							target = scope:ward
+							flag = convert_faith
+						}
+					}
+					remove_character_flag = convert_faith
+				}
+			}
+			# Fire events
+			scope:ward = { trigger_event = char_interaction.0082 }
+			if = {
+				limit = {
+					NOT = { scope:ward_liege = scope:ward }
+				}
+				scope:ward_liege = { trigger_event = char_interaction.0082 }
+			}
+		}
+		else = { # Invalidate travel
+			scope:ward = {
+				send_interface_toast = {
+					type = event_toast_effect_neutral
+					title = guardian_invalidated_during_travel_title
+					left_icon = scope:guardian
+					show_as_tooltip = {
+						scope:guardian = { remove_relation_ward = scope:ward }
+					}
+				}
+			}
+			scope:ward_liege ?= {
+				send_interface_toast = {
+					type = event_toast_effect_neutral
+					title = guardian_invalidated_during_travel_title
+					left_icon = scope:ward
+					right_icon = scope:guardian
+					scope:guardian = {
+						show_as_tooltip = { remove_relation_ward = scope:ward }
+						current_travel_plan = {
+							if = {
+								limit = { can_cancel = yes }
+								cancel_travel_plan = yes
+							}
+						}
+						set_location_to_default = yes
+					}
+				}
+			}
+			debug_log = "Invalidated guardian travel on arrival"
+			debug_log_scopes = yes
+		}
+		# Clean up variables
+		var:guardian_travelling_to_ward ?= {
+			remove_variable = character_making_education_request
+			remove_variable = ward_waiting_for_guardian
+		}
+		remove_variable = guardian_travelling_to_ward
+	}
+}

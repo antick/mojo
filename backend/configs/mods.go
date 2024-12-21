@@ -129,7 +129,7 @@ func ModConfig() *ModType {
 					"modFolderName":        "tweak-n-treat",
 					"modName":              "Tweak n Treat",
 					"modVersion":           "1.0.0",
-					"supportedGameVersion": "1.10.0.1",
+					"supportedGameVersion": "1.14.1",
 					"modRemoteFileId":      "",
 					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "tweak-n-treat"), "\\", "/"),
 					"modTags": `{

@@ -1,0 +1,141 @@
+﻿# $conflict_prone=yes
+# $relates_to=common\scripted_effects\05_bp2_hostage_effects.txt
+
+# Invalidate travelling wards
+ward_travel_invalidation_effect = {
+	if = {
+		limit = {
+			exists = var:ward_travelling_to_guardian
+			OR = {
+				# Ward is imprisoned
+				is_imprisoned = yes
+				# Ward has guardian already
+				num_of_relation_guardian > 0
+				is_playable_character = yes
+
+				var:ward_travelling_to_guardian = {
+					is_alive = no
+					# Guardian is jailed
+					is_imprisoned = yes
+					# Guardian has wards already
+					num_of_relation_ward >= antick_tweak_n_treat_ward_limit
+				}
+				NOT = { exists = var:ward_travelling_to_guardian }
+				NOT = { exists = var:character_making_education_request }
+			}
+		}
+		var:ward_travelling_to_guardian ?= { save_scope_as = guardian }
+		save_scope_as = ward
+		if = {
+			limit = { exists = liege }
+			liege = {
+				save_scope_as = ward_liege
+				send_interface_toast = {
+					title = ward_invalidated_during_travel_title
+					left_icon = scope:ward
+					right_icon = scope:guardian
+					show_as_tooltip = {
+						scope:ward = { remove_relation_guardian = scope:guardian }
+					}
+				}
+			}
+		}
+		scope:guardian ?= {
+			send_interface_toast = {
+				title = ward_invalidated_during_travel_title
+				left_icon = scope:ward
+				right_icon = scope:ward_liege
+				scope:ward = {
+					show_as_tooltip = { remove_relation_guardian = scope:guardian }
+					current_travel_plan = {
+						if = {
+							limit = { can_cancel = yes }
+							cancel_travel_plan = yes
+						}
+					}
+					set_location_to_default = yes
+				}
+			}
+			if = {
+				limit = { is_alive = yes }
+				remove_variable = guardian_waiting_for_ward
+			}
+		}
+		if = {
+			limit = { is_alive = yes }
+			remove_variable = ward_travelling_to_guardian
+			remove_variable = character_making_education_request
+		}
+		debug_log = "Ward invalidated during travel"
+		debug_log_scopes = yes
+	}
+}
+
+# Invalidate travelling guardians
+guardian_travel_invalidation_effect = {
+	if = {
+		limit = {
+			exists = var:guardian_travelling_to_ward
+			OR = {
+				# Guardian is imprisoned
+				is_imprisoned = yes
+
+				# Guardian has wards already
+				num_of_relation_ward >= antick_tweak_n_treat_ward_limit
+				is_playable_character = yes
+
+				var:guardian_travelling_to_ward = {
+					is_alive = no
+					# Ward is jailed
+					is_imprisoned = yes
+					# Ward has a guardian already
+					num_of_relation_guardian > 0
+				}
+				NOT = { exists = var:guardian_travelling_to_ward }
+			}
+		}
+		var:guardian_travelling_to_ward ?= { save_scope_as = ward }
+		save_scope_as = guardian
+		scope:ward ?= {
+			if = {
+				limit = { exists = liege }
+				liege = {
+					save_scope_as = ward_liege
+					send_interface_toast = {
+						title = ward_invalidated_during_travel_title
+						left_icon = scope:guardian
+						right_icon = scope:ward
+						show_as_tooltip = {
+							scope:guardian = { remove_relation_ward = scope:ward }
+						}
+					}
+				}
+			}
+			send_interface_toast = {
+				title = guardian_invalidated_during_travel_title
+				left_icon = scope:guardian
+				scope:guardian = {
+					show_as_tooltip = { remove_relation_ward = scope:ward }
+					current_travel_plan = {
+						if = {
+							limit = { can_cancel = yes }
+							cancel_travel_plan = yes
+						}
+					}
+					set_location_to_default = yes
+				}
+			}
+			if = {
+				limit = { is_alive = yes }
+				remove_variable = character_making_education_request
+				remove_variable = ward_waiting_for_guardian
+			}
+		}
+		if = {
+			limit = { is_alive = yes }
+			remove_variable = guardian_travelling_to_ward
+		}
+		debug_log = "Guardian invalidated during travel"
+		debug_log_scopes = yes
+	}
+}

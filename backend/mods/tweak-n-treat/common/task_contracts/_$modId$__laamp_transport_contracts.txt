@@ -1,0 +1,386 @@
+﻿# $conflict_prone=yes
+# $relates_to=common\task_contracts\laamp_transport_contracts.txt
+
+laamp_transport_ward = {
+	group = laamp_contracts_transport_group
+	icon = "gfx/interface/icons/character_interactions/icon_contract_escort.dds"
+	travel = no
+	use_diplomatic_range = no
+
+	# Validity Triggers
+	valid_to_create = {
+		# Standard triggers.
+		valid_laamp_basic_trigger = {
+			EMPLOYER = scope:employer
+			LAAMP = root
+		}
+		employer_has_treasury_to_offer_job_trigger = yes
+		valid_laamp_sensible_start_trigger = yes
+		# Specific flavour triggers.
+		scope:employer = {
+			any_child = {
+				is_ai = yes
+				is_available_child_allow_travel = yes
+				OR = {
+					num_of_relation_guardian = 0
+					any_relation = {
+						type = guardian
+						is_landed = no
+					}
+				}
+				age = { 4 12 }
+			}
+			OR = {
+				any_neighboring_top_liege_realm_owner = {
+					is_ai = yes
+					num_of_relation_ward < _$modId$__ward_limit
+					is_adult = yes
+					OR = {
+						has_education_rank_4_trigger = yes
+						has_education_rank_5_trigger = yes
+						num_virtuous_traits > 0
+					}
+					has_any_good_relationship_with_character_trigger = { CHARACTER = scope:employer }
+					capital_province != root.domicile.domicile_location
+				}
+				any_vassal = {
+					is_ai = yes
+					num_of_relation_ward < _$modId$__ward_limit
+					is_adult = yes
+					OR = {
+						has_education_rank_4_trigger = yes
+						has_education_rank_5_trigger = yes
+						num_virtuous_traits > 0
+					}
+					has_any_good_relationship_with_character_trigger = { CHARACTER = scope:employer }
+					capital_province != root.domicile.domicile_location
+				}
+			}
+		}
+	}
+	valid_to_keep = {
+		exists = root.var:task_contract_object
+	}
+	valid_to_accept = {
+		# Standard triggers.
+		valid_laamp_basic_accept_only_trigger = yes
+		valid_laamp_basic_trigger = {
+			EMPLOYER = scope:employer
+			LAAMP = root
+		}
+	}
+	valid_to_continue = {
+		var:task_contract_object ?= {
+			is_alive = yes
+		}
+		var:task_contract_target ?= {
+			is_alive = yes
+		}
+	}
+
+	weight = {
+		# Standard weights.
+		value = task_contract_weight_interesting_somewhat_rare_value
+		add = laamp_contracts_weight_up_transport_value
+		add = task_contract_weight_employer_contact_list_value
+		scope:employer = { multiply = task_contract_weight_by_tier_value }
+	}
+
+	# On_Actions
+	on_create = {
+		scope:contract = {
+			save_scope_as = task_contract
+			task_contract_employer = {
+				if = {
+					limit = {
+						NOT = { exists = scope:task_contract.var:task_contract_object }
+					}
+					random_child = {
+						limit = {
+							is_available_child_allow_travel = yes
+							OR = {
+								num_of_relation_guardian = 0
+								any_relation = {
+									type = guardian
+									is_landed = no
+								}
+							}
+							age = { 4 12 }
+						}
+						save_scope_as = task_contract_object
+					}
+				}
+				if = {
+					limit = {
+						NOT = { exists = scope:task_contract.task_contract_target }
+					}
+					random_neighboring_top_liege_realm_owner = {
+						limit = {
+							is_ai = yes
+							is_adult = yes
+							num_of_relation_ward < _$modId$__ward_limit
+							OR = {
+								has_education_rank_4_trigger = yes
+								has_education_rank_5_trigger = yes
+								num_virtuous_traits > num_sinful_traits
+							}
+							has_any_good_relationship_with_character_trigger = { CHARACTER = scope:task_contract.task_contract_employer }
+							capital_province != scope:task_contract.task_contract_taker.domicile.domicile_location
+						}
+						save_scope_as = task_contract_target
+					}
+				}
+				else = {
+					random_vassal = {
+						limit = {
+							is_ai = yes
+							num_of_relation_ward < _$modId$__ward_limit
+							is_adult = yes
+							OR = {
+								has_education_rank_4_trigger = yes
+								has_education_rank_5_trigger = yes
+								num_virtuous_traits > num_sinful_traits
+							}
+							has_any_good_relationship_with_character_trigger = { CHARACTER = scope:task_contract.task_contract_employer }
+							capital_province != scope:task_contract.task_contract_taker.domicile.domicile_location
+						}
+						save_scope_as = task_contract_target
+					}
+				}
+				if = {
+					limit = {
+						NOT = { exists = scope:task_contract.task_contract_destination }
+					}
+					scope:task_contract_target = {
+						capital_province = {
+							save_scope_as = task_contract_destination
+						}
+					}
+				}
+			}
+			set_variable = {
+				name = task_contract_employer
+				value = scope:task_contract.task_contract_employer
+			}
+			if = {
+				limit = {
+					exists = scope:task_contract.task_contract_target
+				}
+				set_variable = {
+					name = task_contract_target
+					value = scope:task_contract.task_contract_target
+				}
+			}
+			else = {
+				set_variable = {
+					name = task_contract_target
+					value = scope:task_contract_target
+				}
+				set_task_contract_target = scope:task_contract_target
+			}
+			if = {
+				limit = {
+					exists = scope:task_contract.task_contract_destination
+				}
+				set_variable = {
+					name = task_contract_destination
+					value = scope:task_contract.task_contract_destination
+				}
+			}
+			else = {
+				set_variable = {
+					name = task_contract_destination
+					value = scope:task_contract_destination
+				}
+			}
+			set_variable = {
+				name = task_contract_object
+				value = scope:task_contract_object
+			}
+			#set the ward/guardian variables same as in education interactions
+			var:task_contract_object = {
+				set_variable = {
+					name = character_requested_as_educator
+					value = scope:task_contract.task_contract_target
+					years = 10
+				}
+				set_variable = {
+					name = character_making_education_request
+					value = scope:task_contract.task_contract_employer
+					years = 10
+				}
+				set_variable = {
+					name = ward_travelling_to_guardian
+					value = scope:task_contract.task_contract_target
+				}
+			}
+			var:task_contract_target = {
+				set_variable = {
+					name = guardian_waiting_for_ward
+					value = scope:task_contract.task_contract_target
+				}
+			}
+			# Make our gold rewards static.
+			grab_gold_fuzz_number_effect = yes
+			set_variable = {
+				name = gold_success_standard
+				value = task_contract_success_gold_gain_travel_value
+			}
+		}
+	}
+
+	on_accepted = {
+		task_contract_taker = { play_sound_effect = "event:/DLC/EP3/SFX/UI/Contracts/ep3_ui_contracts_accept_contract" }
+		save_scope_as = task_contract
+		task_contract_taker = {
+			trigger_event = ep3_contract_event.0001
+		}
+	}
+
+	on_invalidated = {
+		if = {
+			limit = {
+				root.task_contract_taker = {
+					any_character_active_contract = {
+						this = root
+					}
+				}
+			}
+			task_contract_employer = {
+				save_scope_as = task_contract_employer
+			}
+			save_scope_value_as = {
+				name = task_contract_tier
+				value = root.task_contract_tier
+			}
+			var:task_contract_destination = {
+				save_scope_as = task_contract_destination
+			}
+			var:task_contract_object = {
+				save_scope_as = task_contract_object
+			}
+
+			task_contract_taker = {
+				set_variable = {
+					name = invalidated_task_contract_type
+					value = flag:laamp_transport_ward
+				}
+			}
+			if = {
+				limit = {
+					var:task_contract_object ?= {
+						is_alive = no
+					}
+				}
+				task_contract_taker = {
+					save_scope_value_as = {
+						name = task_contract_invalidation_reason
+						value = flag:escortee_dead
+					}
+					trigger_event = ep3_contract_event.0012
+				}
+			}
+			else_if = {
+				limit = {
+					task_contract_employer = {
+						is_alive = no
+					}
+				}
+				task_contract_employer.primary_title.holder ?= {
+					save_scope_as = employer_heir
+				}
+				task_contract_taker = {
+					save_scope_value_as = {
+						name = task_contract_invalidation_reason
+						value = flag:employer_dead
+					}
+					trigger_event = ep3_contract_event.0012
+
+				}
+			}
+			else_if = {
+				limit = {
+					var:task_contract_target = {
+						is_alive = no
+					}
+				}
+				var:task_contract_target ?= {
+					save_scope_as = dead_target
+				}
+				task_contract_employer = {
+					save_scope_as = task_contract_employer
+				}
+				task_contract_taker = {
+					save_scope_value_as = {
+						name = task_contract_invalidation_reason
+						value = flag:target_dead
+					}
+					trigger_event = ep3_contract_event.0012
+				}
+			}
+			#remove the ward/guardian variables
+			if = {
+				limit = {
+					var:task_contract_object ?= {
+						is_alive = yes
+					}
+				}
+				var:task_contract_object = {
+					remove_variable = character_requested_as_educator
+					remove_variable = character_making_education_request
+					remove_variable = ward_travelling_to_guardian
+					return_to_court = yes
+				}
+			}
+			if = {
+				limit = {
+					task_contract_target ?= {
+						is_alive = yes
+					}
+				}
+				task_contract_target = {
+					remove_variable = guardian_waiting_for_ward
+				}
+			}
+		}
+	}
+
+	# Rewards
+	task_contract_reward = {
+		success_standard = {
+			effect = {
+				task_contract_taker = { play_sound_effect = "event:/DLC/EP3/SFX/UI/Contracts/ep3_ui_contracts_success_on_contract" }
+				save_scope_value_as = { name = extra_reward value = flag:no }
+				laamp_rewards_disburse_ordinary_currency_effect = {
+					GOLD = scope:task_contract.var:gold_success_standard
+					PRESTIGE = task_contract_success_prestige_gain_full_value
+					PIETY = 0
+					PROVISIONS = 0
+					OPINION = task_contract_opinion_standard_reward_value
+					OPINION_TYPE = succeeded_task_contract_opinion
+					CONTACT = yes
+					CONTACT_HOOK = yes
+					EXTRA_REWARD = scope:extra_reward
+				}
+			}
+		}
+		failure_standard = {
+			positive = no
+			effect = {
+				task_contract_taker = { play_sound_effect = "event:/DLC/EP3/SFX/UI/Contracts/ep3_ui_contracts_failure_on_contract" }
+				save_scope_value_as = { name = extra_reward value = flag:no }
+				laamp_rewards_disburse_ordinary_currency_effect = {
+					GOLD = 0
+					PRESTIGE = task_contract_failure_prestige_loss_full_value
+					PIETY = 0
+					PROVISIONS = task_contract_failure_provisions_gain_minor_value
+					OPINION = task_contract_opinion_standard_failure_value
+					OPINION_TYPE = failed_task_contract_opinion
+					CONTACT = no
+					CONTACT_HOOK = no
+					EXTRA_REWARD = scope:extra_reward
+				}
+			}
+		}
+	}
+}
