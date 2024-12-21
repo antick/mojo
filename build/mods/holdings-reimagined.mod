@@ -8,6 +8,6 @@ tags={
 }
 name="Holdings Reimagined"
 picture="thumbnail.png"
-supported_version="1.13.0.3"
+supported_version="1.14.2.2"
 path="C:/Users/panka/OneDrive/Documents/Paradox Interactive/Crusader Kings III/mod/holdings-reimagined"
 

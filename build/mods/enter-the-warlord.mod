@@ -6,6 +6,6 @@ tags={
 }
 name="Enter the Warlord"
 picture="thumbnail.png"
-supported_version="1.14.1"
+supported_version="1.14.2.2"
 path="C:/Users/panka/OneDrive/Documents/Paradox Interactive/Crusader Kings III/mod/enter-the-warlord"
 

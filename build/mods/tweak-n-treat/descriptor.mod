@@ -4,5 +4,5 @@ tags={
 }
 name="Tweak n Treat"
 picture="thumbnail.png"
-supported_version="1.14.1"
+supported_version="1.14.2.2"
 

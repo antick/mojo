@@ -290,11 +290,18 @@
 # Building Cost #
 #################
 
-@cheap_cost_base = 100
-@normal_cost_base = 150
-@expensive_cost_base = 200
-@main_cost_base = 400
-@tribal_cost_base = 75
+# [antick_holdings_reimagined]
+# @cheap_cost_base = 100
+# @normal_cost_base = 150
+# @expensive_cost_base = 200
+# @main_cost_base = 400
+# @tribal_cost_base = 75
+@cheap_cost_base = 50
+@normal_cost_base = 75
+@expensive_cost_base = 100
+@main_cost_base = 200
+@tribal_cost_base = 30
+# [/antick_holdings_reimagined]
 
 @building_cost_scaling_modifier_cheap = 0.1
 @building_cost_scaling_modifier_normal = 0.1

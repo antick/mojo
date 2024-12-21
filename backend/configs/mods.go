@@ -57,7 +57,7 @@ func ModConfig() *ModType {
 					"modFolderName":        "enter-the-warlord",
 					"modName":              "Enter the Warlord",
 					"modVersion":           "1.0.0",
-					"supportedGameVersion": "1.14.1",
+					"supportedGameVersion": "1.14.2.2",
 					"modRemoteFileId":      "",
 					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "enter-the-warlord"), "\\", "/"),
 					"modTags": `{
@@ -75,7 +75,7 @@ func ModConfig() *ModType {
 					"modFolderName":        "holdings-reimagined",
 					"modName":              "Holdings Reimagined",
 					"modVersion":           "1.0.0",
-					"supportedGameVersion": "1.13.0.3",
+					"supportedGameVersion": "1.14.2.2",
 					"modRemoteFileId":      "",
 					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "holdings-reimagined"), "\\", "/"),
 					"modTags": `{
@@ -129,7 +129,7 @@ func ModConfig() *ModType {
 					"modFolderName":        "tweak-n-treat",
 					"modName":              "Tweak n Treat",
 					"modVersion":           "1.0.0",
-					"supportedGameVersion": "1.14.1",
+					"supportedGameVersion": "1.14.2.2",
 					"modRemoteFileId":      "",
 					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "tweak-n-treat"), "\\", "/"),
 					"modTags": `{
@@ -177,7 +177,7 @@ func ModConfig() *ModType {
 					"modFolderName":        "auto-pause-game",
 					"modName":              "Auto Pause Game",
 					"modVersion":           "1.1.1",
-					"supportedGameVersion": "1.14.1",
+					"supportedGameVersion": "1.14.2.2",
 					"modRemoteFileId":      "remote_file_id=\"2906586207\"",
 					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "auto-pause-game"), "\\", "/"),
 					"modTags": `{
