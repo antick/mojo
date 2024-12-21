@@ -1,25 +1,24 @@
 ﻿# $relates_to=common\governments\00_government_types.txt
 
-### Brief: feudal_government
 #
 # This is referenced in code
 #
 feudal_government = {
 	government_rules = {
-	create_cadet_branches = yes
-	rulers_should_have_dynasty = yes
-	dynasty_named_realms = yes
-	royal_court = yes
-	legitimacy = yes
+		create_cadet_branches = yes
+		rulers_should_have_dynasty = yes
+		dynasty_named_realms = yes
+		royal_court = yes
+		legitimacy = yes
 	}
 
 	fallback = 1
 
 	primary_holding = castle_holding
-	#### Mojo change begins ####
+	required_county_holdings = { castle_holding city_holding church_holding }
+	### Mojo change begins ###
 	valid_holdings = { city_holding }
-	# required_county_holdings = { castle_holding city_holding church_holding }
-	#### Mojo change ends ####
+	### Mojo change ends ###
 
 	vassal_contract = {
 		feudal_government_taxes
@@ -32,6 +31,7 @@ feudal_government = {
 		war_declaration_rights
 		council_rights
 		title_revocation_rights
+		jizya_special_rights
 	}
 
 	ai = {
@@ -47,9 +47,7 @@ feudal_government = {
 republic_government = {
 	primary_holding = city_holding
 	valid_holdings = { castle_holding }
-	#### Mojo change begins ####
-	# required_county_holdings = { city_holding castle_holding church_holding }
-	#### Mojo change ends ####
+	required_county_holdings = { city_holding castle_holding church_holding }
 
 	government_rules = {
 		inherit_from_dynastic_government = no
@@ -83,10 +81,7 @@ theocracy_government = {
 
 	primary_holding = church_holding
 	valid_holdings = { castle_holding }
-
-	#### Mojo change begins ####
-	# required_county_holdings = { church_holding castle_holding city_holding }
-	#### Mojo change ends ####
+	required_county_holdings = { church_holding castle_holding city_holding }
 
 	ai = {
 		use_legends = no
@@ -126,11 +121,10 @@ clan_government = {
 
 	preferred_religions = { islam_religion }
 
-	#### Mojo change begins ####
-	# valid_holdings = { castle_holding }
+	### Mojo change begins ###
 	valid_holdings = { castle_holding city_holding }
-	# required_county_holdings = { castle_holding city_holding church_holding }
-	#### Mojo change ends ####
+	### Mojo change ends ###
+	required_county_holdings = { castle_holding city_holding church_holding }
 	always_use_patronym = yes
 
 	house_unity = clan_house_unity
@@ -205,20 +199,18 @@ clan_government = {
 
 tribal_government = {
 	government_rules = {
-	rulers_should_have_dynasty = yes
-	regiments_prestige_as_gold = yes
+		rulers_should_have_dynasty = yes
+		regiments_prestige_as_gold = yes
 		royal_court = yes
 		legitimacy = yes
 	}
 
 	supply_limit_mult_for_others = -0.5
 	primary_holding = tribal_holding
-
-	#### Mojo change begins ####
-	# required_county_holdings = { tribal_holding }
-	# valid_holdings = { castle_holding }
+	required_county_holdings = { tribal_holding }
+	### Mojo change begins ###
 	valid_holdings = { castle_holding city_holding }
-	#### Mojo change ends ####
+	### Mojo change ends ###
 
 	prestige_opinion_override = { -10 0 3 5 10 20 }
 	always_use_patronym = yes
@@ -258,8 +250,8 @@ tribal_government = {
 #
 mercenary_government = {
 	government_rules = {
-	court_generate_spouses = no
-	council = no
+		court_generate_spouses = no
+		council = no
 		inherit_from_dynastic_government = no
 	}
 
@@ -287,7 +279,7 @@ mercenary_government = {
 holy_order_government = {
 	government_rules = {
 		council = no
-	court_generate_spouses = no
+		court_generate_spouses = no
 		inherit_from_dynastic_government = no
 	}
 
@@ -330,10 +322,7 @@ administrative_government = {
 
 	primary_holding = castle_holding
 	valid_holdings = { city_holding }
-
-	#### Mojo change begins ####
-	# required_county_holdings = { castle_holding city_holding church_holding }
-	#### Mojo change ends ####
+	required_county_holdings = { castle_holding city_holding church_holding }
 
 	vassal_contract = {
 		administrative_obligations
@@ -350,6 +339,8 @@ administrative_government = {
 		men_at_arms_limit = -2
 		knight_limit = -5
 		vassal_limit = 100
+		active_accolades = -1
+		title_creation_cost_mult = -0.5
 	}
 
 	# Use flags instead of has_government for moddability if possible (i.e., wherever not visible to the player).
@@ -390,7 +381,7 @@ landless_adventurer_government = {
 
 	character_modifier = {
 		active_accolades = -100
-		knight_limit = 10
+		knight_limit = 2
 		men_at_arms_cap = -3
 		men_at_arms_limit = -2
 		character_travel_speed = 20
@@ -399,6 +390,7 @@ landless_adventurer_government = {
 		short_reign_duration_mult = -5
 		long_reign_bonus_mult = -1
 		domicile_travel_speed = -0.75
+		monthly_wanderer_lifestyle_xp_gain_mult = 0.15
 	}
 
 	ai = {
