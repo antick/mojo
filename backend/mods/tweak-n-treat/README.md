@@ -12,6 +12,7 @@ A collection of essential tweaks designed to enhance CK3 experience.
   - Level of fame should be "Exalted among men" (4) or above
   - Highest held title should be at the Kingdom level or higher.
   - Ruler must be independent.
+- Total 50 tradition slots for each culture.
 
 ## Frequently Asked Questions
 
