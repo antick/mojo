@@ -1,0 +1,42 @@
+coa_rd_dynasty_224657925={
+custom=yes
+pattern="pattern__solid_designer.dds"
+color1=red_light
+color2=white
+color3=green
+colored_emblem={
+color1=yellow_light
+color2=red_light
+texture="ce_lotus_big.dds"
+instance={
+position={ 0.500000 0.310000 }
+scale={ 0.465000 0.465000 }
+}
+
+}
+
+colored_emblem={
+color1=yellow_light
+color2=blue
+texture="ce_star_16.dds"
+instance={
+position={ 0.500000 0.305000 }
+scale={ 0.780000 0.780000 }
+depth=1.010000
+}
+
+}
+
+colored_emblem={
+color1=yellow_light
+color2=black
+texture="ce_trident.dds"
+instance={
+position={ 0.500000 0.860000 }
+scale={ 0.620000 0.620000 }
+depth=2.010000
+}
+
+}
+
+}
