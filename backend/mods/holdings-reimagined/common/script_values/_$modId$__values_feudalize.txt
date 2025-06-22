@@ -1,4 +1,4 @@
-﻿_$modId$__value_feudalize_holding_cost_very_cheap = 125
+﻿_$modId$__value_feudalize_holding_cost_very_cheap = 100
 _$modId$__value_feudalize_holding_cost_cheap = 250
 _$modId$__value_feudalize_holding_cost_default = 500
 _$modId$__value_feudalize_holding_cost_expensive = 1000

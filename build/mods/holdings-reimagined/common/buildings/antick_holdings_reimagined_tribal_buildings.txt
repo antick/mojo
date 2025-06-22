@@ -304,9 +304,9 @@ war_03 = { ###command
 
     character_modifier = {
         knight_limit = 3
-		supply_capacity_mult = 1.5
-		supply_duration = 0.25
-		monthly_prestige = 0.2
+				supply_capacity_mult = 1.5
+				supply_duration = 0.25
+				monthly_prestige = 0.2
     }
 
     province_modifier = {

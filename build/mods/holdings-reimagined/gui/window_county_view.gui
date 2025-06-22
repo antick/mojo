@@ -13,7 +13,7 @@ window = {
 	layer = windows_layer
 	### Mojo change begins ###
 	# size = { 625 645 }
-	size = { 630 714 }
+	size = { 630 800 }
 	### Mojo change ends ###
 
 	state = {
@@ -2159,7 +2159,6 @@ window = {
 
 								# new one
 								flowcontainer = {
-									parentanchor = bottom|right
 									spacing = 5
 									direction = vertical
 									visible = "[HoldingView.GetTitle.HasHolder]"
