@@ -1,8 +1,8 @@
-﻿_$modId$__value_slot_cost_very_cheap = 100
-_$modId$__value_slot_cost_cheap = 200
-_$modId$__value_slot_cost_default = 500
-_$modId$__value_slot_cost_expensive = 700
-_$modId$__value_slot_cost_very_expensive = 1000
+﻿_$modId$__value_slot_cost_very_cheap = 10
+_$modId$__value_slot_cost_cheap = 20
+_$modId$__value_slot_cost_default = 50
+_$modId$__value_slot_cost_expensive = 70
+_$modId$__value_slot_cost_very_expensive = 100
 
 _$modId$__value_player_slot_base_cost = {
 	if = {

@@ -1,8 +1,8 @@
-﻿_$modId$__value_change_holding_type_cost_very_cheap = 100
-_$modId$__value_change_holding_type_cost_cheap = 200
-_$modId$__value_change_holding_type_cost_default = 500
-_$modId$__value_change_holding_type_cost_expensive = 700
-_$modId$__value_change_holding_type_cost_very_expensive = 1000
+﻿_$modId$__value_change_holding_type_cost_very_cheap = 10
+_$modId$__value_change_holding_type_cost_cheap = 20
+_$modId$__value_change_holding_type_cost_default = 50
+_$modId$__value_change_holding_type_cost_expensive = 70
+_$modId$__value_change_holding_type_cost_very_expensive = 100
 
 _$modId$__value_change_holding_type_cooldown_very_short = 1
 _$modId$__value_change_holding_type_cooldown_short = 2
