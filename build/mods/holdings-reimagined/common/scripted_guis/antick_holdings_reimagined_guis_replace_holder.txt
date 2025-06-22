@@ -1,36 +1,36 @@
 ﻿antick_holdings_reimagined_replace_holder_button = {
     scope = character
-	saved_scopes = { gui_holding }
+		saved_scopes = { gui_holding }
     is_shown = {
-		debug_only = yes
-		scope:gui_holding = {
-			is_county_capital = no
-			barony = { is_under_holy_order_lease = no }
-			trigger_if = {
-				limit = {
-					has_holding_type = church_holding
+			debug_only = yes
+			scope:gui_holding = {
+				is_county_capital = no
+				barony = { is_under_holy_order_lease = no }
+				trigger_if = {
+					limit = {
+						has_holding_type = church_holding
+					}
+					root.faith = { has_doctrine = doctrine_theocracy_lay_clergy }
 				}
-				root.faith = { has_doctrine = doctrine_theocracy_lay_clergy }
 			}
-		}
     }
     effect = {
-		custom_tooltip = antick_holdings_reimagined_replace_holder.tt
-		scope:gui_holding = {
-			hidden_effect = {
-				create_title_and_vassal_change = {
-					type = conquest
-					save_scope_as = change
-					add_claim_on_loss = no
-				}
-				barony = {
-					change_title_holder = {
-						holder = root
-						change = scope:change
+			custom_tooltip = antick_holdings_reimagined_replace_holder.tt
+			scope:gui_holding = {
+				hidden_effect = {
+					create_title_and_vassal_change = {
+						type = conquest
+						save_scope_as = change
+						add_claim_on_loss = no
 					}
+					barony = {
+						change_title_holder = {
+							holder = root
+							change = scope:change
+						}
+					}
+					resolve_title_and_vassal_change = scope:change
 				}
-				resolve_title_and_vassal_change = scope:change
 			}
-		}
     }
 }

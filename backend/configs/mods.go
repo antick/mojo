@@ -75,7 +75,7 @@ func ModConfig() *ModType {
 					"modFolderName":        "holdings-reimagined",
 					"modName":              "Holdings Reimagined",
 					"modVersion":           "1.0.0",
-					"supportedGameVersion": "1.14.2.2",
+					"supportedGameVersion": "1.16.2.3",
 					"modRemoteFileId":      "",
 					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "holdings-reimagined"), "\\", "/"),
 					"modTags": `{

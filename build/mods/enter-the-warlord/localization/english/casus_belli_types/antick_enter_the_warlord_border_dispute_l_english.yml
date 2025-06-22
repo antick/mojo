@@ -1,7 +1,7 @@
 ﻿l_english:
  antick_enter_the_warlord_border_dispute_cb:0 "Illegal Border Invasion"
  antick_enter_the_warlord_border_dispute_invalidated_message:1 "The [war.GetName] has ended: [defender.GetShortUIName] no longer [Select_CString( defender.IsLocalPlayer, 'control', 'controls' )] the County."
- antick_enter_the_warlord_border_dispute_cb_victory_desc_attacker:0 "You will illegally occupy the border counties."
+ antick_enter_the_warlord_border_dispute_cb_victory_desc_attacker:0 "You will occupy the border counties."
  antick_enter_the_warlord_border_dispute_cb_defeat_desc:0 "The county will remain under rightful control."
 
  dominate_victory_desc:0 "True might has been displayed to everyone."

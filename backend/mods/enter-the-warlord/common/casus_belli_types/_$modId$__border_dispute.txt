@@ -2,7 +2,7 @@
 # $relates_to=common\casus_belli_types\00_struggle_war.txt
 
 _$modId$__border_dispute_cb = {
-  war_name = _$modId$__border_dispute_cb
+  # war_name = _$modId$__border_dispute_cb
   truce_days = 100
   white_peace_possible = yes
   is_independent_ruler = yes
