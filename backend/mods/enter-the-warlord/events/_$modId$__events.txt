@@ -1,4 +1,5 @@
-﻿# $depends_on=events\_events.info
+﻿# $conflict_prone=no
+# $relates_to=events\_events.info
 
 namespace = _$modId$__event
 

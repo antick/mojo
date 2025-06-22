@@ -1,3 +1,4 @@
-﻿# $relates_to=common\nicknames\_nicknames.info
+﻿# $conflict_prone=no
+# $relates_to=common\nicknames\_nicknames.info
 
 _$modId$__nick = {}

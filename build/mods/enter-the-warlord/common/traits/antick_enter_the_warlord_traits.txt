@@ -1,4 +1,5 @@
-﻿# $relates_to=common\traits\00_traits.txt
+﻿# $conflict_prone=no
+# $relates_to=common\traits\00_traits.txt
 
 antick_enter_the_warlord_trait = {
   index = 1200
@@ -15,30 +16,30 @@ antick_enter_the_warlord_trait = {
 	title_creation_cost_mult = -0.75
 	monthly_legitimacy_add = 5
 	men_at_arms_maintenance = -0.75
-	monthly_income = 20
+	monthly_income = 30
 	enemy_hostile_scheme_phase_duration_add = 25
 	enemy_hostile_scheme_success_chance_max_add = -40
 	enemy_hostile_scheme_success_chance_growth_add = -3
 
 	shown_in_ruler_designer = yes
 
-  martial = 30
-  prowess = 30
+  martial = 40
+  prowess = 40
 
-  stress_loss_mult = 0.5
+  stress_loss_mult = 0.7
 
   # Combat modifiers
   advantage = 10
-  siege_phase_time = -0.3
+  siege_phase_time = -0.5
   siege_morale_loss = 0.2
-  movement_speed = 0.2
-  enemy_terrain_advantage = -0.2
+  movement_speed = 0.3
+  enemy_terrain_advantage = -0.3
   hard_casualty_modifier = -0.2
   enemy_hard_casualty_modifier = 0.2
-  vassal_levy_contribution_mult = 0.5
+  vassal_levy_contribution_mult = 0.65
 
   # Opinion modifiers
-  attraction_opinion = 10
+  attraction_opinion = 20
   vassal_opinion = 50
   independent_ruler_opinion = -30
   same_opinion = -50

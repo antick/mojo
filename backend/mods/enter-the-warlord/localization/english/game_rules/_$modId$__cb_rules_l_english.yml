@@ -1,6 +1,0 @@
-﻿l_english:
- rule__$modId$__limited_player:0 "Does Player need traits for Invasion Casus Belli"
- setting__$modId$__player_not_limited:0 "Player is not limited"
- setting__$modId$__player_is_limited:0 "Player needs traits"
- setting__$modId$__player_not_limited_desc:0 "The Player does not need specific character traits to start Border Disputes"
- setting__$modId$__player_is_limited_desc:0 "The Player *DOES* need specific character traits to start Border Disputes"

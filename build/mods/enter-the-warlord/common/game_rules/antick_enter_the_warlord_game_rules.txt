@@ -1,3 +1,4 @@
+# $conflict_prone=no
 # $relates_to=common\game_rules\00_game_rules.txt
 
 antick_enter_the_warlord_player = {

@@ -1,8 +1,8 @@
 ﻿l_english:
  trait_antick_enter_the_warlord:0 "The Great Warlord"
- trait_antick_enter_the_warlord_turkish:0 "The Great Warlord"
- trait_antick_enter_the_warlord_indian:0 "The Great Warlord"
- trait_antick_enter_the_warlord_arab:0 "The Great Warlord"
+ trait_antick_enter_the_warlord_turkish:0 "Büyük Fatih"
+ trait_antick_enter_the_warlord_indian:0 "Chakravarti Samrat"
+ trait_antick_enter_the_warlord_arab:0 "Al-Fātiḥ"
 
  trait_antick_enter_the_warlord_desc:0 "This character is a master of strategy, driven by unrestrained ambition and relentless in the quest to conquer all."
  trait_antick_enter_the_warlord_character_desc:1 "[ROOT.GetCharacter.GetFullNameNoTooltip] is a master of strategy, driven by boundless ambition and an insatiable thirst for power."

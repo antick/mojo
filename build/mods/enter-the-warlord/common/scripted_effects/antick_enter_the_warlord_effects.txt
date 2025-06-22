@@ -1,3 +1,4 @@
+# $conflict_prone=no
 # $relates_to=common\scripted_effects\00_scripted_effects.txt
 
 antick_enter_the_warlord_spawn_army_effect = {
@@ -848,7 +849,7 @@ antick_enter_the_warlord_invasion_county_looting_chance_effect = {
 		random = {
 			chance = scope:attacker.martial
 
-			# Send a message (and gold!) to the Mongol Emperor
+			# Send a message and gold to the Emperor
 			scope:attacker = {
 				send_interface_message = {
 					type = event_war_bad
@@ -857,22 +858,20 @@ antick_enter_the_warlord_invasion_county_looting_chance_effect = {
 					right_icon = scope:county
 					add_gold = {
 						add = scope:county.development_level
-						multiply = 10
+						multiply = 100
 					}
 					if = {
 						limit = { dread < 100 }
-						add_dread = 2
+						add_dread = 10
 					}
 				}
-				save_scope_as = mongol_emperor
-				# Send a message to the County's owner
+
 				scope:county.holder = {
 					send_interface_message = {
 						type = event_war_bad
 						title = antick_enter_the_warlord_sieged_county.t
-						left_icon = scope:mongol_emperor
+						left_icon = scope:attacker
 						right_icon = scope:county
-						scope:county = { mongols_devastate_county_effect = yes }
 					}
 				}
 			}
