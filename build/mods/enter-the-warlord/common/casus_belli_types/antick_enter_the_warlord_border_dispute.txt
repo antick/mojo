@@ -2,7 +2,6 @@
 # $relates_to=common\casus_belli_types\00_struggle_war.txt
 
 antick_enter_the_warlord_border_dispute_cb = {
-  # war_name = antick_enter_the_warlord_border_dispute_cb
   truce_days = 100
   white_peace_possible = yes
   is_independent_ruler = yes
@@ -34,7 +33,7 @@ antick_enter_the_warlord_border_dispute_cb = {
 		NOT = { scope:attacker = { any_liege_or_above = { this = scope:defender } } }
 	}
 
-	target_titles = all
+	target_titles = neighbor_land
 	target_title_tier = county
 	ignore_effect = change_title_holder
 	defender_ticking_warscore = 0.125
@@ -93,7 +92,7 @@ antick_enter_the_warlord_border_dispute_cb = {
 	cost = {
 		# Charge piety against same-faith opponents.
 		piety = {
-			value = 100
+			value = 1000
 			if = {
 				limit = {
 					scope:defender.faith = scope:attacker.faith
@@ -106,7 +105,7 @@ antick_enter_the_warlord_border_dispute_cb = {
 		}
 		# & prestige against diff-faith opponents.
 		prestige = {
-			value = 100
+			value = 1000
 			if = {
 				limit = {
 					NOT = { scope:defender.faith = scope:attacker.faith }
@@ -308,9 +307,9 @@ antick_enter_the_warlord_border_dispute_cb = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 
-	war_name = "STRUGGLE_WAR_NAME"
-	war_name_base = "STRUGGLE_WAR_NAME_BASE"
-	cb_name = "STRUGGLE_COUNTY_CB_NAME"
+	war_name = antick_enter_the_warlord_border_dispute_cb
+	war_name_base = antick_enter_the_warlord_border_dispute_cb
+	cb_name = antick_enter_the_warlord_border_dispute_cb
 
 	interface_priority = 79
 
