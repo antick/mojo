@@ -1,8 +1,8 @@
 ﻿antick_holdings_reimagined_value_feudalize_holding_cost_very_cheap = 100
-antick_holdings_reimagined_value_feudalize_holding_cost_cheap = 250
+antick_holdings_reimagined_value_feudalize_holding_cost_cheap = 200
 antick_holdings_reimagined_value_feudalize_holding_cost_default = 500
-antick_holdings_reimagined_value_feudalize_holding_cost_expensive = 1000
-antick_holdings_reimagined_value_feudalize_holding_cost_very_expensive = 2000
+antick_holdings_reimagined_value_feudalize_holding_cost_expensive = 700
+antick_holdings_reimagined_value_feudalize_holding_cost_very_expensive = 1000
 
 antick_holdings_reimagined_value_feudalize_holding_cost = {
 	if = {

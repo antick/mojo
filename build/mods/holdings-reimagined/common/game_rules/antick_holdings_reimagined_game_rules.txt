@@ -1,6 +1,6 @@
 ﻿building_slots = {
 	categories = {
-		tweaks
+		mojo
 	}
 
 	default = default_slots_limit

@@ -129,7 +129,7 @@ func ModConfig() *ModType {
 					"modFolderName":        "tweak-n-treat",
 					"modName":              "Tweak n Treat",
 					"modVersion":           "1.0.0",
-					"supportedGameVersion": "1.14.2.2",
+					"supportedGameVersion": "1.16.2.3",
 					"modRemoteFileId":      "",
 					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "tweak-n-treat"), "\\", "/"),
 					"modTags": `{
@@ -138,16 +138,16 @@ func ModConfig() *ModType {
 				},
 			},
 
-			"united-thrones": {
+			"graphics-reimagined": {
 				Enabled: true,
 				Replacements: map[string]string{
-					"modId":                config.ModIdPrefix + "_united_thrones",
-					"modFolderName":        "united-thrones",
-					"modName":              "United Thrones",
+					"modId":                config.ModIdPrefix + "_graphics_reimagined",
+					"modFolderName":        "graphics-reimagined",
+					"modName":              "Graphics Reimagined",
 					"modVersion":           "1.0.0",
-					"supportedGameVersion": "1.10.0.1",
+					"supportedGameVersion": "1.16.2.3",
 					"modRemoteFileId":      "",
-					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "united-thrones"), "\\", "/"),
+					"modBuildPath":         strings.ReplaceAll(filepath.Join(config.GameCustomModPath, "graphics-reimagined"), "\\", "/"),
 					"modTags": `{
 	"Fixes"
 }`,
