@@ -103,7 +103,7 @@ window = {
 											name = "name"
 											layoutpolicy_horizontal = expanding
 											text = "[Character.GetUINameNoTooltip]"
-											max_width = 240
+											max_width = 220
 											using = Font_Size_Medium
 											alwaystransparent = yes
 										}
@@ -114,7 +114,7 @@ window = {
 											text = "[Character.GetRelationToString( GetPlayer )]"
 											default_format = "#low"
 											align = left
-											max_width = 240
+											max_width = 220
 											alwaystransparent = yes
 
 											tooltip = "EXTENDED_RELATIONS_TOOLTIP"
@@ -191,6 +191,8 @@ window = {
 											align = nobaseline|right
 
 											tooltip = "[CharacterListItem.GetText( 'acceptance_desc' )]"
+											# not sure why it is needed, but without alwaystransparent, the button the text is on will not highlight
+											alwaystransparent = yes 
 										}
 									}
 								}

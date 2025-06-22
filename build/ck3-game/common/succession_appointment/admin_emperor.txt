@@ -424,6 +424,16 @@
 					desc = county_holder_opinion_desc
 				}
 			}
+			if = { # Score for house members of the emperor is affected by the capital's popular opinion
+				limit = {
+					exists = top_liege.house
+					house ?= top_liege.house
+				}
+				add = {
+					value = top_liege.capital_county.county_holder_opinion
+					desc = popular_opinion_in_capital_desc
+				}
+			}
 
 			# LIFESTYLE PERKS
 			if = {
@@ -434,7 +444,7 @@
 				}
 			}
 
-			#TITLE TIER
+			# TITLE TIER
 			if = {
 				limit = {
 					is_landed = yes
@@ -456,7 +466,7 @@
 				}
 			}
 
-			#LOWBORN? EW no
+			# LOWBORN? EW no
 			if = {
 				limit = {
 					is_lowborn = yes
@@ -467,19 +477,10 @@
 				}
 			}
 
-			#INFLUENCE LEVEL
+			# INFLUENCE LEVEL
 			if = {
 				limit = {
-					influence_level = 0
-				}
-				subtract = {
-					value = 20
-					desc = "[influence_level|E]"
-				}
-			}
-			if = {
-				limit = {
-					influence_level >= 2
+					influence_level != 1
 				}
 				add = {
 					value = 20
@@ -491,7 +492,7 @@
 				}
 			}
 
-			#DIFFERENT CULTURE FROM IMPERIAL CAPITAL
+			# DIFFERENT CULTURE FROM IMPERIAL CAPITAL
 			if = {
 				limit = {
 					root.top_liege.capital_county.culture ?= {
@@ -568,7 +569,7 @@
 				}
 			}
 
-			#ELDEST ELIGIBLE CHILD OF EMPEROR
+			# ELDEST ELIGIBLE CHILD OF EMPEROR
 			if = {
 				limit = {
 					scope:title.holder = {
@@ -640,7 +641,7 @@
 					desc = eldest_imperial_child_desc
 				}
 			}
-			#CLOSE FAMILY
+			# CLOSE FAMILY
 			else_if = {
 				limit = {
 					is_close_family_of = scope:title.holder
@@ -651,7 +652,7 @@
 					desc = imperial_close_family_desc
 				}
 			}
-			#EXTENDED FAMILY
+			# EXTENDED FAMILY
 			else_if = {
 				limit = {
 					is_close_or_extended_family_of = scope:title.holder
@@ -662,7 +663,7 @@
 					desc = imperial_close_extended_family_desc
 				}
 			}
-			#SAME HOUSE
+			# SAME HOUSE
 			else_if = {
 				limit = {
 					house = top_liege.house
@@ -674,7 +675,7 @@
 				}
 			}
 
-			#SPOUSE AND THEIR FAMILY
+			# SPOUSE AND THEIR FAMILY
 			if = {
 				limit = {
 					is_spouse_of = scope:title.holder
@@ -699,7 +700,7 @@
 				}
 			}
 
-			#FRIENDS OF THE EMPEROR
+			# FRIENDS OF THE EMPEROR
 			if = {
 				limit = {
 					has_relation_friend = scope:title.holder
@@ -742,7 +743,7 @@
 				}
 			}
 
-			#CO-EMPEROR OF EMPEROR
+			# CO-EMPEROR OF EMPEROR
 			if = {
 				limit = {
 					is_diarch_of_target = scope:title.holder
@@ -759,7 +760,7 @@
 					desc = imperial_diarch_desc
 				}
 			}
-			#OTHER DIARCHS OF EMPEROR
+			# OTHER DIARCHS OF EMPEROR
 			else_if = {
 				limit = {
 					is_diarch_of_target = scope:title.holder

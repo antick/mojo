@@ -4018,11 +4018,16 @@ ep3_emperor_yearly.2151 = {
 	}
 	right_portrait = {
 		character = scope:chaplain
-		animation = scepter
+		triggered_animation = {
+			trigger = { religion = religion:christianity_religion }
+			animation = scepter # anim uses crucifix scepter
+		}
+		animation = war_over_tie
 	}
 	lower_right_portrait = scope:saint
 
 	trigger = {
+		scope:saint = { is_alive = yes }
 		OR = {
 			valid_for_byz_governor_content_trigger = yes
 			valid_for_byz_emperor_content_trigger = yes
@@ -5161,7 +5166,10 @@ ep3_emperor_yearly.2210 = {
 		# candidate to a governorship (or the empire)
 		any_heir_title = {
 			tier > tier_county
-			holder ?= { government_allows = administrative }
+			holder ?= {
+				government_allows = administrative
+				has_realm_law_flag = appointment_type_succession
+			}
 		}
 		is_landed = no
 	}
@@ -5200,7 +5208,10 @@ ep3_emperor_yearly.2210 = {
 		random_heir_title = {
 			limit = {
 				exists = holder
-				holder = { government_allows = administrative }
+				holder = {
+					government_allows = administrative
+					has_realm_law_flag = appointment_type_succession
+				}
 				tier > tier_county
 			}
 			save_scope_as = potential_title

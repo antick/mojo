@@ -34,11 +34,15 @@ action_assign_tax_payers = {
 	check_create_action = {
 		if = {
 			limit = {
-				employs_tax_collector = yes
-				any_tax_collector = {
-					count = all
-					any_tax_collector_vassal = { 
-						count = 0
+				any_vassal = {
+					government_has_flag = government_is_clan
+					save_temporary_scope_as = vassal_check
+				}
+				NOT = {
+					any_tax_slot = {
+						any_tax_slot_vassal = {
+							this = scope:vassal_check
+						}
 					}
 				}
 			}

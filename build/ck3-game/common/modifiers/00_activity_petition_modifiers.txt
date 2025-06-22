@@ -9,7 +9,7 @@ petition_liege_county_control_modifier = {
 
 # Convert
 petition_liege_county_convert_modifier = {
-	icon = piety_positive
+	icon = piety_mixed
 	county_opinion_add = -15
 }
 

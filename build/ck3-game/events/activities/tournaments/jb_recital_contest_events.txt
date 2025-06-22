@@ -774,6 +774,25 @@ contest_events.5030 = {
 	}
 	cooldown = { years = 1 }
 
+	trigger = {
+		scope:activity = {
+			any_guest_subset_current_phase = {
+				name = qualified
+				contest_event_general_contestant_valid_trigger = yes
+			}
+		}
+	}
+
+	immediate = {
+		scope:activity = {
+			random_guest_subset_current_phase = {
+				name = qualified
+				limit = { contest_event_general_contestant_valid_trigger = yes }
+				save_scope_as = enemy
+			}
+		}
+	}
+
 	# Push your luck
 	option = {
 		name = contest_events.5030.a

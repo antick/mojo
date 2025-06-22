@@ -138,15 +138,6 @@
 		}
 
 		first_valid = {
-			triggered_effect = { # Eunuch variable doesn't exist, or Eunuch has left court
-				trigger = {
-					OR = {
-						NOT = { exists = var:eunuch }
-						NOT = { exists = var:eunuch.employer }
-					}
-				}
-				effect = { end_story = yes }
-			}
 			triggered_effect = { # Eunuch is dead
 				trigger = {
 					exists = var:eunuch
@@ -186,6 +177,15 @@
 					var:eunuch = { save_scope_as = eunuch }
 					story_owner ?= { trigger_event = ep3_story_cycle_admin_eunuch.8030 }
 				}
+			}
+			triggered_effect = { # Eunuch variable doesn't exist, or Eunuch has left court
+				trigger = {
+					OR = {
+						NOT = { exists = var:eunuch }
+						NOT = { exists = var:eunuch.employer }
+					}
+				}
+				effect = { end_story = yes }
 			}
 		}
 	}

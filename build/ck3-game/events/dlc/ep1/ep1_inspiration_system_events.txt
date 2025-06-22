@@ -111,3 +111,36 @@ inspiration_system.1101  = {
 		}
 	}
 }
+
+inspiration_system.1200 = { # Courtier becomes Adventurer
+	type = character_event
+	hidden = yes
+	
+	trigger = {
+		scope:antiquarian_from_task ?= {
+			has_court_position = antiquarian_court_position
+		}
+		scope:adventure_target ?= {
+			is_physically_able_adult = yes
+			NOR = {
+				exists = inspiration
+				has_court_position = antiquarian_court_position
+			}
+			adventure_inspiration_average_skill_value >= medium_inspiration_skill
+			host ?= root
+		}
+	}
+
+	immediate = {
+		send_interface_toast = {
+			type = msg_court_inspiration
+			left_icon = scope:adventure_target
+			right_icon = scope:antiquarian_from_task
+			title = antiquarian_inspired_adventurer_message
+			desc = antiquarian_inspired_adventurer_effect
+			scope:adventure_target = {
+				create_inspiration = adventure_inspiration
+			}
+		}
+	}
+}

@@ -1,4 +1,4 @@
-types Breakdowns
+﻿types Breakdowns
 {
 	## List of values tooltip
 	# Note: use "widget_value_breakdown_tooltip" to get a list with a tooltip background and header.
@@ -18,8 +18,8 @@ types Breakdowns
 			datamodel = "[ValueBreakdown.GetSubValues]"
 			alwaystransparent = no
 			set_parent_size_to_minimum = yes
-			margin = { 17 10 }
-			spacing = 3
+			margin = { 20 10 }
+			spacing = 5
 
 			block "list" {}
 
@@ -110,10 +110,15 @@ types Breakdowns
 
 		vbox = {
 			layoutpolicy_horizontal = expanding
+
 			set_parent_size_to_minimum = yes
-			margin = { 14 8 }
-			margin_bottom = 18
-			spacing = 14
+
+			block "margins"
+			{
+				margin = { 15 8 }
+				margin_bottom = 20
+				spacing = 15
+			}
 
 			block "my_gold" {}
 
@@ -130,11 +135,13 @@ types Breakdowns
 			}
 
 			block "gold_income" {}
+
+			block "extra_info" {}
 		}
 	}
 
 	type vbox_gold_breakdown = vbox {
-		spacing = 6
+		spacing = 5
 		alwaystransparent = no
 
 		vbox = {
@@ -145,10 +152,12 @@ types Breakdowns
 				text = "[ValueBreakdown.GetName]"
 				default_format = "#T"
 
-				background = {
-					using = Background_Area
-					margin = { 10 0 }
-					margin_bottom = 8
+				block "header_background" {
+					background = {
+						using = Background_Area
+						margin = { 10 5 }
+						margin_bottom = 10
+					}
 				}
 			}
 
@@ -156,7 +165,7 @@ types Breakdowns
 				name = "values_grid"
 				datamodel = "[ValueBreakdown.GetSubValues]"
 				layoutpolicy_horizontal = expanding
-				margin_top = 2
+				margin_top = 10
 
 				item = {
 					hbox = {
@@ -240,12 +249,12 @@ types Breakdowns
 			name = "tooltip_container"
 			set_parent_size_to_minimum = yes
 			filter_mouse = all
-			margin = { 14 8 }
-			margin_bottom = 12
+			margin = { 15 8 }
+			margin_bottom = 15
 
 			vbox = {
 				layoutpolicy_horizontal = expanding
-				margin_bottom = 14
+				margin_bottom = 15
 				spacing = 5
 
 				block "header" {}
@@ -259,11 +268,10 @@ types Breakdowns
 
 					background = {
 						using = Background_Area
-						margin = { 10 0 }
-						margin_bottom = 5
+						margin = { 10 5 }
+						margin_bottom = 10
 					}
 				}
-
 
 				text_single = {
 					name = "total_label_no_tooltip"
@@ -300,8 +308,8 @@ types Breakdowns
 
 					background = {
 						using = Background_Area
-						margin = { 10 0 }
-						margin_bottom = 5
+						margin = { 10 5 }
+						margin_bottom = 10
 					}
 
 					text_single = {
@@ -476,7 +484,7 @@ types Breakdowns
 				vbox = {
 					margin = { 16 4 }
 					layoutpolicy_horizontal = expanding
-					
+
 					textbox = {
 						name = "modifiers"
 						using = DefaultTooltipText
@@ -755,6 +763,30 @@ types Breakdowns
 				visible = "[CostBreakdown.HasCost( 'gold' )]"
 
 				raw_text = "@gold_icon![CostBreakdown.GetCost( 'gold' )|0]"
+				align = nobaseline
+				default_format = "#high"
+
+				tooltipwidget = { widget_value_breakdown_tooltip = {} }
+			}
+
+			text_single = {
+				name = "influence"
+				datacontext = "[CostBreakdown.AccessBreakdownTooltip( 'influence' )]"
+				visible = "[CostBreakdown.HasCost( 'influence' )]"
+
+				raw_text = "@influence_icon![CostBreakdown.GetCost( 'influence' )|0]"
+				align = nobaseline
+				default_format = "#high"
+
+				tooltipwidget = { widget_value_breakdown_tooltip = {} }
+			}
+
+			text_single = {
+				name = "herd"
+				datacontext = "[CostBreakdown.AccessBreakdownTooltip( 'herd' )]"
+				visible = "[CostBreakdown.HasCost( 'herd' )]"
+
+				raw_text = "@herd_icon![CostBreakdown.GetCost( 'herd' )|0]"
 				align = nobaseline
 				default_format = "#high"
 

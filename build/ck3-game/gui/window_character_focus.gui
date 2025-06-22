@@ -98,9 +98,8 @@ window = {
 						texture = "gfx/interface/buttons/button_lifestyles_active_frame.dds"
 					}
 
-					tooltipwidget = {
-						container_focus_cooltip = {}
-					}
+					tooltip = "EDUCATION_FOCUS_BUTTON_TOOLTIP"
+					using = tooltip_below
 				}
 
 				### Martial
@@ -122,9 +121,8 @@ window = {
 						texture = "gfx/interface/buttons/button_lifestyles_active_frame.dds"
 					}
 
-					tooltipwidget = {
-						container_focus_cooltip = {}
-					}
+					tooltip = "EDUCATION_FOCUS_BUTTON_TOOLTIP"
+					using = tooltip_below
 				}
 
 				### Stewardship
@@ -146,9 +144,8 @@ window = {
 						texture = "gfx/interface/buttons/button_lifestyles_active_frame.dds"
 					}
 
-					tooltipwidget = {
-						container_focus_cooltip = {}
-					}
+					tooltip = "EDUCATION_FOCUS_BUTTON_TOOLTIP"
+					using = tooltip_below
 				}
 
 				### Learning
@@ -170,9 +167,8 @@ window = {
 						texture = "gfx/interface/buttons/button_lifestyles_active_frame.dds"
 					}
 
-					tooltipwidget = {
-						container_focus_cooltip = {}
-					}
+					tooltip = "EDUCATION_FOCUS_BUTTON_TOOLTIP"
+					using = tooltip_below
 				}
 
 				### Intrigue
@@ -194,9 +190,8 @@ window = {
 						texture = "gfx/interface/buttons/button_lifestyles_active_frame.dds"
 					}
 
-					tooltipwidget = {
-						container_focus_cooltip = {}
-					}
+					tooltip = "EDUCATION_FOCUS_BUTTON_TOOLTIP"
+					using = tooltip_below
 				}
 
 				portrait_shoulders = {
@@ -227,10 +222,13 @@ window = {
 			layoutpolicy_vertical = expanding
 			margin_top = 10
 			spacing = 10
+			# we hide the text_label_center if nothing is selected
+			ignoreinvisible = no 
 
 			text_label_center = {
 				name = "selected_focus_name"
 				text = "[CharacterFocusWindow.GetSelectedFocusName]"
+				visible = "[Not(StringIsEmpty(CharacterFocusWindow.GetSelectedFocusName))]"
 			}
 
 			# Info about Selected Focus
@@ -241,38 +239,47 @@ window = {
 
 				blockoverride "scrollbox_content"
 				{
-					spacing = 10
+					vbox = {
+						visible = "[Not(StringIsEmpty(CharacterFocusWindow.GetSelectedFocusName))]"
+						spacing = 4
 
-					text_multi = {
-						autoresize = yes
-						maximumsize = { 390 -1 }
-						minimumsize = { 390 -1 }
-						text = "[CharacterFocusWindow.GetSelectedFocusDescription]"
-					}
+						text_multi = {
+							autoresize = yes
+							maximumsize = { 390 -1 }
+							minimumsize = { 390 -1 }
+							text = "[CharacterFocusWindow.GetSelectedFocusDescription]"
+						}
 
-					text_multi = {
-						autoresize = yes
-						maximumsize = { 390 -1 }
-						minimumsize = { 390 -1 }
-						text = "[CharacterFocusWindow.GetFocusDescriptionFromDatabase]"
-					}
+						text_multi = {
+							autoresize = yes
+							maximumsize = { 390 -1 }
+							minimumsize = { 390 -1 }
+							text = "[CharacterFocusWindow.GetFocusDescriptionFromDatabase]"
+						}
 
-					text_multi = {
-						autoresize = yes
-						maximumsize = { 390 -1 }
-						minimumsize = { 390 -1 }
-						text = "[CharacterFocusWindow.GetSelectedFocusEffectDesc]"
-					}
+						text_multi = {
+							autoresize = yes
+							maximumsize = { 390 -1 }
+							minimumsize = { 390 -1 }
+							text = "[CharacterFocusWindow.GetSelectedFocusEffectDesc]"
+						}
 
-					text_multi = {
-						autoresize = yes
-						maximumsize = { 390 -1 }
-						minimumsize = { 390 -1 }
-						text = "[CharacterFocusWindow.GetSelectedFocusModifierDesc]"
-					}
+						text_multi = {
+							autoresize = yes
+							maximumsize = { 390 -1 }
+							minimumsize = { 390 -1 }
+							text = "[CharacterFocusWindow.GetSelectedFocusModifierDesc]"
+						}
+					}					
+				}
 
+				blockoverride "scrollbox_empty"
+				{
+					visible = "[StringIsEmpty(CharacterFocusWindow.GetSelectedFocusName)]"
+					text = "EDUCATION_FOCUS_SELECTED_EMPTY_STATE"
 				}
 			}
+
 		}
 
 		vbox = {

@@ -30,6 +30,8 @@
 
 		hbox = {
 			layoutpolicy_horizontal = expanding
+			margin_bottom = 10
+			margin_left = 15
 
 			background = {
 				using = Background_Header_Tall
@@ -243,7 +245,7 @@
 												coa_house_medium = {
 
 													powerful_family_bonus = {
-														parentanchor = bottom|right
+														parentanchor = top|right
 													}
 												}
 
@@ -265,6 +267,7 @@
 											}
 
 											button_support_candidacy = {}
+											
 											spacer = {
 												size = { 8 0 }
 											}
@@ -359,7 +362,7 @@
 
 							coa_house_medium = {
 								powerful_family_bonus = {
-									parentanchor = bottom|right
+									parentanchor = top|right
 								}
 							}
 						}

@@ -2312,12 +2312,12 @@ vizierate_remove_extravagance_modifiers_effect = {
 }
 
 ##################################################
-# Co-Rulershiås
+# Co-Rulerships
 
 sort_junior_emperor_candidates_to_list_effect = {
 	scope:actor = {
 		every_close_or_extended_family_member = {
-			limit = { valid_junior_emperor_candidate_trigger = yes }
+			limit = { valid_junior_emperor_candidate_trigger = { LIEGE = scope:actor } }
 			add_to_list = characters
 		}
 	}
@@ -2342,7 +2342,12 @@ sort_co_emperor_candidates_to_list_effect = {
 
 sort_co_monarch_candidates_to_list_effect = {
 	scope:actor = {
-		every_child = { add_to_list = characters }
+		every_child = { 
+			limit = {
+				valid_co_monarch_candidate_trigger = { LIEGE = scope:actor }
+			}
+			add_to_list = characters 
+		}
 	}
 }
 

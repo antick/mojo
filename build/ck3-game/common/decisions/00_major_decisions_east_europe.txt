@@ -951,8 +951,6 @@ launch_hungarian_migration_decision = {
 	is_valid = {
 		#An emperor does not voluntarily lose a tier.
 		highest_held_title_tier <= tier_kingdom
-		#Cannot be a settled people.
-		government_has_flag = government_is_tribal
 		#Reshow this here so that players realise they're on a timer.
 		custom_description = {
 			text = launch_hungarian_migration_decision_before_last_date

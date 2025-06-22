@@ -44,7 +44,7 @@ personal_scheme_ongoing.1000 = {
 				scheme_type = courting
 			}
 			NOT = { has_variable = declined_6540_exotic_wares_gift }
-			scheme_agent_charges >= 2
+			scheme_progress >= scheme_progress_33
 		}
 	}
 	immediate = {

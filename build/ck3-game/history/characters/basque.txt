@@ -1268,9 +1268,6 @@ qasi.0006 = {
 	827.1.1 = {
 		birth = yes
 	}
-	860.1.1 = {
-		employer = 73683 # Emir Muhammad I of Andalusia
-	}
 	867.1.1 = {
 		add_spouse = 73783 # Awriyah ibn Lubb
 	}
@@ -5977,8 +5974,7 @@ qasi.0006 = {
 	religion = catholic
 	culture = basque
 	trait = education_intrigue_2
-
-	1051.1.1 = {
+	1038.1.1 = {
 		birth = yes
 	}
 	1054.9.1 = {

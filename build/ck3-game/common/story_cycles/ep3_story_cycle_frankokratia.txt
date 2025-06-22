@@ -20,6 +20,16 @@
 		debug_log = "Frankokratia story ended on:"
 		debug_log_date = yes
 		remove_global_variable = byz_claimant_champion
+		if = {
+			limit = {
+				var:byz_claimant = {
+					is_alive = yes
+				}
+			}
+			var:byz_claimant = {
+				remove_character_flag = byz_claimant_flag
+			}
+		}
 	}
 #
 	on_owner_death = {

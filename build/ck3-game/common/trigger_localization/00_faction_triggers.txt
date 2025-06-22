@@ -35,6 +35,10 @@ has_lowest_imperial_bureaucracy = {
 	third_not = CHARACTER_CANNOT_LOWER_IMPERIAL_BUREAUCRACY
 }
 
+has_lowest_tribal_authority = {
+	third_not = CHARACTER_CANNOT_LOWER_TRIBAL_AUTHORITY
+}
+
 faction_can_join_create_in_another_faction = {
 	first_not = NOT_FACTION_JOIN_CREATE_CONDITION_NOT_FACTION_MEMBER
 }

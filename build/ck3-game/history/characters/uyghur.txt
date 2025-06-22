@@ -103,18 +103,18 @@
 		death = yes
 	}
 }
-194191 = {
-	name = "Qutlugh"
-	dynasty = 1045083 # Ediz
-	religion = "manichean"
-	culture = "uyghur"
-	758.1.1 = {
-		birth = yes
-	}
-	808.1.1 = {
-		death = yes
-	}
-}
+#194191 = {
+#	name = "Qutlugh"
+#	dynasty = 1045083 # Ediz
+#	religion = "manichean"
+#	culture = "uyghur"
+#	758.1.1 = {
+#		birth = yes
+#	}
+#	808.1.1 = {
+#		death = yes
+#	}
+#}
 
 217100 = {
 	name = "C_or" #fictional
@@ -882,58 +882,58 @@
 		death = yes
 	}
 }#minister who betrayed the Uyghur Empire to the Kyrgyz in 840
-166758 = {
-	name = "Paoi"
-	dynasty = 1045083 # Ediz
-	religion = "manichean"
-	culture = "uyghur"
-	father = 194191
-	778.1.1 = {
-		birth = yes
-	}
-	821.1.1 = {
-		death = yes
-	}
-}
-166759 = {
-	name = "KU_chlU_g" #Chungte
-	dynasty = 1045083 # Ediz
-	religion = "manichean"
-	culture = "uyghur"
-	father = 166758
-	795.1.1 = {
-		birth = yes
-	}
-	824.1.1 = {
-		death = yes
-	}
-}
-166760 = {
-	name = "Qasar"
-	dynasty = 1045083 # Ediz
-	religion = "manichean"
-	culture = "uyghur"
-	father = 166758
-	798.1.1 = {
-		birth = yes
-	}
-	832.1.1 = {
-		death = yes
-	}
-}
-166761 = {
-	name = "Hu"
-	dynasty = 1045083 # Ediz
-	religion = "manichean"
-	culture = "uyghur"
-	father = 166759
-	811.1.1 = {
-		birth = yes
-	}
-	839.1.1 = {
-		death = yes
-	}
-}
+#166758 = {
+#	name = "Paoi"
+#	dynasty = 1045083 # Ediz
+#	religion = "manichean"
+#	culture = "uyghur"
+#	father = 194191
+#	778.1.1 = {
+#		birth = yes
+#	}
+#	821.1.1 = {
+#		death = yes
+#	}
+#}
+#166759 = {
+#	name = "KU_chlU_g" #Chungte
+#	dynasty = 1045083 # Ediz
+#	religion = "manichean"
+#	culture = "uyghur"
+#	father = 166758
+#	795.1.1 = {
+#		birth = yes
+#	}
+#	824.1.1 = {
+#		death = yes
+#	}
+#}
+#166760 = {
+#	name = "Qasar"
+#	dynasty = 1045083 # Ediz
+#	religion = "manichean"
+#	culture = "uyghur"
+#	father = 166758
+#	798.1.1 = {
+#		birth = yes
+#	}
+#	832.1.1 = {
+#		death = yes
+#	}
+#}
+#166761 = {
+#	name = "Hu"
+#	dynasty = 1045083 # Ediz
+#	religion = "manichean"
+#	culture = "uyghur"
+#	father = 166759
+#	811.1.1 = {
+#		birth = yes
+#	}
+#	839.1.1 = {
+#		death = yes
+#	}
+#}
 166762 = {
 	name = "KO_l"
 	dynasty = 1040063 # Hosa
@@ -972,20 +972,19 @@
 		death = yes
 	}
 }
-166765 = {
-	name = "O_ge"
-	dynasty = 1045083 # Ediz
-	religion = "manichean"
-	culture = "uyghur"
-	father = 166758
-	802.1.1 = {
-		birth = yes
-	}
-	847.1.1 = {
-		death = yes
-	}
-}
-
+#166765 = {
+#	name = "O_ge"
+#	dynasty = 1045083 # Ediz
+#	religion = "manichean"
+#	culture = "uyghur"
+#	father = 166758
+#	802.1.1 = {
+#		birth = yes
+#	}
+#	847.1.1 = {
+#		death = yes
+#	}
+#}
 
 ##Uyghur Kingdom of Qocho
 #166774 = {
@@ -3852,6 +3851,31 @@ yaglakar_9 = {
 		birth = yes
 	}
 	844.1.1 = {
+		death = yes
+	}
+}
+
+#MPO Fictional Uyghurs
+fictional_uyghurs_1 = {	#Uyghurs in Qocho 1066
+	name = "O_zmish"
+	religion = tengri_pagan
+	culture = kipchak
+	1023.4.14 = {
+		birth = yes
+	}
+	1080.1.1 = {
+		death = yes
+	}
+}
+
+fictional_uyghurs_2 = {	#Uyghurs in Qocho 1066
+	name = "Barchuq"
+	religion = tengri_pagan
+	culture = kipchak
+	1033.3.13 = {
+		birth = yes
+	}
+	1090.1.1 = {
 		death = yes
 	}
 }

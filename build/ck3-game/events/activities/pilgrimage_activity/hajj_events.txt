@@ -85,7 +85,7 @@ hajj.0011 = {
 			}
 			set_variable = {
 				name = hajj_destination
-				value = title:b_makka
+				value = title:b_makka.title_province
 			}
 			if = {
 				limit = { exists = var:hajj_destination }

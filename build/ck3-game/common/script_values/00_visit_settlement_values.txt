@@ -1,4 +1,10 @@
 ﻿
+visit_settlement_lock_days = {
+	value = 0
+	add = define:NGame|MULTIPLAYER_EVENT_TIME_OUT
+	add = 2 #Some buffer
+}
+
 visit_settlement_minimum_cooldown_days = 90 #3 months
 visit_settlement_minimum_cooldown_months = 3 #Sync with visit_settlement_minimum_cooldown_days
 visit_settlement_small_cooldown_days = 180 #6 months

@@ -112,7 +112,7 @@
 			headgear={ "mena_royalty" 202 "no_headgear" 0 }
 			legwear={ "mena_nobility_legwear" 237 "all_legwear" 0 }
 			clothes={ "mena_high_nobility_clothes" 6 "most_clothes" 0 }
-			headgear_fp3_iranian_face_mask={ "fp3_iranian_face_mask" 127 "fp3_iranian_face_mask" 0 }
+			special_headgear_face_mask={ "fp3_iranian_face_mask" 127 "fp3_iranian_face_mask" 0 }
 		}
 	}
 	enabled = yes

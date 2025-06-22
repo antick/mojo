@@ -14,6 +14,7 @@ namespace = middle_east_decisions
 # 0011 - The Saoyshant appears
 # 0014 - Create Sultanate of Rum
 # 1001 - Revive the Armenian Empire
+# 1020 - Found the Empire of Beth Nahrain
 
 ##################################################
 
@@ -1479,5 +1480,58 @@ middle_east_decisions.1002 = {
 			}
 			text = middle_east_decisions.1002.c
 		}
+	}
+}
+
+#################################
+# Found the Empire of Beth Nahrain
+# by Anna Johansson				
+#################################
+
+middle_east_decisions.1020 = {
+	type = character_event
+	title = middle_east_decisions.1020.t
+	desc = middle_east_decisions.1020.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = ecstasy
+	}
+
+	immediate = {
+		promote_culture_beth_nahrain_scripted_effect = yes
+	}
+
+	#Learning Focus
+	option = { 
+		name = middle_east_decisions.1020.a
+		learning_beth_nahrain_scripted_effect = yes
+	}
+
+	#Martial Focus
+	option = { 
+		name = middle_east_decisions.1020.b
+		martial_beth_nahrain_scripted_effect = yes
+	}
+
+	#Nestorian
+	option = { 
+		name = middle_east_decisions.1020.c
+		trigger = {
+			faith = faith:nestorian
+		}
+		nestorian_faith_beth_nahrain_scripted_effect = yes
+	}
+
+	#Non Nestorian
+	option = { 
+		name = middle_east_decisions.1020.d
+		trigger = {
+			NOT = {
+				faith = faith:nestorian
+				any_held_title = { is_head_of_faith = yes }
+			}
+		}
+		no_faith_beth_nahrain_scripted_effect = yes
 	}
 }

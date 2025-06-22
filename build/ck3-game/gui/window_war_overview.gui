@@ -437,6 +437,19 @@
 								}
 							}
 
+							text_single = { 
+								layoutpolicy_horizontal = expanding
+								text = "[WarOverviewWindow.GetWarStanceName( WarOverviewWindow.GetLeftSideLeaderItem.IsAttacker )]" 
+								tooltip = "[WarOverviewWindow.GetWarStanceDesc( WarOverviewWindow.GetLeftSideLeaderItem.IsAttacker )]" 
+								using = Font_Size_Medium 
+								default_format = "#high"
+								align = nobaseline 
+								autoresize = yes 
+								max_width = 230
+								margin_left = 7
+								margin_bottom = 5
+							} 
+
 							vbox = {
 								layoutpolicy_horizontal = expanding
 								margin = { 5 0 }
@@ -456,7 +469,7 @@
 								hbox = {
 									layoutpolicy_horizontal = expanding
 
-									soldiers_and_quality_small = {
+									hbox_soldiers_and_quality_small = {
 										datacontext = "[WarOverviewWindow.GetLeftSideComposition]"
 									}
 
@@ -783,6 +796,19 @@
 								expand = {}
 							}
 
+							text_single = { 
+								layoutpolicy_horizontal = expanding 
+								text = "[WarOverviewWindow.GetWarStanceName( WarOverviewWindow.GetRightSideLeaderItem.IsAttacker )]" 
+								tooltip = "[WarOverviewWindow.GetWarStanceDesc( WarOverviewWindow.GetRightSideLeaderItem.IsAttacker )]" 
+								using = Font_Size_Medium
+								default_format = "#high"
+								align = nobaseline 
+								autoresize = yes 
+								max_width = 230 
+								margin_left = 7
+								margin_bottom = 5
+							} 
+
 							hbox = {
 								layoutpolicy_horizontal = expanding
 
@@ -822,7 +848,7 @@
 									hbox = {
 										layoutpolicy_horizontal = expanding
 
-										soldiers_and_quality_small = {
+										hbox_soldiers_and_quality_small = {
 											datacontext = "[WarOverviewWindow.GetRightSideComposition]"
 										}
 										expand = {}
@@ -1492,7 +1518,7 @@
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = growing
 
-										soldiers_and_quality_small = {
+										hbox_soldiers_and_quality_small = {
 											datacontext = "[WarParticipantItem.GetComposition]"
 										}
 
@@ -1605,7 +1631,7 @@
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = growing
 
-										soldiers_and_quality_small = {
+										hbox_soldiers_and_quality_small = {
 											datacontext = "[WarParticipantItem.GetComposition]"
 										}
 
@@ -1724,7 +1750,7 @@ template Background_WarOverview_3
 		color = { 1.77 1.77 1.80 1 }
 		texture_density = 2
 
-		margin_top = -120
+		margin_top = -89
 		alpha = 0.5
 
 		modify_texture = {
@@ -1740,7 +1766,7 @@ template Background_WarOverview_3
 		spriteborder = { 10 10 }
 
 		margin = { 5 0}
-		margin_top = -114
+		margin_top = -84
 	}
 }
 
@@ -3005,6 +3031,9 @@ types WarOverView
 			}
 
 			expand = {}
+		}
+		window_character_filter = {
+			datacontext = "[HostageExchangeWindow.GetCharacterList]"
 		}
 	}
 

@@ -89,7 +89,7 @@
  cabinet_of_curiosities_upgrade_trigger_3_global_not: "[artifact|E] Quality Score must be #V 35#! or higher"
  DOMICILE_ARTIFACT_COUNTER_TOOLTIP: "#T [artifact|E] Quality Score: [DomicileWindow.GetCharacter.GetHouse.MakeScope.ScriptValue('cabinet_of_curiosities_artifact_score')|V0]#!\n\nCommon Artifacts ([DomicileWindow.GetCharacter.GetHouse.MakeScope.Var('ep3_legacy_domicile_artifact_counter_common').GetValue|V0]): #P +[DomicileWindow.GetCharacter.GetHouse.MakeScope.ScriptValue('ep3_legacy_domicile_artifact_counter_common_score')|0]#!\nMasterwork Artifacts ([DomicileWindow.GetCharacter.GetHouse.MakeScope.Var('ep3_legacy_domicile_artifact_counter_masterwork').GetValue|V0]): #P +[DomicileWindow.GetCharacter.GetHouse.MakeScope.ScriptValue('ep3_legacy_domicile_artifact_counter_masterwork_score')|0]#!\nFamed Artifacts ([DomicileWindow.GetCharacter.GetHouse.MakeScope.Var('ep3_legacy_domicile_artifact_counter_famed').GetValue|V0]): #P +[DomicileWindow.GetCharacter.GetHouse.MakeScope.ScriptValue('ep3_legacy_domicile_artifact_counter_famed_score')|0]#!\nIllustrious Artifacts ([DomicileWindow.GetCharacter.GetHouse.MakeScope.Var('ep3_legacy_domicile_artifact_counter_illustrious').GetValue|V0]): #P +[DomicileWindow.GetCharacter.GetHouse.MakeScope.ScriptValue('ep3_legacy_domicile_artifact_counter_illustrious_score')|0]#!\n"
  domicile_building_parameter_can_receive_artifacts: "Building upgrades dependent on contributed [artifacts|E]"
- domicile_building_parameter_house_head_can_ask_for_artifacts: "[house_head|E] can ask for [artifacts|E] through the $house_head_request_interaction$ [interaction|E]"
+ domicile_building_parameter_house_head_can_ask_for_artifacts: "[house_head|E] can add [artifacts|E] to the Cabinet through the $cabinet_of_curiosities_interaction$ [interaction|E]"
 
  grand_solar_01_domicile_building: "Rustic Hearth"
  grand_solar_02_domicile_building: "Family Sitting Rooms"
@@ -513,6 +513,7 @@
  proving_grounds_nightly_barding_drills_domicile_building_desc: "#weak (Requires [GetDomicileBuilding('proving_grounds_01').GetName])#!\nLinks twist, leather snaps, plates rust, and drill fades as much for the elite heavy cavalry as anyone else."
  proving_grounds_life_in_the_saddle_domicile_building: "Life in the Saddle"
  proving_grounds_life_in_the_saddle_domicile_building_desc: "#weak (Requires [GetDomicileBuilding('proving_grounds_01').GetName])#!\nSome are born to this, others are raised to it later in life."
+ proving_grounds_life_in_the_saddle_horse_archers_tt: "You must have a [regiment|E] of [GetMaA('heavy_horse_archers').GetName] or [GetMaA('horse_archers').GetName]"
  # TIT-53191
  proving_grounds_the_stump_domicile_building: "The Stump"
  #proving_grounds_the_stump_domicile_building: "The [GetPlayer.Custom('GetStumpName')|U]"

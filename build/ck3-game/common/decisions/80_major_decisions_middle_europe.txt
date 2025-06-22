@@ -399,8 +399,18 @@ empower_sicilian_parliament_decision = {
 			has_title = title:k_trinacria
 		}
 		OR = {
-			completely_controls = title:d_sicily # The Island
-			completely_controls = title:d_capua # The Boot
+			AND = {
+				completely_controls = title:d_sicily # The Island
+				title:c_palermo = {
+					title_province = { has_special_building = no }
+				}
+			}
+			AND = {
+				completely_controls = title:d_capua # The Boot
+				title:c_napoli = {
+					title_province = { has_special_building = no }
+				}
+			}
 		}
 	}
 
@@ -427,7 +437,7 @@ empower_sicilian_parliament_decision = {
 			}
 			else_if = {
 				limit = { completely_controls = title:d_capua }
-				
+				custom_tooltip = middle_europe_decisions.0010.tt_napoli_warning
 				title:c_napoli = {
 					sicilian_parliament_building_scripted_effect = yes
 				}
@@ -584,7 +594,7 @@ restore_holy_roman_empire_decision = {
 		NOR = { #It doesn't make sense for these competing empires.
 			has_title = title:e_byzantium
 			has_title = title:e_roman_empire
-			has_title = title:e_mongol_empire
+			mpo_has_gok_mongol_empire_trigger = yes
 		}
 		AND = {	#Faith conditions.
 			NOT = { this = faith.religious_head }	#Nice try, Mr. Pope.

@@ -305,7 +305,9 @@
  visit_local_settlement_castle_holding_decision_tt: "$visit_local_settlement_effect_intro$$visit_local_settlement_effect_tavern$$visit_local_settlement_effect_castle$$visit_local_settlement_effect_supplies$$visit_local_settlement_effect_artifacts$$visit_local_settlement_effect_contracts$"
  visit_local_settlement_city_holding_decision_tt: "$visit_local_settlement_effect_intro$$visit_local_settlement_effect_tavern$$visit_local_settlement_effect_city$$visit_local_settlement_effect_cheaper_supplies$$visit_local_settlement_effect_expensive_artifacts$$visit_local_settlement_effect_contracts$"
  visit_local_settlement_decision_confirm: "This ought to be interesting."
- DECISION_ALREADY_VISITING_LOCAL_SETTLEMENT: "You are already visiting a settlement"
+ DECISION_ALREADY_VISITING_LOCAL_SETTLEMENT: "[CHARACTER.Custom('IsAlreadyVisiting')]"
+ DECISION_ALREADY_VISITING_LOCAL_SETTLEMENT_TIME: "This action will be available again on [GetCurrentDateWithDiff( GetVarTimeRemaining( ROOT.Char.MakeScope, 'ep3_laamp_decision_1000_is_visiting') )]"
+ DECISION_ALREADY_VISITING_LOCAL_SETTLEMENT_NO_TIME: "You are already visiting a settlement"
  DECISION_LOCAL_SETTLEMENT_SIEGED: "[CHARACTER.GetDomicile.GetLocation.GetName] is [besieged|E]"
  #Excavate Treasure — Contract Decision
  treasure_map_contract_decision: "Excavate Treasure"
@@ -499,10 +501,10 @@
  grain_dole_already_active: "The Grain Dole is already active!"
  unlocked_grain_dole: "Renewing the Grain Dole is cheaper"
  ep3_decisions_event.4040.t: "The Grain Dole"
- ep3_decisions_event.4040.desc: "The people have every reason to celebrate as the ancient and beloved tradition of the Grain Dole returns to Constantinople!\n\nOnce again the capital of the world thanks to #EMP my#! efforts, Constantinople receives a constant flow of cheap grain from Egypt, just like it did centuries ago.\n\nAnd as the ancient poet aptly said, all we need to keep the common people happy is bread and games!"
+ ep3_decisions_event.4040.desc: "The people have every reason to celebrate as the ancient and beloved tradition of the Grain Dole returns to [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTierNoTooltip]!\n\nOnce again the capital of the world thanks to #EMP my#! efforts, [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTierNoTooltip] receives a constant flow of cheap grain from Egypt, just like it did centuries ago.\n\nAnd as the ancient poet aptly said, all we need to keep the common people happy is bread and games!"
  ep3_decisions_event.4040.a: "Let them eat bread!"
  reconfirm_grain_dole_decision: "Reconfirm the Grain Dole"
- reconfirm_grain_dole_decision_desc: "After its formal reintroduction, the citizens of Constantinople have grown accustomed to the luxuries offered by the Grain Dole — the regular distributions of free or price-controlled bread. It is a powerful instrument in the hands of any Emperor to ensure their people's productivity and their own popularity."
+ reconfirm_grain_dole_decision_desc: "After its formal reintroduction, the citizens of [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTierNoTooltip] have grown accustomed to the luxuries offered by the Grain Dole — the regular distributions of free or price-controlled bread. It is a powerful instrument in the hands of any Emperor to ensure their people's productivity and their own popularity."
  reconfirm_grain_dole_decision_tooltip: "Reconfirm the bread distributions to the people of the capital"
  reconfirm_grain_dole_decision_confirm: "$reinstitute_grain_dole_decision_confirm$"
  reconfirm_grain_dole_decision_tt: "Grain Dole Reconfirmed"
@@ -525,14 +527,14 @@
 
  change_state_faith: "Change State Faith"
  change_state_faith_decision_desc: "Reforming the [state_faith|E] is a bold move. Reshaping the [ROOT.Char.GetPrimaryTitle.GetTierAsNamePossessiveNoTooltip|l] spiritual tradition to match my vision... It will undoubtedly redefine the realm's identity and my legacy as [ROOT.Char.GetTitleAsNameNoTooltip]."
- change_state_faith_decision_selection_tooltip: "Institute a new [state_faith|E] for [ROOT.Char.GetPrimaryTitle.GetName|l]"
+ change_state_faith_decision_selection_tooltip: "Institute a new [state_faith|E] for [ROOT.Char.GetPrimaryTitle.GetDefinitiveName|l]"
  change_state_faith_confirm: "Let [ROOT.Char.GetPrimaryTitle.GetNameNoTooltip|l] embrace [ROOT.Char.GetFaith.GetNameNoTooltip]!"
  change_state_faith_effect_tt: "The [state_faith|E] of [THIS.Char.GetPrimaryTitle.GetName|l] changes to [THIS.Char.GetFaith.GetName|V]"
  vassals_change_state_faith: "Every non-[GetVassalStance( 'zealot' ).GetName] [vassal|E] with at least #P 30#! [opinion|E] of you ([THIS.ScriptValue('number_vassals_converting_to_new_state_faith')|V0])"
 
  adopt_state_faith: "Adopt State Faith"
  adopt_state_faith_decision_desc: "Adopting the [state_faith|E] of the [ROOT.Char.GetTopLiege.GetPrimaryTitle.GetTierAsNameNoTooltip|l] marks a turning point. Aligning my spiritual path with the [ROOT.Char.GetTopLiege.GetPrimaryTitle.GetTierAsNamePossessiveNoTooltip|l] will strengthen my position as [ROOT.Char.GetTitleAsNameNoTooltip], undoubtedly forging a deeper connection with my subjects."
- adopt_state_faith_decision_selection_tooltip: "Adopt the [state_faith|E] of [ROOT.Char.GetTopLiege.GetPrimaryTitle.GetName|l]"
+ adopt_state_faith_decision_selection_tooltip: "Adopt the [state_faith|E] of [ROOT.Char.GetTopLiege.GetPrimaryTitle.GetDefinitiveName|l]"
  adopt_state_faith_confirm: "In faith too, shall I serve [ROOT.Char.GetTopLiege.GetPrimaryTitle.GetNameNoTooltip|l]."
  every_governor_of_state_faith: "Every [THIS.Char.GetTopLiege.GetPrimaryTitle.MakeScope.Var('state_faith').Faith.GetAdjective] [vassal|E]"
 
@@ -556,7 +558,7 @@
  mass_arrests_decision_confirm: "Select Target"
  choose_a_powerful_family: "Every member of a [powerful_family|E] you choose"
  imprisoned_by_you: "Is imprisoned by you" 
- house_loses_power_rating: "The Family Rating of the chosen [house|E] is reduced by #N -15#!"
+ house_loses_power_rating: "The [powerful_family_rating|E] of [house|E] [recipient.GetHouse.GetName] is reduced by #N -15#!"
  every_house_member_tt: "Every member of House [THIS.House.GetName]"
  ep3_decisions_event.3200.t: "Mass Arrests"
  ep3_decisions_event.3200.desc: "Like a pack of wolves circling their prey, the powerful houses of the realm stalk me. I can feel the noose tightening around my neck.\n\nImprisoning one family will remind the rest of my authority. An example must be made..."
@@ -569,7 +571,7 @@
  ep3_mass_arrests_house_power_malus: "Recently Imprisoned by [liege|E]"
 
  ep3_decisions_event.3201.t: "Mass Arrests: A Plea"
- ep3_decisions_event.3201.desc: "[imprisoned_house_head.GetName] is brought before me in irons. The once influential head of House [imprisoned_house_head.GetHouse.GetName] kneels before me, [imprisoned_house_head.GetHerHis] expression reflecting a mix of defiance and desperation.\n\n"Your Majesty," [imprisoned_house_head.GetSheHe] begins, [imprisoned_house_head.GetHerHis] voice cracked with shame, "I implore you, release me from these chains. Ambition blinds, but I see now that my true place."\n\n"Grant me mercy, and I vow to be your most loyal subject, stripped of my former pride.""
+ ep3_decisions_event.3201.desc: "[imprisoned_house_head.GetName] is brought before me in irons. The once influential head of House [imprisoned_house_head.GetHouse.GetName] kneels before me, [imprisoned_house_head.GetHerHis] expression reflecting a mix of defiance and desperation.\n\n"Your Majesty," [imprisoned_house_head.GetSheHe] begins, voice cracked with shame, "I implore you, release me from these chains. Ambition blinds, but I see now where my true place is."\n\n"Grant me mercy, and I vow to be your most loyal subject, stripped of my former pride.""
  ep3_decisions_event.3201.a: "I am nothing if not merciful."
  ep3_decisions_event.3201.b: "No."
 
@@ -649,6 +651,8 @@
  convert_to_feudalism_from_administrative_decision_desc: "Less bureaucracy and more #EMP doing#! is what this realm needs. If [ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip|l] is to blossom, we must cut our ties with those things that hamper us."
  convert_to_feudalism_from_administrative_decision_confirm: "Adopt [ROOT.Char.Custom('GetTribalReformGovernment')|U] ways"
  convert_to_feudalism_from_administrative_decision_tooltip: "Change [government|E] type"
+ you_have_governorship_rights_tt: "You have been granted #high Provincial House Rights#! by your [liege|E] in your held [GetPlayer.Custom('GetProvinceConcept')]"
+ governorship_is_on_the_border_tt: "Your [GetPlayer.Custom('GetProvinceConcept')] borders a different [realm|E]"
 
  ep3_decisions_event.4070.t: "$major_decisions.0200.t$"
  ep3_decisions_event.4070.desc: "Sometimes it is better to go back to the tried and true.\n\nWhile the administrative approach only has been hampering to [actor.GetPrimaryTitle.GetNameNoTierNoTooltip|l], the old ways of life has its undeniable benefits and traditional structure to help us reach new heights."
@@ -743,7 +747,7 @@
 
  zealous_missionary_start_decision: "The [ROOT.Char.GetFaith.GetAdherentNameNoTooltip] Path — Prelude" 
  zealous_missionary_start_decision_desc: "One cannot expect the [ROOT.Char.GetFaith.HighGodName|U] to do all the work. [ROOT.Char.GetFaith.HighGodNameSheHe|U] needs the faithful to shepherd the lost... whether they want or not."
- zealous_missionary_start_decision_other_faith_location: "Your current location needs to be of a different [faith|E]"
+ zealous_missionary_start_decision_other_faith_location: "Your location must follow a different [faith|E]"
  zealous_missionary_start_decision_tooltip: "I need be one of the good [ROOT.Char.GetFaith.GetAdherentNamePluralNoTooltip]"
  zealous_missionary_start_decision_reward_desc: "$zealous_missionary_prep_decision_reward_desc$"
  zealous_missionary_start_decision_confirm: "Be swift, my soul, to answer [ROOT.Char.GetFaith.HighGodHerHis|U] call!"
@@ -1128,6 +1132,7 @@
  hold_byz_kingdom_title_tt: "You or one of your [vassals|E] holds that [kingdom|E] [title|E]"
  latin_capital_byzantine_kingdom_tt: "Your [capital|E] is within a [de_jure|E] [kingdom|E] of [GetTitleByKey('e_byzantium').GetName]"
  is_latin_emperor_tt: "Your [primary_title|E] is [GetTitleByKey('e_latin_empire').GetName]"
+ holds_latin_empire_tt: "You hold [GetTitleByKey('e_latin_empire').GetName]"
  gain_byz_kingdom_de_jure_tt: "[GetTitleByKey('e_latin_empire').GetName] gains [de_jure|E] possession of a [GetTitleByKey('e_byzantium').GetAdjective] [kingdom|E] within your [realm|E]"
  legitimize_latin_control_tt: "[county_control|E] increases throughout the new [GetTitleByKey('e_latin_empire').GetAdjective] [kingdom|E]"
  legitimize_latin_cultural_acceptance_tt: "[cultural_acceptance|E] increases with all [county|E] [cultures|E] of the new [GetTitleByKey('e_latin_empire').GetAdjective] [kingdom|E]"
@@ -1150,7 +1155,7 @@
  
  holds_roman_emp_tt: "You hold [GetTitleByKey('e_roman_empire').GetName]"
  legitimize_latin_holder_influence_tt: "You will either gain @influence_icon![influence|E] or [opinion|E] with the [kingdom|E]'s [holder|E]"
- legitimize_latin_holder_legitimacy_tt: "You will either gain @legitimacy_icon![legitimacy|E] or [opinion|E] with the [kingdom|E]'s [holder|E]"
+ legitimize_latin_holder_legitimacy_tt: "You will either gain [GetLocalPlayerLegitimacyTextIcon][legitimacy|E] or [opinion|E] with the [kingdom|E]'s [holder|E]"
 
  # Go Fishing
  go_fishing_decision: "Go Fishing"

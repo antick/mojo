@@ -4,7 +4,7 @@
 
 window = {
 	name = "succession_law_change_window"
-	size = { 1076 850 }
+	size = { 1128 875 }
 	position = { 610 100 }
 	layer = middle
 
@@ -14,7 +14,9 @@ window = {
 
 	vbox = {
 		using = Window_Margins
-		restrictparent_min = yes
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		#restrictparent_min = yes
 
 		header_pattern = {
 			layoutpolicy_horizontal = expanding
@@ -68,6 +70,27 @@ window = {
 
 							hbox = {
 								datamodel = "[SuccessionLawChangeWindow.GetPartitionLaws]"
+								spacing = 10
+
+								item = {
+									vbox = {
+										button_default_law_choice = {}
+										button_clan_law_choice = {}
+									}
+								}
+							}
+						}
+
+						vbox = {
+							visible = "[DataModelHasItems(SuccessionLawChangeWindow.GetAppointmentLaws)]"
+							spacing = 10
+
+							text_single = {
+								text = "SUCCESSION_LAW_CHANGE_WINDOW_APPOINTMENT_LAWS"
+							}
+
+							hbox = {
+								datamodel = "[SuccessionLawChangeWindow.GetAppointmentLaws]"
 								spacing = 10
 
 								item = {
@@ -238,7 +261,7 @@ window = {
 					vbox = {
 						visible = "[Not(SuccessionLawChangeWindow.GetSelectedLaw.ShouldBeApproved)]"
 						layoutpolicy_horizontal = expanding
-						layoutpolicy_vertical = expanding
+						#layoutpolicy_vertical = expanding
 						margin = { 0 20 }
 
 						background = {
@@ -265,8 +288,8 @@ window = {
 
 				## Right Side
 				vbox_law_desc = {
-					max_width = 350
-					min_width = 350
+					max_width = 300
+					min_width = 300
 					margin = { 15 15 }
 					spacing = 10
 
@@ -282,7 +305,7 @@ window = {
 
 			# Buttons when character can change laws manually
 			vbox = {
-				visible = "[SuccessionLawChangeWindow.GetSelectedLaw.ShouldBeApproved]"
+				#visible = "[SuccessionLawChangeWindow.GetSelectedLaw.ShouldBeApproved]"
 
 				layoutpolicy_horizontal = expanding
 				spacing = 10
@@ -314,32 +337,6 @@ window = {
 					}
 				}
 			}
-
-			vbox = {
-				visible = "[Not(SuccessionLawChangeWindow.GetSelectedLaw.ShouldBeApproved)]"
-
-				layoutpolicy_horizontal = expanding
-				spacing = 10
-				margin = { 0 10}
-
-				hbox = {
-					spacing = 20
-
-					button_standard = {
-						onclick = "[SuccessionLawChangeWindow.Close]"
-						text = "CANCEL"
-						using = tooltip_above
-					}
-
-					button_primary = {
-						enabled = no
-						text = "SUCCESSION_LAW_CHANGE_WINDOW_CHANGE"
-
-						using = tooltip_above
-						tooltip = "SUCCESSION_LAW_CHANGE_WINDOW_CLAN_CHANGE_LAW_BUTTON_TOOLTIP"
-					}
-				}
-			}
 		}
 	}
 }
@@ -354,6 +351,7 @@ types SuccessionLawTypes
 
 		onclick = "[GuiLaw.SetSelected]"
 		down = "[GuiLaw.IsSelected]"
+		alwaystransparent = "[GuiLaw.IsSelected]"
 
 		block "content" {}
 		
@@ -412,36 +410,6 @@ types SuccessionLawTypes
 				position = { 32 12 }
 				texture = "[GuiLaw.GetHouseUnityStage.GetIcon]"
 			}
-
-			tooltipwidget = {
-				widget = {
-					size = { 350 620 }
-
-					widget = {
-						name = "background"
-						using = Background_Tooltip
-						size = { 100% 100% }
-						alwaystransparent = no
-					}
-
-					widget = {
-						size = { 100% 50 }
-
-						background = {
-							using = Background_Header
-							align = vcenter|left
-						}
-					}
-
-					vbox_law_desc = {
-						alwaystransparent = no
-						spacing = 10
-						blockoverride "law_datacontext" {
-							datacontext = "[GuiLaw.GetLaw]"
-						}
-					}
-				}
-			}
 		}
 	}
 
@@ -451,35 +419,52 @@ types SuccessionLawTypes
 		margin = { 10 10 }
 
 		block "law_datacontext" {}
+		vbox = {
+			text_single = {
+				text = "[Law.GetNameNoTooltip]"
+				margin = { 10 10 }
+			}
 
-		text_single = {
-			text = "[Law.GetNameNoTooltip]"
-			default_format = "#S"
+			text_label_center = {
+				layoutpolicy_horizontal = expanding
+				text = "[Law.GetSubName]"
+				visible = "[Law.HasSubName]"
+				default_format = "#low"
+			}
 		}
-
-		text_label_center = {
-			layoutpolicy_horizontal = expanding
-			text = "[Law.GetSubName]"
-			visible = "[Law.HasSubName]"
-			default_format = "#F"
-		}
-
-		text_multi = {
+		
+		scrollbox = {
+			min_width = 350
 			layoutpolicy_horizontal = expanding
 			layoutpolicy_vertical = expanding
-			margin = { 10 10 }
-			text = "[Law.GetEffectDescription]"
+
+			blockoverride "scrollbox_content"
+			{
+				vbox = {
+					layoutpolicy_horizontal = expanding
+
+					text_multi = {
+						layoutpolicy_horizontal = expanding
+						autoresize = yes
+						max_width = 350
+						margin_right = 40
+						text = "[Law.GetEffectDescription]"
+					}
+
+					text_multi = {
+						layoutpolicy_horizontal = expanding
+						max_width = 350
+						autoresize = yes
+						margin_right = 40
+
+						text = "SUCCESSION_TITLE_LAW_WARNING"
+						default_format = "#alert_trial"
+					}
+				}
+			}
 		}
 
-		expand = {layoutpolicy_vertical = expanding}
-
-		text_multi = {
-			max_width = 350
-			autoresize = yes
-			margin = { 10 10 }
-			text = "SUCCESSION_TITLE_LAW_WARNING"
-			default_format = "#alert_trial"
-		}
+		#expand = {}
 
 	}
 }

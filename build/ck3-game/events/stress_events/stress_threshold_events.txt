@@ -1116,7 +1116,7 @@ stress_threshold.1011 = {
 			}
 			modifier = {
 				add = -5
-				current_weight > overweight_threshold
+				current_weight > overweight_value
 			}
 		}
 
@@ -7385,7 +7385,11 @@ stress_threshold.1731 = {
 		if = { #Confider (has a close confidant)
 			limit = {
 				has_two_stress_threshold_options = no
-				has_trait = confider	
+				has_trait = confider
+				any_relation = {
+					type = friend
+					count >= 1
+				}
 			}
 			# Set the flag for enabling this event option.
 			add_character_flag = stress_threshold_option_confider
@@ -7478,6 +7482,10 @@ stress_threshold.1731 = {
 			limit = {
 				has_two_stress_threshold_options = no
 				can_be_confider = yes	
+				any_relation = {
+					type = friend
+					count >= 1
+				}
 			}
 			# Set the flag for enabling this event option.
 			add_character_flag = stress_threshold_option_confider
@@ -14370,7 +14378,7 @@ stress_threshold.3301 = {
 
 		modifier = { #More likely if you're overweight
 			add = 0.5
-			current_weight > overweight_threshold
+			current_weight > overweight_value
 		}
 	}
 

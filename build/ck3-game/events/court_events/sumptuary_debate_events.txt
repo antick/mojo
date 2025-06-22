@@ -301,15 +301,6 @@ court_amenities_interactions.0002 = {
 			}
 			outfit_tags = { beggar_rags }
 		}
-		triggered_outfit = {
-			trigger = {
-				scope:recipient = {
-					faith = { NOT = { has_doctrine_parameter = naked_adherents_active } }
-					has_character_flag = sumptuary_debate_lost
-				}
-			}
-			outfit_tags = { no_clothes }
-		}
 	}
 	right_portrait = {
 		character = scope:actor
@@ -329,14 +320,30 @@ court_amenities_interactions.0002 = {
 			}
 			outfit_tags = { beggar_rags }
 		}
-		triggered_outfit = {
-			trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				scope:recipient = {
+					faith = { NOT = { has_doctrine_parameter = naked_adherents_active } }
+					has_character_flag = sumptuary_debate_lost
+				}
+			}
+			scope:recipient = {
+				add_character_flag = is_naked
+			}
+		}
+		if = {
+			limit = {
 				scope:actor = {
 					faith = { NOT = { has_doctrine_parameter = naked_adherents_active } }
 					has_character_flag = sumptuary_debate_lost
 				}
 			}
-			outfit_tags = { no_clothes }
+			scope:actor = {
+				add_character_flag = is_naked
+			}
 		}
 	}
 
@@ -398,6 +405,24 @@ court_amenities_interactions.0002 = {
 			base = 100
 		}
 	}
+	after = {
+		scope:recipient = {
+			if = {
+				limit = {
+					has_character_flag = is_naked
+				}
+				remove_character_flag = is_naked
+			}
+		}
+		scope:actor = {
+			if = {
+				limit = {
+					has_character_flag = is_naked
+				}
+				remove_character_flag = is_naked
+			}
+		}
+	}
 }
 
 #	#Debate results: defender / recipient
@@ -454,15 +479,6 @@ court_amenities_interactions.0003 = {
 			}
 			outfit_tags = { beggar_rags }
 		}
-		triggered_outfit = {
-			trigger = {
-				scope:actor = {
-					has_character_flag = sumptuary_debate_lost
-					faith = { NOT = { has_doctrine_parameter = naked_adherents_active } }
-				}
-			}
-			outfit_tags = { no_clothes }
-		}
 	}
 	right_portrait = {
 		character = scope:recipient
@@ -482,14 +498,30 @@ court_amenities_interactions.0003 = {
 			}
 			outfit_tags = { beggar_rags }
 		}
-		triggered_outfit = {
-			trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = {
 				scope:recipient = {
-					has_character_flag = sumptuary_debate_lost
 					faith = { NOT = { has_doctrine_parameter = naked_adherents_active } }
+					has_character_flag = sumptuary_debate_lost
 				}
 			}
-			outfit_tags = { no_clothes }
+			scope:recipient = {
+				add_character_flag = is_naked
+			}
+		}
+		if = {
+			limit = {
+				scope:actor = {
+					faith = { NOT = { has_doctrine_parameter = naked_adherents_active } }
+					has_character_flag = sumptuary_debate_lost
+				}
+			}
+			scope:actor = {
+				add_character_flag = is_naked
+			}
 		}
 	}
 
@@ -550,6 +582,28 @@ court_amenities_interactions.0003 = {
 		#No stress, as the AI is forced to get here.
 		ai_chance = {	#No other options available.
 			base = 100
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				scope:recipient = {
+					has_character_flag = is_naked
+				}
+			}
+			scope:recipient = {
+				remove_character_flag = is_naked
+			}
+		}
+		if = {
+			limit = {
+				scope:actor = {
+					has_character_flag = is_naked
+				}
+			}
+			scope:actor = {
+				remove_character_flag = is_naked
+			}
 		}
 	}
 }

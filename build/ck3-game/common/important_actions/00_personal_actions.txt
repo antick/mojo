@@ -46,6 +46,19 @@ action_can_assign_guardian = {
 						interaction = educate_child_interaction
 					}
 				}
+				trigger_if = {
+					limit = {
+						root.primary_title ?= {
+							place_in_line_of_succession = {
+								target = prev
+								value >= 3
+							}
+						}
+					}
+					NOT = {
+						exists = root.court_position:court_tutor_court_position
+					}
+				}
 			}
 			try_create_important_action = {
 				important_action_type = action_can_assign_guardian
@@ -185,7 +198,7 @@ action_vassal_ransom_gives_hook = {
 			limit = {
 				is_imprisoned = yes
 				government_has_flag = government_is_feudal
-				vassal_contract_is_blocked_from_modification = no
+				subject_contract_is_blocked_from_modification = no
 				is_ai = yes
 				ai_honor >= 25
 				ai_greed <= 0

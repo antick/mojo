@@ -279,10 +279,6 @@ bp2_yearly.1000 = {
 	override_background = { reference = throne_room }
 	left_portrait = {
 		character = root
-		triggered_outfit = {
-			trigger = { scope:triggered_trait = flag:hashishiyah }
-			outfit_tags = { no_clothes }
-		}
 		triggered_animation = {
 			trigger = { scope:triggered_trait = flag:drunkard }
 			animation = drink_goblet
@@ -767,6 +763,12 @@ bp2_yearly.1000 = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				scope:triggered_trait = flag:hashishiyah
+			}
+			add_character_flag = is_naked
+		}
 	}
 	#Hmm.
 	option = {
@@ -991,6 +993,10 @@ bp2_yearly.1000 = {
 		if = {
 			limit = { has_character_flag = should_be_topless }
 			remove_character_flag = should_be_topless
+		}
+		if = {
+			limit = { has_character_flag = is_naked }
+			remove_character_flag = is_naked
 		}
 	}
 }

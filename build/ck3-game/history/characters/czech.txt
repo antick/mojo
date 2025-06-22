@@ -154,8 +154,8 @@
 }
 
 212855 = {
-	name = "PR_emysl"
-	# AKA: Otakar
+	name = "Otakar"
+	# AKA: PR_emysl
 	dynasty = 506
 	martial = 8
 	diplomacy = 7
@@ -173,7 +173,9 @@
 		birth = "1155.1.1"
 	}
 	1178.1.1 = {
-		add_spouse = 212044
+		effect = {
+			create_betrothal = character:212044
+		}
 	}
 	1199.1.1 = {
 		add_spouse = 219503
@@ -950,6 +952,7 @@
 			death_reason = death_murder
 			killer = 508
 		}
+		add_trait = saint
 	}
 }
 
@@ -2712,9 +2715,6 @@ john_monk = { # John, a monk of Břevnov
 	}
 }
 
-
-
-
 168345 = {
 	name = "PR_emysl"
 	dynasty = 506
@@ -2723,9 +2723,9 @@ john_monk = { # John, a monk of Břevnov
 	694.1.1 = {
 		birth = "694.1.1"
 	}
-	
 	745.1.1 = {
 		death = "745.1.1"
+		give_nickname = nick_the_ploughman
 	}
 }
 

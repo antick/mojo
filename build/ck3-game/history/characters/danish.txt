@@ -15,7 +15,10 @@
 		birth = "1122.1.15"
 	}
 	1161.6.6 = {
-		death = "1161.6.6"
+		death = {
+			death_reason = death_battle
+			killer = 200602
+		}
 	}
 }
 
@@ -449,7 +452,10 @@
 		trait = kinslayer_3
 	}
 	1134.6.4 = {
-		death = "1134.6.4"
+		death = {
+			death_reason = death_battle
+			killer = 201517
+		}
 	}
 }
 
@@ -798,19 +804,19 @@
 	culture = "danish"
 	disallow_random_traits = yes
 	trait = chaste
-	trait = bossy
+	trait = zealous
 	trait = brave
 	trait = education_stewardship_3
 	father = 201510 # Valdemar the Great
 	mother = 222797
-	1163.1.1 = {
-		birth = "1163.1.1"
+	1162.1.1 = {
+		birth = yes
 	}
 	1187.1.2 = {
 		add_spouse = 212571
 	}
 	1202.11.12 = {
-		death = "1202.11.12"
+		death = yes
 	}
 }
 
@@ -1016,6 +1022,12 @@
 	}
 	1157.1.1 = {
 		give_nickname = nick_the_great
+		effect = {
+			if = {
+				limit = { has_realm_law = crown_authority_0 }
+				add_realm_law = crown_authority_1
+			}
+		}
 	}
 	1182.5.12 = {
 		death = "1182.5.12"
@@ -3481,6 +3493,12 @@
 	mother = 151021 #Margrethe Knudsdatter
 	1145.1.2 = {
 		birth = "1145.1.2"
+	}
+	1178.1.1 = {
+		employer = 201510
+		effect = {
+			set_relation_grudge = character:200500
+		}
 	}
 	1195.1.2 = {
 		death = "1195.1.2"

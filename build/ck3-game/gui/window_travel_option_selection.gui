@@ -109,13 +109,11 @@ types TravelOptions
 
 			text_single = {
 				parentanchor = left|top
-				position = { 0 6 }
+				position = { 62 6 }
 
 				text = "[TravelOption.GetNameNoTooltip]"
 				default_format = "#clickable"
 				max_width = 260
-
-				margin_left = 64
 			}
 
 			text_single = {

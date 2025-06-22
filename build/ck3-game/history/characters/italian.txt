@@ -128,6 +128,7 @@
 			learn_language = language_latin
 			learn_language = language_french
 			learn_language = language_high_german
+			set_relation_friend = { reason = friend_generic_history target = character:7755 } # her mother, Beatrice
 		}
 	}
 	1115.7.24 = {
@@ -696,15 +697,15 @@
 	trait = forgiving
 	trait = just
 	trait = education_learning_4
-	1019.1.1 = {
-		birth = "1019.1.1"
+	1010.1.1 = {
+		birth = yes
 	}
 	1061.9.30 = {
 	name = "Alexander"
 	# AKA: Anselmo
 	}
 	1073.4.21 = {
-		death = "1073.4.21"
+		death = yes
 	}
 }
 

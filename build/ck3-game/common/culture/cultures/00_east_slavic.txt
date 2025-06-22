@@ -5,6 +5,7 @@
 	heritage = heritage_east_slavic
 	language = language_east_slavic
 	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
 	traditions = {
 		tradition_druzhina
 		tradition_mendicant_mystics
@@ -15,7 +16,7 @@
 
 	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { eastern_unit_gfx }
 
 	ethnicities = {
@@ -32,6 +33,7 @@ ilmenian = {
 	heritage = heritage_east_slavic
 	language = language_east_slavic
 	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
 	traditions = {
 		tradition_hit_and_run
 		tradition_agrarian
@@ -43,7 +45,7 @@ ilmenian = {
 
 	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { eastern_unit_gfx }
 
 	ethnicities = {
@@ -60,6 +62,7 @@ severian = {
 	heritage = heritage_east_slavic
 	language = language_east_slavic
 	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
 	traditions = {
 		tradition_forest_folk
 		tradition_druzhina
@@ -70,7 +73,7 @@ severian = {
 
 	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { eastern_unit_gfx }
 
 	ethnicities = {
@@ -87,6 +90,7 @@ volhynian = {
 	heritage = heritage_east_slavic
 	language = language_east_slavic
 	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
 	traditions = {
 		tradition_astute_diplomats
 		tradition_agrarian
@@ -98,7 +102,7 @@ volhynian = {
 
 	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
 	building_gfx = { western_building_gfx }
-	clothing_gfx = { northern_clothing_gfx }
+	clothing_gfx = { east_slavic_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { eastern_unit_gfx }
 
 	ethnicities = {

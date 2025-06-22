@@ -1,4 +1,9 @@
-﻿
+﻿##################################################
+# Chapter Bonus Triggers
+has_sp4_dlc_trigger = {
+	has_dlc_feature = crowns_of_the_world
+}
+
 ##################################################
 # Creator content Triggers
 has_afr_dlc_trigger = {
@@ -6,6 +11,14 @@ has_afr_dlc_trigger = {
 }
 has_pol_dlc_trigger = {
 	has_dlc_feature = west_slavic_attire
+}
+
+has_cp3_dlc_trigger = {
+	has_dlc_feature = medieval_monuments
+}
+
+has_cp4_dlc_trigger = {
+	has_dlc_feature = arctic_attire
 }
 
 
@@ -47,6 +60,10 @@ has_ce1_dlc_trigger = {
 	has_dlc_feature = legends_of_the_dead
 }
 
+has_mpo_dlc_trigger = {
+	# Does the host have the appropriate DLC?
+	has_dlc_feature = khans_of_the_steppe
+}
 
 ##################################################
 # Expansion Pack Triggers

@@ -314,6 +314,10 @@ create_duchy_title_value = {
 	        limit = { government_has_flag = government_is_tribal } # Tribal
 	        subtract = 0.5
 	    }
+		if = {
+			limit = { government_has_flag = government_is_nomadic } # Nomads
+			subtract = 0.5
+		}
 	    if = {
 	        limit = {
 	        	faith = { has_doctrine = tenet_pursuit_of_power } # Pursuit of Power
@@ -378,6 +382,10 @@ create_kingdom_title_value = {
 	        subtract = 0.5
 	    }
 	    if = {
+			limit = { government_has_flag = government_is_nomadic } # Nomads
+			subtract = 0.5
+		}
+	    if = {
 	        limit = {
 	        	faith = { has_doctrine = tenet_pursuit_of_power } # Pursuit of Power
 	        }
@@ -440,6 +448,10 @@ create_empire_title_value = {
 	        limit = { government_has_flag = government_is_tribal } # Tribal
 	        subtract = 0.5
 	    }
+	    if = {
+			limit = { government_has_flag = government_is_nomadic } # Nomads
+			subtract = 0.5
+		}
 	    if = {
 	        limit = {
 	        	faith = { has_doctrine = tenet_pursuit_of_power } # Pursuit of Power
@@ -1262,6 +1274,18 @@ recruit_guest_interaction_cost_with_list = {
 		list = recruiting_family
 		add = individual_recruit_guest_interaction_cost
 	}
+	if = {
+		limit = {
+			scope:actor = {
+				is_ai = yes
+			}
+			OR = {
+				has_game_rule = hard_difficulty
+				has_game_rule = very_hard_difficulty
+			}
+		}
+		multiply = 0
+	}
 }
 
 root_attraction_based_female_chance = {
@@ -1711,14 +1735,14 @@ ai_war_chest_defender_holy_war_gold_value = {
 
 steward_convert_culture_value = {
 	value = yearly_character_income
-	multiply = 5
-	min = 150
+	multiply = 3
+	min = 100
 }
 
 steward_increase_development_value = {
 	value = yearly_character_income
-	multiply = 3
-	min = 100
+	multiply = 2
+	min = 50
 }
 
 minimum_ai_gold_value_for_tyranny_wars = {

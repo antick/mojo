@@ -5,7 +5,7 @@
  child_personality.7000.b:0 "You are a true friend, [other_child.GetFirstNameNoTooltip]. Bottoms up!"
  child_personality.7000.c:0 "Oh, this isn't for me. But you go ahead and drink."
  child_personality.7001.t:0 "$child_personality.7000.t$"
- child_personality.7001.desc:0 ""I caught these two hiding in the pantry!" A very irate cook shouts at me, dragging my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('child'))] [child.GetFirstName] and [other_child.GetFirstName] in tow.\n\n"
+ child_personality.7001.desc:0 ""I caught these two hiding in the food stores!" A very irate cook shouts at me, dragging my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('child'))] [child.GetFirstName] and [other_child.GetFirstName] in tow.\n\n"
  child_personality.diligent.desc:0 ""[other_child.GetFirstNameNoTooltip] had stolen a #EMP whole#! keg of [ROOT.GetCharacter.Custom('RegionalAlcoholicDrink')]! [child.GetFirstNameNoTooltip] tried to put it back by [child.GetHerselfHimself] before I noticed – but no such luck for [child.GetHerHim]!" [cook.GetSheHe|U] says angrily.\n\nIt seems as if my ward is a little troublemaker, but one that had a change of heart!"
  child_personality.gregarious.desc:0 ""They stole a #EMP whole#! keg of [ROOT.GetCharacter.Custom('RegionalAlcoholicDrink')] and drank most of it. Now look at them – drunk as lords, both of them! They can barely stand..." [cook.GetSheHe|U] says angrily.\n\nIt seems as if my ward has fallen to peer pressure, but at least [child.GetSheHe] and [other_child.GetFirstNameNoTooltip] seems to be thick as thieves."
  child_personality.temperate.desc:0 ""They stole a #EMP whole#! keg of [ROOT.GetCharacter.Custom('RegionalAlcoholicDrink')], and [child.GetFirstNameNoTooltip] just sat there as [other_child.GetFirstNameNoTooltip] drank [other_child.GetHerselfHimself] into near oblivion!" [cook.GetSheHe|U] says angrily.\n\nIt seems as if my ward protected [child.GetHerHis] partner in crime, keeping a lookout while abstaining from any drink [child.GetHerselfHimself]."
@@ -55,7 +55,7 @@
  child_personality.7021.change.craven:0 "You should have run away, child!"
  
  child_personality.7030.t:0 "Alone in the Kitchen"
- child_personality.7030.desc:0 "Finally, I have the kitchen #EMP all#! to myself!\n\nI've convinced the cook, [cook.GetFirstName], that I'm going to clean the pots. With that promise made, [cook.GetSheHe] has left to get a [ROOT.Char.Custom('GetLivestockFowlIndef')] for tonight's dinner – leaving the cookery #EMP delectably#! unguarded.\n\nThere's honey and [child.Custom('FavoriteTreatDemand')] and jam and [child.Custom('GetExpensiveDessert')] and apples and... and... #EMP AND I CAN'T TAKE IT ANYMORE!#!\n\nIt is time to..."
+ child_personality.7030.desc:0 "Finally, I have the kitchen #EMP all#! to myself!\n\nI've convinced the cook, [cook.GetFirstName], that I'm going to clean the pots. With that promise made, [cook.GetSheHe] has left to get [ROOT.Char.Custom('GetLivestockFowlIndef')] for tonight's dinner – leaving the cookery #EMP delectably#! unguarded.\n\nThere's honey and [child.Custom('FavoriteTreatDemand')] and jam and [child.Custom('GetExpensiveDessert')] and apples and... and... #EMP AND I CAN'T TAKE IT ANYMORE!#!\n\nIt is time to..."
  child_personality.7030.a:0 "...eat a bit of everything, then nap on a flour sack!"
  child_personality.7030.b:0 "...eat as much as I can fit, I'll not leave a crumb!"
  child_personality.7030.c:0 "...clean the pots, of course!"

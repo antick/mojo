@@ -120,7 +120,8 @@
 								spacing = 2
 
 								text_single = {
-									text = "[Title.GetStateFaith.GetName]"
+									datacontext = "[Title.GetStateFaith]"
+									text = "FAITH_NAME_TOOLTIPPED"
 									using = Font_Size_Medium
 								}
 
@@ -174,7 +175,7 @@
 			}
 
 			hbox = {
-				spacing = -2
+				spacing = 2
 
 				background = {
 					using = Background_Area_Dark
@@ -184,81 +185,38 @@
 				}
 
 				vbox = {
-					visible = "[Not(GetPlayer.IsIndependentRuler)]"
 					layoutpolicy_vertical = expanding
-					spacing = -2
-
-					button_round = {
-
-						enabled = "[Character.IsPlayerInteractionValid('request_governorship_interaction')]"
-						tooltip = "[Character.GetPlayerInteractionTooltip('request_governorship_interaction')]"
-						onclick = "[Character.OpenPlayerInteraction('request_governorship_interaction')]"
-
-						button_grant_title_to_vassal = {
-							parentanchor = center
-							alwaystransparent = yes
-						}
-					}
-
-					button_round = {
-
-						enabled = "[Character.IsPlayerInteractionValid('admin_vassal_modify_vassal_contract_interaction')]"
-						tooltip = "[Character.GetPlayerInteractionTooltip('admin_vassal_modify_vassal_contract_interaction')]"
-						onclick = "[Character.OpenPlayerInteraction('admin_vassal_modify_vassal_contract_interaction')]"
-
-						button_add_laws = {
-							parentanchor = center
-							alwaystransparent = yes
-						}
-					}
-
+					
 					expand = {}
-				}
-
-				vbox = {
-					visible = "[Not(GetPlayer.IsIndependentRuler)]"
-					layoutpolicy_vertical = expanding
-					spacing = -2
 
 					button_round = {
+						visible = "[Not(GetPlayer.IsIndependentRuler)]"
 
-						enabled = "[Character.IsPlayerInteractionValid('request_council_interaction')]"
-						tooltip = "[Character.GetPlayerInteractionTooltip('request_council_interaction')]"
-						onclick = "[Character.OpenPlayerInteraction('request_council_interaction')]"
+						tooltip = "ADMIN_GOVERNMENT_LIEGE_INTERACTIONS_BUTTON_TOOLTIP"
+						tooltip_visible = "[Not(IsInteractionMenuOpenForCharacterWithFilter(Character.Self, 'admin_liege'))]"
 
-						button_royal_court = {
-							parentanchor = center
+						onclick = "[ToggleFilteredCharacterInteractionMenu(Character.Self, 'admin_liege')]"
+
+						button_icon = {
 							alwaystransparent = yes
+							parentanchor = center
+							size = { 30 30 }
+							texture = "gfx/interface/icons/flat_icons/character_interactions.dds"
+						}
+
+						text_single = {
+							parentanchor = bottom|hcenter
+							position = { 0 3 }
+							text = "[GetNumberOfValidInteractionsWithFilter(Character.Self, 'admin_liege')]"
+							default_format = "#glow_color:{0.1,0.1,0.1,1.0}"
+
+							background = {
+								margin = { 5 0 }
+								margin_top = -5
+								using = Background_Area_Dark
+							}
 						}
 					}
-
-					button_round = {
-
-						enabled = "[Character.IsPlayerInteractionValid('start_foster_legitimacy_interaction')]"
-						tooltip = "[Character.GetPlayerInteractionTooltip('start_foster_legitimacy_interaction')]"
-						onclick = "[Character.OpenPlayerInteraction('start_foster_legitimacy_interaction')]"
-
-						button_legitimacy = {
-							parentanchor = center
-							alwaystransparent = yes
-						}
-					}
-
-					button_round = {
-
-						enabled = "[Character.IsPlayerInteractionValid('start_damage_legitimacy_interaction')]"
-						tooltip = "[Character.GetPlayerInteractionTooltip('start_damage_legitimacy_interaction')]"
-						onclick = "[Character.OpenPlayerInteraction('start_damage_legitimacy_interaction')]"
-
-						button_damage_legitimacy = {
-							parentanchor = center
-							alwaystransparent = yes
-						}
-					}
-				}
-
-				spacer = {
-					size = { 4 1 }
 				}
 
 				portrait_head = {
@@ -303,6 +261,9 @@
 
 			hbox = {
 				spacing = 4
+				layoutpolicy_horizontal = expanding
+				margin = { 16 0 }
+				margin_bottom = 8
 
 				hbox = {
 					spacing = 2
@@ -332,9 +293,6 @@
 					}
 				}
 
-				spacer = {
-					size = { 12 0 }
-				}
 				button_standard = {
 					name = "sort_order"
 					size = { 25 25 }
@@ -358,6 +316,9 @@
 						}
 					}
 				}
+
+				expand = {}
+
 
 				button_checkbox_label = {
 					onclick = "[GovernmentAdministrationWindow.ToggleGroupByHouse]"
@@ -1191,7 +1152,8 @@ types GovernmentAdministration
 
 						background = {
 							using = Background_Area_Dark
-
+							alpha = 0.5
+							margin = { 3 3 }
 							modify_texture = {
 								texture = "gfx/interface/component_masks/mask_fade_vertical.dds"
 								blend_mode = alphamultiply
@@ -1384,12 +1346,12 @@ types GovernmentAdministration
 		}
 	}
 
-	type button_family_group_item = button
+	type button_family_group_item = widget
 	{
 		size = { 525 110 }
 		datacontext = "[AdminHouseItem.GetHouse]"
 		datacontext = "[DynastyHouse.GetHeadOfHouse]"
-		onclick = "[GovernmentAdministrationWindow.SelectFeaturedHouse( DynastyHouse.Self )]"
+
 
 		background = {
 			visible = "[ObjectsEqual( Character.GetHouse, Character.GetTopLiege.GetHouse )]"
@@ -1581,6 +1543,7 @@ types GovernmentAdministration
 						layoutpolicy_horizontal = expanding
 						margin_top = 4
 						datacontext = "[DynastyHouse.GetHeadOfHouse]"
+						spacing = 8
 
 						hbox_access_domicile_button = {
 							datacontext = "[DynastyHouse.GetHeadOfHouse]"
@@ -1588,52 +1551,9 @@ types GovernmentAdministration
 
 						}
 
-						button_round = {
-							visible = "[And( Character.HasDomicile, Not( DynastyHouse.GetHeadOfHouse.IsPlayer ) )]"
-							enabled = "[Character.IsPlayerInteractionValid('start_raid_estate_interaction')]"
-							tooltip = "[Character.GetPlayerInteractionTooltip('start_raid_estate_interaction')]"
-							onclick = "[Character.OpenPlayerInteraction('start_raid_estate_interaction')]"
-
-							button_army_toggle_raiding = {
-								parentanchor = center
-								alwaystransparent = yes
-							}
-						}
-
-						button_round = {
-							visible = "[Not( DynastyHouse.GetHeadOfHouse.IsPlayer )]"
-							enabled = "[Character.IsPlayerInteractionValid('start_slander_interaction')]"
-							tooltip = "[Character.GetPlayerInteractionTooltip('start_slander_interaction')]"
-							onclick = "[Character.OpenPlayerInteraction('start_slander_interaction')]"
-
-							button_slander = {
-								parentanchor = center
-								alwaystransparent = yes
-							}
-						}
-
-						button_round = {
-							visible = "[Not( DynastyHouse.GetHeadOfHouse.IsPlayer )]"
-							enabled = "[Character.IsPlayerInteractionValid('start_challenge_status_interaction')]"
-							tooltip = "[Character.GetPlayerInteractionTooltip('start_challenge_status_interaction')]"
-							onclick = "[Character.OpenPlayerInteraction('start_challenge_status_interaction')]"
-
-							button_challenge_status = {
-								parentanchor = center
-								alwaystransparent = yes
-							}
-						}
-
-						button_round = {
-							visible = "[Not( DynastyHouse.GetHeadOfHouse.IsPlayer )]"
-							enabled = "[Character.IsPlayerInteractionValid('request_appointment_support')]"
-							tooltip = "[Character.GetPlayerInteractionTooltip('request_appointment_support')]"
-							onclick = "[Character.OpenPlayerInteraction('request_appointment_support')]"
-
-							button_request_appointment_support = {
-								parentanchor = center
-								alwaystransparent = yes
-							}
+						button_standard = {
+							text = "ADMIN_GOVERNMENT_HOUSE_MEMBER_COUNT"
+							onclick = "[GovernmentAdministrationWindow.SelectFeaturedHouse( DynastyHouse.Self )]"
 						}
 
 						expand = {}
@@ -1641,16 +1561,51 @@ types GovernmentAdministration
 					expand = {}
 				}
 
-				portrait_head_small = {
-					blockoverride "portrait_button"
-					{
-						using = tooltip_ws
+				hbox = {
+					spacing = 2
+
+					background = {
+						using = Background_Area_Dark
+						alpha = 0.7
+
+						margin = { 4 4 }
 					}
-					blockoverride "glow_visible"
-					{
-						visible = no
+
+					vbox = {
+						layoutpolicy_vertical = expanding
+
+						expand = {}
+
+						button_round = {
+							visible = "[Not( Character.IsPlayer )]"
+
+							tooltip = "ADMIN_GOVERNMENT_HOUSE_HEAD_INTERACTIONS_BUTTON_TOOLTIP"
+							tooltip_visible = "[Not(IsInteractionMenuOpenForCharacterWithFilter(Character.Self, 'admin_house_head'))]"
+
+							onclick = "[ToggleFilteredCharacterInteractionMenu(Character.Self, 'admin_house_head')]"
+
+							button_icon = {
+								alwaystransparent = yes
+								parentanchor = center
+								size = { 30 30 }
+								texture = "gfx/interface/icons/flat_icons/character_interactions.dds"
+							}
+						}
+					}
+
+					portrait_head_small = {
+						blockoverride "portrait_button"
+						{
+							using = tooltip_ws
+						}
+						blockoverride "glow_visible"
+						{
+							visible = no
+						}
 					}
 				}
+
+
 			}
 		}
 	}

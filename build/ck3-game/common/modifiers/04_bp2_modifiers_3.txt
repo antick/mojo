@@ -34,6 +34,7 @@ glory_hound_contribution = {
 	icon = dog_positive
 	glory_hound_levy_contribution_mult = 0.3
 	army_maintenance_mult = -0.15
+	happy_powerful_vassal_herd_contribution_mult = 0.3
 }
 
 peasant_supplies = {
@@ -46,4 +47,5 @@ peasant_draft = {
 	icon = wit_positive
 	levy_reinforcement_rate = 0.3
 	county_opinion_add = 10
+	herd_conversion = 0.03
 }

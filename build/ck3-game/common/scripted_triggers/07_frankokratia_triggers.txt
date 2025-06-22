@@ -183,7 +183,7 @@ ep3_frankokratia_story_owner_trigger = {
 	}
 	NOR = {
 		is_allied_to = title:e_byzantium.holder
-		is_vassal_of = title:e_byzantium.holder
+		top_liege = title:e_byzantium.holder
 		is_at_war_with = title:e_byzantium.holder
 		has_truce = title:e_byzantium.holder
 		has_relation_friend = title:e_byzantium.holder

@@ -140,6 +140,7 @@ types Settings
 					text_single = {
 						layoutpolicy_horizontal = expanding
 						visible = "[JominiSettingsWindow.RequireRestart]"
+						max_width = 400
 						margin_right = 10
 						autoresize = yes
 						align = nobaseline|right

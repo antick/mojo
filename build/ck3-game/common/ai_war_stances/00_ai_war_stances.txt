@@ -1,6 +1,12 @@
 ﻿### HARD CODED - DO NOT REMOVE ###
 
 attacker_offensive = {
+	side = attacker
+
+	behaviour_attributes = {
+		stronger = yes
+	}
+	
 	enemy_unit_priority = 100
 	
 	objectives = {
@@ -28,6 +34,12 @@ attacker_offensive = {
 }
 
 attacker_defensive = {
+	side = attacker
+
+	behaviour_attributes = {
+		weaker = yes
+	}
+	
 	enemy_unit_priority = 100
 	
 	objectives = {
@@ -49,6 +61,12 @@ attacker_defensive = {
 }
 
 defender_offensive = {
+	side = defender
+
+	behaviour_attributes = {
+		stronger = yes
+	}
+
 	enemy_unit_priority = 100
 	
 	objectives = {
@@ -77,6 +95,12 @@ defender_offensive = {
 }
 
 defender_defensive = {
+	side = defender
+	
+	behaviour_attributes = {
+		weaker = yes
+	}
+
 	enemy_unit_priority = 100
 	
 	objectives = {
@@ -91,12 +115,14 @@ defender_defensive = {
 		enemy_unit_province = {
 			priority = 200
 		}
-	
-		enemy_capital_province = 150
-		enemy_province = 100
-		enemy_ally_province = 75
+
+		defend_wargoal_province = 100
+		
+		enemy_capital_province = 50
+		enemy_province = 30
+		enemy_ally_province = 20
 		capital_province = 50
-		province = 25
+		province = 15
 	}
 
 	objectives = {
@@ -105,6 +131,12 @@ defender_defensive = {
 }
 
 defender_desperate = {
+	side = defender
+
+	behaviour_attributes = {
+		desperate = yes
+	}
+	
 	enemy_unit_priority = 100
 	
 	objectives = {
@@ -126,6 +158,13 @@ defender_desperate = {
 }
 
 great_holy_war_attacker = {
+	side = attacker
+
+	behaviour_attributes = {
+		stronger = yes
+		weaker = yes
+	}
+	
 	enemy_unit_priority = 100
 	
 	objectives = {
@@ -136,11 +175,9 @@ great_holy_war_attacker = {
 			area = wargoal
 			area = primary_attacker
 		}
-	}
-	
-	objectives = {
-		enemy_capital_province = 150
-		enemy_province = 100
+		
+		enemy_capital_province = 250
+		enemy_province = 200
 	}
 	
 	objectives = {
@@ -149,6 +186,14 @@ great_holy_war_attacker = {
 }
 
 great_holy_war_defender = {
+	side = defender
+
+	behaviour_attributes = {
+		stronger = yes
+		weaker = yes
+		desperate = yes
+	}
+
 	enemy_unit_priority = 100
 	
 	objectives = {

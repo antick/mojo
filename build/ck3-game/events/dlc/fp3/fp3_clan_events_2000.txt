@@ -15,6 +15,7 @@ namespace = clan_event
 # by Emil Tisander
 ################################
 scripted_trigger clan_event_2000_suitable_tax_collector_trigger = {
+	is_ai = yes
 	NOR = {
 		has_trait = lazy
 		has_trait = dull
@@ -663,6 +664,7 @@ clan_event.2001 = {
 		basic_is_valid_for_yearly_events_trigger = yes
 		is_commanding_army = no
 		any_tax_collector = {
+			is_ai = yes
 			NOR = {
 				# Cannot have a maxed out education already
 				has_trait = education_diplomacy_4
@@ -682,6 +684,7 @@ clan_event.2001 = {
 	immediate = {
 		random_tax_collector = {
 			limit = {
+				is_ai = yes
 				NOR = {
 					# Cannot have any a maxed out education already
 					has_trait = education_diplomacy_4
@@ -926,6 +929,7 @@ clan_event.2002 = {
 		basic_is_valid_for_yearly_events_trigger = yes
 		is_commanding_army = no
 		any_tax_collector = { # Any tax collector with at least one tax payer will do
+			is_ai = yes
 			any_tax_collector_vassal = {
 				count >= 1
 			}
@@ -935,6 +939,7 @@ clan_event.2002 = {
 	immediate = {
 		random_tax_collector = {
 			limit = {
+				is_ai = yes
 				any_tax_collector_vassal = {
 					count >= 1
 				}
@@ -1068,6 +1073,7 @@ clan_event.2005 = {
 		
 		# We need to have a tax collector with fairly low aptitude, as to have someone to replace
 		any_tax_collector = {
+			is_ai = yes
 			tax_collector_aptitude = {
 				tax_slot_type = clan_tax_slot
 				value <= 2
@@ -1076,6 +1082,7 @@ clan_event.2005 = {
 		
 		# We also need a vassal who, in some shape or form, would like to help you
 		any_vassal = {
+			is_ai = yes
 			OR = {
 				has_trait = loyal
 				opinion = {
@@ -1093,6 +1100,7 @@ clan_event.2005 = {
 		# First, let's find that bad tax collector the vassal wants to replace
 		random_tax_collector = {
 			limit = {
+				is_ai = yes
 				tax_collector_aptitude = {
 					tax_slot_type = clan_tax_slot
 					value <= 2
@@ -1104,6 +1112,7 @@ clan_event.2005 = {
 		# Then find an appropiate vassal
 		random_vassal = {
 			limit = {
+				is_ai = yes
 				OR = {
 					has_trait = loyal
 					opinion = {
@@ -1296,6 +1305,7 @@ clan_event.2007 = {
 		
 		# We need to have a tax collector with decent to high aptitude
 		any_tax_collector = {
+			is_ai = yes
 			tax_collector_aptitude = {
 				tax_slot_type = clan_tax_slot
 				value >= 2
@@ -1307,6 +1317,7 @@ clan_event.2007 = {
 		# We'll start by finding our tax collector
 		random_tax_collector = {
 			limit = {
+				is_ai = yes
 				tax_collector_aptitude = {
 					tax_slot_type = clan_tax_slot
 					value >= 2

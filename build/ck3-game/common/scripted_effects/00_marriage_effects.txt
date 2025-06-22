@@ -86,6 +86,10 @@ vassals_dislike_marry_lowborn_effect = {
 			limit = {
 				is_lowborn = no
 				$SPOUSE$ = { is_lowborn = yes }
+				OR = {
+					NOT = { exists = primary_spouse }
+					primary_spouse ?= $SPOUSE$
+				}
 			}
 			every_vassal_or_below = {
 				limit = { has_vassal_stance = courtly }

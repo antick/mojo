@@ -107,7 +107,7 @@ tarkhan = {
 	provision_cost = @provisions_cost_cavalry_expensive
 	
 	stack = 50
-	ai_quality = { value = @[cultural_maa_extra_ai_score + 20] }
+	ai_quality = { value = @[cultural_maa_extra_ai_score + 60] }
 	icon = tarkhan
 
 }

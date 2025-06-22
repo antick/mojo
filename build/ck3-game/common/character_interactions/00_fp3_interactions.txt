@@ -7,6 +7,7 @@ fp3_demand_submission_interaction = {
 	pause_on_receive = yes
 	can_send_despite_rejection = yes
 	ai_maybe = yes
+	desc = fp3_demand_submission_interaction_desc
 
 	greeting = positive
 	notification_text = DEMAND_SUBMISSION_NOTIFICATION
@@ -376,6 +377,7 @@ fp3_request_turkic_invasion_interaction = {
 					OR = {
 						government_has_flag = government_is_clan
 						government_has_flag = government_is_tribal
+						government_has_flag = government_is_nomadic
 					}
 					culture = { has_cultural_pillar = heritage_turkic }
 					highest_held_title_tier >= tier_county
@@ -600,21 +602,52 @@ fp3_request_turkic_invasion_interaction = {
 						scope:financial_support = yes
 					}
 					trigger_event = fp3_misc_decisions.0006
-					show_as_tooltip = {
-						spawn_army = {
-							men_at_arms = {
-								type = horse_archers
-								stacks = fp3_request_invasion_troop_value_bonus_troops
+					if = {
+						limit = {
+							has_mpo_dlc_trigger = yes
+						}
+						show_as_tooltip = {
+							spawn_army = {
+								men_at_arms = {
+									type = horse_archers
+									stacks = fp3_request_invasion_troop_value_bonus_troops
+								}
+								men_at_arms = {
+									type = steppe_raiders
+									stacks = fp3_request_invasion_troop_value_bonus_troops
+								}
+								men_at_arms = {
+									type = light_horsemen
+									stacks = fp3_request_invasion_troop_value_bonus_troops
+								}
+								men_at_arms = {
+									type = nomadic_riders
+									stacks = fp3_request_invasion_troop_value_bonus_levy_nomads
+								}
+								location = capital_province
+								uses_supply = yes
+								inheritable = no
+								name = turkic_tribal_event_troops
 							}
-							men_at_arms = {
-								type = light_horsemen
-								stacks = fp3_request_invasion_troop_value_bonus_troops
+						}
+					}
+					else = {
+						show_as_tooltip = {
+							spawn_army = {
+								men_at_arms = {
+									type = horse_archers
+									stacks = fp3_request_invasion_troop_value_bonus_troops
+								}
+								men_at_arms = {
+									type = light_horsemen
+									stacks = fp3_request_invasion_troop_value_bonus_troops
+								}
+								levies = fp3_request_invasion_troop_value_bonus_levy_troops
+								location = capital_province
+								uses_supply = yes
+								inheritable = no
+								name = turkic_tribal_event_troops
 							}
-							levies = fp3_request_invasion_troop_value_bonus_levy_troops
-							location = capital_province
-							uses_supply = yes
-							inheritable = no
-							name = turkic_tribal_event_troops
 						}
 					}
 				}

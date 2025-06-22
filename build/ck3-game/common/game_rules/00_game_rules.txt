@@ -10,13 +10,23 @@
 
 	}
 	
-	very_easy_difficulty = {
-		apply_modifier = player:very_easy_difficulty
-		flag = blocks_achievements
+	hard_difficulty = {
+		apply_modifier = ai:hard_difficulty
+		apply_modifier = player:hard_difficulty_player
+	}
+
+	very_hard_difficulty = {
+		apply_modifier = ai:very_hard_difficulty
+		apply_modifier = player:very_hard_difficulty_player
 	}
 	
 	easy_difficulty = {
 		apply_modifier = player:easy_difficulty
+		flag = blocks_achievements
+	}
+	
+	very_easy_difficulty = {
+		apply_modifier = player:very_easy_difficulty
 		flag = blocks_achievements
 	}
 }
@@ -145,6 +155,10 @@ conquerors_bonuses = {
 	}
 	
 	random_conquerors_bonuses = {
+	
+	}
+	
+	reduced_random_conquerors_bonuses = {
 	
 	}
 }
@@ -382,11 +396,28 @@ realm_stability = {
 	
 	default = default_realm_stability
 
+	lesser_realm_stability_ai_only = {
+	}
+
 	lesser_realm_stability = {
+	}
+
+	lesser_realm_stability_regular_factions_ai_only = {
+	}
+
+	lesser_realm_stability_regular_factions = {
 	}
 
 	default_realm_stability = {
 	
+	}
+
+	higher_realm_stability_ai_only = {
+
+	}
+
+	extreme_realm_stability_ai_only = {
+
 	}
 
 	higher_realm_stability = {
@@ -394,6 +425,22 @@ realm_stability = {
 	}
 
 	extreme_realm_stability = {
+
+	}
+
+	higher_realm_stability_regular_factions_ai_only = {
+
+	}
+
+	extreme_realm_stability_regular_factions_ai_only = {
+
+	}
+
+	higher_realm_stability_regular_factions = {
+
+	}
+
+	extreme_realm_stability_regular_factions = {
 
 	}
 }
@@ -703,7 +750,6 @@ end_date = {
 	
 	no_end_date_end_date = {
 		flag = no_end_date
-		flag = blocks_achievements
 	}
 }
 
@@ -743,6 +789,20 @@ empire_obscurity_requirement = {
 	off_empire_obscurity_requirement = {
 	
 	}
+}
+
+custom_duchies = {
+	categories = {
+		historicity titles
+	}
+
+	default = on_custom_duchies
+
+	on_custom_duchies = {}
+
+	on_custom_duchies_player = {}
+
+	off_custom_duchies = {}
 }
 
 custom_kingdoms = {
@@ -941,16 +1001,31 @@ domain_limit_tweaks = {
 	
 	}
 
-	domain_limit_plus_one = {
-		apply_modifier = all:domain_limit_plus_one
+	domain_limit_minus_one_player = {
+		apply_modifier = player:domain_limit_minus_one
 	}
 
-	domain_limit_plus_two = {
-		apply_modifier = all:domain_limit_plus_two
+	domain_limit_minus_two_player = {
+		apply_modifier = player:domain_limit_minus_two
 	}
 
-	domain_limit_plus_three = {
-		apply_modifier = all:domain_limit_plus_three
+	domain_limit_minus_three_player = {
+		apply_modifier = player:domain_limit_minus_three
+	}
+
+	domain_limit_plus_one_player = {
+		apply_modifier = player:domain_limit_plus_one
+		flag = blocks_achievements
+	}
+
+	domain_limit_plus_two_player = {
+		apply_modifier = player:domain_limit_plus_two
+		flag = blocks_achievements
+	}
+
+	domain_limit_plus_three_player = {
+		apply_modifier = player:domain_limit_plus_three
+		flag = blocks_achievements
 	}
 
 	domain_limit_minus_one = {
@@ -963,6 +1038,18 @@ domain_limit_tweaks = {
 
 	domain_limit_minus_three = {
 		apply_modifier = all:domain_limit_minus_three
+	}
+
+	domain_limit_plus_one = {
+		apply_modifier = all:domain_limit_plus_one
+	}
+
+	domain_limit_plus_two = {
+		apply_modifier = all:domain_limit_plus_two
+	}
+
+	domain_limit_plus_three = {
+		apply_modifier = all:domain_limit_plus_three
 	}
 }
 
@@ -1023,6 +1110,17 @@ dlc_fp3_seljuk_invasion = {
 	random_seljuk_invasion = {}
 }
 
+situation_the_great_steppe = {
+	
+	categories = { historicity game_modes }
+	
+	default = situation_the_great_steppe_toggle_on
+
+	situation_the_great_steppe_toggle_on = {}
+
+	situation_the_great_steppe_toggle_off = {}
+}
+
 struggle_iberia = {
 	
 	categories = { historicity game_modes }
@@ -1079,6 +1177,91 @@ historicity_norman_conquest = {
 	historicity_norman_conquest_determined_svend = {}
 	
 	historicity_norman_conquest_determined_cadoc = {}
+}
+
+tibet_nomad_region = {
+	
+	categories = {
+		historicity
+	}
+	
+	default = tibet_nomad_region_off
+
+	tibet_nomad_region_off = {
+
+	}
+
+	tibet_nomad_region_on = {
+
+	}
+}
+
+sami_nomad_region = {
+	
+	categories = {
+		historicity
+	}
+	
+	default = sami_nomad_region_off
+
+	sami_nomad_region_off = {
+
+	}
+
+	sami_nomad_region_on = {
+
+	}
+}
+
+arabia_nomad_region = {
+	
+	categories = {
+		historicity
+	}
+	
+	default = arabia_nomad_region_off
+
+	arabia_nomad_region_off = {
+
+	}
+
+	arabia_nomad_region_on = {
+
+	}
+}
+
+sahel_nomad_region = {
+	
+	categories = {
+		historicity
+	}
+	
+	default = sahel_nomad_region_off
+
+	sahel_nomad_region_off = {
+
+	}
+
+	sahel_nomad_region_on = {
+
+	}
+}
+
+horn_of_africa_nomad_region = {
+	
+	categories = {
+		historicity
+	}
+	
+	default = horn_of_africa_nomad_region_off
+
+	horn_of_africa_nomad_region_off = {
+
+	}
+
+	horn_of_africa_nomad_region_on = {
+
+	}
 }
 
 historicity_extra_admin_egypt = {

@@ -35,6 +35,15 @@ get_guardian_scope_effect = {
 	if = {
 		limit = {
 			NOT = { exists = scope:guardian }
+			exists = court_owner.court_position:court_tutor_court_position
+		}
+		court_owner.court_position:court_tutor_court_position ?= {
+			save_scope_as = guardian
+		}
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:guardian }
 			is_ruler = yes
 			any_parent = {
 				is_available_ai_adult = yes
@@ -682,6 +691,25 @@ add_similar_age_same_court_children_to_list = {
 				}
 				add_to_list = similar_age_same_court_children
 			}
+		}
+	}
+}
+
+guardian_or_court_tutor_trigger_event = {
+	if = {
+		limit = {
+			any_relation = {
+				type = guardian
+			}
+		}
+		random_relation = {
+			type = guardian
+			trigger_event = $EVENT$
+		}
+	}
+	else = {
+		court_owner.court_position:court_tutor_court_position ?= {
+			trigger_event = $EVENT$
 		}
 	}
 }

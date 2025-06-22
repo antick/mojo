@@ -23,13 +23,14 @@ abandon_hook_interaction = {
 				}
 			}
 		}
+		scope:actor = {
+			has_usable_hook = scope:recipient
+		}
 	}
 
 	is_valid_showing_failures_only = {
 		scope:recipient = { is_busy_in_events_localised = yes } 
-		scope:actor = {
-			has_usable_hook = scope:recipient
-		}
+		
 		custom_description = {
 			scope:actor = {
 				NOT = {

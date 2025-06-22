@@ -4,7 +4,6 @@
 	dynasty = 1045083 # Ediz
 	religion = "manichean"
 	culture = "uyghur"
-	father = 166765
 	828.1.1 = {
 		birth = yes
 	}

@@ -787,7 +787,7 @@
 	religion = "catholic"
 	culture = "norman"
 	trait = greedy
-	trait = hunchbacked
+#	trait = hunchbacked
 	trait = education_stewardship_2
 	father = 1128
 	mother = 1123

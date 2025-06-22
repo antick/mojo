@@ -469,7 +469,7 @@ murder_outcome_reworked.0004 = {
 	center_portrait = {
 		character = scope:assassin
 		animation = sword_yield_start
-		camera = camera_event_center_pointing_left
+		camera = camera_event_scheme_vs_center_look_left
 	}
 	right_portrait = {
 		character = scope:owner_to_reveal
@@ -2014,9 +2014,16 @@ murder_outcome_reworked.0043 = {
 		# Process ending effects.
 		show_as_tooltip = { murder_failure_effect = yes }
 		# Make us a peasant.
+		if = {
+			limit = { exists = scope:target.capital_province }
+			scope:target.capital_province = { save_scope_as = peasant_location }
+		}
+		else = {
+			scope:target.location = { save_scope_as = peasant_location }
+		}
 		create_character = {
 			template = generic_peasant_character
-			location = scope:target.capital_province
+			location = scope:peasant_location
 			save_scope_as = peasant
 		}
 	}
@@ -2187,13 +2194,13 @@ murder_outcome_reworked.0051 = {
 		}
 	}
 	theme = murder_scheme
-	left_portrait = {
+	center_portrait = {
 		character = scope:owner
 		animation = toast_goblet
 	}
 	right_portrait = {
 		character = scope:target
-		animation = map_fear
+		animation = dead
 	}
 	override_background = { reference = bp1_wine_cellar }
 

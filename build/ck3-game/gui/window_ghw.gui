@@ -1538,7 +1538,7 @@ window = {
 										hbox = {
 											layoutpolicy_horizontal = expanding
 
-											soldiers_and_quality_small = {
+											hbox_soldiers_and_quality_small = {
 												datacontext = "[GreatHolyWarWindow.GetArmyComposition( Character.Self )]"
 											}
 											expand = {}
@@ -1646,7 +1646,7 @@ window = {
 										hbox = {
 											layoutpolicy_horizontal = expanding
 
-											soldiers_and_quality_small = {
+											hbox_soldiers_and_quality_small = {
 												datacontext = "[GreatHolyWarWindow.GetArmyComposition( Character.Self )]"
 											}
 											expand = {}

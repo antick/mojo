@@ -688,7 +688,7 @@ turkish_qushtoganid = {
 }
 
 uyghur_yaglakar = {
-	name = "dynn_Yaglakar"
+	name = "dynn_Ediz"
 	culture = uyghur
 }
 

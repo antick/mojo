@@ -93,3 +93,5 @@ nick_the_rhymer = {}
 nick_the_elegist = {}
 nick_the_poetaster = { is_bad = yes }
 nick_the_elysian_muse = {}
+
+nick_the_ploughman = {}

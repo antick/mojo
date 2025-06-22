@@ -15,3 +15,9 @@ bizarre_claims_opinion = {
 	years = 30
 	decaying = yes
 }
+
+found_the_empire_of_hindustan_opinion = {
+	opinion = 50
+	years = 30
+	decaying = yes
+}

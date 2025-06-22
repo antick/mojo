@@ -14,7 +14,6 @@ bp1_yearly.5001 = {
 	left_portrait = {
 		character = root
 		animation = shock
-		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:sibling_murderer
@@ -31,6 +30,7 @@ bp1_yearly.5001 = {
 
 		#You are in your capital
 		exists = location
+		exists = root.capital_province
 		location = root.capital_province
 
 		# Thematically
@@ -129,6 +129,7 @@ bp1_yearly.5001 = {
 			}
 			save_scope_as = guard
 		}
+		add_character_flag = is_naked
 	}
 
 	option = { # Fight back, with murderous intent
@@ -322,6 +323,9 @@ bp1_yearly.5001 = {
 			}
 		}
 	}
+	after = {
+		remove_character_flag = is_naked
+	}
 }
 
 # You win the fight
@@ -338,7 +342,6 @@ bp1_yearly.5002 = {
 	left_portrait = {
 		character = root
 		animation = anger
-		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:sibling_murderer
@@ -353,6 +356,7 @@ bp1_yearly.5002 = {
 		scope:sibling_murderer = {
 			increase_wounds_no_death_effect = { REASON = fight }
 		}
+		add_character_flag = is_naked
 	}
 
 	option = {
@@ -375,6 +379,9 @@ bp1_yearly.5002 = {
 			}
 		}
 	}
+	after = {
+		remove_character_flag = is_naked
+	}
 }
 
 # You lose the fight
@@ -391,7 +398,6 @@ bp1_yearly.5003 = {
 	left_portrait = {
 		character = root
 		animation = poison
-		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:sibling_murderer
@@ -400,6 +406,7 @@ bp1_yearly.5003 = {
 
 	immediate = {
 		increase_wounds_no_death_effect = { REASON = fight }
+		add_character_flag = is_naked
 	}
 
 	option = {
@@ -428,7 +435,6 @@ bp1_yearly.5004 = {
 	left_portrait = {
 		character = root
 		animation = paranoia
-		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:sibling_murderer
@@ -437,6 +443,10 @@ bp1_yearly.5004 = {
 	lower_center_portrait = {
 		character = scope:guard
 		animation = shock
+	}
+
+	immediate = {
+		add_character_flag = is_naked
 	}
 
 	option = {
@@ -486,6 +496,9 @@ bp1_yearly.5004 = {
 			brave = minor_stress_impact_loss
 		}
 	}
+	after = {
+		remove_character_flag = is_naked
+	}
 }
 
 # The guard lets you die
@@ -505,7 +518,6 @@ bp1_yearly.5005 = {
 	left_portrait = {
 		character = root
 		animation = poison
-		outfit_tags = { no_clothes }
 	}
 
 	right_portrait = {
@@ -516,6 +528,10 @@ bp1_yearly.5005 = {
 	lower_center_portrait = {
 		character = scope:guard
 		animation = shock
+	}
+
+	immediate = {
+		add_character_flag = is_naked
 	}
 
 	option = {
@@ -545,6 +561,9 @@ bp1_yearly.5005 = {
 			}
 		}
 	}
+	after = {
+		remove_character_flag = is_naked
+	}
 }
 
 # You are saved by a parent
@@ -564,7 +583,6 @@ bp1_yearly.5006 = {
 	left_portrait = {
 		character = root
 		animation = paranoia
-		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:sibling_murderer
@@ -575,6 +593,10 @@ bp1_yearly.5006 = {
 	}
 	lower_right_portrait = {
 		character = scope:guard
+	}
+
+	immediate = {
+		add_character_flag = is_naked
 	}
 
 	option = {
@@ -613,6 +635,9 @@ bp1_yearly.5006 = {
 			}
 		}
 	}
+	after = {
+		remove_character_flag = is_naked
+	}
 }
 
 # You are left to die by a parent
@@ -632,7 +657,6 @@ bp1_yearly.5007 = {
 	left_portrait = {
 		character = root
 		animation = poison
-		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:sibling_murderer
@@ -641,6 +665,10 @@ bp1_yearly.5007 = {
 	lower_center_portrait = {
 		character = scope:sibling_parent
 		animation = shock
+	}
+
+	immediate = {
+		add_character_flag = is_naked
 	}
 
 	option = {
@@ -681,11 +709,14 @@ bp1_yearly.5008 = {
 	left_portrait = {
 		character = root
 		animation = spymaster
-		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:sibling_murderer
 		animation = shock
+	}
+
+	immediate = {
+		add_character_flag = is_naked
 	}
 
 	option = {
@@ -709,6 +740,9 @@ bp1_yearly.5008 = {
 				target = scope:sibling_murderer
 			}
 		}
+	}
+	after = {
+		remove_character_flag = is_naked
 	}
 }
 

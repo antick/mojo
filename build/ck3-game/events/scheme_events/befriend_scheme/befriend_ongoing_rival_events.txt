@@ -30,7 +30,7 @@ befriend_ongoing_rival.0001 = {
 
 	trigger = {
 		scope:scheme = {
-			scheme_progress > 4
+			scheme_progress > scheme_progress_33
 			NOT = {
 				exists = var:had_target_rebuffed_event
 			}

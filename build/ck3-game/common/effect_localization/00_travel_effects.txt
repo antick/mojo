@@ -1,6 +1,8 @@
 ﻿add_companion = {
 	global = ADD_COMPANION_EFFECT
+	global_past = ADDED_COMPANION_EFFECT
 	third = THEY_ADD_COMPANION_EFFECT
+	third_past = THEY_ADDED_COMPANION_EFFECT
 	first = I_ADD_COMPANION_EFFECT
 	first_past = I_ADDED_COMPANION_EFFECT
 }
@@ -43,7 +45,7 @@ cancel_travel_plan = {
 	third_past = THEY_CANCEL_TRAVEL_PLAN_EFFECT_PAST
 }
 
-reroute_to_home = {
+return_home = {
 	global = GO_HOME_TRAVEL_EFFECT
 	global_past = GO_HOME_TRAVEL_EFFECT_PAST
 	third = THEY_GO_HOME_TRAVEL_EFFECT

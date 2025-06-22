@@ -1,4 +1,4 @@
-window = {
+﻿window = {
 	name = "legends_window"
 	widgetid = "legends_window"
 	movable = no
@@ -337,30 +337,6 @@ window = {
                     }
 				}
 			}
-
-			hbox_single_court_position_card = {
-				datacontext = "[GetCourtPositionType( 'chronicler_court_position' )]"
-				visible = "[And( CourtPositionType.IsShown(GetPlayer), And( GetPlayer.IsValid, Or( PdxGuiTabs.IsTabSet( 'seeds' ), PdxGuiTabs.IsTabSet( 'realm' ) ) ) ) )]"
-				oncreate = "[BindFoldOutContext]"
-				oncreate = "[PdxGuiFoldOut.Unfold]"
-
-				layoutpolicy_horizontal = expanding
-				margin = { 4 8 }
-				margin_top = 12
-
-				blockoverride "header_pre_contents"
-				{
-					hbox = {
-						margin = { 5 2 }
-
-						button_expand_fold_out = {}
-					}
-				}
-				blockoverride "card_visible"
-				{
-					visible = "[PdxGuiFoldOut.IsUnfolded]"
-				}
-			}
 		}
 	}
 }
@@ -577,26 +553,26 @@ types LegendTypes
 
 		                icon_flat_standard_gold = {
 		                    size = { 24 24 }
-		                    texture = "gfx/interface/icons/flat_icons/legends.dds"
+		                    texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 		                }
 
 		                icon_flat_standard_gold = {
 		                    visible = "[Legend.HasQuality( 'mythical' )]"
 		                    size = { 24 24 }
-		                    texture = "gfx/interface/icons/flat_icons/legends.dds"
+		                    texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 		                }
 
 
 		                icon_flat_standard_gold = {
 		                    visible = "[Or(Legend.HasQuality( 'illustrious' ), Legend.HasQuality( 'mythical' ))]"
 		                    size = { 24 24 }
-		                    texture = "gfx/interface/icons/flat_icons/legends.dds"
+		                    texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 		                }
 
 		                icon_flat_standard_black = {
 		                    visible = "[Legend.HasQuality( 'famed' )]"
 		                    size = { 24 24 }
-		                    texture = "gfx/interface/icons/flat_icons/legends.dds"
+		                    texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 
 		                    glow = {
 		                        glow_radius = 3
@@ -609,7 +585,7 @@ types LegendTypes
 		                icon_flat_standard_black = {
 		                    visible = "[Or(Legend.HasQuality( 'famed' ), Legend.HasQuality( 'illustrious' ))]"
 		                    size = { 24 24 }
-		                    texture = "gfx/interface/icons/flat_icons/legends.dds"
+		                    texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 
 		                    glow = {
 		                        glow_radius = 3
@@ -736,26 +712,26 @@ types LegendTypes
 
 				icon_flat_standard_gold = {
 					size = { 24 24 }
-					texture = "gfx/interface/icons/flat_icons/legends.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 				}
 
 				icon_flat_standard_gold = {
 					visible = "[Legend.HasQuality( 'mythical' )]"
 					size = { 24 24 }
-					texture = "gfx/interface/icons/flat_icons/legends.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 				}
 
 
 				icon_flat_standard_gold = {
 					visible = "[Or(Legend.HasQuality( 'illustrious' ), Legend.HasQuality( 'mythical' ))]"
 					size = { 24 24 }
-					texture = "gfx/interface/icons/flat_icons/legends.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 				}
 
 				icon_flat_standard_black = {
 					visible = "[Legend.HasQuality( 'famed' )]"
 					size = { 24 24 }
-					texture = "gfx/interface/icons/flat_icons/legends.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 
 					glow = {
 						glow_radius = 3
@@ -768,7 +744,7 @@ types LegendTypes
 				icon_flat_standard_black = {
 					visible = "[Or(Legend.HasQuality( 'famed' ), Legend.HasQuality( 'illustrious' ))]"
 					size = { 24 24 }
-					texture = "gfx/interface/icons/flat_icons/legends.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 
 					glow = {
 						glow_radius = 3
@@ -1283,25 +1259,25 @@ types LegendSeedTypes
 				icon_flat_standard_gold = {
 					visible = "[LegendSeed.HasQuality( 'famed' )]"
 					size = { 24 24 }
-					texture = "gfx/interface/icons/flat_icons/legends.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 				}
 
 				icon_flat_standard_gold = {
 					visible = "[LegendSeed.HasQuality( 'illustrious' )]"
 					size = { 24 24 }
-					texture = "gfx/interface/icons/flat_icons/legends.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 				}
 
 				icon_flat_standard_gold = {
 					visible = "[LegendSeed.HasQuality( 'mythical' )]"
 					size = { 24 24 }
-					texture = "gfx/interface/icons/flat_icons/legends.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 				}
 
 				icon_flat_standard_black = {
 					visible = "[Not(LegendSeed.HasQuality( 'famed' ))]"
 					size = { 24 24 }
-					texture = "gfx/interface/icons/flat_icons/legends.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 
 					glow = {
 						glow_radius = 3
@@ -1314,7 +1290,7 @@ types LegendSeedTypes
 				icon_flat_standard_black = {
 					visible = "[Not(LegendSeed.HasQuality( 'illustrious' ))]"
 					size = { 24 24 }
-					texture = "gfx/interface/icons/flat_icons/legends.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 
 					glow = {
 						glow_radius = 3
@@ -1327,7 +1303,7 @@ types LegendSeedTypes
 				icon_flat_standard_black = {
 					visible = "[Not(LegendSeed.HasQuality( 'mythical' ))]"
 					size = { 24 24 }
-					texture = "gfx/interface/icons/flat_icons/legends.dds"
+					texture = "gfx/interface/icons/flat_icons/map_modes/legends.dds"
 
 					glow = {
 						glow_radius = 3

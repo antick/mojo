@@ -455,7 +455,10 @@ claim_throne_outcome.4001 = {
 			NOT = { exists = scope:scheme_discovered }
 		}
 		scope:scheme = {
-			add_scheme_progress = -5
+			add_scheme_progress = {
+				value = scheme_progress_gain
+				multiply = -5
+			}
 		}
 		stress_impact = { # Stress from almost being discovered
 			base = medium_stress_impact_gain
@@ -541,7 +544,10 @@ claim_throne_outcome.4002 = {
 			NOT = { exists = scope:scheme_discovered }
 		}
 		scope:scheme = {
-			add_scheme_progress = -5
+			add_scheme_progress = {
+				value = scheme_progress_gain
+				multiply = -5
+			}
 		}
 		stress_impact = { # Stress from almost being discovered
 			base = medium_stress_impact_gain
@@ -640,7 +646,10 @@ claim_throne_outcome.4003 = {
 			NOT = { exists = scope:scheme_discovered }
 		}
 		scope:scheme = {
-			add_scheme_progress = -5
+			add_scheme_progress = {
+				value = scheme_progress_gain
+				multiply = -5
+			}
 		}
 		stress_impact = { # Stress from almost being discovered
 			base = medium_stress_impact_gain

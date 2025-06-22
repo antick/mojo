@@ -1608,7 +1608,11 @@ chariot_race.0200 = {
 						scheme_type = seduce
 						scheme_target_character = scope:honorary_guest
 					}
-					add_scheme_progress = 3
+					save_scope_as = scheme
+					add_scheme_progress = {
+						value = scheme_progress_gain
+						multiply = 3
+					}
 					add_scheme_modifier = {
 						type = awed_by_romantic_speech_modifier
 					}
@@ -1652,7 +1656,8 @@ chariot_race.0200 = {
 						scheme_type = seduce
 						scheme_target_character = scope:honorary_guest
 					}
-					add_scheme_progress = 1
+					save_scope_as = scheme
+					add_scheme_progress = scheme_progress_gain
 					add_scheme_modifier = {
 						type = flustered_by_romantic_speech_modifier
 					}
@@ -3188,6 +3193,7 @@ chariot_race.0201 = {
 			}
 			if = {
 				limit = {
+					exists = root.house.house_head
 					is_ai = yes
 					root.house.house_head = {
 						NOR = {
@@ -3198,7 +3204,7 @@ chariot_race.0201 = {
 					}
 					scope:host.primary_title = {
 						any_title_heir = {
-							this = root.house.house_head
+							root.house.house_head = this
 						}
 					}
 					opinion = {
@@ -3230,6 +3236,7 @@ chariot_race.0201 = {
 			}
 			else_if = {
 				limit = {
+					exists = root.primary_heir
 					root.primary_heir = {
 						NOR = {
 							this = scope:honorary_guest
@@ -3275,6 +3282,7 @@ chariot_race.0201 = {
 			if = {
 				limit = {
 					is_ai = yes
+					exists = root.house.house_head
 					root.house.house_head = {
 						NOR = {
 							this = root
@@ -3316,6 +3324,7 @@ chariot_race.0201 = {
 			}
 			else_if = {
 				limit = {
+					exists = root.primary_heir
 					root.primary_heir = {
 						NOR = {
 							this = scope:honorary_guest
@@ -3345,7 +3354,7 @@ chariot_race.0201 = {
 			if = {
 				limit = {
 					is_ai = yes
-					exists = root.house
+					exists = root.house.house_head
 					root.house.house_head = {
 						NOR = {
 							this = root
@@ -4345,7 +4354,7 @@ chariot_race.0600 = {
 	override_background = { reference = ep3_hippodrome_track }
 
 	# Pivotal Moment Illustrations
-	override_transition = { # Your charioteer loses
+	override_transition = { # Your charioteer loses - Blue Loses
 		trigger = {
 			AND = {
 				has_variable = wager_value
@@ -4357,9 +4366,61 @@ chariot_race.0600 = {
 					this = scope:activity.var:second_place
 					this = scope:activity.var:third_place
 				}
+				has_trait = charioteer_blue
 			}
 		}
-		reference = pivotal_chariots_fail
+		reference = pivotal_chariots_fail_blue
+	}
+	override_transition = { # Your charioteer loses - Green Loses
+		trigger = {
+			AND = {
+				has_variable = wager_value
+				NOT = { has_character_flag = successful_bet }
+			}
+			court_position:charioteer_court_position ?= {
+				NOR = {
+					this = scope:activity.var:first_place
+					this = scope:activity.var:second_place
+					this = scope:activity.var:third_place
+				}
+				has_trait = charioteer_green
+			}
+		}
+		reference = pivotal_chariots_fail_green
+	}
+	override_transition = { # Your charioteer loses - Red Loses
+		trigger = {
+			AND = {
+				has_variable = wager_value
+				NOT = { has_character_flag = successful_bet }
+			}
+			court_position:charioteer_court_position ?= {
+				NOR = {
+					this = scope:activity.var:first_place
+					this = scope:activity.var:second_place
+					this = scope:activity.var:third_place
+				}
+				has_trait = charioteer_red
+			}
+		}
+		reference = pivotal_chariots_fail_red
+	}
+	override_transition = { # Your charioteer loses - White Loses
+		trigger = {
+			AND = {
+				has_variable = wager_value
+				NOT = { has_character_flag = successful_bet }
+			}
+			court_position:charioteer_court_position ?= {
+				NOR = {
+					this = scope:activity.var:first_place
+					this = scope:activity.var:second_place
+					this = scope:activity.var:third_place
+				}
+				has_trait = charioteer_white
+			}
+		}
+		reference = pivotal_chariots_fail_white
 	}
 	override_transition = { # Blue Wins
 		trigger = {

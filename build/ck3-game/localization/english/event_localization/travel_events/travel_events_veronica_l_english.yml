@@ -153,8 +153,8 @@
  travel_events.3040.a:0 "The ceremony was certainly impressive..."
  travel_events.3040.b:0 "This is nonsense! #EMP Nonsense!#!"
  travel_events.3040.c:0 "There's room for a calm debate here."
- travel_events.3040.c.success:0 "You convince [bishop.GetShortUIName] that there's only one truth"
- travel_events.3040.c.failure:0 "[bishop.GetShortUIName|U] is angered by your narrow mind"
+ travel_events.3040.c.success:0 "You convince [bishop.GetFirstNameNoTooltip] that there's only one truth"
+ travel_events.3040.c.failure:0 "[bishop.GetFirstNameNoTooltip] is angered by your narrow mind"
  travel_events.3040.d:0 "There is no room for calmness here! Draw your sword!"
  travel_events.3040.d.success:0 "Your strong arms convince [bishop.GetShortUIName]"
  travel_events.3040.d.failure:0 "[bishop.GetShortUIName] is angered by your violence"
@@ -163,7 +163,9 @@
  
  #The Hermit events
  travel_events.3060.t:0 "The Hermit"
- travel_events.3060.desc:0 "A grotto emerges from the vegetation like a stone arch in a cathedral. On its entry there's a small wooden table and a stall; someone has left a lantern burning on it.\n\n"Careful, my [ROOT.Char.GetLadyLord]," [travel_leader.GetTitledFirstName] holds [travel_leader.GetHerHis] arm up in front of my chest. "There are bandits in these lands."\n\n"You're quick to make accusations," a dimly illuminated figure stands in the entrance to the cave. "I'm merely a hermit, and you... well you carry the title of the [ROOT.Char.GetTitleAsNameNoTooltip].""
+ travel_events.3060.desc.intro: "A grotto emerges from the vegetation like a stone arch in a cathedral. On its entry there's a small wooden table and a stall; someone has left a lantern burning on it."
+ travel_events.3060.desc.travel_leader: "\n\n"Careful, my [ROOT.Char.GetLadyLord]," [travel_leader.GetTitledFirstName] holds [travel_leader.GetHerHis] arm up in front of my chest. "There are bandits in these lands."\n\n"You're quick to make accusations," a dimly illuminated figure stands in the entrance to the cave. "I'm merely a hermit, and you... well you carry the title of the [ROOT.Char.GetTitleAsNameNoTooltip].""
+ travel_events.3060.desc.on_your_own: " An outcast, perhaps, or maybe a bandit hideout?\n\n"Do not fear, my [ROOT.Char.GetTitleAsNameNoTooltip]," a dimly illuminated figure stands in the entrance to the cave. "I'm merely a hermit, seeking wisdom in these old woods.""
  travel_events.3060.a:0 "A hermit would be a great addition to my entourage."
  travel_events.3060.b:0 "How fortunate! Please, tell me about my future."
  travel_events.3060.c:0 "Let's just... let's just go."

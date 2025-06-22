@@ -1327,6 +1327,7 @@ create_rum_scripted_effect = {
 			change = scope:new_rum
 		}
 		set_can_be_named_after_dynasty = no
+		set_can_use_nomadic_naming = no
 	}
 	resolve_title_and_vassal_change = scope:new_rum
 	if = {
@@ -2967,4 +2968,286 @@ restore_old_vasconia_decision_tooltip_scripted_effect = {
 			root = { destroy_title = scope:superseded_kingdom }
 		}
 	}
+}
+
+create_beth_nahrain_scripted_effect = {
+	#Create Beth Nahrain
+	hidden_effect = {
+		every_held_title = { 
+			limit = {
+				tier = tier_empire
+			}
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_kingdom
+				}
+				set_de_jure_liege_title = title:e_beth_nahrain
+			}
+		}
+	}
+}
+
+promote_culture_beth_nahrain_scripted_effect = {
+	every_sub_realm_county = {
+		custom = promote_culture_beth_nahrain_modifier_custom_desc
+		limit = {
+			NOT = {
+				culture = { has_cultural_pillar = heritage_syriac }
+			}
+			title_province = { geographical_region = custom_beth_nahrain }
+		}
+		add_county_modifier = {
+			modifier = promote_culture_beth_nahrain_modifier
+			years = 50
+		}
+	}
+	if = {
+		limit = {
+			faith = faith:nestorian
+		}
+		faith:nestorian = {
+			change_fervor = {
+				value = 100
+				desc = middle_east_major_decisions.1020_fervor
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				exists = scope:suppress_tooltips
+			}
+		}
+		custom_tooltip = middle_east_major_decisions.1020.lack_nestorian
+	}
+}
+
+learning_beth_nahrain_scripted_effect = {
+	house ?= { 
+		add_house_modifier = {
+			modifier = learning_beth_nahrain_house_modifier
+			years = 100
+		}
+	}
+	add_piety_experience = monumental_piety_value
+}
+
+martial_beth_nahrain_scripted_effect = {
+	house ?= { 
+		add_house_modifier = {
+			modifier = martial_beth_nahrain_house_modifier
+			years = 100
+		}
+	}
+	add_prestige_experience = monumental_prestige_value
+}
+
+nestorian_faith_beth_nahrain_scripted_effect = {
+	add_trait = crusader_king
+	add_piety_experience = monumental_piety_value
+}
+
+no_faith_beth_nahrain_scripted_effect = {
+	faith:nestorian = {
+		change_fervor = {
+			value = 100
+			desc = middle_east_major_decisions.1020_fervor
+		}
+	}
+	set_character_faith_with_conversion = faith:nestorian
+	add_piety = monumental_piety_gain
+}
+
+found_empire_of_hindustan_scripted_effect = {
+	save_scope_as = founder
+
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	if = {
+		limit = {
+			completely_controls = title:k_punjab #This will always be true but it keeps the decision text easier to read before you fulfill the criteria
+			NOT = { has_title = title:k_punjab }
+		}
+		title:k_punjab = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+	}
+	if = {
+		limit = {
+			completely_controls = title:k_delhi #This will always be true but it keeps the decision text easier to read before you fulfill the criteria
+			NOT = { has_title = title:k_delhi }
+		}
+		title:k_delhi = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = { title:d_kuru.holder = root }
+				AND = {
+					exists = title:d_kuru.holder
+					title:d_kuru.holder = {
+						is_ai = yes
+					}
+				}
+			}
+		}
+		title:d_kuru = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = { title:c_delhi.holder = root }
+		}
+		title:c_delhi = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+	}
+	title:e_hindustan = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	set_primary_title_to = title:e_hindustan
+
+	hidden_effect = {
+		title:k_delhi = {
+			set_de_jure_liege_title = title:e_hindustan
+		}
+		title:k_punjab = {
+			set_de_jure_liege_title = title:e_hindustan
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_kingdom
+				OR = {
+					de_jure_liege = title:e_bengal
+					de_jure_liege = title:e_deccan
+					de_jure_liege = title:e_rajastan
+				}
+			}
+			set_de_jure_liege_title = title:e_hindustan
+		}
+		#Areas that have had more muslim influence wants to avoid border gore and gets added even if not held - unless controlled by an independent Emperor of Rajastan:
+		if = {
+			limit = {
+				NOT = {
+					title:k_sindh.holder.liege = {
+						has_title = title:e_rajastan
+					}
+				}
+			}
+			title:k_sindh = {
+				set_de_jure_liege_title = title:e_hindustan
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					title:k_kashmir.holder.liege = {
+						has_title = title:e_rajastan
+					}
+				}
+			}
+			title:k_kashmir = {
+				set_de_jure_liege_title = title:e_hindustan
+			}
+		}
+		add_character_flag = e_hindustan #For title flavorization
+	}
+	#If the new Emperor of Hindustan holds any of the Indian Empires these are destroyed and their kingdoms added to Hindustan too
+	#This is not inside the hidden block to not hide that the empires are destroyed.
+	if = {
+		limit = {
+			has_title = title:e_bengal
+		}
+		hidden_effect = {
+			title:e_bengal = {
+				every_in_de_jure_hierarchy = {
+					limit = {
+						tier = tier_kingdom
+					}
+					set_de_jure_liege_title = title:e_hindustan
+				}
+			}
+		}
+		destroy_title = title:e_bengal
+	}
+	if = {
+		limit = {
+			has_title = title:e_deccan
+		}
+		hidden_effect = {
+			title:e_deccan = {
+				every_in_de_jure_hierarchy = {
+					limit = {
+						tier = tier_kingdom
+					}
+					set_de_jure_liege_title = title:e_hindustan
+				}
+			}
+		}
+		destroy_title = title:e_deccan
+	}
+	if = {
+		limit = {
+			has_title = title:e_rajastan
+		}
+		hidden_effect = {
+			title:e_rajastan = {
+				every_in_de_jure_hierarchy = {
+					limit = {
+						tier = tier_kingdom
+					}
+					set_de_jure_liege_title = title:e_hindustan
+				}
+			}
+		}
+		destroy_title = title:e_rajastan
+	}
+	custom_tooltip = found_empire_of_hindustan_decision_effects_de_jure_tt
+	hidden_effect = {
+		if = { # Let's see if you have ultimo and save that if so
+			limit = {
+				has_realm_law = single_heir_succession_law_youngest
+			}
+			save_scope_as = set_ultimo_temp_scope
+		}
+	}
+	if = {
+		limit = { has_dlc_feature = admin_gov }
+		convert_to_administrative_from_feudalism_effect = yes
+	}
+	hidden_effect = {
+		if = { # If you had ultimo, you get to keep it. Otherwise, you get primo for free.
+			limit = {
+				exists = scope:set_ultimo_temp_scope
+			}
+			add_realm_law = single_heir_succession_law_youngest
+		}
+		else = {
+			add_realm_law = single_heir_succession_law
+		}
+	}
+	add_legitimacy_effect = { LEGITIMACY = massive_legitimacy_gain }
+	dynasty = { add_dynasty_prestige = massive_dynasty_prestige_value }
 }

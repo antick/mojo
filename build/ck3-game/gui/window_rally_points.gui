@@ -196,7 +196,7 @@ window = {
 								name = "raise_raid_button"
 								onclick = "[RallyPointWindow.OnRaiseRaid]"
 								visible = "[GetPlayer.CanRaid]"
-								enabled = "[And( GetPlayer.CanStartRaid, RallyPointWindow.CanRaise )]"
+								enabled = "[RallyPointWindow.CanRaiseRaid]"	
 								tooltip = "[RallyPointWindow.GetRaiseRaidTooltip]"
 								minimumsize = { 210 40 }
 
@@ -239,6 +239,7 @@ window = {
 
 					vbox = {
 						datacontext = "[RallyPointWindow.GetAllTroopsComposition]"
+						layoutpolicy_vertical = expanding
 
 						text_single = {
 							name = "all_levies"
@@ -264,6 +265,8 @@ window = {
 							name = "all_troops_quality"
 							text = "[ArmyComposition.GetArmyQualityName]"
 						}
+
+						expand = {}
 					}
 
 					expand = {}
@@ -287,6 +290,7 @@ window = {
 
 						button_standard = {
 							name = "raise_maa_button"
+
 							onclick = "[RallyPointWindow.OnRaiseMenAtArms]"
 							enabled = "[RallyPointWindow.CanRaiseMenAtArms]"
 							tooltip = "[RallyPointWindow.GetRaiseMenAtArmsTooltip]"

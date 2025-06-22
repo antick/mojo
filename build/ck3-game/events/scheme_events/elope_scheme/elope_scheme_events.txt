@@ -852,7 +852,7 @@ elope.2000 = { #by Mathilda Bjarnehed
 		scope:target = { is_imprisoned = no }
 		exists = scope:target.host
 		scope:scheme = {
-			scheme_agent_charges >= 2
+			scheme_progress >= scheme_progress_33
 		}
 	}
 

@@ -710,8 +710,9 @@ ep3_laamps_provisions.1060 = {
 
 	trigger = {
 		domicile_provisions_very_low_to_zero_trigger = yes
-		NOT = {
+		NOR = {
 			has_character_flag = provision_events_cooldown
+			has_game_rule = epidemic_frequency_disabled
 		}
 		location = {
 			NOR = {

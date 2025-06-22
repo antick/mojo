@@ -152,6 +152,13 @@ msg_multiple_agents_removed_my_scheme = {
 	style = bad
 	message_filter_type = scheme_agent
 }
+msg_scheme_opportunity_threshold = {
+	icon = "scheme_opportunity"
+	title = event_message_title
+	desc = event_message_text
+	style = good
+	message_filter_type = scheme_opportunity_threshold
+}
 msg_countermeasure_change = {
 	icon = "spy_master"
 	title = event_message_title

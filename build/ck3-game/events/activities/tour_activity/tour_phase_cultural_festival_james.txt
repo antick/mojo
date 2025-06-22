@@ -41,7 +41,10 @@ cultural_festival.9000 = {
 				is_ai = yes
 				is_adult = yes
 				has_trait = education_intrigue
-				NOT = { government_has_flag = government_is_tribal }
+				NOR = {
+					government_has_flag = government_is_tribal
+					government_has_flag = government_is_nomadic
+				}
 				OR = {
 					has_trait = paranoid
 					has_trait = schemer
@@ -886,9 +889,6 @@ cultural_festival.9020 = {
 	right_portrait = {
 		character = scope:human_sacrifice
 	   	animation = prisondungeon
-		triggered_outfit = {
-			outfit_tags = { no_clothes }
-		}
 	}
 	cooldown = { years = 5 }
 
@@ -925,6 +925,9 @@ cultural_festival.9020 = {
 			}
 		}
 		root.location.county.culture = { save_scope_as = festival_culture_scope }
+		scope:human_sacrifice = {
+			add_character_flag = is_naked
+		}
 	}
 	# Just let it happen
 	option = {
@@ -1025,6 +1028,11 @@ cultural_festival.9020 = {
 				ai_compassion = 1
 				ai_boldness = 0.5
 			}
+		}
+	}
+	after = {
+		scope:human_sacrifice ?= {
+			remove_character_flag = is_naked
 		}
 	}
 }

@@ -621,6 +621,7 @@
 						hbox = {
 							visible = "[HiredTroop.IsAdministrativeArmy]"
 							datacontext = "[HiredTroop.GetTitle.GetHolder]"
+							spacing = 8
 
 							button_standard = {
 								name = "request_admin_troops_from_emperor"
@@ -630,6 +631,7 @@
 								tooltip = "[Character.GetPlayerInteractionTooltip('request_emperor_title_troops_interaction')]"
 
 								text = "HIRED_TROOPS_REQUEST_FROM_EMPEROR"
+								using = tooltip_se
 							}
 
 							button_standard = {
@@ -640,6 +642,7 @@
 								tooltip = "[Character.GetPlayerInteractionTooltip('request_ally_title_troops_interaction')]"
 
 								text = "HIRED_TROOPS_REQUEST_FROM_GOVERNOR"
+								using = tooltip_se
 							}
 						}
 					}

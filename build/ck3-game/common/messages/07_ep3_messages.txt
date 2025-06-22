@@ -378,6 +378,13 @@ msg_admin_provincial_army_request_denied = {
 	message_filter_type = admin_provincial_army_requests
 }
 
+msg_admin_eparch_with_text_good = {
+	icon = "administration"
+	title = event_message_title
+	desc = event_message_text_and_effect
+	style = good
+}
+
 ######################
 ### SCHEME
 ######################

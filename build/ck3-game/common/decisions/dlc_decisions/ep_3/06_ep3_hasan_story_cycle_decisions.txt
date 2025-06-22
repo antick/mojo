@@ -379,7 +379,7 @@ hasan_found_the_assassins = {
 #############################################
 hasan_expand_the_assassins = {
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+		reference = "gfx/interface/illustrations/decisions/decision_legitimacy.dds"
 	}
 	sort_order = 500
 	ai_check_interval = 120

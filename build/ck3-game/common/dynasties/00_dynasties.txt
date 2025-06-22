@@ -3577,11 +3577,11 @@
 #	name = "dynn_Eu"
 #	culture = "norman"
 #}
-100113 = {
-	prefix = "dynnp_de"
-	name = "dynn_Vermandois"
-	culture = "french"
-}
+#100113 = {
+#	prefix = "dynnp_de"
+#	name = "dynn_Vermandois"
+#	culture = "french"
+#}
 100114 = {
 	prefix = "dynnp_de"
 	name = "dynn_Reims"
@@ -14839,7 +14839,7 @@ dyn_chitiki_ganga = {
 	culture = "sogdian"
 }
 1045082 = {
-	name = "dynn_Liao"
+	name = "dynn_YelU_"
 	culture = "khitan"
 }
 1045083 = {
@@ -15035,7 +15035,7 @@ dyn_chitiki_ganga = {
 	culture = "uyghur"
 }
 1040064 = {
-	name = "dynn_Yughur"
+	name = "dynn_Yaghlakar"
 	culture = "uyghur"
 }
 1040065 = {

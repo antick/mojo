@@ -75,12 +75,16 @@ ep3_roman_restoration.0100 = {
 			set_county_faith = faith:hellenic_pagan
 		}
 		every_vassal = {
-			custom = custom.every_admin_vassal
-			limit = {
-				government_allows = administrative
-				faith != faith:hellenic_pagan
+			custom = custom.every_vassal
+			custom_tooltip = {
+				text = may_choose_to_convert_hellenic_desc
+				run_interaction = { # We use the same interaction as when creating a new faith to keep a consistent behaviour, since that is essentially what you're doing here
+					interaction = ask_for_conversion_interaction
+					actor = root
+					recipient = this
+					execute_threshold = accept
+				}
 			}
-			set_character_faith = faith:hellenic_pagan
 		}
 		custom_tooltip = {
 			text = ep3_roman_restoration.household_gods_tenet
@@ -98,6 +102,46 @@ ep3_roman_restoration.0100 = {
 				limit = { story_type = ep3_story_cycle_restoring_rome }
 				set_variable = roman_empire_hard_mode
 			}
+		}
+	}
+
+	option = { # Roleplay option (become Hellenic without Hard Mode)
+		name = ep3_roman_restoration.0100.c
+		custom_tooltip = ep3_roman_restoration.easy_mode
+		every_held_title = {
+			limit = {
+				is_head_of_faith = yes
+			}
+			root = {
+				destroy_title = prev
+			}
+		}
+		set_character_faith = faith:hellenic_pagan 
+		primary_title = { set_state_faith = faith:hellenic_pagan }
+		every_held_title = {
+			custom = custom.every_held_county
+			limit = { tier = tier_county }
+			set_county_faith = faith:hellenic_pagan
+		}
+		every_vassal = {
+			custom = custom.every_vassal
+			custom_tooltip = {
+				text = may_choose_to_convert_hellenic_desc
+				run_interaction = { # We use the same interaction as when creating a new faith to keep a consistent behaviour, since that is essentially what you're doing here
+					interaction = ask_for_conversion_interaction
+					actor = root
+					recipient = this
+					execute_threshold = accept
+				}
+			}
+		}
+		custom_tooltip = {
+			text = ep3_roman_restoration.household_gods_tenet
+			set_global_variable = household_gods_tenet_unlocked
+		}
+		custom_tooltip = {
+			text = uses_custom_caesar_flavourization_tt
+			set_variable = uses_custom_caesar_flavourization
 		}
 	}
 
@@ -185,7 +229,7 @@ ep3_roman_restoration.0300 = {
 			}
 			order_by = { # Mostly sort by governor efficiency
 				value = governor_efficiency
-				multiply = -1
+				multiply = -10
 				# Prefer governors with a larger realm size for more difficulty
 				add = sub_realm_size
 			}
@@ -261,7 +305,6 @@ ep3_roman_restoration.0300 = {
 			name = hook
 			value = no
 		}
-		revoke_title_interaction_effect = yes
 		scope:inefficient_governor = {
 			every_sub_realm_county = {
 				custom = ep3_roman_restoration.0300.every_sub_realm_county
@@ -270,6 +313,7 @@ ep3_roman_restoration.0300 = {
 					years = 10
 				}
 			}
+			force_step_down_landed_titles = yes
 		}
 	}
 	
@@ -325,6 +369,8 @@ ep3_roman_restoration.0500 = {
 			NOR = {
 				is_allied_to = root
 				any_truce_target = { this = root }
+				has_relation_friend = root
+				has_relation_lover = root
 			}
 			any_top_realm_border_county = {
 				any_neighboring_county = {
@@ -389,7 +435,7 @@ ep3_roman_restoration.0500 = {
 		}
 	}
 
-	option = { 
+	option = {
 		name = ep3_roman_restoration.0500.a
 	}
 
@@ -400,31 +446,31 @@ ep3_roman_restoration.0500 = {
 				target = root
 				target_title = scope:target_county
 			}
-		}	
-	}
-}
-
-# Special Bubonic Plague Spawns
-ep3_roman_restoration.0510 = {
-	hidden = yes
-
-	immediate = {
-		random_realm_county = {
-			limit = { exists = holder }
-			holder = { save_scope_as = target_holder }
-			save_scope_as = infected_county
-			title_province = {
-				save_scope_as = target_province
-				create_epidemic_outbreak = {
-					type = bubonic_plague
-					intensity = major
-					save_scope_as = epidemic
-				}
-			}
 		}
-		trigger_event = epidemic_events.1100
 	}
 }
+
+# Special Bubonic Plague Spawns - Commented out and disabled because this is not very fun
+#ep3_roman_restoration.0510 = {
+#	hidden = yes
+#
+#	immediate = {
+#		random_realm_county = {
+#			limit = { exists = holder }
+#			holder = { save_scope_as = target_holder }
+#			save_scope_as = infected_county
+#			title_province = {
+#				save_scope_as = target_province
+#				create_epidemic_outbreak = {
+#					type = bubonic_plague
+#					intensity = major
+#					save_scope_as = epidemic
+#				}
+#			}
+#		}
+#		trigger_event = epidemic_events.1100
+#	}
+#}
 
 # Mongol Invasion Spawns
 ep3_roman_restoration.0520 = {

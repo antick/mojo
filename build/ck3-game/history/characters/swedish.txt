@@ -1178,7 +1178,11 @@
 		trait = faith_warrior
 	}
 	1160.6.6 = {
-		death = "1160.6.6"
+		death = {
+			death_reason = death_murder_known
+			killer = 100553
+		}
+		give_nickname = nick_the_holy
 	}
 }
 
@@ -1958,7 +1962,10 @@
 		add_spouse = 221511 #Ryksa of Poland
 	}
 	1156.12.25 = {
-		death = "1156.12.25"
+		death = {
+			death_reason = death_murder_known
+			killer = 100553
+		}
 	}
 }
 
@@ -1982,7 +1989,10 @@
 		add_spouse = 200603
 	}
 	1167.4.12 = {
-		death = "1167.4.12"
+		death = {
+			death_reason = death_murder_known
+			killer = 200500
+		}
 	}
 }
 
@@ -1999,6 +2009,12 @@
 	mother = 200603
 	1164.1.1 = {
 		birth = yes
+	}
+	1178.1.1 = {
+		employer = 201510
+		effect = {
+			set_relation_grudge = character:200500
+		}
 	}
 	1184.1.1 = {
 		add_spouse = 200605 #Benedicta Ebbesdotter
@@ -2073,7 +2089,10 @@
 	}
 	
 	1173.1.1 = {
-		death = "1173.1.1"
+		death = {
+			death_reason = death_murder_known
+			killer = 200500
+		}
 	}
 }
 

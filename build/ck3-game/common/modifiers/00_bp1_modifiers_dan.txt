@@ -10,12 +10,12 @@ vengeance_obsessed_modifier = {
 }
 
 murder_memory_modifier = {
-	icon = murder_positive
+	icon = blood_positive
 	scheme_success_chance = 20
 }
 
 sex_memory_modifier = {
-	icon = seduction_positive
+	icon = bed_positive
 	scheme_success_chance = 20
 }
 

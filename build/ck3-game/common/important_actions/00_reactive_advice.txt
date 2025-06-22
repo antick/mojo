@@ -85,7 +85,7 @@ action_reactive_advice_protecting_against_hostile_schemes = {
 		if = {
 			limit = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_protecting_against_hostile_schemes }
-				years_from_game_start >= 3
+				months_from_game_start >= 52 # Reactive Advice Queue, Position 13
 				OR = {
 					any_targeting_scheme = {
 						is_scheme_category = hostile
@@ -212,7 +212,7 @@ action_reactive_advice_rightful_liege = {
 		if = {
 			limit = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_rightful_liege }
-				years_from_game_start >= 5 # For pacing reasons
+				months_from_game_start >= 40 # Reactive Advice Queue, Position 10
 				is_at_war = no
 				any_vassal = {
 					highest_held_title_tier > 1
@@ -278,7 +278,7 @@ action_reactive_advice_bishop_endorsement = {
 		if = {
 			limit = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_bishop_endorsement }
-				years_from_game_start >= 2
+				months_from_game_start >= 48 # Reactive Advice Queue, Position 12
 				faith = { has_doctrine = doctrine_theocracy_temporal }
 				exists = cp:councillor_court_chaplain
 				cp:councillor_court_chaplain = {
@@ -331,7 +331,11 @@ action_reactive_advice_religion = {
 		if = {
 			limit = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_religion }	
-				years_from_game_start >= 4 # For pacing reasons	
+				OR = {
+					is_widgetid_open = faith_window
+					months_from_game_start >= 12 # Reactive Advice Queue, Position 3
+				}
+				
 			}
 			try_create_important_action = {
 				important_action_type = action_reactive_advice_religion
@@ -353,7 +357,10 @@ action_reactive_advice_dynamic_culture = {
 		if = {
 			limit = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_dynamic_culture }	
-				years_from_game_start >= 6 # For pacing reasons	
+				OR = {
+					is_widgetid_open = culture_window
+					months_from_game_start >= 16 # Reactive Advice Queue, Position 4
+				}
 			}
 			try_create_important_action = {
 				important_action_type = action_reactive_advice_dynamic_culture
@@ -448,6 +455,8 @@ action_reactive_advice_education = {
 	check_create_action = {
 		if = {
 			limit = {
+				months_from_game_start >= 56 # Reactive Advice Queue, Position 14
+
 				should_show_tutorial_alert = { LESSON = reactive_advice_education }
 				is_at_war = no
 				exists = player_heir
@@ -485,7 +494,7 @@ action_reactive_advice_tooltip_modes = {
 		if = {
 			limit = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_tooltip_modes }
-				years_from_game_start >= 1 # For pacing reasons
+				months_from_game_start >= 4 # Reactive Advice Queue, Position 1
 				is_at_war = no
 			}
 			try_create_important_action = {
@@ -571,7 +580,10 @@ action_reactive_advice_court_positions = {
 			limit = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_court_positions }	
 				OR = {
-					years_from_game_start >= 7 # For pacing reasons in a regular game
+					OR = {
+						is_widgetid_open = court_positions_subtab_tutorial_uses_this
+						months_from_game_start >= 32 # Reactive Advice Queue, Position 8
+					}
 					has_character_flag = force_court_positions_tutorial # For the Quick Tutorial
 				}
 			}
@@ -595,7 +607,12 @@ action_reactive_advice_artifact_inventory = {
 	check_create_action = {
 		if = {
 			limit = {
-				should_show_tutorial_alert = { LESSON = reactive_advice_artifact_inventory }	
+				should_show_tutorial_alert = { LESSON = reactive_advice_artifact_inventory }
+
+				OR = {
+					is_widgetid_open = inventory_view
+					months_from_game_start >= 36 # Reactive Advice Queue, Position 9
+				}
 
 				any_character_artifact = {
 					NOR = {
@@ -654,8 +671,8 @@ action_reactive_advice_regency_for_liege = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_regency_for_liege }	
 				has_active_diarchy = yes
 				OR = {
-					has_diarchy_type = temporary_regency
-					has_diarchy_type = regency
+					is_widgetid_open = diarchy_window
+					months_from_game_start >= 28 # Reactive Advice Queue, Position 7
 				}
 			}
 			try_create_important_action = {
@@ -679,11 +696,9 @@ action_reactive_advice_regency_for_regent = {
 			limit = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_regency_for_regent }	
 				is_diarch = yes
-				liege ?= {
-					OR = {
-						has_diarchy_type = temporary_regency
-						has_diarchy_type = regency
-					}
+				OR = {
+					is_widgetid_open = diarchy_window
+					months_from_game_start >= 28 # Reactive Advice Queue, Position 7
 				}
 			}
 			try_create_important_action = {
@@ -706,7 +721,10 @@ action_reactive_advice_set_future_regent = {
 		if = {
 			limit = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_set_future_regent }	
-				years_from_game_start >= 8 # For pacing reasons	
+				OR = {
+					is_widgetid_open = diarchy_window
+					months_from_game_start >= 64 # Reactive Advice Queue, Position 16
+				}
 				has_active_diarchy = no
 				is_landless_adventurer = no
 			}
@@ -756,7 +774,11 @@ action_reactive_advice_house_unity = {
 		if = {
 			limit = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_house_unity }	
-				
+				OR = {
+					is_widgetid_open = dynasty_house_view
+					months_from_game_start >= 24 # Reactive Advice Queue, Position 6
+				}
+
 				house = { has_house_unity = yes }
 				
 			}
@@ -779,6 +801,11 @@ action_reactive_advice_tax_collector = {
 	check_create_action = {
 		if = {
 			limit = {
+				OR = {
+					is_widgetid_open = window_manage_tax_slots
+					months_from_game_start >= 20 # Reactive Advice Queue, Position 5
+				}
+
 				should_show_tutorial_alert = { LESSON = reactive_advice_tax_collector }
 				
 				government_has_flag = government_is_clan
@@ -805,7 +832,9 @@ action_reactive_advice_legitimacy = {
 				has_legitimacy = yes
 				should_show_tutorial_alert = { LESSON = reactive_advice_legitimacy }
 				NOT = { has_global_variable = tutorial_current_situation_gradual_reveal_3 }
+				months_from_game_start >= 44 # Reactive Advice Queue, Position 11
 			}
+
 			try_create_important_action = {
 				important_action_type = action_reactive_advice_legitimacy
 				actor = root
@@ -932,6 +961,7 @@ action_reactive_advice_favorite_child = {
 	check_create_action = {
 		if = {
 			limit = {
+				months_from_game_start >= 68 # Reactive Advice Queue, Position 17
 				should_show_tutorial_alert = { LESSON = reactive_advice_favorite_child }
 				NOT = {
 					any_relation = { type = favorite_child }
@@ -960,6 +990,35 @@ action_reactive_advice_favorite_child = {
 		start_tutorial_lesson = reactive_advice_favorite_child
 	}
 }
+
+action_reactive_advice_army_automation = {
+	type = tutorial
+	icon = generic_reactive_advice
+
+	check_create_action = {
+		if = {
+			limit = {
+				should_show_tutorial_alert = { LESSON = reactive_advice_army_automation }
+				
+				OR = {
+					months_from_game_start >= 60 # Reactive Advice Queue, Position 15
+					participated_wars >= 2 # you are starting your 2nd war
+				}
+
+			}
+
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_army_automation
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_army_automation
+	}
+}
+
+
 
 
 # EP3 RA
@@ -993,6 +1052,11 @@ action_reactive_advice_admin_gov = {
 	check_create_action = {
 		if = {
 			limit = {
+				OR = {
+					is_widgetid_open = government_administration_window
+					months_from_game_start >= 20 # Reactive Advice Queue, Position 5
+				}
+
 				should_show_tutorial_alert = { LESSON = reactive_advice_admin_gov }
 				has_government = administrative_government
 			}
@@ -1018,7 +1082,9 @@ action_reactive_advice_admin_gov_troops = {
 				should_show_tutorial_alert = { LESSON = reactive_advice_admin_gov_troops }
 				AND = {
 					has_government = administrative_government
+					
 					OR = {
+						months_from_game_start >= 24 # Reactive Advice Queue, Position 6
 						is_at_war = yes
 						is_widgetid_open = military_view
 						any_liege_or_above = { is_at_war = yes }
@@ -1093,3 +1159,132 @@ action_reactive_advice_laamp_contract_move = {
 		start_tutorial_lesson = reactive_advice_laamp_contract_move
 	}
 }
+
+action_reactive_advice_migration = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+
+	check_create_action = {
+		if = {
+			limit = {
+				has_mpo_dlc_trigger = yes
+				government_has_flag = government_is_nomadic
+				is_travelling = no
+				is_at_war = no
+								
+				OR = { 
+					is_widgetid_open = window_migration
+					current_domain_fertility < terrible_county_fertility_level
+					months_from_game_start >= 20 
+
+				}
+
+				should_show_tutorial_alert = { LESSON = reactive_advice_migration }
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_migration	
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_migration
+	}
+}
+
+
+action_reactive_advice_great_steppe = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+
+	check_create_action = {
+		if = {
+			limit = {
+
+				has_mpo_dlc_trigger = yes
+				government_has_flag = government_is_nomadic
+
+				should_show_tutorial_alert = { LESSON = reactive_advice_great_steppe }
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_great_steppe	
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_great_steppe
+	}
+}
+
+action_reactive_advice_kurultai = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+
+	check_create_action = {
+		if = {
+			limit = {
+			
+				has_mpo_dlc_trigger = yes
+				government_has_flag = government_is_nomadic
+
+				OR = { 
+					months_from_game_start >= 24 
+					has_chaotic_succession_trigger = yes
+					is_widgetid_open = "my_realm_window"
+
+				}
+								
+				should_show_tutorial_alert = { LESSON = reactive_advice_kurultai }
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_kurultai	
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_kurultai
+	}
+}
+
+action_reactive_advice_tributaries = {
+	type = tutorial
+	icon = generic_reactive_advice
+	soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_reactive_advice"
+
+	check_create_action = {
+		if = {
+			limit = {
+
+				has_mpo_dlc_trigger = yes
+				government_has_flag = government_is_nomadic
+
+				OR = { 
+					months_from_game_start >= 12 # Reactive Advice Queue
+					is_widgetid_open = "my_realm_window"
+					any_tributary = {
+						count >= 1
+					}
+				}
+								
+				should_show_tutorial_alert = { LESSON = reactive_advice_tributaries }
+			}
+			try_create_important_action = {
+				important_action_type = action_reactive_advice_tributaries	
+				actor = root
+			}
+		}
+	}
+
+	effect = {
+		start_tutorial_lesson = reactive_advice_tributaries
+	}
+}
+

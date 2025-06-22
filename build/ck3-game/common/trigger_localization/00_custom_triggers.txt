@@ -11,6 +11,8 @@
 	third_not = WOMENMEN_ARE_NOT_ALLOWED_TO_BE_WARRIORS_IN_CULTURE
 	global = WOMENMEN_ARE_ALLOWED_TO_BE_WARRIORS_IN_CULTURE
 	global_not = WOMENMEN_ARE_NOT_ALLOWED_TO_BE_WARRIORS_IN_CULTURE
+	none = NONE_ARE_ALLOWED_TO_BE_WARRIORS_IN_CULTURE
+	none_not = NONE_ARE_NOT_ALLOWED_TO_BE_WARRIORS_IN_CULTURE
 }
 
 controls_enough_culture_counties = {
@@ -109,4 +111,13 @@ any_opposite_trait_all = {
 
 followers_over_diplomacy = {
 	first_not = ep3_story_cycle_violet_poet.1020.a.tt
+}
+
+has_contagious_deadly_disease_trigger = {
+	global = HAS_A_DISEASE
+	global_not = DOES_NOT_HAVE_A_DISEASE
+	first = I_AM_DISEASED
+	first_not = I_AM_NOT_DISEASED
+	third = CHARACTER_IS_DISEASED
+	third_not = CHARACTER_IS_NOT_DISEASED
 }

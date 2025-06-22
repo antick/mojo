@@ -1410,6 +1410,10 @@
 		name = {
 			first_valid = {
 				triggered_desc = {
+					trigger = { this = faith:quranist }
+					desc = tenet_religious_legal_pronouncements_hisbah
+				}
+				triggered_desc = {
 					trigger = {
 						religion_tag = islam_religion
 					}
@@ -2928,6 +2932,7 @@
 		traits = {
 			virtues = {
 				sadistic
+				flagellant
 			}
 			sins = {
 				compassionate

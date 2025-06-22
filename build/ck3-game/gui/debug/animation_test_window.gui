@@ -144,7 +144,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_female', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_female', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Average Female"  
@@ -154,7 +154,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_male', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_male', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Average Male"  
@@ -164,7 +164,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_dwarf_female', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_dwarf_female', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Dwarf Female" 
@@ -174,7 +174,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_dwarf_male', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_dwarf_male', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Dwarf Male"
@@ -185,7 +185,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_fat_dwarf_female', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_fat_dwarf_female', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Fat Dwarf Female"
@@ -195,7 +195,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_fat_dwarf_male', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_fat_dwarf_male', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Fat Dwarf Male"
@@ -205,7 +205,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_female_pregnant', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_female_pregnant', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Pregnant Female(9 months)"	
@@ -215,7 +215,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_muscular_female', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_muscular_female', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Muscular Female"
@@ -227,7 +227,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_muscular_male', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_muscular_male', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Muscular Male"
@@ -237,7 +237,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_female_child', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_female_child', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Children Female"
@@ -247,7 +247,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_male_child', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_male_child', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Children Male"
@@ -257,7 +257,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_hunchbacked_female', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_hunchbacked_female', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Hunchbacked female"
@@ -267,7 +267,7 @@ window = {
 			vbox = {
 				button = {
 					using = animation_test_portrait
-					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_hunchbacked_male', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body`', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
+					portrait_texture = "[GetAnimatedBookmarkPortrait('bookmark_animation_test_hunchbacked_male', AnimationTestWindow.GetSelectedAnimationGroup,'environment_body', 'camera_lifestyles', PdxGetWidgetScreenSize(PdxGuiWidget.Self) )]"
 				}
 				text_label_center = {
 					raw_text = "Hunchbacked Male"

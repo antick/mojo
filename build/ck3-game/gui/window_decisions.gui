@@ -23,7 +23,8 @@
 
 	margin_widget = {
 		size = { 100% 100% }
-		margin = { 0 26 }
+		margin_top = 30
+		margin_bottom = 25
 		margin_right = 13
 
 		widget = {
@@ -52,7 +53,7 @@
 
 					button_tab = {
 						layoutpolicy_horizontal = expanding
-						visible = "[Or( IsAdministrativeRuler( GetPlayer ), IsLandlessAdventurer( GetPlayer) )]"
+						visible = "[Or( Or( IsAdministrativeRuler( GetPlayer ), IsLandlessAdventurer( GetPlayer) ), IsNomad( GetPlayer ) )]"
 						onclick = "[GetVariableSystem.Set( 'decision_tab', 'decision' )]"
 						down = "[GetVariableSystem.HasValue( 'decision_tab', 'decision' )]"
 
@@ -66,7 +67,7 @@
 					}
 					button_tab = {
 						layoutpolicy_horizontal = expanding
-						visible = "[Or( GetPlayer.IsGovernor, IsLandlessAdventurer( GetPlayer ) )]"
+						visible = "[Or( Or( GetPlayer.IsGovernor, IsLandlessAdventurer( GetPlayer) ), IsNomad( GetPlayer ) )]"
 						onclick = "[GetVariableSystem.Set( 'decision_tab', 'task_contract' )]"
 						down = "[GetVariableSystem.HasValue( 'decision_tab', 'task_contract' )]"
 
@@ -90,7 +91,6 @@
 						texture = "gfx/interface/skinned/illustrations/decisions.dds"
 						fittype = end
 						alpha = 0.4
-						framesize = { 1200 848 }
 
 						using = Mask_Rough_Edges
 
@@ -195,7 +195,7 @@ types Decisions
 					vbox = {
 						layoutpolicy_horizontal = expanding
 
-						button_decision_entry = {
+						button_decision_entry_cached = {
 							datacontext = "[DecisionsViewItem.GetDecision]"
 
 							layoutpolicy_horizontal = expanding
@@ -205,8 +205,7 @@ types Decisions
 							}
 
 							blockoverride "size_illustration" {
-								minimumsize = "[Select_CVector2f( DecisionGroupType.HasTag('big_button'), '(CVector2f)527,51', '(CVector2f)527,41' )]"
-								position = { -2 0 }
+								minimumsize = "[Select_CVector2f( DecisionGroupType.HasTag('big_button'), '(CVector2f)527,55', '(CVector2f)527,45' )]"
 							}
 
 							blockoverride "decision_texture_icon" {
@@ -228,6 +227,24 @@ types Decisions
 		}
 	}
 
+	type button_decision_entry_cached = button_decision_entry {
+		blockoverride "illustration_possible_check" {
+			visible = "[DecisionsViewItem.IsPossibleForPlayer]"
+		}
+		blockoverride "illustration_not_possible_check" {
+			visible = "[Not(DecisionsViewItem.IsPossibleForPlayer)]"
+		}
+		blockoverride "title_possible_check" {
+			visible = "[DecisionsViewItem.IsPossibleForPlayer]"
+		}
+		blockoverride "title2_not_possible_check" {
+			visible = "[Not(DecisionsViewItem.IsPossibleForPlayer)]"
+		}
+		blockoverride "title_not_possible_check" {
+			visible = "[Not(DecisionsViewItem.IsPossibleForPlayer)]"
+		}
+	}
+
 	type button_decision_entry = button_standard {
 		block "button_size" {
 			size = { 300 45 }
@@ -237,163 +254,50 @@ types Decisions
 			decision_tooltip = {}
 		}
 
-		widget = {
-			scissor = yes
+		margin_widget = {
 			parentanchor = right|vcenter
-
-			block "size_illustration" {
-				size = { 250 43 }
-			}
-
-			icon = {
-				name = "illustration"
-				visible = "[Decision.IsPossibleForPlayer]"
-				parentanchor = right|vcenter
-
-				alpha = 0.7
-				position = { -2 0 }
-				size = { 250 100 }
-				mirror = horizontal
-
-				block "decision_texture_icon" {
-					texture = "[Decision.GetPicture( GetPlayer.Self )]"
-				}
-
-				modify_texture = {
-					texture = "gfx/interface/component_masks/mask_fade_horizontal_extended.dds"
-					blend_mode = alphamultiply
-				}
-			}
-
-			highlight_icon = {
-				visible = "[Not(Decision.IsPossibleForPlayer)]"
-				parentanchor = right|vcenter
-
-				size = { 250 100 }
-				mirror = horizontal
-				alpha = 0.7
-				effectname = "GreyedOut"
-				tintcolor = { 0.6 0.6 0.6 0.7 }
-
-				block "decision_texture_highlight" {
-					texture = "[Decision.GetPicture( GetPlayer.Self )]"
-				}
-
-				modify_texture = {
-					texture = "gfx/interface/component_masks/mask_fade_horizontal_extended.dds"
-					blend_mode = alphamultiply
-				}
-			}
-
-			block "decision_vignette" {
-				icon = {
-					parentanchor = right|vcenter
-					size = { 99.3% 100% }
-
-					texture = "gfx/interface/component_tiles/tile_vignette_3px.dds"
-					spriteType = Corneredtiled
-					spriteborder = { 5 5 }
-				}
-			}
-		}
-
-		hbox = {
-			margin = { 20 0 }
-			margin_right = 10
-
-			text_single = {
-				name = "title"
-				visible = "[Decision.IsPossibleForPlayer]"
-				text = "[Decision.GetTitleForPlayer]"
-				layoutpolicy_horizontal = growing
-
-				align = nobaseline
-				default_format = "#clickable"
-			}
-
-			text_single = {
-				name = "title2"
-				visible = "[Not(Decision.IsPossibleForPlayer)]"
-				layoutpolicy_horizontal = growing
-				text = "[Decision.GetTitleForPlayer]"
-
-				align = nobaseline
-				block "default_format" {
-					default_format = "#low"
-				}
-			}
-
-			highlight_icon = {
-				name = "not_possible"
-				visible = "[Not(Decision.IsPossibleForPlayer)]"
-				size = { 30 30 }
-				texture = "gfx/interface/icons/symbols/icon_cross.dds"
-
-			}
-		}
-	}
-}
-
-types Court
-{
-	type button_court = button_standard {
-		size = { 300 45 }
-
-		tooltipwidget = {
-			decision_tooltip = {}
-		}
-
-		widget = {
 			scissor = yes
-			parentanchor = right|top
+
+			margin = { 2 2 }
 
 			block "size_illustration" {
-				size = { 250 41 }
+				size = { 100% 100% }
 			}
 
-			icon = {
+			proportional_icon = {
 				name = "illustration"
+				block "illustration_possible_check" {
+					visible = "[Decision.IsPossibleForPlayer]"
+				}
 				parentanchor = right|top
-				size = { 250 100 }
-
+				size = { 45% 100% }
 				mirror = horizontal
+
+				block "icon_alpha" {
+					alpha = 0.6
+				}
+
 				block "decision_texture_icon" {
 					texture = "[Decision.GetPicture( GetPlayer.Self )]"
 				}
-				alpha = 0.7
-
-				visible = "[Decision.IsPossibleForPlayer]"
-
-				using = Mask_Rough_Edges
 
 				modify_texture = {
-					texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
+					texture = "gfx/interface/component_masks/mask_fade_horizontal_extended.dds"
 					blend_mode = alphamultiply
-					alpha = 1
-					mirror = horizontal
-
-				}
-
-				modify_texture = {
-					texture = "gfx/interface/component_masks/mask_fade_horizontal.dds"
-					blend_mode = alphamultiply
-					alpha = 0.5
-					mirror = horizontal
-
 				}
 			}
 
-			highlight_icon = {
-				visible = "[Not(Decision.IsPossibleForPlayer)]"
+			proportional_icon = {
+				block "illustration_not_possible_check" {
+					visible = "[Not(Decision.IsPossibleForPlayer)]"
+				}
 				parentanchor = right|top
-				alpha = 0.7
-				size = { 250 100 }
+				size = { 45% 100% }
 				mirror = horizontal
+				
+				enabled = no
 
-				effectname = "GreyedOut"
-				tintcolor = { 0.6 0.6 0.6 0.7 }
-
-				using = Mask_Rough_Edges
+				alpha = 0.6
 
 				block "decision_texture_highlight" {
 					texture = "[Decision.GetPicture( GetPlayer.Self )]"
@@ -404,13 +308,18 @@ types Court
 					blend_mode = alphamultiply
 				}
 			}
+		}
+
+		# Vignette
+		margin_widget = {
+			parentanchor = center
+			size = { 100% 100% }
+			
+			margin = { 2 2 }
 
 			icon = {
 				parentanchor = center
-
-				block "vignette_size" {
-					size = { 496 36 }
-				}
+				size = { 100% 100% }
 
 				texture = "gfx/interface/component_tiles/tile_vignette_3px.dds"
 				spriteType = Corneredtiled
@@ -419,39 +328,50 @@ types Court
 		}
 
 		hbox = {
-			margin = { 20 0 }
+			margin = { 15 0 }
 			margin_right = 10
 
 			text_single = {
-				layoutpolicy_horizontal = growing
 				name = "title"
+				block "title_possible_check" {
+					visible = "[Decision.IsPossibleForPlayer]"
+				}
+				layoutpolicy_horizontal = growing
+
 				text = "[Decision.GetTitleForPlayer]"
-				visible = "[Decision.IsPossibleForPlayer]"
-				default_format = "#clickable"
 				align = nobaseline
+				block "default_format" {
+					default_format = "#clickable"
+				}
 			}
 
 			text_single = {
-				layoutpolicy_horizontal = growing
 				name = "title2"
+				block "title2_not_possible_check" {
+					visible = "[Not(Decision.IsPossibleForPlayer)]"
+				}
+				layoutpolicy_horizontal = growing
 
 				text = "[Decision.GetTitleForPlayer]"
-				visible = "[Not(Decision.IsPossibleForPlayer)]"
+				align = nobaseline
 				block "default_format" {
 					default_format = "#low"
 				}
-				align = nobaseline
 			}
 
 			highlight_icon = {
-				size = { 30 30 }
 				name = "not_possible"
+				block "title_not_possible_check" {
+					visible = "[Not(Decision.IsPossibleForPlayer)]"
+				}
+				size = { 30 30 }
+
 				texture = "gfx/interface/icons/symbols/icon_cross.dds"
-				visible = "[Not(Decision.IsPossibleForPlayer)]"
 			}
 		}
 	}
 }
+
 types Contract
 {
 	type contract_item = vbox {
@@ -523,7 +443,7 @@ types Contract
 						}
 
 						text_single = {
-							text = "[SelectLocalization( IsLandlessAdventurer( TaskContract.GetTaker ) , 'TASK_CONTRACT_TIER' , 'GOVERNANCE_ISSUE_TIER')]"
+							text = "[SelectLocalization(IsLandlessAdventurer( TaskContract.GetTaker ) , 'TASK_CONTRACT_TIER' , SelectLocalization(IsAdministrativeRuler( TaskContract.GetTaker ), 'GOVERNANCE_ISSUE_TIER', 'SETTLEMENT_ISSUE_TIER'))]"
 							default_format = "#italic"
 							margin_right = 5
 						}
@@ -618,7 +538,7 @@ types Contract
 
 			widget = {
 				size = { 160 160 }
-				
+
 				datacontext = "[TaskContract.GetEmployer]"
 				visible = "[Character.IsValid]"
 
@@ -688,7 +608,7 @@ types Contract
 
 					widget = {
 						size = { 200 200 }
-						
+
 
 						button = {
 							name = "name_plate"

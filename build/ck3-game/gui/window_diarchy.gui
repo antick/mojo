@@ -235,7 +235,7 @@ window = {
 										size = { 0 40 }
 										allow_outside = yes
 
-										visible = "[ComplexBarItem.IsVisible]"
+										visible = "[And( ComplexBarItem.IsVisible, GreaterThan_int32( DiarchyWindow.GetLevelForSwing( ComplexBarItem.GetValue ), '(int32)0' ) ) )]"
 
 										### Current marker glow
 										icon = {

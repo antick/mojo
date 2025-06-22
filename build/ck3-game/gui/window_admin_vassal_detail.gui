@@ -111,7 +111,9 @@
 						text = ADMIN_WINDOW_THEME_ADMINISTRATION_TYPE
 					}
 
-					button_modify_theme = { }
+					button_modify_theme = {
+						using = tooltip_se
+					}
 
 					button_round = {
 						datacontext = "[Title.GetHolder.GetLiege]"
@@ -124,7 +126,10 @@
 							parentanchor = center
 							alwaystransparent = yes
 						}
+						
+						using = tooltip_se
 					}
+
 					button_round = {
 						visible = "[Character.IsPlayerInteractionShown('give_vassal_directive_interaction')]"
 						enabled = "[Character.IsPlayerInteractionValid('give_vassal_directive_interaction')]"
@@ -137,10 +142,13 @@
 							alwaystransparent = yes
 							parentanchor = center
 						}
+						
 						using = tooltip_se
 					}
+
 					vbox = {
 						margin_top = -11
+						
 						text_single = {
 							visible = "[Character.IsPlayerInteractionShown('give_vassal_directive_interaction')]"
 							text = "[Character.Custom('vassal_directive_icon')]"
@@ -287,54 +295,36 @@
 					margin_top = 12
 					spacing = 4
 
-					button_round = {
-						visible = "[Character.IsPlayerInteractionShown('force_step_down_interaction')]"
-						enabled = "[Character.IsPlayerInteractionValid('force_step_down_interaction')]"
-						tooltip = "[Character.GetPlayerInteractionTooltip('force_step_down_interaction')]"
-						onclick = "[Character.OpenPlayerInteraction('force_step_down_interaction')]"
-
-						button_force_to_step_down = {
-							parentanchor = center
-							alwaystransparent = yes
-						}
-					}
-
-					button_round = {
-						visible = "[Character.IsPlayerInteractionShown('start_subsume_province_interaction')]"
-						enabled = "[Character.IsPlayerInteractionValid('start_subsume_province_interaction')]"
-						tooltip = "[Character.GetPlayerInteractionTooltip('start_subsume_province_interaction')]"
-						onclick = "[Character.OpenPlayerInteraction('start_subsume_province_interaction')]"
-
-						button_subsume_province = {
-							parentanchor = center
-							alwaystransparent = yes
-						}
-					}
-
-					button_round = {
-						visible = "[Character.IsPlayerInteractionShown('start_dispute_border_interaction')]"
-						enabled = "[Character.IsPlayerInteractionValid('start_dispute_border_interaction')]"
-						tooltip = "[Character.GetPlayerInteractionTooltip('start_dispute_border_interaction')]"
-						onclick = "[Character.OpenPlayerInteraction('start_dispute_border_interaction')]"
-
-						button_dispute_border = {
-							parentanchor = center
-							alwaystransparent = yes
-						}
-					}
-
-					button_round = {
-						visible = "[Character.IsPlayerInteractionShown('frontier_influence_war_interaction')]"
-						enabled = "[Character.IsPlayerInteractionValid('frontier_influence_war_interaction')]"
-						tooltip = "[Character.GetPlayerInteractionTooltip('frontier_influence_war_interaction')]"
-						onclick = "[Character.OpenPlayerInteraction('frontier_influence_war_interaction')]"
-
-						button_declare_war = {
-							parentanchor = center
-							alwaystransparent = yes
-						}
-					}
 					expand = {}
+
+					button_round = {
+						visible = "[And( Not(Character.IsLocalPlayer), Not( Character.IsIndependentRuler ))]"
+
+						tooltip = "ADMIN_GOVERNMENT_GOVERNOR_INTERACTIONS_BUTTON_TOOLTIP"
+						tooltip_visible = "[Not(IsInteractionMenuOpenForCharacterWithFilter(Character.Self, 'admin_governor'))]"
+
+						onclick = "[ToggleFilteredCharacterInteractionMenu(Character.Self, 'admin_governor')]"
+
+						button_icon = {
+							alwaystransparent = yes
+							parentanchor = center
+							size = { 30 30 }
+							texture = "gfx/interface/icons/flat_icons/character_interactions.dds"
+						}
+
+						text_single = {
+							parentanchor = bottom|hcenter
+							position = { 0 3 }
+							text = "[GetNumberOfValidInteractionsWithFilter(Character.Self, 'admin_governor')]"
+							default_format = "#glow_color:{0.1,0.1,0.1,1.0}"
+
+							background = {
+								margin = { 5 0 }
+								margin_top = -5
+								using = Background_Area_Dark
+							}
+						}
+					}
 				}
 
 				expand = { }
@@ -506,7 +496,7 @@ types AdminVassalDetails
 					visible = "[And( AdminVassalSuccessorCandidate.IsLocalPlayerWinnerOrAnyLoser, And( And( AdminVassalSuccessorCandidate.IsLocalPlayerCandidate, AdminVassalSuccessorCandidate.IsLocalPlayerInvested ), Not( AdminVassalSuccessorCandidate.IsLocalPlayerCandidateInFirst ) ) )]"
 
 					size = { 100% 100% }
-					
+
 					tooltip = "ADMIN_WINDOW_THEME_ADMINISTRATION_LOCAL_PLAYER_HAS_INVESTED_LOSING_TT"
 
 					background = {
@@ -525,7 +515,7 @@ types AdminVassalDetails
 					visible = "[And( AdminVassalSuccessorCandidate.IsLocalPlayerWinnerOrAnyLoser, And( And( AdminVassalSuccessorCandidate.IsLocalPlayerCandidate, Not( AdminVassalSuccessorCandidate.IsLocalPlayerInvested ) ), Not( AdminVassalSuccessorCandidate.IsLocalPlayerCandidateInFirst ) ) )]"
 
 					size = { 100% 100% }
-					
+
 					tooltip = "ADMIN_WINDOW_THEME_ADMINISTRATION_LOCAL_PLAYER_HAS_CANDIDATE_LOSING_TT"
 
 					background = {
@@ -542,9 +532,9 @@ types AdminVassalDetails
 				widget = {
 					name = "player_candidate_in_first_invested"
 					visible = "[And( AdminVassalSuccessorCandidate.IsLocalPlayerWinnerOrAnyLoser, And( And( AdminVassalSuccessorCandidate.IsLocalPlayerCandidate, AdminVassalSuccessorCandidate.IsLocalPlayerCandidateInFirst ), AdminVassalSuccessorCandidate.IsLocalPlayerInvested ) )]"
-					
+
 					size = { 100% 100% }
-					
+
 					tooltip = "ADMIN_WINDOW_THEME_ADMINISTRATION_LOCAL_PLAYER_HAS_INVESTED_WINNING_TT"
 
 					background = {
@@ -563,7 +553,7 @@ types AdminVassalDetails
 					visible = "[And( AdminVassalSuccessorCandidate.IsLocalPlayerWinnerOrAnyLoser, And( And( AdminVassalSuccessorCandidate.IsLocalPlayerCandidate, AdminVassalSuccessorCandidate.IsLocalPlayerCandidateInFirst ), Not( AdminVassalSuccessorCandidate.IsLocalPlayerInvested ) ) )]"
 
 					size = { 100% 100% }
-					
+
 					tooltip = "ADMIN_WINDOW_THEME_ADMINISTRATION_LOCAL_PLAYER_HAS_CANDIDATE_WINNING_TT"
 
 					background = {
@@ -605,8 +595,13 @@ types AdminVassalDetails
 					block "score_breakdown" {
 						datacontext = "[AdminVassalDetailView.GetSuccessionScoreBreakdown(AdminVassalSuccessorCandidate.GetCandidate.Self )]"
 					}
+					blockoverride "header_text" {
+						text = ADMIN_VASSAL_CANDIDATE_SCORE_TT_HEADING
+					}
 				}
 			}
+
+			using = tooltip_se
 
 			icon = {
 				size = { 24 24 }
@@ -673,7 +668,7 @@ types AdminVassalDetails
 		}
 	}
 
-	type powerful_family_bonus = button {
+	type powerful_family_bonus = widget {
 		allow_outside = yes
 
 		datacontext = "[DynastyHouse]"
@@ -683,7 +678,6 @@ types AdminVassalDetails
 		size = { 36 36 }
 		visible = "[HousePowerBonus.IsValid]"
 
-		onclick = "[OpenGameViewData( 'family_attribute_window', DynastyHouse.Self )]"
 		tooltip = "ADMINISTRATIVE_GOVERNMENT_BONUS_TOOLTIP"
 
 		highlight_icon = {

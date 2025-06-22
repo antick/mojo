@@ -718,12 +718,12 @@ tour_progress_effect = {
 		}
 		scope:host = {
 			save_scope_as = visiting_liege
-		}
-		scope:host.location.province_owner = {
-			save_scope_as = stop_host_scope
-			if = {
-				limit = { has_character_flag = being_visited_on_tour }
-				remove_character_flag = being_visited_on_tour
+			location.province_owner ?= {
+				save_scope_as = stop_host_scope
+				if = {
+					limit = { has_character_flag = being_visited_on_tour }
+					remove_character_flag = being_visited_on_tour
+				}
 			}
 		}
 		trigger_event = tour_general.0510

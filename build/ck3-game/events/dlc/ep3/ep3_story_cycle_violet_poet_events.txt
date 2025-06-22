@@ -1193,9 +1193,11 @@ ep3_story_cycle_violet_poet.1015 = {
 					title = ep3_story_cycle_violet_poet.1015.a.failure
 					left_icon = root
 					right_icon = scope:stranger
-
-					scope:stranger = {
-						move_to_pool = yes
+					
+					hidden_effect = {
+						scope:stranger = {
+							move_to_pool = yes
+						}
 					}
 
 					add_stress = minor_stress_gain
@@ -2446,7 +2448,11 @@ ep3_story_cycle_violet_poet.2015 = {
 	}
 	right_portrait = {
 		character = scope:zaydun
-		animation = acknowledging
+		triggered_animation = {
+			trigger = { religion = religion:christianity_religion }
+			animation = acknowledging # anim uses crucifix scepter
+		}
+		animation = war_over_tie
 	}
 	artifact = {
 		target = scope:newly_created_artifact

@@ -164,7 +164,6 @@
 				}
 				add = {
 					value = 20
-					multiply = scope:title.holder.governor_efficiency
 					desc = councillor_position_governor_desc
 				}
 			}
@@ -178,8 +177,7 @@
 					}
 				}
 				add = {
-					value = 5
-					multiply = scope:title.holder.governor_efficiency
+					value = 10
 					desc = court_position_succession_governor_desc
 				}
 			}
@@ -261,7 +259,7 @@
 				limit = { has_perk = ducal_conquest_perk }
 				add = {
 					value = 30
-					desc = ducal_conquest_perk_name
+					desc = ducal_conquest_perk_name_desc
 				}
 			}
 
@@ -315,8 +313,7 @@
 					scope:title.holder ?= { is_close_family_of = root }
 				}
 				add = {
-					value = 10
-					multiply = scope:title.holder.governor_efficiency
+					value = 15
 					desc = "close_family_holder_desc"
 				}
 			}
@@ -339,8 +336,7 @@
 					scope:title.holder ?= { has_relation_friend = root }
 				}
 				add = {
-					value = 5
-					multiply = scope:title.holder.governor_efficiency
+					value = 10
 					desc = governor_friend_desc
 				}
 			}
@@ -350,7 +346,6 @@
 				}
 				add = {
 					value = 15
-					multiply = scope:title.holder.governor_efficiency
 					desc = governor_best_friend_desc
 				}
 			}

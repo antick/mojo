@@ -43,6 +43,7 @@ scripted_trigger hold_court_8290_county_trigger = {
 }
 
 scripted_trigger hold_court_8290_vassal_trigger = {
+	is_ai = yes # Don't mess with a player's realm
 	OR = {
 		government_has_flag = government_is_feudal
 		government_has_flag = government_is_clan
@@ -124,7 +125,17 @@ hold_court.8290 = {
 			has_character_flag = has_had_county_request_event
 			has_character_flag = has_had_government_request_event
 		}
-		culture = { has_innovation = innovation_development_02 }
+		culture = {
+			has_innovation = innovation_development_02
+			# Must have a culture that is likely to grant a city charter
+			OR = {
+				has_cultural_parameter = can_make_republican_vassals
+				has_cultural_parameter = city_buildings_more_powerful
+				has_cultural_parameter = city_buildings_less_control
+				has_cultural_parameter = republican_vassals_pay_more
+				has_cultural_parameter = more_parochial_vassals
+			}
+		}
 		any_vassal_or_below = { hold_court_8290_vassal_trigger = yes }
 		# Not too many republic vassals already
 		NOT = {
@@ -284,6 +295,7 @@ scripted_trigger hold_court_8300_province_trigger = {
 }
 
 scripted_trigger hold_court_8300_vassal_trigger = {
+	is_ai = yes # Don't mess with a player's realm
 	OR = {
 		government_has_flag = government_is_feudal
 		government_has_flag = government_is_clan
@@ -293,7 +305,17 @@ scripted_trigger hold_court_8300_vassal_trigger = {
 	is_powerful_vassal = no
 	is_councillor = no
 	NOT = { root.diarch ?= this }
-	culture = { has_innovation = innovation_development_02 }
+	culture = {
+		has_innovation = innovation_development_02
+		# Must be of a culture that would want to have a city for themselves
+		OR = {
+			has_cultural_parameter = can_make_republican_vassals
+			has_cultural_parameter = city_buildings_more_powerful
+			has_cultural_parameter = city_buildings_less_control
+			has_cultural_parameter = republican_vassals_pay_more
+			has_cultural_parameter = more_parochial_vassals
+		}
+	}
 	domain_size = 1
 	any_held_county = {
 		count = 1
@@ -362,6 +384,17 @@ hold_court.8300 = {
 			has_character_flag = has_had_county_request_event
 			has_character_flag = has_had_government_request_event
 		}
+		# Must have a culture that is likely to grant a city charter
+		culture = {
+			OR = {
+				has_cultural_parameter = can_make_republican_vassals
+				has_cultural_parameter = city_buildings_more_powerful
+				has_cultural_parameter = city_buildings_less_control
+				has_cultural_parameter = republican_vassals_pay_more
+				has_cultural_parameter = more_parochial_vassals
+			}
+		}
+		# You also have an applicable vassal
 		any_vassal_or_below = { hold_court_8300_vassal_trigger = yes }
 		# Not too many republic vassals already
 		NOT = {
@@ -488,7 +521,6 @@ hold_court.8300 = {
 			}
 		}
 		resolve_title_and_vassal_change = scope:change
-		scope:city_province.barony = { set_capital_barony = yes }
 		every_vassal = {
 			limit = {
 				has_vassal_stance = parochial
@@ -1877,9 +1909,9 @@ scripted_effect hold_court_8340_create_seeker_effect = {
 		culture = scope:birthplace.culture
 		faith = scope:birthplace.faith
 		dynasty = none
-		location = root.location
 		template = $TYPE$_court_position_holder_template
 		save_scope_as = candidate
+		employer = root
 	}
 }
 
@@ -1960,6 +1992,7 @@ hold_court.8340 = {
 				1 = {
 					ep1_weight_up_for_court_type_modifier = { COURT_TYPE = court_warlike }
 					ep1_weight_up_for_court_type_modifier = { COURT_TYPE = court_tribal }
+					ep1_weight_up_for_court_type_modifier = { COURT_TYPE = court_nomadic }
 					save_scope_as = prowess
 					hold_court_8340_create_seeker_effect = { TYPE = prowess }
 				}
@@ -2083,6 +2116,9 @@ hold_court.8340 = {
 			ai_value_modifier = {
 				ai_greed = 0.5
 			}
+		}
+		scope:candidate = {
+			silent_disappearance_effect = yes
 		}
 	}
 

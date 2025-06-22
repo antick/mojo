@@ -143,8 +143,20 @@ attack_ally_text = {
 	third = ATTACKING_ALLY
 }
 
+attack_suzerain_text = {
+	global = ATTACKING_SUZERAIN
+	first = ATTACKING_SUZERAIN
+	third = ATTACKING_SUZERAIN
+}
+
 attack_breaking_truce_text = {
 	global = BREAKING_TRUCE
 	first = BREAKING_TRUCE
 	third = BREAKING_TRUCE
+}
+
+attack_breaking_betrothal_text = {
+	global = WAR_BREAKING_BETROTHAL
+	first = WAR_BREAKING_BETROTHAL
+	third = WAR_BREAKING_BETROTHAL
 }

@@ -196,7 +196,7 @@ befriend_ongoing_dislike.0003 = {
 			}
 		}
 		scope:scheme = {
-			scheme_progress > 5
+			scheme_progress > scheme_progress_50
 			NOT = {
 				has_scheme_modifier = target_tired_of_insistence_modifier
 			}
@@ -504,7 +504,7 @@ befriend_ongoing_dislike.2002 = {
 			modifier = {
 				factor = 0.5
 				scope:scheme = {
-					scheme_progress > 8
+					scheme_progress > scheme_progress_66
 				}
 			}
 		}
@@ -581,13 +581,13 @@ befriend_ongoing_dislike.5001 = {
 		modifier = {
 			add = -0.5
 			scope:scheme = {
-				scheme_progress < 40
+				scheme_progress < scheme_progress_50
 			}
 		}
 		modifier = {
 			add = 0.5
 			scope:scheme = {
-				scheme_progress >= 40
+				scheme_progress >= scheme_progress_50
 			}
 		}
 	}
@@ -704,13 +704,13 @@ befriend_ongoing_dislike.5002 = {
 		modifier = {
 			add = -0.5
 			scope:scheme = {
-				scheme_progress < 40
+				scheme_progress < scheme_progress_50
 			}
 		}
 		modifier = {
 			add = 0.5
 			scope:scheme = {
-				scheme_progress >= 40
+				scheme_progress >= scheme_progress_50
 			}
 		}
 	}
@@ -809,13 +809,13 @@ befriend_ongoing_dislike.5003 = {
 		modifier = {
 			add = -0.5
 			scope:scheme = {
-				scheme_progress < 40
+				scheme_progress < scheme_progress_50
 			}
 		}
 		modifier = {
 			add = 0.5
 			scope:scheme = {
-				scheme_progress >= 40
+				scheme_progress >= scheme_progress_50
 			}
 		}
 	}
@@ -911,13 +911,13 @@ befriend_ongoing_dislike.5004 = {
 		modifier = {
 			add = -0.5
 			scope:scheme = {
-				scheme_progress < 40
+				scheme_progress < scheme_progress_50
 			}
 		}
 		modifier = {
 			add = 0.5
 			scope:scheme = {
-				scheme_progress >= 40
+				scheme_progress >= scheme_progress_50
 			}
 		}
 	}
@@ -1026,13 +1026,13 @@ befriend_ongoing_dislike.5005 = {
 		modifier = {
 			add = -0.5
 			scope:scheme = {
-				scheme_progress < 40
+				scheme_progress < scheme_progress_50
 			}
 		}
 		modifier = {
 			add = 0.5
 			scope:scheme = {
-				scheme_progress >= 40
+				scheme_progress >= scheme_progress_50
 			}
 		}
 	}

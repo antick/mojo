@@ -1,17 +1,5 @@
 ﻿jester_ongoing = {
-	trigger = {
-		stress > 0
-		age >= 12
-		employs_court_position = court_jester_court_position
-		any_court_position_holder = {
-			type = court_jester_court_position
-			is_physically_able_ai_adult = yes
-		}
-	}
-
 	random_events = {
-		chance_to_happen = 50
-		2000 = 0
 		100 = jester.100
 		100 = jester.200
 		100 = jester.300
@@ -24,5 +12,6 @@
 		100 = jester.1000
 		100 = jester.1100
 		100 = jester.1200
+		500 = jester.1300
 	}
 }

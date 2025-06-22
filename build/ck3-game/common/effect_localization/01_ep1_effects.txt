@@ -134,6 +134,7 @@ remove_house_artifact_claim = {
 add_artifact_modifier = {
 	global = ADD_ARTIFACT_MODIFIER_GLOBAL
 	third = ADD_ARTIFACT_MODIFIER_GLOBAL
+	third_past = ADD_ARTIFACT_MODIFIER_GLOBAL
 }
 
 remove_artifact_modifier = {

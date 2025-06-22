@@ -50,6 +50,7 @@ de_facto_liege_equal = {
 liege_equal = {
 	first = LIEGE_EQUAL_FIRST
 	third = LIEGE_EQUAL_THIRD
+	none = LIEGE_EQUAL_NONE
 }
 top_liege_equal = { # Not a relationship check, but this seemed like the best place to put it
 	first = TOP_LIEGE_EQUAL_FIRST

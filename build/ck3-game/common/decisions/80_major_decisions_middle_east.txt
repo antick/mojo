@@ -21,8 +21,8 @@ create_outremer_empire_decision = {
 		religion = { exists = var:variable_ghw_unlocked } #The era of the Crusades must have started.
 		faith = faith:catholic
 		#Exempt Byzantine group: this is such a huge slap in the face to _anyone_ even vaguely in the Greek sphere.
-		NOR = {
-			culture = {
+		culture = {
+			NOR = {
 				has_cultural_pillar = heritage_byzantine
 				has_cultural_pillar = heritage_caucasian
 				has_cultural_pillar = heritage_syriac
@@ -613,5 +613,192 @@ create_armenian_empire_decision = {
 
 	ai_will_do = {
 		base = 0
+	}
+}
+
+#################################
+# Found the Empire of Beth Nahrain
+# by Anna Johansson				
+#################################
+
+found_empire_of_beth_nahrain_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	decision_group_type = major
+
+	ai_check_interval = 120
+
+	title = middle_east_major_decisions.1020.t
+	desc = middle_east_major_decisions.1020.desc
+	selection_tooltip = middle_east_major_decisions.1020.tt
+
+	is_shown = {
+		is_ruler = yes
+		is_playable_character = yes
+		capital_province = { geographical_region = world_middle_east }
+
+		any_sub_realm_county = {
+			OR = {
+				faith = faith:nestorian
+				culture = {
+					OR = {
+						this = culture:assyrian
+						any_parent_culture_or_above = {
+							this = culture:assyrian
+						}
+					}
+				}
+			}
+		}
+
+		#Can only do it once
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:created_beth_nahrain
+			}
+		}
+	}
+	is_valid = {
+		is_independent_ruler = yes
+		highest_held_title_tier = tier_kingdom
+		culture = { has_cultural_pillar = heritage_syriac }
+		custom_tooltip = {
+			text = completely_controls_jazira_mesopotamia_tt
+			completely_controls = title:k_jazira
+			completely_controls = title:k_mesopotamia
+		}
+		custom_tooltip = {
+			text = has_titles_jazira_mesopotamia_tt
+			has_title = title:k_jazira
+			has_title = title:k_mesopotamia
+		}
+		OR = {
+			custom_tooltip = {
+				text = has_title_and_completely_control_jerusalem_tt
+				has_title = title:k_jerusalem
+				completely_controls = title:k_jerusalem
+			}
+			custom_tooltip = {
+				text = has_title_and_completely_control_syria_tt
+				has_title = title:k_syria
+				completely_controls = title:k_syria		
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_landed = yes
+		is_capable_adult = yes
+		is_imprisoned = no
+		is_at_war = no
+	}
+
+	effect = {
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:created_beth_nahrain
+			}
+			create_title_and_vassal_change = {
+				type = created
+				save_scope_as = title_change
+				add_claim_on_loss = no
+			}
+			title:k_jazira = {
+				set_de_jure_liege_title = title:e_beth_nahrain
+			}
+			title:k_mesopotamia = {
+				set_de_jure_liege_title = title:e_beth_nahrain
+			}
+	
+			if = {
+				limit = {
+					has_title = title:k_jerusalem
+					completely_controls = title:k_jerusalem
+				}
+				title:k_jerusalem = {
+					set_de_jure_liege_title = title:e_beth_nahrain
+				}
+			}
+	
+			if = {
+				limit = {
+					has_title = title:k_syria
+					completely_controls = title:k_syria
+				}
+				title:k_syria = {
+					set_de_jure_liege_title = title:e_beth_nahrain
+				}
+			}
+		}
+		#Create Beth Nahrain
+		title:e_beth_nahrain = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+
+		dynasty = {
+			add_dynasty_prestige = 1000
+		}
+
+		give_nickname = nick_beth_nahrain
+
+		show_as_tooltip = {
+			promote_culture_beth_nahrain_scripted_effect = yes
+			custom_tooltip = middle_east_major_decisions.1020.promote_culture.tt
+		}
+		save_scope_as = suppress_tooltips
+
+		trigger_event = { id = middle_east_decisions.1020 }
+		
+		show_as_tooltip = {
+			random_list = {
+				100 = { 
+					show_chance = no
+					desc = middle_east_major_decisions.1020.learning.desc
+					learning_beth_nahrain_scripted_effect = yes
+				}
+				100 = { 
+					show_chance = no
+					desc = middle_east_major_decisions.1020.martial.desc
+					martial_beth_nahrain_scripted_effect = yes
+				}
+				100 = {
+					show_chance = no
+					trigger = {
+						faith = faith:nestorian
+					}
+					desc = middle_east_major_decisions.1020.nestorian.desc
+					nestorian_faith_beth_nahrain_scripted_effect = yes
+				}
+				100 = {
+					show_chance = no
+					trigger = {
+						NOT = {
+							faith = faith:nestorian
+						}
+					}
+					desc = middle_east_major_decisions.1020.no_faith.desc
+					no_faith_beth_nahrain_scripted_effect = yes
+				}
+			}
+		}
+	}
+
+	cost = {
+		prestige = 1000
+	}
+
+	ai_potential = {
+		culture = { has_cultural_pillar = heritage_syriac }
+	}
+
+	ai_will_do = {
+		base = 100
 	}
 }

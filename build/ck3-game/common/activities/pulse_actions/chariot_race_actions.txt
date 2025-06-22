@@ -187,6 +187,34 @@ apa_exchanging_race_commentary = {
 
 	is_valid = {
 		is_current_phase_active = yes
+		any_guest_subset = {
+			name = spectators
+			NOR = {
+				scope:host = this
+				scope:activity.special_guest:chariot_race_honorary_guest ?= this
+			}
+			is_ai = yes
+			is_adult = yes
+			might_cheat_on_every_partner_trigger = yes 
+			save_temporary_scope_as = sex_temp
+		}
+		any_guest_subset = {
+			name = spectators
+			NOR = {
+				scope:host = this
+				scope:activity.special_guest:chariot_race_honorary_guest ?= this
+			}
+			is_attracted_to_gender_of = scope:sex_temp
+			possibly_interested_in_character_trigger = {
+				CHARACTER = scope:sex_temp
+			}
+			is_ai = yes
+			is_adult = yes
+			OR = {
+				might_cheat_on_every_partner_trigger = yes 
+				is_consort_of = scope:sex_temp
+			}
+		}
 	}
 
 	effect = {
@@ -258,6 +286,10 @@ apa_forging_alliances = {
 
 	is_valid = {
 		is_current_phase_active = yes
+		any_guest_subset = {
+			name = spectators
+			is_governor = yes
+		}
 	}
 
 	weight = {
@@ -287,6 +319,12 @@ apa_donates_to_the_poor = {
 
 	is_valid = {
 		is_current_phase_active = yes
+		any_attending_character = {
+			OR = {
+				is_governor = yes
+				is_landless_ruler = yes
+			}
+		}
 	}
 
 	weight = {

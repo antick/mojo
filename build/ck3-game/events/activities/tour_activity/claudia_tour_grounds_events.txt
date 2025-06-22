@@ -784,6 +784,7 @@ tour_grounds_events.7001 = {
 		custom_tooltip = tour_grounds_events.7001_followup
 		if = {
 			limit = {
+				scope:visiting_liege = { is_ai = yes }
 				can_add_hook = {
 					target = scope:visiting_liege
 					type = favor_hook

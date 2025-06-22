@@ -228,6 +228,7 @@ current_gold_value = {
 default_event_cooldown_duration = 730
 long_event_cooldown_duration = 1200
 default_favor_duration = 3650
+prophecy_duration = 25 #years
 
 #SKILL RATINGS
 average_skill_rating = 8 #Tracks what we see as "typical". For use in duels, etc.
@@ -488,6 +489,11 @@ medium_dread_gain = 20
 major_dread_gain = 30
 massive_dread_gain = 50
 monumental_dread_gain = 70
+
+minor_dread_value = 20
+medium_dread_value = 45
+major_dread_value = 70
+massive_dread_value = 95
 
 execute_interaction_minor_dread_gain = 5
 execute_interaction_medium_dread_gain = 10
@@ -871,6 +877,7 @@ minor_piety_value = 50
 medium_piety_value = 100
 major_piety_value = 250
 massive_piety_value = 500
+monumental_piety_value = 1000
 
 
 miniscule_piety_loss = {
@@ -893,12 +900,17 @@ massive_piety_loss = {
 	value = 0
 	subtract = massive_piety_value
 }
+monumental_piety_loss = {
+	value = 0
+	subtract = monumental_piety_value
+}
 
 miniscule_piety_gain = miniscule_piety_value
 minor_piety_gain = minor_piety_value
 medium_piety_gain = medium_piety_value
 major_piety_gain = major_piety_value
 massive_piety_gain = massive_piety_value
+monumental_piety_gain = monumental_piety_value
 
 omega_piety_gain = {
 	value = massive_piety_value
@@ -1636,6 +1648,20 @@ vassal_obligation_increase_tyranny_gain_multiplier = {
 vassal_obligation_increase_tyranny_gain = {
 	value = vassal_obligation_increase_tyranny_gain_base
 	multiply = vassal_obligation_increase_tyranny_gain_multiplier
+	if = {
+		limit = {
+			is_ai = no
+			has_game_rule = hard_difficulty
+		}
+		multiply = 3
+	}
+	else_if = {
+		limit = {
+			is_ai = no
+			has_game_rule = very_hard_difficulty
+		}
+		multiply = 5
+	}
 }
 
 #REALM SIZE

@@ -490,3 +490,105 @@ action_designate_regent_for_hook = {
 		scope:actor = { open_view_data = diarchy }
 	}
 }
+
+# Appoint one of your children as co-emperor if you're old; immature progeny version
+action_appoint_co_emperor_junior = {
+	check_create_action = {
+		if = {
+			limit = {
+				is_character_interaction_valid = {
+					interaction = appoint_junior_emperor_interaction
+					recipient = root
+				}
+				age >= 50
+				any_child = { # You should not be notified you can appoint a child as nominal co-emperor if you have an adult that qualifies for full co-emperorship
+					count = all
+					NOT = { valid_co_emperor_candidate_trigger = { LIEGE = root } }
+				}
+				any_child = {
+					valid_junior_emperor_candidate_trigger = { LIEGE = root }
+				}
+			}
+			try_create_important_action = {
+			 	important_action_type = action_appoint_co_emperor_junior
+			}
+		}
+	}
+	unimportant = {
+		prestige < designate_heir_admin_prestige_cost
+		influence < designate_heir_admin_influence_cost
+	}
+	effect = {
+		open_interaction_window = {
+			interaction = appoint_junior_emperor_interaction
+			actor = root
+			recipient = root
+		}
+	}
+}
+
+# Appoint one of your children as co-emperor if you're old; adult child version
+action_appoint_co_emperor_adult_child = {
+	check_create_action = {
+		if = {
+			limit = {
+				is_character_interaction_valid = {
+					interaction = appoint_co_emperor_interaction
+					recipient = root
+				}
+				age >= 50 
+				any_child = {
+					valid_co_emperor_candidate_trigger = { LIEGE = root }
+				}
+			}
+			try_create_important_action = {
+			 	important_action_type = action_appoint_co_emperor_adult_child
+			}
+		}
+	}
+	unimportant = {
+		prestige < designate_heir_admin_prestige_cost
+		influence < designate_heir_admin_influence_cost
+	}
+	effect = {
+		open_interaction_window = {
+			interaction = appoint_co_emperor_interaction
+			actor = root
+			recipient = root
+		}
+	}
+}
+
+# Appoint one of your children as co-monarch if you're old
+action_appoint_co_monarch = {
+	check_create_action = {
+		if = {
+			limit = {
+				is_character_interaction_valid = {
+					interaction = appoint_co_monarch_interaction
+					recipient = root
+				}
+				age >= 50
+				any_child = {
+					valid_co_monarch_candidate_trigger = { LIEGE = root }
+				}
+			}
+			try_create_important_action = {
+			 	important_action_type = action_appoint_co_monarch
+			}
+		}
+	}
+	unimportant = {
+		prestige < {
+			value = designate_heir_cost
+			multiply = 0.5
+		}
+	}
+	effect = {
+		open_interaction_window = {
+			interaction = appoint_co_monarch_interaction
+			actor = root
+			recipient = root
+		}
+	}
+}

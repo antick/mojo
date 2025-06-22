@@ -10,10 +10,12 @@
 	allowed_for_character = {
 		OR = {
 			government_has_flag = government_is_tribal
+			government_has_flag = government_is_nomadic
 			faith = {
 				has_doctrine_parameter = invasion_cb_enabled
 			}
 			has_character_flag = bp2_inspired_culture_for_conquest
+			has_variable = mpo_desperate_stance_invasion_cb_enable_var
 			ai_should_get_extreme_conqueror_bonuses = yes
 		}
 		trigger_if = {
@@ -939,8 +941,8 @@ mongol_invasion_war = {
 	allow_hostages = no
 	allowed_for_character = {
 		this = title:e_mongol_empire.holder
-		government_has_flag = government_is_tribal
 		prestige_level >= 1
+		has_mpo_dlc_trigger = no
 	}
 
 	allowed_against_character = {
@@ -1294,6 +1296,7 @@ mongol_invasion_war = {
 	max_ai_diplo_distance_to_title = 500
 
 	ai_score_mult = {
+		value = 1
 		#Declaring war on the frankokratia leader can really ruin the whole thing
 		if = {
 			limit = {
@@ -1767,6 +1770,7 @@ mongol_realm_invasion_war = {
 	max_ai_diplo_distance_to_title = 500
 
 	ai_score_mult = {
+		value = 1
 		#Declaring war on the frankokratia leader can really ruin the whole thing
 		if = {
 			limit = {
@@ -2136,6 +2140,7 @@ pax_romana_invasion_war = {
 	max_ai_diplo_distance_to_title = 500
 	
 	ai_score_mult = {
+		value = 1
 		#Declaring war on the frankokratia leader can really ruin the whole thing
 		if = {
 			limit = {

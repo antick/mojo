@@ -28,6 +28,11 @@ msg_court_position_invalidated_employer = {
 	style = neutral
 	message_filter_type = court_position
 }
+msg_court_position_invalidated_and_replaced_employer = {
+	icon = "a_catch_all_councillor_icon"
+	style = neutral
+	message_filter_type = court_position
+}
 #Physician
 event_court_physician_bad = {
 	icon = "court_physician"

@@ -36,6 +36,13 @@ msg_notable_guest = {
 	style = good
 	message_filter_type = courtier_arrived_notable
 }
+msg_courtier_child_of_age = {
+	icon = "child"
+	title = event_message_title
+	desc = event_message_effect_and_text
+	style = neutral
+	message_filter_type = courtier_child_of_age
+}
 msg_court_inspiration = {
 	icon = "inspiration"
 	title = event_message_title

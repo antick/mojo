@@ -1230,7 +1230,10 @@ reinstitute_grain_dole_decision = {
 
 	is_shown = {
 		has_ep3_dlc_trigger = yes
-		has_title = title:e_byzantium
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:e_roman_empire
+		}
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -1241,9 +1244,9 @@ reinstitute_grain_dole_decision = {
 
 	is_valid = {
 		government_has_flag = government_is_administrative
-		custom_tooltip = {
+		OR = {
 			capital_county = title:c_byzantion
-			text = constantinople_is_capital
+			capital_county = title:c_roma
 		}
 		completely_controls_region = custom_roman_aegyptus
 		custom_tooltip = {
@@ -1284,7 +1287,10 @@ reinstitute_grain_dole_decision = {
 	}
 
 	ai_potential = {
-		has_title = title:e_byzantium
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:e_roman_empire
+		}
 	}
 
 	ai_will_do = {
@@ -1305,7 +1311,10 @@ reconfirm_grain_dole_decision = {
 
 	is_shown = {
 		has_ep3_dlc_trigger = yes
-		has_title = title:e_byzantium
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:e_roman_empire
+		}
 		is_target_in_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:reinstitute_grain_dole_decision
@@ -1314,9 +1323,9 @@ reconfirm_grain_dole_decision = {
 
 	is_valid = {
 		government_has_flag = government_is_administrative
-		custom_tooltip = {
+		OR = {
 			capital_county = title:c_byzantion
-			text = constantinople_is_capital
+			capital_county = title:c_roma
 		}
 		completely_controls_region = custom_roman_aegyptus
 		custom_tooltip = {
@@ -1337,7 +1346,7 @@ reconfirm_grain_dole_decision = {
 		is_imprisoned = no
 		custom_tooltip = {
 			NOT = {
-				title:c_byzantion = { has_county_modifier = panem_et_circenses_county_modifier }
+				capital_county = { has_county_modifier = panem_et_circenses_county_modifier }
 			}
 			text = grain_dole_already_active
 		}
@@ -1363,8 +1372,11 @@ reconfirm_grain_dole_decision = {
 	}
 
 	ai_potential = {
-		has_title = title:e_byzantium
-		title:c_byzantion = { has_variable = unlocked_grain_dole }
+		OR = {
+			has_title = title:e_byzantium
+			has_title = title:e_roman_empire
+		}
+		capital_county = { has_variable = unlocked_grain_dole }
 	}
 
 	ai_will_do = {
@@ -1372,76 +1384,76 @@ reconfirm_grain_dole_decision = {
 	}
 }
 
-mass_arrests_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_prison.dds"
-	}
-	sort_order = 115
-
-	desc = mass_arrests_decision_desc
-	selection_tooltip = mass_arrests_decision_tooltip
-	decision_group_type = admin
-
-	is_shown = {
-		has_ep3_dlc_trigger = yes
-		government_allows = administrative
-		primary_title.tier ?= tier_empire
-		dynasty ?= { has_dynasty_perk = ep3_administrative_legacy_5 }
-	}
-
-	is_valid = {
-		government_has_flag = government_is_administrative
-		primary_title.tier ?= tier_empire
-		dynasty ?= { has_dynasty_perk = ep3_administrative_legacy_5 }
-	}
-
-	is_valid_showing_failures_only = {
-		NOT = { exists = involved_activity }
-		is_imprisoned = no
-		any_powerful_family = {
-			count >= 1
-		}
-	}
-
-	cost = {
-		influence = monumental_influence_value
-	}
-
-	cooldown = { years = 20 }
-
-	effect = {
-		show_as_tooltip = {
-			add_tyranny = massive_tyranny_gain
-			add_legitimacy = medium_legitimacy_loss
-
-			custom_tooltip = house_loses_power_rating
-			random_powerful_family = {
-				every_house_member = {
-					custom = choose_a_powerful_family
-					change_influence = major_influence_loss
-					custom_tooltip = imprisoned_by_you
-					add_opinion = {
-						modifier = imprisoned_me
-						years = 10
-						target = root
-					}
-				}
-			}
-		}
-
-		trigger_event = ep3_decisions_event.3200
-	}
-
-	ai_potential = {
-		always = no
-	}
-
-	ai_check_interval = 0
-
-	ai_will_do = {
-		base = 0
-	}
-}
+#mass_arrests_decision = {
+#	picture = {
+#		reference = "gfx/interface/illustrations/decisions/decision_prison.dds"
+#	}
+#	sort_order = 115
+#
+#	desc = mass_arrests_decision_desc
+#	selection_tooltip = mass_arrests_decision_tooltip
+#	decision_group_type = admin
+#
+#	is_shown = {
+#		has_ep3_dlc_trigger = yes
+#		government_allows = administrative
+#		primary_title.tier ?= tier_empire
+#		dynasty ?= { has_dynasty_perk = ep3_administrative_legacy_5 }
+#	}
+#
+#	is_valid = {
+#		government_has_flag = government_is_administrative
+#		primary_title.tier ?= tier_empire
+#		dynasty ?= { has_dynasty_perk = ep3_administrative_legacy_5 }
+#	}
+#
+#	is_valid_showing_failures_only = {
+#		NOT = { exists = involved_activity }
+#		is_imprisoned = no
+#		any_powerful_family = {
+#			count >= 1
+#		}
+#	}
+#
+#	cost = {
+#		influence = monumental_influence_value
+#	}
+#
+#	cooldown = { years = 20 }
+#
+#	effect = {
+#		show_as_tooltip = {
+#			add_tyranny = massive_tyranny_gain
+#			add_legitimacy = medium_legitimacy_loss
+#
+#			custom_tooltip = house_loses_power_rating
+#			random_powerful_family = {
+#				every_house_member = {
+#					custom = choose_a_powerful_family
+#					change_influence = major_influence_loss
+#					custom_tooltip = imprisoned_by_you
+#					add_opinion = {
+#						modifier = imprisoned_me
+#						years = 10
+#						target = root
+#					}
+#				}
+#			}
+#		}
+#
+#		trigger_event = ep3_decisions_event.3200
+#	}
+#
+#	ai_potential = {
+#		always = no
+#	}
+#
+#	ai_check_interval = 0
+#
+#	ai_will_do = {
+#		base = 0
+#	}
+#}
 
 change_state_faith = {
 	picture = {
@@ -3106,7 +3118,7 @@ legitimize_latin_dominion_decision = {
 	ai_check_interval = 6
 	
 	ai_potential = {
-		primary_title = {
+		primary_title ?= {
 			this = title:e_latin_empire
 		}
 		title:e_byzantium = {

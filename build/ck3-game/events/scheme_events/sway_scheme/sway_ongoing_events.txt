@@ -494,7 +494,7 @@ sway_ongoing.1003 = {
 
 	trigger = {
 		exists = scope:scheme
-		scope:scheme = { scheme_progress < 10 }
+		scope:scheme = { scheme_progress < scope:scheme.scheme_phase_duration }
 		scope:target = {
 			is_alive = yes
 		}

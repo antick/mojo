@@ -87,11 +87,11 @@ band_of_brothers_trigger = {
 }
 
 mio_cid_achievement_trigger = {
-	global = ACHIEVEMENT_DESC_ep3_03_mio_cid_achievement_achievement
+	global = ACHIEVEMENT_DESC_ep3_03_mio_cid_achievement
 }
 
 birthright_achievement_trigger = {
-	global = ACHIEVEMENT_DESC_ep3_04_birthright_achievement_achievement
+	global = ACHIEVEMENT_DESC_ep3_04_birthright_achievement
 }
 
 historically_inaccurate_achievement_trigger = {

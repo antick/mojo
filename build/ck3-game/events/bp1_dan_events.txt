@@ -2203,6 +2203,9 @@ bp1_yearly.7054 = {
 
 		any_memory = {
 			count > 0
+			NOT = {
+				has_memory_category = private
+			}
 		}
 
 		any_child  = {

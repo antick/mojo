@@ -8,6 +8,7 @@ is_at_war_with = {
 	global = IS_AT_WAR_WITH_TRIGGER
 	first = I_AM_AT_WAR_WITH_TRIGGER
 	third = THEY_ARE_AT_WAR_WITH_TRIGGER
+	none = NONE_ARE_AT_WAR_WITH_TRIGGER
 }
 
 is_allied_to = {
@@ -30,6 +31,12 @@ target_is_liege_or_above = {
 
 target_is_vassal_or_below = {
 	global = THEY_ARE_VASSAL_OR_BELOW
+}
+
+is_tributary_of_suzerain_or_above = {
+	global = THEY_ARE_TRIBUTARY_OF_SUZERAIN_OR_ABOVE
+	first = THEY_ARE_MY_TRIBUTARY_OF_SUZERAIN_OR_ABOVE
+	third = THEY_ARE_THEIR_TRIBUTARY_OF_SUZERAIN_OR_ABOVE
 }
 
 is_attracted_to_women = {
@@ -98,6 +105,10 @@ has_relation_friend = {
 
 has_relation_best_friend = {
 	global = HAS_RELATION_BEST_FRIEND_WITH_TARGET
+}
+
+has_relation_blood_brother = {
+	global = HAS_RELATION_BLOOD_BROTHER_WITH_TARGET
 }
 
 num_of_relation_friend = {

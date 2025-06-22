@@ -62,8 +62,8 @@ window = {
 			hbox = {
 				name = "header_area"
 				minimumsize = { 0 130 }
-				margin = { 10 0 }
-				margin_top = 10
+				margin = { 10 10 }
+
 
 				coa_title_medium_crown = {
 					datacontext = "[SuccessionElectionWindow.GetTitle]"
@@ -72,6 +72,7 @@ window = {
 
 				background = {
 					using = Background_Header_Tall
+					margin_bottom = 5
 				}
 
 				vbox = {

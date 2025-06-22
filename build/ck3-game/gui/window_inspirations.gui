@@ -194,10 +194,7 @@
 				using = Animation_Glow_Pulse
 			}
 
-			icon = {
-				texture = "gfx/interface/buttons/button_lifestyles_base.dds"
-				size = { 100% 100% }
-			}
+			icon_round_button_base = {}
 
 			icon = {
 				visible = "[ObjectsEqual( InspirationsWindow.GetSelectedInspiration, Inspiration.Self )]"

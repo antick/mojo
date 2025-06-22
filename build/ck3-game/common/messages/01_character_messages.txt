@@ -164,6 +164,14 @@ event_trait_bad = {
 	message_filter_type = event_outcome
 }
 
+secondary_character_stress_good = {
+	icon = "stress"
+	title = event_message_title
+	desc = event_message_effect
+	style = good
+	message_filter_type = secondary_character_stress
+}
+
 event_stress_good = {
 	icon = "stress"
 	title = event_message_title

@@ -12,11 +12,13 @@ hold_court_cropsharing = {
 	icon = goods_positive
 	county_opinion_add = 25
 	development_growth_factor = 0.05
+	county_fertility_growth_mult = tiny_county_fertility_growth_gain
 }
 
 hold_court_free_labor = {
 	icon = goods_positive
 	development_growth_factor = 0.05
+	county_fertility_growth_mult = tiny_county_fertility_growth_gain
 	build_speed = -0.10
 	build_gold_cost = -0.10
 }
@@ -53,13 +55,8 @@ hold_court_written_language_men_modifier = {
 hold_court_written_language_men_advanced_modifier = {
 	icon = intrigue_positive
 	intrigue = 2
-	learning = 1
+	learning = 2
 	owned_hostile_scheme_success_chance_add = 20
-}
-
-hold_court_distracted_tutor_modifier = {
-	icon = learning_negative
-	learning = -2
 }
 
 3020_multicultural_monument = {
@@ -77,10 +74,12 @@ hold_court_distracted_tutor_modifier = {
 hc_7000_dev_boost = {
 	icon = county_modifier_development_positive
 	development_growth_factor = 0.2
+	county_fertility_growth_mult = medium_county_fertility_growth_gain
 }
 hc_7000_dev_reduction = {
 	icon = county_modifier_development_negative
 	development_growth_factor = -0.15
+	county_fertility_growth_mult = -0.15
 }
 hc_7010_holy_war = {
 	icon = martial_positive

@@ -1,4 +1,4 @@
-template DefaultTooltipText
+﻿template DefaultTooltipText
 {
 	#using = FontNormal
 	default_format = "#medium"
@@ -13,7 +13,6 @@ template GeneralTooltipSetup
 {
 	filter_mouse = all
 	button = {
-		name = "close_tooltips"
 		size = { 0 0 } # Intentional zero size
 		visible = "[PdxGuiWidget.IsNestedTooltip]"
 		onclick = "[CloseAllTooltips]"
@@ -174,13 +173,13 @@ template DefaultTooltipWidget {
 
 		flowcontainer = {
 			direction = vertical
-			margin_right = 10
 
 			textbox = {
 				name = "TooltipText" # named used in code
 				using = DefaultTooltipText
-				margin = { 20 20 }
-				margin_top = 10
+				margin = { 20 0 }
+				margin_top = 12
+				margin_bottom = 18
 
 				fonttintcolor = "[TooltipInfo.GetTintColor]"
 				alwaystransparent = no
