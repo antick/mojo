@@ -1,8 +1,4 @@
-[h1]Auto Pause Game (v1.1.0)[/h1]
-
-[b]Updated for 1.13.0.3[/b]
-
-[h2]Introduction[/h2]
+# Auto Pause Game
 
 This mod fires auto-pauses game with custom events and immersive text when one of these happens:
 
@@ -15,16 +11,12 @@ This mod fires auto-pauses game with custom events and immersive text when one o
 7. Your army besieges a province
 8. You win or lose a battle
 
-[h2]Installation[/h2]
+# Installation
 
 Subscribe here if you are using Steam:
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2870777363]Auto Pause Game Mod[/url]
 
-[h2]Achievement Compatible[/h2]
-
-Yes
-
-[h2]Compatibility[/h2]
+# Compatibility
 
 This mod overwrites the following:
 
@@ -34,31 +26,10 @@ This mod overwrites the following:
 4. common/council_tasks/task_increase_control
 5. hud_notification_templates.gui
 
-[h2]More Ideas[/h2]
+# More Ideas
 
 1. Additional Dynasty Notifications [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2849527325]like this[/url]
 2. Alert when feudal contract can be changed [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2779440490]like this[/url]
 3. Alert when you can demand conversion [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2545408987]like this[/url]
 4. Notification when any courtier wants to leave [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2545408251]like this[/url]
 5. Notification when any guest arrives [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2523695492]like this[/url]
-
-[h2]On Request[/h2]
-
-1. Create compatibility patches
-2. Add translations
-3. Auto more pauses
-
-[h2]Known Issues[/h2]
-
-Please comment below if you are facing any issues.
-
-[h2]Changelog[/h2]
-
-v1.1.0
-- Updated for game version 1.13.0.3
-- Added auto-pause for raids
-- Fixed issues with existing pauses
-- Improved flavor text for various pause events
-
-v1.0.0
-- Initial release inspired by [url=https://steamcommunity.com/profiles/76561198007962794]fodazd[/url]

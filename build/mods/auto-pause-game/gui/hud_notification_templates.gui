@@ -14,555 +14,555 @@ types Notifications {
             layoutpolicy_horizontal = expanding
             expand = {}
             flowcontainer = {
-        visible = "[Not(SinglePlayerShowingPausedSuccession)]"
-        direction = horizontal
-        spacing = 10
+                visible = "[Not(SinglePlayerShowingPausedSuccession)]"
+                direction = horizontal
+                spacing = 10
 
-        state = {
-            name = _show
-            using = Animation_FadeIn_Quick
-        }
+                state = {
+                    name = _show
+                    using = Animation_FadeIn_Quick
+                }
 
-        state = {
-            name = _hide
-            using = Animation_FadeOut_Quick
-        }
+                state = {
+                    name = _hide
+                    using = Animation_FadeOut_Quick
+                }
 
-        dynamicgridbox = {
-            name = "alert_items"
-            datamodel = "[InGameTopbar.GetAlertItems]"
+                dynamicgridbox = {
+                    name = "alert_items"
+                    datamodel = "[InGameTopbar.GetAlertItems]"
 
-            flipdirection = yes
-            ignoreinvisible = yes
+                    flipdirection = yes
+                    ignoreinvisible = yes
                     maxverticalslots = 1
 
-            item = {
-                container = {
-                    button = {
-                        name = "action_icon"
-                        parentanchor = center
-                        framesize = { 144 144 }
-                        size = { 0 0 }
+                    item = {
+                        container = {
+                            button = {
+                                name = "action_icon"
+                                parentanchor = center
+                                framesize = { 144 144 }
+                                size = { 0 0 }
 
-                        gfxtype = buttongfx
-                        effectname = "NoHighlight"
-                        shaderfile = "gfx/FX/pdxgui_pushbutton.shader"
-                        texture = "[GUIAlertItem.GetImportantActionType.GetIcon]"
+                                gfxtype = buttongfx
+                                effectname = "NoHighlight"
+                                shaderfile = "gfx/FX/pdxgui_pushbutton.shader"
+                                texture = "[GUIAlertItem.GetImportantActionType.GetIcon]"
 
-                        onclick = "[GUIAlertItem.OnClick]"
-                        onrightclick = "[GUIAlertItem.OnRightClick]"
-                        button_ignore = none
+                                onclick = "[GUIAlertItem.OnClick]"
+                                onrightclick = "[GUIAlertItem.OnRightClick]"
+                                button_ignore = none
 
-                        tooltip = "[GUIAlertItem.GetTooltip]"
-                        using = tooltip_below
+                                tooltip = "[GUIAlertItem.GetTooltip]"
+                                using = tooltip_below
 
-                        modify_texture = {
-                            name = "mask"
-                            texture = "gfx/interface/component_masks/mask_alert_solid.dds"
-                            blend_mode = mask
-                        }
+                                modify_texture = {
+                                    name = "mask"
+                                    texture = "gfx/interface/component_masks/mask_alert_solid.dds"
+                                    blend_mode = mask
+                                }
 
-                        modify_texture = {
-                            name = "glow"
-                            texture = "gfx/interface/component_effects/effect_shimmer.dds"
-                            blend_mode = colordodge
-                            translate_uv = { 0.2 0.2 }
-                        }
+                                modify_texture = {
+                                    name = "glow"
+                                    texture = "gfx/interface/component_effects/effect_shimmer.dds"
+                                    blend_mode = colordodge
+                                    translate_uv = { 0.2 0.2 }
+                                }
 
-                        ### Adding animation ###
-                        state = {
-                            name = "when_added"
-                            next = e
-                            position_y = 10
-                            duration = 0.45
-                            size = { 72 72 }
-                            using = Animation_Curve_Default
-                            trigger_when = "[GUIAlertItem.IsAdding]"
-                            on_start = "[GUIAlertItem.StartAnimation]"
-                            on_start = "[GUIAlertItem.PlayShowSound]"
-                        }
+                                ### Adding animation ###
+                                state = {
+                                    name = "when_added"
+                                    next = e
+                                    position_y = 10
+                                    duration = 0.45
+                                    size = { 72 72 }
+                                    using = Animation_Curve_Default
+                                    trigger_when = "[GUIAlertItem.IsAdding]"
+                                    on_start = "[GUIAlertItem.StartAnimation]"
+                                    on_start = "[GUIAlertItem.PlayShowSound]"
+                                }
 
-                        # <antick_auto_pause>
-                        state = {
-                            name = antick_auto_pause
-                            trigger_when = "[And(Not(IsGamePaused), GUIAlertItem.IsAdding)]"
-                            on_start = "[OnPause]"
-                        }
-                        # </antick_auto_pause>
+		                # <antick_auto_pause>
+		                state = {
+		                    name = antick_auto_pause
+		                    trigger_when = "[And(Not(IsGamePaused), GUIAlertItem.IsAdding)]"
+		                    on_start = "[OnPause]"
+		                }
+		                # </antick_auto_pause>
 
-                        state = {
-                            name = e
-                            next = f
+                                state = {
+                                    name = e
+                                    next = f
                                     position_y = 20
-                            duration = 0.45
-                            size = { 88 88 }
-                            using = Animation_Curve_Default
-                        }
+                                    duration = 0.45
+                                    size = { 88 88 }
+                                    using = Animation_Curve_Default
+                                }
 
-                        state = {
-                            name = f
-                            next = a
-                            position_y = 0
-                            duration = 0.45
-                            size = { 72 72 }
-                            bezier = { 0.43 0 0.2 2.2 }
-                            on_finish = "[GUIAlertItem.AddingFinished]"
-                            on_finish = "[GUIAlertItem.EndAnimation]"
-                        }
+                                state = {
+                                    name = f
+                                    next = a
+                                    position_y = 0
+                                    duration = 0.45
+                                    size = { 72 72 }
+                                    bezier = { 0.43 0 0.2 2.2 }
+                                    on_finish = "[GUIAlertItem.AddingFinished]"
+                                    on_finish = "[GUIAlertItem.EndAnimation]"
+                                }
 
-                        ### idle animation ###
-                        state = {
-                            name = a
-                            next = b
-                            duration = 0
-                            delay = 10
-                            size = { 72 72 }
-                            position_y = 0
-                            on_start = "[GUIAlertItem.StartAnimation]"
-                            on_finish = "[GUIAlertItem.AddingFinished]"
-                            on_finish = "[GUIAlertItem.EndAnimation]"
-                            using = Animation_Curve_Default
-                        }
+                                ### idle animation ###
+                                state = {
+                                    name = a
+                                    next = b
+                                    duration = 0
+                                    delay = 10
+                                    size = { 72 72 }
+                                    position_y = 0
+                                    on_start = "[GUIAlertItem.StartAnimation]"
+                                    on_finish = "[GUIAlertItem.AddingFinished]"
+                                    on_finish = "[GUIAlertItem.EndAnimation]"
+                                    using = Animation_Curve_Default
+                                }
 
-                        state = {
-                            name = b
-                            next = c
-                            duration = 0.3
-                            size = { 78 78 }
+                                state = {
+                                    name = b
+                                    next = c
+                                    duration = 0.3
+                                    size = { 78 78 }
                                     scale = 1.2
-                            bezier = { 0 1.6 0.7 1.8 }
+                                    bezier = { 0 1.6 0.7 1.8 }
                                     position_y = 20
-                            on_start = "[GUIAlertItem.StartAnimation]"
-                            on_finish = "[GUIAlertItem.AddingFinished]"
-                            on_finish = "[GUIAlertItem.EndAnimation]"
-                            using = Animation_Curve_Default
-                        }
+                                    on_start = "[GUIAlertItem.StartAnimation]"
+                                    on_finish = "[GUIAlertItem.AddingFinished]"
+                                    on_finish = "[GUIAlertItem.EndAnimation]"
+                                    using = Animation_Curve_Default
+                                }
 
-                        state = {
-                            name = c
-                            next = d
-                            duration = 0.2
-                            size = { 72 72 }
-                            scale = 0.8
-                            position_y = 0
-                            on_start = "[GUIAlertItem.StartAnimation]"
-                            on_finish = "[GUIAlertItem.AddingFinished]"
-                            on_finish = "[GUIAlertItem.EndAnimation]"
-                            using = Animation_Curve_Default
-                        }
+                                state = {
+                                    name = c
+                                    next = d
+                                    duration = 0.2
+                                    size = { 72 72 }
+                                    scale = 0.8
+                                    position_y = 0
+                                    on_start = "[GUIAlertItem.StartAnimation]"
+                                    on_finish = "[GUIAlertItem.AddingFinished]"
+                                    on_finish = "[GUIAlertItem.EndAnimation]"
+                                    using = Animation_Curve_Default
+                                }
 
-                        state = {
-                            name = d
-                            duration = 0.2
-                            scale = 0.9
-                            size = { 72 72 }
-                            position_y = 0
-                            on_start = "[GUIAlertItem.StartAnimation]"
-                            on_finish = "[GUIAlertItem.AddingFinished]"
-                            on_finish = "[GUIAlertItem.EndAnimation]"
-                            using = Animation_Curve_Default
-                        }
+                                state = {
+                                    name = d
+                                    duration = 0.2
+                                    scale = 0.9
+                                    size = { 72 72 }
+                                    position_y = 0
+                                    on_start = "[GUIAlertItem.StartAnimation]"
+                                    on_finish = "[GUIAlertItem.AddingFinished]"
+                                    on_finish = "[GUIAlertItem.EndAnimation]"
+                                    using = Animation_Curve_Default
+                                }
 
-                        state = {
-                            name = "already_added"
-                            duration = 0
-                            size = { 72 72 }
-                            scale = 0.9
-                            trigger_when = "[GUIAlertItem.IsAdded]"
-                        }
+                                state = {
+                                    name = "already_added"
+                                    duration = 0
+                                    size = { 72 72 }
+                                    scale = 0.9
+                                    trigger_when = "[GUIAlertItem.IsAdded]"
+                                }
 
-                        state = {
-                            name = "when_removed"
-                            duration = 0.3
-                            size = { 0 0 }
-                            trigger_when = "[GUIAlertItem.IsRemoving]"
-                            on_start = "[GUIAlertItem.StartAnimation]"
-                            on_finish = "[GUIAlertItem.RemovingFinished]"
-                            on_finish = "[GUIAlertItem.EndAnimation]"
-                        }
+                                state = {
+                                    name = "when_removed"
+                                    duration = 0.3
+                                    size = { 0 0 }
+                                    trigger_when = "[GUIAlertItem.IsRemoving]"
+                                    on_start = "[GUIAlertItem.StartAnimation]"
+                                    on_finish = "[GUIAlertItem.RemovingFinished]"
+                                    on_finish = "[GUIAlertItem.EndAnimation]"
+                                }
 
-                        #### Shimmer ####
-                        state = {
-                            trigger_on_create = yes
-                            name = _show
-                            next = shimmer
-                            duration = 0.2
-                            scale = 0.9
+                                #### Shimmer ####
+                                state = {
+                                    trigger_on_create = yes
+                                    name = _show
+                                    next = shimmer
+                                    duration = 0.2
+                                    scale = 0.9
 
-                            modify_texture = {
-                                name = "glow"
-                                translate_uv = { 1 -1 }
+                                    modify_texture = {
+                                        name = "glow"
+                                        translate_uv = { 1 -1 }
+                                    }
+                                }
+
+                                state = {
+                                    name = shimmer
+                                    next = pause
+                                    duration = 1.2
+                                    scale = 0.9
+                                    position = { 0 0 }
+
+                                    bezier = { 0 0.9 1 0.4 }
+
+                                    modify_texture = {
+                                        name = "glow"
+                                        translate_uv = { -1 1 }
+                                    }
+                                }
+
+                                state = {
+                                    name = pause
+                                    next = shimmer
+                                    duration = 0
+                                    delay = 5
+
+                                    modify_texture = {
+                                        name = "glow"
+                                        translate_uv = { 1 -1 }
+                                    }
+                                }
+
+                                state = {
+                                    name = _mouse_enter
+                                    duration = 0.05
+                                    frame = 2
+                                    position = { 0 10 }
+                                    scale = 1
+                                    start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_oversound"}
+                                }
+
+                                state = {
+                                    name = _mouse_leave
+                                    duration = 0.1
+                                    frame = 1
+                                    position = { 0 0 }
+                                    scale = 0.9
+                                }
+
+                                state = {
+                                    name = _mouse_press
+                                    duration = 0.25
+                                    frame = 3
+                                    position = { 0 10 }
+                                    scale = 1
+                                    start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_mouse_press"}
+                                }
+
+                                state = {
+                                    name = _mouse_release
+                                    duration = 0.25
+                                    frame = 2
+                                    position = { 0 10 }
+                                    scale = 1
+                                    start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_mouse_release"}
+                                }
                             }
                         }
 
-                        state = {
-                            name = shimmer
-                            next = pause
-                            duration = 1.2
-                            scale = 0.9
-                            position = { 0 0 }
-
-                            bezier = { 0 0.9 1 0.4 }
-
-                            modify_texture = {
-                                name = "glow"
-                                translate_uv = { -1 1 }
-                            }
-                        }
-
-                        state = {
-                            name = pause
-                            next = shimmer
-                            duration = 0
-                            delay = 5
-
-                            modify_texture = {
-                                name = "glow"
-                                translate_uv = { 1 -1 }
-                            }
-                        }
-
-                        state = {
-                            name = _mouse_enter
-                            duration = 0.05
-                            frame = 2
-                            position = { 0 10 }
-                            scale = 1
-                            start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_oversound"}
-                        }
-
-                        state = {
-                            name = _mouse_leave
-                            duration = 0.1
-                            frame = 1
-                            position = { 0 0 }
-                            scale = 0.9
-                        }
-
-                        state = {
-                            name = _mouse_press
-                            duration = 0.25
-                            frame = 3
-                            position = { 0 10 }
-                            scale = 1
-                            start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_mouse_press"}
-                        }
-
-                        state = {
-                            name = _mouse_release
-                            duration = 0.25
-                            frame = 2
-                            position = { 0 10 }
-                            scale = 1
-                            start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_mouse_release"}
-                        }
                     }
                 }
 
-            }
-        }
+                ### Diplomatic offers
+                dynamicgridbox = {
+                    name = "diplomatic_items"
+                    datamodel = "[InGameTopbar.GetDiplomaticItems]"
 
-        ### Diplomatic offers
-        dynamicgridbox = {
-            name = "diplomatic_items"
-            datamodel = "[InGameTopbar.GetDiplomaticItems]"
+                    flipdirection = yes
+                    ignoreinvisible = yes
+                    maxhorizontalslots = 10
+                    maxverticalslots = 3
 
-            flipdirection = yes
-            ignoreinvisible = yes
-            maxhorizontalslots = 10
-            maxverticalslots = 3
+                    item = {
+                        container = {
+                            visible = "[DiplomaticItem.IsVisible]"
 
-            item = {
-                container = {
-                    visible = "[DiplomaticItem.IsVisible]"
+                            icon = {
+                                name = "notification_glow"
+                                size = { 150% 150% }
+                                parentanchor = center
+                                texture = "gfx/interface/component_masks/mask_rays.dds"
+                                color = { 0.7 0.66 0.61 1 }
 
-                    icon = {
-                        name = "notification_glow"
-                        size = { 150% 150% }
-                        parentanchor = center
-                        texture = "gfx/interface/component_masks/mask_rays.dds"
-                        color = { 0.7 0.66 0.61 1 }
+                                modify_texture = {
+                                    rotate_uv = 0
+                                    name = rotation
+                                    texture = "gfx/interface/component_masks/mask_rays.dds"
+                                    blend_mode = colordodge
+                                }
 
-                        modify_texture = {
-                            rotate_uv = 0
-                            name = rotation
-                            texture = "gfx/interface/component_masks/mask_rays.dds"
-                            blend_mode = colordodge
-                        }
+                                ### idle animation ###
+                                state = {
+                                    trigger_on_create = yes
+                                    name = preshow
+                                    next = show
 
-                        ### idle animation ###
-                        state = {
-                            trigger_on_create = yes
-                            name = preshow
-                            next = show
+                                    alpha = 0
+                                    scale = 1
+                                }
 
-                            alpha = 0
-                            scale = 1
-                        }
+				# <antick_auto_pause>
+		                state = {
+		                    name = antick_auto_pause
+		                    trigger_when = "[And(Not(IsGamePaused), DiplomaticItem.IsAdding)]"
+		                    on_start = "[OnPause]"
+		                }
+		                # </antick_auto_pause>
 
-                        # <antick_auto_pause>
-                        state = {
-                            name = antick_auto_pause
-                            trigger_when = "[And(Not(IsGamePaused), DiplomaticItem.IsAdding)]"
-                            on_start = "[OnPause]"
-                        }
-                        # </antick_auto_pause>
+                                state = {
+                                    name = show
+                                    next = a
+                                    delay = 1.4  ##### delay in order to start animation after icon has appeared
 
-                        state = {
-                            name = show
-                            next = a
-                            delay = 1.4  ##### delay in order to start animation after icon has appeared
+                                    using = Animation_Curve_Default
+                                    duration = 0.7
+                                    alpha = 0
+                                    scale = 1
 
-                            using = Animation_Curve_Default
-                            duration = 0.7
-                            alpha = 0
-                            scale = 1
+                                    modify_texture = {
+                                        name = rotation
+                                        rotate_uv = 90
+                                    }
+                                }
 
-                            modify_texture = {
-                                name = rotation
-                                rotate_uv = 90
+                                state = {
+                                    name = a
+                                    next = b
+
+                                    using = Animation_Curve_Default
+                                    duration = 0.5
+                                    alpha = 1
+                                    scale = 1
+
+                                    modify_texture = {
+                                        name = rotation
+                                        rotate_uv = 0
+                                    }
+                                }
+
+                                state = {
+                                    name = b
+                                    next = a
+
+                                    using = Animation_Curve_Default
+                                    delay = 1.4
+                                    duration = 0.7
+                                    alpha = 0
+                                    scale = 0.8
+
+                                    modify_texture = {
+                                        name = rotation
+                                        rotate_uv = -90
+                                    }
+                                }
                             }
-                        }
 
-                        state = {
-                            name = a
-                            next = b
+                            button = {
+                                name = "action_icon"
+                                parentanchor = center
 
-                            using = Animation_Curve_Default
-                            duration = 0.5
-                            alpha = 1
-                            scale = 1
+                                size = { 0 0 }
+                                framesize = { 144 144 }
+                                filter_mouse = right
 
-                            modify_texture = {
-                                name = rotation
-                                rotate_uv = 0
+                                texture = "[DiplomaticItem.GetIcon]"
+                                onclick = "[DiplomaticItem.OnClick]"
+                                onrightclick = "[DiplomaticItem.OnRightClick]"
+                                button_ignore = none
+
+                                tooltip = "DIPLOMATIC_ITEM_TOOLTIP"
+
+                                icon = {
+                                    texture = "gfx/interface/component_effects/alert_diplomacy_timer_base.dds"
+                                    visible = "[LessThan_int32( DiplomaticItem.GetDaysUntilTimeout, '(int32)30')]"
+                                    size = { 70 70 }
+                                    parentanchor = center
+
+                                    text_single = {
+                                        text = "[Max_int32( '(int32)0', DiplomaticItem.GetDaysUntilTimeout )]"
+                                        parentanchor = bottom|hcenter
+                                        position = { -2 -9 }
+                                        using = Font_Size_Medium
+                                        default_format = "#high"
+                                    }
+                                }
+
+                                state = {
+                                    trigger_when = "[LessThan_int32( DiplomaticItem.GetDaysUntilTimeout, '(int32)30')]"
+                                    name = "timeout"
+                                    next = b
+
+                                    using = Animation_Curve_Default
+                                    duration = 0.5
+                                    delay = 0.2
+                                    alpha = 1
+                                }
+
+                                state = {
+                                    name = b
+                                    next = "timeout"
+
+                                    using = Animation_Curve_Default
+                                    delay = 1.5
+                                    duration = 0.4
+                                    alpha = 0.5
+                                }
+
+                                ### Adding animation ###
+                                state = {
+                                    name = "when_added"
+                                    next = e
+                                    position_y = 0
+                                    duration = 0.2
+                                    size = { 72 72 }
+                                    using = Animation_Curve_Default
+                                    trigger_when = "[DiplomaticItem.IsAdding]"
+                                    on_start = "[DiplomaticItem.StartAnimation]"
+
+                                    start_sound = {
+                                        soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_diplomacy"
+                                    }
+                                }
+
+                                state = {
+                                    name = e
+                                    next = f
+                                    position_y = 60
+                                    duration = 0.45
+                                    size = { 88 88 }
+                                    using = Animation_Curve_Default
+                                }
+
+                                state = {
+                                    name = f
+                                    next = a
+                                    position_y = 0
+                                    duration = 0.25
+
+                                    size = { 72 72 }
+                                    bezier = { 0.43 0 0.2 2.2 }
+                                    on_finish = "[DiplomaticItem.AddingFinished]"
+                                    on_finish = "[DiplomaticItem.EndAnimation]"
+                                }
+
+                                ### idle animation ###
+                                state = {
+                                    name = "already_added"
+                                    duration = 0
+                                    size = { 72 72 }
+                                    trigger_when = "[DiplomaticItem.IsAdded]"
+                                }
+
+                                state = {
+                                    name = "when_removed"
+                                    duration = 0.3
+                                    size = { 0 0 }
+                                    trigger_when = "[DiplomaticItem.IsRemoving]"
+                                    on_start = "[DiplomaticItem.StartAnimation]"
+                                    on_finish = "[DiplomaticItem.RemovingFinished]"
+                                    on_finish = "[DiplomaticItem.EndAnimation]"
+                                    start_sound = {
+                                        soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_show"
+                                    }
+                                }
+
+                                modify_texture = {
+                                    name = "glow"
+                                    texture = "gfx/interface/component_effects/effect_shimmer_blue.dds"
+                                    blend_mode = colordodge
+                                    translate_uv = { 0.2 0.2 }
+                                }
+
+                                #### Shimmer ####
+                                state = {
+                                    trigger_when = "[DiplomaticItem.IsAdding]"
+                                    name = _show
+                                    next = shimmer
+                                    duration = 0.2
+                                    scale = 0.9
+
+                                    modify_texture = {
+                                        name = "glow"
+                                        translate_uv = { 1 -2 }
+                                    }
+                                }
+
+                                state = {
+                                    name = shimmer
+                                    next = pause
+                                    duration = 1.2
+                                    scale = 0.9
+                                    position = { 0 0 }
+
+                                    bezier = { 0 0.9 1 0.4 }
+
+                                    modify_texture = {
+                                        name = "glow"
+                                        translate_uv = { -1 1 }
+                                    }
+                                }
+
+                                state = {
+                                    name = pause
+                                    next = shimmer
+                                    duration = 0
+                                    delay = 5
+
+                                    modify_texture = {
+                                        name = "glow"
+                                        translate_uv = { 1 -1 }
+                                    }
+                                }
+
+                                state = {
+                                    name = _show
+                                    duration = 1
+                                    frame = 1
+                                    scale = 0.9
+                                    position = { 0 0 }
+                                    start_sound = {
+                                        soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_show"
+                                    }
+                                }
+
+                                state = {
+                                    name = _mouse_enter
+                                    duration = 0.05
+                                    frame = 2
+                                    position = { 0 10 }
+                                    scale = 1
+                                    start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_oversound"}
+                                }
+
+                                state = {
+                                    name = _mouse_leave
+                                    duration = 0.1
+                                    frame = 1
+                                    position = { 0 0 }
+                                    scale = 0.9
+                                    start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_oversound"}
+                                }
+
+                                state = {
+                                    name = _mouse_press
+                                    duration = 0.25
+                                    frame = 3
+                                    position = { 0 10 }
+                                    scale = 1
+                                    start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_mouse_press"}
+                                }
+
+                                state = {
+                                    name = _mouse_release
+                                    duration = 0.25
+                                    frame = 2
+                                    position = { 0 10 }
+                                    scale = 1
+                                    start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_mouse_release"}
+                                }
                             }
-                        }
-
-                        state = {
-                            name = b
-                            next = a
-
-                            using = Animation_Curve_Default
-                            delay = 1.4
-                            duration = 0.7
-                            alpha = 0
-                            scale = 0.8
-
-                            modify_texture = {
-                                name = rotation
-                                rotate_uv = -90
-                            }
-                        }
-                    }
-
-                    button = {
-                        name = "action_icon"
-                        parentanchor = center
-
-                        size = { 0 0 }
-                        framesize = { 144 144 }
-                        filter_mouse = right
-
-                        texture = "[DiplomaticItem.GetIcon]"
-                        onclick = "[DiplomaticItem.OnClick]"
-                        onrightclick = "[DiplomaticItem.OnRightClick]"
-                        button_ignore = none
-
-                        tooltip = "DIPLOMATIC_ITEM_TOOLTIP"
-
-                        icon = {
-                            texture = "gfx/interface/component_effects/alert_diplomacy_timer_base.dds"
-                            visible = "[LessThan_int32( DiplomaticItem.GetDaysUntilTimeout, '(int32)30')]"
-                            size = { 70 70 }
-                            parentanchor = center
-
-                            text_single = {
-                                text = "[Max_int32( '(int32)0', DiplomaticItem.GetDaysUntilTimeout )]"
-                                parentanchor = bottom|hcenter
-                                position = { -2 -9 }
-                                using = Font_Size_Medium
-                                default_format = "#high"
-                            }
-                        }
-
-                        state = {
-                            trigger_when = "[LessThan_int32( DiplomaticItem.GetDaysUntilTimeout, '(int32)30')]"
-                            name = "timeout"
-                            next = b
-
-                            using = Animation_Curve_Default
-                            duration = 0.5
-                            delay = 0.2
-                            alpha = 1
-                        }
-
-                        state = {
-                            name = b
-                            next = "timeout"
-
-                            using = Animation_Curve_Default
-                            delay = 1.5
-                            duration = 0.4
-                            alpha = 0.5
-                        }
-
-                        ### Adding animation ###
-                        state = {
-                            name = "when_added"
-                            next = e
-                            position_y = 0
-                            duration = 0.2
-                            size = { 72 72 }
-                            using = Animation_Curve_Default
-                            trigger_when = "[DiplomaticItem.IsAdding]"
-                            on_start = "[DiplomaticItem.StartAnimation]"
-
-                            start_sound = {
-                                soundeffect = "event:/SFX/UI/Notifications/TopBar/sfx_ui_notifications_topbar_diplomacy"
-                            }
-                        }
-
-                        state = {
-                            name = e
-                            next = f
-                            position_y = 60
-                            duration = 0.45
-                            size = { 88 88 }
-                            using = Animation_Curve_Default
-                        }
-
-                        state = {
-                            name = f
-                            next = a
-                            position_y = 0
-                            duration = 0.25
-
-                            size = { 72 72 }
-                            bezier = { 0.43 0 0.2 2.2 }
-                            on_finish = "[DiplomaticItem.AddingFinished]"
-                            on_finish = "[DiplomaticItem.EndAnimation]"
-                        }
-
-                        ### idle animation ###
-                        state = {
-                            name = "already_added"
-                            duration = 0
-                            size = { 72 72 }
-                            trigger_when = "[DiplomaticItem.IsAdded]"
-                        }
-
-                        state = {
-                            name = "when_removed"
-                            duration = 0.3
-                            size = { 0 0 }
-                            trigger_when = "[DiplomaticItem.IsRemoving]"
-                            on_start = "[DiplomaticItem.StartAnimation]"
-                            on_finish = "[DiplomaticItem.RemovingFinished]"
-                            on_finish = "[DiplomaticItem.EndAnimation]"
-                            start_sound = {
-                                soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_show"
-                            }
-                        }
-
-                        modify_texture = {
-                            name = "glow"
-                            texture = "gfx/interface/component_effects/effect_shimmer_blue.dds"
-                            blend_mode = colordodge
-                            translate_uv = { 0.2 0.2 }
-                        }
-
-                        #### Shimmer ####
-                        state = {
-                            trigger_when = "[DiplomaticItem.IsAdding]"
-                            name = _show
-                            next = shimmer
-                            duration = 0.2
-                            scale = 0.9
-
-                            modify_texture = {
-                                name = "glow"
-                                translate_uv = { 1 -2 }
-                            }
-                        }
-
-                        state = {
-                            name = shimmer
-                            next = pause
-                            duration = 1.2
-                            scale = 0.9
-                            position = { 0 0 }
-
-                            bezier = { 0 0.9 1 0.4 }
-
-                            modify_texture = {
-                                name = "glow"
-                                translate_uv = { -1 1 }
-                            }
-                        }
-
-                        state = {
-                            name = pause
-                            next = shimmer
-                            duration = 0
-                            delay = 5
-
-                            modify_texture = {
-                                name = "glow"
-                                translate_uv = { 1 -1 }
-                            }
-                        }
-
-                        state = {
-                            name = _show
-                            duration = 1
-                            frame = 1
-                            scale = 0.9
-                            position = { 0 0 }
-                            start_sound = {
-                                soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_show"
-                            }
-                        }
-
-                        state = {
-                            name = _mouse_enter
-                            duration = 0.05
-                            frame = 2
-                            position = { 0 10 }
-                            scale = 1
-                            start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_oversound"}
-                        }
-
-                        state = {
-                            name = _mouse_leave
-                            duration = 0.1
-                            frame = 1
-                            position = { 0 0 }
-                            scale = 0.9
-                            start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_oversound"}
-                        }
-
-                        state = {
-                            name = _mouse_press
-                            duration = 0.25
-                            frame = 3
-                            position = { 0 10 }
-                            scale = 1
-                            start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_mouse_press"}
-                        }
-
-                        state = {
-                            name = _mouse_release
-                            duration = 0.25
-                            frame = 2
-                            position = { 0 10 }
-                            scale = 1
-                            start_sound = {soundeffect = "event:/SFX/UI/Notifications/Alerts/sfx_ui_notification_alert_action_mouse_release"}
                         }
                     }
                 }
-            }
-        }
             }
         }
     }
@@ -576,16 +576,30 @@ types Notifications {
         visible_at_creation = no
         allow_outside = yes
         datacontext = "[GetPlayer]"
-		widgetanchor = center
+        widgetanchor = center
 
+        # Default Toast Animations
+        state = {
+            name = _show
+            using = Animation_FadeIn_Standard
+            bezier = { 0.7 0 0.7 1 }
+        }
+
+        state = {
+            name = _hide
+            using = Animation_FadeOut_Standard
+            size = { 1 200}
+            bezier = { 0.7 0 0.7 1 }
+        }
+        
         notifications_toasts_default = {
-            position = "[Select_CVector2f( IsGameViewOpen('activity_locale'), '(CVector2f)-650,195', '(CVector2f)0,185' )]"
+            position = "[Select_CVector2f( IsGameViewOpen('activity_locale'), '(CVector2f)-600,195', '(CVector2f)0,150' )]"
             datacontext = "[ToastMessageHandler.GetMessage]"
             visible = "[Not( PlayerMessageItem.GetType.HasFlags )]"
         }
 
         notifications_toasts_contests = {
-			position = { 0 165 }
+            position = { 0 165 }
             datacontext = "[ToastMessageHandler.GetMessage]"
             visible = "[PlayerMessageItem.GetType.HasFlag( 'tournament_reward' )]"
         }
@@ -604,32 +618,17 @@ types Notifications {
         visible_at_creation = no
         widgetanchor = center
         parentanchor = center
-        size = { 600 200}
         allow_outside = yes
 
         state = {
-            name = _show
-            using = Animation_FadeIn_Standard
-            size = { 600 200}
-            bezier = { 0.7 0 0.7 1 }
+            name = _mouse_hierarchy_enter
+            on_start = "[PdxGuiWidget.FindChild('button_dismiss_all').TriggerAnimation('hover_enter')]"
         }
 
         state = {
-            name = _hide
-            using = Animation_FadeOut_Quick
-            size = { 1 200}
-            bezier = { 0.7 0 0.7 1 }
+            name = _mouse_hierarchy_leave
+            on_start = "[PdxGuiWidget.FindChild('button_dismiss_all').TriggerAnimation('hover_leave')]"
         }
-
-        state = {
-			name = _mouse_hierarchy_enter
-			on_start = "[PdxGuiWidget.FindChild('button_dismiss_all').TriggerAnimation('hover_enter')]"
-		}
-
-		state = {
-			name = _mouse_hierarchy_leave
-			on_start = "[PdxGuiWidget.FindChild('button_dismiss_all').TriggerAnimation('hover_leave')]"
-		}
 
         button = {
             size = { 100% 100% }
@@ -641,11 +640,13 @@ types Notifications {
 
         vbox = {
             layoutpolicy_vertical = expanding
-			allow_outside = yes
-
+            allow_outside = yes
+            set_parent_size_to_minimum = yes
+            minimumsize = { 600 0 }
+            
             hbox = {
                 layoutpolicy_horizontal = expanding
-				allow_outside = yes
+                allow_outside = yes
 
                 ### Left Toast Edge
                 hbox = {
@@ -659,7 +660,7 @@ types Notifications {
                         mirror = horizontal
                         margin_right = -24
                         margin_left = 60
-                }
+                    }
 
                     ### Bad
                     background = {
@@ -670,7 +671,7 @@ types Notifications {
                         margin = { 0 12 }
                         margin_left = 32
 
-                }
+                    }
                     ### Good
                     background = {
                         visible = "[PlayerMessageItem.GetType.IsGood]"
@@ -678,7 +679,7 @@ types Notifications {
                         mirror = horizontal
                         margin_right = -24
                         margin_left = 60
-            }
+                    }
 
                     ### Good
                     background = {
@@ -697,7 +698,7 @@ types Notifications {
                         mirror = horizontal
                         margin_right = -24
                         margin_left = 60
-            }
+                    }
 
                     ### Neutral
                     background = {
@@ -708,8 +709,8 @@ types Notifications {
                         margin = { 0 12 }
                         margin_left = 32
 
-            }
-            }
+                    }
+                }
 
                 ### BG Bad
                 background = {
@@ -717,23 +718,23 @@ types Notifications {
                     texture = "gfx/interface/hud/toast_title_bg_bad.dds"
                     spriteType = Corneredstretched
                     margin = { 10 10 }
-            }
+                }
 
                 ### BG Good
                 background = {
-                visible = "[PlayerMessageItem.GetType.IsGood]"
+                    visible = "[PlayerMessageItem.GetType.IsGood]"
                     texture = "gfx/interface/hud/toast_title_bg_good.dds"
                     spriteType = Corneredstretched
                     margin = { 10 10 }
-            }
+                }
 
                 ### BG Neutral
                 background = {
-                visible = "[PlayerMessageItem.GetType.IsNeutral]"
+                    visible = "[PlayerMessageItem.GetType.IsNeutral]"
                     texture = "gfx/interface/hud/toast_title_bg_neutral.dds"
                     spriteType = Corneredstretched
                     margin = { 10 10 }
-            }
+                }
 
                 hbox = {
                     ignoreinvisible = yes
@@ -743,12 +744,12 @@ types Notifications {
                     spacer = {
                         size = { 120 90 }
                         visible = "[Not( PlayerMessageItem.HasLeftIcon )]"
-            }
+                    }
 
                     widget_left_toast_icon_contents = {
                         size = { 120 90 }
                         allow_outside = yes
-        }
+                    }
 
                     vbox = {
                         name = "message"
@@ -773,7 +774,6 @@ types Notifications {
                                 using = Font_Size_Big
 
                                 default_format = "#high"
-                                using = Text_Light_Background_Overrides
 
                                 background = {
                                     using = Toast_Header
@@ -806,20 +806,20 @@ types Notifications {
                             default_format = "#light_background"
                             format_override = { E light_background }
                             fontsize_min = 10
-            alwaystransparent = yes
+                            alwaystransparent = yes
                         }
                     }
 
                     widget_right_toast_icon_contents = {
                         size = { 120 90 }
                         allow_outside = yes
-            }
+                    }
 
                     spacer = {
                         size = { 120 90 }
                         visible = "[Not( PlayerMessageItem.HasRightIcon )]"
                     }
-            }
+                }
 
                 ### Right Toast Edge
                 hbox = {
@@ -827,7 +827,7 @@ types Notifications {
                     min_width = 2
 
                     ### Bad
-                background = {
+                    background = {
                         visible = "[PlayerMessageItem.GetType.IsBad]"
                         texture = "gfx/interface/hud/toast_title_bg_edge_ribbon_bad.dds"
 
@@ -838,13 +838,13 @@ types Notifications {
                     ### Bad
                     background = {
                         visible = "[PlayerMessageItem.GetType.IsBad]"
-                    layoutpolicy_vertical = expanding
+                        layoutpolicy_vertical = expanding
                         texture = "gfx/interface/hud/toast_title_bg_edge_bad.dds"
 
                         margin = { 0 12 }
                         margin_right = 32
 
-                }
+                    }
                     ### Good
                     background = {
                         visible = "[PlayerMessageItem.GetType.IsGood]"
@@ -852,18 +852,18 @@ types Notifications {
 
                         margin_left = -24
                         margin_right = 60
-            }
+                    }
 
                     ### Good
-                background = {
+                    background = {
                         visible = "[PlayerMessageItem.GetType.IsGood]"
-                    layoutpolicy_vertical = expanding
+                        layoutpolicy_vertical = expanding
                         texture = "gfx/interface/hud/toast_title_bg_edge_good.dds"
 
                         margin = { 0 12 }
                         margin_right = 32
 
-                }
+                    }
                     ### Neutral
                     background = {
                         visible = "[PlayerMessageItem.GetType.IsNeutral]"
@@ -871,7 +871,7 @@ types Notifications {
 
                         margin_left = -24
                         margin_right = 60
-            }
+                    }
 
                     ### Neutral
                     background = {
@@ -885,103 +885,101 @@ types Notifications {
                     }
                 }
             }
-
-            expand = {}
         }
 
         flowcontainer = {
-        	name = "button_dismiss_all"
-			parentanchor = right
+            name = "button_dismiss_all"
+            parentanchor = right
 
-			alpha = 0
+            alpha = 0
 
-			state = {
-				name = hover_enter
-				alpha = 1
-				duration = 0.05
-				using = Animation_Curve_Default
-			}
+            state = {
+                name = hover_enter
+                alpha = 1
+                duration = 0.05
+                using = Animation_Curve_Default
+            }
 
-			state = {
-				name = hover_leave
-				alpha = 0
-				duration = 0.2
-				using = Animation_Curve_Default
-			}
+            state = {
+                name = hover_leave
+                alpha = 0
+                duration = 0.2
+                using = Animation_Curve_Default
+            }
 
-			### MESSAGE SETTINGS SHORTCUT
-			button_menu = {
-				parentanchor = center
+            ### MESSAGE SETTINGS SHORTCUT
+            button_menu = {
+                parentanchor = center
 
-				background = {
-					using = Background_Area_Dark
-					alpha = 0.6
+                background = {
+                    using = Background_Area_Dark
+                    alpha = 0.6
 
-					modify_texture = {
-						texture = "gfx/interface/component_masks/mask_glow.dds"
-						blend_mode = alphaMultiply
-					}
-				}
+                    modify_texture = {
+                        texture = "gfx/interface/component_masks/mask_glow.dds"
+                        blend_mode = alphaMultiply
+                    }
+                }
 
-				onclick = "[ToggleGameViewData('message_settings', PlayerMessageItem.GetType)]"
-				tooltip = "MESSAGE_SETTINGS_WINDOW_SHORTCUT_TT"
-				using = tooltip_se
-			}
+                onclick = "[ToggleGameViewData('message_settings', PlayerMessageItem.GetType)]"
+                tooltip = "MESSAGE_SETTINGS_WINDOW_SHORTCUT_TT"
+                using = tooltip_se
+            }
 
-			button_cancel = {
-				background = {
-					using = Background_Area_Dark
-					alpha = 0.6
+            button_cancel = {
+                background = {
+                    using = Background_Area_Dark
+                    alpha = 0.6
 
-					modify_texture = {
-						texture = "gfx/interface/component_masks/mask_glow.dds"
-						blend_mode = alphaMultiply
-					}
-				}
+                    modify_texture = {
+                        texture = "gfx/interface/component_masks/mask_glow.dds"
+                        blend_mode = alphaMultiply
+                    }
+                }
 
-				blockoverride "master_color_frame" {
-					frame = 1
-				}
+                blockoverride "master_color_frame" {
+                    frame = 1
+                }
 
-				blockoverride "button_frames"
-				{
-					gfxtype = togglepushbuttongfx
+                blockoverride "button_frames"
+                {
+                    gfxtype = togglepushbuttongfx
 
-					upframe = 1
-					uphoverframe = 2
-					uppressedframe = 3
-				}
+                    upframe = 1
+                    uphoverframe = 2
+                    uppressedframe = 3
+                }
 
-				onclick = "[ToastMessageHandler.DismissMessage]"
-				tooltip = "DISMISS"
-				using = tooltip_se
-			}
-		}
+                onclick = "[ToastMessageHandler.DismissMessage]"
+                tooltip = "DISMISS"
+                using = tooltip_se
+            }
+        }
     }
 
     type notifications_toasts_contracts = widget {
         name = "toast_background_contract"
 
         size = { 560 200 }
-            widgetanchor = center
-            parentanchor = center
+        widgetanchor = center
+        parentanchor = center
         alwaystransparent = no
 
-            state = {
+        state = {
             name = a
             next = b
             trigger_on_create = yes
             alpha = 0
             duration = 0.15
             using = Animation_Curve_Default
-                }
+        }
 
         state = {
             name = b
-                    alpha = 1
+            alpha = 1
             delay = 0.7
             using = Animation_Curve_Default
-            }
+        }
 
         video_icon = {
             name = "fail_toast"
@@ -994,7 +992,7 @@ types Notifications {
             video = "gfx/interface/animation/fail_toast.bk2"
             loop = no
             restart_on_show = yes
-                }
+        }
 
         video_icon = {
             name = "success_toast"
@@ -1007,7 +1005,7 @@ types Notifications {
             video = "gfx/interface/animation/success_toast.bk2"
             loop = no
             restart_on_show = yes
-                    }
+        }
 
         ### CONTENT ###
         widget = {
@@ -1015,13 +1013,13 @@ types Notifications {
             visible = "[Not(SinglePlayerShowingPausedSuccession)]"
             widgetanchor = center
             size = { 100% 100% }
-                        parentanchor = center
+            parentanchor = center
             position = { 0 30 }
 
             hbox = {
                 ignoreinvisible = yes
                 size = { 100% 90% }
-                        parentanchor = center
+                parentanchor = center
                 widgetanchor = center
                 layoutpolicy_vertical = expanding
 
@@ -1584,27 +1582,12 @@ types Notifications {
                 position_y = 40
             }
 
-            background = {
-                name = "paper_texture_shadow"
-                texture = "gfx/interface/window_event/tile_letter_shadow.dds"
-                spriteType = Corneredtiled
-                spriteborder = { 200 200 }
-            }
+            using = Background_Letter_No_Frame
 
             background = {
-                name = "paper_texture_flat"
-                texture = "gfx/interface/window_event/tile_letter_flat.dds"
-                spriteType = Corneredtiled
-                spriteborder = { 200 200 }
-                alpha = 0.9
-                color = { 0.51 0.53 0.58 1 }
-
-                modify_texture = {
-                    name = "paper_texture_overlay"
-                    texture = "gfx/interface/window_event/overlay_letter_texture.dds"
-                    spriteType = Corneredstretched
-                    blend_mode = overlay
-                }
+                using = Background_Area_Dark
+                alpha = 0.75
+                margin = { 1 1 }
             }
 
             #### DECOR
@@ -1619,7 +1602,7 @@ types Notifications {
                     alpha = 0.6
 
                     background = {
-                        texture = "gfx/interface/window_event/letter_event_pattern_big.dds"
+                        texture = "gfx/interface/skinned/window_letter/letter_event_pattern_big.dds"
                         tintcolor = { 0.75 0.9 0.9 1 }
 
                         modify_texture = {
@@ -1639,7 +1622,7 @@ types Notifications {
                     alpha = 0.6
 
                     background = {
-                        texture = "gfx/interface/window_event/letter_event_pattern_big.dds"
+                        texture = "gfx/interface/skinned/window_letter/letter_event_pattern_big.dds"
                         mirror = horizontal
                         tintcolor = { 0.75 0.9 0.9 1 }
 
@@ -1684,6 +1667,7 @@ types Notifications {
                 name = "action_items_container"
                 set_parent_size_to_minimum = yes
                 minimumsize = { 384 50 }
+                margin_right = 2
                 margin_top = 14
                 spacing = 15
                 ignoreinvisible = yes
@@ -1974,9 +1958,9 @@ types Notifications {
 
                                     expand = {}
 
-									flowcontainer = {
+                                    flowcontainer = {
                                         name = "button_dismiss"
-										allow_outside = yes
+                                        allow_outside = yes
 
                                         alpha = 1
 
@@ -1994,22 +1978,22 @@ types Notifications {
                                             using = Animation_Curve_Default
                                         }
 
-										### MESSAGE DELIVERED DATE
-										widget = {
-											allow_outside = yes
+                                        ### MESSAGE DELIVERED DATE
+                                        widget = {
+                                            allow_outside = yes
 
                                             text_single = {
                                                 name = "date"
-												margin_left = 16
-												parentanchor = vcenter|left
+                                                margin_left = 16
+                                                parentanchor = vcenter|left
 
-												text = "[PlayerMessageItem.GetArrivalDate.GetStringShortNoYear]"
+                                                text = "[PlayerMessageItem.GetArrivalDate.GetStringShortNoYear]"
                                                 align = nobaseline
-											}
                                             }
                                         }
+                                    }
 
-									flowcontainer = {
+                                    flowcontainer = {
                                         name = "button_dismiss_all"
                                         alpha = 0
 
@@ -2027,37 +2011,37 @@ types Notifications {
                                             using = Animation_Curve_Default
                                         }
 
-										### MESSAGE SETTINGS SHORTCUT
-										widget = {
-											size = { 26 26 }
+                                        ### MESSAGE SETTINGS SHORTCUT
+                                        widget = {
+                                            size = { 26 26 }
 
-											allow_outside = yes
+                                            allow_outside = yes
 
-											button_menu = {
-												size = { 26 26 }
+                                            button_menu = {
+                                                size = { 26 26 }
 
                                                 button_ignore = none
 
-												onclick = "[ToggleGameViewData('message_settings', FeedMessageItem.GetPlayerMessageItem.GetType)]"
-												tooltip = "MESSAGE_SETTINGS_WINDOW_SHORTCUT_TT"
-												using = tooltip_se
-											}
-										}
+                                                onclick = "[ToggleGameViewData('message_settings', FeedMessageItem.GetPlayerMessageItem.GetType)]"
+                                                tooltip = "MESSAGE_SETTINGS_WINDOW_SHORTCUT_TT"
+                                                using = tooltip_se
+                                            }
+                                        }
 
-										### MARK MESSAGE FOR DELETE
-										widget = {
+                                        ### MARK MESSAGE FOR DELETE
+                                        widget = {
                                             size = { 26 26 }
 
-											allow_outside = yes
+                                            allow_outside = yes
 
-											button_clear = {
-												size = { 26 26 }
+                                            button_clear = {
+                                                size = { 26 26 }
 
-												button_ignore = none
+                                                button_ignore = none
 
                                                 onrightclick = "[MessageFeedHandler.MarkAllForDelete]"
                                                 onclick = "[FeedMessageItem.MarkToDelete]"
-												tooltip = "MESSAGE_CLEAR_ALL_TOOLTIP"
+                                                tooltip = "MESSAGE_CLEAR_ALL_TOOLTIP"
                                                 using = tooltip_se
                                             }
                                         }
