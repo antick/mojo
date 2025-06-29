@@ -2,52 +2,20 @@
 # $relates_to=common\defines\00_defines.txt
 
 NCharacter = {
-	TYRANNY_MONTHLY_CHANGE = -0.5	# tyranny is changing by this value each month
-
-	MAX_PROVISIONS = 3000			# maximum provisions value a character can have
-	PROVISIONS_LOW_WARNING = 500		# when travel planner should warn about provisions running low
-
-	MAX_POTENTIAL_SPOUSES = 10000 #Number of entries shown in the marry off-interaction
-	MONTHS_OF_INCOME_AT_START = 120 # Rulers will start with this many months worth of income
-
-	MAX_COUNTIES_IN_REALM_AS_DUKE = 50						# As a duke or below, the player (but not the AI) will suffer penalties when they go beyond this # of counties in their realm. They can form a kingdom to get the penalties to go away
-	INCOME_PENALTY_PER_COUNTY_ABOVE_LIMIT = 0.05			# For each county above MAX_COUNTIES_IN_REALM_AS_DUKE, you get 10% less income
+	MONTHS_OF_INCOME_AT_START = 60 # Rulers will start with this many months worth of income
+	MAX_COUNTIES_IN_REALM_AS_DUKE = 50 # As a duke or below, the player (but not the AI) will suffer penalties when they go beyond this # of counties in their realm. They can form a kingdom to get the penalties to go away
 }
 
 NCharacterOpinion = {
-	POWERFUL_VASSAL_WITHOUT_COUNCIL_POSITION = -20
-	MAX_DUCHIES_BEFORE_PENALTY = 20						# How many duchies are vassals fine with you having? If you're a duke, they don't care; only if you're king or above
-	TOO_MANY_DUCHIES_OPINION = -10						# Penalty per duchy too many
-	COUNT_LIEGE_HOLDS_MY_DUCHY = -25					# Penalty with count vassals for whom you hold their dejure duchy (and you're above duchy tier)
-}
-
-NDomain = {
-	ABOVE_LIMIT_LEVY_PENALTY = 0.1				# How much levies are reduced per holding over the limit
-	ABOVE_LIMIT_MAX_LEVY_PENALTY = 1			# How much levies can be reduced at most
-	ABOVE_LIMIT_TAX_INCOME_PENALTY = 0.1		# How much tax income from domain is reduced per holding over the limit
-	ABOVE_LIMIT_MAX_TAX_INCOME_PENALTY = 1		# How much tax income from domain can be reduced at most
+	POWERFUL_VASSAL_WITHOUT_COUNCIL_POSITION = -30
+	MAX_DUCHIES_BEFORE_PENALTY = 20 # How many duchies are vassals fine with you having? If you're a duke, they don't care; only if you're king or above
 }
 
 NCulture = {
 	DEFAULT_MAX_TRADITIONS = 50 # How many traditions can a culture have by default?
 }
 
-NMercenary = {
-	HIRE_MONTHS = 36						# The length of the period mercenaries are hired for in months
-	LEVY_COST_PER_100_SOLDIERS = 10.0		# The cost of the levy regiment part of mercenary companies, per 100 soldiers for better precision
-}
-
 NHolyOrder = {
-	LEVY_COST_PER_100_SOLDIERS = 5.0		# The piety cost of the levy regiment part of holy orders, per 100 soldiers for better precision
 	HIRE_LIMIT = 3
-
-	BASE_NUM_KNIGHTS = 3					# How many knights do holy orders have?
-	EXTRA_KNIGHTS_PER_HOLDING = 0.5			# How many knights do holy orders get for each holding? Rounds down
-}
-
-NRaid = {
-	RAID_LOOT_PER_SOLDIER = 0.1				# How much loot can a single soldier carry? Minimum increment is 0.001
-	MIN_SOLDIERS_TO_RAID = 200				# How small can a raid army be and still be able to loot?
-	MONTHLY_ATTRITION = 0.01				# How much attrition do you take while looting a province? 0.01 = 1% per month
-	MONTHS_OF_RAID_LOOT = 60				# How many months of holding income (with owner effects discounted) does raiding provide?
+	BASE_NUM_KNIGHTS = 3 # How many knights do holy orders have?
 }

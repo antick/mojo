@@ -1093,10 +1093,6 @@ host_dinner_events.1006 = {
 		}
 		character = scope:concubine_scope
 		animation = flirtation
-		triggered_outfit = {
-			remove_default_outfit = no
-			outfit_tags = { no_clothes }
-		}
 		camera = camera_event_center_pointing_left
 	}
 	right_portrait = {
@@ -1117,6 +1113,9 @@ host_dinner_events.1006 = {
 				template = local_beauty_character
 				save_scope_as = concubine_scope
 			}
+		}
+		scope:concubine_scope = {
+			add_character_flag = is_naked
 		}
 	}
 
@@ -1372,6 +1371,9 @@ host_dinner_events.1006 = {
 				exists = scope:concubine_scope
 			}
 			scope:concubine_scope = { silent_disappearance_effect = yes }
+		}
+		scope:concubine_scope ?= {
+			remove_character_flag = is_naked
 		}
 	}
 }
@@ -4114,8 +4116,8 @@ host_dinner_events.1061 = {
 # A member of your liege's procession wants to join your court!
 scripted_effect 1070_courtier_moves_effect = {
 	scope:visiting_liege = {
-		current_travel_plan = {
-			remove_character = scope:runaway_courtier
+		current_travel_plan = { 
+			remove_character = scope:runaway_courtier 
 		}
 	}
 	scope:stop_host_scope = {
@@ -5087,7 +5089,7 @@ host_dinner_events.3000 = {
 
 	theme = tour_arrival
 	window = tour_arrival_event
-
+	
 	left_portrait = {
 		character = root
 		triggered_animation = {
@@ -6078,7 +6080,7 @@ host_dinner_events.3005 = {
 				title = host_dinner_events.3005.hook_for_hook
 				left_icon = root
 				right_icon = scope:visiting_liege
-
+				
 				if = {
 					limit = {
 						scope:stop_host_scope = {
@@ -6206,7 +6208,7 @@ scripted_effect 3006_courtier_moves_effect = {
 		}
 		hidden_effect = {
 			scope:visiting_liege = {
-				add_courtier = scope:runaway_courtier
+				add_courtier = scope:runaway_courtier 
 			}
 			scope:visiting_liege.current_travel_plan = {
 				add_companion = scope:runaway_courtier
@@ -7673,7 +7675,7 @@ host_dinner_events.3040 = {
 		if = {
 			limit = {
 				has_activity_intent = justice_intent
-			}
+			}	
 			stress_impact = {
 				base = minor_stress_gain
 				cynical = minor_stress_impact_gain
@@ -7744,11 +7746,6 @@ host_dinner_events.3041 = {
 	right_portrait = {
 		character = scope:pie_eater_scope
 		animation = shock
-		triggered_outfit = {
-			trigger = { is_deviant_trigger = yes }
-			remove_default_outfit = no
-			outfit_tags = { no_clothes }
-		}
 	}
 	cooldown = { years = 5 }
 
@@ -7769,6 +7766,16 @@ host_dinner_events.3041 = {
 					}
 					save_scope_as = deviant_pie_secret
 				}
+			}
+		}
+		if = {
+			limit = {
+				scope:pie_eater_scope = {
+					is_deviant_trigger = yes
+				}
+			}
+			scope:pie_eater_scope = {
+				add_character_flag = is_naked
 			}
 		}
 	}
@@ -8036,6 +8043,18 @@ host_dinner_events.3041 = {
 			}
 		}
 	}
+	after = {
+		if = {
+			limit = {
+				scope:pie_eater_scope = {
+					has_character_flag = is_naked
+				}
+			}
+			scope:pie_eater_scope = {
+				remove_character_flag = is_naked
+			}
+		}
+	}
 }
 
 # Temperate entourage member refusing to eat
@@ -8125,7 +8144,7 @@ host_dinner_events.3050 = {
 			limit = {
 				has_activity_intent = altruism_intent
 			}
-			stress_impact = {
+			stress_impact = { 
 				base = minor_stress_gain
 				trusting = minor_stress_impact_gain
 				shy = minor_stress_impact_gain
@@ -8172,14 +8191,14 @@ host_dinner_events.3050 = {
 			limit = {
 				has_activity_intent = reduce_stress_intent
 			}
-			stress_impact = {
+			stress_impact = { 
 			base = minor_stress_gain
 				shy = medium_stress_impact_loss
 				wrathful = minor_stress_impact_gain
 				callous = minor_stress_impact_gain
 				sadistic = minor_stress_impact_gain
 				paranoid = minor_stress_impact_gain
-				gluttonous = minor_stress_impact_gain
+				gluttonous = minor_stress_impact_gain	
    			}
    		}
    		else = {
@@ -8248,11 +8267,11 @@ host_dinner_events.3060 = {
 			50 = { # You have a great time eating your desserts!
 				modifier = {
 					add = 5
-					current_weight > overweight_threshold
+					current_weight > overweight_value
 				}
 				modifier = {
 					add = -5
-					current_weight < underweight_threshold
+					current_weight < underweight_value
 				}
 				send_interface_toast = {
 					title = host_dinner_events.3060.satisfying_dessert
@@ -8267,11 +8286,11 @@ host_dinner_events.3060 = {
 			50 = { # You give yourself a stomach ache
 				modifier = {
 					add = -5
-					current_weight > overweight_threshold
+					current_weight > overweight_value
 				}
 				modifier = {
 					add = 5
-					current_weight < underweight_threshold
+					current_weight < underweight_value
 				}
 				scope:activity = {
 					add_activity_log_entry = {
@@ -8341,7 +8360,7 @@ host_dinner_events.3060 = {
 			limit = {
 				has_activity_intent = reduce_stress_intent
 			}
-			stress_impact = {
+			stress_impact = { 
 				base = minor_stress_gain
 				shy = medium_stress_impact_loss
 				arrogant = minor_stress_impact_gain
@@ -8699,7 +8718,7 @@ host_dinner_events.3080 = {
 		}
 		random_in_list = {
 			list = host_dinner_list
-
+			
 			weight = {
 				base = 1
 				modifier = {
@@ -9039,7 +9058,7 @@ host_dinner_events.3090 = {
 			limit = {
 				has_activity_intent = reduce_stress_intent
 			}
-			stress_impact = {
+			stress_impact = { 
 				base = minor_stress_gain
 				vengeful = minor_stress_impact_gain
 				sadistic = minor_stress_impact_gain
@@ -9142,6 +9161,7 @@ host_dinner_events.3100 = {
 				option = tour_type_taxation
 			}
 		}
+		scope:stop_host_scope = { is_ai = yes }
 	}
 
 	option = { # Demand the taxes
@@ -9861,7 +9881,7 @@ host_dinner_events.3120 = {
 			NOT = { has_relation_best_friend = scope:stop_host_scope }
 		}
 		show_as_tooltip = {
-			set_relation_best_friend = {
+			set_relation_best_friend = { 
 				target = scope:stop_host_scope
 				reason = best_friend_oath_of_friendship
 			}
@@ -10126,7 +10146,10 @@ host_dinner_events.3130 = {
 				is_ai = yes
 				is_adult = yes
 				has_trait = education_intrigue
-				NOT = { government_has_flag = government_is_tribal }
+				NOR = {
+					government_has_flag = government_is_tribal
+					government_has_flag = government_is_nomadic
+				}
 				OR = {
 					has_trait = paranoid
 					has_trait = schemer
@@ -10883,7 +10906,7 @@ host_dinner_events.3140 = {
 			limit = {
 				has_activity_intent = reduce_stress_intent
 			}
-			stress_impact = {
+			stress_impact = { 
 				base = minor_stress_gain
 				craven = minor_stress_impact_loss
 				gluttonous = minor_stress_impact_gain

@@ -34,8 +34,8 @@ create_cadet_branch_decision = {
 		trigger_if = {
 			limit = {
 				government_has_flag = government_is_clan
-        }
-		is_independent_ruler = yes
+			}
+			is_independent_ruler = yes
 		}
 		# If you are Administrative, we let the player create a new House much easier, as to have easy access to their own Family Title and Estate.
 		trigger_else_if = {
@@ -50,7 +50,7 @@ create_cadet_branch_decision = {
 				NOT = { is_close_or_extended_family_of = house.house_head }
 				custom_description = {
 					text = create_cadet_branch_decision_succession_line
-		house.house_head = {
+					house.house_head = {
 						NOT = {
 							any_held_title = {
 								place_in_line_of_succession = {
@@ -69,18 +69,18 @@ create_cadet_branch_decision = {
 			custom_description = {
 				text = create_cadet_branch_decision_succession_line
 				house.house_head = {
-				NOT = {
-					any_held_title = {
-						place_in_line_of_succession = {
-							target = root
-							value <=3
+					NOT = {
+						any_held_title = {
+							place_in_line_of_succession = {
+								target = root
+								value <=3
+							}
 						}
 					}
 				}
 			}
 		}
-		}
-
+		
 		# No living ancestors should belong to your house.
 		custom_description = {
 			text = create_cadet_branch_decision_ancestor_in_house
@@ -90,7 +90,7 @@ create_cadet_branch_decision = {
 				}
 			}
 		}
-
+		
 		trigger_if = {
 			limit = {
 				is_married = yes
@@ -162,14 +162,14 @@ create_cadet_branch_decision = {
 			change_influence = major_influence_gain
 		}
 	}
-
+	
 	ai_potential = {
 		always = yes
 	}
 
 	ai_will_do = {
 		base = 30
-
+		
 		modifier = {
 			add = 70
 			exists = primary_title
@@ -183,7 +183,7 @@ create_cadet_branch_decision = {
 				dynasty = root.dynasty
 			}
 		}
-
+		
 		modifier = {
 			factor = 0
 			any_child = {
@@ -191,7 +191,7 @@ create_cadet_branch_decision = {
 				count < 3
 			}
 		}
-
+		
 		modifier = {
 			factor = 0
 			any_player = {
