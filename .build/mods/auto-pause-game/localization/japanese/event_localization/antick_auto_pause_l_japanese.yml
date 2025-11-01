@@ -1,0 +1,38 @@
+l_japanese:
+ antick_auto_pause.1.t:0 "[province.GetName]の勝利"
+ antick_auto_pause.1.desc:0 "鋼のぶつかり合う音は消え、[province.GetName]の戦場には砂塵が静かに落ち着いた。あなたの軍は[enemy_primary_participant.GetTitledFirstName]の軍勢に打ち勝ち、見事な勝利を収めた。\n\n戦いは激しく、双方が勇気と巧みな戦術を示した。しかし、あなたの軍による見事な機動が形勢を一変させ、敵を側面から包み込み、その戦列を粉砕した。\n\n敵軍の残党が退却する中、勝利した兵たちは高く旗を掲げ、その歓声が血に染まった野に響き渡る。この勝利は、あなたの領国の評判を高め、敵どもに恐怖を刻みつけるだろう。\n\nこの栄光により、あなたの立場はいっそう強固となった。領国の人々はこの日を、長く語り継ぐに違いない。"
+ antick_auto_pause.1.a:0 "栄光の日だ！"
+
+ antick_auto_pause.3.t:0 "統合が完了"
+ antick_auto_pause.3.desc:0 "私は統合作業を完了し、新たな指示を待っている。"
+ antick_auto_pause.3.a:0 "よくやった"
+
+ antick_auto_pause.4.t:0 "[province.GetName]の城壁が陥落"
+ antick_auto_pause.4.desc:0 "かつて誇らしげにそびえていた[province.GetName]の防備は、いまや廃墟と化した。これはあなたの軍勢の力と決意の証である。守る者と攻める者の限界を試した苛烈な包囲の末、ついに我らの軍は城壁に風穴を開け、勝利を手にした。\n\n軍が街へとなだれ込むにつれ、戦の混沌は征服という厳粛な現実へと姿を変える。かつて賑わいで満ちていた通りには、降伏の声と敗者の叫びが響く。司令官たちは、要所が確保され、現地守備隊が武器を置いたと報告する。\n\n煙と瓦礫のただ中、あなたの旗が征服した[province.GetName]の上に高々と翻る。それは、あなたの力と影響力が増していることを誰の目にも明らかに示す印だ。この要衝の陥落は必ずや国中に波紋を広げ、友敵を問わず、あなたの勝利を前に立場の再考を余儀なくされるだろう。"
+ antick_auto_pause.4.a:0 "この勝利が新時代の夜明けを告げるのだ！"
+
+ antick_auto_pause.6.t:0 "[sacked_barony.GetNameNoTierNoTooltip]を略奪した"
+ antick_auto_pause.6.desc:0 "[sacked_county.GetNameNoTierNoTooltip]の[sacked_barony.GetNameNoTierNoTooltip]という、かつて誇り高き集落はいまや廃墟である。これは私の襲撃者たちの苛烈さの証だ。燃え盛る建物から煙が立ちのぼり、敗者の悲鳴が空気を満たす中、私の兵は歓喜しながら征服の戦利品をかき集めている。\n\n通りは血で赤く染まり、蹂躙された広間には敗者の嘆きがこだまする。[sacked_county_owner.GetTitledFirstName]はこの知らせに打ちのめされるに違いなく、我らの容赦なき襲撃によってその権勢と威信は損なわれた。\n\n私の隊長たちの報告は、あふれ返る金庫、計り知れぬ価値の聖遺物、そして鎖につながれ連行される捕虜の列を伝える。[raider.GetTitledFirstName]の名は大地の隅々まで恐怖とともに囁かれ、反抗の代償を思い知らせることになる。\n\nこの勝利は歴史の記録に刻まれ、拡大を続ける我が領土の礎石となるだろう。"
+ antick_auto_pause.6.a:0 "彼らの絶望を我らの栄光の糧とせよ！"
+
+ antick_auto_pause.7.t:0 "[county.GetNameNoTierNoTooltip]は[county.GetProvince.GetCounty.GetFaith.GetName]に改宗した"
+ antick_auto_pause.7.desc:0 "変化の響きが[county.GetName]一帯に鳴り渡り、古き信仰の最後の名残が新たな教えに道を譲った。あなたの勤勉な[councillor.GetCouncilTitle][councillor.GetTitledFirstName]は、改宗の過程が完了したと報告する。\n\nかつて[old_faith.GetAdjective]の信仰が支配していた地に、いまや[county.GetProvince.GetCounty.GetFaith.GetName]の教えが根を下ろし始めている。古い祠は用途を変え、新たな礼拝所が建ち、空気には馴染みのない香の匂いが濃く漂っている。\n\n[county.GetNameNoTier]の民は、表向きには新たな精神的な道を受け入れているものの、なお密かに古き道を守る者もいる。この改宗が、望む統一と安定をもたらすのか、それとも古い信仰の熾火が水面下でくすぶり続けるのか、時が明らかにするだろう。"
+ antick_auto_pause.7.a:0 "これが[county.GetName]に繁栄をもたらしますように"
+
+ antick_auto_pause.8.t:0 "[county.GetNameNoTierNoTooltip]の秩序は回復された"
+ antick_auto_pause.8.desc:0 "かつて[county.GetName]を吹き荒れた混乱の嵐は、ついに鎮まった。わが揺るぎない[councillor.GetCouncilTitle][councillor.GetTitledFirstName]は、統制が確固として回復したと報告する。\n\n不和が支配していた場所に、ふたたび日々の落ち着いた営みが戻ってきた。かつて騒擾に満ちていた街路は、満足げな臣民たちの平穏な活動で賑わっている。押しとどめられていた税も、再び我らの財庫へと滔々と流れ込む。\n\nわが[councillor.GetCouncilTitle]の尽力は、地元の民にも見過ごされなかった。過度な苛烈さに頼ることなく安定を取り戻したとあって、その断固にして公正な手腕を称える声が多い。\n\nとはいえ、鬱屈を抱く者たちのささやきは消えてはいない。露わな抵抗は鎮圧したが、放置すれば再び火の手が上がりかねない反乱の火種に、我らは警戒を怠るべきではない。"
+ antick_auto_pause.8.a:0 "強き王国こそ安定した王国だ"
+
+ antick_auto_pause.9.t:0 "[county.GetNameNoTierNoTooltip]の文化的転換"
+ antick_auto_pause.9.desc:0 "[county.GetName]の文化的景観という色鮮やかな織物は、深い変容を遂げた。わが勤勉なる[councillor.GetCouncilTitle][councillor.GetTitledFirstName]は、地元の人々が[county.GetProvince.GetCounty.GetCulture.GetName]文化を受け入れたと報告する。\n\nかつて[old_culture.GetName]の伝統が支配していた地に、いまや[county.GetProvince.GetCounty.GetCulture.GetName]の風習、言語、慣習が根を下ろしている。街には新たな訛りが響き、市場には見知らぬ風味があふれ、人々は新たな文化的アイデンティティを映す装いを身につけている。\n\nこの変化は、困難なしには成し遂げられなかった。年長者の中には過ぎ去りし日々を名残惜しみ、秘かに古いやり方に固執する者もいる。だが若い世代は新たな文化を熱狂的に受け入れ、その中に飛躍の機会と広大な領国とのつながりを見いだすのだ。"
+ antick_auto_pause.9.a:0 "団結こそが我が領国を強くする"
+
+ antick_auto_pause.10.t:0 "[province.GetName]での敗北"
+ antick_auto_pause.10.desc:0 "鋼のぶつかり合う音が消えると、[province.GetName]の戦場には重苦しい静寂が広がった。[ROOT.GetCharacter.GetTitledFirstName]の率いる我が軍は、[enemy_primary_participant.GetTitledFirstName]の軍勢に手痛い敗北を喫した。\n\n戦いは苛烈であり、我が兵は圧倒的不利の中でも勇敢に戦った。だが[ROOT.GetCharacter.GetTitledFirstName]の尽力も及ばず、敵の優れた戦術が決め手となった。[enemy_primary_participant.GetTitledFirstName]の見事な側面攻撃が我が戦列を打ち砕き、戦局は取り返しのつかないものとなった。\n\n残存兵が急ぎ退く中、勝者となった敵は旗を高く掲げ、その勝鬨が血に染まった野にこだまする。この敗北は我らの名誉を損ない、敵どもを勢いづかせるに違いない。\n\nこの損失の影響を最小限に抑え、さらなる侵入を防ぐため、我らは迅速に手を打たねばならない。"
+ antick_auto_pause.10.a:0 "我が領国にとって暗い一日だ…"
+
+ antick_auto_pause.13.t:0 "軍が[current_location.GetCounty.GetName]に到着"
+ antick_auto_pause.13.desc:0 "我が軍は[current_location.GetCounty.GetName]に到着した。[ROOT.GetCharacter.GetTitledFirstName]に率いられた我らの軍勢は目的地に到達した。\n\n残存兵力が州へ入ると、敵は我らを包囲した。"
+ antick_auto_pause.13.a:0 "ふむ…"
+
+

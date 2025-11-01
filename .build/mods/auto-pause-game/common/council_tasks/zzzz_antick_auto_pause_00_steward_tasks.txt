@@ -1,5 +1,5 @@
 ﻿# $conflict_prone=yes
-# $relates_to=common\council_tasks\00_steward_tasks.txt
+# $relates_to=C:\Program Files (x86)\Steam\steamapps\common\Crusader Kings III\game\common\council_tasks\00_steward_tasks.txt
 
 task_promote_culture = {
 	position = councillor_steward
@@ -17,7 +17,7 @@ task_promote_culture = {
 		frame = "gfx/interface/buttons/button_round_frame.dds"
 		glow = "gfx/particles/halo.dds"
 	}
-	
+
 	effect_desc = {
 		desc = {
 			desc = task_promote_culture_effect_desc
@@ -25,7 +25,7 @@ task_promote_culture = {
 				trigger = {
 					scope:councillor_liege = {
 						any_vassal = {
-							has_vassal_stance = minority
+							vassal_stance = minority
 						}
 					}
 				}
@@ -36,7 +36,7 @@ task_promote_culture = {
 					trigger_if = {
 						limit = { exists = scope:county }
 						scope:county = {
-							NOT = { culture = scope:councillor_liege.culture }
+							culture != scope:councillor_liege.culture
 						}
 						NOT = {
 							scope:councillor_liege.culture = {
@@ -117,6 +117,10 @@ task_promote_culture = {
 		}
 	}
 
+	is_valid_showing_failures_only = {
+		tgp_natural_disaster_councillor_available_for_task_trigger = yes
+	}
+
 	progress = {
 		value = 0
 		add = {
@@ -129,7 +133,7 @@ task_promote_culture = {
 		}
 
 		add = steward_promote_culture_contextual_bonuses
-		
+
 		if = { # Development reduces the speed. Should be the last non-multiply modifier applied to avoid negative values
 			limit = {
 				exists = scope:county
@@ -142,7 +146,7 @@ task_promote_culture = {
 				desc = STEWARD_PROMOTE_CULTURE_DEVELOPMENT_PENALTY
 			}
 		}
-		
+
 		# Conversion speed game rules
 		if = {
 			limit = {
@@ -237,14 +241,15 @@ task_promote_culture = {
 
 	potential_county = {
 		scope:county = {
-			NOT = { culture = scope:councillor_liege.culture }
+			is_landless_type_title = no
+			culture != scope:councillor_liege.culture
 			trigger_if = {
 				limit = {
 					scope:councillor_liege = { has_variable = hold_court_8130_culture_block }
 				}
 				custom_tooltip = {
 					text = hold_court_8130_conversion_tt
-					NOT = { culture = scope:councillor_liege.var:hold_court_8130_culture_block }
+					culture != scope:councillor_liege.var:hold_court_8130_culture_block
 				}
 			}
 		}
@@ -345,6 +350,12 @@ task_promote_culture = {
 						scope:county.culture = culture:polabian
 						NOT = { scope:councillor_liege.primary_title = title:e_hre }
 					}
+
+					AND = {
+						# Japanese rulers should convert Emishi counties
+						culture = culture:japanese
+						scope:county.culture = culture:emishi
+					}
 				}
 				OR = {
 					is_independent_ruler = yes
@@ -412,6 +423,11 @@ task_promote_culture = {
 						scope:county.culture = culture:polabian
 						NOT = { scope:councillor_liege.primary_title = title:e_hre }
 					}
+					AND = {
+						# Japanese rulers should convert Emishi counties
+						culture = culture:japanese
+						scope:county.culture = culture:emishi
+					}
 				}
 			}
 			OR = {
@@ -466,6 +482,11 @@ task_promote_culture = {
 					scope:county.culture = culture:polabian
 					NOT = { scope:councillor_liege.primary_title = title:e_hre }
 				}
+				AND = {
+					# Japanese rulers should convert Emishi counties
+					scope:councillor_liege.culture = culture:japanese
+					scope:county.culture = culture:emishi
+				}
 			}
 		}
 		trigger_else_if = { # But AI Directives should still try to look pretty
@@ -505,7 +526,7 @@ task_promote_culture = {
 
 		scope:councillor_liege = {
 			if = {
-				limit = {	
+				limit = {
 					NOT = {
 						culture = {
 							is_hybrid_culture = yes
@@ -517,7 +538,7 @@ task_promote_culture = {
 				}
 				if = {
 					limit = {
-						is_independent_ruler = no
+						top_liege != this
 					}
 					add_character_flag = {
 						flag = no_ai_culture_convert
@@ -604,6 +625,10 @@ task_promote_culture = {
 								capital_county.kingdom = title:k_saxony
 								capital_county.kingdom = title:k_pomerania
 							}
+						}
+						AND = {
+							culture = culture:japanese
+							capital_county.empire = title:e_japan
 						}
 						AND = {
 							culture = {
@@ -717,7 +742,7 @@ task_promote_culture = {
 			}
 			multiply = 0
 		}
-		
+
 		# AI directive
 		if = {
 			limit = {

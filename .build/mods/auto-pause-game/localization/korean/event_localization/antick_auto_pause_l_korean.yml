@@ -1,0 +1,38 @@
+l_korean:
+ antick_auto_pause.1.t:0 "[province.GetName]에서의 승리"
+ antick_auto_pause.1.desc:0 "강철의 충돌이 잦아들고 [province.GetName] 전장에 먼지가 가라앉았다. 그대의 군대는 [enemy_primary_participant.GetTitledFirstName]의 군세를 상대로 승리를 거두었다.\n\n전투는 치열했다. 양측 모두 용맹과 전술적 기량을 뽐냈다. 그러나 그대 군의 기막힌 기동이 전세를 뒤집어 적을 측면에서 포위하여 그 전열을 무너뜨렸다.\n\n적의 잔당이 퇴각하는 사이, 승전한 병사들은 깃발을 높이 들어 올리고 그들의 환호가 피로 물든 들판에 울려 퍼진다. 이 승리는 틀림없이 우리 왕국의 명성을 높이고, 적들의 마음에 두려움을 심을 것이다.\n\n이러한 대승으로 그대의 입지는 더욱 공고해졌다. 온 나라가 주목하고 있으며, 백성들은 오랫동안 오늘을 회자할 것이다."
+ antick_auto_pause.1.a:0 "영광스러운 날이다!"
+
+ antick_auto_pause.3.t:0 "통합 완료"
+ antick_auto_pause.3.desc:0 "통합 임무를 마쳤으며, 이제 새로운 지시를 기다립니다."
+ antick_auto_pause.3.a:0 "수고했군"
+
+ antick_auto_pause.4.t:0 "[province.GetName]의 성벽이 무너졌다"
+ antick_auto_pause.4.desc:0 "한때 자랑스러웠던 [province.GetName]의 성채는 이제 폐허로 변했다. 이는 그대 군대의 힘과 결연함을 증명한다. 수비와 공성 모두의 한계를 시험한 고된 포위 끝에, 마침내 우리 군은 성벽을 돌파해 승리를 거두었다.\n\n군대가 도시로 밀려들자 전장의 혼돈은 정복의 냉혹한 현실로 바뀌었다. 한때 활기가 넘치던 거리에는 항복의 소리와 패배자들의 울부짖음이 메아리친다. 지휘관들은 요충지가 확보되었고, 주둔군이 무기를 내려놓았다고 보고한다.\n\n연기와 잔해 속에서 우리의 깃발이 점령한 [province.GetName] 위로 높이 휘날린다. 이는 우리의 영향력과 권세가 커지고 있음을 온 세상에 알리는 분명한 신호다. 이 전략적 거점의 함락은 왕국 전역에 충격파를 일으켜, 아군과 적군 모두가 우리의 승리를 두고 입장을 재정립하게 만들 것이다."
+ antick_auto_pause.4.a:0 "이 승리가 새로운 시대의 서막이 되리라!"
+
+ antick_auto_pause.6.t:0 "[sacked_barony.GetNameNoTierNoTooltip]을 약탈했다"
+ antick_auto_pause.6.desc:0 "[sacked_county.GetNameNoTierNoTooltip]의 [sacked_barony.GetNameNoTierNoTooltip]라는 한때 자부심이던 거점은 이제 폐허로 변했다. 이는 내 약탈자들의 사나움을 일깨워 준다. 불타는 건물에서 연기가 솟아오르고 패배자의 비명이 공기를 가르는 가운데, 내 병사들은 정복의 전리품을 환호하며 긁어모으고 있다.\n\n거리는 피로 물들었고, 유린된 전당에는 패배한 자들의 통곡이 메아리친다. [sacked_county_owner.GetTitledFirstName]는 분명 이 소식에 큰 타격을 입을 것이며, 우리의 무자비한 공격으로 그들의 권세와 명망은 꺾일 것이다.\n\n내 장교들의 보고에는 가득 찬 전리품 상자, 값을 헤아릴 수 없는 유물들, 그리고 사슬에 묶여 끌려가는 포로들의 행렬이 담겨 있다. [raider.GetTitledFirstName]의 이름은 온 땅에서 두려움 속에 속삭여질 것이니, 불복종의 대가를 상기시키는 경고다.\n\n이 승리는 역사에 새겨져, 끝없이 확장되는 내 영지의 초석이 될 것이다."
+ antick_auto_pause.6.a:0 "그들의 절망이 우리의 영광을 북돋으리라!"
+
+ antick_auto_pause.7.t:0 "[county.GetNameNoTierNoTooltip]가 [county.GetProvince.GetCounty.GetFaith.GetName]로 개종했다"
+ antick_auto_pause.7.desc:0 "[county.GetName] 전역에 변화의 메아리가 울려 퍼지며, 오래된 신앙의 마지막 흔적이 새로운 신앙에 자리를 내준다. 우리의 성실한 [councillor.GetCouncilTitle] [councillor.GetTitledFirstName]가 개종 과정이 완료되었음을 보고한다.\n\n한때 [old_faith.GetAdjective] 신앙이 지배하던 곳에 이제 [county.GetProvince.GetCounty.GetFaith.GetName]의 가르침이 뿌리를 내린다. 옛 사당은 새 용도로 바뀌고, 새 예배 장소가 세워지며, 공기에는 낯선 향의 향내가 짙게 깔려 있다.\n\n[county.GetNameNoTier]의 백성은 겉으로는 새로운 영적 길을 받아들이고 있지만, 일부는 여전히 은밀히 옛 방식을 붙든다. 이 개종이 그대가 바라는 통합과 안정을 가져올지, 아니면 옛 신앙의 잔불이 수면 아래서 계속 타오를지는 시간이 말해 줄 것이다."
+ antick_auto_pause.7.a:0 "이것이 [county.GetName]에 번영을 가져오리라"
+
+ antick_auto_pause.8.t:0 "[county.GetNameNoTierNoTooltip]의 질서가 회복되었다"
+ antick_auto_pause.8.desc:0 "한때 [county.GetName]를 휩쓸던 혼란의 광풍이 마침내 잠잠해졌다. 우리의 굳센 [councillor.GetCouncilTitle] [councillor.GetTitledFirstName]는 통제가 확고히 회복되었다고 보고한다.\n\n불화가 지배하던 곳에 이제는 일상의 꾸준한 리듬이 돌아왔다. 한때 소요로 들끓던 거리는 만족한 백성들의 평온な 일상으로 북적거린다. 세금, 한동안 미납되던 부분도 이제 꾸준히 국고로 흘러들어온다.\n\n우리 [councillor.GetCouncilTitle]의 노고는 지역 주민들에게도 인정받고 있다. 지나친 가혹함에 기대지 않고 안정을 되찾았다는 점에서, 그의 단호하면서도 공정한 접근을 칭찬하는 목소리가 많다.\n\n그러나 원한을 품은 이들의 속삭임은 여전히 남아 있다. 공개적인 저항은 진압되었지만, 방치한다면 다시 타오를 수 있는 반란의 불씨를 경계해야 한다."
+ antick_auto_pause.8.a:0 "강한 나라는 곧 안정된 나라다"
+
+ antick_auto_pause.9.t:0 "[county.GetNameNoTierNoTooltip]의 문화적 변화"
+ antick_auto_pause.9.desc:0 "[county.GetName]의 다채로운 문화 지형이 심대한 변화를 겪었다. 우리의 성실한 [councillor.GetCouncilTitle] [councillor.GetTitledFirstName]는 지역 주민들이 [county.GetProvince.GetCounty.GetCulture.GetName] 문화를 받아들였다고 보고한다.\n\n한때 [old_culture.GetName]의 전통이 지배하던 곳에, 이제 [county.GetProvince.GetCounty.GetCulture.GetName]의 관습·언어·관행이 뿌리를 내렸다. 거리는 새로운 억양으로 가득하고, 시장에는 낯선 향미가 넘치며, 사람들은 새 문화적 정체성을 반영한 옷차림을 하고 있다.\n\n이 변화가 순탄하지만은 않았다. 일부 장로들은 옛 방식을 붙들고 있으며, 그들이 속삭이는 지난날의 이야기들은 지나간 세월을 달콤쌉싸름하게 상기시킨다. 그럼에도 젊은 세대는 새로운 문화를 열정적으로 받아들이며, 그 안에서 발전의 기회와 더 넓은 왕국과의 연결을 본다."
+ antick_auto_pause.9.a:0 "우리의 단결이 왕국을 더 강하게 한다"
+
+ antick_auto_pause.10.t:0 "[province.GetName]에서의 패배"
+ antick_auto_pause.10.desc:0 "강철의 격돌이 잦아들자, 어둡고 무거운 정적이 [province.GetName]의 전장을 뒤덮었다. [ROOT.GetCharacter.GetTitledFirstName]가 이끄는 우리 군은 [enemy_primary_participant.GetTitledFirstName]의 군세에 의해 참패를 당했다.\n\n전투는 격렬했다. 우리 병사들은 압도적인 역경 속에서도 용감히 싸웠다. 그러나 [ROOT.GetCharacter.GetTitledFirstName]의 노력에도 불구하고, 적의 우월한 전술이 승부를 갈랐다. [enemy_primary_participant.GetTitledFirstName]의 기막힌 측면 기동이 우리의 전열을 산산이 부수어 전세를 돌이킬 수 없게 만들었다.\n\n남은 병력이 서둘러 퇴각하는 사이, 승리한 적은 깃발을 높이 올리고, 그들의 환성이 피범벅인 들판을 가득 메운다. 이 패배는 우리 명성을 훼손하고, 적들에게 용기를 북돋을 것이다.\n\n우리는 이 패배의 여파를 줄이고, 더 이상의 침입을 막기 위해 신속히 움직여야 한다."
+ antick_auto_pause.10.a:0 "우리 왕국에 어두운 날이로다…"
+
+ antick_auto_pause.13.t:0 "군대가 [current_location.GetCounty.GetName]에 도착했다"
+ antick_auto_pause.13.desc:0 "우리 군대는 [current_location.GetCounty.GetName]에 도착했다. [ROOT.GetCharacter.GetTitledFirstName]가 이끄는 우리 군은 목적지에 도달했다.\n\n남은 병력이 그 주에 진입하자, 적이 우리를 포위한다."
+ antick_auto_pause.13.a:0 "흠…"
+
+
