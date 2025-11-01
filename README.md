@@ -88,35 +88,9 @@ Given the substantial changes in this mod, compatibility with existing saved gam
 game might be necessary for optimal functionality. The impact depends on the submods included, so please report any
 encountered issues to help improve the mod.
 
-#### Supported mods
-
-Not tested with other mods yet.
-
-#### Unsupported mods
-
-Not tested with other mods yet. Please report any issues that you encounter.
-
 ### Required DLCs
 
-Royal Court
-
-Fate of Iberia
-
-Tour and Tournaments
-
-### Required Mods
-
-None at the moment.
-
-### Recommended Mods
-
-CFP
-
-EPE
-
-### Supported CK3 Game Version
-
-1.11.0.1
+All DLCs.
 
 ## Features
 

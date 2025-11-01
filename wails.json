@@ -2,13 +2,13 @@
   "$schema": "https://wails.io/schemas/config.v2.json",
   "name": "Mojo",
   "outputfilename": "mojo",
-  "icon": "build/appicon.png",
+  "icon": ".build/appicon.png",
   "frontend:install": "npm install",
   "frontend:build": "npm run build",
   "frontend:dev:watcher": "npm run dev",
   "frontend:dev:serverUrl": "auto",
   "author": {
     "name": "Pankaj",
-    "email": "pankaj@desk.sh"
+    "email": "pankaj@hey.ninja"
   }
 }

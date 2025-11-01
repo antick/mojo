@@ -25,4 +25,4 @@ go.work
 node_modules/
 dist/
 .env
-build/bin
+.build/bin

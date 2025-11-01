@@ -8,21 +8,17 @@ import (
 	"path/filepath"
 )
 
-// App struct
 type App struct {
 	ctx context.Context
 }
 
-// NewApp creates a new App application struct
 func NewApp() *App {
 	return &App{}
 }
 
 var modConfig = configuration.ModConfig()
 
-// startup is called at application startup
 func (a *App) startup(ctx context.Context) {
-	// Perform your setup here
 	a.ctx = ctx
 }
 
@@ -43,33 +39,28 @@ func (a *App) shutdown(ctx context.Context) {
 	// Perform your teardown here
 }
 
-// Greet returns a greeting for the given name
-func (a *App) Greet(name string) string {
-	return fmt.Sprintf("Hello %s, It's show time!", name)
-}
-
 func (a *App) BuildModsInLocal(selectedModKeys []string, buildCombinedMod bool) error {
 	if len(selectedModKeys) == 0 {
-		return fmt.Errorf("No mods selected for building")
+		return fmt.Errorf("no mods selected for building")
 	}
 
 	if buildCombinedMod {
 		modFileName := modConfig.CombinedMod.Replacements["modFolderName"] + ".mod"
 		if err := scripts.BuildModFile(config.ModBuildPathLocal, modFileName); err != nil {
-			fmt.Println("Error while processing mojo.mod file")
+			fmt.Println("error while processing mojo.mod file")
 			return err
 		}
 
 		modBuildPath := filepath.Join(config.ModBuildPathLocal, modConfig.CombinedMod.Replacements["modFolderName"])
 		err := scripts.BuildCombinedMod(modBuildPath, selectedModKeys)
 		if err != nil {
-			fmt.Printf("Error building combined mod in local: %v \n", err)
+			fmt.Printf("error building combined mod in local: %v \n", err)
 			return err
 		}
 	} else {
 		err := scripts.BuildLooseMods(config.ModBuildPathLocal, selectedModKeys)
 		if err != nil {
-			fmt.Printf("Error building selected mod(s) in local: %v \n", err)
+			fmt.Printf("error building selected mod(s) in local: %v \n", err)
 			return err
 		}
 	}
@@ -79,26 +70,26 @@ func (a *App) BuildModsInLocal(selectedModKeys []string, buildCombinedMod bool) 
 
 func (a *App) BuildModsInGame(selectedModKeys []string, buildCombinedMod bool) error {
 	if len(selectedModKeys) == 0 {
-		return fmt.Errorf("No mods selected for building")
+		return fmt.Errorf("no mods selected for building")
 	}
 
 	if buildCombinedMod {
 		modFileName := modConfig.CombinedMod.Replacements["modFolderName"] + ".mod"
 		if err := scripts.BuildModFile(config.GameCustomModPath, modFileName); err != nil {
-			fmt.Println("Error while processing mojo.mod file")
+			fmt.Println("error while processing mojo.mod file")
 			return err
 		}
 
 		modBuildPath := filepath.Join(config.GameCustomModPath, modConfig.CombinedMod.Replacements["modFolderName"])
 		err := scripts.BuildCombinedMod(modBuildPath, selectedModKeys)
 		if err != nil {
-			fmt.Printf("Error building combined mod in local: %v \n", err)
+			fmt.Printf("error building combined mod in local: %v \n", err)
 			return err
 		}
 	} else {
 		err := scripts.BuildLooseMods(config.GameCustomModPath, selectedModKeys)
 		if err != nil {
-			fmt.Printf("Error building selected mod(s) in local: %v \n", err)
+			fmt.Printf("error building selected mod(s) in local: %v \n", err)
 			return err
 		}
 	}

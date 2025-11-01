@@ -19,7 +19,7 @@ var config = configuration.Config()
 //go:embed all:frontend/dist
 var assets embed.FS
 
-//go:embed build/appicon.png
+//go:embed .build/appicon.png
 var icon []byte
 
 func main() {

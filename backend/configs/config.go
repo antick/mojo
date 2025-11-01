@@ -23,6 +23,9 @@ type Type struct {
 func Config() *Type {
 	userHomeDir, _ := os.UserHomeDir()
 
+	// Name of the build folder
+	buildFolder := ".build"
+
 	// Path of the folder where CK3 is installed in your system
 	installedCk3GamePath := filepath.Join(`C:\Program Files (x86)\Steam\steamapps\common\Crusader Kings III\game`)
 
@@ -30,7 +33,7 @@ func Config() *Type {
 	gameCustomModPath := filepath.Join(userHomeDir, "OneDrive", "Documents", "Paradox Interactive", "Crusader Kings III", "mod")
 
 	// Path of the folder where we are storing a copy of game files to track the changes that comes in new releases
-	modCk3Path := filepath.Join("build", "ck3-game")
+	modCk3Path := filepath.Join(buildFolder, "ck3-game")
 
 	// Path of the folder where source code of the mods is stored
 	modPath := filepath.Join("backend", "mods")
@@ -43,7 +46,7 @@ func Config() *Type {
 		GameDataPath: filepath.Join(userHomeDir, "OneDrive", "Documents", "Paradox Interactive", "Crusader Kings III"),
 
 		// This is where all the mods will be built for local testing
-		ModBuildPathLocal: "build/mods",
+		ModBuildPathLocal: filepath.Join(buildFolder, "mods"),
 
 		ModPath:                 modPath,
 		GameCustomModPath:       gameCustomModPath,
