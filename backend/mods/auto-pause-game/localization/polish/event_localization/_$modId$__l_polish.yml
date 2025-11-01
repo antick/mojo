@@ -1,0 +1,38 @@
+l_polish:
+ _$modId$_.1.t:0 "Zwycięstwo pod [province.GetName]"
+ _$modId$_.1.desc:0 "Brzęk stali ucichł, a kurz opada na polu bitwy pod [province.GetName]. Twoje wojska odniosły triumf nad armią [enemy_primary_participant.GetTitledFirstName].\n\nBitwa była zacięta; obie strony wykazały się odwagą i kunsztem taktycznym. Jednak to błyskotliwy manewr twoich wojsk przechylił szalę, oskrzydlając wroga i przełamując jego linie.\n\nGdy resztki sił nieprzyjaciela wycofują się, twoi zwycięscy żołnierze wznoszą wysoko sztandary, a ich okrzyki rozbrzmiewają nad krwią zbroczonym polem. To zwycięstwo z pewnością wzmocni reputację twojego państwa i wzbudzi strach w sercach wrogów.\n\nDzięki temu triumfowi twoja pozycja została umocniona. Kraj patrzy, a twoi poddani z pewnością będą wspominać ten dzień przez lata."
+ _$modId$_.1.a:0 "Chwalebny dzień!"
+
+ _$modId$_.3.t:0 "Integracja zakończona"
+ _$modId$_.3.desc:0 "Ukończyłem zadanie integracji i czekam na nowe instrukcje."
+ _$modId$_.3.a:0 "Dobra robota"
+
+ _$modId$_.4.t:0 "Mury [province.GetName] upadły"
+ _$modId$_.4.desc:0 "Dawniej dumne umocnienia [province.GetName] leżą teraz w gruzach — świadectwo siły i determinacji twoich wojsk. Po wyczerpującym oblężeniu, które wystawiło na próbę zarówno obrońców, jak i najeźdźców, twoje armie wreszcie przełamały mury i odniosły zwycięstwo.\n\nGdy twoje oddziały wlewają się do miasta, chaos bitwy ustępuje surowej rzeczywistości podboju. Ulice, niegdyś tętniące życiem, teraz rozbrzmiewają odgłosami kapitulacji i jęków pokonanych. Twoi dowódcy meldują, że kluczowe pozycje zostały zabezpieczone, a miejscowy garnizon złożył broń.\n\nWśród dymu i gruzów twój sztandar powiewa wysoko nad zdobytym [province.GetName], będąc wyraźnym sygnałem rosnącej potęgi i wpływów. Upadek tego strategicznego miejsca z pewnością wstrząśnie całym krajem, gdy przyjaciele i wrogowie na nowo ocenią swoją pozycję w świetle twojego triumfu."
+ _$modId$_.4.a:0 "Niech to zwycięstwo zwiastuje świt nowej ery!"
+
+ _$modId$_.6.t:0 "Splądrowałeś [sacked_barony.GetNameNoTierNoTooltip]"
+ _$modId$_.6.desc:0 "Niegdyś dumna osada [sacked_barony.GetNameNoTierNoTooltip] w [sacked_county.GetNameNoTierNoTooltip] leży teraz w ruinie — świadectwo zaciekłości moich najeźdźców. Gdy z płonących budynków unosi się dym, a krzyki pokonanych wypełniają powietrze, moi ludzie z radością gromadzą łupy naszego podboju.\n\nUlice spływają krwią, a jęki pokonanych rozbrzmiewają w splądrowanych salach. [sacked_county_owner.GetTitledFirstName] z pewnością będzie tą wieścią zdruzgotany, a jego siła i prestiż osłabną po naszym bezlitosnym ataku.\n\nRaporty moich kapitanów mówią o przepełnionych szkatułach, bezcennych relikwiach i szeregu jeńców prowadzonych w kajdanach. Imię [raider.GetTitledFirstName] szeptane będzie ze strachem po całej krainie — jako surowe przypomnienie ceny nieposłuszeństwa.\n\nTo zwycięstwo zostanie wyryte w annałach historii, jako kamień węgielny dziedzictwa mojego nieustannie rosnącego dominium."
+ _$modId$_.6.a:0 "Niech ich rozpacz napędza naszą chwałę!"
+
+ _$modId$_.7.t:0 "[county.GetNameNoTierNoTooltip] został nawrócony na [county.GetProvince.GetCounty.GetFaith.GetName]"
+ _$modId$_.7.desc:0 "Echo zmian rozbrzmiewa w [county.GetName], gdy ostatnie ślady starej wiary ustępują miejsca nowej. Twój sumienny [councillor.GetCouncilTitle], [councillor.GetTitledFirstName], melduje, że proces konwersji dobiegł końca.\n\nTam, gdzie niegdyś panowała wiara [old_faith.GetAdjective], teraz zapuszczają korzenie nauki [county.GetProvince.GetCounty.GetFaith.GetName]. Krajobraz sam wydaje się odmieniony: dawne kapliczki przekształcone, nowe miejsca kultu wzniesione, a powietrze przesycone zapachem nieznanego kadzidła.\n\nLud [county.GetNameNoTier], choć niektórzy wciąż potajemnie trzymają się dawnych zwyczajów, otwarcie przyjmuje nową ścieżkę duchową. Czas pokaże, czy ta konwersja przyniesie jedność i stabilność, których pragniesz, czy też żar dawnej wiary nadal będzie tlił się pod powierzchnią."
+ _$modId$_.7.a:0 "Oby przyniosło to [county.GetName] dobrobyt"
+
+ _$modId$_.8.t:0 "Przywrócono porządek w [county.GetNameNoTierNoTooltip]"
+ _$modId$_.8.desc:0 "Burzliwe wichry chaosu, które niegdyś szalały nad [county.GetName], wreszcie ucichły. Nasz nieugięty [councillor.GetCouncilTitle], [councillor.GetTitledFirstName], melduje, że kontrolę udało się stanowczo przywrócić.\n\nTam, gdzie panowała niezgoda, powrócił miarowy rytm codziennego życia. Ulice, dawniej pełne niepokojów, tętnią teraz spokojną aktywnością zadowolonych poddanych. Podatki, niegdyś wstrzymywane, znów płyną równym strumieniem do naszych skarbców.\n\nWysiłki naszego [councillor.GetCouncilTitle] nie uszły uwadze miejscowej ludności. Wielu chwali jego stanowcze, lecz sprawiedliwe podejście, doceniając przywrócenie stabilności bez nadmiernej brutalności.\n\nJednak wciąż słychać szepty tych, którzy żywią urazę. Choć otwarty opór został stłumiony, powinniśmy czuwać nad żarami buntu, które mogą na nowo rozgorzeć, jeśli pozostaną bez nadzoru."
+ _$modId$_.8.a:0 "Silne państwo to stabilne państwo"
+
+ _$modId$_.9.t:0 "Zmiana kulturowa w [county.GetNameNoTierNoTooltip]"
+ _$modId$_.9.desc:0 "Barwna mozaika krajobrazu kulturowego [county.GetName] przeszła głęboką przemianę. Nasz sumienny [councillor.GetCouncilTitle], [councillor.GetTitledFirstName], melduje, że miejscowa ludność przyjęła kulturę [county.GetProvince.GetCounty.GetCulture.GetName].\n\nTam, gdzie niegdyś panowały tradycje [old_culture.GetName], teraz zakorzeniły się zwyczaje, język i praktyki [county.GetProvince.GetCounty.GetCulture.GetName]. Na ulicach słychać nowe akcenty, targi wypełniają się nieznanymi smakami, a ludzie noszą stroje odzwierciedlające ich nową tożsamość kulturową.\n\nTa zmiana nie obyła się bez wyzwań. Niektórzy starsi wciąż trzymają się dawnych obyczajów, a ich szeptane opowieści o minionych dniach są gorzko-słodkim wspomnieniem tego, co było. Jednak młodsze pokolenie z zapałem przyjmuje nową kulturę, widząc w niej szanse na awans i więź z szerszym państwem."
+ _$modId$_.9.a:0 "Nasze państwo wzmacnia się poprzez jedność"
+
+ _$modId$_.10.t:0 "Klęska pod [province.GetName]"
+ _$modId$_.10.desc:0 "Brzęk stali ucichł, a ponura cisza spowija pole bitwy pod [province.GetName]. Nasze siły, prowadzone przez [ROOT.GetCharacter.GetTitledFirstName], poniosły druzgocącą klęskę z rąk armii [enemy_primary_participant.GetTitledFirstName].\n\nBitwa była zajadła; nasi żołnierze walczyli dzielnie przeciwko przeważającym siłom. Pomimo wysiłków [ROOT.GetCharacter.GetTitledFirstName], lepsza taktyka wroga okazała się decydująca. Błyskotliwy manewr oskrzydlający [enemy_primary_participant.GetTitledFirstName] rozbił nasze linie, nieodwracalnie przechylając losy bitwy.\n\nGdy nasze niedobitki w pośpiechu się wycofują, zwycięski wróg wznosi swoje sztandary, a triumfalne okrzyki rozbrzmiewają nad krwią zbroczonym polem. Ta porażka z pewnością nadszarpnie naszą reputację i ośmieli naszych wrogów.\n\nMusimy działać szybko, aby złagodzić skutki tej straty i zapobiec kolejnym najazdom na nasze ziemie."
+ _$modId$_.10.a:0 "Ciemny dzień dla naszego państwa..."
+
+ _$modId$_.13.t:0 "Armia dotarła do [current_location.GetCounty.GetName]"
+ _$modId$_.13.desc:0 "Nasza armia dotarła do [current_location.GetCounty.GetName]. Nasze siły, prowadzone przez [ROOT.GetCharacter.GetTitledFirstName], osiągnęły cel.\n\nGdy nasze pozostałe oddziały wkraczają do prowincji, wróg otacza nas."
+ _$modId$_.13.a:0 "Hmm..."
+
+

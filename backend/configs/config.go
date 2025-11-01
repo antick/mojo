@@ -39,8 +39,8 @@ func Config() *Type {
 	modPath := filepath.Join("backend", "mods")
 
 	return &Type{
-		// Current ck3 version that we have synced in "game" folder
-		SyncedCk3Version: "1.13.0.3",
+		// Current ck3 version that we have synced in ".build/ck3-game" folder
+		SyncedCk3Version: "1.18.0.1",
 
 		// Path of the folder where CK3 stores all the game data including your save files and mods
 		GameDataPath: filepath.Join(userHomeDir, "OneDrive", "Documents", "Paradox Interactive", "Crusader Kings III"),

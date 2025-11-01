@@ -1,0 +1,38 @@
+l_simp_chinese:
+ _$modId$_.1.t:0 "在[province.GetName]的胜利"
+ _$modId$_.1.desc:0 "钢铁的碰撞声已消散，尘埃在[province.GetName]的战场上缓缓落定。你的军队在与[enemy_primary_participant.GetTitledFirstName]的军队交锋中取得了胜利。\n\n战斗异常激烈，双方都展现了勇气与战术才智。然而，你军的一次妙计扭转了战局，从侧翼包抄并击溃了敌军的防线。\n\n当敌军残部撤退之际，你那凯旋的士兵高举旗帜，他们的欢呼声在血染的原野上回荡。这场胜利必将提升你领国的声望，并令敌人心生畏惧。\n\n凭借这次凯旋，你的地位进一步巩固。天下侧目，你的臣民定会在多年后仍谈论今日之事。"
+ _$modId$_.1.a:0 "辉煌的一天！"
+
+ _$modId$_.3.t:0 "整合完成"
+ _$modId$_.3.desc:0 "我已完成整合任务，现正等待新的指示。"
+ _$modId$_.3.a:0 "干得好"
+
+ _$modId$_.4.t:0 "[province.GetName]的城墙已陷落"
+ _$modId$_.4.desc:0 "曾经引以为傲的[province.GetName]防御工事如今化为废墟，彰显着你军的力量与决心。经过一场考验守军与攻方极限的持久围攻，你的军队终于攻破城墙，夺得胜利。\n\n当部队涌入城中，战斗的喧嚣让位于征服的冷酷现实。昔日熙攘的街道，如今回荡着投降的声音与败者的哭喊。你的将领报告称关键据点已被控制，地方守军也已放下武器。\n\n在烟尘与瓦砾之间，你的旗帜高高飘扬在被征服的[province.GetName]之上，清晰宣示着你与日俱增的权势与影响。此处的陷落必将震动四方，友与敌都将因你的胜利而重新审视自身处境。"
+ _$modId$_.4.a:0 "让这场胜利宣告新时代的来临！"
+
+ _$modId$_.6.t:0 "你洗劫了[sacked_barony.GetNameNoTierNoTooltip]"
+ _$modId$_.6.desc:0 "[sacked_county.GetNameNoTierNoTooltip]境内昔日引以为傲的[sacked_barony.GetNameNoTierNoTooltip]如今满目疮痍，足见我方劫掠者的凶猛。浓烟自燃烧的建筑升起，败者的哀嚎充斥长空，而我的手下则欢欣鼓舞地收拣着我们征服所得的战利品。\n\n街道血流成河，败者的哭号回荡在被蹂躏的殿堂。[sacked_county_owner.GetTitledFirstName]必将被这一消息击垮，他的权势与声望在我们冷酷的打击下大为受损。\n\n诸位队长的报告称，钱箱盈溢、无价之宝层出不穷，一列列俘虏被铁链牵引而去。[raider.GetTitledFirstName]之名将被恐惧地低声传颂于这片大地，提醒所有人不服从的代价。\n\n此胜必将载入史册，成为我这不断扩张之领土的基石之一。"
+ _$modId$_.6.a:0 "让他们的绝望成为我们荣耀的燃料！"
+
+ _$modId$_.7.t:0 "[county.GetNameNoTierNoTooltip]改宗为[county.GetProvince.GetCounty.GetFaith.GetName]"
+ _$modId$_.7.desc:0 "变革的回声在[county.GetName]回荡，旧信仰的最后残余终于为新信仰所取代。你勤勉的[councillor.GetCouncilTitle][councillor.GetTitledFirstName]报告称，改宗过程已然完成。\n\n昔日由[old_faith.GetAdjective]信仰主宰之地，如今[county.GetProvince.GetCounty.GetFaith.GetName]的教义开始扎根。连景致都似乎发生了变化：旧神龛被重新利用，新的礼拜场所拔地而起，空气中弥漫着陌生香料的气息。\n\n[county.GetNameNoTier]的居民，尽管有人仍在暗中坚守旧道，但在表面上已拥抱了新的精神道路。时间将证明这次改宗能否带来你所追求的统一与稳定，抑或旧信仰的余烬仍会在暗处潜燃。"
+ _$modId$_.7.a:0 "愿这为[county.GetName]带来繁荣"
+
+ _$modId$_.8.t:0 "[county.GetNameNoTierNoTooltip]秩序已恢复"
+ _$modId$_.8.desc:0 "曾经席卷[county.GetName]的混乱之风终于平息。我们坚定的[councillor.GetCouncilTitle][councillor.GetTitledFirstName]报告称，已重新牢牢掌控局势。\n\n昔日横行的纷争如今让位于日常生活的稳健节奏。曾经动荡的街道，如今因百姓安居乐业而重现熙攘。曾被扣留的税赋也重新源源不断地流入国库。\n\n我们的[councillor.GetCouncilTitle]的努力没有被当地人忽视。许多人称赞其强硬而不失公正的做法，赞许在未诉诸过度残暴的情况下恢复了稳定。\n\n然而，仍有不满的耳语在暗处回响。虽说公开的抵抗已被镇压，但若掉以轻心，暗藏的反叛火星仍可能再度被点燃。"
+ _$modId$_.8.a:0 "强大的国度方能稳定"
+
+ _$modId$_.9.t:0 "[county.GetNameNoTierNoTooltip]的文化转变"
+ _$modId$_.9.desc:0 "[county.GetName]多彩的文化图景经历了深刻变革。我们勤勉的[councillor.GetCouncilTitle][councillor.GetTitledFirstName]报告称，当地民众已接受[county.GetProvince.GetCounty.GetCulture.GetName]文化。\n\n昔日[old_culture.GetName]的传统占据主导，如今[county.GetProvince.GetCounty.GetCulture.GetName]的风俗、语言与习俗已开始扎根。街头响起陌生口音，集市飘散新奇滋味，人们身着反映其新文化身份的服饰。\n\n这场变迁并非毫无挑战。部分长者仍紧抱旧日方式，他们低声讲述的往昔故事，苦乐参半地提醒着曾经的一切。然而，年轻一代热切拥抱新文化，在其中看到进步的机会与与更广阔王国的联结。"
+ _$modId$_.9.a:0 "我们的国度因团结而更强"
+
+ _$modId$_.10.t:0 "在[province.GetName]的败北"
+ _$modId$_.10.desc:0 "钢铁的碰撞声已止，阴郁的寂静笼罩着[province.GetName]的战场。由[ROOT.GetCharacter.GetTitledFirstName]率领的我军在与[enemy_primary_participant.GetTitledFirstName]的军队交战中遭受了沉重的失败。\n\n战斗异常惨烈；我军将士在敌我悬殊的逆境中英勇奋战。尽管[ROOT.GetCharacter.GetTitledFirstName]竭力应对，敌军更高明的战术还是起到了决定性作用。[enemy_primary_participant.GetTitledFirstName]的精彩侧翼突击击溃了我方战线，不可逆转地扭转了战局。\n\n当余部仓促撤退时，凯旋的敌军高举旗帜，他们的凯歌在血染的原野上回荡。这次失败势必损及我们的声誉，并鼓舞我们的敌人。\n\n我们必须迅速行动，以减轻此役的后果，并防止敌军进一步入侵我们的领土。"
+ _$modId$_.10.a:0 "对我们王国来说黑暗的一天……"
+
+ _$modId$_.13.t:0 "军队抵达[current_location.GetCounty.GetName]"
+ _$modId$_.13.desc:0 "我们的军队已抵达[current_location.GetCounty.GetName]。在[ROOT.GetCharacter.GetTitledFirstName]的率领下，我军到达了目的地。\n\n当剩余兵力进入该省时，敌人将我们包围。"
+ _$modId$_.13.a:0 "嗯……"
+
+

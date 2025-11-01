@@ -1,8 +1,6 @@
 Title: Auto Pause Game on Battles and Council Tasks
 
-[h1]Auto Pause Game (v1.2.0)[/h1]
-
-[b]Updated for 1.16.2.3[/b]
+[h1]Auto Pause Game (Updated for 1.18.0.1)[/h1]
 
 [h2]Introduction[/h2]
 
@@ -42,6 +40,10 @@ This mod overwrites the following:
 Please comment below if you are facing any issues.
 
 [h2]Changelog[/h2]
+
+v1.3.0
+- Updated for game version 1.18.0.1
+- Added french, german, japanese, korean, polish, russian, simplified chinese and spanish translations.
 
 v1.2.0
 - Updated for game version 1.16.2.3
