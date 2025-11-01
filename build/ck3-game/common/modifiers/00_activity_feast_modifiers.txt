@@ -272,3 +272,58 @@ feast_learnt_habits_modifier = {
 	icon = bed_positive
 	# Adds base success to the scheme it's in.
 }
+
+didnt_knock_hat_off_modifier = {
+	icon = mask_positive
+}
+
+feast_well_fed_cat_modifier = {
+	icon = cat_positive
+	intrigue = 1
+	learning = 1
+}
+
+feast_well_fed_dog_modifier = {
+	icon = dog_positive
+	diplomacy = 1
+	prowess = 1
+}
+
+feast_queasy_courtiers_modifier = {
+	icon = feast_negative
+	courtier_and_guest_opinion = -10
+	stress_gain_mult = 0.1
+}
+
+feast_sturdy_stomach_modifier = {
+	icon = feast_positive
+	intrigue = 1
+	health = 0.2
+	stress_loss_mult = 0.1
+}
+
+feast_turning_the_other_cheek_modifier = {
+	icon = learning_positive
+	realm_priest_opinion = 10
+	monthly_piety_gain_mult = 0.05
+	stress_loss_mult = 0.1
+}
+
+boasted_of_victories_modifier = {
+	icon = martial_positive
+	vassal_levy_contribution_mult = 0.1
+	levy_reinforcement_rate = 0.2
+}
+
+drunk_high_spirits = {
+	icon = drink_mixed
+	stress_gain_mult = -0.25
+	health = -0.25
+}
+
+bad_influence_modifier = {
+	icon = intrigue_mixed
+	owned_personal_scheme_success_chance_add = 10
+	monthly_prestige = -0.5
+}
+

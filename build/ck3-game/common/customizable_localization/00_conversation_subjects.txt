@@ -430,9 +430,7 @@ herhis_subject_of_interest = {
 				always = no #not used yet: var:subject_of_interest = flag:herhis_friends
 			}
 			trigger_else = {
-				OR = {
-					num_of_relation_friend >= 1
-				}
+				any_relation = { type = friend }
 			}
 		}
 		localization_key = herhis_friends
@@ -828,9 +826,7 @@ my_subject_of_interest = {
 				always = no #not used yet: var:subject_of_interest = flag:herhis_friends
 			}
 			trigger_else = {
-				OR = {
-					num_of_relation_friend >= 1
-				}
+				any_relation = { type = friend }
 			}
 		}
 		localization_key = my_friends
@@ -1004,8 +1000,8 @@ subject_of_interest = {
 	text = {
 		trigger = {
 			OR = {
-				num_of_relation_friend > 0
-				num_of_relation_best_friend > 0
+				any_relation = { type = friend }
+				any_relation = { type = best_friend }
 				has_trait = diplomat
 			}
 		}
@@ -1314,6 +1310,168 @@ MatchingConversationSubject = {
 						has_trait = deceitful
 					}
 				}	
+			}
+		}
+		localization_key = education_conversation_subject_intrigue_2 #dagger-smiths
+	}
+
+	text = {
+		trigger = {
+			always = no
+		}
+		fallback = yes
+		localization_key = conversation_subject_weather
+	}
+}
+
+MatchingConversationSubject_alone = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_martial
+				has_lifestyle = martial_lifestyle
+				has_martial_lifestyle_trait_trigger = yes
+			}
+		}
+		localization_key = education_conversation_subject_martial_1 #new strategies
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_martial
+				has_lifestyle = martial_lifestyle
+				has_martial_lifestyle_trait_trigger = yes
+			}
+		}
+		localization_key = education_conversation_subject_martial_2 #ancient campaigns
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_martial
+				has_lifestyle = martial_lifestyle
+				has_trait = lifestyle_hunter
+				has_trait = lifestyle_blademaster
+			}
+		}
+		localization_key = conversation_subject_fighting_techniques #how to bring a foe down
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_diplomacy
+				has_diplomacy_lifestyle_trait_trigger = yes
+				has_trait = seducer
+				has_lifestyle = diplomacy_lifestyle
+			}
+		}
+		localization_key = education_conversation_subject_diplomacy_1 #other lords
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_diplomacy
+				has_lifestyle = diplomacy_lifestyle
+				has_trait = lifestyle_reveler
+				has_diplomacy_lifestyle_trait_trigger = yes
+				has_trait = gregarious
+			}
+		}
+		localization_key = education_conversation_subject_diplomacy_2 #the art of feasting
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_diplomacy
+				has_lifestyle = diplomacy_lifestyle
+				has_diplomacy_lifestyle_trait_trigger = yes
+				has_trait = gregarious
+			}
+		}
+		localization_key = education_conversation_subject_charm #true charm
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_learning
+				has_lifestyle = learning_lifestyle
+				has_learning_lifestyle_trait_trigger = yes
+			}
+		}
+		localization_key = education_conversation_subject_learning_1 #theological treatises
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_learning
+				has_trait = lunatic
+				has_lifestyle = learning_lifestyle
+				has_learning_lifestyle_trait_trigger = yes
+				has_trait = zealous
+				has_trait = cynical
+			}
+		}
+		localization_key = education_conversation_subject_learning_2 #metaphysical conundrums
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_stewardship
+				has_lifestyle = stewardship_lifestyle
+				has_stewardship_lifestyle_trait_trigger = yes
+				has_trait = greedy
+			}
+		}
+		localization_key = education_conversation_subject_stewardship_1 #gold minting reduction
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_stewardship
+				has_lifestyle = stewardship_lifestyle
+				has_stewardship_lifestyle_trait_trigger = yes
+				has_trait = diligent
+			}
+		}
+		localization_key = education_conversation_subject_stewardship_2 #development of trade routes
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_stewardship
+				has_lifestyle = stewardship_lifestyle
+				has_stewardship_lifestyle_trait_trigger = yes
+				has_trait = diligent
+				has_trait = greedy
+			}
+		}
+		localization_key = education_conversation_subject_stewardship_3 #tax collection
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_intrigue
+				has_lifestyle = intrigue_lifestyle
+				has_intrigue_lifestyle_trait_trigger = yes
+				has_trait = paranoid
+			}
+		}
+		localization_key = education_conversation_subject_intrigue_1 #shadowy rumors
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_trait = education_intrigue
+				has_lifestyle = intrigue_lifestyle
+				has_intrigue_lifestyle_trait_trigger = yes
+				has_trait = paranoid
+				AND = {
+					has_trait = ambitious
+					has_trait = deceitful
+				}
 			}
 		}
 		localization_key = education_conversation_subject_intrigue_2 #dagger-smiths

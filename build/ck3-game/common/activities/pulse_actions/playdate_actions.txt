@@ -26,7 +26,7 @@
 			limit = {
 				location = scope:province
 				NOT = { has_trait = temperate }
-				NOT = { this = scope:first }
+				this != scope:first
 			}
 			save_scope_as = second
 		}
@@ -106,7 +106,7 @@ apa_visited_friends_chapel = {
 		random_attending_character = {
 			limit = {
 				location = scope:province
-				NOT = { this = scope:host }
+				this != scope:host
 			}
 			save_scope_as = first
 		}
@@ -137,7 +137,7 @@ apa_mentor_taught_me = {
 		any_attending_character = {
 			location = scope:province
 			NOT = { has_variable = had_apa_mentor_taught_me_var }
-			NOT = { this = scope:host }
+			this != scope:host
 		}
 	}
 
@@ -160,7 +160,7 @@ apa_mentor_taught_me = {
 			limit = {
 				location = scope:province
 				NOT = { has_variable = had_apa_mentor_taught_me_var }
-				NOT = { this = scope:host }
+				this != scope:host
 			}
 			save_scope_as = second
 			set_variable = {
@@ -256,7 +256,7 @@ apa_joked_together = {
 			limit = {
 				location = scope:province
 				NOT = { has_trait = callous }
-				NOT = { this = scope:first }
+				this != scope:first
 			}
 			save_scope_as = second
 		}
@@ -290,7 +290,7 @@ apa_rescued_kid = {
 		}
 		any_attending_character = {
 			location = scope:province
-			NOT = { this = scope:first_temp }
+			this != scope:first_temp
 			NOT = { has_trait = arrogant }
 			age <= 12
 		}
@@ -315,7 +315,7 @@ apa_rescued_kid = {
 			limit = {
 				location = scope:province
 				NOT = { has_trait = arrogant }
-				NOT = { this = scope:first }
+				this != scope:first
 				age <= 12
 			}
 			save_scope_as = second
@@ -350,7 +350,7 @@ apa_shared_food = {
 		}
 		any_attending_character = {
 			location = scope:province
-			NOT = { this = scope:first_temp }
+			this != scope:first_temp
 			NOT = { has_trait = arrogant }
 			age <= 12
 		}
@@ -383,7 +383,7 @@ apa_shared_food = {
 				scope:activity = {
 					any_attending_character = {
 						location = scope:province
-						NOT = { this = scope:first_temp }
+						this != scope:first_temp
 						NOT = { has_trait = arrogant }
 						age <= 12
 					}
@@ -403,7 +403,7 @@ apa_shared_food = {
 			limit = {
 				location = scope:province
 				NOT = { has_trait = arrogant }
-				NOT = { this = scope:first }
+				this != scope:first
 				age <= 12
 			}
 			weight = {
@@ -455,7 +455,7 @@ apa_broke_toy = {
 		}
 		any_attending_character = {
 			location = scope:province
-			NOT = { this = scope:first_temp }
+			this != scope:first_temp
 		}
 	}
 
@@ -480,7 +480,7 @@ apa_broke_toy = {
 		random_attending_character = {
 			limit = {
 				location = scope:province
-				NOT = { this = scope:first }
+				this != scope:first
 			}
 			weight = {
 				base = 1
@@ -555,9 +555,33 @@ apa_sang_nice_song = {
 	icon = diplomacy
 	is_valid = {
 		is_current_phase_active = yes
-		any_attending_character = {
-			location = scope:province
-			has_trait = charming
+		OR = {
+			AND = {
+				has_activity_type = activity_playdate
+				any_attending_character = {
+					location = scope:province
+					has_trait = charming
+				}
+			}
+			AND = {
+				has_activity_type = activity_coronation 
+				has_current_phase = coronation_phase_feast
+				any_attending_character = {
+					location = scope:province
+					OR = {
+						has_trait = lifestyle_poet
+						has_trait = violet_poet
+						AND = {
+							has_trait = tourney_participant
+							has_trait_xp = {
+								trait = tourney_participant
+								track = wit
+								value >= 25
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -565,17 +589,46 @@ apa_sang_nice_song = {
 		value = 1
 	}
 
-	effect = {			
-		random_attending_character = {
+	effect = {
+		if = {
 			limit = {
-				location = scope:province
-				has_trait = charming
+				has_activity_type = activity_playdate
 			}
-			save_scope_as = first
+			random_attending_character = {
+				limit = {
+					location = scope:province
+					has_trait = charming
+				}
+				save_scope_as = first
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_type = activity_coronation 
+				has_current_phase = coronation_phase_feast
+			}
+			random_attending_character = {
+				limit = {
+					location = scope:province
+					OR = {
+						has_trait = lifestyle_poet
+						has_trait = violet_poet
+						AND = {
+							has_trait = tourney_participant
+							has_trait_xp = {
+								trait = tourney_participant
+								track = wit
+								value >= 25
+							}
+						}
+					}
+				}
+				save_scope_as = first	
+			}
 		}
 		
 		add_activity_log_entry = {
-			key = apa_found_gold_stash
+			key = apa_sang_nice_song
 			tags = { pulse_action }
 			character = scope:first
 			
@@ -597,7 +650,7 @@ apa_learned_from_kid = {
 		}
 		any_attending_character = {
 			location = scope:province
-			NOT = { this = scope:first_temp }
+			this != scope:first_temp
 			NOT = { has_trait = dull }
 			age >= scope:first_temp.age_plus_1
 		}
@@ -626,7 +679,7 @@ apa_learned_from_kid = {
 				scope:activity = {
 					any_attending_character = {
 						location = scope:province
-						NOT = { this = scope:first_temp }
+						this != scope:first_temp
 						NOT = { has_trait = dull }
 						age >= scope:first_temp.age_plus_1
 					}
@@ -646,7 +699,7 @@ apa_learned_from_kid = {
 			limit = {
 				location = scope:province
 				NOT = { has_trait = dull }
-				NOT = { this = scope:first }
+				this != scope:first
 				age >= scope:first.age_plus_1
 			}
 			weight = {
@@ -792,7 +845,7 @@ apa_had_charming_convo = {
 		}
 		any_attending_character = {
 			location = scope:province
-			NOT = { this = scope:first_temp }
+			this != scope:first_temp
 			NOT = { has_trait = rowdy }
 			NOT = { has_trait = pensive }
 		}
@@ -828,7 +881,7 @@ apa_had_charming_convo = {
 		random_attending_character = {
 			limit = {
 				location = scope:province
-				NOT = { this = scope:first }
+				this != scope:first
 				NOT = { has_trait = rowdy }
 				NOT = { has_trait = pensive }
 			}

@@ -4,15 +4,33 @@
 	is_valid = {
 		is_current_phase_active = yes
 		exists = scope:host.dynasty
-		any_attending_character = {
-			NOR = {
-				this = scope:host
-				this = scope:activity.special_guest:spouse_1
-				this = scope:activity.special_guest:spouse_2
+		trigger_if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_wedding }
 			}
-			is_physically_able_ai_adult = yes
-			location = scope:province
-			dynasty ?= { dynasty_prestige_level > scope:host.dynasty.dynasty_prestige_level }
+			any_attending_character = {
+				NOR = {
+					this = scope:host
+					this = scope:activity.special_guest:spouse_1
+					this = scope:activity.special_guest:spouse_2
+				}
+				is_physically_able_ai_adult = yes
+				location = scope:province
+				dynasty ?= { dynasty_prestige_level > scope:host.dynasty.dynasty_prestige_level }
+			}
+		}
+		trigger_if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_coronation }
+			}
+			any_attending_character = {
+				NOR = {
+					this = scope:host
+				}
+				is_physically_able_ai_adult = yes
+				location = scope:province
+				dynasty ?= { dynasty_prestige_level > scope:host.dynasty.dynasty_prestige_level }
+			}
 		}
 	}
 
@@ -21,9 +39,23 @@
 		if = {
 			limit = {
 				scope:activity = {
+					has_activity_type = activity_wedding
 					has_activity_option = {
 						category = wedding_option_decoration
 						option = wedding_decoration_good
+					}
+				}
+			}
+			add = 0.5
+		}
+
+		if = {
+			limit = {
+				scope:activity = {
+					has_activity_type = activity_coronation
+					has_activity_option = {
+						category = ceremony_size
+						option = coronation_large_ceremony
 					}
 				}
 			}
@@ -36,18 +68,44 @@
 			save_scope_as = root_scope
 		}
 		
-		random_attending_character = {
+		if = {
 			limit = {
-				NOR = {
-					this = scope:host
-					this = scope:activity.special_guest:spouse_1
-					this = scope:activity.special_guest:spouse_2
+				scope:activity = {
+					has_activity_type = activity_wedding
 				}
-				is_physically_able_ai_adult = yes
-				location = scope:province
-				dynasty ?= { dynasty_prestige_level > scope:host.dynasty.dynasty_prestige_level }
 			}
-			save_scope_as = first
+			random_attending_character = {
+				limit = {
+					NOR = {
+						this = scope:host
+						this = scope:activity.special_guest:spouse_1
+						this = scope:activity.special_guest:spouse_2
+					}
+					is_physically_able_ai_adult = yes
+					location = scope:province
+					dynasty ?= { dynasty_prestige_level > scope:host.dynasty.dynasty_prestige_level }
+				}
+				save_scope_as = first
+			}		
+		}
+
+		if = {
+			limit = {
+				scope:activity = {
+					has_activity_type = activity_coronation
+				}
+			}
+			random_attending_character = {
+				limit = {
+					NOR = {
+						this = scope:host
+					}
+					is_physically_able_ai_adult = yes
+					location = scope:province
+					dynasty ?= { dynasty_prestige_level > scope:host.dynasty.dynasty_prestige_level }
+				}
+				save_scope_as = first
+			}		
 		}
 
 		add_activity_log_entry = {
@@ -74,7 +132,22 @@ cultural_acceptance = {
 	
 	is_valid = {
 		is_current_phase_active = yes
-		NOT = { scope:activity.special_guest:spouse_1.culture = scope:activity.special_guest:spouse_2.culture }
+		exists = scope:activity.special_guest:spouse_1.culture
+		exists = scope:activity.special_guest:spouse_2.culture
+		scope:activity.special_guest:spouse_1.culture != scope:activity.special_guest:spouse_2.culture
+		trigger_if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_wedding }
+			}
+			NOT = { scope:activity.special_guest:spouse_1.culture = scope:activity.special_guest:spouse_2.culture }
+		}
+		trigger_if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_coronation }
+			}
+			scope:activity.var:officiator ?= { is_alive = yes }
+			NOT = { scope:host.culture = scope:activity.var:officiator.culture }
+		}
 	}
 
 	weight = {
@@ -82,8 +155,24 @@ cultural_acceptance = {
 	}
 
 	effect = {
-		scope:activity.special_guest:spouse_1 = { save_scope_as = first }
-		scope:activity.special_guest:spouse_2 = { save_scope_as = second }
+		if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_wedding }
+			}
+			scope:activity.special_guest:spouse_1 = { save_scope_as = first }
+			scope:activity.special_guest:spouse_2 = { save_scope_as = second }
+		}
+
+		if = {
+			limit = {
+				scope:activity = { 
+					has_activity_type = activity_coronation 
+					has_variable = officiator
+				}
+			}
+			scope:host = { save_scope_as = first }
+			scope:activity.var:officiator = { save_scope_as = second }
+		}
 
 		add_activity_log_entry = {
 			key = cultural_acceptance
@@ -182,17 +271,37 @@ royal_gift = {
 	icon = wedding
 	
 	is_valid = {
-		is_current_phase_active = yes
-		any_attending_character = {
-			NOR = {
-				this = scope:host
-				this = scope:activity.special_guest:spouse_1
-				this = scope:activity.special_guest:spouse_2
+		trigger_if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_wedding }
 			}
-			is_physically_able_ai_adult = yes
-			location = scope:province
-			highest_held_title_tier >= tier_kingdom
-			gold > minor_gold_value
+			is_current_phase_active = yes
+			any_attending_character = {
+				NOR = {
+					this = scope:host
+					this = scope:activity.special_guest:spouse_1
+					this = scope:activity.special_guest:spouse_2
+				}
+				is_physically_able_ai_adult = yes
+				location = scope:province
+				highest_held_title_tier >= tier_kingdom
+				gold > minor_gold_value
+			}
+		}
+		trigger_if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_coronation }
+			}
+			is_current_phase_active = yes
+			any_attending_character = {
+				NOT = {
+					this = scope:host
+				}
+				is_physically_able_ai_adult = yes
+				location = scope:province
+				highest_held_title_tier >= tier_kingdom
+				gold > minor_gold_value
+			}
 		}
 	}
 
@@ -200,11 +309,28 @@ royal_gift = {
 		value = 1
 		if = {
 			limit = {
+				scope:activity = { has_activity_type = activity_wedding }
 				any_attending_character = {
 					NOR = {
 						this = scope:host
 						this = scope:activity.special_guest:spouse_1
 						this = scope:activity.special_guest:spouse_2
+					}
+					is_physically_able_ai_adult = yes
+					location = scope:province
+					highest_held_title_tier = tier_empire
+					gold > minor_gold_value
+				}
+			}
+			add = 0.5
+		}
+		if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_coronation }
+				any_attending_character = {
+					NOR = {
+						this = scope:host
+						scope:activity.var:officiator ?= this
 					}
 					is_physically_able_ai_adult = yes
 					location = scope:province
@@ -225,8 +351,8 @@ royal_gift = {
 			limit = {
 				NOR = {
 					this = scope:host
-					this = scope:activity.special_guest:spouse_1
-					this = scope:activity.special_guest:spouse_2
+					scope:activity.special_guest:spouse_1 ?= this
+					scope:activity.special_guest:spouse_2 ?= this
 				}
 				is_physically_able_ai_adult = yes
 				location = scope:province
@@ -236,8 +362,8 @@ royal_gift = {
 			alternative_limit = {
 				NOR = {
 					this = scope:host
-					this = scope:activity.special_guest:spouse_1
-					this = scope:activity.special_guest:spouse_2
+					scope:activity.special_guest:spouse_1 ?= this
+					scope:activity.special_guest:spouse_2 ?= this
 				}
 				is_physically_able_ai_adult = yes
 				location = scope:province
@@ -255,6 +381,9 @@ royal_gift = {
 				scope:host = { save_scope_as = second }
 			}
 			30 = {
+				trigger = {
+					scope:activity = { has_activity_type = activity_wedding }
+				}
 				modifier = {
 					scope:activity.special_guest:spouse_1 = { is_ai = no }
 					add = 70
@@ -262,6 +391,9 @@ royal_gift = {
 				scope:activity.special_guest:spouse_1 = { save_scope_as = second }
 			}
 			30 = {
+				trigger = {
+					scope:activity = { has_activity_type = activity_wedding }
+				}
 				modifier = {
 					scope:activity.special_guest:spouse_2 = { is_ai = no }
 					add = 70
@@ -292,7 +424,18 @@ gossip_with_guests = {
 	
 	is_valid = {
 		is_current_phase_active = yes
-		has_current_phase = wedding_phase_banquet
+		trigger_if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_wedding }
+			}
+			has_current_phase = wedding_phase_banquet
+		}
+		trigger_if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_coronation }
+			}
+			has_current_phase = coronation_phase_feast
+		}
 		any_attending_character = {
 			is_physically_able_adult = yes
 			OR = {
@@ -399,10 +542,26 @@ contact_network = {
 					}
 					location = scope:province
 					has_lifestyle = diplomacy_lifestyle
-					OR = {
-						this = scope:host
-						this = scope:activity.special_guest:spouse_1
-						this = scope:activity.special_guest:spouse_2
+					trigger_if = {
+						limit = {
+							scope:activity = { has_activity_type = activity_wedding }
+						}
+						OR = {
+							this = scope:host	
+							this = scope:activity.special_guest:spouse_1
+							this = scope:activity.special_guest:spouse_2
+						}
+					}
+					trigger_if = {
+						limit = {
+							scope:activity = { has_activity_type = activity_coronation }
+						}
+						OR = {
+							this = scope:host	
+							scope:activity.var:officiator ?= this
+							is_in_guest_subset = { name = supporter }
+							is_in_guest_subset = { name = detractor }
+						}
 					}
 				}
 			}
@@ -424,10 +583,26 @@ contact_network = {
 				}
 				location = scope:province
 				has_lifestyle = diplomacy_lifestyle
-				OR = {
-					this = scope:host
-					this = scope:activity.special_guest:spouse_1
-					this = scope:activity.special_guest:spouse_2
+				trigger_if = {
+					limit = {
+						scope:activity = { has_activity_type = activity_wedding }
+					}
+					OR = {
+						this = scope:host	
+						this = scope:activity.special_guest:spouse_1
+						this = scope:activity.special_guest:spouse_2
+					}
+				}
+				trigger_if = {
+					limit = {
+						scope:activity = { has_activity_type = activity_coronation }
+					}
+					OR = {
+						this = scope:host	
+						scope:activity.var:officiator ?= this
+						is_in_guest_subset = { name = supporter }
+						is_in_guest_subset = { name = detractor }
+					}
 				}			
 			}
 			alternative_limit = {
@@ -979,15 +1154,35 @@ admired_venue = {
 	
 	is_valid = {
 		is_current_phase_active = yes
-		any_attending_character = {
-			NOR = {
-				this = scope:host
-				this = scope:activity.special_guest:spouse_1
-				this = scope:activity.special_guest:spouse_2
+		trigger_if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_wedding }
 			}
-			is_physically_able_ai_adult = yes
-			location = scope:province
-			has_activity_intent = reduce_stress_intent
+			any_attending_character = {
+				NOR = {
+					is_physically_able_ai_adult = yes
+					this = scope:host
+					this = scope:activity.special_guest:spouse_1
+					this = scope:activity.special_guest:spouse_2
+				}
+				location = scope:province
+				has_activity_intent = reduce_stress_intent
+			}
+		}
+
+		trigger_if = {
+			limit = {
+				scope:activity = { has_activity_type = activity_coronation }
+			}
+			any_attending_character = {
+				NOR = {
+					is_physically_able_ai_adult = yes
+					this = scope:host
+					scope:activity.var:officiator ?= this
+				}
+				location = scope:province
+				has_activity_intent = coronation_bear_witness
+			}
 		}
 	}
 
@@ -996,6 +1191,7 @@ admired_venue = {
 		if = {
 			limit = {
 				scope:activity = {
+					has_activity_type = activity_wedding
 					has_activity_option = {
 						category = wedding_option_decoration
 						option = wedding_decoration_good
@@ -1007,9 +1203,34 @@ admired_venue = {
 		if = {
 			limit = {
 				scope:activity = {
+					has_activity_type = activity_wedding
 					has_activity_option = {
 						category = wedding_option_decoration
 						option = wedding_decoration_normal
+					}
+				}
+			}
+			add = 0.5
+		}
+		if = {
+			limit = {
+				scope:activity = {
+					has_activity_type = activity_coronation
+					has_activity_option = {
+						category = ceremony_size
+						option = coronation_large_ceremony
+					}
+				}
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				scope:activity = {
+					has_activity_type = activity_coronation
+					has_activity_option = {
+						category = ceremony_size
+						option = coronation_medium_ceremony
 					}
 				}
 			}
@@ -1024,14 +1245,31 @@ admired_venue = {
 		
 		random_attending_character = {
 			limit = {
-				NOR = {
-					this = scope:host
-					this = scope:activity.special_guest:spouse_1
-					this = scope:activity.special_guest:spouse_2
+				trigger_if = {
+					limit = {
+						scope:activity = { has_activity_type = activity_wedding }
+					}
+					NOR = {
+						this = scope:host
+						this = scope:activity.special_guest:spouse_1
+						this = scope:activity.special_guest:spouse_2
+					}
+					has_activity_intent = reduce_stress_intent
 				}
+
+				trigger_if = {
+					limit = {
+						scope:activity = { has_activity_type = activity_coronation }
+					}
+					NOR = {
+						this = scope:host
+						scope:activity.var:officiator ?= this
+					}
+					has_activity_intent = coronation_bear_witness
+				}
+				
 				is_physically_able_ai_adult = yes
 				location = scope:province
-				has_activity_intent = reduce_stress_intent
 			}
 			save_scope_as = first
 		}
@@ -1235,7 +1473,7 @@ poetry_performance = {
 		is_current_phase_active = yes
 		any_attending_character = {
 			OR = {
-				has_trait = poet
+				has_trait = lifestyle_poet
 				AND = {
 					has_court_position = court_poet_court_position
 					aptitude = {
@@ -1255,6 +1493,7 @@ poetry_performance = {
 		if = {
 			limit = {
 				scope:activity = {
+					has_activity_type = activity_wedding
 					has_activity_option = {
 						category = wedding_option_entertainment
 						option = wedding_entertainment_good
@@ -1265,7 +1504,7 @@ poetry_performance = {
 		}
 		if = {
 			limit = {
-				scope:host = { has_trait = poet }
+				scope:host = { has_trait = lifestyle_poet }
 			}
 			add = 0.5
 		}
@@ -1278,7 +1517,7 @@ poetry_performance = {
 		if = {
 			limit = {
 				scope:host = {
-					has_trait = poet
+					has_trait = lifestyle_poet
 					is_physically_able_ai_adult = yes
 					location = scope:province
 				}
@@ -1289,7 +1528,7 @@ poetry_performance = {
 			random_attending_character = {
 				limit = {
 					OR = {
-						has_trait = poet
+						has_trait = lifestyle_poet
 						AND = {
 							has_court_position = court_poet_court_position
 							aptitude = {
@@ -1316,7 +1555,7 @@ poetry_performance = {
 			}
 			if = {
 				limit = {
-					NOT = { scope:first = scope:host }
+					scope:first != scope:host
 				}
 				scope:host = {
 					add_prestige = minor_prestige_gain
@@ -1332,10 +1571,24 @@ music_performance = {
 	is_valid = {
 		is_current_phase_active = yes
 		any_attending_character = {
-			NOR = {
-				this = scope:host
-				this = scope:activity.special_guest:spouse_1
-				this = scope:activity.special_guest:spouse_2
+			trigger_if = {
+				limit = {
+					scope:activity = { has_activity_type = activity_wedding }
+				}
+				NOR = {
+					this = scope:host
+					this = scope:activity.special_guest:spouse_1
+					this = scope:activity.special_guest:spouse_2
+				}
+			}
+			trigger_if = {
+				limit = {
+					scope:activity = { has_activity_type = activity_coronation }
+				}
+				NOR = {
+					this = scope:host
+					scope:activity.var:officiator ?= this
+				}
 			}
 			is_physically_able_ai_adult = yes
 			location = scope:province
@@ -1353,6 +1606,7 @@ music_performance = {
 		if = {
 			limit = {
 				scope:activity = {
+					has_activity_type = activity_wedding
 					has_activity_option = {
 						category = wedding_option_entertainment
 						option = wedding_entertainment_good
@@ -1370,10 +1624,24 @@ music_performance = {
 		
 		random_attending_character = {
 			limit = {
-				NOR = {
-					this = scope:host
-					this = scope:activity.special_guest:spouse_1
-					this = scope:activity.special_guest:spouse_2
+				trigger_if = {
+					limit = {
+						scope:activity = { has_activity_type = activity_wedding }
+					}
+					NOR = {
+						this = scope:host
+						this = scope:activity.special_guest:spouse_1
+						this = scope:activity.special_guest:spouse_2
+					}
+				}
+				trigger_if = {
+					limit = {
+						scope:activity = { has_activity_type = activity_coronation }
+					}
+					NOR = {
+						this = scope:host
+						scope:activity.var:officiator ?= this
+					}
 				}
 				is_physically_able_ai_adult = yes
 				location = scope:province
@@ -1408,10 +1676,24 @@ floral_exhibit = {
 	is_valid = {
 		is_current_phase_active = yes
 		any_attending_character = {
-			NOR = {
-				this = scope:host
-				this = scope:activity.special_guest:spouse_1
-				this = scope:activity.special_guest:spouse_2
+			trigger_if = {
+				limit = {
+					scope:activity = { has_activity_type = activity_wedding }
+				}
+				NOR = {
+					this = scope:host
+					this = scope:activity.special_guest:spouse_1
+					this = scope:activity.special_guest:spouse_2
+				}
+			}
+			trigger_if = {
+				limit = {
+					scope:activity = { has_activity_type = activity_coronation }
+				}
+				NOR = {
+					this = scope:host
+					scope:activity.var:officiator ?= this
+				}
 			}
 			is_physically_able_ai_adult = yes
 			location = scope:province
@@ -1429,13 +1711,36 @@ floral_exhibit = {
 		if = {
 			limit = {
 				scope:activity = {
+					has_activity_type = activity_wedding
 					has_activity_option = {
-						category = wedding_option_decoration
-						option = wedding_decoration_good
+						category = wedding_option_entertainment
+						option = wedding_entertainment_good
 					}
 				}
 			}
 			add = 1
+		}
+		if = {
+			limit = {
+				scope:activity = {
+					has_activity_option = {
+						category = ceremony_size
+						option = coronation_large_ceremony
+					}
+				}
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				scope:activity = {
+					has_activity_option = {
+						category = ceremony_size
+						option = coronation_medium_ceremony
+					}
+				}
+			}
+			add = 0.5
 		}
 	}
 
@@ -1446,10 +1751,24 @@ floral_exhibit = {
 		
 		random_attending_character = {
 			limit = {
-				NOR = {
-					this = scope:host
-					this = scope:activity.special_guest:spouse_1
-					this = scope:activity.special_guest:spouse_2
+				trigger_if = {
+					limit = {
+						scope:activity = { has_activity_type = activity_wedding }
+					}
+					NOR = {
+						this = scope:host
+						this = scope:activity.special_guest:spouse_1
+						this = scope:activity.special_guest:spouse_2
+					}
+				}
+				trigger_if = {
+					limit = {
+						scope:activity = { has_activity_type = activity_coronation }
+					}
+					NOR = {
+						this = scope:host
+						scope:activity.var:officiator ?= this
+					}
 				}
 				is_physically_able_ai_adult = yes
 				location = scope:province
@@ -1484,9 +1803,7 @@ spouse_impressed = {
 	is_valid = {
 		is_current_phase_active = yes
 		any_attending_character = {
-			NOT = {
-				this = scope:host
-			}
+			this != scope:host
 			is_spouse_of = scope:host
 			is_physically_able_ai_adult = yes
 			location = scope:province
@@ -1498,6 +1815,7 @@ spouse_impressed = {
 		if = {
 			limit = {
 				scope:activity = {
+					has_activity_type = activity_wedding
 					has_activity_option = {
 						category = wedding_option_decoration
 						option = wedding_decoration_good
@@ -1509,6 +1827,7 @@ spouse_impressed = {
 		if = {
 			limit = {
 				scope:activity = {
+					has_activity_type = activity_wedding
 					has_activity_option = {
 						category = wedding_option_food
 						option = wedding_food_good
@@ -1520,9 +1839,34 @@ spouse_impressed = {
 		if = {
 			limit = {
 				scope:activity = {
+					has_activity_type = activity_wedding
 					has_activity_option = {
 						category = wedding_option_entertainment
 						option = wedding_entertainment_good
+					}
+				}
+			}
+			add = 0.5
+		}
+		if = {
+			limit = {
+				scope:activity = {
+					has_activity_type = activity_coronation
+					has_activity_option = {
+						category = ceremony_size
+						option = coronation_large_ceremony
+					}
+				}
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				scope:activity = {
+					has_activity_type = activity_coronation
+					has_activity_option = {
+						category = ceremony_size
+						option = coronation_medium_ceremony
 					}
 				}
 			}
@@ -1537,9 +1881,7 @@ spouse_impressed = {
 		
 		random_attending_character = {
 			limit = {
-				NOT = {
-					this = scope:host
-				}
+				this != scope:host
 				is_spouse_of = scope:host
 				is_physically_able_ai_adult = yes
 				location = scope:province

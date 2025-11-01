@@ -332,6 +332,11 @@ honesty_opinion = {
 	decaying = yes
 }
 
+apologized_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
 charmed_opinion = {
 	monthly_change = 0.1
 	decaying = yes
@@ -723,9 +728,26 @@ claimant_faction_member_opinion = {
 	years = 30
 }
 
+ceremonial_claimant_faction_claimant_opinion = {
+	opinion = 20
+	years = 20
+}
+
+ceremonial_claimant_faction_member_opinion = {
+	opinion = 60
+	years = 30
+}
+
 # Raid
 raided_me_opinion = {
 	opinion = -15
+	years = 10
+	decaying = yes
+}
+
+# Barter
+bartered_in_my_lands_opinion = {
+	opinion = 15
 	years = 10
 	decaying = yes
 }
@@ -1710,6 +1732,17 @@ ask_for_herd_opinion = {
 	stacking = yes
 }
 
+respected_tradition_modifier = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+consorted_with_lowborn_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
 blood_brother_close_family_opinion = {
 	opinion = 20
 	monthly_change = 0
@@ -1727,5 +1760,135 @@ crushed_opponent_opinion = {
 forsook_nomadic_life_opinion = {
 	opinion = -25
 	years = 10
+	decaying = yes
+}
+
+forced_me_to_retake_exam = {
+	opinion = -25
+	years = 10
+	decaying = yes
+}
+
+forced_to_kneel_opinion = {
+	opinion = -20
+	years = 10
+	decaying = yes
+}
+
+spoke_against_taira_rule = {
+	opinion = 25
+	years = 15
+	decaying = yes
+}
+
+sent_me_support = {
+	opinion = 50
+	years = 30
+	decaying = yes
+}
+
+unimpressed_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+holy_anointment_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+heathen_anointment_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+self_crowning_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+disaster_relief_charitable_aid_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+}
+
+ach_synergy_culture_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+fellow_supporter_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+rival_supporter_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+fellow_detractor_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+rival_detractor_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+crowned_consort_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+attempts_of_a_united_minamoto_clan = {
+	opinion = -50
+	years = 20
+	decaying = yes
+}
+
+stood_with_minamoto_clan = {
+	opinion = 50
+	years = 15
+	decaying = yes
+}
+
+respected_status_quo = {
+	opinion = 15
+	years = 10
+	decaying = yes
+}
+
+dishonor_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+honorable_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+satisfied_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
+}
+
+paid_me_respect = {
+	monthly_change = 0.1
 	decaying = yes
 }

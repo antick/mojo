@@ -66,6 +66,7 @@ has_trait_extroverted_trigger = {
 		has_trait = gregarious
 		has_trait = curious
 		has_trait = charming
+		has_trait = lifestyle_reveler
 	}
 }
 
@@ -76,6 +77,7 @@ has_trait_introverted_trigger = {
 		has_trait = craven
 		has_trait = shy
 		has_trait = pensive
+		has_trait = reclusive
 	}
 }
 

@@ -32,8 +32,14 @@
 		# Counties can only be in a faction against the top liege in their realm (who is inherently independent).
 		scope:faction.faction_target = holder.top_liege
 		holder.top_liege = {
-			NOT = {
+			NOR = {
 				has_government = herder_government
+				any_owned_story = {
+					OR = {
+						story_type = story_greatest_of_khans
+						story_type = story_mongol_invasion
+					}
+				}
 			}
 		}
 		
@@ -64,8 +70,14 @@
 		# Can only join factions against our top liege (not direct liege)
 		scope:target = holder.top_liege
 		holder.top_liege = {
-			NOT = {
+			NOR = {
 				has_government = herder_government
+				any_owned_story = {
+					OR = {
+						story_type = story_greatest_of_khans
+						story_type = story_mongol_invasion
+					}
+				}
 			}
 		}
 		
@@ -442,6 +454,16 @@
 
 	ai_demand_chance = {
 		base = 100
+
+		modifier = {
+			add = -1000
+			faction_target = {
+				involved_activity ?= {
+					has_activity_type = activity_coronation
+					activity_host = prev
+				}
+			}
+		}
 	}
 
 	on_war_start = {

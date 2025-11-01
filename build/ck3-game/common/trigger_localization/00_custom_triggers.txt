@@ -121,3 +121,21 @@ has_contagious_deadly_disease_trigger = {
 	third = CHARACTER_IS_DISEASED
 	third_not = CHARACTER_IS_NOT_DISEASED
 }
+
+HOF_DOESNT_EXIST = {
+	global = HOF_DOESNT_EXIST
+	global_not = HOF_DOESNT_EXIST
+	first = HOF_DOESNT_EXIST
+	first_not = HOF_DOESNT_EXIST
+	third = HOF_DOESNT_EXIST
+	third_not = HOF_DOESNT_EXIST
+}
+
+HOF_is_ai_tt = {
+	global = HOF_is_ai_tt
+	global_not = HOF_is_ai_tt
+	first = HOF_is_ai_tt
+	first_not = HOF_is_ai_tt
+	third = HOF_is_ai_tt
+	third_not = HOF_is_ai_tt
+}

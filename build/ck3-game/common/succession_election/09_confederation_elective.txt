@@ -49,6 +49,16 @@ confederation_elective = {
 			add = 1
 			is_diarch_of_target = scope:holder
 		}
+		modifier = { #Coronation event
+			desc = tooltip_confederation_vote_strength_coronation
+			add = 1
+			has_character_flag = confederation_politicking_vote 
+		}
+		modifier = { #Coronation event
+			desc = tooltip_confederation_vote_strength_coronation
+			add = 2
+			has_character_flag = confederation_politicking_vote_2
+		}
 		min = 1
 	}
 	

@@ -142,6 +142,9 @@ catalyst_yearly_influential_house_is_antagonistic_minimal = {}
 
 ### Activities
 catalyst_invite_involved_as_honorary_guests_to_feast_hunt = {}
+catalyst_coronation_event_stabilization = {}
+catalyst_coronation_event_unrest = {}
+catalyst_coronation_event_concession = {}
 
 ### Interactions
 catalyst_abandon_hook_on_supporter_detractor = {}

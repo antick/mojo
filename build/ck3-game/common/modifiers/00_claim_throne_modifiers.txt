@@ -4,7 +4,7 @@
 }
 
 claim_throne_bought_support_modifier = {
-	icon = gold_positive
+	icon = economy_positive
 	scheme_success_chance = 20
 }
 

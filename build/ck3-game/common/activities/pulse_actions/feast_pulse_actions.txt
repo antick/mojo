@@ -38,9 +38,23 @@ excellent_food = {
 					option = feast_courses_normal
 				}
 			}
+			AND = {
+				has_activity_type = activity_coronation
+				has_current_phase = coronation_phase_feast
+				OR = {
+					has_activity_option = {
+						category = ceremony_feast_type
+						option = ceremony_feast_type_regular
+					}
+					has_activity_option = {
+						category = ceremony_feast_type
+						option = ceremony_feast_type_lavish
+					}
+				}
+			}
 		}
 		any_attending_character = {
-			NOT = { this = scope:host }
+			this != scope:host
 			is_physically_able_ai_adult = yes
 			location = scope:province
 			OR = {
@@ -76,6 +90,18 @@ excellent_food = {
 			}
 			add = -0.5
 		}
+		if = {
+			limit = {
+				scope:activity = {
+					has_activity_type = activity_coronation
+					has_activity_option = {
+						category = ceremony_feast_type
+						option = ceremony_feast_type_regular
+					}
+				}
+			}
+			add = -0.5
+		}
 	}
 
 	effect = {
@@ -85,7 +111,7 @@ excellent_food = {
 		
 		random_attending_character = {
 			limit = {
-				NOT = { this = scope:host }
+				this != scope:host
 				is_physically_able_ai_adult = yes
 				location = scope:province
 				OR = {
@@ -142,10 +168,22 @@ impressed_courtly_vassal = {
 					option = wedding_decoration_good
 				}
 			}
+			AND = {
+				has_activity_type = activity_coronation
+				has_current_phase = coronation_phase_feast
+				has_activity_option = {
+					category = ceremony_size
+					option = coronation_large_ceremony
+				}
+				has_activity_option = {
+					category = ceremony_feast_type
+					option = ceremony_feast_type_lavish
+				}
+			}
 		}
 		any_attending_character = {
 			count >= 2
-			NOT = { this = scope:host }
+			this != scope:host
 			is_physically_able_ai_adult = yes
 			is_vassal_of = scope:host
 			has_vassal_stance = courtly
@@ -158,7 +196,7 @@ impressed_courtly_vassal = {
 	effect = {
 		random_attending_character = {
 			limit = {
-				NOT = { this = scope:host }
+				this != scope:host
 				is_physically_able_ai_adult = yes
 				is_vassal_of = scope:host
 				has_vassal_stance = courtly
@@ -168,12 +206,12 @@ impressed_courtly_vassal = {
 		}
 		random_attending_character = {
 			limit = {
-				NOT = { this = scope:host }
+				this != scope:host
 				is_physically_able_ai_adult = yes
 				is_vassal_of = scope:host
 				has_vassal_stance = courtly
 				location = scope:province
-				NOT = { this = scope:first }
+				this != scope:first
 			}
 			save_scope_as = second
 		}
@@ -212,15 +250,16 @@ hook_trusting_guest = {
 	
 	is_valid = {
 		is_current_phase_active = yes
+		coronation_feast_phase = yes # If Coronation, only in feast phase
 		any_attending_character = {
-			NOT = { this = scope:host }
+			this != scope:host
 			has_trait = trusting
 			is_ai = yes
 			location = scope:province
 			save_temporary_scope_as = first_temp
 		}
 		any_attending_character = {
-			NOT = { this = scope:first_temp }
+			this != scope:first_temp
 			location = scope:province
 			can_add_hook = {
 				target = scope:first_temp
@@ -234,14 +273,14 @@ hook_trusting_guest = {
 	effect = {
 		random_attending_character = {
 			limit = {
-				NOT = { this = scope:host }
+				this != scope:host
 				location = scope:province
 				has_trait = trusting
 				is_ai = yes
 				save_temporary_scope_as = first_temp
 				scope:activity = {
 					any_attending_character = {
-						NOT = { this = scope:first_temp }
+						this != scope:first_temp
 						location = scope:province
 						can_add_hook = {
 							target = scope:first_temp
@@ -255,7 +294,7 @@ hook_trusting_guest = {
 		random_attending_character = {
 			limit = {
 				location = scope:province
-				NOT = { this = scope:first }
+				this != scope:first
 				can_add_hook = {
 					target = scope:first
 					type = favor_hook
@@ -296,12 +335,13 @@ impressed_guest_honor = {
 	
 	is_valid = {
 		is_current_phase_active = yes
+		coronation_feast_phase = yes # If Coronation, only in feast phase
 		special_guest:honorary_guest_regular ?= {
 			is_alive = yes
 		}
 		any_attending_character = {
-			NOT = { this = scope:host }
-			NOT = { this = scope:activity.special_guest:honorary_guest_regular }
+			this != scope:host
+			this != scope:activity.special_guest:honorary_guest_regular
 			is_physically_able_ai_adult = yes
 			location = scope:province
 			likes_character_trigger = { CHARACTER = scope:host }
@@ -316,8 +356,8 @@ impressed_guest_honor = {
 		}
 		random_attending_character = {
 			limit = {
-				NOT = { this = scope:host }
-				NOT = { this = scope:activity.special_guest:honorary_guest_regular }
+				this != scope:host
+				this != scope:activity.special_guest:honorary_guest_regular
 				is_physically_able_ai_adult = yes
 				location = scope:province
 				likes_character_trigger = { CHARACTER = scope:host }
@@ -355,9 +395,22 @@ leftover_food_giveaway = {
 	icon = public
 	is_valid = {
 		is_current_phase_active = yes
-		has_activity_option = {
-			category = feast_option_courses
-			option = feast_courses_good
+		OR = {
+			AND = {
+				has_activity_type = activity_feast
+				has_activity_option = {
+					category = feast_option_courses
+					option = feast_courses_good
+				}
+			}
+			AND = {
+				has_activity_type = activity_coronation
+				has_current_phase = coronation_phase_feast
+				has_activity_option = {
+					category = ceremony_feast_type
+					option = ceremony_feast_type_lavish
+				}
+			}
 		}
 		exists = scope:province.county.holder
 		scope:province.county ?= {
@@ -370,9 +423,23 @@ leftover_food_giveaway = {
 		if = {
 			limit = {
 				scope:activity = {
+					has_activity_type = activity_feast
 					has_activity_option = {
 						category = feast_option_food
 						option = feast_food_bad
+					}
+				}
+			}
+			add = -0.5
+		}
+
+		if = {
+			limit = {
+				scope:activity = {
+					has_activity_type = activity_coronation
+					has_activity_option = {
+						category = ceremony_feast_type
+						option = ceremony_feast_type_austere
 					}
 				}
 			}
@@ -400,6 +467,7 @@ virtuous_feast = {
 	icon = courtly
 	is_valid = {
 		is_current_phase_active = yes
+		coronation_feast_phase = yes # If Coronation, only in feast phase
 		any_attending_character = {
 			is_physically_able_ai_adult = yes
 			location = scope:province
@@ -448,13 +516,28 @@ noble_privileges = {
 	is_valid = {
 		is_current_phase_active = yes
 		OR = {
-			has_activity_option = {
-				category = feast_option_courses
-				option = feast_courses_good
+			AND = {
+				has_activity_type = activity_feast
+				has_activity_option = {
+					category = feast_option_food
+					option = feast_food_good
+				}
+				has_activity_option = {
+					category = feast_option_courses
+					option = feast_courses_good
+				}
 			}
-			has_activity_option = {
-				category = feast_option_food
-				option = feast_food_good
+			AND = {
+				has_activity_type = activity_coronation
+				has_current_phase = coronation_phase_feast
+				has_activity_option = {
+					category = ceremony_size
+					option = coronation_large_ceremony
+				}
+				has_activity_option = {
+					category = ceremony_feast_type
+					option = ceremony_feast_type_lavish
+				}
 			}
 		}
 		any_attending_character = {
@@ -519,6 +602,7 @@ good_kitty = {
 	icon = public
 	is_valid = {
 		is_current_phase_active = yes
+		coronation_feast_phase = yes # If Coronation, only in feast phase
 		any_attending_character = {
 			location = scope:province
 			OR = {
@@ -529,7 +613,7 @@ good_kitty = {
 		}
 		any_attending_character = {
 			location = scope:province
-			NOT = { this = scope:pet_owner_temp }
+			this != scope:pet_owner_temp
 			NOT = { has_character_modifier = cat_story_allergy_modifier }
 			NOT = { has_trait = callous }
 		}
@@ -552,7 +636,7 @@ good_kitty = {
 				scope:activity = {
 					any_attending_character = {
 						location = scope:province
-						NOT = { this = scope:pet_owner_temp }
+						this != scope:pet_owner_temp
 						NOT = { has_character_modifier = cat_story_allergy_modifier }
 						NOT = { has_trait = callous }
 					}
@@ -563,7 +647,7 @@ good_kitty = {
 		
 		random_attending_character = {
 			limit = {
-				NOT = { this = scope:second }
+				this != scope:second
 				location = scope:province
 				NOT = { has_character_modifier = cat_story_allergy_modifier }
 				NOT = { has_trait = callous }
@@ -592,6 +676,7 @@ good_puppy = {
 	icon = public
 	is_valid = {
 		is_current_phase_active = yes
+		coronation_feast_phase = yes # If Coronation, only in feast phase
 		any_attending_character = {
 			location = scope:province
 			OR = {
@@ -601,7 +686,7 @@ good_puppy = {
 			save_temporary_scope_as = pet_owner_temp
 		}
 		any_attending_character = {
-			NOT = { this = scope:pet_owner_temp }
+			this != scope:pet_owner_temp
 			location = scope:province
 			NOT = { has_trait = callous }
 		}
@@ -622,7 +707,7 @@ good_puppy = {
 				save_temporary_scope_as = pet_owner_temp
 				scope:activity = {
 					any_attending_character = {
-						NOT = { this = scope:pet_owner_temp }
+						this != scope:pet_owner_temp
 						location = scope:province
 						NOT = { has_trait = callous }
 					}
@@ -633,7 +718,7 @@ good_puppy = {
 		
 		random_attending_character = {
 			limit = {
-				NOT = { this = scope:second }
+				this != scope:second
 				location = scope:province
 				NOT = { has_trait = callous }
 			}
@@ -661,6 +746,7 @@ antiquarian_admires_artifact = {
 	icon = public
 	is_valid = {
 		is_current_phase_active = yes
+		coronation_feast_phase = yes # If Coronation, only in feast phase
 		any_attending_character = {
 			location = scope:province
 			is_physically_able_ai_adult = yes
@@ -748,6 +834,7 @@ jester_entertained_guests = {
 	icon = public
 	is_valid = {
 		is_current_phase_active = yes
+		coronation_feast_phase = yes # If Coronation, only in feast phase
 		any_attending_character = {
 			location = scope:province
 			is_physically_able_ai_adult = yes
@@ -759,7 +846,7 @@ jester_entertained_guests = {
 		}
 		any_attending_character = {
 			location = scope:province
-			NOT = { this = scope:temp_jester }
+			this != scope:temp_jester
 		}
 	}
 
@@ -793,7 +880,7 @@ jester_entertained_guests = {
 		random_attending_character = {
 			limit = {
 				location = scope:province
-				NOT = { this = scope:first }
+				this != scope:first
 			}
 			save_scope_as = second
 		}
@@ -814,6 +901,7 @@ apa_executioner = {
 	icon = dread
 	is_valid = {
 		is_current_phase_active = yes
+		coronation_feast_phase = yes # If Coronation, only in feast phase
 		any_attending_character = {
 			location = scope:province
 			is_physically_able_ai_adult = yes

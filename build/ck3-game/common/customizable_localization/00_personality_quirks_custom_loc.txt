@@ -302,8 +302,19 @@ quirk_pos_present = {
 	}
 
 	text = {
-		trigger = { var:my_quirk = flag:honest }
+		trigger = {
+			var:my_quirk = flag:honest
+			NOT = { has_trait = blind }
+		}
 		localization_key = honest_quirk
+	}
+
+	text = {
+		trigger = {
+			var:my_quirk = flag:honest
+			has_trait = blind
+		}
+		localization_key = honest_quirk_blind
 	}
 
 	text = {
@@ -518,8 +529,19 @@ quirk_pos_personal_present = {
 	}
 
 	text = {
-		trigger = { var:my_quirk = flag:honest }
+		trigger = {
+			var:my_quirk = flag:honest
+			NOT = { has_trait = blind }
+		}
 		localization_key = honest_quirk_personal
+	}
+
+	text = {
+		trigger = {
+			var:my_quirk = flag:honest
+			has_trait = blind
+		}
+		localization_key = honest_quirk_personal_blind
 	}
 
 	text = {
@@ -739,8 +761,19 @@ quirk_pos_standalone = {
 	}
 
 	text = {
-		trigger = { var:my_quirk = flag:honest }
+		trigger = {
+			var:my_quirk = flag:honest
+			NOT = { has_trait = blind }
+		}
 		localization_key = honest_quirk_standalone
+	}
+
+	text = {
+		trigger = {
+			var:my_quirk = flag:honest
+			has_trait = blind
+		}
+		localization_key = honest_quirk_standalone_blind
 	}
 
 	text = {
@@ -956,8 +989,19 @@ quirk_pos_pp = {
 	}
 
 	text = {
-		trigger = { var:my_quirk = flag:honest }
+		trigger = {
+			var:my_quirk = flag:honest
+			NOT = { has_trait = blind }
+		}
 		localization_key = honest_quirk_pp
+	}
+
+	text = {
+		trigger = {
+			var:my_quirk = flag:honest
+			has_trait = blind
+		}
+		localization_key = honest_quirk_pp_blind
 	}
 
 	text = {
@@ -1168,8 +1212,19 @@ quirk_pos_personal_pp = {
 	}
 
 	text = {
-		trigger = { var:my_quirk = flag:honest }
+		trigger = {
+			var:my_quirk = flag:honest
+			NOT = { has_trait = blind }
+		}
 		localization_key = honest_quirk_personal_pp
+	}
+
+	text = {
+		trigger = {
+			var:my_quirk = flag:honest
+			has_trait = blind
+		}
+		localization_key = honest_quirk_personal_pp_blind
 	}
 
 	text = {

@@ -135,6 +135,7 @@ GetRandomRegionalPoisonousSnake = { # Has an article
                 geographical_region = world_asia_minor
                 geographical_region = world_middle_east
                 geographical_region = world_africa
+                geographical_region = world_asia_southeast
             }
 		}
         localization_key = animal_cobra
@@ -650,7 +651,7 @@ GetDominateTitleLoc = {
 	type = character
 	text = {
 		trigger = {
-			exists = primary_title.duchy
+			exists = primary_title.de_jure_liege
 		}
 		localization_key = nomad_higher_tier_title_decision_title
 	}

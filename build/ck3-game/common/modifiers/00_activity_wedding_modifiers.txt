@@ -178,7 +178,7 @@ wedding_old_news_modifier = {
 }
 
 wedding_consorts_envy_modifier = {
-	icon = iwedding_positive
+	icon = wedding_positive
 	scheme_phase_duration = medium_scheme_phase_duration_bonus_value
 	scheme_success_chance = 10
 }
